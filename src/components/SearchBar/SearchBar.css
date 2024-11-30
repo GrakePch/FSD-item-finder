@@ -72,10 +72,16 @@
 }
 
 .SearchBar .search-container>hr {
+    flex-shrink: 0;
     border: none;
     width: calc(100% - 2rem);
     height: 1px;
     margin: 0 1rem;
     background-color: var(--color-text);
     opacity: .5;
+}
+
+.SearchBar .total {
+    padding: .5rem 1rem;
+    font-family: var(--font-slim);
 }

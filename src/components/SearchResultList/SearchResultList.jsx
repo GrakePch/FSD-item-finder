@@ -18,11 +18,14 @@ const SearchResultList = ({ results, setShowResults }) => {
           key={item.uuid}
           onClick={() => handleResultClick(item.uuid)}
         >
-          <div>
+          <div className="type">
+            {item.type.zh.split("/").map((t, i) => <p key={i}>{t}</p>)}
+          </div>
+          <div className="names">
             <p className="zh">{item.name.zh}</p>
             <p className="en">{item.name.en}</p>
           </div>
-          <p className="type">{item.type.zh}</p>
+          <p className="price">¤ {item.locations?.[0].price} 起</p>
         </button>
       ))}
     </div>

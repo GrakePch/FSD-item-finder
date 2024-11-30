@@ -7,16 +7,29 @@
   padding: 0 1rem;
 }
 
-.ItemInfo .item-info>h2 {
-  opacity: .7;
+.ItemInfo .en {
+  color: var(--color-text-1);
 }
 
-.ItemInfo .item-info>.type {
+.ItemInfo .types {
+  display: flex;
   margin-top: .5rem;
-  border: var(--color-text) solid 1px;
-  border-radius: 100rem;
+  border-radius: 1rem;
+  border: var(--color-text-1) solid 1px;
   width: max-content;
+  overflow: hidden;
+}
+
+.ItemInfo .type {
   padding: 0 .5rem;
+  color: var(--color-bg);
+  background-color: var(--color-text-1);
+  font-weight: 700;
+}
+
+.ItemInfo .subtype {
+  padding: 0 .5rem;
+  color: var(--color-text);
 }
 
 .ItemInfo hr {
@@ -60,7 +73,7 @@
 }
 
 .ItemInfo .buy-option>.price {
-  color: #3492c2;
+  color: hsl(200deg 60% 50%);
   font-family: var(--font-slim);
   font-weight: 600;
   font-variant-numeric: tabular-nums;

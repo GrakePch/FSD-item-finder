@@ -27,6 +27,10 @@ const SearchBar = ({ centered }) => {
           tempList.push(item);
         }
       }
+
+    if (tempList.length <= 100) {
+      tempList.sort((a, b) => a.name.en.localeCompare(b.name.en))
+    }
     setResultList(tempList);
   }, [searchName]);
 
@@ -58,6 +62,7 @@ const SearchBar = ({ centered }) => {
           {showResults && resultList.length > 0 && (
             <>
               <hr />
+              <p className="total">搜索结果共 {resultList.length} 个</p>
               <SearchResultList
                 results={resultList}
                 setShowResults={setShowResults}

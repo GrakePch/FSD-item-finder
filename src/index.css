@@ -62,7 +62,8 @@
   --color-bg: #242424;
   --color-bg-1: #353535;
   --color-bg-2: #464646;
-  --color-text: rgba(255, 255, 255, 0.87);
+  --color-text: #dcdcdc;
+  --color-text-1: #a5a5a5;
 
   --acrylic-edge: inset 0 0 .2rem 0 #ffffff20;
   --shadow-1: 0 0.50rem 0.75rem 0 #00000020;
