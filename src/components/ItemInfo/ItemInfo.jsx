@@ -1,28 +1,8 @@
-import { useEffect, useState } from "react";
 import "./ItemInfo.css";
-
-const percent = (v, zero, hundred) => {
-  return ((v - zero) / (hundred - zero)) * 100;
-};
+import TradeOptions from "../TradeOptions/TradeOptions";
 
 const ItemInfo = ({ item }) => {
-  const [sortBy, setSortBy] = useState("price");
-  const [sortDir, setSortDir] = useState(1);
-  const [buyOptions, setBuyOptions] = useState([]);
-  const priceMin = item.buy.minPrice;
-  const priceMax = item.buy.maxPrice;
-
   const [type, subType] = item.type.zh.split("/");
-
-  useEffect(() => {
-    let tempBuyOptions = item.buy.locations.toSorted(
-      (a, b) =>
-        (sortBy === "location"
-          ? a.location.en.localeCompare(b.location.en)
-          : a.price - b.price) * sortDir
-    );
-    setBuyOptions(tempBuyOptions);
-  }, [item, sortBy, sortDir]);
 
   return (
     <div className="ItemInfo">
@@ -34,53 +14,20 @@ const ItemInfo = ({ item }) => {
           <p className="subtype">{subType}</p>
         </div>
       </div>
-      <hr />
-      <div className="buy-option-titles">
-        <h4
-          className="location"
-          onClick={() => {
-            if (sortBy === "location") {
-              setSortDir(-1 * sortDir);
-            } else {
-              setSortBy("location");
-              setSortDir(1);
-            }
-          }}
-        >
-          购买地点{sortBy === "location" ? (sortDir > 0 ? " ▲" : " ▼") : " △"}
-        </h4>
-        <h4
-          className="price"
-          onClick={() => {
-            if (sortBy === "price") {
-              setSortDir(-1 * sortDir);
-            } else {
-              setSortBy("price");
-              setSortDir(1);
-            }
-          }}
-        >
-          价格{sortBy === "price" ? (sortDir > 0 ? " ▲" : " ▼") : " △"}
-        </h4>
-      </div>
-      <div className="buy-option-list">
-        {buyOptions.map((option) => {
-          let hue = 200 - percent(option.price, priceMin, priceMax) * 2;
-          return (
-            <div className="buy-option" key={option.location.en}>
-              <p className="location">{option.location.zh}</p>
-              <p
-                className="price"
-                style={{
-                  color: `hsl(${hue}deg 60% 50%)`,
-                }}
-              >
-                ¤ {option.price}
-              </p>
-            </div>
-          );
-        })}
-      </div>
+      {item.buy && item.buy.locations.length > 0 && (
+        <>
+          <hr />
+          <h3 className="trade-options-title">购买</h3>
+          <TradeOptions pricesData={item.buy} tradeType="buy" />
+        </>
+      )}
+      {item.rent && item.rent.locations.length > 0 && (
+        <>
+          <hr />
+          <h3 className="trade-options-title">租赁</h3>
+          <TradeOptions pricesData={item.rent} tradeType="rent" />
+        </>
+      )}
     </div>
   );
 };

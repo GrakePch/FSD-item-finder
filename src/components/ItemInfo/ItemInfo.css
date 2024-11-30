@@ -41,48 +41,7 @@
   opacity: .5;
 }
 
-.ItemInfo .buy-option-titles {
-  display: flex;
-  width: 100%;
+.ItemInfo .trade-options-title {
   padding: 0 1rem;
-}
-
-.ItemInfo .buy-option-titles>h4 {
-  cursor: pointer;
-}
-
-.ItemInfo .buy-option-titles>h4:hover {
-  color: var(--color-text-1)
-}
-
-.ItemInfo .buy-option-list {
-  margin-top: .5rem;
-  width: 100%;
-}
-
-.ItemInfo .buy-option {
-  display: flex;
-  padding: .25rem 1rem;
-  gap: 1rem;
-}
-
-.ItemInfo .buy-option:hover {
-  background-color: var(--color-bg-1);
-  filter: brightness(1.2);
-}
-
-.ItemInfo .location {
-  flex-grow: 1;
-}
-
-.ItemInfo .price {
-  flex-shrink: 0;
-  font-weight: bold;
-}
-
-.ItemInfo .buy-option>.price {
-  color: hsl(200deg 60% 50%);
-  font-family: var(--font-slim);
-  font-weight: 600;
-  font-variant-numeric: tabular-nums;
+  margin-bottom: .5rem;
 }
