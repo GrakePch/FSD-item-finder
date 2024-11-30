@@ -1,8 +1,10 @@
 import "./SearchBar.css";
 import { useEffect, useState } from "react";
 import itemData from "../../data/item_data.json";
+import { useSearchParams } from "react-router";
 
-const SearchBar = ({showItem, setShowItem }) => {
+const SearchBar = ({ showItem }) => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [searchName, setSearchName] = useState("");
   const [showResults, setShowResults] = useState(false);
   const [resultList, setResultList] = useState([]);
@@ -11,9 +13,10 @@ const SearchBar = ({showItem, setShowItem }) => {
     setSearchName(e.target.value);
   };
 
-  const handleResultClick = (item) => {
-    setShowItem(item);
+  const handleResultClick = (uuid) => {
     setShowResults(false);
+    searchParams.set("uuid", uuid);
+    setSearchParams(searchParams);
   };
 
   useEffect(() => {
@@ -21,17 +24,15 @@ const SearchBar = ({showItem, setShowItem }) => {
     if (searchName.length > 0)
       for (const [key, item] of Object.entries(itemData)) {
         if (item.name.en.toLocaleLowerCase().includes(searchName.toLocaleLowerCase()) || item.name.zh.includes(searchName)) {
-          let itemClone = structuredClone(item);
-          itemClone.reference = key;
-          tempList.push(structuredClone(itemClone));
+          tempList.push(structuredClone(item));
         }
       }
     setResultList(tempList);
   }, [searchName]);
 
   return (
-    <div className="fixed">
-      {showResults && (
+    <div className="SearchBar">
+      {showResults && showItem && searchName && (
         <div className="search-bg" onClick={() => setShowResults(false)}>
           <p>退出搜索</p>
         </div>
@@ -50,7 +51,7 @@ const SearchBar = ({showItem, setShowItem }) => {
               <hr />
               <div className="result-list">
                 {resultList.map((item) => (
-                  <button className="result-list-item" key={item.reference} onClick={() => handleResultClick(item)}>
+                  <button className="result-list-item" key={item.uuid} onClick={() => handleResultClick(item.uuid)}>
                     <div>
                       <p className="zh">{item.name.zh}</p>
                       <p className="en">{item.name.en}</p>
