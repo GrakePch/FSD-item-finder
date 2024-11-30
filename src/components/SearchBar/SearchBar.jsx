@@ -1,22 +1,15 @@
 import "./SearchBar.css";
 import { useEffect, useState } from "react";
 import itemData from "../../data/item_data.json";
-import { useSearchParams } from "react-router";
+import SearchResultList from "../SearchResultList/SearchResultList";
 
 const SearchBar = ({ centered }) => {
-  const [searchParams, setSearchParams] = useSearchParams();
   const [searchName, setSearchName] = useState("");
   const [showResults, setShowResults] = useState(false);
   const [resultList, setResultList] = useState([]);
 
   const handleSearchChange = (e) => {
     setSearchName(e.target.value);
-  };
-
-  const handleResultClick = (uuid) => {
-    setShowResults(false);
-    searchParams.set("uuid", uuid);
-    setSearchParams(searchParams);
   };
 
   useEffect(() => {
@@ -27,7 +20,9 @@ const SearchBar = ({ centered }) => {
           item.name.en
             .toLocaleLowerCase()
             .includes(searchName.toLocaleLowerCase()) ||
-          item.name.zh.includes(searchName)
+          item.name.zh
+            .toLocaleLowerCase()
+            .includes(searchName.toLocaleLowerCase())
         ) {
           tempList.push(item);
         }
@@ -63,21 +58,10 @@ const SearchBar = ({ centered }) => {
           {showResults && resultList.length > 0 && (
             <>
               <hr />
-              <div className="result-list">
-                {resultList.map((item) => (
-                  <button
-                    className="result-list-item"
-                    key={item.uuid}
-                    onClick={() => handleResultClick(item.uuid)}
-                  >
-                    <div>
-                      <p className="zh">{item.name.zh}</p>
-                      <p className="en">{item.name.en}</p>
-                    </div>
-                    <p className="type">{item.type.zh}</p>
-                  </button>
-                ))}
-              </div>
+              <SearchResultList
+                results={resultList}
+                setShowResults={setShowResults}
+              />
             </>
           )}
         </div>

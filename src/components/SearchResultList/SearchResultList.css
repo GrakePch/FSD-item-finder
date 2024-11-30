@@ -1,0 +1,49 @@
+.SearchResultList {
+    margin-top: 1rem;
+    overflow: auto;
+    /* border-radius: 0 0 2rem 2rem; */
+}
+
+.SearchResultList .result-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: start;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background .2s;
+}
+
+.SearchResultList .result-list-item:hover {
+    background-color: var(--color-bg-2);
+}
+
+.SearchResultList .result-list-item:focus, .result-list-item:focus-visible {
+    background-color: var(--color-bg-2);
+    outline: none;
+}
+
+.SearchResultList .result-list-item:last-child {
+    padding-bottom: 1rem;
+}
+
+.SearchResultList .result-list-item .en {
+    opacity: .7;
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.SearchResultList .result-list-item .type {
+    font-size: .8rem;
+    font-weight: 400;
+    border: var(--color-text) solid 1px;
+    border-radius: 100rem;
+    width: max-content;
+    padding: 0 .5rem;
+}
+
+.SearchResultList .result-list-item .price {
+    font-family: var(--font-slim);
+}
