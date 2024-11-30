@@ -47,6 +47,14 @@
   padding: 0 1rem;
 }
 
+.ItemInfo .buy-option-titles>h4 {
+  cursor: pointer;
+}
+
+.ItemInfo .buy-option-titles>h4:hover {
+  color: var(--color-text-1)
+}
+
 .ItemInfo .buy-option-list {
   margin-top: .5rem;
   width: 100%;
