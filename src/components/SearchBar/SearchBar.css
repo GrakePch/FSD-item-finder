@@ -42,6 +42,7 @@
 }
 
 .SearchBar .search-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     background-color: var(--color-bg-1);
@@ -56,7 +57,7 @@
     /* border-radius: 2rem; */
     height: 3rem;
     border: none;
-    padding: 0 1rem;
+    padding: 0 3rem;
     background-color: var(--color-bg-1);
     font-family: inherit;
     color: var(--color-text);
@@ -69,6 +70,33 @@
 
 .SearchBar #searchbar:focus {
     outline: none;
+}
+
+.SearchBar .btnSearch, .SearchBar .btnClear, .SearchBar .btnBack {
+    position: absolute;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    padding: .25rem;
+    margin: .5rem;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.SearchBar .btnClear:hover, .SearchBar .btnBack:hover {
+    background-color: var(--color-bg-2);
+}
+
+.SearchBar .btnSearch {
+    left: 0;
+}
+
+.SearchBar .btnBack {
+    left: 0;
+}
+
+.SearchBar .btnClear {
+    right: 0;
 }
 
 .SearchBar .search-container>hr {

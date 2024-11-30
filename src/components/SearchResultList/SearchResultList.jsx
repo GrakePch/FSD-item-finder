@@ -25,7 +25,7 @@ const SearchResultList = ({ results, setShowResults }) => {
             <p className="zh">{item.name.zh}</p>
             <p className="en">{item.name.en}</p>
           </div>
-          <p className="price">¤ {item.locations?.[0].price} 起</p>
+          <p className="price">¤ {item.buy.minPrice} 起</p>
         </button>
       ))}
     </div>

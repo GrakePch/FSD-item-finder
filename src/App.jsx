@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <SearchBar centered={item !== null} />
+      <SearchBar centered={item === null} />
 
       {item && <ItemInfo item={item} />}
     </>

@@ -9,14 +9,13 @@ const ItemInfo = ({ item }) => {
   const [sortBy, setSortBy] = useState("price");
   const [sortDir, setSortDir] = useState(1);
   const [buyOptions, setBuyOptions] = useState([]);
-  const numOptions = item.locations.length;
-  const priceMin = item.locations?.[0].price;
-  const priceMax = item.locations?.[numOptions - 1].price;
+  const priceMin = item.buy.minPrice;
+  const priceMax = item.buy.maxPrice;
 
   const [type, subType] = item.type.zh.split("/");
 
   useEffect(() => {
-    let tempBuyOptions = item.locations.toSorted(
+    let tempBuyOptions = item.buy.locations.toSorted(
       (a, b) =>
         (sortBy === "location"
           ? a.location.en.localeCompare(b.location.en)

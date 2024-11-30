@@ -2,6 +2,8 @@ import "./SearchBar.css";
 import { useEffect, useState } from "react";
 import itemData from "../../data/item_data.json";
 import SearchResultList from "../SearchResultList/SearchResultList";
+import Icon from "@mdi/react";
+import { mdiArrowLeft, mdiClose, mdiMagnify } from "@mdi/js";
 
 const SearchBar = ({ centered }) => {
   const [searchName, setSearchName] = useState("");
@@ -29,36 +31,50 @@ const SearchBar = ({ centered }) => {
       }
 
     if (tempList.length <= 100) {
-      tempList.sort((a, b) => a.name.en.localeCompare(b.name.en))
+      tempList.sort((a, b) => a.name.en.localeCompare(b.name.en));
     }
     setResultList(tempList);
   }, [searchName]);
 
   return (
     <div className="SearchBar">
-      {showResults && centered && searchName && (
-        <div className="search-bg" onClick={() => setShowResults(false)}>
-          <p>退出搜索</p>
-        </div>
+      {showResults && resultList.length > 0 && (
+        <div className="search-bg" onClick={() => setShowResults(false)}></div>
       )}
       <nav
         className="search-super-container"
-        style={{ top: !centered && !searchName ? "30%" : 0 }}
+        style={{ top: centered && !searchName ? "30%" : 0 }}
       >
-        {!centered && !searchName && (
+        {centered && !searchName && (
           <>
             <h1>星际寻物</h1>
             <p>为星际公民提供查询物品购买地点与价格的服务</p>
           </>
         )}
         <div className="search-container">
+          {!(showResults && resultList.length > 0) ? (
+            <div className="btnSearch">
+              <Icon path={mdiMagnify} size="1.5rem" />
+            </div>
+          ) : (
+            <button className="btnBack" onClick={() => setShowResults(false)}>
+              <Icon className="iconClear" path={mdiArrowLeft} size="1.5rem" />
+            </button>
+          )}
           <input
-            type="search"
+            type="input"
             id="searchbar"
             placeholder="搜索物品或载具名称..."
+            value={searchName}
             onFocus={() => setShowResults(true)}
             onChange={handleSearchChange}
           />
+          {searchName && (
+            <button className="btnClear" onClick={() => setSearchName("")}>
+              <Icon className="iconClear" path={mdiClose} size="1.5rem" />
+            </button>
+          )}
+
           {showResults && resultList.length > 0 && (
             <>
               <hr />
