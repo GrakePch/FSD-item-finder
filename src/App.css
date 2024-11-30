@@ -34,7 +34,8 @@
   margin-top: var(--margin);
   width: calc(100% - var(--margin) * 2);
 }
-.search-super-container > h1 {
+
+.search-super-container>h1 {
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -127,69 +128,4 @@
   border-radius: 100rem;
   width: max-content;
   padding: 0 .5rem;
-}
-
-.show-item {
-  padding: 1.5rem;
-  padding-top: 6rem;
-}
-
-.item-info {
-  padding: 0 1rem;
-}
-
-.item-info>h2 {
-  opacity: .7;
-}
-
-.item-info>.type {
-  margin-top: .5rem;
-  border: var(--color-text) solid 1px;
-  border-radius: 100rem;
-  width: max-content;
-  padding: 0 .5rem;
-}
-
-.show-item>hr {
-  border: none;
-  width: calc(100% - 2rem);
-  height: 1px;
-  margin: 1rem 1rem;
-  background-color: var(--color-text);
-  opacity: .5;
-}
-
-.buy-option-titles {
-  display: flex;
-  width: 100%;
-  padding: 0 1rem;
-}
-
-.buy-option-list {
-  margin-top: .5rem;
-  width: 100%;
-}
-
-.buy-option {
-  display: flex;
-  padding: .25rem 1rem;
-  gap: 1rem;
-}
-
-.buy-option:hover {
-  background-color: var(--color-bg-1);
-  filter: brightness(1.2);
-}
-
-.location {
-  flex-grow: 1;
-}
-
-.price {
-  flex-shrink: 0;
-  font-weight: bold;
-}
-
-.buy-option>.price {
-  color: #2c799f;
 }
