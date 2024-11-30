@@ -2,3 +2,10 @@
   max-width: 1280px;
   margin: 0 auto;
 }
+
+.app-title {
+  position: fixed;
+  text-align: center;
+  top: 30%;
+  width: 100%;
+}

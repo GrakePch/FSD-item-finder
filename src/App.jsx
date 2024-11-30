@@ -6,19 +6,19 @@ import { useSearchParams } from "react-router";
 import itemData from "./data/item_data.json";
 
 function App() {
-  const [showItem, setShowItem] = useState(null);
+  const [item, setItem] = useState(null);
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
     let uuid = searchParams.get("uuid");
-    setShowItem(itemData[uuid]);
+    setItem(itemData[uuid] || null);
   }, [searchParams]);
 
   return (
     <>
-      <SearchBar showItem={showItem} />
+      <SearchBar centered={item !== null} />
 
-      {showItem && <ItemInfo item={showItem} />}
+      {item && <ItemInfo item={item} />}
     </>
   );
 }

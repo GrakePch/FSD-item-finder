@@ -61,4 +61,5 @@
 
 .ItemInfo .buy-option>.price {
   color: #2c799f;
+  font-variant-numeric: tabular-nums;
 }

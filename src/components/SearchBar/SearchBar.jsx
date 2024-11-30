@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import itemData from "../../data/item_data.json";
 import { useSearchParams } from "react-router";
 
-const SearchBar = ({ showItem }) => {
+const SearchBar = ({ centered }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchName, setSearchName] = useState("");
   const [showResults, setShowResults] = useState(false);
@@ -22,9 +22,14 @@ const SearchBar = ({ showItem }) => {
   useEffect(() => {
     let tempList = [];
     if (searchName.length > 0)
-      for (const [key, item] of Object.entries(itemData)) {
-        if (item.name.en.toLocaleLowerCase().includes(searchName.toLocaleLowerCase()) || item.name.zh.includes(searchName)) {
-          tempList.push(structuredClone(item));
+      for (const item of Object.values(itemData)) {
+        if (
+          item.name.en
+            .toLocaleLowerCase()
+            .includes(searchName.toLocaleLowerCase()) ||
+          item.name.zh.includes(searchName)
+        ) {
+          tempList.push(item);
         }
       }
     setResultList(tempList);
@@ -32,26 +37,39 @@ const SearchBar = ({ showItem }) => {
 
   return (
     <div className="SearchBar">
-      {showResults && showItem && searchName && (
+      {showResults && centered && searchName && (
         <div className="search-bg" onClick={() => setShowResults(false)}>
           <p>退出搜索</p>
         </div>
       )}
-      <nav className="search-super-container" style={{ top: !showItem && !searchName ? "30%" : 0 }}>
-        {!showItem && !searchName && (
+      <nav
+        className="search-super-container"
+        style={{ top: !centered && !searchName ? "30%" : 0 }}
+      >
+        {!centered && !searchName && (
           <>
             <h1>星际寻物</h1>
             <p>为星际公民提供查询物品购买地点与价格的服务</p>
           </>
         )}
         <div className="search-container">
-          <input type="search" id="searchbar" placeholder="搜索物品或载具名称..." onFocus={() => setShowResults(true)} onChange={handleSearchChange} />
+          <input
+            type="search"
+            id="searchbar"
+            placeholder="搜索物品或载具名称..."
+            onFocus={() => setShowResults(true)}
+            onChange={handleSearchChange}
+          />
           {showResults && resultList.length > 0 && (
             <>
               <hr />
               <div className="result-list">
                 {resultList.map((item) => (
-                  <button className="result-list-item" key={item.uuid} onClick={() => handleResultClick(item.uuid)}>
+                  <button
+                    className="result-list-item"
+                    key={item.uuid}
+                    onClick={() => handleResultClick(item.uuid)}
+                  >
                     <div>
                       <p className="zh">{item.name.zh}</p>
                       <p className="en">{item.name.en}</p>

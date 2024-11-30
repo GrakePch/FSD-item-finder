@@ -21,7 +21,7 @@
 
 .SearchBar .search-super-container {
     position: fixed;
-    max-width: 1280px;
+    max-width: calc(1280px - 3rem);
     top: 0;
     --margin: 1.5rem;
     left: 50%;
