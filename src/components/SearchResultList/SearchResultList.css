@@ -18,7 +18,8 @@
     background-color: var(--color-bg-2);
 }
 
-.SearchResultList .result-list-item:focus, .result-list-item:focus-visible {
+.SearchResultList .result-list-item:focus,
+.SearchResultList .result-list-item:focus-visible {
     background-color: var(--color-bg-2);
     outline: none;
 }
