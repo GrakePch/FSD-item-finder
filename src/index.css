@@ -34,8 +34,8 @@
 }
 
 @font-face {
-  font-family: 'Outfit';
-  src: url('./fonts/Outfit-VariableFont_wght.ttf') format('truetype');
+  font-family: 'DMSans';
+  src: url('./fonts/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: 100 900;
   font-stretch: 75% 100%;
   font-style: normal;
@@ -56,7 +56,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --font-primary: "Outfit", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-primary: "DMSans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   --font-slim: "Barlow", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
   --color-bg: #242424;

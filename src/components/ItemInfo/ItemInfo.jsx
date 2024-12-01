@@ -40,24 +40,27 @@ const ItemInfo = ({ item }) => {
           <TradeOptions pricesData={item.rent} tradeType="rent" />
         </>
       )}
-
-      <hr />
-      <h3 className="variants-title">该物品的所有涂装版本</h3>
-      <div className="list-variants">
-        {listVariants.map((item) => (
-          <button
-            className="variant"
-            key={item.uuid}
-            onClick={() => {
-              searchParams.set("uuid", item.uuid);
-              setSearchParams(searchParams);
-            }}
-          >
-            <p>{item.name.zh}</p>
-            <p className="price">¤ {item.buy.minPrice} 起</p>
-          </button>
-        ))}
-      </div>
+      {listVariants.length>0 && (
+        <>
+          <hr />
+          <h3 className="variants-title">该物品的所有涂装版本</h3>
+          <div className="list-variants">
+            {listVariants.map((item) => (
+              <button
+                className="variant"
+                key={item.uuid}
+                onClick={() => {
+                  searchParams.set("uuid", item.uuid);
+                  setSearchParams(searchParams);
+                }}
+              >
+                <p>{item.name.zh}</p>
+                <p className="price">¤ {item.buy.minPrice} 起</p>
+              </button>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 };
