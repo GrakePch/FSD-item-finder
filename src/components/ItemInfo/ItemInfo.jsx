@@ -42,7 +42,7 @@ const ItemInfo = ({ item }) => {
           <TradeOptions pricesData={item.rent} tradeType="rent" />
         </>
       )}
-      {listVariants.length > 0 && (
+      {listVariants.length > 1 && (
         <>
           <hr />
           <div className="title-and-button">

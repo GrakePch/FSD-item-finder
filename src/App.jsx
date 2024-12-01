@@ -16,7 +16,7 @@ function App() {
     let tempItem = itemData[uuid] || null;
     setItem(tempItem);
     let isGroup = searchParams.get("group");
-    setIsGroup(isGroup && tempItem.variants?.length);
+    setIsGroup(isGroup && tempItem.variants?.length>1);
   }, [searchParams]);
 
   return (
