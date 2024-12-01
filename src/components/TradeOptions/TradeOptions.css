@@ -17,7 +17,7 @@
     background-color: var(--color-bg-2);
 }
 
-.TradeOptions .option-list {
+.TradeOptions .options-container {
     margin-top: .5rem;
     width: 100%;
     padding: 0 .5rem;
@@ -55,8 +55,17 @@
 
 /* Location Tree */
 
-.TradeOptions .location-tree {
-    display: block;
+.TradeOptions .options-container>.location-tree {
+    margin-left: .5rem;
+}
+
+.TradeOptions .options-container>.location-tree-nowrap {
+    margin-left: 0rem;
+}
+
+.TradeOptions .options-container>.location-tree-nowrap:hover {
+    outline-color: var(--color-bg-2);
+    filter: brightness(1.5);
 }
 
 .TradeOptions .location-tree>p {

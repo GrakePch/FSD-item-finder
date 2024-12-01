@@ -74,7 +74,7 @@ const TradeOptions = ({ pricesData, tradeType }) => {
           {sortBy === "price" ? (sortDir > 0 ? " ▲" : " ▼") : " △"}
         </h4>
       </div>
-      <div className="option-list">
+      <div className="options-container">
         {sortBy === "price" ? (
           options.map((option) => {
             let hue = 200 - percent(option.price, priceMin, priceMax) * 2;
