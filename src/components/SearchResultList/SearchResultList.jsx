@@ -7,6 +7,7 @@ const SearchResultList = ({ results, setShowResults }) => {
   const handleResultClick = (uuid) => {
     setShowResults(false);
     searchParams.set("uuid", uuid);
+    searchParams.delete("group");
     setSearchParams(searchParams);
   };
 

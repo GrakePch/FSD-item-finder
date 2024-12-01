@@ -3,6 +3,8 @@ import TradeOptions from "../TradeOptions/TradeOptions";
 import { useEffect, useState } from "react";
 import itemData from "../../data/item_data.json";
 import { useSearchParams } from "react-router";
+import Icon from "@mdi/react";
+import { mdiTagMultipleOutline } from "@mdi/js";
 
 const ItemInfo = ({ item }) => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -40,10 +42,19 @@ const ItemInfo = ({ item }) => {
           <TradeOptions pricesData={item.rent} tradeType="rent" />
         </>
       )}
-      {listVariants.length>0 && (
+      {listVariants.length > 0 && (
         <>
           <hr />
-          <h3 className="variants-title">该物品的所有涂装版本</h3>
+          <div className="title-and-button">
+            <h3 className="variants-title">所有涂装版本</h3>
+            <button className="button-check-group" onClick={() => {
+              searchParams.set("group", 1);
+              setSearchParams(searchParams);
+            }}>
+              <Icon path={mdiTagMultipleOutline} size="1.5rem" />
+              查看所有涂装版本的购买选项
+            </button>
+          </div>
           <div className="list-variants">
             {listVariants.map((item) => (
               <button
@@ -51,6 +62,7 @@ const ItemInfo = ({ item }) => {
                 key={item.uuid}
                 onClick={() => {
                   searchParams.set("uuid", item.uuid);
+                  searchParams.delete("group");
                   setSearchParams(searchParams);
                 }}
               >
