@@ -62,6 +62,7 @@
     font-family: inherit;
     color: var(--color-text);
     font-size: 1rem;
+    transition: background .2s;
 }
 
 .SearchBar #searchbar:hover {

@@ -72,7 +72,7 @@ const ItemInfo = ({ item }) => {
             <button
               className="button-check-group"
               onClick={() => {
-                searchParams.set("group", 1);
+                searchParams.set("mode", "variants");
                 setSearchParams(searchParams);
               }}
             >
@@ -88,11 +88,7 @@ const ItemInfo = ({ item }) => {
                 onClick={
                   item.uuid === vItem.uuid
                     ? null
-                    : () => {
-                        searchParams.set("uuid", vItem.uuid);
-                        searchParams.delete("group");
-                        setSearchParams(searchParams);
-                      }
+                    : () => setSearchParams({ uuid: vItem.uuid })
                 }
               >
                 <p>
@@ -123,14 +119,7 @@ const SetButton = ({ subType, uuid, self }) => {
   return uuid ? (
     <button
       className="set-button"
-      onClick={
-        uuid === self
-          ? null
-          : () => {
-              searchParams.set("uuid", uuid);
-              setSearchParams(searchParams);
-            }
-      }
+      onClick={uuid === self ? null : () => setSearchParams({ uuid: uuid })}
     >
       <p>{tIcon[subType]}</p>
       <p className="zh">

@@ -48,8 +48,7 @@ const ItemGroupInfo = ({ item }) => {
     <div className="ItemGroupInfo">
       <div className="item-info">
         <h1 className="zh">
-          {firstVariant?.name.zh}{" "}
-          <span>等 {listVariants.length} 个同类物品</span>
+          {firstVariant?.name.zh} <span>等 {listVariants.length} 个同类物品</span>
         </h1>
         <h2 className="en">{firstVariant?.name.en} ...</h2>
         <div className="types">
@@ -67,18 +66,14 @@ const ItemGroupInfo = ({ item }) => {
       <hr />
       <h3 className="variants-title">本次查询包含以下物品</h3>
       <div className="list-variants">
-        {listVariants.map((item) => (
+        {listVariants.map((vItem) => (
           <button
             className="variant"
-            key={item.uuid}
-            onClick={() => {
-              searchParams.set("uuid", item.uuid);
-              searchParams.delete("group");
-              setSearchParams(searchParams);
-            }}
+            key={vItem.uuid}
+            onClick={() => setSearchParams({ uuid: vItem.uuid })}
           >
-            <p>{item.name.zh}</p>
-            <p className="price">¤ {item.buy.minPrice} 起</p>
+            <p>{vItem.name.zh}</p>
+            <p className="price">¤ {vItem.buy.minPrice} 起</p>
           </button>
         ))}
       </div>

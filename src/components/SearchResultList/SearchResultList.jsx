@@ -6,9 +6,7 @@ const SearchResultList = ({ results, setShowResults }) => {
 
   const handleResultClick = (uuid) => {
     setShowResults(false);
-    searchParams.set("uuid", uuid);
-    searchParams.delete("group");
-    setSearchParams(searchParams);
+    setSearchParams({ uuid: uuid });
   };
 
   return (
@@ -20,7 +18,9 @@ const SearchResultList = ({ results, setShowResults }) => {
           onClick={() => handleResultClick(item.uuid)}
         >
           <div className="type">
-            {item.type.zh.split("/").map((t, i) => <p key={i}>{t}</p>)}
+            {item.type.zh.split("/").map((t, i) => (
+              <p key={i}>{t}</p>
+            ))}
           </div>
           <div className="names">
             <p className="zh">{item.name.zh}</p>

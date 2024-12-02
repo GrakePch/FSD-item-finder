@@ -8,15 +8,15 @@ import ItemGroupInfo from "./components/ItemGroupInfo/ItemGroupInfo";
 
 function App() {
   const [item, setItem] = useState(null);
-  const [isGroup, setIsGroup] = useState(false);
+  const [showAllVariants, setShowAllVariants] = useState(false);
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
     let uuid = searchParams.get("uuid");
     let tempItem = itemData[uuid] || null;
     setItem(tempItem);
-    let isGroup = searchParams.get("group");
-    setIsGroup(isGroup && tempItem.variants?.length>1);
+    let allVariants = searchParams.get("mode") === "variants";
+    setShowAllVariants(allVariants && tempItem.variants?.length>1);
   }, [searchParams]);
 
   return (
@@ -24,7 +24,7 @@ function App() {
       <SearchBar centered={item === null} />
 
       {item &&
-        (isGroup ? <ItemGroupInfo item={item} /> : <ItemInfo item={item} />)}
+        (showAllVariants ? <ItemGroupInfo item={item} /> : <ItemInfo item={item} />)}
     </>
   );
 }
