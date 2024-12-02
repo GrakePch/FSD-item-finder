@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./TradeOptions.css";
 
 const percent = (v, zero, hundred) => {
+  if (zero === hundred) return 0;
   return ((v - zero) / (hundred - zero)) * 100;
 };
 
@@ -10,8 +11,6 @@ const TradeOptions = ({ pricesData, tradeType }) => {
   const [sortDir, setSortDir] = useState(1);
   const [options, setOptions] = useState([]);
   const [locationForest, setLocationForest] = useState({});
-  const priceMin = pricesData.minPrice;
-  const priceMax = pricesData.maxPrice;
 
   useEffect(() => {
     let tempOptions = pricesData.locations.toSorted(
@@ -77,7 +76,7 @@ const TradeOptions = ({ pricesData, tradeType }) => {
       <div className="options-container">
         {sortBy === "price" ? (
           options.map((option) => {
-            let hue = 200 - percent(option.price, priceMin, priceMax) * 2;
+            let hue = 200 - percent(option.price, pricesData.minPrice, pricesData.maxPrice) * 2;
             return (
               <div className="option" key={option.location.en}>
                 <p className="location">
@@ -97,8 +96,8 @@ const TradeOptions = ({ pricesData, tradeType }) => {
         ) : (
           <LocationForest
             forest={locationForest}
-            priceMin={priceMin}
-            priceMax={priceMax}
+            priceMin={pricesData.minPrice}
+            priceMax={pricesData.maxPrice}
             depth={0}
           />
         )}
