@@ -5,6 +5,7 @@ import itemData from "../../data/item_data.json";
 import { useSearchParams } from "react-router";
 import Icon from "@mdi/react";
 import { mdiTagMultipleOutline } from "@mdi/js";
+import SetButton from "../SetButton/SetButton";
 
 const ItemInfo = ({ item }) => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -46,23 +47,36 @@ const ItemInfo = ({ item }) => {
         </>
       )}
       <hr />
-      {(typeEN === "Armor" || typeEN === "Undersuits") && (
-        <div className="set-container">
-          {item.set ? (
-            <>
+      {(typeEN === "Armor" || typeEN === "Undersuits") &&
+        (item.set ? (
+          <>
+            <div className="title-and-button">
               <h3>可购买的套装</h3>
+              <button
+                className="button-check-group"
+                onClick={() => {
+                  searchParams.set("mode", "set");
+                  setSearchParams(searchParams);
+                }}
+              >
+                <Icon path={mdiTagMultipleOutline} size="1.5rem" />
+                哪里能购买完整套装
+              </button>
+            </div>
+            <div className="set-container">
               <SetButton subType="undersuit" uuid={item.set.undersuit} self={item.uuid} />
               <SetButton subType="helmet" uuid={item.set.helmet} self={item.uuid} />
               <SetButton subType="torso" uuid={item.set.torso} self={item.uuid} />
               <SetButton subType="arms" uuid={item.set.arms} self={item.uuid} />
               <SetButton subType="legs" uuid={item.set.legs} self={item.uuid} />
               <SetButton subType="backpack" uuid={item.set.backpack} self={item.uuid} />
-            </>
-          ) : (
+            </div>
+          </>
+        ) : (
+          <div className="title-and-button">
             <h3>没有可购买的套装</h3>
-          )}
-        </div>
-      )}
+          </div>
+        ))}
 
       {listVariants.length > 1 && (
         <>
@@ -102,37 +116,6 @@ const ItemInfo = ({ item }) => {
         </>
       )}
     </div>
-  );
-};
-
-const SetButton = ({ subType, uuid, self }) => {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const tIcon = {
-    undersuit: "🩲",
-    helmet: "🤿",
-    torso: "👕",
-    arms: "💪",
-    legs: "👖",
-    backpack: "🎒",
-  };
-
-  return uuid ? (
-    <button
-      className="set-button"
-      onClick={uuid === self ? null : () => setSearchParams({ uuid: uuid })}
-    >
-      <p>{tIcon[subType]}</p>
-      <p className="zh">
-        {itemData[uuid].name.zh}
-        {uuid === self ? "（当前）" : ""}
-      </p>
-      <p className="price">¤ {itemData[uuid].buy.minPrice} 起</p>
-    </button>
-  ) : (
-    <button className="set-button" disabled>
-      <p>{tIcon[subType]}</p>
-      <p className="zh">无</p>
-    </button>
   );
 };
 

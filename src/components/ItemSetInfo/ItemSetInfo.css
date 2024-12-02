@@ -1,0 +1,42 @@
+.ItemSetInfo {
+    padding: 1.5rem;
+    padding-top: 6rem;
+}
+
+.ItemSetInfo .item-info {
+    padding: 0 1rem;
+}
+
+.ItemSetInfo .zh>span {
+    color: var(--color-text-1);
+}
+
+.ItemSetInfo .en {
+    color: var(--color-text-1);
+}
+
+.ItemSetInfo .set-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 0 .5rem;
+}
+
+.ItemSetInfo hr {
+    border: none;
+    width: calc(100% - 2rem);
+    height: 1px;
+    margin: 1rem 1rem;
+    background-color: var(--color-text);
+    opacity: .5;
+}
+
+.ItemSetInfo .trade-options-title {
+    padding: 0 1rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+
+.ItemSetInfo p.message {
+    padding: 0 1rem;
+}

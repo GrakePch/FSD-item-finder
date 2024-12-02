@@ -5,18 +5,19 @@ import SearchBar from "./components/SearchBar/SearchBar";
 import { useSearchParams } from "react-router";
 import itemData from "./data/item_data.json";
 import ItemGroupInfo from "./components/ItemGroupInfo/ItemGroupInfo";
+import ItemSetInfo from "./components/ItemSetInfo/ItemSetInfo";
 
 function App() {
   const [item, setItem] = useState(null);
-  const [showAllVariants, setShowAllVariants] = useState(false);
+  const [showMode, setShowMode] = useState("");
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
     let uuid = searchParams.get("uuid");
     let tempItem = itemData[uuid] || null;
     setItem(tempItem);
-    let allVariants = searchParams.get("mode") === "variants";
-    setShowAllVariants(allVariants && tempItem.variants?.length>1);
+    let mode = searchParams.get("mode");
+    setShowMode(mode);
   }, [searchParams]);
 
   return (
@@ -24,7 +25,13 @@ function App() {
       <SearchBar centered={item === null} />
 
       {item &&
-        (showAllVariants ? <ItemGroupInfo item={item} /> : <ItemInfo item={item} />)}
+        (showMode === "variants" && item.variants?.length > 1 ? (
+          <ItemGroupInfo item={item} />
+        ) : showMode === "set" && item.set ? (
+          <ItemSetInfo item={item} />
+        ) : (
+          <ItemInfo item={item} />
+        ))}
     </>
   );
 }
