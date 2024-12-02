@@ -64,6 +64,7 @@
   --color-bg-2: #464646;
   --color-text: #dcdcdc;
   --color-text-1: #a5a5a5;
+  --color-text-2: #808080;
 
   --acrylic-edge: inset 0 0 .2rem 0 #ffffff20;
   --shadow-1: 0 0.50rem 0.75rem 0 #00000020;
@@ -103,18 +104,29 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
+  color: var(--color-text);
   background-color: var(--color-bg-1);
   transition: background-color .2s;
   cursor: pointer;
 }
 
-button:hover {
+button:hover:not(:disabled) {
   background-color: var(--color-bg-2);
 }
 
 button:focus,
 button:focus-visible {
   /* outline: 4px auto -webkit-focus-ring-color; */
+}
+
+button:disabled {
+  cursor: default;
+  background-color: var(--color-bg);
+  outline: var(--color-bg-1) 1px solid;
+}
+
+button:disabled>*{
+  opacity: .5;
 }
 
 @media screen and (max-width: 719px) {

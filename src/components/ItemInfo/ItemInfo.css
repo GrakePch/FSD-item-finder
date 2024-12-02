@@ -32,6 +32,37 @@
   color: var(--color-text);
 }
 
+.ItemInfo .set-container {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: 0 .5rem;
+}
+
+.ItemInfo .set-container>h3 {
+  padding-left: .5rem;
+}
+
+.ItemInfo .set-button {
+  display: flex;
+  padding: .25rem .5rem;
+  gap: .5rem;
+  border-radius: .5rem;
+}
+
+.ItemInfo .set-button>.zh {
+  flex-grow: 1;
+  text-align: start;
+  font-weight: 400;
+}
+
+.ItemInfo .set-button>.price {
+  color: hsl(200deg 60% 50%);
+  font-family: var(--font-slim);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
 .ItemInfo hr {
   border: none;
   width: calc(100% - 2rem);
