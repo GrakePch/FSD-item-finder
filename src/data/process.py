@@ -10,37 +10,31 @@ for uuid, item in data.items():
     if "series" in item:
         del item["series"]
 
+checkTypeList = [
+    "Personal Weapons/Personal Weapons",
+    "Undersuits/Undersuits",
+    "Armor/Helmets",
+    "Armor/Torso",
+    "Armor/Arms",
+    "Armor/Legs",
+    "Armor/Backpacks",
+]
+
 for uuid, item in data.items():
 
-    if item["type"]["en"] == "Personal Weapons/Personal Weapons":
-        item["variants"] = []
-        name = item["name"]["en"].split(" ")[0]
+    for checkType in checkTypeList:
+        if item["type"]["en"] == checkType:
+            del item["variants"]
+            vlist = []
+            name = item["name"]["en"].split(" ")[0]
 
-        for uuid2, item2 in data.items():
-            if item2["type"]["en"] == "Personal Weapons/Personal Weapons":
-                name2 = item2["name"]["en"].split(" ")[0]
-                if name == name2:
-                    item["variants"].append(uuid2)
-
-    if item["type"]["en"].startswith("Armor/"):
-        item["variants"] = []
-        name = " ".join(item["name"]["en"].split(" ")[:2])
-
-        for uuid2, item2 in data.items():
-            if item2["type"]["en"].startswith("Armor/"):
-                name2 = " ".join(item2["name"]["en"].split(" ")[:2])
-                if name == name2:
-                    item["variants"].append(uuid2)
-
-    if item["type"]["en"].startswith("Undersuits/"):
-        item["variants"] = []
-        name = " ".join(item["name"]["en"].split(" ")[:2])
-
-        for uuid2, item2 in data.items():
-            if item2["type"]["en"].startswith("Undersuits/"):
-                name2 = " ".join(item2["name"]["en"].split(" ")[:2])
-                if name == name2:
-                    item["variants"].append(uuid2)
+            for uuid2, item2 in data.items():
+                if item2["type"]["en"] == checkType:
+                    name2 = item2["name"]["en"].split(" ")[0]
+                    if name == name2:
+                        vlist.append(uuid2)
+            if len(vlist) > 1:
+                item["variants"] = vlist
 
 
 output_file_path = "item_data.json"
