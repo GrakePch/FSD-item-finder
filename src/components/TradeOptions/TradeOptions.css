@@ -43,10 +43,12 @@
     flex-wrap: wrap;
 }
 
-.TradeOptions .location>span {
+.TradeOptions .location-chip {
     background-color: var(--color-bg-1);
     padding: 0 .5rem;
     border-radius: 4px;
+    width: max-content;
+    min-height: 1.5rem;
 }
 
 .TradeOptions .price {
@@ -65,7 +67,7 @@
 /* Location Tree */
 
 .TradeOptions .options-container>.location-tree {
-    margin-left: .5rem;
+    /* margin-left: .5rem; */
 }
 
 .TradeOptions .options-container>.location-tree-nowrap {
@@ -78,7 +80,12 @@
 }
 
 .TradeOptions .location-tree>p {
-    padding: .25rem 0;
+    /* padding: .25rem 0; */
+}
+
+.TradeOptions .location-tree .location-chip {
+    margin: .25rem 0;
+    margin-left: .25rem;
 }
 
 .TradeOptions .line-and-list {
@@ -101,8 +108,9 @@
     display: flex;
     align-items: start;
     flex-wrap: wrap;
-    padding-left: .5rem;
-    margin-left: -.5rem;
+    /* padding-left: .5rem; */
+    /* margin-left: -.5rem; */
+    /* gap: .5rem; */
     border-radius: .5rem;
     outline: transparent solid 2px;
 }
@@ -113,7 +121,7 @@
 }
 
 .TradeOptions .location-tree-nowrap>p {
-    padding: .25rem 0;
+    padding: 0 .25rem;
 }
 
 .TradeOptions .sub-location {
@@ -123,8 +131,9 @@
 .TradeOptions .option-in-tree {
     display: flex;
     gap: 1rem;
-    padding: .25rem .5rem;
-    margin-left: -.5rem;
+    padding-right: .5rem;
+    /* padding: 0 .5rem; */
+    /* margin-left: -.5rem; */
     border-radius: .5rem;
     outline: transparent solid 2px;
 }
@@ -135,6 +144,7 @@
 }
 
 .TradeOptions .option-in-tree>.price {
+    margin: .25rem 0;
     color: hsl(200deg 60% 50%);
     font-family: var(--font-slim);
     font-weight: 600;
