@@ -83,6 +83,7 @@
     /* padding: .25rem 0; */
 }
 
+.TradeOptions .location-tree-nowrap .location-chip,
 .TradeOptions .location-tree .location-chip {
     margin: .25rem 0;
     margin-left: .25rem;
@@ -121,7 +122,7 @@
 }
 
 .TradeOptions .location-tree-nowrap>p {
-    padding: 0 .25rem;
+    /* padding: 0 .25rem; */
 }
 
 .TradeOptions .sub-location {

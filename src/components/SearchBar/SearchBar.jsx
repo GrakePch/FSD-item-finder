@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import SearchResultList from "../SearchResultList/SearchResultList";
 import Icon from "@mdi/react";
 import { mdiArrowLeft, mdiClose, mdiMagnify } from "@mdi/js";
-import { getItemUexFormat, getZhHansNameFromEn } from "../../utils";
+import { getItemUexFormat, getVehicleUEXFormat, getVehicleZhName, getZhHansNameFromEn } from "../../utils";
 
-const SearchBar = ({ centered, itemsAll }) => {
+const SearchBar = ({ centered, itemsAll, vehiclesBuyAll, vehiclesRentAll }) => {
   const [searchName, setSearchName] = useState("");
   const [showResults, setShowResults] = useState(false);
   const [itemsSearchAll, setItemsSearchAll] = useState([]);
@@ -17,11 +17,12 @@ const SearchBar = ({ centered, itemsAll }) => {
 
   useEffect(() => {
     let tempDict = {};
+    /* Add all items to searchable list */
     for (const item of itemsAll) {
       if (!tempDict[item.id_item]) {
         let itemUexFormat = getItemUexFormat(item.id_item);
         tempDict[item.id_item] = {
-          id: item.id_item,
+          id: "i-" + item.id_item,
           slug: itemUexFormat?.slug,
           name: item.item_name,
           name_zh_Hans: getZhHansNameFromEn(item.item_name),
@@ -34,13 +35,56 @@ const SearchBar = ({ centered, itemsAll }) => {
           tempDict[item.id_item].price_min = item.price_buy;
       }
     }
-
     let tempItemsSearchAll = Object.values(tempDict);
-    // console.log(tempItemsSearchAll);
-    let tempItemsSearchAllFiltered = tempItemsSearchAll.filter((item) => item.slug);
+
+    let tempVehDict = {};
+    /* Add all vehicles's buy options to searchable list */
+    for (const vehicle of vehiclesBuyAll) {
+      if (!tempVehDict[vehicle.id_vehicle]) {
+        let vehicleUexFormat = getVehicleUEXFormat(vehicle.id_vehicle);
+        tempVehDict[vehicle.id_vehicle] = {
+          id: "v-" + vehicle.id_vehicle,
+          slug: "v-" + vehicle.id_vehicle,
+          name: vehicleUexFormat.name_full,
+          name_zh_Hans: getVehicleZhName(vehicleUexFormat.name_full),
+          price_min: vehicle.price_buy || Infinity,
+          price_rent_min: Infinity,
+          type: "Vehicle",
+          sub_type: "Vehicle",
+        };
+      } else {
+        if (vehicle.price_buy > 0 && vehicle.price_buy < tempVehDict[vehicle.id_vehicle].price_min)
+          tempVehDict[vehicle.id_vehicle].price_min = vehicle.price_buy;
+      }
+    }
+    /* Add all vehicles's rent options to searchable list */
+    for (const vehicle of vehiclesRentAll) {
+      if (!tempVehDict[vehicle.id_vehicle]) {
+        let vehicleUexFormat = getVehicleUEXFormat(vehicle.id_vehicle);
+        tempVehDict[vehicle.id_vehicle] = {
+          id: "v-" + vehicle.id_vehicle,
+          slug: "v-" + vehicle.id_vehicle,
+          name: vehicleUexFormat.name_full,
+          name_zh_Hans: getVehicleZhName(vehicleUexFormat.name_full),
+          price_min: Infinity,
+          price_rent_min: vehicle.price_rent || Infinity,
+          type: "Vehicle",
+          sub_type: "Vehicle",
+        };
+      } else {
+        if (vehicle.price_rent > 0 && vehicle.price_rent < tempVehDict[vehicle.id_vehicle].price_rent_min)
+          tempVehDict[vehicle.id_vehicle].price_rent_min = vehicle.price_rent;
+      }
+    }
+    let tempVehiclesSearchAll = Object.values(tempVehDict);
+
+    let tempCombinedSearchAll = [...tempItemsSearchAll, ...tempVehiclesSearchAll];
+
+    // console.log(tempCombinedSearchAll);
+    let tempItemsSearchAllFiltered = tempCombinedSearchAll.filter((item) => item.slug);
     setItemsSearchAll(tempItemsSearchAllFiltered);
     
-  }, [itemsAll]);
+  }, [itemsAll, vehiclesBuyAll, vehiclesRentAll]);
 
   useEffect(() => {
     let tempList = [];

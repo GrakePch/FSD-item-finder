@@ -1,8 +1,10 @@
 import itemsNameToKey from "./data/items_name_to_key.json";
 import itemsKeyToNameZhHans from "./data/items_key_to_name_zh_Hans.json";
 import itemsUex from "./data/items_uex.json";
+import vehiclesUex from "./data/vehicles_uex.json";
 import i18nLocations from "./data/i18n_locations.json";
 import i18nLocationsM from "./data/i18n_locations_manual.json";
+import i18nVehicles from "./data/i18n_vehicles.json";
 
 export function getKey(name_en) {
     return itemsNameToKey[name_en];
@@ -24,9 +26,16 @@ export function getLocationZhName(name_en) {
     if (name_en.includes("Lagrange")) {
         let en_split = name_en.split(" ");
         let sliceIdx = name_en.search("Lagrange");
-        let en_slice = name_en.slice(0, sliceIdx-1);
-        return getLocationZhName(en_slice) + " 拉格朗日点 "+ en_split[en_split.length - 1];
+        let en_slice = name_en.slice(0, sliceIdx - 1);
+        return getLocationZhName(en_slice) + " 拉格朗日点 " + en_split[en_split.length - 1];
     }
+    return name_en;
+}
+
+export function getVehicleZhName(name_en) {
+    if (!name_en) return name_en;
+    let en = name_en.toLowerCase();
+    if (i18nVehicles[en]) return i18nVehicles[en].zh;
     return name_en;
 }
 
@@ -40,6 +49,14 @@ export function getItemUexFormat(id) {
     return null;
 }
 
+export function getVehicleUEXFormat(id) {
+    for (const vehicle of vehiclesUex) {
+        if (vehicle.id === id) {
+            return vehicle;
+        }
+    }
+}
+
 export function getItemUexFormatBySlug(slug) {
     for (const item of itemsUex) {
         if (item.slug === slug) {
@@ -47,5 +64,15 @@ export function getItemUexFormatBySlug(slug) {
         }
     }
     console.log("No item found for slug: " + slug);
+    return null;
+}
+
+export function getVehicleUEXFormatBySlug(slug) {
+    for (const vehicle of vehiclesUex) {
+        if (vehicle.id == slug.slice(2)) {
+            return vehicle;
+        }
+    }
+    console.log("No vehicle found for slug: " + slug);
     return null;
 }

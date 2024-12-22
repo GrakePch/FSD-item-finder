@@ -18,7 +18,7 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
     let tempOptions = pricesData.map((item) => ({
       ...item,
       location_path: [
-        item.star_system_name,
+        item.star_system_name || "Stanton",
         item.orbit_name,
         ...item.terminal_name.split(" - ").reverse(),
       ],
@@ -31,7 +31,7 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
       (a, b) =>
         (sortBy === "location"
           ? a.location_path.join("/").localeCompare(b.location_path.join("/"))
-          : a.price_buy - b.price_buy) * sortDir
+          : a["price_" + tradeType] - b["price_" + tradeType]) * sortDir
     );
 
     // console.log(tempOptions)
@@ -46,7 +46,7 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
 
     const tempLocationForest = {};
     options
-      .filter((option) => option.price_buy > 0)
+      .filter((option) => option["price_" + tradeType] > 0)
       .forEach((option) => {
         addToTree(tempLocationForest, option.location_path, option);
       });
@@ -88,11 +88,16 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
       <div className="options-container">
         {sortBy === "price" ? (
           options
-            .filter((option) => option.price_buy > 0)
+            .filter((option) => option["price_" + tradeType] > 0)
             .map((option) => {
               let hue =
                 200 -
-                percent(option.price_buy, priceMinMax.buy_min, priceMinMax.buy_max) * 2;
+                percent(
+                  option["price_" + tradeType],
+                  priceMinMax[tradeType + "_min"],
+                  priceMinMax[tradeType + "_max"]
+                ) *
+                  2;
               return (
                 <div className="option" key={option.id}>
                   <p className="location">
@@ -114,9 +119,9 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
                       </span>
                     ))}
                   </p>
-                  {option.price_buy > 0 ? (
+                  {option["price_" + tradeType] > 0 ? (
                     <p className="price" style={{ color: `hsl(${hue}deg 60% 50%)` }}>
-                      ¤ {option.price_buy}
+                      ¤ {option["price_" + tradeType]}
                     </p>
                   ) : (
                     <p className="price" style={{ color: `hsl(0deg 0% 50%)` }}>
@@ -129,9 +134,10 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
         ) : (
           <LocationForest
             forest={locationForest}
-            priceMin={priceMinMax.buy_min}
-            priceMax={priceMinMax.buy_max}
+            priceMin={priceMinMax[tradeType + "_min"]}
+            priceMax={priceMinMax[tradeType + "_max"]}
             depth={0}
+            tradeType={tradeType}
           />
         )}
       </div>
@@ -153,25 +159,21 @@ const addToTree = (tree, path, option) => {
   });
 };
 
-const LocationForest = ({ forest, priceMin, priceMax, depth }) => {
+const LocationForest = ({ forest, priceMin, priceMax, depth, tradeType }) => {
+  let bgcolor = `rgba(255 255 255 / ${(1 - (depth - 1) / 4) * 0.2})`;
   return Object.entries(forest).map(([key, loc]) => {
     if ("option" in loc) {
-      let hue = 200 - percent(loc.option.price_buy, priceMin, priceMax) * 2;
+      let hue = 200 - percent(loc.option["price_" + tradeType], priceMin, priceMax) * 2;
       return (
         <div className="option-in-tree" key={key}>
           <p className="location">
-            <span
-              className="location-chip"
-              style={{
-                backgroundColor: `rgba(255 255 255 / ${(1 - (depth - 1) / 4) * 0.2})`,
-              }}
-            >
+            <span className="location-chip" style={{ backgroundColor: bgcolor }}>
               {getLocationZhName(loc.name)}
             </span>
           </p>
-          {loc.option.price_buy > 0 ? (
+          {loc.option["price_" + tradeType] > 0 ? (
             <p className="price" style={{ color: `hsl(${hue}deg 60% 50%)` }}>
-              ¤ {loc.option.price_buy}
+              ¤ {loc.option["price_" + tradeType]}
             </p>
           ) : (
             <p className="price" style={{ color: `hsl(0deg 0% 50%)` }}>
@@ -185,9 +187,11 @@ const LocationForest = ({ forest, priceMin, priceMax, depth }) => {
         <div key={key} className="location-tree-nowrap">
           <p
             className="location-chip"
-            style={{
-              backgroundColor: `rgba(255 255 255 / ${(1 - (depth - 1) / 4) * 0.2})`,
-            }}
+            style={
+              depth > 0
+                ? { backgroundColor: bgcolor }
+                : { backgroundColor: `var(--color-text-1)`, color: `#000` }
+            }
           >
             {getLocationZhName(loc.name)}
           </p>
@@ -197,6 +201,7 @@ const LocationForest = ({ forest, priceMin, priceMax, depth }) => {
               priceMin={priceMin}
               priceMax={priceMax}
               depth={depth + 1}
+              tradeType={tradeType}
             />
           </div>
         </div>
@@ -208,13 +213,8 @@ const LocationForest = ({ forest, priceMin, priceMax, depth }) => {
             className="location-chip"
             style={
               depth > 0
-                ? {
-                    backgroundColor: `rgba(255 255 255 / ${(1 - (depth - 1) / 4) * 0.2})`,
-                  }
-                : {
-                    backgroundColor: `var(--color-text-1)`,
-                    color: `#000`,
-                  }
+                ? { backgroundColor: bgcolor }
+                : { backgroundColor: `var(--color-text-1)`, color: `#000` }
             }
           >
             {getLocationZhName(loc.name)}
@@ -227,6 +227,7 @@ const LocationForest = ({ forest, priceMin, priceMax, depth }) => {
                 priceMin={priceMin}
                 priceMax={priceMax}
                 depth={depth + 1}
+                tradeType={tradeType}
               />
             </div>
           </div>
