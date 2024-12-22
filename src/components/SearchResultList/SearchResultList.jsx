@@ -15,18 +15,24 @@ const SearchResultList = ({ results, setShowResults }) => {
       {results.map((item) => (
         <button
           className="result-list-item"
-          key={item.id}
+          key={item.slug}
           onClick={() => handleResultClick(item.slug)}
         >
           <div className="type">
-              <p>{i18nCategories[item.type] || item.type}</p>
-              <p>{i18nCategories[item.sub_type] || item.sub_type}</p>
+            <p>{i18nCategories[item.type] || item.type}</p>
+            <p>{i18nCategories[item.sub_type] || item.sub_type}</p>
           </div>
           <div className="names">
             <p className="zh">{item.name_zh_Hans || item.name}</p>
             <p className="en">{item.name}</p>
           </div>
-          {item.price_min < Infinity ? <p className="price">¤ {item.price_min} 起</p> : <p className="price" style={{color: "hsl(0deg 0% 60%)"}}>无法购买</p>}
+          {item.price_min_max.buy_min && item.price_min_max.buy_min < Infinity ? (
+            <p className="price">¤ {item.price_min_max.buy_min} 起</p>
+          ) : (
+            <p className="price" style={{ color: "hsl(0deg 0% 60%)" }}>
+              无法购买
+            </p>
+          )}
         </button>
       ))}
     </div>

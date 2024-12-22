@@ -1,101 +1,29 @@
 import "./ItemInfo.css";
 import TradeOptions from "../TradeOptions/TradeOptions";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSearchParams } from "react-router";
 import Icon from "@mdi/react";
 import { mdiTagMultipleOutline } from "@mdi/js";
 import SetButton from "../SetButton/SetButton";
-import { getVehicleZhName, getZhHansNameFromEn } from "../../utils";
-import axios from "axios";
 import i18nCategories from "../../data/categories_en_to_zh_Hans.json";
 
 const ItemInfo = ({ item }) => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [tradingData, setTradingData] = useState(null);
-  const [rentalsData, setRentalsData] = useState(null);
-  const [priceMinMaxByTerminals, setPriceMinMaxByTerminals] = useState(null);
   const [listVariants, setListVariants] = useState([]);
 
-  useEffect(() => {
-    console.log(item);
-
-    /* Fetch trading prices for items or vehicles */
-    axios
-      .get(
-        item.category === "Vehicle"
-          ? "https://uexcorp.space/api/2.0/vehicles_purchases_prices?id_vehicle=" +
-              item.id
-          : "https://uexcorp.space/api/2.0/items_prices?id_item=" + item.id
-      )
-      .then((res) => {
-        setTradingData(res.data.data);
-
-        /* Compute max and min prices for buying and selling in terms of different terminals */
-        let pricesBuy = res.data.data
-          .filter((a) => a.price_buy > 0)
-          .map((a) => a.price_buy);
-        let pricesSell = res.data.data
-          .filter((a) => a.price_sell > 0)
-          .map((a) => a.price_sell);
-        setPriceMinMaxByTerminals({
-          buy_min: Math.min(...pricesBuy),
-          buy_max: Math.max(...pricesBuy),
-          sell_min: Math.min(...pricesSell),
-          sell_max: Math.max(...pricesSell),
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-        setTradingData(null);
-      });
-
-    /* Fetch rental prices for vehicles */
-    if (item.category === "Vehicle") {
-      axios
-        .get(
-          "https://uexcorp.space/api/2.0/vehicles_rentals_prices?id_vehicle=" + item.id
-        )
-        .then((res) => {
-          setRentalsData(res.data.data);
-
-          /* Compute max and min prices for renting in terms of different terminals */
-          let pricesRent = res.data.data
-            .filter((a) => a.price_rent > 0)
-            .map((a) => a.price_rent);
-          setPriceMinMaxByTerminals((prev) => ({
-            ...prev,
-            rent_min: Math.min(...pricesRent),
-            rent_max: Math.max(...pricesRent),
-          }));
-        })
-        .catch((err) => {
-          console.log(err);
-          setRentalsData(null);
-        });
-    } else {
-      setRentalsData(null);
-    }
-
-    let tempListVariants = [];
-    tempListVariants = item.variants?.map((uuid) => itemData[uuid]) || [];
-    setListVariants(tempListVariants);
-  }, [item]);
+  if (!item) return null;
 
   return (
     <div className="ItemInfo">
       <div className="info-and-image">
         <div className="item-info">
           <div>
-            <h1 className="zh">
-              {getZhHansNameFromEn(item.name) ||
-                getVehicleZhName(item.name_full) ||
-                item.name}
-            </h1>
-            <h2 className="en">{item.name_full || item.name}</h2>
+            <h1 className="zh">{item.name_zh_Hans}</h1>
+            <h2 className="en">{item.name}</h2>
           </div>
           <div className="types">
-            <p className="type">{i18nCategories[item.section] || item.section}</p>
-            <p className="subtype">{i18nCategories[item.category] || item.category}</p>
+            <p className="type">{i18nCategories[item.type] || item.type}</p>
+            <p className="subtype">{i18nCategories[item.sub_type] || item.sub_type}</p>
           </div>
           {item.category === "Vehicle" ? (
             <button
@@ -131,25 +59,25 @@ const ItemInfo = ({ item }) => {
         )}
       </div>
 
-      {tradingData && tradingData.length > 0 && (
+      {item.options && item.options.length > 0 && (
         <>
           <hr />
           <h3 className="trade-options-title">购买</h3>
           <TradeOptions
-            pricesData={tradingData}
-            priceMinMax={priceMinMaxByTerminals}
+            pricesData={item.options}
+            priceMinMax={item.price_min_max}
             tradeType="buy"
           />
         </>
       )}
 
-      {rentalsData && rentalsData.length > 0 && (
+      {item.options_rent && item.options_rent.length > 0 && (
         <>
           <hr />
           <h3 className="trade-options-title">租赁</h3>
           <TradeOptions
-            pricesData={rentalsData}
-            priceMinMax={priceMinMaxByTerminals}
+            pricesData={item.options_rent}
+            priceMinMax={item.price_min_max}
             tradeType="rent"
           />
         </>

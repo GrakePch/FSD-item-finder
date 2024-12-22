@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./TradeOptions.css";
-import { getLocationZhName } from "../../utils";
+import { getLocationZhName, getLocPath } from "../../utils";
+import { AllTerminalsContext } from "../../contexts";
 
 const percent = (v, zero, hundred) => {
   if (zero === hundred) return 0;
@@ -8,35 +9,25 @@ const percent = (v, zero, hundred) => {
 };
 
 const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
-  const [optionsUnsorted, setOptionsUnsorted] = useState([]);
+  const terminalsData = useContext(AllTerminalsContext);
   const [sortBy, setSortBy] = useState("price");
   const [sortDir, setSortDir] = useState(1);
   const [options, setOptions] = useState([]);
   const [locationForest, setLocationForest] = useState({});
 
   useEffect(() => {
-    let tempOptions = pricesData.map((item) => ({
-      ...item,
-      location_path: [
-        item.star_system_name || "Stanton",
-        item.orbit_name,
-        ...item.terminal_name.split(" - ").reverse(),
-      ],
-    }));
-    setOptionsUnsorted(tempOptions);
-  }, [pricesData]);
-
-  useEffect(() => {
-    let tempOptions = optionsUnsorted.toSorted(
+    let tempOptions = pricesData.toSorted(
       (a, b) =>
         (sortBy === "location"
-          ? a.location_path.join("/").localeCompare(b.location_path.join("/"))
+          ? getLocPath(a, terminalsData)
+              .join()
+              .localeCompare(getLocPath(b, terminalsData).join())
           : a["price_" + tradeType] - b["price_" + tradeType]) * sortDir
     );
 
-    // console.log(tempOptions)
+    // console.log(tempOptions);
     setOptions(tempOptions);
-  }, [optionsUnsorted, sortBy, sortDir]);
+  }, [pricesData, sortBy, sortDir]);
 
   useEffect(() => {
     if (options.length <= 0) {
@@ -48,7 +39,7 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
     options
       .filter((option) => option["price_" + tradeType] > 0)
       .forEach((option) => {
-        addToTree(tempLocationForest, option.location_path, option);
+        addToTree(tempLocationForest, getLocPath(option, terminalsData), option);
       });
 
     setLocationForest(tempLocationForest);
@@ -99,25 +90,27 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
                 ) *
                   2;
               return (
-                <div className="option" key={option.id}>
+                <div className="option" key={option.id_terminal}>
                   <p className="location">
                     <span
                       className="location-chip"
                       style={{ backgroundColor: `var(--color-text-1)`, color: `#000` }}
                     >
-                      {getLocationZhName(option.location_path[0])}
+                      {getLocationZhName(getLocPath(option, terminalsData)[0])}
                     </span>
-                    {option.location_path.slice(1).map((loc, idx) => (
-                      <span
-                        key={idx}
-                        className="location-chip"
-                        style={{
-                          backgroundColor: `rgba(255 255 255 / ${(1 - idx / 4) * 0.2})`,
-                        }}
-                      >
-                        {getLocationZhName(loc)}
-                      </span>
-                    ))}
+                    {getLocPath(option, terminalsData)
+                      .slice(1)
+                      .map((loc, idx) => (
+                        <span
+                          key={idx}
+                          className="location-chip"
+                          style={{
+                            backgroundColor: `rgba(255 255 255 / ${(1 - idx / 4) * 0.2})`,
+                          }}
+                        >
+                          {getLocationZhName(loc)}
+                        </span>
+                      ))}
                   </p>
                   {option["price_" + tradeType] > 0 ? (
                     <p className="price" style={{ color: `hsl(${hue}deg 60% 50%)` }}>

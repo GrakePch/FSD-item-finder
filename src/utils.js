@@ -76,3 +76,11 @@ export function getVehicleUEXFormatBySlug(slug) {
     console.log("No vehicle found for slug: " + slug);
     return null;
 }
+
+export function getLocPath(option, tdata) {
+    try {
+        return tdata[option.id_terminal].location_path;
+    } catch (err) {
+        console.log(option.id_terminal);
+    }
+}
