@@ -23,7 +23,9 @@ export function getLocationZhName(name_en) {
     if (i18nLocationsM[en]) return i18nLocationsM[en].zh;
     if (name_en.includes("Lagrange")) {
         let en_split = name_en.split(" ");
-        return getLocationZhName(en_split[0]) + " 拉格朗日点 "+ en_split[en_split.length - 1];
+        let sliceIdx = name_en.search("Lagrange");
+        let en_slice = name_en.slice(0, sliceIdx-1);
+        return getLocationZhName(en_slice) + " 拉格朗日点 "+ en_split[en_split.length - 1];
     }
     return name_en;
 }

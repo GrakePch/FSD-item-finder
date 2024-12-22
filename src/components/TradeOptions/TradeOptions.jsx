@@ -27,7 +27,7 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
           : a.price_buy - b.price_buy) * sortDir
     );
 
-    console.log(tempOptions)
+    // console.log(tempOptions)
     setOptions(tempOptions);
   }, [optionsUnsorted, sortBy, sortDir]);
 
