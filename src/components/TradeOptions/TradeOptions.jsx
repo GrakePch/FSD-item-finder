@@ -1,46 +1,55 @@
 import { useEffect, useState } from "react";
 import "./TradeOptions.css";
+import { getLocationZhName } from "../../utils";
 
 const percent = (v, zero, hundred) => {
   if (zero === hundred) return 0;
   return ((v - zero) / (hundred - zero)) * 100;
 };
 
-const TradeOptions = ({ pricesData, tradeType }) => {
+const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
+  const [optionsUnsorted, setOptionsUnsorted] = useState([]);
   const [sortBy, setSortBy] = useState("price");
   const [sortDir, setSortDir] = useState(1);
   const [options, setOptions] = useState([]);
   const [locationForest, setLocationForest] = useState({});
 
   useEffect(() => {
-    let tempOptions = pricesData.locations.toSorted(
-      (a, b) =>
-        (sortBy === "location"
-          ? a.location.en.localeCompare(b.location.en)
-          : a.price - b.price) * sortDir
-    );
-    setOptions(tempOptions);
-  }, [pricesData, sortBy, sortDir]);
+    let tempOptions = pricesData.map((item) => ({...item, location_path: [item.star_system_name, item.orbit_name, ...item.terminal_name.split(" - ").reverse()]}));
+    setOptionsUnsorted(tempOptions);
+  }, [pricesData]);
 
   useEffect(() => {
-    if (options.length <= 0) {
-      setLocationForest({});
-      return;
-    }
 
-    const tempLocationForest = {};
-    options.forEach((item) => {
-      const enParts = item.location.en.split(" - ").map((part) => part.trim());
-      const zhParts = item.location.zh.split(" - ").map((part) => part.trim());
-      const namesENZH = enParts.map((en, index) => ({
-        en,
-        zh: zhParts[index],
-      }));
-      addToTree(tempLocationForest, enParts, namesENZH, item.price);
-    });
+    let tempOptions = optionsUnsorted.toSorted(
+      (a, b) => (sortBy === "location"
+          ? a.location_path.join("/").localeCompare(b.location_path.join("/"))
+          : a.price_buy - b.price_buy) * sortDir
+    );
 
-    setLocationForest(tempLocationForest);
-  }, [options]);
+    console.log(tempOptions)
+    setOptions(tempOptions);
+  }, [optionsUnsorted, sortBy, sortDir]);
+
+  // useEffect(() => {
+  //   if (options.length <= 0) {
+  //     setLocationForest({});
+  //     return;
+  //   }
+
+  //   const tempLocationForest = {};
+  //   options.forEach((item) => {
+  //     const enParts = item.location.en.split(" - ").map((part) => part.trim());
+  //     const zhParts = item.location.zh.split(" - ").map((part) => part.trim());
+  //     const namesENZH = enParts.map((en, index) => ({
+  //       en,
+  //       zh: zhParts[index],
+  //     }));
+  //     addToTree(tempLocationForest, enParts, namesENZH, item.price);
+  //   });
+
+  //   setLocationForest(tempLocationForest);
+  // }, [options]);
 
   return (
     <div className="TradeOptions">
@@ -74,32 +83,49 @@ const TradeOptions = ({ pricesData, tradeType }) => {
         </h4>
       </div>
       <div className="options-container">
-        {sortBy === "price" ? (
-          options.map((option) => {
-            let hue = 200 - percent(option.price, pricesData.minPrice, pricesData.maxPrice) * 2;
+        {
+        // sortBy === "price" ? (
+          true ? (
+          options.filter((option) => option.price_buy > 0).map((option) => {
+            let hue =
+              200 -
+              percent(option.price_buy, priceMinMax.buy_min, priceMinMax.buy_max) * 2;
             return (
-              <div className="option" key={option.location.en}>
+              <div className="option" key={option.id}>
                 <p className="location">
-                  {option.location.zh.split(" - ").join(" / ")}
+                <span style={{backgroundColor: `var(--color-text-1)`, color: `#000`}}>{getLocationZhName(option.location_path[0])}</span>
+                  {option.location_path.slice(1).map((loc, idx) => <span key={idx} style={{backgroundColor: `rgba(255 255 255 / ${(1 - idx / 4) * .2})`}}>{getLocationZhName(loc)}</span>)}
                 </p>
-                <p
-                  className="price"
-                  style={{
-                    color: `hsl(${hue}deg 60% 50%)`,
-                  }}
-                >
-                  ¤ {option.price}
-                </p>
+                {option.price_buy > 0 ? (
+                  <p
+                    className="price"
+                    style={{
+                      color: `hsl(${hue}deg 60% 50%)`,
+                    }}
+                  >
+                    ¤ {option.price_buy}
+                  </p>
+                ) : (
+                  <p
+                    className="price"
+                    style={{
+                      color: `hsl(0deg 0% 50%)`,
+                    }}
+                  >
+                    无法购买
+                  </p>
+                )}
               </div>
             );
           })
         ) : (
-          <LocationForest
-            forest={locationForest}
-            priceMin={pricesData.minPrice}
-            priceMax={pricesData.maxPrice}
-            depth={0}
-          />
+          <></>
+          // <LocationForest
+          //   forest={locationForest}
+          //   priceMin={pricesData.minPrice}
+          //   priceMax={pricesData.maxPrice}
+          //   depth={0}
+          // />
         )}
       </div>
     </div>

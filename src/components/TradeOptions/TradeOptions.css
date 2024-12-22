@@ -38,6 +38,15 @@
 
 .TradeOptions .location {
     flex-grow: 1;
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.TradeOptions .location>span {
+    background-color: var(--color-bg-1);
+    padding: 0 .5rem;
+    border-radius: 4px;
 }
 
 .TradeOptions .price {

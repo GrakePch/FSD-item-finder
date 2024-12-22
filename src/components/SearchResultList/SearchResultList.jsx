@@ -1,12 +1,13 @@
 import "./SearchResultList.css";
 import { useSearchParams } from "react-router";
+import i18nCategories from "../../data/categories_en_to_zh_Hans.json";
 
 const SearchResultList = ({ results, setShowResults }) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const handleResultClick = (uuid) => {
+  const handleResultClick = (slug) => {
     setShowResults(false);
-    setSearchParams({ uuid: uuid });
+    setSearchParams({ name: slug });
   };
 
   return (
@@ -14,19 +15,18 @@ const SearchResultList = ({ results, setShowResults }) => {
       {results.map((item) => (
         <button
           className="result-list-item"
-          key={item.uuid}
-          onClick={() => handleResultClick(item.uuid)}
+          key={item.id}
+          onClick={() => handleResultClick(item.slug)}
         >
           <div className="type">
-            {item.type.zh.split("/").map((t, i) => (
-              <p key={i}>{t}</p>
-            ))}
+              <p>{i18nCategories[item.type] || item.type}</p>
+              <p>{i18nCategories[item.sub_type] || item.sub_type}</p>
           </div>
           <div className="names">
-            <p className="zh">{item.name.zh}</p>
-            <p className="en">{item.name.en}</p>
+            <p className="zh">{item.name_zh_Hans || item.name}</p>
+            <p className="en">{item.name}</p>
           </div>
-          <p className="price">¤ {item.buy.minPrice} 起</p>
+          {item.price_min < Infinity ? <p className="price">¤ {item.price_min} 起</p> : <p className="price" style={{color: "hsl(0deg 0% 60%)"}}>无法购买</p>}
         </button>
       ))}
     </div>

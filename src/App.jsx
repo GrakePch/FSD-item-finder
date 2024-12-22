@@ -3,18 +3,34 @@ import "./App.css";
 import ItemInfo from "./components/ItemInfo/ItemInfo";
 import SearchBar from "./components/SearchBar/SearchBar";
 import { useSearchParams } from "react-router";
-import itemData from "./data/item_data.json";
 import ItemGroupInfo from "./components/ItemGroupInfo/ItemGroupInfo";
 import ItemSetInfo from "./components/ItemSetInfo/ItemSetInfo";
+import axios from "axios";
+import { getItemUexFormatBySlug } from "./utils";
 
 function App() {
   const [item, setItem] = useState(null);
   const [showMode, setShowMode] = useState("");
   const [searchParams] = useSearchParams();
+  const [itemsAll, setItemsAll] = useState([]);
 
   useEffect(() => {
-    let uuid = searchParams.get("uuid");
-    let tempItem = itemData[uuid] || null;
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("https://uexcorp.space/api/2.0/items_prices_all");
+        // console.log(res.data.data);
+        setItemsAll(res.data.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    let slug = searchParams.get("name");
+    let tempItem = structuredClone(getItemUexFormatBySlug(slug));
     setItem(tempItem);
     let mode = searchParams.get("mode");
     setShowMode(mode);
@@ -22,7 +38,7 @@ function App() {
 
   return (
     <>
-      <SearchBar centered={item === null} />
+      <SearchBar centered={item === null} itemsAll={itemsAll} />
 
       {item &&
         (showMode === "variants" && item.variants?.length > 1 ? (

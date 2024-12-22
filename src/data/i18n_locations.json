@@ -1,0 +1,3707 @@
+{
+    "august dunlow exhibition hall": {
+        "key": "Orison_Destination_AugustDunlowConventionHangar",
+        "zh": "奥古斯特·顿洛展厅",
+        "en": "August Dunlow Exhibition Hall"
+    },
+    "august dunlow spaceport": {
+        "key": "area_map_pu_orison_august_dunlow_spaceport",
+        "zh": "奥古斯特·顿洛 空港",
+        "en": "August Dunlow Spaceport"
+    },
+    "cloudview center": {
+        "key": "area_map_pu_orison_cloudview_center",
+        "zh": "云景中心",
+        "en": "Cloudview Center"
+    },
+    "vision center": {
+        "key": "Orison_Destination_ConventionCenter",
+        "zh": "远见中心",
+        "en": "Vision Center"
+    },
+    "providence platform": {
+        "key": "Orison_Destination_ProvidencePlatform",
+        "zh": "天意平台",
+        "en": "Providence Platform"
+    },
+    "pyro i": {
+        "key": "Pyro1",
+        "zh": "派罗 I",
+        "en": "Pyro I"
+    },
+    "pyr1 l1": {
+        "key": "Pyro1_L1",
+        "zh": "派1 PYR1 L1",
+        "en": "PYR1 L1"
+    },
+    "pyr1 l1-a": {
+        "key": "Pyro1_L1_01",
+        "zh": "派1 PYR1 L1-A",
+        "en": "PYR1 L1-A"
+    },
+    "pyr1 l1-b": {
+        "key": "Pyro1_L1_02",
+        "zh": "派1 PYR1 L1-B",
+        "en": "PYR1 L1-B"
+    },
+    "pyr1 l1-c": {
+        "key": "Pyro1_L1_03",
+        "zh": "派1 PYR1 L1-C",
+        "en": "PYR1 L1-C"
+    },
+    "pyr1 l1-d": {
+        "key": "Pyro1_L1_04",
+        "zh": "派1 PYR1 L1-D",
+        "en": "PYR1 L1-D"
+    },
+    "pyr1 l2": {
+        "key": "Pyro1_L2",
+        "zh": "派1 PYR1 L2",
+        "en": "PYR1 L2"
+    },
+    "pyr1 l2-a": {
+        "key": "Pyro1_L2_01",
+        "zh": "派1 PYR1 L2-A",
+        "en": "PYR1 L2-A"
+    },
+    "pyr1 l2-b": {
+        "key": "Pyro1_L2_02",
+        "zh": "派1 PYR1 L2-B",
+        "en": "PYR1 L2-B"
+    },
+    "pyr1 l2-c": {
+        "key": "Pyro1_L2_03",
+        "zh": "派1 PYR1 L2-C",
+        "en": "PYR1 L2-C"
+    },
+    "pyr1 l2-d": {
+        "key": "Pyro1_L2_04",
+        "zh": "派1 PYR1 L2-D",
+        "en": "PYR1 L2-D"
+    },
+    "pyr1 l3": {
+        "key": "Pyro1_L3",
+        "zh": "派1 PYR1 L3",
+        "en": "PYR1 L3"
+    },
+    "pyr1 l3-a": {
+        "key": "Pyro1_L3_01",
+        "zh": "派1 PYR1 L3-A",
+        "en": "PYR1 L3-A"
+    },
+    "pyr1 l3-b": {
+        "key": "Pyro1_L3_02",
+        "zh": "派1 PYR1 L3-B",
+        "en": "PYR1 L3-B"
+    },
+    "pyr1 l3-c": {
+        "key": "Pyro1_L3_03",
+        "zh": "派1 PYR1 L3-C",
+        "en": "PYR1 L3-C"
+    },
+    "pyr1 l3-d": {
+        "key": "Pyro1_L3_04",
+        "zh": "派1 PYR1 L3-D",
+        "en": "PYR1 L3-D"
+    },
+    "pyr1 l4": {
+        "key": "Pyro1_L4",
+        "zh": "派1 PYR1 L4",
+        "en": "PYR1 L4"
+    },
+    "pyr1 l4-a": {
+        "key": "Pyro1_L4_01",
+        "zh": "派1 PYR1 L4-A",
+        "en": "PYR1 L4-A"
+    },
+    "pyr1 l4-b": {
+        "key": "Pyro1_L4_02",
+        "zh": "派1 PYR1 L4-B",
+        "en": "PYR1 L4-B"
+    },
+    "pyr1 l4-c": {
+        "key": "Pyro1_L4_03",
+        "zh": "派1 PYR1 L4-C",
+        "en": "PYR1 L4-C"
+    },
+    "pyr1 l4-d": {
+        "key": "Pyro1_L4_04",
+        "zh": "派1 PYR1 L4-D",
+        "en": "PYR1 L4-D"
+    },
+    "pyr1 l5": {
+        "key": "Pyro1_L5",
+        "zh": "派1 PYR1 L5",
+        "en": "PYR1 L5"
+    },
+    "pyr1 l5-a": {
+        "key": "Pyro1_L5_01",
+        "zh": "派1 PYR1 L5-A",
+        "en": "PYR1 L5-A"
+    },
+    "pyr1 l5-b": {
+        "key": "Pyro1_L5_02",
+        "zh": "派1 PYR1 L5-B",
+        "en": "PYR1 L5-B"
+    },
+    "pyr1 l5-c": {
+        "key": "Pyro1_L5_03",
+        "zh": "派1 PYR1 L5-C",
+        "en": "PYR1 L5-C"
+    },
+    "pyr1 l5-d": {
+        "key": "Pyro1_L5_04",
+        "zh": "派1 PYR1 L5-D",
+        "en": "PYR1 L5-D"
+    },
+    "derelict outpost": {
+        "key": "Pyro6_Outpost_col_s_drlct_otpst_unoc_001",
+        "zh": "废弃前哨站",
+        "en": "Derelict Outpost"
+    },
+    "rustville": {
+        "key": "Pyro1_Outpost_col_m_scrp_otlw_001",
+        "zh": "锈迹镇",
+        "en": "Rustville"
+    },
+    "stag's rut": {
+        "key": "Pyro1_Outpost_col_s_mng_indy_001",
+        "zh": "雄鹿谷",
+        "en": "Stag's Rut"
+    },
+    "monox": {
+        "key": "Pyro2",
+        "zh": "殁氧星",
+        "en": "Monox"
+    },
+    "pyr2 l1": {
+        "key": "Pyro2_L1",
+        "zh": "派2 PYR2 L1",
+        "en": "PYR2 L1"
+    },
+    "pyr2 l1-a": {
+        "key": "Pyro2_L1_01",
+        "zh": "派2 PYR2 L1-A",
+        "en": "PYR2 L1-A"
+    },
+    "pyr2 l1-b": {
+        "key": "Pyro2_L1_02",
+        "zh": "派2 PYR2 L1-B",
+        "en": "PYR2 L1-B"
+    },
+    "pyr2 l1-c": {
+        "key": "Pyro2_L1_03",
+        "zh": "派2 PYR2 L1-C",
+        "en": "PYR2 L1-C"
+    },
+    "pyr2 l1-d": {
+        "key": "Pyro2_L1_04",
+        "zh": "派2 PYR2 L1-D",
+        "en": "PYR2 L1-D"
+    },
+    "pyr2 l2": {
+        "key": "Pyro2_L2",
+        "zh": "派2 PYR2 L2",
+        "en": "PYR2 L2"
+    },
+    "pyr2 l2-a": {
+        "key": "Pyro2_L2_01",
+        "zh": "派2 PYR2 L2-A",
+        "en": "PYR2 L2-A"
+    },
+    "pyr2 l2-b": {
+        "key": "Pyro2_L2_02",
+        "zh": "派2 PYR2 L2-B",
+        "en": "PYR2 L2-B"
+    },
+    "pyr2 l2-c": {
+        "key": "Pyro2_L2_03",
+        "zh": "派2 PYR2 L2-C",
+        "en": "PYR2 L2-C"
+    },
+    "pyr2 l2-d": {
+        "key": "Pyro2_L2_04",
+        "zh": "派2 PYR2 L2-D",
+        "en": "PYR2 L2-D"
+    },
+    "pyr2 l3": {
+        "key": "Pyro2_L3",
+        "zh": "派2 PYR2 L3",
+        "en": "PYR2 L3"
+    },
+    "pyr2 l3-a": {
+        "key": "Pyro2_L3_01",
+        "zh": "派2 PYR2 L3-A",
+        "en": "PYR2 L3-A"
+    },
+    "pyr2 l3-b": {
+        "key": "Pyro2_L3_02",
+        "zh": "派2 PYR2 L3-B",
+        "en": "PYR2 L3-B"
+    },
+    "pyr2 l3-c": {
+        "key": "Pyro2_L3_03",
+        "zh": "派2 PYR2 L3-C",
+        "en": "PYR2 L3-C"
+    },
+    "pyr2 l3-d": {
+        "key": "Pyro2_L3_04",
+        "zh": "派2 PYR2 L3-D",
+        "en": "PYR2 L3-D"
+    },
+    "pyr2 l4": {
+        "key": "Pyro2_L4",
+        "zh": "派2 PYR2 L4",
+        "en": "PYR2 L4"
+    },
+    "pyr2 l4-a": {
+        "key": "Pyro2_L4_01",
+        "zh": "派2 PYR2 L4-A",
+        "en": "PYR2 L4-A"
+    },
+    "pyr2 l4-b": {
+        "key": "Pyro2_L4_02",
+        "zh": "派2 PYR2 L4-B",
+        "en": "PYR2 L4-B"
+    },
+    "pyr2 l4-c": {
+        "key": "Pyro2_L4_03",
+        "zh": "派2 PYR2 L4-C",
+        "en": "PYR2 L4-C"
+    },
+    "pyr2 l4-d": {
+        "key": "Pyro2_L4_04",
+        "zh": "派2 PYR2 L4-D",
+        "en": "PYR2 L4-D"
+    },
+    "pyr2 l5": {
+        "key": "Pyro2_L5",
+        "zh": "派2 PYR2 L5",
+        "en": "PYR2 L5"
+    },
+    "pyr2 l5-a": {
+        "key": "Pyro2_L5_01",
+        "zh": "派2 PYR2 L5-A",
+        "en": "PYR2 L5-A"
+    },
+    "pyr2 l5-b": {
+        "key": "Pyro2_L5_02",
+        "zh": "派2 PYR2 L5-B",
+        "en": "PYR2 L5-B"
+    },
+    "pyr2 l5-c": {
+        "key": "Pyro2_L5_03",
+        "zh": "派2 PYR2 L5-C",
+        "en": "PYR2 L5-C"
+    },
+    "pyr2 l5-d": {
+        "key": "Pyro2_L5_04",
+        "zh": "派2 PYR2 L5-D",
+        "en": "PYR2 L5-D"
+    },
+    "last ditch": {
+        "key": "Pyro2_Outpost_col_m_mng_otlw_002",
+        "zh": "最终防线",
+        "en": "Last Ditch"
+    },
+    "sunset mesa": {
+        "key": "Pyro2_Outpost_col_m_scrp_indy_001",
+        "zh": "日落方山",
+        "en": "Sunset Mesa"
+    },
+    "jackson's swap": {
+        "key": "Pyro2_Outpost_col_m_trdp_indy_001",
+        "zh": "杰克森交易站",
+        "en": "Jackson's Swap"
+    },
+    "yang's place": {
+        "key": "Pyro2_Outpost_col_s_mng_indy_001",
+        "zh": "杨家庄",
+        "en": "Yang's Place"
+    },
+    "ostler's claim": {
+        "key": "Pyro2_Outpost_col_s_mng_otlw_001",
+        "zh": "奥斯特勒领地",
+        "en": "Ostler's Claim"
+    },
+    "arid reach": {
+        "key": "Pyro2_Outpost_col_s_trdpst_otlw_001",
+        "zh": "涸泽",
+        "en": "Arid Reach"
+    },
+    "fool's run": {
+        "key": "Pyro2_Racetrack_FoolsRun",
+        "zh": "愚者赛道",
+        "en": "Fool's Run"
+    },
+    "fool's run at checkmate station": {
+        "key": "Pyro2_Racetrack_FoolsRun_add",
+        "zh": "死局空间站的愚者赛道",
+        "en": "Fool's Run at Checkmate Station"
+    },
+    "bloom": {
+        "key": "Pyro3",
+        "zh": "盛放星",
+        "en": "Bloom"
+    },
+    "pyr3 l1": {
+        "key": "Pyro3_L1",
+        "zh": "派3 PYR3 L1",
+        "en": "PYR3 L1"
+    },
+    "pyr3 l1-a": {
+        "key": "Pyro3_L1_01",
+        "zh": "派3 PYR3 L1-A",
+        "en": "PYR3 L1-A"
+    },
+    "pyr3 l1-b": {
+        "key": "Pyro3_L1_02",
+        "zh": "派3 PYR3 L1-B",
+        "en": "PYR3 L1-B"
+    },
+    "pyr3 l1-c": {
+        "key": "Pyro3_L1_03",
+        "zh": "派3 PYR3 L1-C",
+        "en": "PYR3 L1-C"
+    },
+    "pyr3 l1-d": {
+        "key": "Pyro3_L1_04",
+        "zh": "派3 PYR3 L1-D",
+        "en": "PYR3 L1-D"
+    },
+    "pyr3 l2": {
+        "key": "Pyro3_L2",
+        "zh": "派3 PYR3 L2",
+        "en": "PYR3 L2"
+    },
+    "pyr3 l2-a": {
+        "key": "Pyro3_L2_01",
+        "zh": "派3 PYR3 L2-A",
+        "en": "PYR3 L2-A"
+    },
+    "pyr3 l2-b": {
+        "key": "Pyro3_L2_02",
+        "zh": "派3 PYR3 L2-B",
+        "en": "PYR3 L2-B"
+    },
+    "pyr3 l2-c": {
+        "key": "Pyro3_L2_03",
+        "zh": "派3 PYR3 L2-C",
+        "en": "PYR3 L2-C"
+    },
+    "pyr3 l2-d": {
+        "key": "Pyro3_L2_04",
+        "zh": "派3 PYR3 L2-D",
+        "en": "PYR3 L2-D"
+    },
+    "pyr3 l3": {
+        "key": "Pyro3_L3",
+        "zh": "派3 PYR3 L3",
+        "en": "PYR3 L3"
+    },
+    "pyr3 l3-a": {
+        "key": "Pyro3_L3_01",
+        "zh": "派3 PYR3 L3-A",
+        "en": "PYR3 L3-A"
+    },
+    "pyr3 l3-b": {
+        "key": "Pyro3_L3_02",
+        "zh": "派3 PYR3 L3-B",
+        "en": "PYR3 L3-B"
+    },
+    "pyr3 l3-c": {
+        "key": "Pyro3_L3_03",
+        "zh": "派3 PYR3 L3-C",
+        "en": "PYR3 L3-C"
+    },
+    "pyr3 l3-d": {
+        "key": "Pyro3_L3_04",
+        "zh": "派3 PYR3 L3-D",
+        "en": "PYR3 L3-D"
+    },
+    "pyr3 l4": {
+        "key": "Pyro3_L4",
+        "zh": "派3 PYR3 L4",
+        "en": "PYR3 L4"
+    },
+    "pyr3 l4-a": {
+        "key": "Pyro3_L4_01",
+        "zh": "派3 PYR3 L4-A",
+        "en": "PYR3 L4-A"
+    },
+    "pyr3 l4-b": {
+        "key": "Pyro3_L4_02",
+        "zh": "派3 PYR3 L4-B",
+        "en": "PYR3 L4-B"
+    },
+    "pyr3 l4-c": {
+        "key": "Pyro3_L4_03",
+        "zh": "派3 PYR3 L4-C",
+        "en": "PYR3 L4-C"
+    },
+    "pyr3 l4-d": {
+        "key": "Pyro3_L4_04",
+        "zh": "派3 PYR3 L4-D",
+        "en": "PYR3 L4-D"
+    },
+    "pyr3 l5": {
+        "key": "Pyro3_L5",
+        "zh": "派3 PYR3 L5",
+        "en": "PYR3 L5"
+    },
+    "pyr3 l5-a": {
+        "key": "Pyro3_L5_01",
+        "zh": "派3 PYR3 L5-A",
+        "en": "PYR3 L5-A"
+    },
+    "pyr3 l5-b": {
+        "key": "Pyro3_L5_02",
+        "zh": "派3 PYR3 L5-B",
+        "en": "PYR3 L5-B"
+    },
+    "pyr3 l5-c": {
+        "key": "Pyro3_L5_03",
+        "zh": "派3 PYR3 L5-C",
+        "en": "PYR3 L5-C"
+    },
+    "pyr3 l5-d": {
+        "key": "Pyro3_L5_04",
+        "zh": "派3 PYR3 L5-D",
+        "en": "PYR3 L5-D"
+    },
+    "shepherd's rest": {
+        "key": "Pyro3_Outpost_col_m_frm_indy_001",
+        "zh": "牧人驿站",
+        "en": "Shepherd's Rest"
+    },
+    "shadowfall": {
+        "key": "Pyro3_Outpost_col_m_hmstd_otlw_001",
+        "zh": "影落镇",
+        "en": "Shadowfall"
+    },
+    "bueno ravine": {
+        "key": "Pyro3_Outpost_col_m_mng_indy_001",
+        "zh": "布埃诺峡谷",
+        "en": "Bueno Ravine"
+    },
+    "the golden riviera": {
+        "key": "Pyro3_Outpost_col_m_trdpst_otlw_006",
+        "zh": "金碧湾",
+        "en": "The Golden Riviera"
+    },
+    "the yard": {
+        "key": "Pyro3_Outpost_col_s_frm_otlw_002",
+        "zh": "“庭院”",
+        "en": "The Yard"
+    },
+    "carver's ridge": {
+        "key": "Pyro3_Outpost_col_s_mng_otlw_001",
+        "zh": "天工岭",
+        "en": "Carver's Ridge"
+    },
+    "windfall": {
+        "key": "Pyro3_Outpost_col_s_scrp_otlw_002",
+        "zh": "风落镇",
+        "en": "Windfall"
+    },
+    "frigid knot": {
+        "key": "Pyro3_Outpost_col_s_trdpst_indy_002",
+        "zh": "冰结镇",
+        "en": "Frigid Knot"
+    },
+    "narena's rest": {
+        "key": "Pyro3_outpost_col_m_hmstd_indy_001",
+        "zh": "纳蕾娜驿站",
+        "en": "Narena's Rest"
+    },
+    "pyro iv": {
+        "key": "Pyro4",
+        "zh": "派罗 IV",
+        "en": "Pyro IV"
+    },
+    "chawla's beach": {
+        "key": "Pyro4_Outpost_col_m_scrp_indy_001",
+        "zh": "乔拉海滩",
+        "en": "Chawla's Beach"
+    },
+    "sacren's plot": {
+        "key": "Pyro4_Outpost_col_m_trdpst_indy_001",
+        "zh": "萨克伦领地",
+        "en": "Sacren's Plot"
+    },
+    "fallow field": {
+        "key": "Pyro4_Outpost_col_m_trdpst_otlw_001",
+        "zh": "休耕地",
+        "en": "Fallow Field"
+    },
+    "goner's deal": {
+        "key": "Pyro4_Outpost_col_s_trdpst_otlw_001",
+        "zh": "垂死者交易所",
+        "en": "Goner's Deal"
+    },
+    "pyro v": {
+        "key": "Pyro5",
+        "zh": "派罗 V",
+        "en": "Pyro V"
+    },
+    "pyr5 l1": {
+        "key": "Pyro5_L1",
+        "zh": "派5 PYR5 L1",
+        "en": "PYR5 L1"
+    },
+    "pyr5 l1-a": {
+        "key": "Pyro5_L1_01",
+        "zh": "派5 PYR5 L1-A",
+        "en": "PYR5 L1-A"
+    },
+    "pyr5 l1-b": {
+        "key": "Pyro5_L1_02",
+        "zh": "派5 PYR5 L1-B",
+        "en": "PYR5 L1-B"
+    },
+    "pyr5 l1-c": {
+        "key": "Pyro5_L1_03",
+        "zh": "派5 PYR5 L1-C",
+        "en": "PYR5 L1-C"
+    },
+    "pyr5 l1-d": {
+        "key": "Pyro5_L1_04",
+        "zh": "派5 PYR5 L1-D",
+        "en": "PYR5 L1-D"
+    },
+    "pyr5 l2": {
+        "key": "Pyro5_L2",
+        "zh": "派5 PYR5 L2",
+        "en": "PYR5 L2"
+    },
+    "pyr5 l2-a": {
+        "key": "Pyro5_L2_01",
+        "zh": "派5 PYR5 L2-A",
+        "en": "PYR5 L2-A"
+    },
+    "pyr5 l2-b": {
+        "key": "Pyro5_L2_02",
+        "zh": "派5 PYR5 L2-B",
+        "en": "PYR5 L2-B"
+    },
+    "pyr5 l2-c": {
+        "key": "Pyro5_L2_03",
+        "zh": "派5 PYR5 L2-C",
+        "en": "PYR5 L2-C"
+    },
+    "pyr5 l2-d": {
+        "key": "Pyro5_L2_04",
+        "zh": "派5 PYR5 L2-D",
+        "en": "PYR5 L2-D"
+    },
+    "pyr5 l3": {
+        "key": "Pyro5_L3",
+        "zh": "派5 PYR5 L3",
+        "en": "PYR5 L3"
+    },
+    "pyr5 l3-a": {
+        "key": "Pyro5_L3_01",
+        "zh": "派5 PYR5 L3-A",
+        "en": "PYR5 L3-A"
+    },
+    "pyr5 l3-b": {
+        "key": "Pyro5_L3_02",
+        "zh": "派5 PYR5 L3-B",
+        "en": "PYR5 L3-B"
+    },
+    "pyr5 l3-c": {
+        "key": "Pyro5_L3_03",
+        "zh": "派5 PYR5 L3-C",
+        "en": "PYR5 L3-C"
+    },
+    "pyr5 l3-d": {
+        "key": "Pyro5_L3_04",
+        "zh": "派5 PYR5 L3-D",
+        "en": "PYR5 L3-D"
+    },
+    "pyr5 l4": {
+        "key": "Pyro5_L4",
+        "zh": "派5 PYR5 L4",
+        "en": "PYR5 L4"
+    },
+    "pyr5 l4-a": {
+        "key": "Pyro5_L4_01",
+        "zh": "派5 PYR5 L4-A",
+        "en": "PYR5 L4-A"
+    },
+    "pyr5 l4-b": {
+        "key": "Pyro5_L4_02",
+        "zh": "派5 PYR5 L4-B",
+        "en": "PYR5 L4-B"
+    },
+    "pyr5 l4-c": {
+        "key": "Pyro5_L4_03",
+        "zh": "派5 PYR5 L4-C",
+        "en": "PYR5 L4-C"
+    },
+    "pyr5 l4-d": {
+        "key": "Pyro5_L4_04",
+        "zh": "派5 PYR5 L4-D",
+        "en": "PYR5 L4-D"
+    },
+    "pyr5 l5": {
+        "key": "Pyro5_L5",
+        "zh": "派5 PYR5 L5",
+        "en": "PYR5 L5"
+    },
+    "pyr5 l5-a": {
+        "key": "Pyro5_L5_01",
+        "zh": "派5 PYR5 L5-A",
+        "en": "PYR5 L5-A"
+    },
+    "pyr5 l5-b": {
+        "key": "Pyro5_L5_02",
+        "zh": "派5 PYR5 L5-B",
+        "en": "PYR5 L5-B"
+    },
+    "pyr5 l5-c": {
+        "key": "Pyro5_L5_03",
+        "zh": "派5 PYR5 L5-C",
+        "en": "PYR5 L5-C"
+    },
+    "pyr5 l5-d": {
+        "key": "Pyro5_L5_04",
+        "zh": "派5 PYR5 L5-D",
+        "en": "PYR5 L5-D"
+    },
+    "ignis": {
+        "key": "Pyro5a_Ignis",
+        "zh": "伊格尼斯",
+        "en": "Ignis"
+    },
+    "ashland": {
+        "key": "Pyro5a_Outpost_col_m_trdpst_otlw_001",
+        "zh": "灰烬之地",
+        "en": "Ashland"
+    },
+    "kabir's post": {
+        "key": "Pyro5a_Outpost_col_s_trdpst_indy_001",
+        "zh": "卡比尔驿站",
+        "en": "Kabir's Post"
+    },
+    "seer's canyon": {
+        "key": "Pyro5b_Outpost_col_m_scrp_otlw_001",
+        "zh": "先觉者峡谷",
+        "en": "Seer's Canyon"
+    },
+    "vatra": {
+        "key": "Pyro5b_Vatra",
+        "zh": "瓦塔拉",
+        "en": "Vatra"
+    },
+    "adir": {
+        "key": "Pyro5c_Adir",
+        "zh": "阿迪尔",
+        "en": "Adir"
+    },
+    "prophet's peak": {
+        "key": "Pyro5c_Outpost_col_m_hmstd_indy_001",
+        "zh": "神使峰",
+        "en": "Prophet's Peak"
+    },
+    "fairo": {
+        "key": "Pyro5d_Fairo",
+        "zh": "法伊罗",
+        "en": "Fairo"
+    },
+    "fuego": {
+        "key": "Pyro5e_Fuego",
+        "zh": "弗果",
+        "en": "Fuego"
+    },
+    "vuur": {
+        "key": "Pyro5f_Vuur",
+        "zh": "伏尔",
+        "en": "Vuur"
+    },
+    "terminus": {
+        "key": "Pyro6",
+        "zh": "端点星",
+        "en": "Terminus"
+    },
+    "pyr6 l1": {
+        "key": "Pyro6_L1",
+        "zh": "派6 PYR6 L1",
+        "en": "PYR6 L1"
+    },
+    "pyr6 l1-a": {
+        "key": "Pyro6_L1_01",
+        "zh": "派6 PYR6 L1-A",
+        "en": "PYR6 L1-A"
+    },
+    "pyr6 l1-b": {
+        "key": "Pyro6_L1_02",
+        "zh": "派6 PYR6 L1-B",
+        "en": "PYR6 L1-B"
+    },
+    "pyr6 l1-c": {
+        "key": "Pyro6_L1_03",
+        "zh": "派6 PYR6 L1-C",
+        "en": "PYR6 L1-C"
+    },
+    "pyr6 l1-d": {
+        "key": "Pyro6_L1_04",
+        "zh": "派6 PYR6 L1-D",
+        "en": "PYR6 L1-D"
+    },
+    "p6 l1_clinic": {
+        "key": "Pyro6_L1_Clinic,P",
+        "zh": "P6 L1_Clinic",
+        "en": "P6 L1_Clinic"
+    },
+    "p6 l1_habs": {
+        "key": "Pyro6_L1_Habs,P",
+        "zh": "P6 L1_Habs",
+        "en": "P6 L1_Habs"
+    },
+    "pyr6 l2": {
+        "key": "Pyro6_L2",
+        "zh": "派6 PYR6 L2",
+        "en": "PYR6 L2"
+    },
+    "pyr6 l2-a": {
+        "key": "Pyro6_L2_01",
+        "zh": "派6 PYR6 L2-A",
+        "en": "PYR6 L2-A"
+    },
+    "pyr6 l2-b": {
+        "key": "Pyro6_L2_02",
+        "zh": "派6 PYR6 L2-B",
+        "en": "PYR6 L2-B"
+    },
+    "pyr6 l2-c": {
+        "key": "Pyro6_L2_03",
+        "zh": "派6 PYR6 L2-C",
+        "en": "PYR6 L2-C"
+    },
+    "pyr6 l2-d": {
+        "key": "Pyro6_L2_04",
+        "zh": "派6 PYR6 L2-D",
+        "en": "PYR6 L2-D"
+    },
+    "pyr6 l3": {
+        "key": "Pyro6_L3",
+        "zh": "派6 PYR6 L3",
+        "en": "PYR6 L3"
+    },
+    "pyr6 l3-a": {
+        "key": "Pyro6_L3_01",
+        "zh": "派6 PYR6 L3-A",
+        "en": "PYR6 L3-A"
+    },
+    "pyr6 l3-b": {
+        "key": "Pyro6_L3_02",
+        "zh": "派6 PYR6 L3-B",
+        "en": "PYR6 L3-B"
+    },
+    "pyr6 l3-c": {
+        "key": "Pyro6_L3_03",
+        "zh": "派6 PYR6 L3-C",
+        "en": "PYR6 L3-C"
+    },
+    "pyr6 l3-d": {
+        "key": "Pyro6_L3_04",
+        "zh": "派6 PYR6 L3-D",
+        "en": "PYR6 L3-D"
+    },
+    "pyr6 l4": {
+        "key": "Pyro6_L4",
+        "zh": "派6 PYR6 L4",
+        "en": "PYR6 L4"
+    },
+    "pyr6 l4-a": {
+        "key": "Pyro6_L4_01",
+        "zh": "派6 PYR6 L4-A",
+        "en": "PYR6 L4-A"
+    },
+    "pyr6 l4-b": {
+        "key": "Pyro6_L4_02",
+        "zh": "派6 PYR6 L4-B",
+        "en": "PYR6 L4-B"
+    },
+    "pyr6 l4-c": {
+        "key": "Pyro6_L4_03",
+        "zh": "派6 PYR6 L4-C",
+        "en": "PYR6 L4-C"
+    },
+    "pyr6 l4-d": {
+        "key": "Pyro6_L4_04",
+        "zh": "派6 PYR6 L4-D",
+        "en": "PYR6 L4-D"
+    },
+    "pyr6 l5": {
+        "key": "Pyro6_L5",
+        "zh": "派6 PYR6 L5",
+        "en": "PYR6 L5"
+    },
+    "pyr6 l5-a": {
+        "key": "Pyro6_L5_01",
+        "zh": "派6 PYR6 L5-A",
+        "en": "PYR6 L5-A"
+    },
+    "pyr6 l5-b": {
+        "key": "Pyro6_L5_02",
+        "zh": "派6 PYR6 L5-B",
+        "en": "PYR6 L5-B"
+    },
+    "pyr6 l5-c": {
+        "key": "Pyro6_L5_03",
+        "zh": "派6 PYR6 L5-C",
+        "en": "PYR6 L5-C"
+    },
+    "pyr6 l5-d": {
+        "key": "Pyro6_L5_04",
+        "zh": "派6 PYR6 L5-D",
+        "en": "PYR6 L5-D"
+    },
+    "scarper's turn": {
+        "key": "Pyro6_Outpost_col_m_frm_otlw_001",
+        "zh": "Scarper's Turn",
+        "en": "Scarper's Turn"
+    },
+    "last landings": {
+        "key": "Pyro6_Outpost_col_m_scrp_otlw_001",
+        "zh": "终陆镇",
+        "en": "Last Landings"
+    },
+    "canard view": {
+        "key": "Pyro6_Outpost_col_m_trdpst_indy_001",
+        "zh": "鸭翼观景处",
+        "en": "Canard View"
+    },
+    "bullock's reach": {
+        "key": "Pyro6_Outpost_col_s_frm_indy_001",
+        "zh": "犍牛原",
+        "en": "Bullock's Reach"
+    },
+    "kinder plots": {
+        "key": "Pyro6_Outpost_col_s_frm_otlw_001",
+        "zh": "容善镇",
+        "en": "Kinder Plots"
+    },
+    "stonetree": {
+        "key": "Pyro6_Outpost_col_s_hmstd_otlw_001",
+        "zh": "石林镇",
+        "en": "Stonetree"
+    },
+    "supply gap": {
+        "key": "Pyro6_Outpost_col_s_scrp_indy_001",
+        "zh": "补给处",
+        "en": "Supply Gap"
+    },
+    "blackrock exchange": {
+        "key": "Pyro6_Outpost_col_s_trdpst_indy_001",
+        "zh": "黑岩交易所",
+        "en": "Blackrock Exchange"
+    },
+    "rough landing": {
+        "key": "Pyro6_Outpost_col_s_trdpst_otlw_001",
+        "zh": "砺石地",
+        "en": "Rough Landing"
+    },
+    "pyro": {
+        "key": "PyroSystem",
+        "zh": "派罗",
+        "en": "Pyro"
+    },
+    "pyro - cano jump point": {
+        "key": "Pyro_JumpPoint_Cano",
+        "zh": "派罗 - 卡诺 跳跃点",
+        "en": "Pyro - Cano Jump Point"
+    },
+    "pyro - castra jump point": {
+        "key": "Pyro_JumpPoint_Castra",
+        "zh": "派罗 - 卡斯塔 跳跃点",
+        "en": "Pyro - Castra Jump Point"
+    },
+    "pyro - hadrian jump point": {
+        "key": "Pyro_JumpPoint_Hadrian",
+        "zh": "派罗 - 哈德良 跳跃点",
+        "en": "Pyro - Hadrian Jump Point"
+    },
+    "pyro - nyx jump point": {
+        "key": "Pyro_JumpPoint_Nyx",
+        "zh": "派罗 - 尼克斯 跳跃点",
+        "en": "Pyro - Nyx Jump Point"
+    },
+    "pyro - oso jump point": {
+        "key": "Pyro_JumpPoint_Oso",
+        "zh": "派罗 -  奥索 跳跃点",
+        "en": "Pyro - Oso Jump Point"
+    },
+    "pyro-stanton jump point": {
+        "key": "Pyro_JumpPoint_Stanton",
+        "zh": "派罗 - 斯坦顿 跳跃点",
+        "en": "Pyro-Stanton Jump Point"
+    },
+    "pyro - terra jump point": {
+        "key": "Pyro_JumpPoint_Terra",
+        "zh": "派罗 - 泰拉 跳跃点",
+        "en": "Pyro - Terra Jump Point"
+    },
+    "mining station": {
+        "key": "Pyro_MiningStation,P",
+        "zh": "采矿站",
+        "en": "MINING STATION"
+    },
+    "service station": {
+        "key": "Pyro_ServiceStation,P",
+        "zh": "维修站",
+        "en": "SERVICE STATION"
+    },
+    "stanton gateway": {
+        "key": "Pyro_Stanton_JPStation",
+        "zh": "斯坦顿星门",
+        "en": "Stanton Gateway"
+    },
+    "pyro system": {
+        "key": "Pyro_System,P",
+        "zh": "派罗星系",
+        "en": "PYRO SYSTEM"
+    },
+    "akiro cluster": {
+        "key": "Pyro_asteroidbeltA",
+        "zh": "阿克罗团",
+        "en": "Akiro Cluster"
+    },
+    "ruin station": {
+        "key": "Pyro_ruinstation,P",
+        "zh": "废墟空间站",
+        "en": "Ruin Station"
+    },
+    "arc-l1 wide forest station": {
+        "key": "RR_ARC_L1",
+        "zh": "弧-L1 广袤森林站",
+        "en": "ARC-L1 Wide Forest Station"
+    },
+    "arc-l2 lively pathway station": {
+        "key": "RR_ARC_L2",
+        "zh": "弧-L2 活力小径站",
+        "en": "ARC-L2 Lively Pathway Station"
+    },
+    "arc-l3 modern express station": {
+        "key": "RR_ARC_L3",
+        "zh": "弧-L3 摩登快车站",
+        "en": "ARC-L3 Modern Express Station"
+    },
+    "arc-l4 faint glen station": {
+        "key": "RR_ARC_L4",
+        "zh": "弧-L4 黯淡幽谷站",
+        "en": "ARC-L4 Faint Glen Station"
+    },
+    "arc-l5 yellow core station": {
+        "key": "RR_ARC_L5",
+        "zh": "弧-L5 黄色核心站",
+        "en": "ARC-L5 Yellow Core Station"
+    },
+    "cru-l1 ambitious dream station": {
+        "key": "RR_CRU_L1",
+        "zh": "十-L1 雄心伟梦站",
+        "en": "CRU-L1 Ambitious Dream Station"
+    },
+    "cru-l4 shallow fields station": {
+        "key": "RR_CRU_L4",
+        "zh": "十-L4 轻浅田野站",
+        "en": "CRU-L4 Shallow Fields Station"
+    },
+    "cru-l5 beautiful glen station": {
+        "key": "RR_CRU_L5",
+        "zh": "十-L5 美丽峡谷站",
+        "en": "CRU-L5 Beautiful Glen Station"
+    },
+    "kel-to rx clinic": {
+        "key": "RR_Clinic",
+        "zh": "科途Rx诊所",
+        "en": "Kel-To Rx Clinic"
+    },
+    "hur-l1 green glade station": {
+        "key": "RR_HUR_L1",
+        "zh": "赫-L1 绿色林地站",
+        "en": "HUR-L1 Green Glade Station"
+    },
+    "hur-l2 faithful dream station": {
+        "key": "RR_HUR_L2",
+        "zh": "赫-L2 坚贞梦想站",
+        "en": "HUR-L2 Faithful Dream Station"
+    },
+    "hur-l3 thundering express station": {
+        "key": "RR_HUR_L3",
+        "zh": "赫-L3 雷霆快车站",
+        "en": "HUR-L3 Thundering Express Station"
+    },
+    "hur-l4 melodic fields station": {
+        "key": "RR_HUR_L4",
+        "zh": "赫-L4 旋律领域站",
+        "en": "HUR-L4 Melodic Fields Station"
+    },
+    "hur-l5 high course station": {
+        "key": "RR_HUR_L5",
+        "zh": "赫-L5 高速路线站",
+        "en": "HUR-L5 High Course Station"
+    },
+    "mic-l1 shallow frontier station": {
+        "key": "RR_MIC_L1",
+        "zh": "微-L1 浅边站",
+        "en": "MIC-L1 Shallow Frontier Station"
+    },
+    "mic-l2 long forest station": {
+        "key": "RR_MIC_L2",
+        "zh": "微-L2 长林站",
+        "en": "MIC-L2 Long Forest Station"
+    },
+    "mic-l3 endless odyssey station": {
+        "key": "RR_MIC_L3",
+        "zh": "微-L3 无尽漫游站",
+        "en": "MIC-L3 Endless Odyssey Station"
+    },
+    "mic-l4 red crossroads station": {
+        "key": "RR_MIC_L4",
+        "zh": "微-L4 红色十字路口站",
+        "en": "MIC-L4 Red Crossroads Station"
+    },
+    "mic-l5 modern icarus station": {
+        "key": "RR_MIC_L5",
+        "zh": "微-L5 现代伊卡洛斯站",
+        "en": "MIC-L5 Modern Icarus Station"
+    },
+    "pyam-farstat-1-2": {
+        "key": "RR_P1_L2",
+        "zh": "焰联-远程站-1-2",
+        "en": "PYAM-FARSTAT-1-2"
+    },
+    "pyam-farstat-1-3": {
+        "key": "RR_P1_L3",
+        "zh": "焰联-远程站-1-3",
+        "en": "PYAM-FARSTAT-1-3"
+    },
+    "pyam-farstat-1-5": {
+        "key": "RR_P1_L5",
+        "zh": "焰联-远程站-1-5",
+        "en": "PYAM-FARSTAT-1-5"
+    },
+    "pyam-farstat-2-0": {
+        "key": "RR_P2",
+        "zh": "焰联-远程站-2-0",
+        "en": "PYAM-FARSTAT-2-0"
+    },
+    "pyam-farstat-2-3": {
+        "key": "RR_P2_L3",
+        "zh": "焰联-远程站-2-3",
+        "en": "PYAM-FARSTAT-2-3"
+    },
+    "checkmate": {
+        "key": "RR_P2_L4",
+        "zh": "死局空间站",
+        "en": "Checkmate"
+    },
+    "checkmate clinic": {
+        "key": "RR_P2_L4_Clinic",
+        "zh": "死局空间站诊所",
+        "en": "Checkmate Clinic"
+    },
+    "orbituary": {
+        "key": "RR_P3",
+        "zh": "轨道讣闻站",
+        "en": "Orbituary"
+    },
+    "orbituary clinic": {
+        "key": "RR_P3_Clinic",
+        "zh": "轨道讣闻站诊所",
+        "en": "Orbituary Clinic"
+    },
+    "starlight service station": {
+        "key": "RR_P3_L1",
+        "zh": "星光服务站",
+        "en": "Starlight Service Station"
+    },
+    "starlight clinic": {
+        "key": "RR_P3_L1_Clinic",
+        "zh": "星光服务站诊所",
+        "en": "Starlight Clinic"
+    },
+    "patch city": {
+        "key": "RR_P3_L3",
+        "zh": "补丁城",
+        "en": "Patch City"
+    },
+    "patch city clinic": {
+        "key": "RR_P3_L3_Clinic",
+        "zh": "补丁城诊所",
+        "en": "Patch City Clinic"
+    },
+    "pyam-farstat-3-5": {
+        "key": "RR_P3_L5",
+        "zh": "焰联-远程站-3-5",
+        "en": "PYAM-FARSTAT-3-5"
+    },
+    "pyam-farstat-5-1": {
+        "key": "RR_P5_L1",
+        "zh": "焰联-远程站-5-1",
+        "en": "PYAM-FARSTAT-5-1"
+    },
+    "gaslight": {
+        "key": "RR_P5_L2",
+        "zh": "煤气灯空间站",
+        "en": "Gaslight"
+    },
+    "gaslight clinic": {
+        "key": "RR_P5_L2_Clinic",
+        "zh": "煤气灯空间站诊所",
+        "en": "Gaslight Clinic"
+    },
+    "pyam-farstat-5-3": {
+        "key": "RR_P5_L3",
+        "zh": "焰联-远程站-5-3",
+        "en": "PYAM-FARSTAT-5-3"
+    },
+    "rod's fuel 'n supplies": {
+        "key": "RR_P5_L4",
+        "zh": "路德补给站",
+        "en": "Rod's Fuel 'N Supplies"
+    },
+    "rod's clinic": {
+        "key": "RR_P5_L4_Clinic",
+        "zh": "路德补给站诊所",
+        "en": "Rod's Clinic"
+    },
+    "rat's nest": {
+        "key": "RR_P5_L5",
+        "zh": "鼠巢空间站",
+        "en": "Rat's Nest"
+    },
+    "rat's nest clinic": {
+        "key": "RR_P5_L5_Clinic",
+        "zh": "鼠巢空间站诊所",
+        "en": "Rat's Nest Clinic"
+    },
+    "ruin clinic": {
+        "key": "RR_P6_Clinic",
+        "zh": "废墟空间站诊所",
+        "en": "Ruin Clinic"
+    },
+    "pyam-farstat-6-2": {
+        "key": "RR_P6_L2",
+        "zh": "焰联-远程站-6-2",
+        "en": "PYAM-FARSTAT-6-2"
+    },
+    "endgame": {
+        "key": "RR_P6_L3",
+        "zh": "终局空间站",
+        "en": "Endgame"
+    },
+    "endgame clinic": {
+        "key": "RR_P6_L3_Clinic",
+        "zh": "终局空间站诊所",
+        "en": "Endgame Clinic"
+    },
+    "dudley & daughters": {
+        "key": "RR_P6_L4",
+        "zh": "达德利父女空间站",
+        "en": "Dudley & Daughters"
+    },
+    "dudley clinic": {
+        "key": "RR_P6_L4_Clinic",
+        "zh": "达德利父女空间站诊所",
+        "en": "Dudley Clinic"
+    },
+    "megumi refueling": {
+        "key": "RR_P6_L5",
+        "zh": "恩惠加油站",
+        "en": "Megumi Refueling"
+    },
+    "megumi clinic": {
+        "key": "RR_P6_L5_Clinic",
+        "zh": "恩惠加油站诊所",
+        "en": "Megumi Clinic"
+    },
+    "hurston": {
+        "key": "Stanton1",
+        "zh": "赫斯顿",
+        "en": "Hurston"
+    },
+    "cry-astro hurston processing plant 19-02": {
+        "key": "Stanton1_CRAS_UGF_001,P",
+        "zh": "寒宇赫斯顿加工厂 19-02",
+        "en": "Cry-Astro Hurston Processing Plant 19-02"
+    },
+    "covalex distribution center s1dc06": {
+        "key": "Stanton1_CVLC_UGF_002,P",
+        "zh": "科瓦莱什配送中心S1DC06",
+        "en": "Covalex Distribution Center S1DC06"
+    },
+    "covalex distribution center s1dc02": {
+        "key": "Stanton1_CVLX_UGF_001,P",
+        "zh": "科瓦莱什配送中心S1DC02",
+        "en": "Covalex Distribution Center S1DC02"
+    },
+    "hdes-calthrope (na)": {
+        "key": "Stanton1_Cave_Aband_01",
+        "zh": "卡尔斯罗普矿洞（已废弃）",
+        "en": "HDES-Calthrope (NA)"
+    },
+    "comm array st1-61": {
+        "key": "Stanton1_CommArray_001",
+        "zh": "通讯矩阵 ST1-61",
+        "en": "Comm Array ST1-61"
+    },
+    "comm array st1-13": {
+        "key": "Stanton1_CommArray_002",
+        "zh": "通讯矩阵 ST1-13",
+        "en": "Comm Array ST1-13"
+    },
+    "comm array st1-92": {
+        "key": "Stanton1_CommArray_003",
+        "zh": "通讯矩阵 ST1-92",
+        "en": "Comm Array ST1-92"
+    },
+    "comm array st1-48": {
+        "key": "Stanton1_CommArray_004",
+        "zh": "通讯矩阵 ST1-48",
+        "en": "Comm Array ST1-48"
+    },
+    "comm array st1-02": {
+        "key": "Stanton1_CommArray_005",
+        "zh": "通讯矩阵 ST1-02",
+        "en": "Comm Array ST1-02"
+    },
+    "stanton1_courier_org": {
+        "key": "Stanton1_Courier_Org,P",
+        "zh": "Stanton1_Courier_Org",
+        "en": "Stanton1_Courier_Org"
+    },
+    "cutter's rig": {
+        "key": "Stanton1_DerelictSettlement_CuttersRig",
+        "zh": "扬帆镇",
+        "en": "Cutter's Rig"
+    },
+    "finn's folly": {
+        "key": "Stanton1_DerelictSettlement_FinnsFolly",
+        "zh": "芬恩屋",
+        "en": "Finn's Folly"
+    },
+    "ludlow": {
+        "key": "Stanton1_DerelictSettlement_Ludlow",
+        "zh": "勒德洛镇",
+        "en": "Ludlow"
+    },
+    "maker's point": {
+        "key": "Stanton1_DerelictSettlement_MakersPoint",
+        "zh": "制造点",
+        "en": "Maker's Point"
+    },
+    "picker's field": {
+        "key": "Stanton1_DerelictSettlement_PickersField",
+        "zh": "拾荒地",
+        "en": "Picker's Field"
+    },
+    "rappel": {
+        "key": "Stanton1_DerelictSettlement_Rappel",
+        "zh": "索降镇",
+        "en": "Rappel"
+    },
+    "weeping cove": {
+        "key": "Stanton1_DerelictSettlement_WeepingCove",
+        "zh": "泪湾",
+        "en": "Weeping Cove"
+    },
+    "zephyr": {
+        "key": "Stanton1_DerelictSettlement_Zephyr",
+        "zh": "西风镇",
+        "en": "Zephyr"
+    },
+    "covalex distribution centre s1dc06": {
+        "key": "Stanton1_DistributionCenter_Covalex_01",
+        "zh": "科瓦莱什配送中心 S1DC06",
+        "en": "Covalex Distribution Centre S1DC06"
+    },
+    "dupree industrial manufacturing facility": {
+        "key": "Stanton1_DistributionCenter_Criminal_01",
+        "zh": "杜普里工业制造设施",
+        "en": "Dupree Industrial Manufacturing Facility"
+    },
+    "greycat stanton i production complex-a": {
+        "key": "Stanton1_GRIN_UGF_001,P",
+        "zh": "灰猫斯坦顿 I 生产综合体-A",
+        "en": "Greycat Stanton I Production Complex-A"
+    },
+    "greycat stanton i production complex-b": {
+        "key": "Stanton1_GRIN_UGF_002,P",
+        "zh": "灰猫斯坦顿 I 生产综合体-B",
+        "en": "Greycat Stanton I Production Complex-B"
+    },
+    "hdpc-farnesway": {
+        "key": "Stanton1_HRST_UGF_003,P",
+        "zh": "HDPC-法内斯威",
+        "en": "HDPC-Farnesway"
+    },
+    "hdpc-cassillo": {
+        "key": "Stanton1_HRST_UGF_001,P",
+        "zh": "HDPC-卡西洛",
+        "en": "HDPC-Cassillo"
+    },
+    "sakura sun magnolia workcenter": {
+        "key": "Stanton1_DistributionCenter_Sakura_01",
+        "zh": "樱日木兰花工作中心",
+        "en": "Sakura Sun Magnolia Workcenter"
+    },
+    "echo isle": {
+        "key": "Stanton1_DrugLab_001,P",
+        "zh": "回声岛",
+        "en": "Echo Isle"
+    },
+    "they always come back.": {
+        "key": "Stanton1_DrugLab_001_Desc,P",
+        "zh": "他们总会回来。",
+        "en": "They always come back."
+    },
+    "hdpc-degland": {
+        "key": "Stanton1_HRST_UGF_002,P",
+        "zh": "HDPC-德格兰",
+        "en": "HDPC-Degland"
+    },
+    "hdpc-tiyago": {
+        "key": "Stanton1_HRST_UGF_004,P",
+        "zh": "HDPC-提亚戈",
+        "en": "HDPC-Tiyago"
+    },
+    "hdms-edmond": {
+        "key": "Stanton1_HurDynMining_001",
+        "zh": "HDMS-埃得蒙德站",
+        "en": "HDMS-Edmond"
+    },
+    "hdms-oparei": {
+        "key": "Stanton1_HurDynMining_002",
+        "zh": "HDMS-奥派雷站",
+        "en": "HDMS-Oparei"
+    },
+    "hdms-pinewood": {
+        "key": "Stanton1_HurDynMining_003",
+        "zh": "HDMS-派恩伍德站",
+        "en": "HDMS-Pinewood"
+    },
+    "hdms-thedus": {
+        "key": "Stanton1_HurDynMining_004",
+        "zh": "HDMS-赛达斯站",
+        "en": "HDMS-Thedus"
+    },
+    "hdms-hadley": {
+        "key": "Stanton1_HurDynMining_005",
+        "zh": "HDMS-哈德利站",
+        "en": "HDMS-Hadley"
+    },
+    "hdms-stanhope": {
+        "key": "Stanton1_HurDynMining_006",
+        "zh": "HDMS-斯坦霍普站",
+        "en": "HDMS-Stanhope"
+    },
+    "hdsf-adlai [closed]": {
+        "key": "Stanton1_HurDynUGF_001",
+        "zh": "HDSF-阿德莱站 ",
+        "en": "HDSF-Adlai [CLOSED]"
+    },
+    "hdsf-hendricks [closed]": {
+        "key": "Stanton1_HurDynUGF_002",
+        "zh": "HDSF-亨得利斯克站 ",
+        "en": "HDSF-Hendricks [CLOSED]"
+    },
+    "hdsf-colfax": {
+        "key": "Stanton1_HurDynUGF_003",
+        "zh": "HDSF-科尔法克斯站",
+        "en": "HDSF-Colfax"
+    },
+    "hdsf-sherman": {
+        "key": "Stanton1_HurDynUGF_004",
+        "zh": "HDSF-谢尔曼站",
+        "en": "HDSF-Sherman"
+    },
+    "hdsf-elbridge [closed]": {
+        "key": "Stanton1_HurDynUGF_005",
+        "zh": "HDSF-埃尔布里奇站 ",
+        "en": "HDSF-Elbridge [CLOSED]"
+    },
+    "hdsf-hobart [closed]": {
+        "key": "Stanton1_HurDynUGF_006",
+        "zh": "HDSF-霍巴特站 ",
+        "en": "HDSF-Hobart [CLOSED]"
+    },
+    "hdsf-millerand": {
+        "key": "Stanton1_HurDynUGF_007",
+        "zh": "HDSF-米尔兰德站",
+        "en": "HDSF-Millerand"
+    },
+    "hdsf-tompkins": {
+        "key": "Stanton1_HurDynUGF_008",
+        "zh": "HDSF-汤普金斯站",
+        "en": "HDSF-Tompkins"
+    },
+    "hdsf-breckinridge [closed]": {
+        "key": "Stanton1_HurDynUGF_009",
+        "zh": "HDSF-布雷肯里奇站 ",
+        "en": "HDSF-Breckinridge [CLOSED]"
+    },
+    "hdsf-zacharias [closed]": {
+        "key": "Stanton1_HurDynUGF_010",
+        "zh": "HDSF-撒加利亚站 ",
+        "en": "HDSF-Zacharias [CLOSED]"
+    },
+    "hdsf-rufus": {
+        "key": "Stanton1_HurDynUGF_011",
+        "zh": "HDSF-卢福斯站",
+        "en": "HDSF-Rufus"
+    },
+    "hdsf-tamar": {
+        "key": "Stanton1_HurDynUGF_012",
+        "zh": "HDSF-塔玛站",
+        "en": "HDSF-Tamar"
+    },
+    "hdsf-ishmael [closed]": {
+        "key": "Stanton1_HurDynUGF_013",
+        "zh": "HDSF-以赛玛利站 ",
+        "en": "HDSF-Ishmael [CLOSED]"
+    },
+    "hdsf-damaris [closed]": {
+        "key": "Stanton1_HurDynUGF_014",
+        "zh": "HDSF-达莫里斯站 ",
+        "en": "HDSF-Damaris [CLOSED]"
+    },
+    "hdsf-hiram": {
+        "key": "Stanton1_HurDynUGF_015",
+        "zh": "HDSF-海勒姆站",
+        "en": "HDSF-Hiram"
+    },
+    "hdsf-barnabas": {
+        "key": "Stanton1_HurDynUGF_016",
+        "zh": "HDSF-巴纳巴斯站",
+        "en": "HDSF-Barnabas"
+    },
+    "maria pure of heart": {
+        "key": "Stanton1_Hurston_Lorville_Hospital",
+        "zh": "玛利亚纯洁之心",
+        "en": "Maria Pure of Heart"
+    },
+    "l19 residences": {
+        "key": "Stanton1_Hurston_Lorville_L19Residences",
+        "zh": "L19 居住区",
+        "en": "L19 Residences"
+    },
+    "hur l1": {
+        "key": "Stanton1_L1",
+        "zh": "赫 HUR L1",
+        "en": "HUR L1"
+    },
+    "hur l1-a": {
+        "key": "Stanton1_L1_01",
+        "zh": "赫 HUR L1-A",
+        "en": "HUR L1-A"
+    },
+    "hur l2": {
+        "key": "Stanton1_L2",
+        "zh": "赫 HUR L2",
+        "en": "HUR L2"
+    },
+    "hur l2-a": {
+        "key": "Stanton1_L2_01",
+        "zh": "赫 HUR L2-A",
+        "en": "HUR L2-A"
+    },
+    "hur l3": {
+        "key": "Stanton1_L3",
+        "zh": "赫 HUR L3",
+        "en": "HUR L3"
+    },
+    "hur l3-a": {
+        "key": "Stanton1_L3_01",
+        "zh": "赫 HUR L3-A",
+        "en": "HUR L3-A"
+    },
+    "hur l4": {
+        "key": "Stanton1_L4",
+        "zh": "赫 HUR L4",
+        "en": "HUR L4"
+    },
+    "hur l4-a": {
+        "key": "Stanton1_L4_01",
+        "zh": "赫 HUR L4-A",
+        "en": "HUR L4-A"
+    },
+    "hur l5": {
+        "key": "Stanton1_L5",
+        "zh": "赫 HUR L5",
+        "en": "HUR L5"
+    },
+    "hur l5-a": {
+        "key": "Stanton1_L5_01",
+        "zh": "赫 HUR L5-A",
+        "en": "HUR L5-A"
+    },
+    "lorville": {
+        "key": "Stanton1_Lorville",
+        "zh": "罗威尔",
+        "en": "Lorville"
+    },
+    "lorville outskirts": {
+        "key": "Stanton1_Racetrack_LorvilleOutskirts",
+        "zh": "罗威尔郊外",
+        "en": "Lorville Outskirts"
+    },
+    "lorville outskirts on hurston": {
+        "key": "Stanton1_Racetrack_LorvilleOutskirts_add",
+        "zh": "赫斯顿的罗威尔郊外",
+        "en": "Lorville Outskirts on Hurston"
+    },
+    "reclamation & disposal orinth": {
+        "key": "Stanton1_SalvageYard_001",
+        "zh": "奥林森回收站",
+        "en": "Reclamation & Disposal Orinth"
+    },
+    "hdrso-bramen": {
+        "key": "Stanton1_SecUGF_001",
+        "zh": "HDRSO-布拉曼哨所",
+        "en": "HDRSO-Bramen"
+    },
+    "everus harbor": {
+        "key": "Stanton1_Transfer",
+        "zh": "埃弗勒斯空间站",
+        "en": "Everus Harbor"
+    },
+    "hdof-palomar": {
+        "key": "Stanton1_UGF_secdep_name",
+        "zh": "HDOF-帕洛马尔",
+        "en": "HDOF-Palomar"
+    },
+    "arial": {
+        "key": "Stanton1a",
+        "zh": "艾瑞尔",
+        "en": "Arial"
+    },
+    "hdms-bezdek": {
+        "key": "Stanton1a_HurDynMining_001",
+        "zh": "HDMS-贝兹德克站",
+        "en": "HDMS-Bezdek"
+    },
+    "hdms-lathan": {
+        "key": "Stanton1a_HurDynMining_002",
+        "zh": "HDMS-莱森站",
+        "en": "HDMS-Lathan"
+    },
+    "aberdeen": {
+        "key": "Stanton1b",
+        "zh": "阿伯丁",
+        "en": "Aberdeen"
+    },
+    "aberdeen, stanton system": {
+        "key": "Stanton1b_Aberdeen_Location,P",
+        "zh": "阿伯丁，斯坦顿星系",
+        "en": "Aberdeen, Stanton System"
+    },
+    "klescher rehabilitation facility": {
+        "key": "Stanton1b_Aberdeen_Prison",
+        "zh": "克莱舍尔劳教所",
+        "en": "Klescher Rehabilitation Facility"
+    },
+    "hdes-dobbs (na)": {
+        "key": "Stanton1b_Cave_Aband_01",
+        "zh": "多布斯矿洞（已废弃）",
+        "en": "HDES-Dobbs (NA)"
+    },
+    "barton flats aid shelter": {
+        "key": "Stanton1b_EMShelter_Prison",
+        "zh": "巴顿公寓援助庇护所",
+        "en": "Barton Flats Aid Shelter"
+    },
+    "hdms-norgaard": {
+        "key": "Stanton1b_HurDynMining_001",
+        "zh": "HDMS-诺加德站",
+        "en": "HDMS-Norgaard"
+    },
+    "hdms-anderson": {
+        "key": "Stanton1b_HurDynMining_002",
+        "zh": "HDMS-安德森站",
+        "en": "HDMS-Anderson"
+    },
+    "magda": {
+        "key": "Stanton1c",
+        "zh": "玛格达",
+        "en": "Magda"
+    },
+    "hdms-hahn": {
+        "key": "Stanton1c_HurDynMining_001",
+        "zh": "HDMS-哈恩站",
+        "en": "HDMS-Hahn"
+    },
+    "hdms-perlman": {
+        "key": "Stanton1c_HurDynMining_002",
+        "zh": "HDMS-佩尔曼站",
+        "en": "HDMS-Perlman"
+    },
+    "ita": {
+        "key": "Stanton1d",
+        "zh": "依塔",
+        "en": "Ita"
+    },
+    "hdms-woodruff": {
+        "key": "Stanton1d_HurDynMining_001",
+        "zh": "HDMS-伍德拉夫站",
+        "en": "HDMS-Woodruff"
+    },
+    "hdms-ryder": {
+        "key": "Stanton1d_HurDynMining_002",
+        "zh": "HDMS-莱德站",
+        "en": "HDMS-Ryder"
+    },
+    "crusader": {
+        "key": "Stanton2",
+        "zh": "十字军",
+        "en": "Crusader"
+    },
+    "admin center": {
+        "key": "Stanton2_AdminCenter",
+        "zh": "行政中心",
+        "en": "Admin Center"
+    },
+    "brushwood": {
+        "key": "Stanton2_BrushwoodPlatform",
+        "zh": "布拉什伍德",
+        "en": "Brushwood"
+    },
+    "cloudrest retreat": {
+        "key": "Stanton2_CloudrestRetreatCluster",
+        "zh": "云歇避风港",
+        "en": "Cloudrest Retreat"
+    },
+    "cloudrest retreat on crusader": {
+        "key": "Stanton2_CloudrestRetreatCluster_Add",
+        "zh": "位于十字军的云歇避风港",
+        "en": "Cloudrest Retreat on Crusader"
+    },
+    "comm array st2-55": {
+        "key": "Stanton2_CommArray_001",
+        "zh": "通讯矩阵 ST2-55",
+        "en": "Comm Array ST2-55"
+    },
+    "comm array st2-28": {
+        "key": "Stanton2_CommArray_002",
+        "zh": "通讯矩阵 ST2-28",
+        "en": "Comm Array ST2-28"
+    },
+    "comm array st2-47": {
+        "key": "Stanton2_CommArray_003",
+        "zh": "通讯矩阵 ST2-47",
+        "en": "Comm Array ST2-47"
+    },
+    "comm array st2-76": {
+        "key": "Stanton2_CommArray_004",
+        "zh": "通讯矩阵 ST2-76",
+        "en": "Comm Array ST2-76"
+    },
+    "stanton2_courier_org": {
+        "key": "Stanton2_Courier_Org,P",
+        "zh": "Stanton2_Courier_Org",
+        "en": "Stanton2_Courier_Org"
+    },
+    "empyrean park": {
+        "key": "Stanton2_EmpyreanParkCluster",
+        "zh": "至高庭园",
+        "en": "Empyrean Park"
+    },
+    "empyrean park on crusader": {
+        "key": "Stanton2_EmpyreanParkCluster_Add",
+        "zh": "位于十字军的至高庭园",
+        "en": "Empyrean Park on Crusader"
+    },
+    "hartmoore": {
+        "key": "Stanton2_HartmoorePlatform",
+        "zh": "哈特莫尔",
+        "en": "Hartmoore"
+    },
+    "cru l1": {
+        "key": "Stanton2_L1",
+        "zh": "十 CRU L1",
+        "en": "CRU L1"
+    },
+    "cru l1-a": {
+        "key": "Stanton2_L1_01",
+        "zh": "十 CRU L1-A",
+        "en": "CRU L1-A"
+    },
+    "cru l2": {
+        "key": "Stanton2_L2",
+        "zh": "十 CRU L2",
+        "en": "CRU L2"
+    },
+    "cru l2-a": {
+        "key": "Stanton2_L2_01",
+        "zh": "十 CRU L2-A",
+        "en": "CRU L2-A"
+    },
+    "cru l2-b": {
+        "key": "Stanton2_L2_02",
+        "zh": "十 CRU L2-B",
+        "en": "CRU L2-B"
+    },
+    "cru l2-c": {
+        "key": "Stanton2_L2_03",
+        "zh": "十 CRU L2-C",
+        "en": "CRU L2-C"
+    },
+    "cru l3": {
+        "key": "Stanton2_L3",
+        "zh": "十 CRU L3",
+        "en": "CRU L3"
+    },
+    "cru l3-a": {
+        "key": "Stanton2_L3_01",
+        "zh": "十 CRU L3-A",
+        "en": "CRU L3-A"
+    },
+    "cru l4": {
+        "key": "Stanton2_L4",
+        "zh": "十 CRU L4",
+        "en": "CRU L4"
+    },
+    "cru l4-a": {
+        "key": "Stanton2_L4_01",
+        "zh": "十 CRU L4-A",
+        "en": "CRU L4-A"
+    },
+    "cru l5": {
+        "key": "Stanton2_L5",
+        "zh": "十 CRU L5",
+        "en": "CRU L5"
+    },
+    "cru l5-a": {
+        "key": "Stanton2_L5_01",
+        "zh": "十 CRU L5-A",
+        "en": "CRU L5-A"
+    },
+    "orison": {
+        "key": "Stanton2_Orison",
+        "zh": "奥里森",
+        "en": "Orison"
+    },
+    "orison general": {
+        "key": "Stanton2_Orison_Hospital",
+        "zh": "奥里森综合医院",
+        "en": "Orison General"
+    },
+    "prospect point": {
+        "key": "Stanton2_ProspectPointCluster",
+        "zh": "眺望点",
+        "en": "Prospect Point"
+    },
+    "prospect point on crusader": {
+        "key": "Stanton2_ProspectPointCluster_Add",
+        "zh": "位于十字军的眺望点",
+        "en": "Prospect Point on Crusader"
+    },
+    "caplan circuit": {
+        "key": "Stanton2_Racetrack_CaplanCircuit",
+        "zh": "卡普兰环道",
+        "en": "Caplan Circuit"
+    },
+    "caplan circuit on crusader": {
+        "key": "Stanton2_Racetrack_CaplanCircuit_add",
+        "zh": "十字军上的卡普兰环道",
+        "en": "Caplan Circuit on Crusader"
+    },
+    "solanki": {
+        "key": "Stanton2_SolankiPlatform",
+        "zh": "索兰奇",
+        "en": "Solanki"
+    },
+    "seraphim station": {
+        "key": "Stanton2_Transfer_Seraphim",
+        "zh": "炽天使空间站",
+        "en": "Seraphim Station"
+    },
+    "cellin": {
+        "key": "Stanton2a",
+        "zh": "赛琳",
+        "en": "Cellin"
+    },
+    "nt-999-xv": {
+        "key": "Stanton2a_DrugUGF_001",
+        "zh": "NT-999-XV",
+        "en": "NT-999-XV"
+    },
+    "julep ravine aid shelter": {
+        "key": "Stanton2a_EMShelter_001",
+        "zh": "朱利普峡谷援助避难所",
+        "en": "Julep Ravine Aid Shelter"
+    },
+    "flanagan's ravine aid shelter": {
+        "key": "Stanton2a_EMShelter_002",
+        "zh": "弗拉纳根峪援助避难所",
+        "en": "Flanagan's Ravine Aid Shelter"
+    },
+    "ashburn channel aid shelter": {
+        "key": "Stanton2a_EMShelter_003",
+        "zh": "阿什本通道援助避难所",
+        "en": "Ashburn Channel Aid Shelter"
+    },
+    "mogote aid shelter": {
+        "key": "Stanton2a_EMShelter_004",
+        "zh": "莫格特援助避难所",
+        "en": "Mogote Aid Shelter"
+    },
+    "gallete family farms": {
+        "key": "Stanton2a_IndyFarmer_001",
+        "zh": "加莱特家庭种植站",
+        "en": "Gallete Family Farms"
+    },
+    "tram & myers mining": {
+        "key": "Stanton2a_IndyMine_001",
+        "zh": "泰姆&迈尔斯矿站",
+        "en": "Tram & Myers Mining"
+    },
+    "hickes research outpost": {
+        "key": "Stanton2a_Rayari_001",
+        "zh": "希克斯研究站",
+        "en": "Hickes Research Outpost"
+    },
+    "security post dipur": {
+        "key": "Stanton2a_SecUGF_001",
+        "zh": "迪普尔安保站",
+        "en": "Security Post Dipur"
+    },
+    "security post lespin": {
+        "key": "Stanton2a_SecUGF_002",
+        "zh": "莱斯平安保站",
+        "en": "Security Post Lespin"
+    },
+    "security post criska": {
+        "key": "Stanton2a_SecUGF_003",
+        "zh": "克里斯卡安保站",
+        "en": "Security Post Criska"
+    },
+    "private property": {
+        "key": "Stanton2a_Stash_001",
+        "zh": "私有财产",
+        "en": "PRIVATE PROPERTY"
+    },
+    "terra mills hydrofarm": {
+        "key": "Stanton2a_TerraMills_001",
+        "zh": "泰拉磨坊水培种植站",
+        "en": "Terra Mills HydroFarm"
+    },
+    "daymar": {
+        "key": "Stanton2b",
+        "zh": "戴玛尔",
+        "en": "Daymar"
+    },
+    "whistler's crypt": {
+        "key": "Stanton2b_600iSettlement",
+        "zh": "惠斯勒地穴",
+        "en": "Whistler's Crypt"
+    },
+    "arccorp mining area 141": {
+        "key": "Stanton2b_ArcCorp_001",
+        "zh": "弧光集团采矿站 141",
+        "en": "ArcCorp Mining Area 141"
+    },
+    "crusader industries daymar center b14": {
+        "key": "Stanton2b_CRUS_UGF_001,P",
+        "zh": "十字军工业戴玛尔中心 B14",
+        "en": "Crusader Industries Daymar Center B14"
+    },
+    "kudre ore mine (closed)": {
+        "key": "Stanton2b_Cave_Aband_01",
+        "zh": "库德雷矿井（已关停）",
+        "en": "Kudre Ore Mine (Closed)"
+    },
+    "nt-999-xvi": {
+        "key": "Stanton2b_DrugUGF_001",
+        "zh": "NT-999-XVI",
+        "en": "NT-999-XVI"
+    },
+    "the garden": {
+        "key": "Stanton2b_DrugUGF_002",
+        "zh": "庭园",
+        "en": "The Garden"
+    },
+    "tpf": {
+        "key": "Stanton2b_DrugUGF_003",
+        "zh": "TPF",
+        "en": "TPF"
+    },
+    "tamdon plains aid shelter": {
+        "key": "Stanton2b_EMShelter_001",
+        "zh": "坦登平原援助避难所",
+        "en": "Tamdon Plains Aid Shelter"
+    },
+    "eager flats aid shelter": {
+        "key": "Stanton2b_EMShelter_002",
+        "zh": "埃格平原援助避难所",
+        "en": "Eager Flats Aid Shelter"
+    },
+    "dunlow ridge aid shelter": {
+        "key": "Stanton2b_EMShelter_003",
+        "zh": "顿洛山脉援助避难所",
+        "en": "Dunlow Ridge Aid Shelter"
+    },
+    "wolf point aid shelter": {
+        "key": "Stanton2b_EMShelter_004",
+        "zh": "狼穴援助避难所",
+        "en": "Wolf Point Aid Shelter"
+    },
+    "bountiful harvest hydroponics": {
+        "key": "Stanton2b_IndyFarmer_001",
+        "zh": "丰收水培种植站",
+        "en": "Bountiful Harvest Hydroponics"
+    },
+    "kudre ore": {
+        "key": "Stanton2b_IndyMine_001",
+        "zh": "库德雷矿井",
+        "en": "Kudre Ore"
+    },
+    "yadar valley": {
+        "key": "Stanton2b_Racetrack_YadarValley",
+        "zh": "雅达尔山谷",
+        "en": "Yadar Valley"
+    },
+    "yadar valley on daymar": {
+        "key": "Stanton2b_Racetrack_YadarValley_add",
+        "zh": "戴玛尔上的雅达尔山谷",
+        "en": "Yadar Valley on Daymar"
+    },
+    "brio's breaker yard": {
+        "key": "Stanton2b_SalvageYard_001",
+        "zh": "布里奥的拆船场",
+        "en": "Brio's Breaker Yard"
+    },
+    "security post thaquray": {
+        "key": "Stanton2b_SecUGF_001",
+        "zh": "塔库赖安保站",
+        "en": "Security Post Thaquray"
+    },
+    "security post moluto": {
+        "key": "Stanton2b_SecUGF_002",
+        "zh": "莫鲁托安保站",
+        "en": "Security Post Moluto"
+    },
+    "security post prashad": {
+        "key": "Stanton2b_SecUGF_003",
+        "zh": "普拉沙德安保站",
+        "en": "Security Post Prashad"
+    },
+    "shubin mining facility scd-1": {
+        "key": "Stanton2b_Shubin_001",
+        "zh": "舒宾采矿设施 SCD-1",
+        "en": "Shubin Mining Facility SCD-1"
+    },
+    "nuen waste management": {
+        "key": "Stanton2b_Stash_001",
+        "zh": "努恩废物管理中心",
+        "en": "Nuen Waste Management"
+    },
+    "yela": {
+        "key": "Stanton2c",
+        "zh": "耶拉",
+        "en": "Yela"
+    },
+    "arccorp mining area 157": {
+        "key": "Stanton2c_ArcCorp_001",
+        "zh": "弧光集团采矿站 157",
+        "en": "ArcCorp Mining Area 157"
+    },
+    "jumptown": {
+        "key": "Stanton2c_DrugLab_001",
+        "zh": "跃动小镇",
+        "en": "Jumptown"
+    },
+    "nt-999-xxii": {
+        "key": "Stanton2c_DrugUGF_001",
+        "zh": "NT-999-XXII",
+        "en": "NT-999-XXII"
+    },
+    "utopia": {
+        "key": "Stanton2c_DrugUGF_002",
+        "zh": "乌托邦",
+        "en": "Utopia"
+    },
+    "connor's": {
+        "key": "Stanton2c_DrugUGF_003",
+        "zh": "康纳小屋",
+        "en": "Connor's"
+    },
+    "afterlife": {
+        "key": "Stanton2c_DrugUGF_004",
+        "zh": "来生",
+        "en": "Afterlife"
+    },
+    "aston ridge aid shelter": {
+        "key": "Stanton2c_EMShelter_001",
+        "zh": "阿斯顿岭援助避难所",
+        "en": "Aston Ridge Aid Shelter"
+    },
+    "kosso basin aid shelter": {
+        "key": "Stanton2c_EMShelter_002",
+        "zh": "科索盆地援助避难所",
+        "en": "Kosso Basin Aid Shelter"
+    },
+    "nakamura valley aid shelter": {
+        "key": "Stanton2c_EMShelter_003",
+        "zh": "中村谷援助避难所",
+        "en": "Nakamura Valley Aid Shelter"
+    },
+    "talarine divide aid shelter": {
+        "key": "Stanton2c_EMShelter_004",
+        "zh": "塔拉林峡谷援助避难所",
+        "en": "Talarine Divide Aid Shelter"
+    },
+    "benson mining outpost": {
+        "key": "Stanton2c_IndyMine_001",
+        "zh": "本森采矿前哨站",
+        "en": "Benson Mining Outpost"
+    },
+    "miner's lament": {
+        "key": "Stanton2c_Racetrack_MinersLament",
+        "zh": "矿工哀歌",
+        "en": "Miner's Lament"
+    },
+    "miner's lament near yela": {
+        "key": "Stanton2c_Racetrack_MinersLament_add",
+        "zh": "耶拉附近的矿工哀歌赛道",
+        "en": "Miner's Lament near Yela"
+    },
+    "deakins research outpost": {
+        "key": "Stanton2c_Rayari_001",
+        "zh": "迪金斯科研前哨站",
+        "en": "Deakins Research Outpost"
+    },
+    "security post opal": {
+        "key": "Stanton2c_SecUGF_001",
+        "zh": "欧珀安保站",
+        "en": "Security Post Opal"
+    },
+    "security post wan": {
+        "key": "Stanton2c_SecUGF_002",
+        "zh": "万安保站",
+        "en": "Security Post Wan"
+    },
+    "nt-999-xx": {
+        "key": "Stanton2c_Stash_001",
+        "zh": "NT-999-XX",
+        "en": "NT-999-XX"
+    },
+    "arccorp": {
+        "key": "Stanton3",
+        "zh": "弧光星",
+        "en": "ArcCorp"
+    },
+    "area04": {
+        "key": "Stanton3_ArcCorp_Area04",
+        "zh": "04区",
+        "en": "Area04"
+    },
+    "area06": {
+        "key": "Stanton3_ArcCorp_Area06",
+        "zh": "06区",
+        "en": "Area06"
+    },
+    "area11": {
+        "key": "Stanton3_ArcCorp_Area11",
+        "zh": "11区",
+        "en": "Area11"
+    },
+    "area17": {
+        "key": "Stanton3_ArcCorp_Area17",
+        "zh": "17区",
+        "en": "Area17"
+    },
+    "area20": {
+        "key": "Stanton3_ArcCorp_Area20",
+        "zh": "20区",
+        "en": "Area20"
+    },
+    "adira falls apartments": {
+        "key": "Stanton3_ArcCorp_Habs_AdiraFalls",
+        "zh": "阿迪拉瀑布公寓",
+        "en": "Adira Falls Apartments"
+    },
+    "area18": {
+        "key": "Stanton3_Area18",
+        "zh": "18区",
+        "en": "Area18"
+    },
+    "area18 central": {
+        "key": "Stanton3_Area18_Central",
+        "zh": "18区中心",
+        "en": "Area18 Central"
+    },
+    "empire health services medstation": {
+        "key": "Stanton3_Area18_Hospital",
+        "zh": "帝国健康服务医疗站",
+        "en": "Empire Health Services Medstation"
+    },
+    "plaza": {
+        "key": "Stanton3_Area18_Plaza",
+        "zh": "商业区",
+        "en": "Plaza"
+    },
+    "comm array st3-90": {
+        "key": "Stanton3_CommArray_001",
+        "zh": "通讯阵列 ST3-90",
+        "en": "Comm Array ST3-90"
+    },
+    "comm array st3-18": {
+        "key": "Stanton3_CommArray_002",
+        "zh": "通讯阵列 ST3-18",
+        "en": "Comm Array ST3-18"
+    },
+    "comm array st3-35": {
+        "key": "Stanton3_CommArray_003",
+        "zh": "通讯阵列 ST3-35",
+        "en": "Comm Array ST3-35"
+    },
+    "stanton3_courier_org": {
+        "key": "Stanton3_Courier_Org,P",
+        "zh": "Stanton3_Courier_Org",
+        "en": "Stanton3_Courier_Org"
+    },
+    "arc l1": {
+        "key": "Stanton3_L1",
+        "zh": "弧 ARC L1",
+        "en": "ARC L1"
+    },
+    "arc l1-a": {
+        "key": "Stanton3_L1_01",
+        "zh": "弧 ARC L1-A",
+        "en": "ARC L1-A"
+    },
+    "arc l2": {
+        "key": "Stanton3_L2",
+        "zh": "弧 ARC L2",
+        "en": "ARC L2"
+    },
+    "arc l2-a": {
+        "key": "Stanton3_L2_01",
+        "zh": "弧 ARC L2-A",
+        "en": "ARC L2-A"
+    },
+    "arc l3": {
+        "key": "Stanton3_L3",
+        "zh": "弧 ARC L3",
+        "en": "ARC L3"
+    },
+    "arc l3-a": {
+        "key": "Stanton3_L3_01",
+        "zh": "弧 ARC L3-A",
+        "en": "ARC L3-A"
+    },
+    "arc l4": {
+        "key": "Stanton3_L4",
+        "zh": "弧 ARC L4",
+        "en": "ARC L4"
+    },
+    "arc l4-a": {
+        "key": "Stanton3_L4_01",
+        "zh": "弧 ARC L4-A",
+        "en": "ARC L4-A"
+    },
+    "arc l5": {
+        "key": "Stanton3_L5",
+        "zh": "弧 ARC L5",
+        "en": "ARC L5"
+    },
+    "arc l5-a": {
+        "key": "Stanton3_L5_01",
+        "zh": "弧 ARC L5-A",
+        "en": "ARC L5-A"
+    },
+    "orbital relay ac-421": {
+        "key": "Stanton3_OrbitalRelay",
+        "zh": "轨道通讯阵列 AC-421",
+        "en": "Orbital Relay AC-421"
+    },
+    "the sky scraper": {
+        "key": "Stanton3_Racetrack_SkyScraper",
+        "zh": "摩天大楼",
+        "en": "The Sky Scraper"
+    },
+    "the sky scraper on arccorp": {
+        "key": "Stanton3_Racetrack_SkyScraper_add",
+        "zh": "弧光星上的摩天大楼赛道",
+        "en": "The Sky Scraper on Arccorp"
+    },
+    "baijini point": {
+        "key": "Stanton3_Transfer",
+        "zh": "拜基尼空间站",
+        "en": "Baijini Point"
+    },
+    "lyria": {
+        "key": "Stanton3a",
+        "zh": "莉瑞雅",
+        "en": "Lyria"
+    },
+    "paradise cove": {
+        "key": "Stanton3a_DrugLab_001",
+        "zh": "天堂湾",
+        "en": "Paradise Cove"
+    },
+    "launch pad": {
+        "key": "Stanton3a_DrugUGF_001",
+        "zh": "发射台",
+        "en": "Launch Pad"
+    },
+    "buckets": {
+        "key": "Stanton3a_DrugUGF_002",
+        "zh": "水桶",
+        "en": "Buckets"
+    },
+    "greycat stanton 3a production complex-a": {
+        "key": "Stanton3a_GRIN_UGF_001,P",
+        "zh": "灰猫斯坦顿3a生产综合体-A",
+        "en": "Greycat Stanton 3a Production Complex-A"
+    },
+    "humboldt mines": {
+        "key": "Stanton3a_IndyMine_001",
+        "zh": "洪保德矿站",
+        "en": "Humboldt Mines"
+    },
+    "loveridge mineral reserve": {
+        "key": "Stanton3a_IndyMine_002",
+        "zh": "洛维里奇矿站",
+        "en": "Loveridge Mineral Reserve"
+    },
+    "shubin mining facility sal-2": {
+        "key": "Stanton3a_Shubin_001",
+        "zh": "舒宾采矿设施 SAL-2",
+        "en": "Shubin Mining Facility SAL-2"
+    },
+    "shubin mining facility sal-5": {
+        "key": "Stanton3a_Shubin_002",
+        "zh": "舒宾采矿设施 SAL-5",
+        "en": "Shubin Mining Facility SAL-5"
+    },
+    "the orphanage": {
+        "key": "Stanton3a_Stash_001",
+        "zh": "孤儿院",
+        "en": "The Orphanage"
+    },
+    "shubin processing facility spal-7": {
+        "key": "Stanton3a_UFG_006",
+        "zh": "舒宾加工设施 SPAL-7",
+        "en": "Shubin Processing Facility SPAL-7"
+    },
+    "shubin processing facility spal-9": {
+        "key": "Stanton3a_UFG_007",
+        "zh": "舒宾加工设施 SPAL-9",
+        "en": "Shubin Processing Facility SPAL-9"
+    },
+    "shubin processing facility spal-12": {
+        "key": "Stanton3a_UFG_008",
+        "zh": "舒宾加工设施 SPAL-12",
+        "en": "Shubin Processing Facility SPAL-12"
+    },
+    "the pit": {
+        "key": "Stanton3a_UGF_001",
+        "zh": "\"坑地\"",
+        "en": "The Pit"
+    },
+    "wheeler's": {
+        "key": "Stanton3a_UGF_002",
+        "zh": "车夫驿站",
+        "en": "Wheeler's"
+    },
+    "teddy's playhouse": {
+        "key": "Stanton3a_UGF_003",
+        "zh": "泰迪的玩具屋",
+        "en": "Teddy's Playhouse"
+    },
+    "elsewhere": {
+        "key": "Stanton3a_UGF_004",
+        "zh": "\"别处\"",
+        "en": "Elsewhere"
+    },
+    "shubin processing facility spal-3": {
+        "key": "Stanton3a_UGF_005",
+        "zh": "舒宾加工设施 SPAL-3",
+        "en": "Shubin Processing Facility SPAL-3"
+    },
+    "operations depot lyria-1": {
+        "key": "Stanton3a_UGF_009",
+        "zh": "运营仓库 莉瑞娅-1",
+        "en": "Operations Depot Lyria-1"
+    },
+    "shubin processing facility spal-16": {
+        "key": "Stanton3a_UGF_010",
+        "zh": "舒宾加工设施 SPAL-16",
+        "en": "Shubin Processing Facility SPAL-16"
+    },
+    "shubin processing facility spal-21": {
+        "key": "Stanton3a_UGF_011",
+        "zh": "舒宾加工设施 SPAL-21",
+        "en": "Shubin Processing Facility SPAL-21"
+    },
+    "wala": {
+        "key": "Stanton3b",
+        "zh": "瓦菈",
+        "en": "Wala"
+    },
+    "arccorp wala-1 industrial park": {
+        "key": "Stanton3b_ARCC_UGF_001,P",
+        "zh": "弧光集团 瓦菈-1工业园区",
+        "en": "ArcCorp Wala-1 Industrial Park"
+    },
+    "arccorp mining area 045": {
+        "key": "Stanton3b_ArcCorp_001",
+        "zh": "弧光集团采矿站 045",
+        "en": "ArcCorp Mining Area 045"
+    },
+    "arccorp mining area 048": {
+        "key": "Stanton3b_ArcCorp_002",
+        "zh": "弧光集团采矿站 048",
+        "en": "ArcCorp Mining Area 048"
+    },
+    "arccorp mining area 056": {
+        "key": "Stanton3b_ArcCorp_003",
+        "zh": "弧光集团采矿站 056",
+        "en": "ArcCorp Mining Area 056"
+    },
+    "arccorp mining area 061": {
+        "key": "Stanton3b_ArcCorp_004",
+        "zh": "弧光集团采矿站 061",
+        "en": "ArcCorp Mining Area 061"
+    },
+    "lost and found": {
+        "key": "Stanton3b_DrugUGF_001",
+        "zh": "失物招领处",
+        "en": "Lost and Found"
+    },
+    "good times temple": {
+        "key": "Stanton3b_DrugUGF_002",
+        "zh": "美好时光神庙",
+        "en": "Good Times Temple"
+    },
+    "shady glen farms": {
+        "key": "Stanton3b_IndyFarmer_001",
+        "zh": "荫谷农场",
+        "en": "Shady Glen Farms"
+    },
+    "samson & son's salvage center": {
+        "key": "Stanton3b_SalvageYard_001",
+        "zh": "参孙父子回收站",
+        "en": "Samson & Son's Salvage Center"
+    },
+    "arccorp processing center 115": {
+        "key": "Stanton3b_UGF_001",
+        "zh": "弧光集团加工中心 115",
+        "en": "ArcCorp Processing Center 115"
+    },
+    "arccorp processing center 123": {
+        "key": "Stanton3b_UGF_002",
+        "zh": "弧光集团加工中心 123",
+        "en": "ArcCorp Processing Center 123"
+    },
+    "microtech": {
+        "key": "Stanton4",
+        "zh": "微科星",
+        "en": "microTech"
+    },
+    "cry-astro processing plant 34-12": {
+        "key": "Stanton4_DistributionCenter_CryAstro_01",
+        "zh": "寒宇加工厂 34-12",
+        "en": "Cry-Astro Processing Plant 34-12"
+    },
+    "covalex distribution center s4dc05": {
+        "key": "Stanton4_CVLX_UGF_001,P",
+        "zh": "科瓦莱什配送中心S4DC05",
+        "en": "Covalex Distribution Center S4DC05"
+    },
+    "comm array st4-22": {
+        "key": "Stanton4_CommArray_001",
+        "zh": "通信阵列 ST4-22",
+        "en": "Comm Array ST4-22"
+    },
+    "comm array st4-31": {
+        "key": "Stanton4_CommArray_002",
+        "zh": "通信阵列 ST4-31",
+        "en": "Comm Array ST4-31"
+    },
+    "comm array st4-59": {
+        "key": "Stanton4_CommArray_003",
+        "zh": "通信阵列 ST4-59",
+        "en": "Comm Array ST4-59"
+    },
+    "comm array st4-64": {
+        "key": "Stanton4_CommArray_004",
+        "zh": "通信阵列 ST4-64",
+        "en": "Comm Array ST4-64"
+    },
+    "stanton4_courier_org": {
+        "key": "Stanton4_Courier_Org,P",
+        "zh": "Stanton4_Courier_Org",
+        "en": "Stanton4_Courier_Org"
+    },
+    "astor's clearing": {
+        "key": "Stanton4_DerelictSettlement_AstorsClearing",
+        "zh": "阿斯特空地",
+        "en": "Astor's Clearing"
+    },
+    "bloodshot ridge": {
+        "key": "Stanton4_DerelictSettlement_BloodshotRidge",
+        "zh": "血腥岭",
+        "en": "Bloodshot Ridge"
+    },
+    "dunboro": {
+        "key": "Stanton4_DerelictSettlement_Dunboro",
+        "zh": "顿波罗镇",
+        "en": "Dunboro"
+    },
+    "frostbite": {
+        "key": "Stanton4_DerelictSettlement_Frostbite",
+        "zh": "寒霜镇",
+        "en": "Frostbite"
+    },
+    "harper's point": {
+        "key": "Stanton4_DerelictSettlement_HarpersPoint",
+        "zh": "竖琴手之角",
+        "en": "Harper's Point"
+    },
+    "moreland hills": {
+        "key": "Stanton4_DerelictSettlement_MorelandHills",
+        "zh": "莫兰山",
+        "en": "Moreland Hills"
+    },
+    "razor's edge": {
+        "key": "Stanton4_DerelictSettlement_RazorsEdge",
+        "zh": "剃刀悬崖",
+        "en": "Razor's Edge"
+    },
+    "covalex distribution centre s4dc05": {
+        "key": "Stanton4_DistributionCenter_Covalex_01",
+        "zh": "科瓦莱什配送中心 S4DC05",
+        "en": "Covalex Distribution Centre S4DC05"
+    },
+    "cry-astro processing plant 19-02": {
+        "key": "Stanton4_DistributionCenter_CryAstro_02",
+        "zh": "寒宇加工厂 19-02",
+        "en": "Cry-Astro Processing Plant 19-02"
+    },
+    "greycat stanton iv production complex-a": {
+        "key": "Stanton4_DistributionCenter_Greycat_01",
+        "zh": "灰猫斯坦顿IV生产综合体-A",
+        "en": "Greycat Stanton IV Production Complex-A"
+    },
+    "sakura sun goldenrod workcenter": {
+        "key": "Stanton4_SASU_UGF_001,P",
+        "zh": "樱日一枝黄花工作中心",
+        "en": "Sakura Sun Goldenrod Workcenter"
+    },
+    "microtech logistics depot s4ld01": {
+        "key": "Stanton4_MITE_UGF_001,P",
+        "zh": "微科物流仓库S4LD01",
+        "en": "microTech Logistics Depot S4LD01"
+    },
+    "microtech logistics depot s4ld13": {
+        "key": "Stanton4_DistributionCenter_microTech_02",
+        "zh": "微科物流仓库 S4LD13",
+        "en": "microTech Logistics Depot S4LD13"
+    },
+    "calhoun pass emergency shelter": {
+        "key": "Stanton4_EMShelter_001",
+        "zh": "卡洪山口紧急避难所",
+        "en": "Calhoun Pass Emergency Shelter"
+    },
+    "point wain emergency shelter": {
+        "key": "Stanton4_EMShelter_002",
+        "zh": "维恩地区紧急避难所",
+        "en": "Point Wain Emergency Shelter"
+    },
+    "nuiqsut emergency shelter": {
+        "key": "Stanton4_EMShelter_003",
+        "zh": "努伊克苏特紧急避难所",
+        "en": "Nuiqsut Emergency Shelter"
+    },
+    "clear view emergency shelter": {
+        "key": "Stanton4_EMShelter_004",
+        "zh": "眺望点紧急避难所",
+        "en": "Clear View Emergency Shelter"
+    },
+    "mic l1": {
+        "key": "Stanton4_L1",
+        "zh": "微 MIC L1",
+        "en": "MIC L1"
+    },
+    "mic l1-a": {
+        "key": "Stanton4_L1_01",
+        "zh": "微 MIC L1-A",
+        "en": "MIC L1-A"
+    },
+    "mic l1-b": {
+        "key": "Stanton4_L1_02",
+        "zh": "微 MIC L1-B",
+        "en": "MIC L1-B"
+    },
+    "ins jericho": {
+        "key": "Stanton4_L1_NavyStation_NAME",
+        "zh": "INS-杰里科",
+        "en": "INS Jericho"
+    },
+    "mic l2": {
+        "key": "Stanton4_L2",
+        "zh": "微 MIC L2",
+        "en": "MIC L2"
+    },
+    "mic l2-a": {
+        "key": "Stanton4_L2_01",
+        "zh": "微 MIC L2-A",
+        "en": "MIC L2-A"
+    },
+    "mic l2-b": {
+        "key": "Stanton4_L2_02",
+        "zh": "微 MIC L2-B",
+        "en": "MIC L2-B"
+    },
+    "mic l2-c": {
+        "key": "Stanton4_L2_03",
+        "zh": "微 MIC L2-C",
+        "en": "MIC L2-C"
+    },
+    "mic l3": {
+        "key": "Stanton4_L3",
+        "zh": "微 MIC L3",
+        "en": "MIC L3"
+    },
+    "mic l3-a": {
+        "key": "Stanton4_L3_01",
+        "zh": "微 MIC L3-A",
+        "en": "MIC L3-A"
+    },
+    "mic l4": {
+        "key": "Stanton4_L4",
+        "zh": "微 MIC L4",
+        "en": "MIC L4"
+    },
+    "mic l4-a": {
+        "key": "Stanton4_L4_01",
+        "zh": "微 MIC L4-A",
+        "en": "MIC L4-A"
+    },
+    "mic l5": {
+        "key": "Stanton4_L5",
+        "zh": "微 MIC L5",
+        "en": "MIC L5"
+    },
+    "mic l5-a": {
+        "key": "Stanton4_L5_01",
+        "zh": "微 MIC L5-A",
+        "en": "MIC L5-A"
+    },
+    "mic l5-b": {
+        "key": "Stanton4_L5_02",
+        "zh": "微 MIC L5-B",
+        "en": "MIC L5-B"
+    },
+    "aspire grand": {
+        "key": "Stanton4_NewBab_AspireGrand",
+        "zh": "志远大厦",
+        "en": "Aspire Grand"
+    },
+    "the commons surface exit": {
+        "key": "Stanton4_NewBab_DomeSurfaceExit",
+        "zh": "市民广场地面出口",
+        "en": "The Commons Surface Exit"
+    },
+    "the commons parking": {
+        "key": "Stanton4_NewBab_DomeSurfaceExit_GroundATC",
+        "zh": "市民广场泊位",
+        "en": "The Commons Parking"
+    },
+    "brentworth care center": {
+        "key": "Stanton4_NewBab_Hospital",
+        "zh": "布伦特沃斯医护中心",
+        "en": "Brentworth Care Center"
+    },
+    "mt metroloop": {
+        "key": "Stanton4_NewBab_MetroLoop",
+        "zh": "微科地铁环线",
+        "en": "MT MetroLoop"
+    },
+    "nbis terminal": {
+        "key": "Stanton4_NewBab_NBIS",
+        "zh": "NBIS航站楼",
+        "en": "NBIS Terminal"
+    },
+    "nb int. spaceport": {
+        "key": "Stanton4_NewBab_NBIS_ATC",
+        "zh": "新巴贝奇星际空港",
+        "en": "NB Int. Spaceport"
+    },
+    "nbis parking": {
+        "key": "Stanton4_NewBab_NBIS_GroundATC",
+        "zh": "NBIS泊位",
+        "en": "NBIS Parking"
+    },
+    "mt planetary services": {
+        "key": "Stanton4_NewBab_PlanetaryServices",
+        "zh": "微科星球公务部",
+        "en": "MT Planetary Services"
+    },
+    "planetary surface exit": {
+        "key": "Stanton4_NewBab_PlanetarySurfaceExit",
+        "zh": "行星地表出口",
+        "en": "Planetary Surface Exit"
+    },
+    "the commons": {
+        "key": "Stanton4_NewBab_TheCommons",
+        "zh": "市民广场",
+        "en": "The Commons"
+    },
+    "new babbage": {
+        "key": "Stanton4_NewBabbage",
+        "zh": "新巴贝奇",
+        "en": "New Babbage"
+    },
+    "rayari deltana research outpost": {
+        "key": "Stanton4_Rayari_001",
+        "zh": "拉亚利 德尔塔纳科究前哨站",
+        "en": "Rayari Deltana Research Outpost"
+    },
+    "rayari livengood research outpost": {
+        "key": "Stanton4_Rayari_002",
+        "zh": "拉亚利 莱文古德科究前哨站",
+        "en": "Rayari Livengood Research Outpost"
+    },
+    "ghost hollow": {
+        "key": "Stanton4_ReclaimerSettlement",
+        "zh": "幽灵洼地",
+        "en": "Ghost Hollow"
+    },
+    "shubin mining facility sm0-13": {
+        "key": "Stanton4_Shubin_001",
+        "zh": "舒宾采矿设施 SM0-13",
+        "en": "Shubin Mining Facility SM0-13"
+    },
+    "shubin mining facility sm0-22": {
+        "key": "Stanton4_Shubin_002",
+        "zh": "舒宾采矿设施 SM0-22",
+        "en": "Shubin Mining Facility SM0-22"
+    },
+    "shubin mining facility sm0-18": {
+        "key": "Stanton4_Shubin_003",
+        "zh": "舒宾采矿设施 SM0-18",
+        "en": "Shubin Mining Facility SM0-18"
+    },
+    "shubin mining facility sm0-10": {
+        "key": "Stanton4_Shubin_004",
+        "zh": "舒宾采矿设施 SM0-10",
+        "en": "Shubin Mining Facility SM0-10"
+    },
+    "the necropolis": {
+        "key": "Stanton4_Stash_001",
+        "zh": "\"墓地\"",
+        "en": "The Necropolis"
+    },
+    "outpost 54": {
+        "key": "Stanton4_Stash_002",
+        "zh": "前哨站 54",
+        "en": "Outpost 54"
+    },
+    "port tressler": {
+        "key": "Stanton4_Transfer",
+        "zh": "特雷斯勒空间站",
+        "en": "Port Tressler"
+    },
+    "mt datacenter 5wq-r2v-c (offline)": {
+        "key": "Stanton4_UGF_001",
+        "zh": "微科数据中心 5WQ-R2V-C（已下线）",
+        "en": "MT DataCenter 5WQ-R2V-C (Offline)"
+    },
+    "mt datacenter 2ub-rb9-5": {
+        "key": "Stanton4_UGF_002",
+        "zh": "微科数据中心 2UB-RB9-5",
+        "en": "MT DataCenter 2UB-RB9-5"
+    },
+    "mt datacenter 8fk-q2x-k": {
+        "key": "Stanton4_UGF_003",
+        "zh": "微科数据中心 8FK-Q2X-K",
+        "en": "MT DataCenter 8FK-Q2X-K"
+    },
+    "mt datacenter e2q-nsg-y (offline)": {
+        "key": "Stanton4_UGF_004",
+        "zh": "微科数据中心 E2Q-NSG-Y（已下线）",
+        "en": "MT DataCenter E2Q-NSG-Y (Offline)"
+    },
+    "mt opcenter tli-4": {
+        "key": "Stanton4_UGF_005",
+        "zh": "微科运营中心 TLI-4",
+        "en": "MT OpCenter TLI-4"
+    },
+    "mt datacenter d79-ecg-r (offline)": {
+        "key": "Stanton4_UGF_006",
+        "zh": "微科数据中心 D79-ECG-R（已下线）",
+        "en": "MT DataCenter D79-ECG-R (Offline)"
+    },
+    "mt datacenter qvx-j88-j": {
+        "key": "Stanton4_UGF_007",
+        "zh": "微科数据中心 QVX-J88-J",
+        "en": "MT DataCenter QVX-J88-J"
+    },
+    "mt datacenter tmg-xev-2": {
+        "key": "Stanton4_UGF_008",
+        "zh": "微科数据中心 TMG-XEV-2",
+        "en": "MT DataCenter TMG-XEV-2"
+    },
+    "mt datacenter kh3-aae-l": {
+        "key": "Stanton4_UGF_009",
+        "zh": "微科数据中心 KH3-AAE-L",
+        "en": "MT DataCenter KH3-AAE-L"
+    },
+    "mt datacenter l8p-juc-8 (offline)": {
+        "key": "Stanton4_UGF_010",
+        "zh": "微科数据中心 L8P-JUC-8（已下线）",
+        "en": "MT DataCenter L8P-JUC-8 (Offline)"
+    },
+    "mt datacenter 4hj-lve-a": {
+        "key": "Stanton4_UGF_011",
+        "zh": "微科数据中心 4HJ-LVE-A",
+        "en": "MT DataCenter 4HJ-LVE-A"
+    },
+    "calliope": {
+        "key": "Stanton4a",
+        "zh": "卡利俄佩",
+        "en": "Calliope"
+    },
+    "raven's roost": {
+        "key": "Stanton4a_DrugLab_001",
+        "zh": "渡鸦栖",
+        "en": "Raven's Roost"
+    },
+    "rayari kaltag research outpost": {
+        "key": "Stanton4a_Rayari_001",
+        "zh": "拉亚利-卡尔塔格研究站",
+        "en": "Rayari Kaltag Research Outpost"
+    },
+    "rayari anvik research outpost": {
+        "key": "Stanton4a_Rayari_002",
+        "zh": "拉亚利-安维克研究站",
+        "en": "Rayari Anvik Research Outpost"
+    },
+    "shubin mining facility smca-6": {
+        "key": "Stanton4a_Shubin_001",
+        "zh": "舒宾采矿设施 SMCa-6",
+        "en": "Shubin Mining Facility SMCa-6"
+    },
+    "shubin mining facility smca-8": {
+        "key": "Stanton4a_Shubin_002",
+        "zh": "舒宾采矿设施 SMCa-8",
+        "en": "Shubin Mining Facility SMCa-8"
+    },
+    "shubin processing facility spmc-3 [closed]": {
+        "key": "Stanton4a_UGF_001",
+        "zh": "舒宾加工设施 SPMC-3 ",
+        "en": "Shubin Processing Facility SPMC-3 [CLOSED]"
+    },
+    "shubin processing facility spmc-5 [closed]": {
+        "key": "Stanton4a_UGF_002",
+        "zh": "舒宾加工设施 SPMC-5 ",
+        "en": "Shubin Processing Facility SPMC-5 [CLOSED]"
+    },
+    "shubin processing facility spmc-10": {
+        "key": "Stanton4a_UGF_003",
+        "zh": "舒宾加工设施 SPMC-10",
+        "en": "Shubin Processing Facility SPMC-10"
+    },
+    "shubin processing facility spmc-11 [closed]": {
+        "key": "Stanton4a_UGF_004",
+        "zh": "舒宾加工设施 SPMC-11 ",
+        "en": "Shubin Processing Facility SPMC-11 [CLOSED]"
+    },
+    "shubin processing facility spmc-14 [closed]": {
+        "key": "Stanton4a_UGF_005",
+        "zh": "舒宾加工设施 SPMC-14 ",
+        "en": "Shubin Processing Facility SPMC-14 [CLOSED]"
+    },
+    "shubin processing facility spmc-1": {
+        "key": "Stanton4a_UGF_006",
+        "zh": "舒宾加工设施 SPMC-1",
+        "en": "Shubin Processing Facility SPMC-1"
+    },
+    "clio": {
+        "key": "Stanton4b",
+        "zh": "克利俄",
+        "en": "Clio"
+    },
+    "the snake pit": {
+        "key": "Stanton4b_Racetrack_SnakePit",
+        "zh": "蛇坑赛道",
+        "en": "The Snake Pit"
+    },
+    "the snake pit on clio": {
+        "key": "Stanton4b_Racetrack_SnakePit_add",
+        "zh": "克利俄上的蛇坑赛道",
+        "en": "The Snake Pit on Clio"
+    },
+    "rayari mcgrath research outpost": {
+        "key": "Stanton4b_Rayari_001",
+        "zh": "拉亚利-麦格拉思研究站",
+        "en": "Rayari McGrath Research Outpost"
+    },
+    "rayari cantwell research outpost": {
+        "key": "Stanton4b_Rayari_002",
+        "zh": "拉亚利-坎特韦尔研究站",
+        "en": "Rayari Cantwell Research Outpost"
+    },
+    "euterpe": {
+        "key": "Stanton4c",
+        "zh": "欧忒耳佩",
+        "en": "Euterpe"
+    },
+    "bud's growery": {
+        "key": "Stanton4c_IndyFarmer_001",
+        "zh": "巴德种植园",
+        "en": "Bud's Growery"
+    },
+    "the icebreaker": {
+        "key": "Stanton4c_Racetrack_Icebreaker",
+        "zh": "破冰船",
+        "en": "The Icebreaker"
+    },
+    "the icebreaker on euterpe": {
+        "key": "Stanton4c_Racetrack_Icebreaker_add",
+        "zh": "欧忒耳佩上的破冰船赛道",
+        "en": "The Icebreaker on Euterpe"
+    },
+    "devlin scrap & salvage": {
+        "key": "Stanton4c_SalvageYard_001",
+        "zh": "德夫林废品回收站",
+        "en": "Devlin Scrap & Salvage"
+    },
+    "stanton": {
+        "key": "StantonSystem",
+        "zh": "斯坦顿",
+        "en": "Stanton"
+    },
+    "stanton (star)": {
+        "key": "Stanton_2",
+        "zh": "斯坦顿（恒星）",
+        "en": "Stanton (Star)"
+    },
+    "stanton - magnus jump point": {
+        "key": "Stanton_JumpPoint_Magnus",
+        "zh": "斯坦顿 - 马格努斯 跳跃点",
+        "en": "Stanton - Magnus Jump Point"
+    },
+    "stanton-pyro jump point": {
+        "key": "Stanton_JumpPoint_Pyro",
+        "zh": "斯坦顿 - 派罗 跳跃点",
+        "en": "Stanton-Pyro Jump Point"
+    },
+    "stanton-pyro jump point wreck site": {
+        "key": "Stanton_JumpPoint_Pyro_WreckSite",
+        "zh": "斯坦顿 - 派罗 跳跃点 残骸遗址",
+        "en": "Stanton-Pyro Jump Point Wreck Site"
+    },
+    "stanton - terra jump point": {
+        "key": "Stanton_JumpPoint_Terra",
+        "zh": "斯坦顿 - 泰拉 跳跃点",
+        "en": "Stanton - Terra Jump Point"
+    },
+    "magnus gateway": {
+        "key": "Stanton_Magnus_JPStation",
+        "zh": "马格努斯星门",
+        "en": "Magnus Gateway"
+    },
+    "pyro gateway": {
+        "key": "Stanton_Pyro_JPStation",
+        "zh": "派罗星门",
+        "en": "Pyro Gateway"
+    },
+    "terra gateway": {
+        "key": "Stanton_Terra_JPStation",
+        "zh": "泰拉星门",
+        "en": "Terra Gateway"
+    },
+    "arccorp tower": {
+        "key": "area_map_pu_a18_ac_tower",
+        "zh": "弧光塔",
+        "en": "Arccorp Tower"
+    },
+    "bevic convention center": {
+        "key": "area_map_pu_a18_bevic_convention_center",
+        "zh": "贝维克会展中心",
+        "en": "Bevic Convention Center"
+    },
+    "a18 centre": {
+        "key": "area_map_pu_a18_centre",
+        "zh": "18区中心",
+        "en": "A18 Centre"
+    },
+    "empire health hospital": {
+        "key": "area_map_pu_a18_empire_health_service",
+        "zh": "帝国健康医院",
+        "en": "Empire Health Hospital"
+    },
+    "grimhex": {
+        "key": "shop_name_grimhex",
+        "zh": "六角湾",
+        "en": "GrimHEX"
+    },
+    "grimhex habitation": {
+        "key": "area_map_pu_grimhex_habitation",
+        "zh": "六角湾居住区",
+        "en": "GrimHex Habitation"
+    },
+    "grimhex hospital": {
+        "key": "area_map_pu_grimhex_hospital",
+        "zh": "六角湾医院",
+        "en": "GrimHex Hospital"
+    },
+    "hangar": {
+        "key": "area_map_pu_hangar,P",
+        "zh": "机库",
+        "en": "Hangar"
+    },
+    "transit & hangar services": {
+        "key": "area_map_pu_hangars_internal_transit,P",
+        "zh": "交通与机库服务",
+        "en": "Transit & Hangar Services"
+    },
+    "freight elevator": {
+        "key": "area_name_FreightElevator",
+        "zh": "货运电梯",
+        "en": "Freight Elevator"
+    },
+    "dropoff hospital": {
+        "key": "area_map_pu_hangars_module_medical,P",
+        "zh": "无停靠医院",
+        "en": "Dropoff Hospital"
+    },
+    "central business district": {
+        "key": "area_map_pu_lorville_cbd",
+        "zh": "中央商务区",
+        "en": "Central Business District"
+    },
+    "central station": {
+        "key": "area_map_pu_lorville_commerce_line_central_station",
+        "zh": "中央站点",
+        "en": "Central Station"
+    },
+    "teasa spaceport": {
+        "key": "area_map_pu_lorville_metro_center_spaceport,P",
+        "zh": "蒂莎空港",
+        "en": "Teasa Spaceport"
+    },
+    "hurston dynamics showcase": {
+        "key": "area_map_pu_lorville_hurston_dynamics_showcase,P",
+        "zh": "赫斯顿动力展厅",
+        "en": "Hurston Dynamics Showcase"
+    },
+    "lorville l19": {
+        "key": "area_map_pu_lorville_l19",
+        "zh": "罗威尔 L19",
+        "en": "Lorville L19"
+    },
+    "l19_residences": {
+        "key": "area_map_pu_lorville_l19_residences",
+        "zh": "L19 居住区",
+        "en": "L19_Residences"
+    },
+    "maria pure of heart hospital": {
+        "key": "area_map_pu_lorville_maria_pure_of_heart,P",
+        "zh": "玛利亚纯洁之心医院",
+        "en": "Maria Pure Of Heart Hospital"
+    },
+    "transit city gates 01 - 03": {
+        "key": "area_map_pu_lorville_metro_center_east_Line",
+        "zh": "城门 01 - 03 交通站",
+        "en": "Transit City Gates 01 - 03"
+    },
+    "metro center": {
+        "key": "area_map_pu_lorville_metro_center_metro_center",
+        "zh": "地铁中心",
+        "en": "Metro Center"
+    },
+    "transit city gates 04 - 06": {
+        "key": "area_map_pu_lorville_metro_center_west_Line",
+        "zh": "城门 04 - 06 交通站",
+        "en": "Transit City Gates 04 - 06"
+    },
+    "transit central station": {
+        "key": "area_map_pu_lorville_metro_central_line_business_district,P",
+        "zh": "交通中央站点",
+        "en": "Transit Central Station"
+    },
+    "transit leavsden station": {
+        "key": "area_map_pu_lorville_metro_central_line_leavsden_station",
+        "zh": "列维斯登交通站",
+        "en": "Transit Leavsden Station"
+    },
+    "new deal": {
+        "key": "shop_name_newdeal",
+        "zh": "全新交易",
+        "en": "New Deal"
+    },
+    "factory line": {
+        "key": "shop_name_factoryline",
+        "zh": "生产线",
+        "en": "Factory Line"
+    },
+    "mt metroloop access": {
+        "key": "area_map_pu_newbab_metroloop_access",
+        "zh": "微科地铁环线出入口",
+        "en": "MT Metroloop Access"
+    },
+    "the nest apartments": {
+        "key": "area_map_pu_newbab_nest_Apartments",
+        "zh": "鸟巢公寓",
+        "en": "The Nest Apartments"
+    },
+    "the promenade": {
+        "key": "area_map_pu_newbab_promenade",
+        "zh": "休闲街",
+        "en": "The Promenade"
+    },
+    "the aspire grand": {
+        "key": "area_map_pu_newbab_the_aspire_grand",
+        "zh": "志远大厦",
+        "en": "The Aspire Grand"
+    },
+    "green circle apartments": {
+        "key": "area_map_pu_orison_green_circle_apartments",
+        "zh": "绿环公寓",
+        "en": "Green Circle Apartments"
+    },
+    "orison general hospital": {
+        "key": "area_map_pu_orison_orison_general_hospital",
+        "zh": "奥里森综合医院",
+        "en": "Orison General Hospital"
+    },
+    "providence industrial platform": {
+        "key": "area_map_pu_orison_providence_industrial_platform",
+        "zh": "天意工业平台",
+        "en": "Providence Industrial Platform"
+    },
+    "administration": {
+        "key": "area_name_shop_admin",
+        "zh": "行政部门",
+        "en": "Administration"
+    },
+    "central square": {
+        "key": "area_name_CentralSquare",
+        "zh": "中心广场",
+        "en": "Central Square"
+    },
+    "chuan cart": {
+        "key": "area_name_ChuanCart",
+        "zh": "烤串手推车",
+        "en": "Chuan Cart"
+    },
+    "commercial deck": {
+        "key": "area_name_CommercialDeck",
+        "zh": "商业甲板",
+        "en": "Commercial Deck"
+    },
+    "contested deck": {
+        "key": "area_name_ContestedDeck",
+        "zh": "争夺甲板",
+        "en": "Contested Deck"
+    },
+    "food stall": {
+        "key": "area_name_FoodStall",
+        "zh": "食品小摊",
+        "en": "Food Stall"
+    },
+    "internal transit": {
+        "key": "area_name_int_transit",
+        "zh": "站内交通",
+        "en": "Internal Transit"
+    },
+    "maintenance & engineering": {
+        "key": "area_name_MaintenanceEngineering",
+        "zh": "维修和工程",
+        "en": "Maintenance & Engineering"
+    },
+    "marketplace": {
+        "key": "area_name_MarketPlace",
+        "zh": "市场",
+        "en": "Marketplace"
+    },
+    "material processing": {
+        "key": "area_name_MaterialProcessing",
+        "zh": "材料处理",
+        "en": "Material Processing"
+    },
+    "medical clinic": {
+        "key": "area_name_MedicalClinci",
+        "zh": "医疗诊所",
+        "en": "Medical Clinic"
+    },
+    "express lift": {
+        "key": "area_name_ReturnElevator",
+        "zh": "直达电梯",
+        "en": "Express Lift"
+    },
+    "security checkpoint": {
+        "key": "area_name_SecurityCheckpoint",
+        "zh": "安检关卡",
+        "en": "Security Checkpoint"
+    },
+    "shops": {
+        "key": "area_name_Shops",
+        "zh": "商店",
+        "en": "Shops"
+    },
+    "storage": {
+        "key": "area_name_Storage,P",
+        "zh": "仓库",
+        "en": "Storage"
+    },
+    "supervisor deck": {
+        "key": "area_name_SupervisorDeck",
+        "zh": "监管甲板",
+        "en": "Supervisor Deck"
+    },
+    "ventilation filtration": {
+        "key": "area_name_VentilationFiltration",
+        "zh": "通风系统",
+        "en": "Ventilation Filtration"
+    },
+    "water stall": {
+        "key": "area_name_WaterStall",
+        "zh": "水摊",
+        "en": "Water Stall"
+    },
+    "weapon shop": {
+        "key": "area_name_WeaponShop",
+        "zh": "武器商店",
+        "en": "Weapon Shop"
+    },
+    "worker habitation": {
+        "key": "area_name_WorkerHabitation",
+        "zh": "工人居住区",
+        "en": "Worker Habitation"
+    },
+    "cargo deck": {
+        "key": "area_name_cargo",
+        "zh": "货运甲板",
+        "en": "Cargo Deck"
+    },
+    "cargo supplies": {
+        "key": "area_name_cargo_shop",
+        "zh": "货运物品供应",
+        "en": "Cargo Supplies"
+    },
+    "clinic": {
+        "key": "area_name_clinic",
+        "zh": "诊所",
+        "en": "Clinic"
+    },
+    "docking": {
+        "key": "area_name_docking_arm",
+        "zh": "对接中",
+        "en": "Docking"
+    },
+    "docking arm": {
+        "key": "area_name_docking_arm_bridge",
+        "zh": "对接臂",
+        "en": "Docking Arm"
+    },
+    "docking lobby": {
+        "key": "area_name_docking_arm_lobby",
+        "zh": "对接口大厅",
+        "en": "Docking Lobby"
+    },
+    "elevator": {
+        "key": "area_name_elevator,P",
+        "zh": "电梯",
+        "en": "Elevator"
+    },
+    "external transit": {
+        "key": "area_name_ext_transit",
+        "zh": "出发大厅",
+        "en": "External Transit"
+    },
+    "external cargo access": {
+        "key": "area_name_extrenalcargoaccess",
+        "zh": "外部货物通道",
+        "en": "External Cargo Access"
+    },
+    "bar": {
+        "key": "area_name_fdcrt_bar",
+        "zh": "酒吧",
+        "en": "Bar"
+    },
+    "ellroy's coffee": {
+        "key": "area_name_fdcrt_ellroys",
+        "zh": "埃尔罗伊咖啡店",
+        "en": "Ellroy's Coffee"
+    },
+    "burritos": {
+        "key": "area_name_fdcrt_gen_sml_brt",
+        "zh": "墨西哥卷饼店",
+        "en": "Burritos"
+    },
+    "hot dogs": {
+        "key": "area_name_fdcrt_gen_sml_htdg",
+        "zh": "热狗店",
+        "en": "Hot Dogs"
+    },
+    "juice": {
+        "key": "area_name_fdcrt_gen_sml_jce",
+        "zh": "果汁店",
+        "en": "Juice"
+    },
+    "noodle stall": {
+        "key": "area_name_fdcrt_gen_sml_ndle_a",
+        "zh": "面条小摊",
+        "en": "Noodle Stall"
+    },
+    "noodle shop": {
+        "key": "area_name_fdcrt_gen_sml_ndle_b",
+        "zh": "面条店",
+        "en": "Noodle Shop"
+    },
+    "pizza": {
+        "key": "area_name_fdcrt_gen_sml_pza",
+        "zh": "披萨店",
+        "en": "Pizza"
+    },
+    "food court": {
+        "key": "area_name_foodcourt",
+        "zh": "餐饮区",
+        "en": "Food Court"
+    },
+    "galleria": {
+        "key": "area_name_galleria",
+        "zh": "购物中心",
+        "en": "Galleria"
+    },
+    "first floor": {
+        "key": "area_name_hab_flr_001",
+        "zh": "一楼",
+        "en": "First Floor"
+    },
+    "second floor": {
+        "key": "area_name_hab_flr_002",
+        "zh": "二楼",
+        "en": "Second Floor"
+    },
+    "third floor": {
+        "key": "area_name_hab_flr_003",
+        "zh": "三楼",
+        "en": "Third Floor"
+    },
+    "fourth floor": {
+        "key": "area_name_hab_flr_004",
+        "zh": "四楼",
+        "en": "Fourth Floor"
+    },
+    "fifth floor": {
+        "key": "area_name_hab_flr_005",
+        "zh": "五楼",
+        "en": "Fifth Floor"
+    },
+    "sixth floor": {
+        "key": "area_name_hab_flr_006",
+        "zh": "六楼",
+        "en": "Sixth Floor"
+    },
+    "seventh floor": {
+        "key": "area_name_hab_flr_007",
+        "zh": "七楼",
+        "en": "Seventh Floor"
+    },
+    "eight floor": {
+        "key": "area_name_hab_flr_008",
+        "zh": "八楼",
+        "en": "Eight Floor"
+    },
+    "nine floor": {
+        "key": "area_name_hab_flr_009",
+        "zh": "九楼",
+        "en": "Nine Floor"
+    },
+    "tenth floor": {
+        "key": "area_name_hab_flr_010",
+        "zh": "十楼",
+        "en": "Tenth Floor"
+    },
+    "eleventh floor": {
+        "key": "area_name_hab_flr_011",
+        "zh": "十一楼",
+        "en": "Eleventh Floor"
+    },
+    "twelfth floor": {
+        "key": "area_name_hab_flr_012",
+        "zh": "十二楼",
+        "en": "Twelfth Floor"
+    },
+    "thirteenth floor": {
+        "key": "area_name_hab_flr_013",
+        "zh": "十三楼",
+        "en": "Thirteenth Floor"
+    },
+    "fourteenth floor": {
+        "key": "area_name_hab_flr_014",
+        "zh": "十四楼",
+        "en": "Fourteenth Floor"
+    },
+    "fifteenth floor": {
+        "key": "area_name_hab_flr_015",
+        "zh": "十五楼",
+        "en": "Fifteenth Floor"
+    },
+    "hab transit": {
+        "key": "area_name_hab_transit",
+        "zh": "公寓交通",
+        "en": "Hab Transit"
+    },
+    "habitation": {
+        "key": "area_name_habs",
+        "zh": "居住区",
+        "en": "Habitation"
+    },
+    "hangar transit": {
+        "key": "area_name_hangartransit",
+        "zh": "机库交通",
+        "en": "Hangar Transit"
+    },
+    "central": {
+        "key": "area_name_hub,P",
+        "zh": "中央",
+        "en": "Central"
+    },
+    "operations": {
+        "key": "area_name_ops,P",
+        "zh": "行动",
+        "en": "Operations"
+    },
+    "refinery deck": {
+        "key": "area_name_refinery",
+        "zh": "精炼甲板",
+        "en": "Refinery Deck"
+    },
+    "platinum bay": {
+        "key": "shop_name_platinumbay",
+        "zh": "白金湾",
+        "en": "Platinum Bay"
+    },
+    "armor shop": {
+        "key": "area_name_shop_armor_gen_sml_b",
+        "zh": "护甲商店",
+        "en": "Armor Shop"
+    },
+    "casaba outlet": {
+        "key": "shop_name_casaba",
+        "zh": "卡莎巴服装店",
+        "en": "Casaba Outlet"
+    },
+    "clothing": {
+        "key": "shop_name_clothing",
+        "zh": "服饰",
+        "en": "Clothing"
+    },
+    "medical supplies": {
+        "key": "area_name_shop_med_a",
+        "zh": "医疗用品店",
+        "en": "Medical Supplies"
+    },
+    "live fire weapons": {
+        "key": "shop_name_livefireweapons",
+        "zh": "荷枪实弹武器店",
+        "en": "Live Fire Weapons"
+    },
+    "refinery admin": {
+        "key": "area_name_shop_refin_admin_lge_001",
+        "zh": "精炼管理区",
+        "en": "Refinery Admin"
+    },
+    "ship weapons": {
+        "key": "shop_name_shipweapons",
+        "zh": "飞船武器",
+        "en": "Ship Weapons"
+    },
+    "surface": {
+        "key": "area_name_surface,P",
+        "zh": "地表",
+        "en": "Surface"
+    },
+    "underground": {
+        "key": "area_name_underground,P",
+        "zh": "地下",
+        "en": "Underground"
+    },
+    "observation lounge": {
+        "key": "area_name_viewroom",
+        "zh": "眺望厅",
+        "en": "Observation Lounge"
+    },
+    "aparelli": {
+        "key": "shop_name_aparelli",
+        "zh": "阿帕雷利",
+        "en": "Aparelli"
+    },
+    "armor": {
+        "key": "shop_name_armor",
+        "zh": "护甲",
+        "en": "Armor"
+    },
+    "astro armada": {
+        "key": "shop_name_astroarmada",
+        "zh": "天文舰队",
+        "en": "Astro Armada"
+    },
+    "cargo services": {
+        "key": "shop_name_cargodepot",
+        "zh": "货运服务",
+        "en": "Cargo Services"
+    },
+    "centermass": {
+        "key": "shop_name_centermass",
+        "zh": "核心区域",
+        "en": "CenterMass"
+    },
+    "commodities": {
+        "key": "shop_name_commodities",
+        "zh": "商品",
+        "en": "Commodities"
+    },
+    "conscientious objects": {
+        "key": "shop_name_conscientousobjects",
+        "zh": "尽职之物",
+        "en": "Conscientious Objects"
+    },
+    "cordry's": {
+        "key": "shop_name_cordrys",
+        "zh": "科德里小铺",
+        "en": "Cordry's"
+    },
+    "cousin crow's": {
+        "key": "shop_name_cousincrows",
+        "zh": "乌鸦表哥",
+        "en": "Cousin Crow's"
+    },
+    "covalex shipping": {
+        "key": "shop_name_covalex",
+        "zh": "科瓦莱什货运",
+        "en": "Covalex Shipping"
+    },
+    "crusader industries": {
+        "key": "shop_name_crusaderindustries",
+        "zh": "十字军工业",
+        "en": "Crusader Industries"
+    },
+    "providence surplus": {
+        "key": "shop_name_crusaderprovidencesurplus",
+        "zh": "天意军品店",
+        "en": "Providence Surplus"
+    },
+    "cubby blast": {
+        "key": "shop_name_cubbyblast",
+        "zh": "立方爆炸",
+        "en": "Cubby Blast"
+    },
+    "dumper's depot": {
+        "key": "shop_name_dumpersdepot",
+        "zh": "倾卸者仓库",
+        "en": "Dumper's Depot"
+    },
+    "personal weapons": {
+        "key": "shop_name_fpsweapons",
+        "zh": "个人武器",
+        "en": "Personal Weapons"
+    },
+    "ftl": {
+        "key": "shop_name_ftl",
+        "zh": "超光速快递服务",
+        "en": "FTL"
+    },
+    "garrity defense": {
+        "key": "shop_name_garritydefense",
+        "zh": "加里蒂防具",
+        "en": "Garrity Defense"
+    },
+    "hurston dynamics": {
+        "key": "shop_name_hurstondynamics",
+        "zh": "赫斯顿动力",
+        "en": "Hurston Dynamics"
+    },
+    "kc trending": {
+        "key": "shop_name_kctrending",
+        "zh": "KC潮流",
+        "en": "KC Trending"
+    },
+    "kel-to": {
+        "key": "shop_name_kelto",
+        "zh": "科途便利店",
+        "en": "Kel-To"
+    },
+    "ship dealer": {
+        "key": "shop_name_lawlessshipdealer",
+        "zh": "飞船贸易",
+        "en": "Ship Dealer"
+    },
+    "makau": {
+        "key": "shop_name_makau",
+        "zh": "马告",
+        "en": "Makau"
+    },
+    "omega pro": {
+        "key": "shop_name_omegapro",
+        "zh": "欧米伽Pro",
+        "en": "Omega Pro"
+    },
+    "ore sales": {
+        "key": "shop_name_oresales",
+        "zh": "矿石出售",
+        "en": "Ore Sales"
+    },
+    "pharmacy": {
+        "key": "shop_name_pharmacy",
+        "zh": "药店",
+        "en": "Pharmacy"
+    },
+    "port olisar": {
+        "key": "shop_name_portolisar",
+        "zh": "奥丽莎空间站",
+        "en": "Port Olisar"
+    },
+    "regal luxury rentals": {
+        "key": "shop_name_regal",
+        "zh": "君威豪华租赁",
+        "en": "Regal Luxury Rentals"
+    },
+    "shubin interstellar": {
+        "key": "shop_name_shubin",
+        "zh": "舒宾星际",
+        "en": "Shubin Interstellar"
+    },
+    "skutters": {
+        "key": "shop_name_skutters",
+        "zh": "射手",
+        "en": "Skutters"
+    },
+    "tammany and sons": {
+        "key": "shop_name_tammanyandsons",
+        "zh": "坦姆尼父子",
+        "en": "Tammany and Sons"
+    },
+    "trade & development division": {
+        "key": "shop_name_tdd",
+        "zh": "贸易&发展司",
+        "en": "Trade & Development Division"
+    },
+    "teach's ship shop": {
+        "key": "shop_name_teachs",
+        "zh": "蒂奇的飞船店",
+        "en": "Teach's Ship Shop"
+    },
+    "traveler rentals": {
+        "key": "shop_name_traveler",
+        "zh": "旅行者租赁",
+        "en": "Traveler Rentals"
+    },
+    "vantage rentals": {
+        "key": "shop_name_vantage",
+        "zh": "优越租赁",
+        "en": "Vantage Rentals"
+    },
+    "select destination": {
+        "key": "ui_destDropDownLabel",
+        "zh": "选择目的地",
+        "en": "Select Destination"
+    },
+    "cargo center": {
+        "key": "ui_dest_cargo",
+        "zh": "货运中心",
+        "en": "Cargo Center"
+    },
+    "hangars & habs": {
+        "key": "ui_dest_entry_exit",
+        "zh": "机库 & 居住区",
+        "en": "Hangars & Habs"
+    },
+    "entrance": {
+        "key": "ui_dest_entry_pyro",
+        "zh": "入口",
+        "en": "Entrance"
+    },
+    "habs": {
+        "key": "ui_dest_habs",
+        "zh": "居住区",
+        "en": "Habs"
+    },
+    "javelin tour": {
+        "key": "ui_dest_javelin_tour",
+        "zh": "参观标枪",
+        "en": "Javelin Tour"
+    },
+    "lower decks": {
+        "key": "ui_dest_lowerdecks,P",
+        "zh": "下层甲板",
+        "en": "Lower Decks"
+    },
+    "maintenance shaft 01": {
+        "key": "ui_dest_maintenanceshaft_01",
+        "zh": "维修通道 01",
+        "en": "Maintenance Shaft 01"
+    },
+    "maintenance shaft 02": {
+        "key": "ui_dest_maintenanceshaft_02",
+        "zh": "维修通道 02",
+        "en": "Maintenance Shaft 02"
+    },
+    "maintenance shaft 03": {
+        "key": "ui_dest_maintenanceshaft_03",
+        "zh": "维修通道 03",
+        "en": "Maintenance Shaft 03"
+    },
+    "maintenance shaft 04": {
+        "key": "ui_dest_maintenanceshaft_04",
+        "zh": "维修通道 04",
+        "en": "Maintenance Shaft 04"
+    },
+    "maintenance shaft 05": {
+        "key": "ui_dest_maintenanceshaft_05",
+        "zh": "维修通道 05",
+        "en": "Maintenance Shaft 05"
+    },
+    "maintenance shaft 06": {
+        "key": "ui_dest_maintenanceshaft_06",
+        "zh": "维修通道 06",
+        "en": "Maintenance Shaft 06"
+    },
+    "refinery": {
+        "key": "ui_dest_refinery",
+        "zh": "精炼站",
+        "en": "Refinery"
+    },
+    "security dock": {
+        "key": "ui_dest_security_dock",
+        "zh": "安全对接港",
+        "en": "Security Dock"
+    },
+    "security dock a deck": {
+        "key": "ui_dest_security_dock_a_deck",
+        "zh": "安全对接港甲板A",
+        "en": "Security Dock A Deck"
+    },
+    "security dock b deck": {
+        "key": "ui_dest_security_dock_b_deck",
+        "zh": "安全对接港甲板B",
+        "en": "Security Dock B Deck"
+    },
+    "security dock c deck": {
+        "key": "ui_dest_security_dock_c_deck",
+        "zh": "安全对接港甲板C",
+        "en": "Security Dock C Deck"
+    },
+    "worker's area": {
+        "key": "ui_dest_workerarea,P",
+        "zh": "工作区",
+        "en": "Worker's Area"
+    },
+    "destination": {
+        "key": "ui_destinationSelector",
+        "zh": "目的地",
+        "en": "Destination"
+    }
+}
