@@ -1,15 +1,16 @@
 import "./ItemInfo.css";
 import TradeOptions from "../TradeOptions/TradeOptions";
-import { useState } from "react";
 import { useSearchParams } from "react-router";
 import Icon from "@mdi/react";
 import { mdiTagMultipleOutline } from "@mdi/js";
 import SetButton from "../SetButton/SetButton";
-import i18nCategories from "../../data/categories_en_to_zh_Hans.json";
+import { getCategoryZhName } from "../../utils";
 
-const ItemInfo = ({ item }) => {
+const uexLinkItem = "https://uexcorp.space/items/info?name=";
+const uexLinkVehicle = "https://uexcorp.space/vehicles/home/list/in_game_sell/";
+
+const ItemInfo = ({ item, listVariants }) => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [listVariants, setListVariants] = useState([]);
 
   if (!item) return null;
 
@@ -18,38 +19,24 @@ const ItemInfo = ({ item }) => {
       <div className="info-and-image">
         <div className="item-info">
           <div>
-            <h1 className="zh">{item.name_zh_Hans}</h1>
+            <h1 className="zh">{item.name_zh_Hans || item.name}</h1>
             <h2 className="en">{item.name}</h2>
           </div>
           <div className="types">
-            <p className="type">{i18nCategories[item.type] || item.type}</p>
-            <p className="subtype">{i18nCategories[item.sub_type] || item.sub_type}</p>
+            <p className="type">{getCategoryZhName(item.type)}</p>
+            <p className="subtype">{getCategoryZhName(item.sub_type)}</p>
           </div>
-          {item.category === "Vehicle" ? (
-            <button
-              className="button-visit-uex"
-              onClick={() =>
-                window.open(
-                  "https://uexcorp.space/vehicles/home/list/in_game_sell/",
-                  "_blank"
-                )
-              }
-            >
-              访问 UEX
-            </button>
-          ) : (
-            <button
-              className="button-visit-uex"
-              onClick={() =>
-                window.open(
-                  "https://uexcorp.space/items/info?name=" + item.slug,
-                  "_blank"
-                )
-              }
-            >
-              访问 UEX
-            </button>
-          )}
+
+          <button
+            className="button-visit-uex"
+            onClick={
+              item.category === "Vehicle"
+                ? () => window.open(uexLinkVehicle, "_blank")
+                : () => window.open(uexLinkItem + item.slug, "_blank")
+            }
+          >
+            访问 UEX
+          </button>
         </div>
         {item.screenshot && (
           <div
@@ -82,10 +69,10 @@ const ItemInfo = ({ item }) => {
           />
         </>
       )}
-      <hr />
       {(item.category === "Armor" || item.category === "Undersuits") &&
         (item.set ? (
           <>
+            <hr />
             <div className="title-and-button">
               <h3>可购买的套装</h3>
               <button
@@ -134,18 +121,24 @@ const ItemInfo = ({ item }) => {
             {listVariants.map((vItem) => (
               <button
                 className="variant"
-                key={vItem.uuid}
+                key={vItem.slug}
                 onClick={
-                  item.uuid === vItem.uuid
+                  item.id_item === vItem.id_item
                     ? null
-                    : () => setSearchParams({ uuid: vItem.uuid })
+                    : () => setSearchParams({ name: vItem.slug })
                 }
               >
                 <p>
-                  {vItem.name.zh}
-                  {item.uuid === vItem.uuid ? "（当前）" : ""}
+                  {vItem.name_zh_Hans || vItem.name}
+                  {item.id_item === vItem.id_item ? "（当前）" : ""}
                 </p>
-                <p className="price">¤ {vItem.buy.minPrice} 起</p>
+                {vItem.price_min_max.buy_min && vItem.price_min_max.buy_min < Infinity ? (
+                  <p className="price">¤ {vItem.price_min_max.buy_min} 起</p>
+                ) : (
+                  <p className="price" style={{ color: "hsl(0deg 0% 60%)" }}>
+                    无法购买
+                  </p>
+                )}
               </button>
             ))}
           </div>

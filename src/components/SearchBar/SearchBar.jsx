@@ -18,7 +18,7 @@ const SearchBar = ({ centered }) => {
   useEffect(() => {
     let tempList = [];
     if (searchName.length > 0)
-      for (const item of itemsData) {
+      for (const item of Object.values(itemsData)) {
         if (
           item.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase()) ||
           item.name.zh_Hans?.toLocaleLowerCase()?.includes(searchName.toLocaleLowerCase())

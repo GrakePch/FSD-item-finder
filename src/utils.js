@@ -5,6 +5,7 @@ import vehiclesUex from "./data/vehicles_uex.json";
 import i18nLocations from "./data/i18n_locations.json";
 import i18nLocationsM from "./data/i18n_locations_manual.json";
 import i18nVehicles from "./data/i18n_vehicles.json";
+import i18nCategories from "./data/categories_en_to_zh_Hans.json";
 
 export function getKey(name_en) {
     return itemsNameToKey[name_en];
@@ -39,13 +40,18 @@ export function getVehicleZhName(name_en) {
     return name_en;
 }
 
+export function getCategoryZhName(name_en) {
+    if (!name_en) return name_en;
+    return i18nCategories[name_en] || name_en;
+}
+
 export function getItemUexFormat(id) {
     for (const item of itemsUex) {
         if (item.id === id) {
             return item;
         }
     }
-    console.log("No item found for id: " + id);
+    // console.log("No item found for id: " + id);
     return null;
 }
 
@@ -83,4 +89,25 @@ export function getLocPath(option, tdata) {
     } catch (err) {
         console.log(option.id_terminal);
     }
+}
+
+export function getVariantsBySlug(slug, itemsData) {
+    if (!slug) return [];
+    if (!itemsData[slug]) return [];
+
+    let thisName = itemsData[slug].name;
+    let thisSubType = itemsData[slug].sub_type;
+    if ([
+        "Personal Weapons",
+        "Undersuits",
+        "Helmets",
+        "Torso",
+        "Arms",
+        "Legs",
+        "Backpacks",
+    ].includes(thisSubType) === false) return [];
+    let initial = thisName.split(" ")[0];
+    return Object.values(itemsData)
+        .filter((item) =>
+            item.sub_type === thisSubType && item.name.split(" ")[0] === initial);
 }

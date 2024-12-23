@@ -9,15 +9,17 @@ import axios from "axios";
 import { AllTerminalsContext, AllItemsPriceContext } from "./contexts";
 import {
   getItemUexFormat,
+  getVariantsBySlug,
   getVehicleUEXFormat,
   getVehicleZhName,
   getZhHansNameFromEn,
 } from "./utils";
 
 function App() {
-  const [terminalsData, setTerminalsData] = useState([]);
-  const [itemsData, setItemsData] = useState([]);
+  const [terminalsData, setTerminalsData] = useState({});
+  const [itemsData, setItemsData] = useState({});
   const [item, setItem] = useState(null);
+  const [itemListVariants, setItemListVariants] = useState([]);
   const [showMode, setShowMode] = useState("");
   const [searchParams] = useSearchParams();
 
@@ -51,7 +53,7 @@ function App() {
         }));
         let tempDict = {};
         for (const t of temp) tempDict[t.id] = t;
-        console.log(tempDict);
+        // console.log(tempDict);
         setTerminalsData(tempDict);
       } catch (err) {
         console.log(err);
@@ -61,21 +63,23 @@ function App() {
       try {
         const res = await axios.get("https://uexcorp.space/api/2.0/items_prices_all");
         for (const item of res.data.data) {
-          if (!dictItem[item.id_item]) {
-            let itemUexFormat = getItemUexFormat(item.id_item);
-            dictItem[item.id_item] = {
-              slug: itemUexFormat?.slug,
+          let itemUexFormat = getItemUexFormat(item.id_item);
+          if (!itemUexFormat) continue;
+          let slug = itemUexFormat.slug;
+          if (!dictItem[slug]) {
+            dictItem[slug] = {
+              slug: slug,
               id_item: item.id_item,
               name: item.item_name,
               name_zh_Hans: getZhHansNameFromEn(item.item_name),
-              type: itemUexFormat?.section,
-              sub_type: itemUexFormat?.category,
-              screenshot: itemUexFormat?.screenshot,
+              type: itemUexFormat.section,
+              sub_type: itemUexFormat.category,
+              screenshot: itemUexFormat.screenshot,
               price_min_max: {},
               options: [],
             };
           }
-          dictItem[item.id_item].options.push({
+          dictItem[slug].options.push({
             id_terminal: item.id_terminal,
             price_buy: item.price_buy || null,
             price_sell: item.price_sell || null,
@@ -91,10 +95,11 @@ function App() {
           "https://uexcorp.space/api/2.0/vehicles_purchases_prices_all"
         );
         for (const v of res.data.data) {
-          if (!dictVehicle[v.id_vehicle]) {
+          let slug = "v-" + v.id_vehicle;
+          if (!dictVehicle[slug]) {
             let itemUexFormat = getVehicleUEXFormat(v.id_vehicle);
-            dictVehicle[v.id_vehicle] = {
-              slug: "v-" + v.id_vehicle,
+            dictVehicle[slug] = {
+              slug: slug,
               id_vehicle: v.id_vehicle,
               name: itemUexFormat.name_full,
               name_zh_Hans: getVehicleZhName(itemUexFormat.name_full),
@@ -105,7 +110,7 @@ function App() {
               options_rent: [],
             };
           }
-          dictVehicle[v.id_vehicle].options.push({
+          dictVehicle[slug].options.push({
             id_terminal: v.id_terminal,
             price_buy: v.price_buy || null,
           });
@@ -118,10 +123,11 @@ function App() {
           "https://uexcorp.space/api/2.0/vehicles_rentals_prices_all"
         );
         for (const v of res.data.data) {
-          if (!dictVehicle[v.id_vehicle]) {
+          let slug = "v-" + v.id_vehicle;
+          if (!dictVehicle[slug]) {
             let itemUexFormat = getVehicleUEXFormat(v.id_vehicle);
-            dictVehicle[v.id_vehicle] = {
-              slug: "v-" + v.id_vehicle,
+            dictVehicle[slug] = {
+              slug: slug,
               id_vehicle: v.id_vehicle,
               name: itemUexFormat.name_full,
               name_zh_Hans: getVehicleZhName(itemUexFormat.name_full),
@@ -132,7 +138,7 @@ function App() {
               options_rent: [],
             };
           }
-          dictVehicle[v.id_vehicle].options_rent.push({
+          dictVehicle[slug].options_rent.push({
             id_terminal: v.id_terminal,
             price_rent: v.price_rent || null,
           });
@@ -141,10 +147,10 @@ function App() {
         console.log(err);
       }
 
-      let tempItemsData = [...Object.values(dictItem), ...Object.values(dictVehicle)];
+      let tempItemsData = { ...dictItem, ...dictVehicle };
 
       /* Update price_min_max for each item */
-      tempItemsData.forEach((item) => {
+      Object.values(tempItemsData).forEach((item) => {
         let pricesBuy = item.options
           .filter((a) => a.price_buy !== null)
           .map((a) => a.price_buy);
@@ -165,7 +171,7 @@ function App() {
         };
       });
 
-      console.log(tempItemsData);
+      // console.log(Object.values(tempItemsData));
       setItemsData(tempItemsData);
     };
 
@@ -174,14 +180,9 @@ function App() {
 
   useEffect(() => {
     setShowMode(searchParams.get("mode"));
-    if (searchParams.get("name")) {
-      for (const item of itemsData) {
-        if (item.slug === searchParams.get("name")) {
-          setItem(item);
-          break;
-        }
-      }
-    }
+    let slug = searchParams.get("name");
+    setItem(itemsData[slug] || null);
+    setItemListVariants(getVariantsBySlug(slug, itemsData));
   }, [searchParams, itemsData]);
 
   return (
@@ -190,12 +191,12 @@ function App() {
         <SearchBar centered={item === null} />
 
         {item &&
-          (showMode === "variants" && item.variants?.length > 1 ? (
-            <ItemGroupInfo item={item} />
+          (showMode === "variants" && itemListVariants.length > 1 ? (
+            <ItemGroupInfo item={item} listVariants={itemListVariants}/>
           ) : showMode === "set" && item.set ? (
             <ItemSetInfo item={item} />
           ) : (
-            <ItemInfo item={item} />
+            <ItemInfo item={item} listVariants={itemListVariants}/>
           ))}
       </AllItemsPriceContext.Provider>
     </AllTerminalsContext.Provider>

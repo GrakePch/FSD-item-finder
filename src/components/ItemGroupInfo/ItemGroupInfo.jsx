@@ -1,66 +1,80 @@
 import "./ItemGroupInfo.css";
 import TradeOptions from "../TradeOptions/TradeOptions";
 import { useEffect, useState } from "react";
-import itemData from "../../data/item_data.json";
 import { useSearchParams } from "react-router";
+import { getCategoryZhName } from "../../utils";
 
-const ItemGroupInfo = ({ item }) => {
+const ItemGroupInfo = ({ item, listVariants }) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const [type, subType] = item.type.zh.split("/");
-  const [listVariants, setListVariants] = useState([]);
   const [firstVariant, setFirstVariant] = useState(null);
-  const [totalPriceData, setTotalPriceData] = useState(null);
+  const [totalPriceData, setTotalPriceData] = useState([]);
+  const [totalPriceMinMax, setTotalPriceMinMax] = useState({});
 
   useEffect(() => {
-    let tempListVariants = [];
-    tempListVariants = item.variants?.map((uuid) => itemData[uuid]) || [];
-    setListVariants(tempListVariants);
-    setFirstVariant(tempListVariants[0]);
+    setFirstVariant(listVariants[0]);
 
-    let minPrice = Infinity;
-    let maxPrice = 0;
-    let totalBuyOptions = {};
-    for (const variant of tempListVariants) {
-      minPrice = Math.min(minPrice, variant.buy.minPrice);
-      maxPrice = Math.max(maxPrice, variant.buy.maxPrice);
-      for (const option of variant.buy.locations) {
-        if (!totalBuyOptions[option.location.en]) {
-          totalBuyOptions[option.location.en] = structuredClone(option);
-          totalBuyOptions[option.location.en].canBuy = [variant.name.en];
+    let optionDict = {};
+    for (const item of listVariants) {
+      for (const option of item.options) {
+        if (!optionDict[option.id_terminal]) {
+          optionDict[option.id_terminal] = option;
         } else {
-          totalBuyOptions[option.location.en].price = Math.min(
-            totalBuyOptions[option.location.en].price,
-            option.price
-          );
-          totalBuyOptions[option.location.en].canBuy.push(variant.name.en);
+          let o = optionDict[option.id_terminal];
+          if (!o.price_buy || option.price_buy < o.price_buy)
+            o.price_buy = option.price_buy;
+          if (!o.price_sell || option.price_sell > o.price_sell)
+            o.price_sell = option.price_sell;
         }
       }
     }
-    setTotalPriceData({
-      minPrice: minPrice,
-      maxPrice: maxPrice,
-      locations: Object.values(totalBuyOptions),
-    });
-  }, [item]);
+    let tempTotalPriceData = Object.values(optionDict);
+    setTotalPriceData(tempTotalPriceData);
+
+    /* Update price_min_max for each item */
+    let pricesBuy = tempTotalPriceData
+      .filter((a) => a.price_buy !== null)
+      .map((a) => a.price_buy);
+    let pricesSell = tempTotalPriceData
+      .filter((a) => a.price_sell !== null)
+      .map((a) => a.price_sell);
+    let pricesRent =
+      tempTotalPriceData
+        ?.filter((a) => a.price_rent !== null)
+        ?.map((a) => a.price_rent) || [];
+    let tempTotalPriceMinMax = {
+      buy_min: Math.min(...pricesBuy) || null,
+      buy_max: Math.max(...pricesBuy) || null,
+      sell_min: Math.min(...pricesSell) || null,
+      sell_max: Math.max(...pricesSell) || null,
+      rent_min: Math.min(...pricesRent) || null,
+      rent_max: Math.max(...pricesRent) || null,
+    };
+
+    setTotalPriceMinMax(tempTotalPriceMinMax);
+  }, [item, listVariants]);
 
   return (
     <div className="ItemGroupInfo">
       <div className="item-info">
         <h1 className="zh">
-          {firstVariant?.name.zh} <span>等 {listVariants.length} 个同类物品</span>
+          {firstVariant?.name_zh_Hans} <span>等 {listVariants.length} 个同类物品</span>
         </h1>
-        <h2 className="en">{firstVariant?.name.en} ...</h2>
+        <h2 className="en">{firstVariant?.name} ...</h2>
         <div className="types">
-          <p className="type">{type}</p>
-          <p className="subtype">{subType}</p>
+          <p className="type">{getCategoryZhName(item.type)}</p>
+          <p className="subtype">{getCategoryZhName(item.sub_type)}</p>
         </div>
       </div>
-      {totalPriceData && totalPriceData.locations.length > 0 && (
+      {totalPriceData && totalPriceData.length > 0 && (
         <>
           <hr />
           <h3 className="trade-options-title">购买</h3>
-          <TradeOptions pricesData={totalPriceData} tradeType="buy" />
+          <TradeOptions
+            pricesData={totalPriceData}
+            priceMinMax={totalPriceMinMax}
+            tradeType="buy"
+          />
         </>
       )}
       <hr />
@@ -69,11 +83,17 @@ const ItemGroupInfo = ({ item }) => {
         {listVariants.map((vItem) => (
           <button
             className="variant"
-            key={vItem.uuid}
-            onClick={() => setSearchParams({ uuid: vItem.uuid })}
+            key={vItem.slug}
+            onClick={() => setSearchParams({ name: vItem.slug })}
           >
-            <p>{vItem.name.zh}</p>
-            <p className="price">¤ {vItem.buy.minPrice} 起</p>
+            <p>{vItem.name_zh_Hans || vItem.name}</p>
+            {vItem.price_min_max.buy_min && vItem.price_min_max.buy_min < Infinity ? (
+              <p className="price">¤ {vItem.price_min_max.buy_min} 起</p>
+            ) : (
+              <p className="price" style={{ color: "hsl(0deg 0% 60%)" }}>
+                无法购买
+              </p>
+            )}
           </button>
         ))}
       </div>
