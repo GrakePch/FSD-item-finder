@@ -21,7 +21,7 @@ const SearchBar = ({ centered }) => {
       for (const item of Object.values(itemsData)) {
         if (
           item.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase()) ||
-          item.name.zh_Hans?.toLocaleLowerCase()?.includes(searchName.toLocaleLowerCase())
+          item.name_zh_Hans?.toLocaleLowerCase()?.includes(searchName.toLocaleLowerCase())
         ) {
           tempList.push(item);
         }
