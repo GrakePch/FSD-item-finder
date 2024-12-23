@@ -46,7 +46,7 @@ const SearchBar = ({ centered }) => {
       >
         {centered && !searchName && (
           <>
-            <h1>星际寻物</h1>
+            <h1>星际寻物<span>Beta 版</span></h1>
             <p>为星际公民提供查询物品购买地点与价格的服务</p>
           </>
         )}

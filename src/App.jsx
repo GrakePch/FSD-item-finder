@@ -7,6 +7,7 @@ import ItemGroupInfo from "./components/ItemGroupInfo/ItemGroupInfo";
 import ItemSetInfo from "./components/ItemSetInfo/ItemSetInfo";
 import axios from "axios";
 import { AllTerminalsContext, AllItemsPriceContext } from "./contexts";
+import uexBadge from "./assets/uex-api-badge-powered.png";
 import {
   getItemUexFormat,
   getVariantsBySlug,
@@ -192,12 +193,30 @@ function App() {
 
         {item &&
           (showMode === "variants" && itemListVariants.length > 1 ? (
-            <ItemGroupInfo item={item} listVariants={itemListVariants}/>
+            <ItemGroupInfo item={item} listVariants={itemListVariants} />
           ) : showMode === "set" && item.set ? (
             <ItemSetInfo item={item} />
           ) : (
-            <ItemInfo item={item} listVariants={itemListVariants}/>
+            <ItemInfo item={item} listVariants={itemListVariants} />
           ))}
+
+        <div className="footer" style={{ position: item ? "unset" : "absolute" }}>
+          <div className="uex">
+            <a href="https://uexcorp.space/" target="_blank">
+              <p>数据支持</p>
+            </a>
+            <a href="https://uexcorp.space/" target="_blank">
+              <img src={uexBadge} width="140" />
+            </a>
+          </div>
+          <p>
+            <a href="https://github.com/GrakePch/FSD-item-finder/issues" target="_blank">
+              问题反馈
+            </a>
+          </p>
+          <p>设计与开发：GrakePCH</p>
+          <p>技术支持：CxJuice</p>
+        </div>
       </AllItemsPriceContext.Provider>
     </AllTerminalsContext.Provider>
   );

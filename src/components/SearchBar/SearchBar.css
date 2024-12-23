@@ -35,6 +35,15 @@
     margin-bottom: 1rem;
 }
 
+.SearchBar .search-super-container>h1>span {
+    font-size: 1rem;
+    color: #000;
+    background-color: #ff8888;
+    padding: 0 .25rem;
+    margin-left: .5rem;
+    border-radius: .25rem;
+}
+
 .SearchBar .search-super-container>p {
     text-align: center;
     margin-bottom: 1rem;
