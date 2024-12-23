@@ -4,6 +4,7 @@ import SearchResultList from "../SearchResultList/SearchResultList";
 import Icon from "@mdi/react";
 import { mdiArrowLeft, mdiClose, mdiMagnify } from "@mdi/js";
 import { AllItemsPriceContext } from "../../contexts";
+import { isAscii } from "../../utils";
 
 const SearchBar = ({ centered }) => {
   const itemsData = useContext(AllItemsPriceContext);
@@ -17,7 +18,10 @@ const SearchBar = ({ centered }) => {
 
   useEffect(() => {
     let tempList = [];
-    if (searchName.length > 0)
+    if (
+      searchName.length > 0 &&
+      ((isAscii(searchName) && searchName.length > 1) || !isAscii(searchName))
+    )
       for (const item of Object.values(itemsData)) {
         if (
           item.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase()) ||
@@ -42,9 +46,9 @@ const SearchBar = ({ centered }) => {
       )}
       <nav
         className="search-super-container"
-        style={{ top: centered && !searchName ? "30%" : 0 }}
+        style={{ top: centered && resultList.length <= 0 ? "30%" : 0 }}
       >
-        {centered && !searchName && (
+        {centered && resultList.length <= 0 && (
           <>
             <h1>星际寻物<span>Beta 版</span></h1>
             <p>为星际公民提供查询物品购买地点与价格的服务</p>

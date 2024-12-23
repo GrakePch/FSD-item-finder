@@ -7,6 +7,11 @@ import i18nLocationsM from "./data/i18n_locations_manual.json";
 import i18nVehicles from "./data/i18n_vehicles.json";
 import i18nCategories from "./data/categories_en_to_zh_Hans.json";
 
+export function isAscii(char) {
+    const code = char[0].charCodeAt(0);
+    return code >= 0 && code <= 127;
+}
+
 export function getKey(name_en) {
     return itemsNameToKey[name_en];
 }
