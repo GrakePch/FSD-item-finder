@@ -60,9 +60,9 @@ const SearchBar = ({ centered }) => {
       )}
       <nav
         className="search-super-container"
-        style={{ top: centered && resultList.length <= 0 ? "30%" : 0 }}
+        style={{ top: centered && !showResults ? "30%" : 0 }}
       >
-        {centered && resultList.length <= 0 && (
+        {centered && !showResults && (
           <>
             <h1>
               星际寻物<span>Beta 版</span>
