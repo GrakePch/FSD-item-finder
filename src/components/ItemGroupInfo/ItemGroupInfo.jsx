@@ -62,8 +62,8 @@ const ItemGroupInfo = ({ item, listVariants }) => {
         </h1>
         <h2 className="en">{firstVariant?.name} ...</h2>
         <div className="types">
-          <p className="type">{getCategoryZhName(item.type)}</p>
-          <p className="subtype">{getCategoryZhName(item.sub_type)}</p>
+          <p className="type">{getCategoryZhName(item.type) || "未知"}</p>
+          <p className="subtype">{getCategoryZhName(item.sub_type) || "未知"}</p>
         </div>
       </div>
       {totalPriceData && totalPriceData.length > 0 && (

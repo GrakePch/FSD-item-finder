@@ -9,13 +9,14 @@ import axios from "axios";
 import { AllTerminalsContext, AllItemsPriceContext } from "./contexts";
 import uexBadge from "./assets/uex-api-badge-powered.png";
 import itemsUexIdsAndI18n from "./data/items_uex_ids_and_i18n.json";
-import { getItemUexFormat, getVariants } from "./utils";
+import { getItemUexFormat, getSet, getVariants } from "./utils";
 
 function App() {
   const [terminalsData, setTerminalsData] = useState({});
   const [itemsData, setItemsData] = useState({});
   const [item, setItem] = useState(null);
   const [itemListVariants, setItemListVariants] = useState([]);
+  const [itemSet, setItemSet] = useState(null);
   const [showMode, setShowMode] = useState("");
   const [searchParams] = useSearchParams();
 
@@ -214,6 +215,7 @@ function App() {
     let key = searchParams.get("key");
     setItem(itemsData[key] || null);
     setItemListVariants(getVariants(key, itemsData));
+    setItemSet(getSet(key, itemsData));
   }, [searchParams, itemsData]);
 
   return (
@@ -224,10 +226,10 @@ function App() {
         {item &&
           (showMode === "variants" && itemListVariants.length > 1 ? (
             <ItemGroupInfo item={item} listVariants={itemListVariants} />
-          ) : showMode === "set" && item.set ? (
-            <ItemSetInfo item={item} />
+          // ) : showMode === "set" && itemSet ? (
+          //   <ItemSetInfo item={item} set={itemSet} />
           ) : (
-            <ItemInfo item={item} listVariants={itemListVariants} />
+            <ItemInfo item={item} listVariants={itemListVariants} set={itemSet}/>
           ))}
 
         <div className="footer" style={{ position: item ? "unset" : "absolute" }}>

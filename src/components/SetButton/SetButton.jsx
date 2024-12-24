@@ -1,8 +1,7 @@
 import { useSearchParams } from "react-router";
-import itemData from "../../data/item_data.json";
 import "./SetButton.css";
 
-const SetButton = ({ subType, uuid, self }) => {
+const SetButton = ({ subType, item, selfKey }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const tIcon = {
     undersuit: "🩲",
@@ -13,17 +12,23 @@ const SetButton = ({ subType, uuid, self }) => {
     backpack: "🎒",
   };
 
-  return uuid ? (
+  return item ? (
     <button
       className="SetButton"
-      onClick={uuid === self ? null : () => setSearchParams({ uuid: uuid })}
+      onClick={item.key === selfKey ? null : () => setSearchParams({ key: item.key })}
     >
       <p>{tIcon[subType]}</p>
       <p className="zh">
-        {itemData[uuid].name.zh}
-        {uuid === self ? "（当前）" : ""}
+        {item.name_zh_Hans}
+        {item.key === selfKey ? "（当前）" : ""}
       </p>
-      <p className="price">¤ {itemData[uuid].buy.minPrice} 起</p>
+      {item.price_min_max.buy_min && item.price_min_max.buy_min < Infinity ? (
+        <p className="price">¤ {item.price_min_max.buy_min} 起</p>
+      ) : (
+        <p className="price" style={{ color: "hsl(0deg 0% 60%)" }}>
+          无法购买
+        </p>
+      )}
     </button>
   ) : (
     <button className="SetButton" disabled>

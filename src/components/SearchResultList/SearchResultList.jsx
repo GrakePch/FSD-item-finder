@@ -19,8 +19,8 @@ const SearchResultList = ({ results, setShowResults }) => {
           onClick={() => handleResultClick(item.key)}
         >
           <div className="type">
-            <p>{i18nCategories[item.type] || item.type}</p>
-            <p>{i18nCategories[item.sub_type] || item.sub_type}</p>
+            <p>{i18nCategories[item.type] || item.type || "未知"}</p>
+            <p>{i18nCategories[item.sub_type] || item.sub_type || "未知"}</p>
           </div>
           <div className="names">
             <p className="zh">{item.name_zh_Hans || item.name}</p>
