@@ -1,5 +1,6 @@
 import { useSearchParams } from "react-router";
 import "./SetButton.css";
+import TagCurrent from "../TagCurrent/TagCurrent";
 
 const SetButton = ({ subType, item, selfKey }) => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -27,7 +28,7 @@ const SetButton = ({ subType, item, selfKey }) => {
       <p>{tIcon[subType]}</p>
       <p className="zh">
         {item.name_zh_Hans}
-        {item.key === selfKey ? "（当前）" : ""}
+        {item.key === selfKey && <TagCurrent />}
       </p>
       {item.price_min_max.buy_min && item.price_min_max.buy_min < Infinity ? (
         <p className="price">¤ {item.price_min_max.buy_min} 起</p>

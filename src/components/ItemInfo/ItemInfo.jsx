@@ -5,6 +5,7 @@ import Icon from "@mdi/react";
 import { mdiTagMultipleOutline } from "@mdi/js";
 import SetButton from "../SetButton/SetButton";
 import { getCategoryZhName } from "../../utils";
+import TagCurrent from "../TagCurrent/TagCurrent";
 
 const uexLinkItem = "https://uexcorp.space/items/info?name=";
 const uexLinkVehicle = "https://uexcorp.space/vehicles/home/list/in_game_sell/";
@@ -131,7 +132,7 @@ const ItemInfo = ({ item, listVariants, set }) => {
               >
                 <p>
                   {vItem.name_zh_Hans || vItem.name}
-                  {item.key === vItem.key ? "（当前）" : ""}
+                  {item.key === vItem.key && <TagCurrent />}
                 </p>
                 {vItem.price_min_max.buy_min && vItem.price_min_max.buy_min < Infinity ? (
                   <p className="price">¤ {vItem.price_min_max.buy_min} 起</p>
