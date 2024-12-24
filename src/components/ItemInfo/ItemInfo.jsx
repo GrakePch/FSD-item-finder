@@ -30,7 +30,7 @@ const ItemInfo = ({ item, listVariants }) => {
           <button
             className="button-visit-uex"
             onClick={
-              item.category === "Vehicle"
+              item.sub_type === "Vehicle"
                 ? () => window.open(uexLinkVehicle, "_blank")
                 : () => window.open(uexLinkItem + item.slug, "_blank")
             }
@@ -121,16 +121,16 @@ const ItemInfo = ({ item, listVariants }) => {
             {listVariants.map((vItem) => (
               <button
                 className="variant"
-                key={vItem.slug}
+                key={vItem.key}
                 onClick={
-                  item.id_item === vItem.id_item
+                  item.key === vItem.key
                     ? null
-                    : () => setSearchParams({ name: vItem.slug })
+                    : () => setSearchParams({ key: vItem.key })
                 }
               >
                 <p>
                   {vItem.name_zh_Hans || vItem.name}
-                  {item.id_item === vItem.id_item ? "（当前）" : ""}
+                  {item.key === vItem.key ? "（当前）" : ""}
                 </p>
                 {vItem.price_min_max.buy_min && vItem.price_min_max.buy_min < Infinity ? (
                   <p className="price">¤ {vItem.price_min_max.buy_min} 起</p>

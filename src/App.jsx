@@ -8,13 +8,8 @@ import ItemSetInfo from "./components/ItemSetInfo/ItemSetInfo";
 import axios from "axios";
 import { AllTerminalsContext, AllItemsPriceContext } from "./contexts";
 import uexBadge from "./assets/uex-api-badge-powered.png";
-import {
-  getItemUexFormat,
-  getVariantsBySlug,
-  getVehicleUEXFormat,
-  getVehicleZhName,
-  getZhHansNameFromEn,
-} from "./utils";
+import itemsUexIdsAndI18n from "./data/items_uex_ids_and_i18n.json";
+import { getItemUexFormat, getVariants } from "./utils";
 
 function App() {
   const [terminalsData, setTerminalsData] = useState({});
@@ -64,56 +59,40 @@ function App() {
       try {
         const res = await axios.get("https://uexcorp.space/api/2.0/items_prices_all");
         for (const item of res.data.data) {
-          let itemUexFormat = getItemUexFormat(item.id_item);
-          if (!itemUexFormat) continue;
-          let slug = itemUexFormat.slug;
-          if (!dictItem[slug]) {
-            dictItem[slug] = {
-              slug: slug,
-              id_item: item.id_item,
-              name: item.item_name,
-              name_zh_Hans: getZhHansNameFromEn(item.item_name),
-              type: itemUexFormat.section,
-              sub_type: itemUexFormat.category,
-              screenshot: itemUexFormat.screenshot,
-              price_min_max: {},
+          let id = item.id_item;
+          if (!dictItem[id]) {
+            dictItem[id] = {
+              id_item: id,
               options: [],
+              slug: item.slug,
             };
           }
-          dictItem[slug].options.push({
+          dictItem[id].options.push({
             id_terminal: item.id_terminal,
-            price_buy: item.price_buy || null,
-            price_sell: item.price_sell || null,
+            price_buy: item.price_buy || Infinity,
+            price_sell: item.price_sell || 0,
           });
         }
       } catch (err) {
         console.log(err);
       }
       /* Fetch & reformat vehicles */
-      let dictVehicle = {};
       try {
         const res = await axios.get(
           "https://uexcorp.space/api/2.0/vehicles_purchases_prices_all"
         );
         for (const v of res.data.data) {
-          let slug = "v-" + v.id_vehicle;
-          if (!dictVehicle[slug]) {
-            let itemUexFormat = getVehicleUEXFormat(v.id_vehicle);
-            dictVehicle[slug] = {
-              slug: slug,
+          let id = "v-" + v.id_vehicle;
+          if (!dictItem[id]) {
+            dictItem[id] = {
               id_vehicle: v.id_vehicle,
-              name: itemUexFormat.name_full,
-              name_zh_Hans: getVehicleZhName(itemUexFormat.name_full),
-              type: "Vehicle",
-              sub_type: "Vehicle",
-              price_min_max: {},
               options: [],
               options_rent: [],
             };
           }
-          dictVehicle[slug].options.push({
+          dictItem[id].options.push({
             id_terminal: v.id_terminal,
-            price_buy: v.price_buy || null,
+            price_buy: v.price_buy || Infinity,
           });
         }
       } catch (err) {
@@ -124,31 +103,82 @@ function App() {
           "https://uexcorp.space/api/2.0/vehicles_rentals_prices_all"
         );
         for (const v of res.data.data) {
-          let slug = "v-" + v.id_vehicle;
-          if (!dictVehicle[slug]) {
-            let itemUexFormat = getVehicleUEXFormat(v.id_vehicle);
-            dictVehicle[slug] = {
-              slug: slug,
+          let id = "v-" + v.id_vehicle;
+          if (!dictItem[id]) {
+            dictItem[id] = {
               id_vehicle: v.id_vehicle,
-              name: itemUexFormat.name_full,
-              name_zh_Hans: getVehicleZhName(itemUexFormat.name_full),
-              type: "Vehicle",
-              sub_type: "Vehicle",
-              price_min_max: {},
               options: [],
               options_rent: [],
             };
           }
-          dictVehicle[slug].options_rent.push({
+          dictItem[id].options_rent.push({
             id_terminal: v.id_terminal,
-            price_rent: v.price_rent || null,
+            price_rent: v.price_rent || Infinity,
           });
         }
       } catch (err) {
         console.log(err);
       }
 
-      let tempItemsData = { ...dictItem, ...dictVehicle };
+      /* Rebuild dictionary with keys */
+      const tempItemsData = {};
+
+      for (const [key, value] of Object.entries(itemsUexIdsAndI18n)) {
+        let firstId = value.uex_ids[0];
+        let isVehicle = typeof firstId === "string" && firstId?.startsWith("v-");
+        if (isVehicle) {
+          tempItemsData[key] = {
+            key: key,
+            name: value.en || key,
+            name_zh_Hans: value.zh_Hans || key,
+            type: "Vehicle",
+            sub_type: "Vehicle",
+            id_vehicle: firstId,
+            price_min_max: {},
+            options: dictItem[firstId]?.options || [],
+            options_rent: dictItem[firstId]?.options_rent || [],
+          };
+        } else {
+          let itemUexFormat = getItemUexFormat(firstId);
+          tempItemsData[key] = {
+            key: key,
+            name: value.en || key,
+            name_zh_Hans: value.zh_Hans || key,
+            type: itemUexFormat?.section,
+            sub_type: itemUexFormat?.category,
+            screenshot: itemUexFormat?.screenshot,
+            slug: itemUexFormat?.slug,
+            id_item: firstId,
+            price_min_max: {},
+            options: [],
+          };
+          let optionDict = {};
+          for (const id of value.uex_ids) {
+            for (const option of dictItem[id].options) {
+              if (!optionDict[option.id_terminal]) {
+                optionDict[option.id_terminal] = option;
+              } else {
+                optionDict[option.id_terminal].price_buy = Math.min(
+                  optionDict[option.id_terminal].price_buy,
+                  option.price_buy
+                );
+                optionDict[option.id_terminal].price_sell = Math.max(
+                  optionDict[option.id_terminal].price_sell,
+                  option.price_sell
+                );
+              }
+            }
+          }
+          tempItemsData[key].options = Object.values(optionDict);
+          tempItemsData[key].options.forEach((o) => {
+            if (o.price_buy === Infinity) o.price_buy = null;
+            if (o.price_sell === 0) o.price_sell = null;
+          });
+        }
+      }
+
+      console.log(dictItem);
+      console.log(Object.values(tempItemsData));
 
       /* Update price_min_max for each item */
       Object.values(tempItemsData).forEach((item) => {
@@ -181,9 +211,9 @@ function App() {
 
   useEffect(() => {
     setShowMode(searchParams.get("mode"));
-    let slug = searchParams.get("name");
-    setItem(itemsData[slug] || null);
-    setItemListVariants(getVariantsBySlug(slug, itemsData));
+    let key = searchParams.get("key");
+    setItem(itemsData[key] || null);
+    setItemListVariants(getVariants(key, itemsData));
   }, [searchParams, itemsData]);
 
   return (

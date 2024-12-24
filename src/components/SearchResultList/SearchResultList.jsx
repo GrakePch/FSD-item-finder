@@ -5,9 +5,9 @@ import i18nCategories from "../../data/categories_en_to_zh_Hans.json";
 const SearchResultList = ({ results, setShowResults }) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const handleResultClick = (slug) => {
+  const handleResultClick = (key) => {
     setShowResults(false);
-    setSearchParams({ name: slug });
+    setSearchParams({ key: key });
   };
 
   return (
@@ -15,8 +15,8 @@ const SearchResultList = ({ results, setShowResults }) => {
       {results.map((item) => (
         <button
           className="result-list-item"
-          key={item.slug}
-          onClick={() => handleResultClick(item.slug)}
+          key={item.key}
+          onClick={() => handleResultClick(item.key)}
         >
           <div className="type">
             <p>{i18nCategories[item.type] || item.type}</p>

@@ -1,27 +1,13 @@
-import itemsNameToKey from "./data/items_name_to_key.json";
-import itemsKeyToNameZhHans from "./data/items_key_to_name_zh_Hans.json";
 import itemsUex from "./data/items_uex.json";
 import vehiclesUex from "./data/vehicles_uex.json";
 import i18nLocations from "./data/i18n_locations.json";
 import i18nLocationsM from "./data/i18n_locations_manual.json";
-import i18nVehicles from "./data/i18n_vehicles.json";
 import i18nCategories from "./data/categories_en_to_zh_Hans.json";
+import uexIdsAndI18n from "./data/items_uex_ids_and_i18n.json"
 
 export function isAscii(char) {
     const code = char[0].charCodeAt(0);
     return code >= 0 && code <= 127;
-}
-
-export function getKey(name_en) {
-    return itemsNameToKey[name_en];
-}
-
-export function getZhHansNameFromKey(key) {
-    return itemsKeyToNameZhHans[key] || null;
-}
-
-export function getZhHansNameFromEn(name_en) {
-    return getZhHansNameFromKey(getKey(name_en));
 }
 
 export function getLocationZhName(name_en) {
@@ -35,13 +21,6 @@ export function getLocationZhName(name_en) {
         let en_slice = name_en.slice(0, sliceIdx - 1);
         return getLocationZhName(en_slice) + " 拉格朗日点 " + en_split[en_split.length - 1];
     }
-    return name_en;
-}
-
-export function getVehicleZhName(name_en) {
-    if (!name_en) return name_en;
-    let en = name_en.toLowerCase();
-    if (i18nVehicles[en]) return i18nVehicles[en].zh;
     return name_en;
 }
 
@@ -88,6 +67,17 @@ export function getVehicleUEXFormatBySlug(slug) {
     return null;
 }
 
+export function getUexIdListFromKey(key) {
+    return uexIdsAndI18n[key].uex_id;
+}
+
+export function getKeyFromUexId(id) {
+    for (const [key, item] of Object.entries(uexIdsAndI18n))
+        for (const uex_id of item.uex_ids)
+            if (uex_id == id) return key;
+    return null;
+}
+
 export function getLocPath(option, tdata) {
     try {
         return tdata[option.id_terminal].location_path;
@@ -96,12 +86,12 @@ export function getLocPath(option, tdata) {
     }
 }
 
-export function getVariantsBySlug(slug, itemsData) {
-    if (!slug) return [];
-    if (!itemsData[slug]) return [];
+export function getVariants(key, itemsData) {
+    if (!key) return [];
+    if (!itemsData[key]) return [];
 
-    let thisName = itemsData[slug].name;
-    let thisSubType = itemsData[slug].sub_type;
+    let thisName = itemsData[key].name;
+    let thisSubType = itemsData[key].sub_type;
     if ([
         "Personal Weapons",
         "Undersuits",
