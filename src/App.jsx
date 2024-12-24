@@ -65,7 +65,6 @@ function App() {
             dictItem[id] = {
               id_item: id,
               options: [],
-              slug: item.slug,
             };
           }
           dictItem[id].options.push({
@@ -121,6 +120,8 @@ function App() {
         console.log(err);
       }
 
+      // console.log(dictItem);
+
       /* Rebuild dictionary with keys */
       const tempItemsData = {};
 
@@ -155,6 +156,7 @@ function App() {
           };
           let optionDict = {};
           for (const id of value.uex_ids) {
+            if (!dictItem[id]) continue;
             for (const option of dictItem[id].options) {
               if (!optionDict[option.id_terminal]) {
                 optionDict[option.id_terminal] = option;
@@ -178,7 +180,6 @@ function App() {
         }
       }
 
-      // console.log(dictItem);
       // console.log(Object.values(tempItemsData));
 
       /* Update price_min_max for each item */
@@ -226,10 +227,10 @@ function App() {
         {item &&
           (showMode === "variants" && itemListVariants.length > 1 ? (
             <ItemGroupInfo item={item} listVariants={itemListVariants} />
-          // ) : showMode === "set" && itemSet ? (
-          //   <ItemSetInfo item={item} set={itemSet} />
           ) : (
-            <ItemInfo item={item} listVariants={itemListVariants} set={itemSet}/>
+            // ) : showMode === "set" && itemSet ? (
+            //   <ItemSetInfo item={item} set={itemSet} />
+            <ItemInfo item={item} listVariants={itemListVariants} set={itemSet} />
           ))}
 
         <div className="footer" style={{ position: item ? "unset" : "absolute" }}>
