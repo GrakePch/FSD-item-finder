@@ -84,7 +84,11 @@ const ItemGroupInfo = ({ item, listVariants }) => {
           <button
             className="variant"
             key={vItem.key}
-            onClick={() => setSearchParams({ key: vItem.key })}
+            onClick={() => {
+              searchParams.delete("mode");
+              searchParams.set("key", vItem.key);
+              setSearchParams(searchParams);
+            }}
           >
             <p>{vItem.name_zh_Hans || vItem.name}</p>
             {vItem.price_min_max.buy_min && vItem.price_min_max.buy_min < Infinity ? (

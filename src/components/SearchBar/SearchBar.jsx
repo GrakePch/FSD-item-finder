@@ -4,9 +4,19 @@ import SearchResultList from "../SearchResultList/SearchResultList";
 import Icon from "@mdi/react";
 import { mdiArrowLeft, mdiClose, mdiMagnify } from "@mdi/js";
 import { AllItemsPriceContext } from "../../contexts";
-import { isAscii } from "../../utils";
+import { getCategoryZhName, isAscii } from "../../utils";
+import { useSearchParams } from "react-router";
+
+const filterTypes = [
+  "Vehicle",
+  "Systems",
+  "Vehicle Weapons",
+  "Personal Weapons",
+  "Armor",
+];
 
 const SearchBar = ({ centered }) => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const itemsData = useContext(AllItemsPriceContext);
   const [searchName, setSearchName] = useState("");
   const [showResults, setShowResults] = useState(false);
@@ -17,12 +27,16 @@ const SearchBar = ({ centered }) => {
   };
 
   useEffect(() => {
+    let filterType = searchParams.get("type");
     let tempList = [];
     if (
-      searchName.length > 0 &&
-      ((isAscii(searchName) && searchName.length > 1) || !isAscii(searchName))
+      (searchName.length > 0 &&
+        ((isAscii(searchName) && searchName.length > 1) || !isAscii(searchName))) ||
+      filterType
     )
-      for (const item of Object.values(itemsData)) {
+      for (const item of Object.values(itemsData).filter((i) =>
+        filterType ? i.type === filterType : true
+      )) {
         if (
           item.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase()) ||
           item.name_zh_Hans?.toLocaleLowerCase()?.includes(searchName.toLocaleLowerCase())
@@ -31,17 +45,17 @@ const SearchBar = ({ centered }) => {
         }
       }
 
-    if (tempList.length <= 100) {
+    if (tempList.length <= 300) {
       tempList.sort((a, b) => a.name.localeCompare(b.name));
     }
 
     // console.log(tempList);
     setResultList(tempList);
-  }, [itemsData, searchName]);
+  }, [itemsData, searchName, searchParams]);
 
   return (
     <div className="SearchBar">
-      {showResults && resultList.length > 0 && (
+      {showResults && (
         <div className="search-bg" onClick={() => setShowResults(false)}></div>
       )}
       <nav
@@ -50,13 +64,15 @@ const SearchBar = ({ centered }) => {
       >
         {centered && resultList.length <= 0 && (
           <>
-            <h1>星际寻物<span>Beta 版</span></h1>
+            <h1>
+              星际寻物<span>Beta 版</span>
+            </h1>
             <p>为星际公民提供查询物品购买地点与价格的服务</p>
             <p className="small">暂不支持货物和矿物的交易地点与价格</p>
           </>
         )}
         <div className="search-container">
-          {!(showResults && resultList.length > 0) ? (
+          {!showResults ? (
             <div className="btnSearch">
               <Icon path={mdiMagnify} size="1.5rem" />
             </div>
@@ -79,10 +95,32 @@ const SearchBar = ({ centered }) => {
             </button>
           )}
 
-          {showResults && resultList.length > 0 && (
+          {showResults && (
             <>
               <hr />
-              <p className="total">搜索结果共 {resultList.length} 个</p>
+              <div className="filters">
+                <p>筛选</p>
+                {filterTypes.map((t) => (
+                  <button
+                    key={t}
+                    onClick={() => {
+                      if (searchParams.get("type") === t) {
+                        searchParams.delete("type");
+                        setSearchParams(searchParams);
+                        return;
+                      }
+                      searchParams.set("type", t);
+                      setSearchParams(searchParams);
+                    }}
+                    className={t === searchParams.get("type") ? "active" : null}
+                  >
+                    {getCategoryZhName(t)}
+                  </button>
+                ))}
+              </div>
+              {resultList.length > 0 && (
+                <p className="total">搜索结果共 {resultList.length} 个</p>
+              )}
               <SearchResultList results={resultList} setShowResults={setShowResults} />
             </>
           )}

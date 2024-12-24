@@ -15,7 +15,14 @@ const SetButton = ({ subType, item, selfKey }) => {
   return item ? (
     <button
       className="SetButton"
-      onClick={item.key === selfKey ? null : () => setSearchParams({ key: item.key })}
+      onClick={
+        item.key === selfKey
+          ? null
+          : () => {
+              searchParams.set("key", item.key);
+              setSearchParams(searchParams);
+            }
+      }
     >
       <p>{tIcon[subType]}</p>
       <p className="zh">

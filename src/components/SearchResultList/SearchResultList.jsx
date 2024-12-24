@@ -7,7 +7,8 @@ const SearchResultList = ({ results, setShowResults }) => {
 
   const handleResultClick = (key) => {
     setShowResults(false);
-    setSearchParams({ key: key });
+    searchParams.set("key", key);
+    setSearchParams(searchParams);
   };
 
   return (

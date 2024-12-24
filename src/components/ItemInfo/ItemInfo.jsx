@@ -123,7 +123,10 @@ const ItemInfo = ({ item, listVariants, set }) => {
                 onClick={
                   item.key === vItem.key
                     ? null
-                    : () => setSearchParams({ key: vItem.key })
+                    : () => {
+                        searchParams.set("key", vItem.key);
+                        setSearchParams(searchParams);
+                      }
                 }
               >
                 <p>

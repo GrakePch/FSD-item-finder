@@ -107,7 +107,7 @@ button {
   font-family: inherit;
   color: var(--color-text);
   background-color: var(--color-bg-1);
-  transition: background-color .2s;
+  transition: background-color .2s, color .2s, box-shadow .2s;
   cursor: pointer;
 }
 
