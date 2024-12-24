@@ -48,7 +48,7 @@ const ItemInfo = ({ item, listVariants, set }) => {
         )}
       </div>
 
-      {(item.type === "Armor" || item.type === "Undersuits") && (
+      {set && (
         <>
           <hr />
           <div className="title-and-button">
