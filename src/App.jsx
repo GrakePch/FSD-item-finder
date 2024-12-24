@@ -177,8 +177,8 @@ function App() {
         }
       }
 
-      console.log(dictItem);
-      console.log(Object.values(tempItemsData));
+      // console.log(dictItem);
+      // console.log(Object.values(tempItemsData));
 
       /* Update price_min_max for each item */
       Object.values(tempItemsData).forEach((item) => {

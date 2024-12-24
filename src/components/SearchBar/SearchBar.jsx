@@ -52,6 +52,7 @@ const SearchBar = ({ centered }) => {
           <>
             <h1>星际寻物<span>Beta 版</span></h1>
             <p>为星际公民提供查询物品购买地点与价格的服务</p>
+            <p className="small">暂不支持货物和矿物的交易地点与价格</p>
           </>
         )}
         <div className="search-container">

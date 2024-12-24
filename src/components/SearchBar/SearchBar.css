@@ -46,8 +46,13 @@
 
 .SearchBar .search-super-container>p {
     text-align: center;
+    opacity: .8;
+}
+
+.SearchBar .search-super-container p.small {
+    font-size: .75rem;
     margin-bottom: 1rem;
-    opacity: .7;
+    opacity: .5;
 }
 
 .SearchBar .search-container {
