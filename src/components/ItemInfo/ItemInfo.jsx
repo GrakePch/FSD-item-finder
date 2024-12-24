@@ -71,7 +71,7 @@ const ItemInfo = ({ item, listVariants, set }) => {
             <SetButton subType="torso" item={set?.torso} selfKey={item.key} />
             <SetButton subType="arms" item={set?.arms} selfKey={item.key} />
             <SetButton subType="legs" item={set?.legs} selfKey={item.key} />
-            {/* <SetButton subType="backpack" item={set.backpack} selfKey={item.key} /> */}
+            <SetButton subType="backpack" item={set?.backpack} selfKey={item.key} />
           </div>
         </>
       )}

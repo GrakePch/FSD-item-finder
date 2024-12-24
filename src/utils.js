@@ -112,12 +112,13 @@ export function getSet(key, itemsData) {
     if (!itemsData[key]) return null;
 
     let set = {}
-    for (const str of ["helmet", "core", "arms", "legs"]) {
+    for (const str of ["helmet", "core", "arms", "legs", "backpack"]) {
         if (key.includes(str)) {
             set.helmet = itemsData[key.replace(str, "helmet")] || null;
             set.torso = itemsData[key.replace(str, "core")] || null;
             set.arms = itemsData[key.replace(str, "arms")] || null;
             set.legs = itemsData[key.replace(str, "legs")] || null;
+            set.backpack = itemsData[key.replace(str, "backpack")] || null;
             return set;
         }
     }
