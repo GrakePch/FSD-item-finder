@@ -27,7 +27,7 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
 
   useEffect(() => {
     /* Sort by location name first, no matter sort options */
-    let tempOptions = pricesData.toSorted((a, b) =>
+    let tempOptions = pricesData.filter(o => o.id_terminal in terminalsData).toSorted((a, b) =>
       getLocPath(a, terminalsData)
         .join("  ")
         .localeCompare(getLocPath(b, terminalsData).join("  "))

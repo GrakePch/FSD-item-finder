@@ -15,7 +15,7 @@ const filterTypes = [
   "Armor",
 ];
 
-const SearchBar = ({ centered }) => {
+const SearchBar = ({ centered, dataAcquired }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const itemsData = useContext(AllItemsPriceContext);
   const [searchName, setSearchName] = useState("");
@@ -84,10 +84,11 @@ const SearchBar = ({ centered }) => {
           <input
             type="input"
             id="searchbar"
-            placeholder="搜索物品或载具名称..."
+            placeholder={dataAcquired ? "搜索物品或载具名称……" : "数据加载中，请稍后……"}
             value={searchName}
             onFocus={() => setShowResults(true)}
             onChange={handleSearchChange}
+            disabled={!dataAcquired}
           />
           {searchName && (
             <button className="btnClear" onClick={() => setSearchName("")}>

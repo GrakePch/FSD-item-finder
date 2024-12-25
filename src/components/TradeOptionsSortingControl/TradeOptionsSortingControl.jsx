@@ -68,7 +68,7 @@ const TradeOptionsSortingControl = () => {
           <hr />
           <select
             className="bodies"
-            value={searchParams.get("from")}
+            value={searchParams.get("from") || ""}
             onChange={(e) => {
               searchParams.set("from", e.target.value);
               setSearchParams(searchParams);

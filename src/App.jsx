@@ -19,6 +19,7 @@ function App() {
   const [itemSet, setItemSet] = useState(null);
   const [showMode, setShowMode] = useState("");
   const [searchParams] = useSearchParams();
+  const [isItemsDataAcquired, setIsItemsDataAcquired] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -78,7 +79,9 @@ function App() {
             date_modified: item.date_modified,
           });
         }
+        setIsItemsDataAcquired(true);
       } catch (err) {
+        setIsItemsDataAcquired(false);
         console.log(err);
       }
       /* Fetch & reformat vehicles */
@@ -229,7 +232,7 @@ function App() {
   return (
     <AllTerminalsContext.Provider value={terminalsData}>
       <AllItemsPriceContext.Provider value={itemsData}>
-        <SearchBar centered={item === null} />
+        <SearchBar centered={item === null} dataAcquired={isItemsDataAcquired} />
 
         {item &&
           (showMode === "variants" && itemListVariants.length > 1 ? (
