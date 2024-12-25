@@ -38,14 +38,14 @@
 }
 
 .ItemInfo .zh {
-  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .ItemInfo .en {
   color: var(--color-text-1);
   line-height: 100%;
   margin-top: .5rem;
-  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .ItemInfo .types {
