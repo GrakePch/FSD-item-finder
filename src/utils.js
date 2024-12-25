@@ -182,3 +182,13 @@ export function readableDistance(dist) {
     dist /= 1000;
     return Math.round(dist * 10) / 10 + " Gm";
 }
+
+export function colorPrice(percent100) {
+    return `color-mix(in hsl longer hue, hsl(200deg 60% 50%), hsl(0deg 60% 50%) ${percent100}%`
+}
+
+export function colorLocationDepth(depth) {
+    if (depth == 0) return `#a5a5a5`;
+    return `color-mix(in hsl, #ffffff50, #ffffff0d ${((depth - 1) / 3) * 100
+        }%)`
+}

@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import "./TradeOptions.css";
 import {
+  colorLocationDepth,
+  colorPrice,
   getLocationZhName,
   getLocPath,
   getTerminalDistance,
@@ -71,39 +73,35 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
           options
             .filter((option) => option["price_" + tradeType] > 0)
             .map((option) => {
-              let hue =
-                200 -
-                percent(
-                  option["price_" + tradeType],
-                  priceMinMax[tradeType + "_min"],
-                  priceMinMax[tradeType + "_max"]
-                ) *
-                  2;
               return (
                 <div className="option" key={option.id_terminal}>
                   <p className="location">
-                    <span
-                      className="location-chip"
-                      style={{ backgroundColor: `var(--color-text-1)`, color: `#000` }}
-                    >
-                      {getLocationZhName(getLocPath(option, terminalsData)[0])}
-                    </span>
-                    {getLocPath(option, terminalsData)
-                      .slice(1)
-                      .map((loc, idx) => (
-                        <span
-                          key={idx}
-                          className="location-chip"
-                          style={{
-                            backgroundColor: `rgba(255 255 255 / ${(1 - idx / 4) * 0.2})`,
-                          }}
-                        >
-                          {getLocationZhName(loc)}
-                        </span>
-                      ))}
+                    {getLocPath(option, terminalsData).map((loc, depth) => (
+                      <span
+                        key={depth}
+                        className="location-chip"
+                        style={{
+                          backgroundColor: colorLocationDepth(depth),
+                          color: depth <= 0 && `#000`,
+                        }}
+                      >
+                        {getLocationZhName(loc)}
+                      </span>
+                    ))}
                   </p>
                   {option["price_" + tradeType] > 0 ? (
-                    <p className="price" style={{ color: `hsl(${hue}deg 60% 50%)` }}>
+                    <p
+                      className="price"
+                      style={{
+                        color: colorPrice(
+                          percent(
+                            option["price_" + tradeType],
+                            priceMinMax[tradeType + "_min"],
+                            priceMinMax[tradeType + "_max"]
+                          )
+                        ),
+                      }}
+                    >
                       ¤ {option["price_" + tradeType]}
                     </p>
                   ) : (
@@ -143,20 +141,28 @@ const addToTree = (tree, path, option) => {
 };
 
 const LocationForest = ({ forest, priceMin, priceMax, depth, tradeType }) => {
-  let bgcolor = `rgba(255 255 255 / ${(1 - (depth - 1) / 4) * 0.2})`;
   return Object.entries(forest).map(([key, loc]) => {
     if ("option" in loc) {
-      let hue = 200 - percent(loc.option["price_" + tradeType], priceMin, priceMax) * 2;
       return (
         <div className="option-in-tree" key={key}>
           <p className="location">
-            <span className="location-chip" style={{ backgroundColor: bgcolor }}>
+            <span
+              className="location-chip"
+              style={{ backgroundColor: colorLocationDepth(depth) }}
+            >
               {getLocationZhName(loc.name)}
             </span>
           </p>
           <p className="distance-info">{readableDistance(loc.option.distance)}</p>
           {loc.option["price_" + tradeType] > 0 ? (
-            <p className="price" style={{ color: `hsl(${hue}deg 60% 50%)` }}>
+            <p
+              className="price"
+              style={{
+                color: colorPrice(
+                  percent(loc.option["price_" + tradeType], priceMin, priceMax)
+                ),
+              }}
+            >
               ¤ {loc.option["price_" + tradeType]}
             </p>
           ) : (
@@ -171,11 +177,10 @@ const LocationForest = ({ forest, priceMin, priceMax, depth, tradeType }) => {
         <div key={key} className="location-tree-nowrap">
           <p
             className="location-chip"
-            style={
-              depth > 0
-                ? { backgroundColor: bgcolor }
-                : { backgroundColor: `var(--color-text-1)`, color: `#000` }
-            }
+            style={{
+              backgroundColor: colorLocationDepth(depth),
+              color: depth <= 0 && `#000`,
+            }}
           >
             {getLocationZhName(loc.name)}
           </p>
@@ -195,11 +200,10 @@ const LocationForest = ({ forest, priceMin, priceMax, depth, tradeType }) => {
         <div key={key} className="location-tree">
           <p
             className="location-chip"
-            style={
-              depth > 0
-                ? { backgroundColor: bgcolor }
-                : { backgroundColor: `var(--color-text-1)`, color: `#000` }
-            }
+            style={{
+              backgroundColor: colorLocationDepth(depth),
+              color: depth <= 0 && `#000`,
+            }}
           >
             {getLocationZhName(loc.name)}
           </p>
