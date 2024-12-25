@@ -192,3 +192,5 @@ export function colorLocationDepth(depth) {
     return `color-mix(in hsl, #ffffff50, #ffffff0d ${((depth - 1) / 3) * 100
         }%)`
 }
+
+export const date4_0 = 1734670320;

@@ -19,7 +19,8 @@
 
 .TradeOptions .option {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    gap: .5rem;
     padding: .25rem .5rem;
     border-radius: .5rem;
     outline: transparent solid 2px;
@@ -43,6 +44,17 @@
     border-radius: 4px;
     width: max-content;
     min-height: 1.5rem;
+}
+
+.TradeOptions .date-modified {
+    line-height: 1;
+    color: var(--color-text-1);
+    font-size: .75rem;
+    font-weight: 500;
+    font-family: var(--font-slim);
+    font-variant-numeric: tabular-nums;
+    display: flex;
+    align-items: center;
 }
 
 .TradeOptions .price {
@@ -126,7 +138,7 @@
 .TradeOptions .option-in-tree {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .5rem;
     padding-right: .5rem;
     /* padding: 0 .5rem; */
     /* margin-left: -.5rem; */
@@ -153,4 +165,12 @@
     font-size: .75rem;
     font-family: var(--font-slim);
     font-variant-numeric: tabular-nums;
+}
+
+.TradeOptions .annotation {
+    font-size: .75rem;
+    padding: .5rem 1rem;
+    color: #a06060;
+    display: flex;
+    align-items: center;
 }

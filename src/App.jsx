@@ -75,6 +75,7 @@ function App() {
             id_terminal: item.id_terminal,
             price_buy: item.price_buy || Infinity,
             price_sell: item.price_sell || 0,
+            date_modified: item.date_modified,
           });
         }
       } catch (err) {
@@ -97,6 +98,7 @@ function App() {
           dictItem[id].options.push({
             id_terminal: v.id_terminal,
             price_buy: v.price_buy || Infinity,
+            date_modified: v.date_modified,
           });
         }
       } catch (err) {
@@ -118,6 +120,7 @@ function App() {
           dictItem[id].options_rent.push({
             id_terminal: v.id_terminal,
             price_rent: v.price_rent || Infinity,
+            date_modified: v.date_modified,
           });
         }
       } catch (err) {

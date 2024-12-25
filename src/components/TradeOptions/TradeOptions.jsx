@@ -3,6 +3,7 @@ import "./TradeOptions.css";
 import {
   colorLocationDepth,
   colorPrice,
+  date4_0,
   getLocationZhName,
   getLocPath,
   getTerminalDistance,
@@ -10,6 +11,8 @@ import {
 } from "../../utils";
 import { AllTerminalsContext } from "../../contexts";
 import { useSearchParams } from "react-router";
+import Icon from "@mdi/react";
+import { mdiAlertCircleOutline } from "@mdi/js";
 
 const percent = (v, zero, hundred) => {
   if (zero === hundred) return 0;
@@ -73,6 +76,7 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
           options
             .filter((option) => option["price_" + tradeType] > 0)
             .map((option) => {
+              let date = new Date(option.date_modified * 1000);
               return (
                 <div className="option" key={option.id_terminal}>
                   <p className="location">
@@ -88,6 +92,15 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
                         {getLocationZhName(loc)}
                       </span>
                     ))}
+                  </p>
+                  <p
+                    className="date-modified"
+                    style={{ color: option.date_modified < date4_0 && "#a06060" }}
+                  >
+                    {option.date_modified < date4_0 && (
+                      <Icon path={mdiAlertCircleOutline} size="1rem" />
+                    )}
+                    {date.getMonth() + 1}/{date.getDate()}
                   </p>
                   {option["price_" + tradeType] > 0 ? (
                     <p
@@ -122,6 +135,10 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
           />
         )}
       </div>
+      <p className="annotation">
+        <Icon path={mdiAlertCircleOutline} size={"1rem"} />
+        标记的价格最后更新于4.0-Preview上线之前，可能会有较大误差。
+      </p>
     </div>
   );
 };
@@ -141,6 +158,7 @@ const addToTree = (tree, path, option) => {
 };
 
 const LocationForest = ({ forest, priceMin, priceMax, depth, tradeType }) => {
+  
   return Object.entries(forest).map(([key, loc]) => {
     if ("option" in loc) {
       return (
@@ -153,6 +171,9 @@ const LocationForest = ({ forest, priceMin, priceMax, depth, tradeType }) => {
               {getLocationZhName(loc.name)}
             </span>
           </p>
+          {loc.option.date_modified < date4_0 && (
+            <Icon path={mdiAlertCircleOutline} size="1rem" color="#a06060" />
+          )}
           <p className="distance-info">{readableDistance(loc.option.distance)}</p>
           {loc.option["price_" + tradeType] > 0 ? (
             <p
