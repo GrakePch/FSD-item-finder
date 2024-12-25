@@ -1,0 +1,59 @@
+.TradeOptionsSortingControl {
+    margin: 0 auto;
+    padding: .5rem .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    width:max-content;
+    max-width: 100%;
+    gap: .5rem;
+    background-color: var(--color-bg-1);
+    border-radius: 1rem;
+}
+
+.TradeOptionsSortingControl>button {
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    padding-left: .75rem;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    font-size: .8333rem;
+}
+
+.TradeOptionsSortingControl>button.active {
+    color: #000;
+    background-color: var(--color-text);
+}
+
+.TradeOptionsSortingControl .selectors {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* gap: .5rem; */
+    width: 7rem;
+}
+
+.TradeOptionsSortingControl .selectors>select {
+    flex-grow: 1;
+    display: block;
+    border: none;
+    color: var(--color-text);
+    background-color: var(--color-bg-2);
+    border-radius: 0;
+}
+
+.TradeOptionsSortingControl .selectors .systems {
+    border-radius: .5rem .5rem 0 0;
+}
+
+.TradeOptionsSortingControl .selectors .bodies {
+    border-radius: 0 0 .5rem .5rem;
+}
+
+.TradeOptionsSortingControl .selectors>hr {
+    background-color: var(--color-text-1);
+    margin: 0;
+    width: auto;
+}

@@ -1,7 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import "./TradeOptions.css";
-import { getLocationZhName, getLocPath } from "../../utils";
+import {
+  getLocationZhName,
+  getLocPath,
+  getTerminalDistance,
+  readableDistance,
+} from "../../utils";
 import { AllTerminalsContext } from "../../contexts";
+import { useSearchParams } from "react-router";
 
 const percent = (v, zero, hundred) => {
   if (zero === hundred) return 0;
@@ -9,25 +15,34 @@ const percent = (v, zero, hundred) => {
 };
 
 const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const terminalsData = useContext(AllTerminalsContext);
-  const [sortBy, setSortBy] = useState("price");
-  const [sortDir, setSortDir] = useState(1);
   const [options, setOptions] = useState([]);
   const [locationForest, setLocationForest] = useState({});
 
   useEffect(() => {
-    let tempOptions = pricesData.toSorted(
-      (a, b) =>
-        (sortBy === "location"
-          ? getLocPath(a, terminalsData)
-              .join()
-              .localeCompare(getLocPath(b, terminalsData).join())
-          : a["price_" + tradeType] - b["price_" + tradeType]) * sortDir
+    /* Sort by location name first, no matter sort options */
+    let tempOptions = pricesData.toSorted((a, b) =>
+      getLocPath(a, terminalsData)
+        .join("  ")
+        .localeCompare(getLocPath(b, terminalsData).join("  "))
     );
+
+    /* Compute Distances from the "from" param, and sort by distance */
+    let fromBodyName = searchParams.get("from");
+    tempOptions.forEach((e) => {
+      e.distance = getTerminalDistance(e, fromBodyName, terminalsData);
+    });
+    tempOptions.sort((a, b) => a.distance - b.distance);
+
+    /* Sort by sorting options */
+    if (searchParams.get("sort") === "price") {
+      tempOptions.sort((a, b) => a["price_" + tradeType] - b["price_" + tradeType]);
+    }
 
     // console.log(tempOptions);
     setOptions(tempOptions);
-  }, [pricesData, sortBy, sortDir]);
+  }, [pricesData, searchParams]);
 
   useEffect(() => {
     if (options.length <= 0) {
@@ -48,36 +63,11 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
   return (
     <div className="TradeOptions">
       <div className="titles">
-        <h4
-          className="location"
-          onClick={() => {
-            if (sortBy === "location") {
-              setSortDir(-1 * sortDir);
-            } else {
-              setSortBy("location");
-              setSortDir(1);
-            }
-          }}
-        >
-          地点{sortBy === "location" ? (sortDir > 0 ? " ▲" : " ▼") : " △"}
-        </h4>
-        <h4
-          className="price"
-          onClick={() => {
-            if (sortBy === "price") {
-              setSortDir(-1 * sortDir);
-            } else {
-              setSortBy("price");
-              setSortDir(1);
-            }
-          }}
-        >
-          {tradeType === "buy" ? "购买价格" : "单日租赁价格"}
-          {sortBy === "price" ? (sortDir > 0 ? " ▲" : " ▼") : " △"}
-        </h4>
+        <h3 className="location">{tradeType === "buy" ? "购买" : "租赁"}地点</h3>
+        <h4 className="price">{tradeType === "buy" ? "购买价格" : "单日租赁价格"}</h4>
       </div>
       <div className="options-container">
-        {sortBy === "price" ? (
+        {searchParams.get("sort") === "price" ? (
           options
             .filter((option) => option["price_" + tradeType] > 0)
             .map((option) => {
@@ -164,6 +154,7 @@ const LocationForest = ({ forest, priceMin, priceMax, depth, tradeType }) => {
               {getLocationZhName(loc.name)}
             </span>
           </p>
+          <p className="distance-info">{readableDistance(loc.option.distance)}</p>
           {loc.option["price_" + tradeType] > 0 ? (
             <p className="price" style={{ color: `hsl(${hue}deg 60% 50%)` }}>
               ¤ {loc.option["price_" + tradeType]}

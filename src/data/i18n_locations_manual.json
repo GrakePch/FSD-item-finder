@@ -31,5 +31,17 @@
     },
     "pyro vi": {
         "zh": "端点星"
+    },
+    "stanton-magnus jp": {
+        "zh": "马格努斯跳跃点"
+    },
+    "stanton-terra jp": {
+        "zh": "泰拉跳跃点"
+    },
+    "stanton-pyro jp": {
+        "zh": "派罗跳跃点"
+    },
+    "pyro-stanton jp": {
+        "zh": "斯坦顿跳跃点"
     }
 }

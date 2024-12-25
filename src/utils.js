@@ -3,7 +3,9 @@ import vehiclesUex from "./data/vehicles_uex.json";
 import i18nLocations from "./data/i18n_locations.json";
 import i18nLocationsM from "./data/i18n_locations_manual.json";
 import i18nCategories from "./data/categories_en_to_zh_Hans.json";
-import uexIdsAndI18n from "./data/items_uex_ids_and_i18n.json"
+import uexIdsAndI18n from "./data/items_uex_ids_and_i18n.json";
+import bodies from "./data/bodies.json";
+import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
 
 export function isAscii(char) {
     const code = char[0].charCodeAt(0);
@@ -11,6 +13,7 @@ export function isAscii(char) {
 }
 
 export function getLocationZhName(name_en) {
+    // return name_en;
     if (!name_en) return name_en;
     let en = name_en.toLowerCase();
     if (i18nLocations[en]) return i18nLocations[en].zh;
@@ -123,4 +126,59 @@ export function getSet(key, itemsData) {
         }
     }
     return null;
+}
+
+function getDistance(v1, v2) {
+    return Math.sqrt((v1[0] - v2[0]) ** 2 + (v1[1] - v2[1]) ** 2 + (v1[2] - v2[2]) ** 2);
+}
+
+export function getBody(name) {
+    /* Manually fix the name difference between UEX and bodies.json */
+    let manualFixIfPossible = uexBodiesFixM[name];
+    return bodies.find(e => e.name === name)
+        || bodies.find(e => e.name === manualFixIfPossible)
+        || null;
+}
+
+export function getSystems() {
+    let systems = {};
+    let flattened = {};
+    for (const body of bodies) {
+        let cbody = structuredClone(body);
+        cbody.children = [];
+        flattened[cbody.name] = cbody;
+        if (!cbody.parentBody) {
+            systems[cbody.name] = cbody;
+        } else {
+            flattened[cbody.parentBody].children.push(cbody);
+        }
+    }
+    return systems;
+}
+
+export function getBodiesDistance(b1, b2) {
+    let info1 = getBody(b1);
+    let info2 = getBody(b2);
+    if (!info1 || !info2) return Infinity;
+    if ((info1.parentStar || info1.name) !== (info2.parentStar || info2.name)) return Infinity; //TODO: Better calculation for interstellar distance
+    return getDistance(
+        [info1.x, info1.y, info1.z],
+        [info2.x, info2.y, info2.z]
+    )
+}
+
+export function getTerminalDistance(op, body, tdata) {
+    let locPath = getLocPath(op, tdata);
+    if (!locPath) return Infinity;
+    return getBodiesDistance(locPath[1], body);
+}
+
+export function readableDistance(dist) {
+    if (dist === 0) return "附近";
+    if (dist === Infinity) return "星系外";
+    if (dist < 1000) return Math.round(dist * 10) / 10 + " km";
+    dist /= 1000;
+    if (dist < 1000) return Math.round(dist * 10) / 10 + " Mm";
+    dist /= 1000;
+    return Math.round(dist * 10) / 10 + " Gm";
 }

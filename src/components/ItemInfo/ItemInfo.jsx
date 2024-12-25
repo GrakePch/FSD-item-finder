@@ -6,6 +6,7 @@ import { mdiTagMultipleOutline } from "@mdi/js";
 import SetButton from "../SetButton/SetButton";
 import { getCategoryZhName } from "../../utils";
 import TagCurrent from "../TagCurrent/TagCurrent";
+import TradeOptionsSortingControl from "../TradeOptionsSortingControl/TradeOptionsSortingControl";
 
 const uexLinkItem = "https://uexcorp.space/items/info?name=";
 const uexLinkVehicle = "https://uexcorp.space/vehicles/home/list/in_game_sell/";
@@ -76,10 +77,10 @@ const ItemInfo = ({ item, listVariants, set }) => {
         </>
       )}
 
+      <hr />
+      <TradeOptionsSortingControl />
       {item.options && item.options.length > 0 && (
         <>
-          <hr />
-          <h3 className="trade-options-title">购买</h3>
           <TradeOptions
             pricesData={item.options}
             priceMinMax={item.price_min_max}
@@ -90,8 +91,6 @@ const ItemInfo = ({ item, listVariants, set }) => {
 
       {item.options_rent && item.options_rent.length > 0 && (
         <>
-          <hr />
-          <h3 className="trade-options-title">租赁</h3>
           <TradeOptions
             pricesData={item.options_rent}
             priceMinMax={item.price_min_max}

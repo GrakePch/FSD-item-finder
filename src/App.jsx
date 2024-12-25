@@ -25,29 +25,33 @@ function App() {
       /* Fetch & reformat terminals */
       try {
         const res = await axios.get("https://uexcorp.space/api/2.0/terminals");
-        let temp = res.data.data.map((t) => ({
-          id: t.id,
-          code: t.code,
-          name: t.name,
-          location_path: [
-            t.star_system_name,
-            t.orbit_name,
-            ...t.name.split(" - ").reverse(),
-          ],
-          location: {
-            name_star_system: t.star_system_name,
-            name_planet: t.planet_name,
-            name_orbit: t.orbit_name,
-            name_moon: t.moon_name,
-            name_space_station: t.space_station_name,
-            name_outpost: t.outpost_name,
-            name_city: t.city_name,
-          },
-          screenshot: t.screenshot,
-          screenshot_thumb: t.screenshot_thumb,
-          screenshot_author: t.screenshot_author,
-          name_faction: t.faction_name,
-        }));
+        let temp = res.data.data.map((t) => {
+          let orbit_name_fix = t.orbit_name;
+          if (t.star_system_name === "Pyro" && t.orbit_name === "Pyro Jump Point")
+            orbit_name_fix = "Stanton Jump Point";
+          let locPath3rd = t.name.split(" - ").reverse();
+          if (locPath3rd[0] === "Stanton Gateway Station")
+            locPath3rd[0] = "Stanton Gateway";
+          return {
+            id: t.id,
+            code: t.code,
+            name: t.name,
+            location_path: [t.star_system_name, orbit_name_fix, ...locPath3rd],
+            location: {
+              name_star_system: t.star_system_name,
+              name_planet: t.planet_name,
+              name_orbit: orbit_name_fix,
+              name_moon: t.moon_name,
+              name_space_station: t.space_station_name,
+              name_outpost: t.outpost_name,
+              name_city: t.city_name,
+            },
+            screenshot: t.screenshot,
+            screenshot_thumb: t.screenshot_thumb,
+            screenshot_author: t.screenshot_author,
+            name_faction: t.faction_name,
+          };
+        });
         let tempDict = {};
         for (const t of temp) tempDict[t.id] = t;
         // console.log(tempDict);

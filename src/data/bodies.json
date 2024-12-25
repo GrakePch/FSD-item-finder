@@ -1,0 +1,713 @@
+[
+    {
+      "name": "Stanton",
+      "type": "Star",
+      "parentBody": null,
+      "parentStar": null,
+      "x": 136049.87,
+      "y": 1294427.4,
+      "z": 2923345.368
+    },
+    {
+      "name": "ArcCorp",
+      "type": "Planet",
+      "parentBody": "Stanton",
+      "parentStar": "Stanton",
+      "x": 18587664.74,
+      "y": -22151916.92,
+      "z": 0.0
+    },
+    {
+      "name": "Crusader",
+      "type": "Planet",
+      "parentBody": "Stanton",
+      "parentStar": "Stanton",
+      "x": -18962176.0,
+      "y": -2664960.0,
+      "z": 0.0
+    },
+    {
+      "name": "Hurston",
+      "type": "Planet",
+      "parentBody": "Stanton",
+      "parentStar": "Stanton",
+      "x": 12850457.093,
+      "y": 0.0,
+      "z": 0.0
+    },
+    {
+      "name": "microTech",
+      "type": "Planet",
+      "parentBody": "Stanton",
+      "parentStar": "Stanton",
+      "x": 22462085.252,
+      "y": 37185744.965,
+      "z": 0.0
+    },
+    {
+      "name": "Aberdeen",
+      "type": "Moon",
+      "parentBody": "Hurston",
+      "parentStar": "Stanton",
+      "x": 12905757.636,
+      "y": 40955.551,
+      "z": 0.0
+    },
+    {
+      "name": "Arial",
+      "type": "Moon",
+      "parentBody": "Hurston",
+      "parentStar": "Stanton",
+      "x": 12892673.309,
+      "y": -31476.129,
+      "z": 0.0
+    },
+    {
+      "name": "Calliope",
+      "type": "Moon",
+      "parentBody": "microTech",
+      "parentStar": "Stanton",
+      "x": 22398369.308,
+      "y": 37168840.679,
+      "z": 0.0
+    },
+    {
+      "name": "Cellin",
+      "type": "Moon",
+      "parentBody": "Crusader",
+      "parentStar": "Stanton",
+      "x": -18987611.119,
+      "y": -2709009.661,
+      "z": 0.0
+    },
+    {
+      "name": "Clio",
+      "type": "Moon",
+      "parentBody": "microTech",
+      "parentStar": "Stanton",
+      "x": 22476728.221,
+      "y": 37091020.074,
+      "z": 0.0
+    },
+    {
+      "name": "Daymar",
+      "type": "Moon",
+      "parentBody": "Crusader",
+      "parentStar": "Stanton",
+      "x": -18930539.54,
+      "y": -2610158.765,
+      "z": 0.0
+    },
+    {
+      "name": "Euterpe",
+      "type": "Moon",
+      "parentBody": "microTech",
+      "parentStar": "Stanton",
+      "x": 22488109.736,
+      "y": 37081123.565,
+      "z": 0.0
+    },
+    {
+      "name": "Ita",
+      "type": "Moon",
+      "parentBody": "Hurston",
+      "parentStar": "Stanton",
+      "x": 12830194.716,
+      "y": 114913.609,
+      "z": 0.0
+    },
+    {
+      "name": "Lyria",
+      "type": "Moon",
+      "parentBody": "ArcCorp",
+      "parentStar": "Stanton",
+      "x": 18703607.172,
+      "y": -22121650.134,
+      "z": 0.0
+    },
+    {
+      "name": "Magda",
+      "type": "Moon",
+      "parentBody": "Hurston",
+      "parentStar": "Stanton",
+      "x": 12792686.359,
+      "y": -74464.581,
+      "z": 0.0
+    },
+    {
+      "name": "Wala",
+      "type": "Moon",
+      "parentBody": "ArcCorp",
+      "parentStar": "Stanton",
+      "x": 18379649.31,
+      "y": -22000466.768,
+      "z": 0.0
+    },
+    {
+      "name": "Yela",
+      "type": "Moon",
+      "parentBody": "Crusader",
+      "parentStar": "Stanton",
+      "x": -19022916.799,
+      "y": -2613996.152,
+      "z": 0.0
+    },
+    {
+      "name": "ARC-L1",
+      "type": "Lagrange Point",
+      "parentBody": "ArcCorp",
+      "parentStar": "Stanton",
+      "x": 16729134.637,
+      "y": -19937006.925,
+      "z": 8.077
+    },
+    {
+      "name": "ARC-L2",
+      "type": "Lagrange Point",
+      "parentBody": "ArcCorp",
+      "parentStar": "Stanton",
+      "x": 20446718.503,
+      "y": -24367450.991,
+      "z": 8.077
+    },
+    {
+      "name": "ARC-L3",
+      "type": "Lagrange Point",
+      "parentBody": "ArcCorp",
+      "parentStar": "Stanton",
+      "x": -25043446.884,
+      "y": 14458841.788,
+      "z": 8.077
+    },
+    {
+      "name": "ARC-L4",
+      "type": "Lagrange Point",
+      "parentBody": "ArcCorp",
+      "parentStar": "Stanton",
+      "x": 28478354.916,
+      "y": 5021502.483,
+      "z": 8.077
+    },
+    {
+      "name": "ARC-L5",
+      "type": "Lagrange Point",
+      "parentBody": "ArcCorp",
+      "parentStar": "Stanton",
+      "x": -9890422.516,
+      "y": -27173732.225,
+      "z": 8.077
+    },
+    {
+      "name": "CRU-L1",
+      "type": "Lagrange Point",
+      "parentBody": "Crusader",
+      "parentStar": "Stanton",
+      "x": -17065957.376,
+      "y": -2398464.0,
+      "z": 0.0
+    },
+    {
+      "name": "CRU-L2",
+      "type": "Lagrange Point",
+      "parentBody": "Crusader",
+      "parentStar": "Stanton",
+      "x": -20858376.485,
+      "y": -2931474.402,
+      "z": 0.0
+    },
+    {
+      "name": "CRU-L3",
+      "type": "Lagrange Point",
+      "parentBody": "Crusader",
+      "parentStar": "Stanton",
+      "x": 18962164.826,
+      "y": 2664965.041,
+      "z": 0.0
+    },
+    {
+      "name": "CRU-L4",
+      "type": "Lagrange Point",
+      "parentBody": "Crusader",
+      "parentStar": "Stanton",
+      "x": -7173168.64,
+      "y": -17754204.16,
+      "z": 0.0
+    },
+    {
+      "name": "CRU-L5",
+      "type": "Lagrange Point",
+      "parentBody": "Crusader",
+      "parentStar": "Stanton",
+      "x": -11789008.988,
+      "y": 15089246.107,
+      "z": 0.0
+    },
+    {
+      "name": "HUR-L1",
+      "type": "Lagrange Point",
+      "parentBody": "Hurston",
+      "parentStar": "Stanton",
+      "x": 11565411.328,
+      "y": 0.0,
+      "z": 0.0
+    },
+    {
+      "name": "HUR-L2",
+      "type": "Lagrange Point",
+      "parentBody": "Hurston",
+      "parentStar": "Stanton",
+      "x": 14135502.848,
+      "y": 0.0,
+      "z": 0.0
+    },
+    {
+      "name": "HUR-L3",
+      "type": "Lagrange Point",
+      "parentBody": "Hurston",
+      "parentStar": "Stanton",
+      "x": -12850457.6,
+      "y": -1.123,
+      "z": 0.0
+    },
+    {
+      "name": "HUR-L4",
+      "type": "Lagrange Point",
+      "parentBody": "Hurston",
+      "parentStar": "Stanton",
+      "x": 6425228.288,
+      "y": 11128823.808,
+      "z": 0.0
+    },
+    {
+      "name": "HUR-L5",
+      "type": "Lagrange Point",
+      "parentBody": "Hurston",
+      "parentStar": "Stanton",
+      "x": 6425227.776,
+      "y": -11128823.808,
+      "z": 0.0
+    },
+    {
+      "name": "MIC-L1",
+      "type": "Lagrange Point",
+      "parentBody": "microTech",
+      "parentStar": "Stanton",
+      "x": 20215824.238,
+      "y": 33467065.008,
+      "z": 0.0
+    },
+    {
+      "name": "MIC-L2",
+      "type": "Lagrange Point",
+      "parentBody": "microTech",
+      "parentStar": "Stanton",
+      "x": 24708827.153,
+      "y": 40905202.459,
+      "z": 0.0
+    },
+    {
+      "name": "MIC-L3",
+      "type": "Lagrange Point",
+      "parentBody": "microTech",
+      "parentStar": "Stanton",
+      "x": -22457170.266,
+      "y": -37187612.396,
+      "z": 0.0
+    },
+    {
+      "name": "MIC-L4",
+      "type": "Lagrange Point",
+      "parentBody": "microTech",
+      "parentStar": "Stanton",
+      "x": -20971933.23,
+      "y": 38045504.032,
+      "z": 0.0
+    },
+    {
+      "name": "MIC-L5",
+      "type": "Lagrange Point",
+      "parentBody": "microTech",
+      "parentStar": "Stanton",
+      "x": 43435204.288,
+      "y": -851406.956,
+      "z": 0.0
+    },
+    {
+      "name": "Stanton-Magnus JP",
+      "type": "Jump Point",
+      "parentBody": "Stanton",
+      "parentStar": "Stanton",
+      "x": -62284273.861,
+      "y": 23467618.051,
+      "z": 20198396.608
+    },
+    {
+      "name": "Stanton-Pyro JP",
+      "type": "Jump Point",
+      "parentBody": "Stanton",
+      "parentStar": "Stanton",
+      "x": 3310491.64,
+      "y": -27979408.221,
+      "z": -2676285.679
+    },
+    {
+      "name": "Stanton-Terra JP",
+      "type": "Jump Point",
+      "parentBody": "Stanton",
+      "parentStar": "Stanton",
+      "x": 51118221.617,
+      "y": -5269981.303,
+      "z": -4339551.619
+    },
+    {
+      "name": "Pyro",
+      "type": "Star",
+      "parentBody": null,
+      "parentStar": null,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    {
+      "name": "Pyro I",
+      "type": "Planet",
+      "parentBody": "Pyro",
+      "parentStar": "Pyro",
+      "x": 1720027.321,
+      "y": -8091980.53,
+      "z": 0.0
+    },
+    {
+      "name": "Monox",
+      "type": "Planet",
+      "parentBody": "Pyro",
+      "parentStar": "Pyro",
+      "x": 9198417.196,
+      "y": 5310746.464,
+      "z": 0.0
+    },
+    {
+      "name": "Bloom",
+      "type": "Planet",
+      "parentBody": "Pyro",
+      "parentStar": "Pyro",
+      "x": -8900812.465,
+      "y": -15417125.828,
+      "z": 0.0
+    },
+    {
+      "name": "Pyro V",
+      "type": "Planet",
+      "parentBody": "Pyro",
+      "parentStar": "Pyro",
+      "x": 42285285.514,
+      "y": -7454592.607,
+      "z": 0.0
+    },
+    {
+      "name": "Pyro IV",
+      "type": "Planet",
+      "parentBody": "Pyro V",
+      "parentStar": "Pyro",
+      "x": 42614426.19,
+      "y": -7273205.337,
+      "z": 0.0
+    },
+    {
+      "name": "Terminus",
+      "type": "Planet",
+      "parentBody": "Pyro",
+      "parentStar": "Pyro",
+      "x": -52336519.523,
+      "y": -43918227.841,
+      "z": 0.0
+    },
+    {
+      "name": "Ignis",
+      "type": "Moon",
+      "parentBody": "Pyro V",
+      "parentStar": "Pyro",
+      "x": 42296896.252,
+      "y": -7508654.045,
+      "z": 0.0
+    },
+    {
+      "name": "Vatra",
+      "type": "Moon",
+      "parentBody": "Pyro V",
+      "parentStar": "Pyro",
+      "x": 42216744.564,
+      "y": -7426205.056,
+      "z": 0.0
+    },
+    {
+      "name": "Adir",
+      "type": "Moon",
+      "parentBody": "Pyro V",
+      "parentStar": "Pyro",
+      "x": 42263774.718,
+      "y": -7355835.885,
+      "z": 0.0
+    },
+    {
+      "name": "Fairo",
+      "type": "Moon",
+      "parentBody": "Pyro V",
+      "parentStar": "Pyro",
+      "x": 42403120.915,
+      "y": -7498712.832,
+      "z": 0.0
+    },
+    {
+      "name": "Fuego",
+      "type": "Moon",
+      "parentBody": "Pyro V",
+      "parentStar": "Pyro",
+      "x": 42364491.779,
+      "y": -7328588.036,
+      "z": 0.0
+    },
+    {
+      "name": "Vuur",
+      "type": "Moon",
+      "parentBody": "Pyro V",
+      "parentStar": "Pyro",
+      "x": 42164417.395,
+      "y": -7582710.086,
+      "z": 0.0
+    },
+    {
+      "name": "PYR1 L1",
+      "type": "Lagrange Point",
+      "parentBody": "Pyro I",
+      "parentStar": "Pyro",
+      "x": 1548052.237,
+      "y": -7282776.293,
+      "z": 0.0
+    },
+    {
+      "name": "PYR1 L2",
+      "type": "Lagrange Point",
+      "parentBody": "Pyro I",
+      "parentStar": "Pyro",
+      "x": 1892033.736,
+      "y": -8901175.59,
+      "z": 0.0
+    },
+    {
+      "name": "PYR1 L3",
+      "type": "Lagrange Point",
+      "parentBody": "Pyro I",
+      "parentStar": "Pyro",
+      "x": -1533855.859,
+      "y": 8431465.506,
+      "z": 0.0
+    },
+    {
+      "name": "PYR1 L4",
+      "type": "Lagrange Point",
+      "parentBody": "Pyro I",
+      "parentStar": "Pyro",
+      "x": 7867868.216,
+      "y": -2556420.683,
+      "z": 0.0
+    },
+    {
+      "name": "PYR1 L5",
+      "type": "Lagrange Point",
+      "parentBody": "Pyro I",
+      "parentStar": "Pyro",
+      "x": -6147856.501,
+      "y": -5535560.685,
+      "z": 0.0
+    },
+    {
+      "name": "PYR2 L1",
+      "type": "Lagrange Point",
+      "parentBody": "Monox",
+      "parentStar": "Pyro",
+      "x": 8278595.491,
+      "y": 4779652.117,
+      "z": 0.0
+    },
+    {
+      "name": "PYR2 L2",
+      "type": "Lagrange Point",
+      "parentBody": "Monox",
+      "parentStar": "Pyro",
+      "x": 10118286.02,
+      "y": 5841798.558,
+      "z": 0.0
+    },
+    {
+      "name": "PYR2 L3",
+      "type": "Lagrange Point",
+      "parentBody": "Monox",
+      "parentStar": "Pyro",
+      "x": -10460083.789,
+      "y": -1844403.453,
+      "z": 0.0
+    },
+    {
+      "name": "PYR2 L4",
+      "type": "Lagrange Point",
+      "parentBody": "Monox",
+      "parentStar": "Pyro",
+      "x": 1844386.069,
+      "y": 10460084.412,
+      "z": 0.0
+    },
+    {
+      "name": "PYR2 L5",
+      "type": "Lagrange Point",
+      "parentBody": "Monox",
+      "parentStar": "Pyro",
+      "x": 8136519.388,
+      "y": -6827318.565,
+      "z": 0.0
+    },
+    {
+      "name": "PYR3 L1",
+      "type": "Lagrange Point",
+      "parentBody": "Bloom",
+      "parentStar": "Pyro",
+      "x": -8010940.983,
+      "y": -13875410.316,
+      "z": 0.0
+    },
+    {
+      "name": "PYR3 L2",
+      "type": "Lagrange Point",
+      "parentBody": "Bloom",
+      "parentStar": "Pyro",
+      "x": -9791149.426,
+      "y": -16958833.68,
+      "z": 0.0
+    },
+    {
+      "name": "PYR3 L3",
+      "type": "Lagrange Point",
+      "parentBody": "Bloom",
+      "parentStar": "Pyro",
+      "x": 11443001.61,
+      "y": 13637238.703,
+      "z": 0.0
+    },
+    {
+      "name": "PYR3 L4",
+      "type": "Lagrange Point",
+      "parentBody": "Bloom",
+      "parentStar": "Pyro",
+      "x": 8901105.161,
+      "y": -15417096.892,
+      "z": 0.0
+    },
+    {
+      "name": "PYR3 L5",
+      "type": "Lagrange Point",
+      "parentBody": "Bloom",
+      "parentStar": "Pyro",
+      "x": -11443002.538,
+      "y": 13637233.035,
+      "z": 0.0
+    },
+    {
+      "name": "PYR5 L1",
+      "type": "Lagrange Point",
+      "parentBody": "Pyro V",
+      "parentStar": "Pyro",
+      "x": 38056546.47,
+      "y": -6710238.083,
+      "z": 0.0
+    },
+    {
+      "name": "PYR5 L2",
+      "type": "Lagrange Point",
+      "parentBody": "Pyro V",
+      "parentStar": "Pyro",
+      "x": 46513574.526,
+      "y": -8201358.903,
+      "z": 0.0
+    },
+    {
+      "name": "PYR5 L3",
+      "type": "Lagrange Point",
+      "parentBody": "Pyro V",
+      "parentStar": "Pyro",
+      "x": -37184863.543,
+      "y": 21468613.29,
+      "z": 0.0
+    },
+    {
+      "name": "PYR5 L4",
+      "type": "Lagrange Point",
+      "parentBody": "Pyro V",
+      "parentStar": "Pyro",
+      "x": 14685416.672,
+      "y": 40347900.081,
+      "z": 0.0
+    },
+    {
+      "name": "PYR5 L5",
+      "type": "Lagrange Point",
+      "parentBody": "Pyro V",
+      "parentStar": "Pyro",
+      "x": 3742466.61,
+      "y": -42773928.702,
+      "z": 0.0
+    },
+    {
+      "name": "PYR6 L1",
+      "type": "Lagrange Point",
+      "parentBody": "Terminus",
+      "parentStar": "Pyro",
+      "x": -50692535.086,
+      "y": -42536399.363,
+      "z": 0.0
+    },
+    {
+      "name": "PYR6 L2",
+      "type": "Lagrange Point",
+      "parentBody": "Terminus",
+      "parentStar": "Pyro",
+      "x": -54297046.592,
+      "y": -45561095.035,
+      "z": 0.0
+    },
+    {
+      "name": "PYR6 L3",
+      "type": "Lagrange Point",
+      "parentBody": "Terminus",
+      "parentStar": "Pyro",
+      "x": 48311253.893,
+      "y": 48311302.761,
+      "z": 0.0
+    },
+    {
+      "name": "PYR6 L4",
+      "type": "Lagrange Point",
+      "parentBody": "Terminus",
+      "parentStar": "Pyro",
+      "x": 23368016.469,
+      "y": -64202027.675,
+      "z": 0.0
+    },
+    {
+      "name": "PYR6 L5",
+      "type": "Lagrange Point",
+      "parentBody": "Terminus",
+      "parentStar": "Pyro",
+      "x": -59169086.144,
+      "y": 34161126.286,
+      "z": 0.0
+    },
+    {
+      "name": "Pyro-Stanton JP",
+      "type": "Jump Point",
+      "parentBody": "Pyro",
+      "parentStar": "Pyro",
+      "x": -37609204.291,
+      "y": 37435781.484,
+      "z": 0.0
+    }
+  ]

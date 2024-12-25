@@ -3,6 +3,10 @@
   padding-top: 6rem;
 }
 
+.ItemInfo>*{
+  margin-bottom: 1rem;
+}
+
 .ItemInfo .info-and-image {
   padding: 0 1rem;
   display: flex;
@@ -79,15 +83,16 @@
   border: none;
   width: calc(100% - 2rem);
   height: 1px;
-  margin: 1rem 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   background-color: var(--color-text);
   opacity: .5;
 }
 
-.ItemInfo .trade-options-title {
+/* .ItemInfo .trade-options-title {
   padding: 0 1rem;
   margin-bottom: .5rem;
-}
+} */
 
 .ItemInfo .title-and-button {
   display: flex;

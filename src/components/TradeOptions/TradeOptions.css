@@ -1,20 +1,14 @@
 .TradeOptions .titles {
     display: flex;
+    align-items: end;
     gap: .5rem;
     width: 100%;
     padding: 0 .5rem;
 }
 
+.TradeOptions .titles>h3,
 .TradeOptions .titles>h4 {
     padding: .25rem .5rem;
-    background-color: var(--color-bg-1);
-    border-radius: .5rem;
-    cursor: pointer;
-    transition: background .2s;
-}
-
-.TradeOptions .titles>h4:hover {
-    background-color: var(--color-bg-2);
 }
 
 .TradeOptions .options-container {
@@ -131,6 +125,7 @@
 
 .TradeOptions .option-in-tree {
     display: flex;
+    align-items: center;
     gap: 1rem;
     padding-right: .5rem;
     /* padding: 0 .5rem; */
@@ -149,5 +144,13 @@
     color: hsl(200deg 60% 50%);
     font-family: var(--font-slim);
     font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.TradeOptions .option-in-tree>.distance-info {
+    line-height: 1;
+    color: var(--color-text-1);
+    font-size: .75rem;
+    font-family: var(--font-slim);
     font-variant-numeric: tabular-nums;
 }
