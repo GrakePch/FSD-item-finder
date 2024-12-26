@@ -1,0 +1,81 @@
+{
+    "Systems": {
+        "Shield Generators": [
+            "Shield Generator"
+        ],
+        "Coolers": [
+            "Cooler"
+        ],
+        "Computer": [
+            "Computer"
+        ]
+    },
+    "Vehicle Weapons": {
+        "Guns": [
+            "Distortion Scattergun",
+            "Ballistic Cannon",
+            "Plasma Cannon",
+            "Neutron Cannon",
+            "Laser Repeater",
+            "Laser Beam"
+        ],
+        "Turrets": [
+            "Turret",
+            "Anti-Aircraft Turret",
+            "Anti-Personnel Turret",
+            "Missile Turret"
+        ],
+        "Missile Racks": [
+            "Missile Rack"
+        ]
+    },
+    "Armor": {
+        "Helmets": [
+            "Helmet",
+            "Heavy Helmet"
+        ],
+        "Backpacks": [
+            "Heavy Backpack"
+        ],
+        "Unknown": [
+            "Light Armor",
+            "Medium Armor",
+            "Heavy Armor"
+        ]
+    },
+    "Clothing": {
+        "Jackets": [
+            "Jacket"
+        ],
+        "Legwear": [
+            "Pants"
+        ],
+        "Footwear": [
+            "Shoes"
+        ]
+    },
+    "Undersuits": {
+        "Undersuits": [
+            "Undersuit",
+            "Flight Suit",
+            "Armored Flight Suit"
+        ]
+    },
+    "Personal Weapons": {
+        "Personal Weapons": [
+            "Pistol",
+            "SMG",
+            "LMG",
+            "HMG",
+            "Assault Rifle",
+            "Sniper Rifle",
+            "Grenade",
+            "Frag Pistol",
+            "Grenade Launcher"
+        ],
+        "Attachments": [
+            "Telescopic",
+            "Ballistic Compensator"
+        ]
+    }
+}

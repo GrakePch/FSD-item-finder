@@ -4,6 +4,7 @@ import i18nLocations from "./data/i18n_locations.json";
 import i18nLocationsM from "./data/i18n_locations_manual.json";
 import i18nCategories from "./data/categories_en_to_zh_Hans.json";
 import uexIdsAndI18n from "./data/items_uex_ids_and_i18n.json";
+import typeMap from "./data/type_map_full_items.json";
 import bodies from "./data/bodies.json";
 import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
 
@@ -79,6 +80,18 @@ export function getKeyFromUexId(id) {
         for (const uex_id of item.uex_ids)
             if (uex_id == id) return key;
     return null;
+}
+
+/* Map the type in items_uex_ids_and_i18n.json to UEX's type & sub-type */
+export function mapToUEXTypeSubType(rawType) {
+    for (const [type, subMap] of Object.entries(typeMap)) {
+        for (const [subType, listRaw] of Object.entries(subMap)) {
+            for (const raw of listRaw) {
+                if (raw === rawType) return [type, subType]
+            }
+        }
+    }
+    return [null, null];
 }
 
 export function getLocPath(option, tdata) {

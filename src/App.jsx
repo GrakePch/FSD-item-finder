@@ -9,7 +9,7 @@ import axios from "axios";
 import { AllTerminalsContext, AllItemsPriceContext } from "./contexts";
 import uexBadge from "./assets/uex-api-badge-powered.png";
 import itemsUexIdsAndI18n from "./data/items_uex_ids_and_i18n.json";
-import { getItemUexFormat, getSet, getVariants } from "./utils";
+import { getItemUexFormat, getSet, getVariants, mapToUEXTypeSubType } from "./utils";
 
 function App() {
   const [terminalsData, setTerminalsData] = useState({});
@@ -152,12 +152,19 @@ function App() {
           };
         } else {
           let itemUexFormat = getItemUexFormat(firstId);
+          let type = itemUexFormat?.section;
+          let subType = itemUexFormat?.category;
+          if (!type || !subType) {
+            let remapped = mapToUEXTypeSubType(value.type);
+            type = type || remapped[0];
+            subType = subType || remapped[1];
+          }
           tempItemsData[key] = {
             key: key,
             name: value.en || key,
             name_zh_Hans: value.zh_Hans || key,
-            type: itemUexFormat?.section,
-            sub_type: itemUexFormat?.category,
+            type: type,
+            sub_type: subType,
             screenshot: itemUexFormat?.screenshot,
             slug: itemUexFormat?.slug,
             id_item: firstId,
