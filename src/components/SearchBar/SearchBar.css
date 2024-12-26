@@ -148,6 +148,13 @@
     box-shadow: 0 0 1rem 0 var(--color-text);
 }
 
+.SearchBar .filters>hr {
+    width: 1px;
+    align-self: stretch;
+    border: none;
+    background-color: var(--color-text-1);
+}
+
 .SearchBar .total {
     padding: .5rem 1rem;
     font-family: var(--font-slim);

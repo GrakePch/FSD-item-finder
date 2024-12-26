@@ -35,9 +35,15 @@ const SearchBar = ({ centered, dataAcquired }) => {
         ((isAscii(searchName) && searchName.length > 1) || !isAscii(searchName))) ||
       filterType
     )
-      for (const item of Object.values(itemsData).filter((i) =>
-        filterType ? (i.type+"_"+i.sub_type).startsWith(filterType) : true
-      )) {
+      for (const item of Object.values(itemsData)
+        .filter((i) =>
+          !parseInt(searchParams.get("show_unbuyable"))
+            ? i.price_min_max.buy_min && i.price_min_max.buy_min < Infinity
+            : true
+        )
+        .filter((i) =>
+          filterType ? (i.type + "_" + i.sub_type).startsWith(filterType) : true
+        )) {
         if (
           item.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase()) ||
           item.name_zh_Hans?.toLocaleLowerCase()?.includes(searchName.toLocaleLowerCase())
@@ -119,6 +125,17 @@ const SearchBar = ({ centered, dataAcquired }) => {
                     {name_zh}
                   </button>
                 ))}
+                <hr />
+                <input
+                  type="checkbox"
+                  id="buyable-only"
+                  checked={!parseInt(searchParams.get("show_unbuyable"))}
+                  onChange={(e) => {
+                    searchParams.set("show_unbuyable", e.target.checked ? 0 : 1);
+                    setSearchParams(searchParams);
+                  }}
+                />
+                <label htmlFor="buyable-only">仅显示可购买</label>
               </div>
               {resultList.length > 0 && (
                 <p className="total">搜索结果共 {resultList.length} 个</p>

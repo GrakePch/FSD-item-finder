@@ -82,6 +82,7 @@ const ItemInfo = ({ item, listVariants, set }) => {
       <TradeOptionsSortingControl />
       {item.options &&
         item.options.length > 0 &&
+        item.price_min_max.buy_min &&
         item.price_min_max.buy_min < Infinity && (
           <TradeOptions
             pricesData={item.options}
@@ -91,6 +92,7 @@ const ItemInfo = ({ item, listVariants, set }) => {
         )}
       {item.options &&
         item.options.length > 0 &&
+        item.price_min_max.sell_min &&
         item.price_min_max.sell_min < Infinity && (
           <TradeOptions
             pricesData={item.options}
