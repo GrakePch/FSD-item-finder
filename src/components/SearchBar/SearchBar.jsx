@@ -8,11 +8,12 @@ import { getCategoryZhName, isAscii } from "../../utils";
 import { useSearchParams } from "react-router";
 
 const filterTypes = [
-  "Vehicle",
-  "Systems",
-  "Vehicle Weapons",
-  "Personal Weapons",
-  "Armor",
+  ["载具", "Vehicle_"],
+  ["载具系统", "Systems_"],
+  ["载具武器", "Vehicle Weapons_"],
+  ["个人武器", "Personal Weapons_Personal Weapons"],
+  ["武器配件", "Personal Weapons_Attachments"],
+  ["护甲", "Armor_"],
 ];
 
 const SearchBar = ({ centered, dataAcquired }) => {
@@ -35,7 +36,7 @@ const SearchBar = ({ centered, dataAcquired }) => {
       filterType
     )
       for (const item of Object.values(itemsData).filter((i) =>
-        filterType ? i.type === filterType : true
+        filterType ? (i.type+"_"+i.sub_type).startsWith(filterType) : true
       )) {
         if (
           item.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase()) ||
@@ -101,7 +102,7 @@ const SearchBar = ({ centered, dataAcquired }) => {
               <hr />
               <div className="filters">
                 <p>筛选</p>
-                {filterTypes.map((t) => (
+                {filterTypes.map(([name_zh, t]) => (
                   <button
                     key={t}
                     onClick={() => {
@@ -115,7 +116,7 @@ const SearchBar = ({ centered, dataAcquired }) => {
                     }}
                     className={t === searchParams.get("type") ? "active" : null}
                   >
-                    {getCategoryZhName(t)}
+                    {name_zh}
                   </button>
                 ))}
               </div>
