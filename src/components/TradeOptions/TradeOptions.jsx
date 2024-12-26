@@ -27,11 +27,13 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
 
   useEffect(() => {
     /* Sort by location name first, no matter sort options */
-    let tempOptions = pricesData.filter(o => o.id_terminal in terminalsData).toSorted((a, b) =>
-      getLocPath(a, terminalsData)
-        .join("  ")
-        .localeCompare(getLocPath(b, terminalsData).join("  "))
-    );
+    let tempOptions = pricesData
+      .filter((o) => o.id_terminal in terminalsData)
+      .toSorted((a, b) =>
+        getLocPath(a, terminalsData)
+          .join("  ")
+          .localeCompare(getLocPath(b, terminalsData).join("  "))
+      );
 
     /* Compute Distances from the "from" param, and sort by distance */
     let fromBodyName = searchParams.get("from");
@@ -42,7 +44,11 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
 
     /* Sort by sorting options */
     if (searchParams.get("sort") === "price") {
-      tempOptions.sort((a, b) => a["price_" + tradeType] - b["price_" + tradeType]);
+      if (tradeType === "sell") {
+        tempOptions.sort((a, b) => b["price_" + tradeType] - a["price_" + tradeType]);
+      } else {
+        tempOptions.sort((a, b) => a["price_" + tradeType] - b["price_" + tradeType]);
+      }
     }
 
     // console.log(tempOptions);
@@ -68,8 +74,16 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
   return (
     <div className="TradeOptions">
       <div className="titles">
-        <h3 className="location">{tradeType === "buy" ? "购买" : "租赁"}地点</h3>
-        <h4 className="price">{tradeType === "buy" ? "购买价格" : "单日租赁价格"}</h4>
+        <h3 className="location">
+          {tradeType === "buy" ? "购买" : tradeType === "sell" ? "出售" : "租赁"}地点
+        </h3>
+        <h4 className="price">
+          {tradeType === "buy"
+            ? "购买价格"
+            : tradeType === "sell"
+            ? "出售价格"
+            : "单日租赁价格"}
+        </h4>
       </div>
       <div className="options-container">
         {searchParams.get("sort") === "price" ? (
@@ -158,7 +172,6 @@ const addToTree = (tree, path, option) => {
 };
 
 const LocationForest = ({ forest, priceMin, priceMax, depth, tradeType }) => {
-  
   return Object.entries(forest).map(([key, loc]) => {
     if ("option" in loc) {
       return (

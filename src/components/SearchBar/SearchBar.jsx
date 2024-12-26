@@ -4,7 +4,7 @@ import SearchResultList from "../SearchResultList/SearchResultList";
 import Icon from "@mdi/react";
 import { mdiArrowLeft, mdiClose, mdiMagnify } from "@mdi/js";
 import { AllItemsPriceContext } from "../../contexts";
-import { getCategoryZhName, isAscii } from "../../utils";
+import { isAscii } from "../../utils";
 import { useSearchParams } from "react-router";
 
 const filterTypes = [

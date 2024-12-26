@@ -80,24 +80,31 @@ const ItemInfo = ({ item, listVariants, set }) => {
 
       <hr />
       <TradeOptionsSortingControl />
-      {item.options && item.options.length > 0 && (
-        <>
+      {item.options &&
+        item.options.length > 0 &&
+        item.price_min_max.buy_min < Infinity && (
           <TradeOptions
             pricesData={item.options}
             priceMinMax={item.price_min_max}
             tradeType="buy"
           />
-        </>
-      )}
+        )}
+      {item.options &&
+        item.options.length > 0 &&
+        item.price_min_max.sell_min < Infinity && (
+          <TradeOptions
+            pricesData={item.options}
+            priceMinMax={item.price_min_max}
+            tradeType="sell"
+          />
+        )}
 
       {item.options_rent && item.options_rent.length > 0 && (
-        <>
-          <TradeOptions
-            pricesData={item.options_rent}
-            priceMinMax={item.price_min_max}
-            tradeType="rent"
-          />
-        </>
+        <TradeOptions
+          pricesData={item.options_rent}
+          priceMinMax={item.price_min_max}
+          tradeType="rent"
+        />
       )}
 
       {listVariants.length > 1 && (
