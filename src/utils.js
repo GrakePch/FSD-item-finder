@@ -106,6 +106,7 @@ export function getVariants(key, itemsData) {
     ].includes(thisSubType) === false) return [];
     let initial = thisName.split(" ")[0];
     return Object.values(itemsData)
+        .sort((a, b) => a.name.localeCompare(b.name))
         .filter((item) =>
             item.sub_type === thisSubType && item.name.split(" ")[0] === initial);
 }
@@ -115,8 +116,9 @@ export function getSet(key, itemsData) {
     if (!itemsData[key]) return null;
 
     let set = {}
-    for (const str of ["helmet", "core", "arms", "legs", "backpack"]) {
+    for (const str of ["suit", "helmet", "core", "arms", "legs", "backpack"]) {
         if (key.includes(str)) {
+            set.undersuit = itemsData[key.replace(str, "suit")] || null;
             set.helmet = itemsData[key.replace(str, "helmet")] || null;
             set.torso = itemsData[key.replace(str, "core")] || null;
             set.arms = itemsData[key.replace(str, "arms")] || null;

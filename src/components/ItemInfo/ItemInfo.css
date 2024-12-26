@@ -3,7 +3,7 @@
   padding-top: 6rem;
 }
 
-.ItemInfo>*{
+.ItemInfo>* {
   margin-bottom: 1rem;
 }
 
@@ -151,6 +151,10 @@
 
 .ItemInfo button.variant:hover {
   background-color: var(--color-bg-2);
+}
+
+.ItemInfo button.variant>.name {
+  flex-grow: 1;
 }
 
 .ItemInfo button.variant>.price {

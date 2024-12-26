@@ -7,6 +7,7 @@ import SetButton from "../SetButton/SetButton";
 import { getCategoryZhName } from "../../utils";
 import TagCurrent from "../TagCurrent/TagCurrent";
 import TradeOptionsSortingControl from "../TradeOptionsSortingControl/TradeOptionsSortingControl";
+import ItemColorIcon from "../ItemColorIcon/ItemColorIcon";
 
 const uexLinkItem = "https://uexcorp.space/items/info?name=";
 const uexLinkVehicle = "https://uexcorp.space/vehicles/home/list/in_game_sell/";
@@ -67,7 +68,7 @@ const ItemInfo = ({ item, listVariants, set }) => {
             </button> */}
           </div>
           <div className="set-container">
-            {/* <SetButton subType="undersuit" item={set.undersuit} selfKey={item.key} /> */}
+            <SetButton subType="undersuit" item={set?.undersuit} selfKey={item.key} />
             <SetButton subType="helmet" item={set?.helmet} selfKey={item.key} />
             <SetButton subType="torso" item={set?.torso} selfKey={item.key} />
             <SetButton subType="arms" item={set?.arms} selfKey={item.key} />
@@ -129,7 +130,8 @@ const ItemInfo = ({ item, listVariants, set }) => {
                       }
                 }
               >
-                <p>
+                <ItemColorIcon name={vItem.name} />
+                <p className="name">
                   {vItem.name_zh_Hans || vItem.name}
                   {item.key === vItem.key && <TagCurrent />}
                 </p>

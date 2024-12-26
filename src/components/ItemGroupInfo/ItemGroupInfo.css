@@ -95,6 +95,10 @@
     outline: none;
 }
 
+.ItemGroupInfo button.variant>.name {
+    flex-grow: 1;
+}
+
 .ItemGroupInfo button.variant>.price {
     color: hsl(200deg 60% 50%);
     font-family: var(--font-slim);

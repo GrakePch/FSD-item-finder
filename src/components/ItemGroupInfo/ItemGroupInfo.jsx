@@ -3,6 +3,7 @@ import TradeOptions from "../TradeOptions/TradeOptions";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router";
 import { getCategoryZhName } from "../../utils";
+import ItemColorIcon from "../ItemColorIcon/ItemColorIcon";
 
 const ItemGroupInfo = ({ item, listVariants }) => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -90,7 +91,8 @@ const ItemGroupInfo = ({ item, listVariants }) => {
               setSearchParams(searchParams);
             }}
           >
-            <p>{vItem.name_zh_Hans || vItem.name}</p>
+            <ItemColorIcon name={vItem.name} />
+            <p className="name">{vItem.name_zh_Hans || vItem.name}</p>
             {vItem.price_min_max.buy_min && vItem.price_min_max.buy_min < Infinity ? (
               <p className="price">¤ {vItem.price_min_max.buy_min} 起</p>
             ) : (
