@@ -119,7 +119,7 @@ export function getVariants(key, itemsData) {
     ].includes(thisSubType) === false) return [];
     let initial = thisName.split(" ")[0];
     return Object.values(itemsData)
-        .sort((a, b) => a.name.localeCompare(b.name))
+        .sort((a, b) => a.key.localeCompare(b.key))
         .filter((item) =>
             item.sub_type === thisSubType && item.name.split(" ")[0] === initial);
 }
