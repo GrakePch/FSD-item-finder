@@ -84,14 +84,7 @@ export function getKeyFromUexId(id) {
 
 /* Map the type in items_uex_ids_and_i18n.json to UEX's type & sub-type */
 export function mapToUEXTypeSubType(rawType) {
-    for (const [type, subMap] of Object.entries(typeMap)) {
-        for (const [subType, listRaw] of Object.entries(subMap)) {
-            for (const raw of listRaw) {
-                if (raw === rawType) return [type, subType]
-            }
-        }
-    }
-    return [null, null];
+    return typeMap[rawType] || [null, null];
 }
 
 export function getLocPath(option, tdata) {

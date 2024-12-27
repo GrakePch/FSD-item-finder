@@ -136,7 +136,7 @@ function App() {
       const tempItemsData = {};
 
       for (const [key, value] of Object.entries(itemsUexIdsAndI18n)) {
-        let firstId = value.uex_ids[0];
+        let firstId = value.uex_ids?.[0];
         let isVehicle = typeof firstId === "string" && firstId?.startsWith("v-");
         if (isVehicle) {
           tempItemsData[key] = {
@@ -159,6 +159,7 @@ function App() {
             type = type || remapped[0];
             subType = subType || remapped[1];
           }
+          if (type === null && !value.uex_ids) continue;
           tempItemsData[key] = {
             key: key,
             name: value.en || key,
@@ -172,6 +173,7 @@ function App() {
             options: [],
           };
           let optionDict = {};
+          if (value.uex_ids)
           for (const id of value.uex_ids) {
             if (!dictItem[id]) continue;
             for (const option of dictItem[id].options) {

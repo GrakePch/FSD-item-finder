@@ -28,8 +28,8 @@ const ItemInfo = ({ item, listVariants, set }) => {
             <h2 className="en">{item.name}</h2>
           </div>
           <div className="types">
-            <p className="type">{getCategoryZhName(item.type) || "未知"}</p>
-            <p className="subtype">{getCategoryZhName(item.sub_type) || "未知"}</p>
+            <p className="type">{getCategoryZhName(item.type)}</p>
+            <p className="subtype">{getCategoryZhName(item.sub_type)}</p>
           </div>
 
           <button

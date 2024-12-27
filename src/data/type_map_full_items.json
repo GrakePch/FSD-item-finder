@@ -1,81 +1,90 @@
 {
-    "Systems": {
-        "Shield Generators": [
-            "Shield Generator"
-        ],
-        "Coolers": [
-            "Cooler"
-        ],
-        "Computer": [
-            "Computer"
-        ]
-    },
-    "Vehicle Weapons": {
-        "Guns": [
-            "Distortion Scattergun",
-            "Ballistic Cannon",
-            "Plasma Cannon",
-            "Neutron Cannon",
-            "Laser Repeater",
-            "Laser Beam"
-        ],
-        "Turrets": [
-            "Turret",
-            "Anti-Aircraft Turret",
-            "Anti-Personnel Turret",
-            "Missile Turret"
-        ],
-        "Missile Racks": [
-            "Missile Rack"
-        ]
-    },
-    "Armor": {
-        "Helmets": [
-            "Helmet",
-            "Heavy Helmet"
-        ],
-        "Backpacks": [
-            "Heavy Backpack"
-        ],
-        "Unknown": [
-            "Light Armor",
-            "Medium Armor",
-            "Heavy Armor"
-        ]
-    },
-    "Clothing": {
-        "Jackets": [
-            "Jacket"
-        ],
-        "Legwear": [
-            "Pants"
-        ],
-        "Footwear": [
-            "Shoes"
-        ]
-    },
-    "Undersuits": {
-        "Undersuits": [
-            "Undersuit",
-            "Flight Suit",
-            "Armored Flight Suit"
-        ]
-    },
-    "Personal Weapons": {
-        "Personal Weapons": [
-            "Pistol",
-            "SMG",
-            "LMG",
-            "HMG",
-            "Assault Rifle",
-            "Sniper Rifle",
-            "Grenade",
-            "Frag Pistol",
-            "Grenade Launcher"
-        ],
-        "Attachments": [
-            "Telescopic",
-            "Ballistic Compensator"
-        ]
-    }
+    "Armor": [null, null],
+    "Bomb": ["Vehicle Weapons", "Bombs"],
+    "BombLauncher": ["Vehicle Weapons", "Missile Racks"],
+    "Bottle": [null, null],
+    "Cargo": ["Miscellaneous", "Miscellaneous"],
+
+    "Char_Accessory_Eyes": ["Clothing", "Eyeware"],
+
+    "Char_Armor_Arms": ["Armor", "Arms"],
+    "Char_Armor_Backpack": ["Armor", "Backpacks"],
+    "Char_Armor_Helmet": ["Armor", "Helmets"],
+    "Char_Armor_Legs": ["Armor", "Legs"],
+    "Char_Armor_Torso": ["Armor", "Torso"],
+    "Char_Armor_Undersuit": ["Undersuits", "Undersuits"],
+
+    "Char_Clothing_Feet": ["Clothing", "Footwear"],
+    "Char_Clothing_Hands": ["Clothing", "Gloves"],
+    "Char_Clothing_Hat": ["Clothing", "Hats"],
+    "Char_Clothing_Legs": ["Clothing", "Legwear"],
+    "Char_Clothing_Torso_0": ["Clothing", "Shirts"],
+    "Char_Clothing_Torso_1": ["Clothing", "Jackets"],
+
+    "Char_Hair_Color": [null, null],
+    "Char_Head_Eyes": [null, null],
+    "Char_Head_Hair": [null, null],
+    "Char_Skin_Color": [null, null],
+
+    "CommsController": [null, null],
+    "Container": ["Miscellaneous", "Container"],
+    "Cooler": ["Systems", "Coolers"],
+    "CoolerController": [null, null],
+    "DockingCollar": ["Utility", "Docking Collars"],
+    "Door": [null, null],
+    "DoorController": [null, null],
+    "Drink": ["Miscellaneous", "Drinks"],
+    "ExternalFuelTank": ["Utility", "External Fuel Tanks"],
+    "FPS_Consumable": ["Miscellaneous", "Consumables"],
+
+    "Flair_Cockpit": ["Miscellaneous", "Miscellaneous"],
+    "Flair_Floor": ["Miscellaneous", "Miscellaneous"],
+    "Flair_Surface": ["Miscellaneous", "Miscellaneous"],
+    "Flair_Wall": ["Miscellaneous", "Miscellaneous"],
+
+    "FlightController": [null, null],
+    "Food": ["Miscellaneous", "Foods"],
+    "FuelIntake": [null, null],
+    "FuelTank": [null, null],
+    "Gadget": ["Utility", "Gadgets"],
+    "InventoryContainer": ["Utility", "Container"],
+    "JumpDrive": ["Propulsion", "Jump Modules"],
+    "LightController": [null, null],
+    "MiningModifier": ["Utility", "Mining Modules"],
+    "Misc": ["Miscellaneous", "Miscellaneous"],
+    "Missile": ["Vehicle Weapons", "Missiles"],
+    "MissileController": [null, null],
+    "MissileLauncher": ["Vehicle Weapons", "Missile Racks"],
+    "MobiGlas": ["Technology", "Mobiglas"],
+    "Module": ["Ship Modules", "Ship Modules"],
+    "Paints": ["Liveries", "Liveries"],
+    "PowerPlant": ["Systems", "Power Plants"],
+    "QuantumDrive": ["Systems", "Quantum Drives"],
+    "QuantumFuelTank": [null, null],
+    "QuantumInterdictionGenerator": [null, null],
+    "Radar": [null, null],
+    "RemovableChip": ["Miscellaneous", "Miscellaneous"],
+    "SalvageHead": ["Utility", "Tractor Beams"],
+    "SalvageModifier": ["Utility", "Scraper Beams"],
+    "Seat": [null, null],
+    "SeatAccess": [null, null],
+    "SeatDashboard": [null, null],
+    "SelfDestruct": [null, null],
+    "Shield": ["Systems", "Shield Generators"],
+    "ShieldController": [null, null],
+    "Suit": [null, null],
+    "TargetSelector": [null, null],
+    "TowingBeam": [null, null],
+    "TractorBeam": ["Utility", "Tractor Beams"],
+    "Turret": ["Vehicle Weapons", "Turrets"],
+    "TurretBase": [null, null],
+    "UNDEFINED": [null, null],
+    "Usable": ["Decorations", "Decorations"],
+    "UtilityTurret": [null, null],
+    "WeaponAttachment": ["Personal Weapons", "Attachments"],
+    "WeaponDefensive": [null, null],
+    "WeaponGun": ["Vehicle Weapons", "Guns"],
+    "WeaponMining": ["Utility", "Mining Laser Heads"],
+    "WeaponPersonal": ["Personal Weapons", "Personal Weapons"],
+    "WheeledController": [null, null]    
 }
