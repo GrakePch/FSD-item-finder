@@ -9,7 +9,7 @@ import axios from "axios";
 import { AllTerminalsContext, AllItemsPriceContext } from "./contexts";
 import uexBadge from "./assets/uex-api-badge-powered.png";
 import itemsUexIdsAndI18n from "./data/items_uex_ids_and_i18n.json";
-import { getItemUexFormat, getSet, getVariants, mapToUEXTypeSubType } from "./utils";
+import { date4_0, getItemUexFormat, getSet, getVariants, mapToUEXTypeSubType } from "./utils";
 
 function App() {
   const [terminalsData, setTerminalsData] = useState({});
@@ -208,14 +208,14 @@ function App() {
       /* Update price_min_max for each item */
       Object.values(tempItemsData).forEach((item) => {
         let pricesBuy = item.options
-          .filter((a) => a.price_buy !== null)
+          .filter((a) => a.price_buy !== null && a.date_modified >= date4_0)
           .map((a) => a.price_buy);
         let pricesSell = item.options
-          .filter((a) => a.price_sell !== null)
+          .filter((a) => a.price_sell !== null && a.date_modified >= date4_0)
           .map((a) => a.price_sell);
         let pricesRent =
           item.options_rent
-            ?.filter((a) => a.price_rent !== null)
+            ?.filter((a) => a.price_rent !== null && a.date_modified >= date4_0)
             ?.map((a) => a.price_rent) || [];
         item.price_min_max = {
           buy_min: Math.min(...pricesBuy) || null,

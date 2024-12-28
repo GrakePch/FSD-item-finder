@@ -16,7 +16,7 @@ import { mdiAlertCircleOutline } from "@mdi/js";
 
 const percent = (v, zero, hundred) => {
   if (zero === hundred) return 0;
-  return ((v - zero) / (hundred - zero)) * 100;
+  return Math.max(Math.min(((v - zero) / (hundred - zero)) * 100, 100), 0);
 };
 
 const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
@@ -130,7 +130,7 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
                           percent(
                             option["price_" + tradeType],
                             priceMinMax[tradeType + "_min"],
-                            priceMinMax[tradeType + "_max"]
+                            priceMinMax[tradeType + "_min"]*2
                           )
                         ),
                       }}
