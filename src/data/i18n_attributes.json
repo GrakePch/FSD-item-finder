@@ -1,5 +1,7 @@
 {
     "Size": "尺寸",
+    "Class": "分类",
+    "Grade": "等级",
 
     "Weapon Class": "武器级别",
     "Attachment Barrel": "枪管配件",

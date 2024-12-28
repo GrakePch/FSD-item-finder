@@ -130,7 +130,7 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
                           percent(
                             option["price_" + tradeType],
                             priceMinMax[tradeType + "_min"],
-                            priceMinMax[tradeType + "_min"]*2
+                            priceMinMax[tradeType + "_min"] * 2
                           )
                         ),
                       }}
@@ -201,7 +201,7 @@ const LocationForest = ({ forest, priceMin, priceMax, depth, tradeType }) => {
               className="price"
               style={{
                 color: colorPrice(
-                  percent(loc.option["price_" + tradeType], priceMin, priceMax)
+                  percent(loc.option["price_" + tradeType], priceMin, priceMin * 2)
                 ),
               }}
             >

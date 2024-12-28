@@ -83,42 +83,43 @@ const SearchBar = ({ centered, dataAcquired }) => {
       tempList.sort((a, b) => a.name.localeCompare(b.name));
     }
 
-    if (_filterType.startsWith("Systems.")) {
-      tempList
-        .sort((a, b) =>
-          getAttributeValueByName("Grade", a.attributes)?.localeCompare(
-            getAttributeValueByName("Grade", b.attributes)
+    if (_filterType)
+      if (_filterType.startsWith("Systems.")) {
+        tempList
+          .sort((a, b) =>
+            getAttributeValueByName("Grade", a.attributes)?.localeCompare(
+              getAttributeValueByName("Grade", b.attributes)
+            )
           )
-        )
-        .sort((a, b) =>
-          getAttributeValueByName("Class", a.attributes)?.localeCompare(
-            getAttributeValueByName("Class", b.attributes)
+          .sort((a, b) =>
+            getAttributeValueByName("Class", a.attributes)?.localeCompare(
+              getAttributeValueByName("Class", b.attributes)
+            )
           )
-        )
-        .sort(
+          .sort(
+            (a, b) =>
+              (getAttributeValueByName("Size", a.attributes) || Infinity) -
+              (getAttributeValueByName("Size", b.attributes) || Infinity)
+          );
+      } else if (_filterType.startsWith("Vehicle Weapons.")) {
+        tempList
+          .sort((a, b) =>
+            getAttributeValueByName("Tracking Signal", a.attributes)?.localeCompare(
+              getAttributeValueByName("Tracking Signal", b.attributes)
+            )
+          )
+          .sort(
+            (a, b) =>
+              (getAttributeValueByName("Size", a.attributes) || Infinity) -
+              (getAttributeValueByName("Size", b.attributes) || Infinity)
+          );
+      } else if (_filterType.startsWith("Personal Weapons.Atta")) {
+        tempList.sort(
           (a, b) =>
             (getAttributeValueByName("Size", a.attributes) || Infinity) -
             (getAttributeValueByName("Size", b.attributes) || Infinity)
         );
-    } else if (_filterType.startsWith("Vehicle Weapons.")) {
-      tempList
-        .sort((a, b) =>
-          getAttributeValueByName("Tracking Signal", a.attributes)?.localeCompare(
-            getAttributeValueByName("Tracking Signal", b.attributes)
-          )
-        )
-        .sort(
-          (a, b) =>
-            (getAttributeValueByName("Size", a.attributes) || Infinity) -
-            (getAttributeValueByName("Size", b.attributes) || Infinity)
-        );
-    } else if (_filterType.startsWith("Personal Weapons.Atta")) {
-      tempList.sort(
-        (a, b) =>
-          (getAttributeValueByName("Size", a.attributes) || Infinity) -
-          (getAttributeValueByName("Size", b.attributes) || Infinity)
-      );
-    }
+      }
 
     // console.log(tempList);
     setResultList(tempList);
