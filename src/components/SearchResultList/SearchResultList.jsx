@@ -8,6 +8,8 @@ import {
   classToColor,
   signalToColor,
 } from "../../utils";
+import { icon } from "../../assets/icon";
+import Icon from "@mdi/react";
 
 const SearchResultList = ({ results, setShowResults }) => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -40,10 +42,14 @@ const SearchResultList = ({ results, setShowResults }) => {
             key={item.key}
             onClick={() => handleResultClick(item.key)}
           >
-            <div className="type">
-              <p>{i18nCategories[item.type] || item.type || "未知"}</p>
-              <p>{i18nCategories[item.sub_type] || item.sub_type || "未知"}</p>
-            </div>
+            {icon[item.sub_type] ? (
+              <Icon path={icon[item.sub_type]} size="2rem" />
+            ) : (
+              <div className="type">
+                <p>{i18nCategories[item.type] || item.type || "未知"}</p>
+                <p>{i18nCategories[item.sub_type] || item.sub_type || "未知"}</p>
+              </div>
+            )}
             <div className="names">
               <p className="zh">{item.name_zh_Hans || item.name}</p>
               <p className="en">{item.name}</p>
