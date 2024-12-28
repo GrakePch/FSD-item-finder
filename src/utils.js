@@ -3,10 +3,13 @@ import vehiclesUex from "./data/vehicles_uex.json";
 import i18nLocations from "./data/i18n_locations.json";
 import i18nLocationsM from "./data/i18n_locations_manual.json";
 import i18nCategories from "./data/categories_en_to_zh_Hans.json";
+import i18nAttributes from "./data/i18n_attributes.json";
+import i18nAttributeValues from "./data/i18n_attribute_values.json";
 import uexIdsAndI18n from "./data/items_uex_ids_and_i18n.json";
 import typeMap from "./data/type_map_full_items.json";
 import bodies from "./data/bodies.json";
 import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
+import attributes from "./data/categories_attributes.json";
 
 export function isAscii(char) {
     const code = char[0].charCodeAt(0);
@@ -35,7 +38,7 @@ export function getCategoryZhName(name_en) {
 
 export function getItemUexFormat(id) {
     for (const item of itemsUex) {
-        if (item.id === id) {
+        if (item.id == id) {
             return item;
         }
     }
@@ -45,10 +48,37 @@ export function getItemUexFormat(id) {
 
 export function getVehicleUEXFormat(id) {
     for (const vehicle of vehiclesUex) {
-        if (vehicle.id === id) {
+        if (vehicle.id == id) {
             return vehicle;
         }
     }
+}
+
+export function getUEXAttribute(id) {
+    for (const attr of attributes) {
+        if (attr.id == id) {
+            return attr;
+        }
+    }
+}
+
+export function getAttributeZhName(name) {
+    if (!name) return name;
+    return i18nAttributes[name] || name;
+}
+
+export function getAttributeValueZhName(name) {
+    if (!name) return name;
+    return i18nAttributeValues[name] || name;
+}
+
+export function getAttributeValueByName(name, attrDict) {
+    if (!attrDict) return null;
+    for (const [k, v] of Object.entries(attrDict)) {
+        let attr = getUEXAttribute(k);
+        if (attr && attr.name === name) return v;
+    }
+    return null;
 }
 
 export function getItemUexFormatBySlug(slug) {
@@ -202,3 +232,33 @@ export function colorLocationDepth(depth) {
 }
 
 export const date4_0 = 1734670320;
+
+export const sizeToColor = [
+    "#6e7881",
+    "#258f00",
+    "#008f7e",
+    "#006dd1",
+    "#371cdf",
+    "#8022dc",
+    "#cc29cf",
+    "#ff9900",
+    "#ff5c00",
+    "#ff3838",
+    "#af0000",
+    "#ff9900",
+    "#ff3838",
+];
+
+export const classToColor = {
+    Military: "#258f00",
+    Stealth: "#439193",
+    Civilian: "#c1af3e",
+    Industrial: "#a86834",
+    Competition: "#a83434",
+};
+
+export const signalToColor = {
+    Electromagnetic: "#439193",
+    Infrared: "#a83434",
+    "Cross Section": "#c1a03e",
+};

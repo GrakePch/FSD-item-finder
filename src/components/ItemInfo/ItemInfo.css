@@ -68,6 +68,35 @@
   color: var(--color-text);
 }
 
+.ItemInfo .attributes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media screen and (max-width: 959px) {
+  .ItemInfo .attributes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .ItemInfo .attributes {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.ItemInfo .attribute {
+  background-color: var(--color-bg-1);
+  line-height: 1;
+  padding: .5rem .75rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: .5rem;
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-slim);
+}
+
 .ItemInfo .button-visit-uex {
   border-radius: .5rem;
 }

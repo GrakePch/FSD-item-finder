@@ -4,10 +4,16 @@ import { useSearchParams } from "react-router";
 import Icon from "@mdi/react";
 import { mdiTagMultipleOutline } from "@mdi/js";
 import SetButton from "../SetButton/SetButton";
-import { getCategoryZhName } from "../../utils";
+import {
+  getAttributeValueZhName,
+  getAttributeZhName,
+  getCategoryZhName,
+  getUEXAttribute,
+} from "../../utils";
 import TagCurrent from "../TagCurrent/TagCurrent";
 import TradeOptionsSortingControl from "../TradeOptionsSortingControl/TradeOptionsSortingControl";
 import ItemColorIcon from "../ItemColorIcon/ItemColorIcon";
+import { useEffect } from "react";
 
 const uexLinkItem = "https://uexcorp.space/items/info?name=";
 const uexLinkVehicle = "https://uexcorp.space/vehicles/home/list/in_game_sell/";
@@ -15,7 +21,9 @@ const uexLinkVehicle = "https://uexcorp.space/vehicles/home/list/in_game_sell/";
 const ItemInfo = ({ item, listVariants, set }) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  // console.log(item)
+  useEffect(() => {
+    console.log(item);
+  }, [item]);
 
   if (!item) return null;
 
@@ -31,7 +39,15 @@ const ItemInfo = ({ item, listVariants, set }) => {
             <p className="type">{getCategoryZhName(item.type)}</p>
             <p className="subtype">{getCategoryZhName(item.sub_type)}</p>
           </div>
-
+          <div className="attributes">
+            {item.attributes &&
+              Object.entries(item.attributes).map(([aid, v]) => (
+                <div key={aid} className="attribute">
+                  <p>{getAttributeZhName(getUEXAttribute(aid)?.name)}</p>
+                  <p>{getAttributeValueZhName(v)}</p>
+                </div>
+              ))}
+          </div>
           <button
             className="button-visit-uex"
             onClick={

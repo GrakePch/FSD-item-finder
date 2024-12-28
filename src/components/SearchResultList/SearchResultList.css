@@ -65,7 +65,25 @@
     color: var(--color-text);
 }
 
+.SearchResultList .size,
+.SearchResultList .class-grade,
+.SearchResultList .tracking-signal {
+    font-family: var(--font-slim);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    background-color: var(--color-bg-2);
+    padding: .25rem;
+    border-radius: .25rem;
+}
+
+.SearchResultList .size {
+    font-family: var(--font-slim);
+    font-weight: 700;
+}
+
 .SearchResultList .price {
+    min-width: 5rem;
+    text-align: end;
     color: hsl(200deg 60% 50%);
     font-family: var(--font-slim);
     font-weight: 600;

@@ -1,0 +1,1218 @@
+[
+    {
+      "id": 1,
+      "id_category": 1,
+      "name": "Armor Class",
+      "category_name": "Arms",
+      "date_added": 1708712340,
+      "date_modified": 1714413278
+    },
+    {
+      "id": 2,
+      "id_category": 2,
+      "name": "Type",
+      "category_name": "Backpacks",
+      "date_added": 1708712541,
+      "date_modified": 1716800095
+    },
+    {
+      "id": 4,
+      "id_category": 4,
+      "name": "Armor Class",
+      "category_name": "Legs",
+      "date_added": 1708712561,
+      "date_modified": 1716976315
+    },
+    {
+      "id": 5,
+      "id_category": 7,
+      "name": "Weight",
+      "category_name": "Set",
+      "date_added": 1708712564,
+      "date_modified": 0
+    },
+    {
+      "id": 6,
+      "id_category": 5,
+      "name": "Armor Class",
+      "category_name": "Torso",
+      "date_added": 1708712567,
+      "date_modified": 1716972650
+    },
+    {
+      "id": 7,
+      "id_category": 18,
+      "name": "Weapon Class",
+      "category_name": "Personal Weapons",
+      "date_added": 1708712603,
+      "date_modified": 1714413416
+    },
+    {
+      "id": 9,
+      "id_category": 17,
+      "name": "Attachment Point",
+      "category_name": "Attachments",
+      "date_added": 1708712673,
+      "date_modified": 1734834231
+    },
+    {
+      "id": 10,
+      "id_category": 16,
+      "name": "Type",
+      "category_name": "Consumables",
+      "date_added": 1708712686,
+      "date_modified": 0
+    },
+    {
+      "id": 11,
+      "id_category": 18,
+      "name": "Attachment Barrel",
+      "category_name": "Personal Weapons",
+      "date_added": 1708712734,
+      "date_modified": 1714413416
+    },
+    {
+      "id": 12,
+      "id_category": 18,
+      "name": "Attachment Optics",
+      "category_name": "Personal Weapons",
+      "date_added": 1708712734,
+      "date_modified": 1714413416
+    },
+    {
+      "id": 13,
+      "id_category": 18,
+      "name": "Attachment Underbarrel",
+      "category_name": "Personal Weapons",
+      "date_added": 1708712734,
+      "date_modified": 1714413416
+    },
+    {
+      "id": 14,
+      "id_category": 3,
+      "name": "Armor Class",
+      "category_name": "Helmets",
+      "date_added": 1708712748,
+      "date_modified": 1714413311
+    },
+    {
+      "id": 15,
+      "id_category": 19,
+      "name": "Size",
+      "category_name": "Coolers",
+      "date_added": 1708712772,
+      "date_modified": 1709665627
+    },
+    {
+      "id": 16,
+      "id_category": 21,
+      "name": "Size",
+      "category_name": "Power Plants",
+      "date_added": 1708712775,
+      "date_modified": 1709665750
+    },
+    {
+      "id": 17,
+      "id_category": 22,
+      "name": "Size",
+      "category_name": "Quantum Drives",
+      "date_added": 1708712780,
+      "date_modified": 1709665939
+    },
+    {
+      "id": 18,
+      "id_category": 23,
+      "name": "Size",
+      "category_name": "Shield Generators",
+      "date_added": 1708712783,
+      "date_modified": 1709666147
+    },
+    {
+      "id": 19,
+      "id_category": 29,
+      "name": "Size",
+      "category_name": "Mining Laser Heads",
+      "date_added": 1708713108,
+      "date_modified": 1714413515
+    },
+    {
+      "id": 20,
+      "id_category": 31,
+      "name": "Extraction Speed",
+      "category_name": "Scraper Beams",
+      "date_added": 1708713120,
+      "date_modified": 1709670891
+    },
+    {
+      "id": 21,
+      "id_category": 67,
+      "name": "Size",
+      "category_name": "Tractor Beams",
+      "date_added": 1708713132,
+      "date_modified": 1714482848
+    },
+    {
+      "id": 22,
+      "id_category": 32,
+      "name": "Size",
+      "category_name": "Guns",
+      "date_added": 1708713146,
+      "date_modified": 1709686100
+    },
+    {
+      "id": 23,
+      "id_category": 33,
+      "name": "Size",
+      "category_name": "Missile Racks",
+      "date_added": 1708713150,
+      "date_modified": 1710218967
+    },
+    {
+      "id": 24,
+      "id_category": 34,
+      "name": "Size",
+      "category_name": "Missiles",
+      "date_added": 1708713155,
+      "date_modified": 1710217937
+    },
+    {
+      "id": 25,
+      "id_category": 35,
+      "name": "Size",
+      "category_name": "Turrets",
+      "date_added": 1708713158,
+      "date_modified": 0
+    },
+    {
+      "id": 26,
+      "id_category": 25,
+      "name": "Size",
+      "category_name": "Docking Collars",
+      "date_added": 1708713520,
+      "date_modified": 1709667775
+    },
+    {
+      "id": 27,
+      "id_category": 64,
+      "name": "SCU",
+      "category_name": "Container",
+      "date_added": 1708713538,
+      "date_modified": 1708713546
+    },
+    {
+      "id": 28,
+      "id_category": 4,
+      "name": "Carrying Capacity",
+      "category_name": "Legs",
+      "date_added": 1708962447,
+      "date_modified": 1716976315
+    },
+    {
+      "id": 29,
+      "id_category": 4,
+      "name": "Damage Reduction",
+      "category_name": "Legs",
+      "date_added": 1708962447,
+      "date_modified": 1716976315
+    },
+    {
+      "id": 30,
+      "id_category": 1,
+      "name": "Damage Reduction",
+      "category_name": "Arms",
+      "date_added": 1708962466,
+      "date_modified": 1714413278
+    },
+    {
+      "id": 31,
+      "id_category": 3,
+      "name": "Damage Reduction",
+      "category_name": "Helmets",
+      "date_added": 1708962502,
+      "date_modified": 1714413311
+    },
+    {
+      "id": 32,
+      "id_category": 5,
+      "name": "Carrying Capacity",
+      "category_name": "Torso",
+      "date_added": 1708962571,
+      "date_modified": 1716972650
+    },
+    {
+      "id": 33,
+      "id_category": 5,
+      "name": "Damage Reduction",
+      "category_name": "Torso",
+      "date_added": 1708962571,
+      "date_modified": 1716972650
+    },
+    {
+      "id": 34,
+      "id_category": 5,
+      "name": "Backpack Compatibility",
+      "category_name": "Torso",
+      "date_added": 1708962571,
+      "date_modified": 1716972650
+    },
+    {
+      "id": 35,
+      "id_category": 17,
+      "name": "Size",
+      "category_name": "Attachments",
+      "date_added": 1708963146,
+      "date_modified": 1734834231
+    },
+    {
+      "id": 36,
+      "id_category": 17,
+      "name": "Type",
+      "category_name": "Attachments",
+      "date_added": 1708963146,
+      "date_modified": 1734834231
+    },
+    {
+      "id": 37,
+      "id_category": 18,
+      "name": "Weapon Type",
+      "category_name": "Personal Weapons",
+      "date_added": 1708963342,
+      "date_modified": 1714413416
+    },
+    {
+      "id": 38,
+      "id_category": 24,
+      "name": "Damage Reduction",
+      "category_name": "Undersuits",
+      "date_added": 1708963480,
+      "date_modified": 1716975950
+    },
+    {
+      "id": 39,
+      "id_category": 24,
+      "name": "Min Temperature",
+      "category_name": "Undersuits",
+      "date_added": 1708963480,
+      "date_modified": 1716975950
+    },
+    {
+      "id": 40,
+      "id_category": 24,
+      "name": "Max Temperature",
+      "category_name": "Undersuits",
+      "date_added": 1708963480,
+      "date_modified": 1716975950
+    },
+    {
+      "id": 41,
+      "id_category": 1,
+      "name": "Min Temperature",
+      "category_name": "Arms",
+      "date_added": 1708963529,
+      "date_modified": 1714413278
+    },
+    {
+      "id": 42,
+      "id_category": 1,
+      "name": "Max Temperature",
+      "category_name": "Arms",
+      "date_added": 1708963529,
+      "date_modified": 1714413278
+    },
+    {
+      "id": 43,
+      "id_category": 3,
+      "name": "Min Temperature",
+      "category_name": "Helmets",
+      "date_added": 1708963550,
+      "date_modified": 1714413311
+    },
+    {
+      "id": 44,
+      "id_category": 3,
+      "name": "Max Temperature",
+      "category_name": "Helmets",
+      "date_added": 1708963550,
+      "date_modified": 1714413311
+    },
+    {
+      "id": 45,
+      "id_category": 4,
+      "name": "Min Temperature",
+      "category_name": "Legs",
+      "date_added": 1708963568,
+      "date_modified": 1716976315
+    },
+    {
+      "id": 46,
+      "id_category": 4,
+      "name": "Max Temperature",
+      "category_name": "Legs",
+      "date_added": 1708963568,
+      "date_modified": 1716976315
+    },
+    {
+      "id": 47,
+      "id_category": 5,
+      "name": "Min Temperature",
+      "category_name": "Torso",
+      "date_added": 1708963591,
+      "date_modified": 1716972650
+    },
+    {
+      "id": 48,
+      "id_category": 5,
+      "name": "Max Temperature",
+      "category_name": "Torso",
+      "date_added": 1708963591,
+      "date_modified": 1716972650
+    },
+    {
+      "id": 49,
+      "id_category": 2,
+      "name": "Carrying Capacity",
+      "category_name": "Backpacks",
+      "date_added": 1708963869,
+      "date_modified": 1716800095
+    },
+    {
+      "id": 50,
+      "id_category": 69,
+      "name": "Type",
+      "category_name": "Consumable",
+      "date_added": 1709012200,
+      "date_modified": 1709012229
+    },
+    {
+      "id": 51,
+      "id_category": 17,
+      "name": "Class",
+      "category_name": "Attachments",
+      "date_added": 1709016731,
+      "date_modified": 1734834231
+    },
+    {
+      "id": 52,
+      "id_category": 3,
+      "name": "Helmet Type",
+      "category_name": "Helmets",
+      "date_added": 1709134429,
+      "date_modified": 1714413311
+    },
+    {
+      "id": 53,
+      "id_category": 24,
+      "name": "Type",
+      "category_name": "Undersuits",
+      "date_added": 1709572197,
+      "date_modified": 1716975950
+    },
+    {
+      "id": 54,
+      "id_category": 61,
+      "name": "NDR",
+      "category_name": "Miscellaneous",
+      "date_added": 1709572745,
+      "date_modified": 0
+    },
+    {
+      "id": 55,
+      "id_category": 61,
+      "name": "HEI",
+      "category_name": "Miscellaneous",
+      "date_added": 1709572745,
+      "date_modified": 0
+    },
+    {
+      "id": 56,
+      "id_category": 61,
+      "name": "Effects",
+      "category_name": "Miscellaneous",
+      "date_added": 1709572745,
+      "date_modified": 0
+    },
+    {
+      "id": 57,
+      "id_category": 62,
+      "name": "Effects",
+      "category_name": "Drinks",
+      "date_added": 1709573015,
+      "date_modified": 1709573150
+    },
+    {
+      "id": 58,
+      "id_category": 62,
+      "name": "HEI (Hydration Efficacy Index)",
+      "category_name": "Drinks",
+      "date_added": 1709573015,
+      "date_modified": 1709573150
+    },
+    {
+      "id": 59,
+      "id_category": 62,
+      "name": "NDR (Nutritional Density Rating)",
+      "category_name": "Drinks",
+      "date_added": 1709573015,
+      "date_modified": 1709573150
+    },
+    {
+      "id": 60,
+      "id_category": 18,
+      "name": "Damage Type",
+      "category_name": "Personal Weapons",
+      "date_added": 1709579896,
+      "date_modified": 1714413416
+    },
+    {
+      "id": 61,
+      "id_category": 63,
+      "name": "Effects",
+      "category_name": "Foods",
+      "date_added": 1709580595,
+      "date_modified": 0
+    },
+    {
+      "id": 62,
+      "id_category": 63,
+      "name": "HEI (Hydration Efficacy Index)",
+      "category_name": "Foods",
+      "date_added": 1709580595,
+      "date_modified": 0
+    },
+    {
+      "id": 63,
+      "id_category": 63,
+      "name": "NDR (Nutritional Density Rating)",
+      "category_name": "Foods",
+      "date_added": 1709580595,
+      "date_modified": 0
+    },
+    {
+      "id": 64,
+      "id_category": 13,
+      "name": "Capacity",
+      "category_name": "Legwear",
+      "date_added": 1709610918,
+      "date_modified": 1714413358
+    },
+    {
+      "id": 65,
+      "id_category": 11,
+      "name": "Capacity",
+      "category_name": "Jackets",
+      "date_added": 1709611214,
+      "date_modified": 1714413353
+    },
+    {
+      "id": 66,
+      "id_category": 11,
+      "name": "Maximum Temperature",
+      "category_name": "Jackets",
+      "date_added": 1709611402,
+      "date_modified": 1714413353
+    },
+    {
+      "id": 67,
+      "id_category": 11,
+      "name": "Minimum Temperature",
+      "category_name": "Jackets",
+      "date_added": 1709611402,
+      "date_modified": 1714413353
+    },
+    {
+      "id": 68,
+      "id_category": 18,
+      "name": "Effective Range",
+      "category_name": "Personal Weapons",
+      "date_added": 1709665090,
+      "date_modified": 1714413416
+    },
+    {
+      "id": 69,
+      "id_category": 18,
+      "name": "Rate of Fire",
+      "category_name": "Personal Weapons",
+      "date_added": 1709665090,
+      "date_modified": 1714413416
+    },
+    {
+      "id": 70,
+      "id_category": 19,
+      "name": "Class",
+      "category_name": "Coolers",
+      "date_added": 1709665627,
+      "date_modified": 0
+    },
+    {
+      "id": 71,
+      "id_category": 19,
+      "name": "Grade",
+      "category_name": "Coolers",
+      "date_added": 1709665627,
+      "date_modified": 0
+    },
+    {
+      "id": 72,
+      "id_category": 21,
+      "name": "Class",
+      "category_name": "Power Plants",
+      "date_added": 1709665750,
+      "date_modified": 0
+    },
+    {
+      "id": 73,
+      "id_category": 21,
+      "name": "Grade",
+      "category_name": "Power Plants",
+      "date_added": 1709665750,
+      "date_modified": 0
+    },
+    {
+      "id": 74,
+      "id_category": 22,
+      "name": "Grade",
+      "category_name": "Quantum Drives",
+      "date_added": 1709665939,
+      "date_modified": 0
+    },
+    {
+      "id": 75,
+      "id_category": 22,
+      "name": "Class",
+      "category_name": "Quantum Drives",
+      "date_added": 1709665939,
+      "date_modified": 0
+    },
+    {
+      "id": 76,
+      "id_category": 23,
+      "name": "Grade",
+      "category_name": "Shield Generators",
+      "date_added": 1709666147,
+      "date_modified": 0
+    },
+    {
+      "id": 77,
+      "id_category": 23,
+      "name": "Class",
+      "category_name": "Shield Generators",
+      "date_added": 1709666147,
+      "date_modified": 0
+    },
+    {
+      "id": 78,
+      "id_category": 25,
+      "name": "Item Type",
+      "category_name": "Docking Collars",
+      "date_added": 1709667564,
+      "date_modified": 1709667775
+    },
+    {
+      "id": 79,
+      "id_category": 25,
+      "name": "Safe Flow Rate",
+      "category_name": "Docking Collars",
+      "date_added": 1709667564,
+      "date_modified": 1709667775
+    },
+    {
+      "id": 80,
+      "id_category": 26,
+      "name": "Item Type",
+      "category_name": "External Fuel Tanks",
+      "date_added": 1709667875,
+      "date_modified": 1714413455
+    },
+    {
+      "id": 81,
+      "id_category": 26,
+      "name": "Flow Rate",
+      "category_name": "External Fuel Tanks",
+      "date_added": 1709667875,
+      "date_modified": 1714413455
+    },
+    {
+      "id": 82,
+      "id_category": 26,
+      "name": "Capacity",
+      "category_name": "External Fuel Tanks",
+      "date_added": 1709667875,
+      "date_modified": 1714413455
+    },
+    {
+      "id": 83,
+      "id_category": 28,
+      "name": "Item Type",
+      "category_name": "Gadgets",
+      "date_added": 1709668250,
+      "date_modified": 1714413474
+    },
+    {
+      "id": 84,
+      "id_category": 28,
+      "name": "Optimal Charge Window Size",
+      "category_name": "Gadgets",
+      "date_added": 1709668250,
+      "date_modified": 1714413474
+    },
+    {
+      "id": 85,
+      "id_category": 28,
+      "name": "Optimal Charge Window Rate",
+      "category_name": "Gadgets",
+      "date_added": 1709668250,
+      "date_modified": 1714413474
+    },
+    {
+      "id": 86,
+      "id_category": 28,
+      "name": "Laser Instability",
+      "category_name": "Gadgets",
+      "date_added": 1709668250,
+      "date_modified": 1714413474
+    },
+    {
+      "id": 87,
+      "id_category": 28,
+      "name": "Resistance",
+      "category_name": "Gadgets",
+      "date_added": 1709668371,
+      "date_modified": 1714413474
+    },
+    {
+      "id": 88,
+      "id_category": 28,
+      "name": "Instability",
+      "category_name": "Gadgets",
+      "date_added": 1709668371,
+      "date_modified": 1714413474
+    },
+    {
+      "id": 89,
+      "id_category": 28,
+      "name": "Cluster Modifier",
+      "category_name": "Gadgets",
+      "date_added": 1709668489,
+      "date_modified": 1714413474
+    },
+    {
+      "id": 90,
+      "id_category": 29,
+      "name": "Optimal Range",
+      "category_name": "Mining Laser Heads",
+      "date_added": 1709669086,
+      "date_modified": 1714413515
+    },
+    {
+      "id": 91,
+      "id_category": 29,
+      "name": "Maximum Range",
+      "category_name": "Mining Laser Heads",
+      "date_added": 1709669086,
+      "date_modified": 1714413515
+    },
+    {
+      "id": 92,
+      "id_category": 29,
+      "name": "Mining Laser Power",
+      "category_name": "Mining Laser Heads",
+      "date_added": 1709669086,
+      "date_modified": 1714413515
+    },
+    {
+      "id": 93,
+      "id_category": 29,
+      "name": "Extraction Laser Power",
+      "category_name": "Mining Laser Heads",
+      "date_added": 1709669086,
+      "date_modified": 1714413515
+    },
+    {
+      "id": 94,
+      "id_category": 29,
+      "name": "Module Slots",
+      "category_name": "Mining Laser Heads",
+      "date_added": 1709669086,
+      "date_modified": 1714413515
+    },
+    {
+      "id": 95,
+      "id_category": 29,
+      "name": "Laser Instability",
+      "category_name": "Mining Laser Heads",
+      "date_added": 1709669086,
+      "date_modified": 1714413515
+    },
+    {
+      "id": 96,
+      "id_category": 29,
+      "name": "Optimal Charge Window Rate",
+      "category_name": "Mining Laser Heads",
+      "date_added": 1709669086,
+      "date_modified": 1714413515
+    },
+    {
+      "id": 97,
+      "id_category": 29,
+      "name": "Inert Material Level",
+      "category_name": "Mining Laser Heads",
+      "date_added": 1709669086,
+      "date_modified": 1714413515
+    },
+    {
+      "id": 98,
+      "id_category": 29,
+      "name": "Optimal Charge Windows Size",
+      "category_name": "Mining Laser Heads",
+      "date_added": 1709669086,
+      "date_modified": 1714413515
+    },
+    {
+      "id": 99,
+      "id_category": 29,
+      "name": "Resistance",
+      "category_name": "Mining Laser Heads",
+      "date_added": 1709669086,
+      "date_modified": 1714413515
+    },
+    {
+      "id": 100,
+      "id_category": 30,
+      "name": "Item Type",
+      "category_name": "Mining Modules",
+      "date_added": 1709670375,
+      "date_modified": 1714413528
+    },
+    {
+      "id": 101,
+      "id_category": 30,
+      "name": "Optimal Charge Window Size",
+      "category_name": "Mining Modules",
+      "date_added": 1709670375,
+      "date_modified": 1714413528
+    },
+    {
+      "id": 102,
+      "id_category": 30,
+      "name": "Mining Laser Power",
+      "category_name": "Mining Modules",
+      "date_added": 1709670375,
+      "date_modified": 1714413528
+    },
+    {
+      "id": 103,
+      "id_category": 30,
+      "name": "Extraction Laser Power",
+      "category_name": "Mining Modules",
+      "date_added": 1709670375,
+      "date_modified": 1714413528
+    },
+    {
+      "id": 104,
+      "id_category": 30,
+      "name": "Optimal Charge Rate",
+      "category_name": "Mining Modules",
+      "date_added": 1709670375,
+      "date_modified": 1714413528
+    },
+    {
+      "id": 105,
+      "id_category": 30,
+      "name": "Inert Material Level",
+      "category_name": "Mining Modules",
+      "date_added": 1709670375,
+      "date_modified": 1714413528
+    },
+    {
+      "id": 106,
+      "id_category": 31,
+      "name": "Radius",
+      "category_name": "Scraper Beams",
+      "date_added": 1709670891,
+      "date_modified": 0
+    },
+    {
+      "id": 107,
+      "id_category": 31,
+      "name": "Extraction Efficiency",
+      "category_name": "Scraper Beams",
+      "date_added": 1709670891,
+      "date_modified": 0
+    },
+    {
+      "id": 108,
+      "id_category": 32,
+      "name": "Item Type",
+      "category_name": "Guns",
+      "date_added": 1709686100,
+      "date_modified": 0
+    },
+    {
+      "id": 109,
+      "id_category": 18,
+      "name": "Area of Effect",
+      "category_name": "Personal Weapons",
+      "date_added": 1709823590,
+      "date_modified": 1714413417
+    },
+    {
+      "id": 110,
+      "id_category": 18,
+      "name": "Magazine Size",
+      "category_name": "Personal Weapons",
+      "date_added": 1709823590,
+      "date_modified": 1714413417
+    },
+    {
+      "id": 111,
+      "id_category": 18,
+      "name": "Size",
+      "category_name": "Personal Weapons",
+      "date_added": 1709823949,
+      "date_modified": 1714413417
+    },
+    {
+      "id": 112,
+      "id_category": 34,
+      "name": "Tracking Signal",
+      "category_name": "Missiles",
+      "date_added": 1710217870,
+      "date_modified": 1710217937
+    },
+    {
+      "id": 113,
+      "id_category": 33,
+      "name": "Missiles",
+      "category_name": "Missile Racks",
+      "date_added": 1710218967,
+      "date_modified": 0
+    },
+    {
+      "id": 114,
+      "id_category": 30,
+      "name": "Catastrophic Charge Rate",
+      "category_name": "Mining Modules",
+      "date_added": 1710222811,
+      "date_modified": 1714413528
+    },
+    {
+      "id": 115,
+      "id_category": 30,
+      "name": "Resistance",
+      "category_name": "Mining Modules",
+      "date_added": 1710223064,
+      "date_modified": 1714413528
+    },
+    {
+      "id": 116,
+      "id_category": 30,
+      "name": "Duration",
+      "category_name": "Mining Modules",
+      "date_added": 1710223064,
+      "date_modified": 1714413528
+    },
+    {
+      "id": 117,
+      "id_category": 30,
+      "name": "Uses",
+      "category_name": "Mining Modules",
+      "date_added": 1710223064,
+      "date_modified": 1714413528
+    },
+    {
+      "id": 118,
+      "id_category": 30,
+      "name": "Laser Instability",
+      "category_name": "Mining Modules",
+      "date_added": 1710223155,
+      "date_modified": 1714413528
+    },
+    {
+      "id": 119,
+      "id_category": 30,
+      "name": "Shatter Damage",
+      "category_name": "Mining Modules",
+      "date_added": 1710223373,
+      "date_modified": 1714413528
+    },
+    {
+      "id": 120,
+      "id_category": 9,
+      "name": "Min Temperature",
+      "category_name": "Gloves",
+      "date_added": 1711104919,
+      "date_modified": 1714413347
+    },
+    {
+      "id": 121,
+      "id_category": 9,
+      "name": "Max Temperature",
+      "category_name": "Gloves",
+      "date_added": 1711104934,
+      "date_modified": 1714413347
+    },
+    {
+      "id": 122,
+      "id_category": 70,
+      "name": "Size",
+      "category_name": "Bombs",
+      "date_added": 1712428766,
+      "date_modified": 1712429031
+    },
+    {
+      "id": 123,
+      "id_category": 65,
+      "name": "Capacity",
+      "category_name": "Container",
+      "date_added": 1712842908,
+      "date_modified": 1714413382
+    },
+    {
+      "id": 124,
+      "id_category": 67,
+      "name": "Max Angle",
+      "category_name": "Tractor Beams",
+      "date_added": 1713225293,
+      "date_modified": 1714482848
+    },
+    {
+      "id": 125,
+      "id_category": 67,
+      "name": "Max Range",
+      "category_name": "Tractor Beams",
+      "date_added": 1713225293,
+      "date_modified": 1714482848
+    },
+    {
+      "id": 126,
+      "id_category": 67,
+      "name": "Full Strength Distance",
+      "category_name": "Tractor Beams",
+      "date_added": 1713225293,
+      "date_modified": 1714482848
+    },
+    {
+      "id": 127,
+      "id_category": 17,
+      "name": "Capacity",
+      "category_name": "Attachments",
+      "date_added": 1713836446,
+      "date_modified": 1734834231
+    },
+    {
+      "id": 128,
+      "id_category": 2,
+      "name": "Carry Gadgets",
+      "category_name": "Backpacks",
+      "date_added": 1716800095,
+      "date_modified": 0
+    },
+    {
+      "id": 129,
+      "id_category": 5,
+      "name": "Slots - Throwable",
+      "category_name": "Torso",
+      "date_added": 1716972650,
+      "date_modified": 0
+    },
+    {
+      "id": 130,
+      "id_category": 5,
+      "name": "Slots - Ammo",
+      "category_name": "Torso",
+      "date_added": 1716972650,
+      "date_modified": 0
+    },
+    {
+      "id": 131,
+      "id_category": 24,
+      "name": "Slots - Consumable",
+      "category_name": "Undersuits",
+      "date_added": 1716974198,
+      "date_modified": 1716975950
+    },
+    {
+      "id": 132,
+      "id_category": 24,
+      "name": "Slots - Ammo",
+      "category_name": "Undersuits",
+      "date_added": 1716974216,
+      "date_modified": 1716975950
+    },
+    {
+      "id": 133,
+      "id_category": 24,
+      "name": "Slots - Throwable",
+      "category_name": "Undersuits",
+      "date_added": 1716974486,
+      "date_modified": 1716975950
+    },
+    {
+      "id": 134,
+      "id_category": 24,
+      "name": "Carrying Capacity",
+      "category_name": "Undersuits",
+      "date_added": 1716975950,
+      "date_modified": 0
+    },
+    {
+      "id": 135,
+      "id_category": 4,
+      "name": "Slots - Consumable",
+      "category_name": "Legs",
+      "date_added": 1716976315,
+      "date_modified": 0
+    },
+    {
+      "id": 136,
+      "id_category": 10,
+      "name": "Max Temperature",
+      "category_name": "Hats",
+      "date_added": 1717588718,
+      "date_modified": 1717588735
+    },
+    {
+      "id": 137,
+      "id_category": 10,
+      "name": "Min Temperature",
+      "category_name": "Hats",
+      "date_added": 1717588735,
+      "date_modified": 0
+    },
+    {
+      "id": 138,
+      "id_category": 17,
+      "name": "Aim Time",
+      "category_name": "Attachments",
+      "date_added": 1723525824,
+      "date_modified": 1734834231
+    },
+    {
+      "id": 139,
+      "id_category": 17,
+      "name": "Low Light",
+      "category_name": "Attachments",
+      "date_added": 1723532632,
+      "date_modified": 1734834231
+    },
+    {
+      "id": 140,
+      "id_category": 78,
+      "name": "Class",
+      "category_name": "Jump Drives",
+      "date_added": 1730157578,
+      "date_modified": 1731195019
+    },
+    {
+      "id": 141,
+      "id_category": 78,
+      "name": "Size",
+      "category_name": "Jump Drives",
+      "date_added": 1730157606,
+      "date_modified": 1731195019
+    },
+    {
+      "id": 142,
+      "id_category": 78,
+      "name": "Grade",
+      "category_name": "Jump Drives",
+      "date_added": 1730157606,
+      "date_modified": 1731195019
+    },
+    {
+      "id": 143,
+      "id_category": 17,
+      "name": "Damage",
+      "category_name": "Attachments",
+      "date_added": 1732365126,
+      "date_modified": 1734834231
+    },
+    {
+      "id": 144,
+      "id_category": 17,
+      "name": "Recoil Stability",
+      "category_name": "Attachments",
+      "date_added": 1732365126,
+      "date_modified": 1734834231
+    },
+    {
+      "id": 145,
+      "id_category": 17,
+      "name": "Recoil Kick",
+      "category_name": "Attachments",
+      "date_added": 1732365126,
+      "date_modified": 1734834231
+    },
+    {
+      "id": 146,
+      "id_category": 17,
+      "name": "Spread",
+      "category_name": "Attachments",
+      "date_added": 1732365126,
+      "date_modified": 1734834231
+    },
+    {
+      "id": 147,
+      "id_category": 17,
+      "name": "Ammo Cost Per Shot",
+      "category_name": "Attachments",
+      "date_added": 1732365126,
+      "date_modified": 1734834231
+    },
+    {
+      "id": 148,
+      "id_category": 17,
+      "name": "Fire Rate",
+      "category_name": "Attachments",
+      "date_added": 1732365126,
+      "date_modified": 1734834231
+    },
+    {
+      "id": 149,
+      "id_category": 17,
+      "name": "Recoil Smoothness",
+      "category_name": "Attachments",
+      "date_added": 1732365126,
+      "date_modified": 1734834231
+    },
+    {
+      "id": 150,
+      "id_category": 17,
+      "name": "ADS Time",
+      "category_name": "Attachments",
+      "date_added": 1732365126,
+      "date_modified": 1734834231
+    },
+    {
+      "id": 152,
+      "id_category": 86,
+      "name": "Class",
+      "category_name": "Jump Modules",
+      "date_added": 1733626609,
+      "date_modified": 1733658510
+    },
+    {
+      "id": 153,
+      "id_category": 86,
+      "name": "Size",
+      "category_name": "Jump Modules",
+      "date_added": 1733626609,
+      "date_modified": 1733658510
+    },
+    {
+      "id": 154,
+      "id_category": 86,
+      "name": "Grade",
+      "category_name": "Jump Modules",
+      "date_added": 1733626609,
+      "date_modified": 1733658510
+    },
+    {
+      "id": 155,
+      "id_category": 17,
+      "name": "Projectile Speed",
+      "category_name": "Attachments",
+      "date_added": 1734834231,
+      "date_modified": 0
+    }
+  ]

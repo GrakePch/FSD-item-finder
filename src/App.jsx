@@ -174,26 +174,27 @@ function App() {
             id_item: firstId,
             price_min_max: {},
             options: [],
+            attributes: itemUexFormat?.attributes,
           };
           let optionDict = {};
           if (value.uex_ids)
-          for (const id of value.uex_ids) {
-            if (!dictItem[id]) continue;
-            for (const option of dictItem[id].options) {
-              if (!optionDict[option.id_terminal]) {
-                optionDict[option.id_terminal] = option;
-              } else {
-                optionDict[option.id_terminal].price_buy = Math.min(
-                  optionDict[option.id_terminal].price_buy,
-                  option.price_buy
-                );
-                optionDict[option.id_terminal].price_sell = Math.max(
-                  optionDict[option.id_terminal].price_sell,
-                  option.price_sell
-                );
+            for (const id of value.uex_ids) {
+              if (!dictItem[id]) continue;
+              for (const option of dictItem[id].options) {
+                if (!optionDict[option.id_terminal]) {
+                  optionDict[option.id_terminal] = option;
+                } else {
+                  optionDict[option.id_terminal].price_buy = Math.min(
+                    optionDict[option.id_terminal].price_buy,
+                    option.price_buy
+                  );
+                  optionDict[option.id_terminal].price_sell = Math.max(
+                    optionDict[option.id_terminal].price_sell,
+                    option.price_sell
+                  );
+                }
               }
             }
-          }
           tempItemsData[key].options = Object.values(optionDict);
           tempItemsData[key].options.forEach((o) => {
             if (o.price_buy === Infinity) o.price_buy = null;
