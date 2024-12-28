@@ -4,17 +4,35 @@ import SearchResultList from "../SearchResultList/SearchResultList";
 import Icon from "@mdi/react";
 import { mdiArrowLeft, mdiClose, mdiMagnify } from "@mdi/js";
 import { AllItemsPriceContext } from "../../contexts";
-import { isAscii } from "../../utils";
+import { getCategoryZhName, isAscii } from "../../utils";
 import { useSearchParams } from "react-router";
 
 const filterTypes = [
-  ["载具", "Vehicle_"],
-  ["载具系统", "Systems_"],
-  ["载具武器", "Vehicle Weapons_"],
-  ["个人武器", "Personal Weapons_Personal Weapons"],
-  ["武器配件", "Personal Weapons_Attachments"],
-  ["护甲", "Armor_"],
+  ["载具", "Vehicle."],
+  ["载具系统", "Systems."],
+  ["载具武器", "Vehicle Weapons."],
+  ["个人武器", "Personal Weapons."],
+  ["护甲", "Armor."],
 ];
+
+const subFilterTypes = {
+  Systems: [
+    "Power Plants",
+    "Shield Generators",
+    "Coolers",
+    "Quantum Drives",
+    "Jump Modules",
+  ],
+  "Vehicle Weapons": [
+    "Guns",
+    "Missiles",
+    "Missile Racks",
+    "Bombs",
+    "Turrets",
+  ],
+  "Personal Weapons": ["Personal Weapons", "Attachments"],
+  Armor: ["Helmets", "Torso", "Arms", "Legs", "Backpacks"],
+};
 
 const SearchBar = ({ centered, dataAcquired }) => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -23,17 +41,32 @@ const SearchBar = ({ centered, dataAcquired }) => {
   const [showResults, setShowResults] = useState(false);
   const [resultList, setResultList] = useState([]);
 
+  const [filterType, setFilterType] = useState("");
+  const [filterSubType, setFilterSubType] = useState("");
+
   const handleSearchChange = (e) => {
     setSearchName(e.target.value);
   };
 
   useEffect(() => {
-    let filterType = searchParams.get("type");
+    let _filterType = searchParams.get("type");
+    if (_filterType) {
+      let _split = _filterType.split(".");
+      setFilterType(_split[0]);
+      if (_split.length > 1) {
+        setFilterSubType(_split[1]);
+      } else {
+        setFilterSubType("");
+      }
+    } else {
+      setFilterType("");
+      setFilterSubType("");
+    }
     let tempList = [];
     if (
       (searchName.length > 0 &&
         ((isAscii(searchName) && searchName.length > 1) || !isAscii(searchName))) ||
-      filterType
+      _filterType
     )
       for (const item of Object.values(itemsData)
         .filter((i) =>
@@ -42,7 +75,7 @@ const SearchBar = ({ centered, dataAcquired }) => {
             : true
         )
         .filter((i) =>
-          filterType ? (i.type + "_" + i.sub_type).startsWith(filterType) : true
+          _filterType ? (i.type + "." + i.sub_type).startsWith(_filterType) : true
         )) {
         if (
           item.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase()) ||
@@ -107,20 +140,27 @@ const SearchBar = ({ centered, dataAcquired }) => {
             <>
               <hr />
               <div className="filters">
-                <p>筛选</p>
+                <button
+                  onClick={() => {
+                    searchParams.delete("type");
+                    setSearchParams(searchParams);
+                  }}
+                  className={filterType ? undefined : "active"}
+                >
+                  全部
+                </button>
                 {filterTypes.map(([name_zh, t]) => (
                   <button
                     key={t}
                     onClick={() => {
-                      if (searchParams.get("type") === t) {
+                      if (searchParams.get("type")?.startsWith(t)) {
                         searchParams.delete("type");
-                        setSearchParams(searchParams);
-                        return;
+                      } else {
+                        searchParams.set("type", t);
                       }
-                      searchParams.set("type", t);
                       setSearchParams(searchParams);
                     }}
-                    className={t === searchParams.get("type") ? "active" : null}
+                    className={searchParams.get("type")?.startsWith(t) ? "active" : null}
                   >
                     {name_zh}
                   </button>
@@ -137,6 +177,35 @@ const SearchBar = ({ centered, dataAcquired }) => {
                 />
                 <label htmlFor="buyable-only">仅显示可购买</label>
               </div>
+              {subFilterTypes[filterType] && (
+                <div className="filters sub">
+                  <button
+                    onClick={() => {
+                      searchParams.set("type", filterType + ".");
+                      setSearchParams(searchParams);
+                    }}
+                    className={filterSubType ? undefined : "active"}
+                  >
+                    全部
+                  </button>
+                  {subFilterTypes[filterType].map((subt) => (
+                    <button
+                      key={subt}
+                      onClick={() => {
+                        if (filterSubType === subt) {
+                          searchParams.set("type", filterType + ".");
+                        } else {
+                          searchParams.set("type", filterType + "." + subt);
+                        }
+                        setSearchParams(searchParams);
+                      }}
+                      className={subt === filterSubType ? "active" : null}
+                    >
+                      {getCategoryZhName(subt)}
+                    </button>
+                  ))}
+                </div>
+              )}
               {resultList.length > 0 && (
                 <p className="total">搜索结果共 {resultList.length} 个</p>
               )}

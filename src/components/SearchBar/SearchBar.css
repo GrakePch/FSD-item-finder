@@ -132,6 +132,16 @@
     flex-wrap: wrap;
 }
 
+.SearchBar .filters.sub {
+    background-color: var(--color-bg-2);
+    margin: 0 1rem;
+    margin-bottom: .5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: .5rem;
+    max-width: fit-content;
+}
+
 .SearchBar .filters>* {
     flex-shrink: 0;
 }
@@ -140,12 +150,17 @@
     padding: 0 .5rem;
     border: 1px solid var(--color-text-2);
     border-radius: .25rem;
+    background-color: transparent;
 }
 
 .SearchBar .filters>button.active {
     color: #000;
     background-color: var(--color-text);
-    box-shadow: 0 0 1rem 0 var(--color-text);
+    box-shadow: 0 0 1rem 0 var(--color-text-1);
+}
+
+.SearchBar .filters.sub>button.active {
+    box-shadow: 0 0 .5rem 0 var(--color-text-1);
 }
 
 .SearchBar .filters>hr {
@@ -157,5 +172,6 @@
 
 .SearchBar .total {
     padding: .5rem 1rem;
+    padding-top: 0;
     font-family: var(--font-slim);
 }

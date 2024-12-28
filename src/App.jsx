@@ -154,6 +154,9 @@ function App() {
           let itemUexFormat = getItemUexFormat(firstId);
           let type = itemUexFormat?.section;
           let subType = itemUexFormat?.category;
+          if (subType == "Jump Modules") {
+            type = "Systems";
+          }
           if (!type || !subType) {
             let remapped = mapToUEXTypeSubType(value.type);
             type = type || remapped[0];

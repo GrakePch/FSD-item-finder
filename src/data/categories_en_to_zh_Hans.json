@@ -1,4 +1,5 @@
 {
+    "All": "全部",
     "Armor": "护甲",
     "Arms": "臂甲",
     "Backpacks": "背包",
@@ -33,6 +34,7 @@
     "Coolers": "冷却器",
     "Power Plants": "发电机",
     "Quantum Drives": "量子驱动器",
+    "Jump Modules": "跳跃模块",
     "Shield Generators": "护盾生成器",
     "Computer": "计算机",
 
