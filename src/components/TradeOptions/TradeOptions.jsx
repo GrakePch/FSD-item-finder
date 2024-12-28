@@ -91,10 +91,11 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
             .filter((option) => option["price_" + tradeType] > 0)
             .map((option) => {
               let date = new Date(option.date_modified * 1000);
+              let locPath = getLocPath(option, terminalsData);
               return (
                 <div className="option" key={option.id_terminal}>
                   <p className="location">
-                    {getLocPath(option, terminalsData).map((loc, depth) => (
+                    {locPath.map((loc, depth) => (
                       <span
                         key={depth}
                         className="location-chip"
@@ -109,9 +110,14 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
                   </p>
                   <p
                     className="date-modified"
-                    style={{ color: option.date_modified < date4_0 && "#a06060" }}
+                    style={{
+                      color:
+                        option.date_modified < date4_0 &&
+                        locPath[0] !== "Pyro" &&
+                        "#a06060",
+                    }}
                   >
-                    {option.date_modified < date4_0 && (
+                    {option.date_modified < date4_0 && locPath[0] !== "Pyro" && (
                       <Icon path={mdiAlertCircleOutline} size="1rem" />
                     )}
                     {date.getMonth() + 1}/{date.getDate()}
@@ -172,6 +178,7 @@ const addToTree = (tree, path, option) => {
 };
 
 const LocationForest = ({ forest, priceMin, priceMax, depth, tradeType }) => {
+  const terminalsData = useContext(AllTerminalsContext);
   return Object.entries(forest).map(([key, loc]) => {
     if ("option" in loc) {
       return (
@@ -184,9 +191,10 @@ const LocationForest = ({ forest, priceMin, priceMax, depth, tradeType }) => {
               {getLocationZhName(loc.name)}
             </span>
           </p>
-          {loc.option.date_modified < date4_0 && (
-            <Icon path={mdiAlertCircleOutline} size="1rem" color="#a06060" />
-          )}
+          {loc.option.date_modified < date4_0 &&
+            getLocPath(loc.option, terminalsData)[0] !== "Pyro" && (
+              <Icon path={mdiAlertCircleOutline} size="1rem" color="#a06060" />
+            )}
           <p className="distance-info">{readableDistance(loc.option.distance)}</p>
           {loc.option["price_" + tradeType] > 0 ? (
             <p
