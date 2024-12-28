@@ -31,6 +31,9 @@ const SearchResultList = ({ results, setShowResults }) => {
           attrsize = getAttributeValueByName("Size", item.attributes);
           attrTrackSignal = item.attributes?.[112];
         }
+        if (item.sub_type === "Attachments") {
+          attrsize = getAttributeValueByName("Size", item.attributes);
+        }
         return (
           <button
             className="result-list-item"

@@ -4,7 +4,7 @@ import SearchResultList from "../SearchResultList/SearchResultList";
 import Icon from "@mdi/react";
 import { mdiArrowLeft, mdiClose, mdiMagnify } from "@mdi/js";
 import { AllItemsPriceContext } from "../../contexts";
-import { getCategoryZhName, isAscii } from "../../utils";
+import { getAttributeValueByName, getCategoryZhName, isAscii } from "../../utils";
 import { useSearchParams } from "react-router";
 
 const filterTypes = [
@@ -23,13 +23,7 @@ const subFilterTypes = {
     "Quantum Drives",
     "Jump Modules",
   ],
-  "Vehicle Weapons": [
-    "Guns",
-    "Missiles",
-    "Missile Racks",
-    "Bombs",
-    "Turrets",
-  ],
+  "Vehicle Weapons": ["Guns", "Missiles", "Missile Racks", "Bombs", "Turrets"],
   "Personal Weapons": ["Personal Weapons", "Attachments"],
   Armor: ["Helmets", "Torso", "Arms", "Legs", "Backpacks"],
 };
@@ -87,6 +81,43 @@ const SearchBar = ({ centered, dataAcquired }) => {
 
     if (tempList.length <= 300) {
       tempList.sort((a, b) => a.name.localeCompare(b.name));
+    }
+
+    if (_filterType.startsWith("Systems.")) {
+      tempList
+        .sort((a, b) =>
+          getAttributeValueByName("Grade", a.attributes)?.localeCompare(
+            getAttributeValueByName("Grade", b.attributes)
+          )
+        )
+        .sort((a, b) =>
+          getAttributeValueByName("Class", a.attributes)?.localeCompare(
+            getAttributeValueByName("Class", b.attributes)
+          )
+        )
+        .sort(
+          (a, b) =>
+            (getAttributeValueByName("Size", a.attributes) || Infinity) -
+            (getAttributeValueByName("Size", b.attributes) || Infinity)
+        );
+    } else if (_filterType.startsWith("Vehicle Weapons.")) {
+      tempList
+        .sort((a, b) =>
+          getAttributeValueByName("Tracking Signal", a.attributes)?.localeCompare(
+            getAttributeValueByName("Tracking Signal", b.attributes)
+          )
+        )
+        .sort(
+          (a, b) =>
+            (getAttributeValueByName("Size", a.attributes) || Infinity) -
+            (getAttributeValueByName("Size", b.attributes) || Infinity)
+        );
+    } else if (_filterType.startsWith("Personal Weapons.Atta")) {
+      tempList.sort(
+        (a, b) =>
+          (getAttributeValueByName("Size", a.attributes) || Infinity) -
+          (getAttributeValueByName("Size", b.attributes) || Infinity)
+      );
     }
 
     // console.log(tempList);
