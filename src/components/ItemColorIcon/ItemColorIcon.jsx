@@ -15,6 +15,13 @@ const colorWordAtEnd = {
   starcrossed: ["deeppink", "crimson"],
   slate: ["lightslategray"],
   obsidian: ["#000000"],
+
+  arctic: ["#ffffff"],
+  desert: ["moccasin"],
+  autumn: ["darkkhaki"],
+  singularity: ["#242424", "firebrick"],
+  nightfire: ["#242424", "tomato"],
+  iceborn: ["#242424", "#ffffff"],
 };
 
 const ItemColorIcon = ({ name }) => {
@@ -22,7 +29,7 @@ const ItemColorIcon = ({ name }) => {
   if (name) {
     let nameLower = name.toLowerCase();
     for (const [suffix, cssColors] of Object.entries(colorWordAtEnd)) {
-      if (nameLower.endsWith(suffix)) {
+      if (nameLower.endsWith(" " + suffix)) {
         colors = cssColors;
         break;
       }
@@ -36,7 +43,7 @@ const ItemColorIcon = ({ name }) => {
   if (colors?.length > 0) {
     let angle = 360 / colors.length;
     colors.forEach((color, idx) => {
-      let cssColor = colorWordAtEnd[color] || color;
+      let cssColor = colorWordAtEnd[color.toLowerCase()]?.[0] || color;
       if (idx < colors.length - 1)
         css += `${cssColor} ${idx * angle}deg ${(idx + 1) * angle}deg, `;
       else css += `${cssColor} ${idx * angle}deg 360deg)`;
