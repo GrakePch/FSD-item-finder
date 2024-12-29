@@ -9,7 +9,14 @@ import axios from "axios";
 import { AllTerminalsContext, AllItemsPriceContext } from "./contexts";
 import uexBadge from "./assets/uex-api-badge-powered.png";
 import itemsUexIdsAndI18n from "./data/items_uex_ids_and_i18n.json";
-import { date4_0, getItemUexFormat, getSet, getVariants, mapToUEXTypeSubType } from "./utils";
+import {
+  date4_0,
+  getItemUexFormat,
+  getSet,
+  getVariants,
+  mapToUEXTypeSubType,
+  pushLocalStorageRecent,
+} from "./utils";
 
 function App() {
   const [terminalsData, setTerminalsData] = useState({});
@@ -237,7 +244,13 @@ function App() {
   useEffect(() => {
     setShowMode(searchParams.get("mode"));
     let key = searchParams.get("key");
-    setItem(itemsData[key] || null);
+    let _itemsData = itemsData[key];
+    if (_itemsData) {
+      pushLocalStorageRecent(key);
+      setItem(itemsData[key]);
+    } else {
+      setItem(null);
+    }
     setItemListVariants(getVariants(key, itemsData));
     setItemSet(getSet(key, itemsData));
   }, [searchParams, itemsData]);

@@ -262,3 +262,21 @@ export const signalToColor = {
     Infrared: "#a83434",
     "Cross Section": "#c1a03e",
 };
+
+export function getLocalStorageRecent() {
+    let r = localStorage.getItem("recent");
+    if (!r) return [];
+    return r.split(",").filter(a => a);
+}
+
+export function pushLocalStorageRecent(key) {
+    let r = getLocalStorageRecent();
+    r = r.filter(k => k != key);
+    r.unshift(key);
+    if (r.length > 5) r = r.slice(0, 5);
+    localStorage.setItem("recent", r.join(","));
+}
+
+export function clearLocalStorageRecent() {
+    localStorage.removeItem("recent");
+}

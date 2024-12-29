@@ -2,9 +2,15 @@ import "./SearchBar.css";
 import { useContext, useEffect, useState } from "react";
 import SearchResultList from "../SearchResultList/SearchResultList";
 import Icon from "@mdi/react";
-import { mdiArrowLeft, mdiClose, mdiMagnify } from "@mdi/js";
+import { mdiArrowLeft, mdiClose, mdiMagnify, mdiTrashCanOutline } from "@mdi/js";
 import { AllItemsPriceContext } from "../../contexts";
-import { getAttributeValueByName, getCategoryZhName, isAscii } from "../../utils";
+import {
+  clearLocalStorageRecent,
+  getAttributeValueByName,
+  getCategoryZhName,
+  getLocalStorageRecent,
+  isAscii,
+} from "../../utils";
 import { useSearchParams } from "react-router";
 
 const filterTypes = [
@@ -32,6 +38,7 @@ const SearchBar = ({ centered, dataAcquired }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const itemsData = useContext(AllItemsPriceContext);
   const [searchName, setSearchName] = useState("");
+  const [isSearching, setIsSearching] = useState(false);
   const [showResults, setShowResults] = useState(false);
   const [resultList, setResultList] = useState([]);
 
@@ -56,12 +63,15 @@ const SearchBar = ({ centered, dataAcquired }) => {
       setFilterType("");
       setFilterSubType("");
     }
-    let tempList = [];
-    if (
+
+    let tempIsSearching =
       (searchName.length > 0 &&
         ((isAscii(searchName) && searchName.length > 1) || !isAscii(searchName))) ||
-      _filterType
-    )
+      _filterType;
+    setIsSearching(tempIsSearching);
+
+    let tempList = [];
+    if (tempIsSearching) {
       for (const item of Object.values(itemsData)
         .filter((i) =>
           !parseInt(searchParams.get("show_unbuyable"))
@@ -79,8 +89,13 @@ const SearchBar = ({ centered, dataAcquired }) => {
         }
       }
 
-    if (tempList.length <= 300) {
-      tempList.sort((a, b) => a.name.localeCompare(b.name));
+      if (tempList.length <= 300) {
+        tempList.sort((a, b) => a.name.localeCompare(b.name));
+      }
+    } else {
+      tempList = getLocalStorageRecent()
+        .map((k) => itemsData[k])
+        .filter((i) => i);
     }
 
     if (_filterType)
@@ -238,9 +253,23 @@ const SearchBar = ({ centered, dataAcquired }) => {
                   ))}
                 </div>
               )}
-              {resultList.length > 0 && (
-                <p className="total">搜索结果共 {resultList.length} 个</p>
-              )}
+              {resultList.length > 0 &&
+                (isSearching ? (
+                  <p className="total">搜索结果共 {resultList.length} 个</p>
+                ) : (
+                  <p className="total">
+                    最近查询{" "}
+                    <button
+                      className="btn-clear-recent"
+                      onClick={() => {
+                        clearLocalStorageRecent();
+                        setResultList([]);
+                      }}
+                    >
+                      <Icon path={mdiTrashCanOutline} size="1rem" /> 清除
+                    </button>
+                  </p>
+                ))}
               <SearchResultList results={resultList} setShowResults={setShowResults} />
             </>
           )}

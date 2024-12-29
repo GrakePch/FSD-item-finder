@@ -175,3 +175,15 @@
     padding-top: 0;
     font-family: var(--font-slim);
 }
+
+.SearchBar .btn-clear-recent {
+    padding: 0 .5rem;
+    color: var(--color-text-1);
+    font-weight: 400;
+    margin-left: .5rem;
+    border-radius: .25rem;
+}
+
+.SearchBar .btn-clear-recent>svg {
+    vertical-align: -0.125rem;
+}
