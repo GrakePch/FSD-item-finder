@@ -1,12 +1,47 @@
+const colorWordAtEnd = {
+  alpha: ["dimgray"],
+  black: ["#242424"],
+  "dark red": ["darkred"],
+  "dark green": ["darkgreen"],
+  twilight: ["steelblue"],
+  imperial: ["blueviolet"],
+  woodland: ["darkolivegreen"],
+  "crusader edition": ["#1772d5", "#36404f"],
+  "hurston edition": ["#4b4b4b", "#d8b455"],
+  "microtech edition": ["#26a8e0", "#8fc84c"],
+  executive: ["#b69e64", "#4b565c"],
+  lovestruck: ["deeppink"],
+  envy: ["deeppink", "mediumpurple"],
+  starcrossed: ["deeppink", "crimson"],
+  slate: ["lightslategray"],
+  obsidian: ["#000000"],
+};
+
 const ItemColorIcon = ({ name }) => {
-  let colors = name.split(" ").reverse()[0].split("/");
-  let angle = 360 / colors.length;
+  let colors = [];
+  if (name) {
+    let nameLower = name.toLowerCase();
+    for (const [suffix, cssColors] of Object.entries(colorWordAtEnd)) {
+      if (nameLower.endsWith(suffix)) {
+        colors = cssColors;
+        break;
+      }
+    }
+    if (colors.length == 0) colors = name.split(" ").reverse()[0].split("/");
+  }
+  let angle = 0;
   let css = "conic-gradient(";
-  colors.forEach((color, idx) => {
-    if (idx < colors.length - 1)
-      css += `${color} ${idx * angle}deg ${(idx + 1) * angle}deg, `;
-    else css += `${color} ${idx * angle}deg 360deg)`;
-  });
+
+  /* Build CSS gradient */
+  if (colors?.length > 0) {
+    let angle = 360 / colors.length;
+    colors.forEach((color, idx) => {
+      let cssColor = colorWordAtEnd[color] || color;
+      if (idx < colors.length - 1)
+        css += `${cssColor} ${idx * angle}deg ${(idx + 1) * angle}deg, `;
+      else css += `${cssColor} ${idx * angle}deg 360deg)`;
+    });
+  }
 
   return (
     <div
