@@ -1489,52 +1489,52 @@
         "zh": "L19 居住区",
         "en": "L19 Residences"
     },
-    "hur l1": {
+    "hur-l1": {
         "key": "Stanton1_L1",
         "zh": "赫 HUR L1",
         "en": "HUR L1"
     },
-    "hur l1-a": {
+    "hur-l1-a": {
         "key": "Stanton1_L1_01",
         "zh": "赫 HUR L1-A",
         "en": "HUR L1-A"
     },
-    "hur l2": {
+    "hur-l2": {
         "key": "Stanton1_L2",
         "zh": "赫 HUR L2",
         "en": "HUR L2"
     },
-    "hur l2-a": {
+    "hur-l2-a": {
         "key": "Stanton1_L2_01",
         "zh": "赫 HUR L2-A",
         "en": "HUR L2-A"
     },
-    "hur l3": {
+    "hur-l3": {
         "key": "Stanton1_L3",
         "zh": "赫 HUR L3",
         "en": "HUR L3"
     },
-    "hur l3-a": {
+    "hur-l3-a": {
         "key": "Stanton1_L3_01",
         "zh": "赫 HUR L3-A",
         "en": "HUR L3-A"
     },
-    "hur l4": {
+    "hur-l4": {
         "key": "Stanton1_L4",
         "zh": "赫 HUR L4",
         "en": "HUR L4"
     },
-    "hur l4-a": {
+    "hur-l4-a": {
         "key": "Stanton1_L4_01",
         "zh": "赫 HUR L4-A",
         "en": "HUR L4-A"
     },
-    "hur l5": {
+    "hur-l5": {
         "key": "Stanton1_L5",
         "zh": "赫 HUR L5",
         "en": "HUR L5"
     },
-    "hur l5-a": {
+    "hur-l5-a": {
         "key": "Stanton1_L5_01",
         "zh": "赫 HUR L5-A",
         "en": "HUR L5-A"
@@ -1719,62 +1719,62 @@
         "zh": "哈特莫尔",
         "en": "Hartmoore"
     },
-    "cru l1": {
+    "cru-l1": {
         "key": "Stanton2_L1",
         "zh": "十 CRU L1",
         "en": "CRU L1"
     },
-    "cru l1-a": {
+    "cru-l1-a": {
         "key": "Stanton2_L1_01",
         "zh": "十 CRU L1-A",
         "en": "CRU L1-A"
     },
-    "cru l2": {
+    "cru-l2": {
         "key": "Stanton2_L2",
         "zh": "十 CRU L2",
         "en": "CRU L2"
     },
-    "cru l2-a": {
+    "cru-l2-a": {
         "key": "Stanton2_L2_01",
         "zh": "十 CRU L2-A",
         "en": "CRU L2-A"
     },
-    "cru l2-b": {
+    "cru-l2-b": {
         "key": "Stanton2_L2_02",
         "zh": "十 CRU L2-B",
         "en": "CRU L2-B"
     },
-    "cru l2-c": {
+    "cru-l2-c": {
         "key": "Stanton2_L2_03",
         "zh": "十 CRU L2-C",
         "en": "CRU L2-C"
     },
-    "cru l3": {
+    "cru-l3": {
         "key": "Stanton2_L3",
         "zh": "十 CRU L3",
         "en": "CRU L3"
     },
-    "cru l3-a": {
+    "cru-l3-a": {
         "key": "Stanton2_L3_01",
         "zh": "十 CRU L3-A",
         "en": "CRU L3-A"
     },
-    "cru l4": {
+    "cru-l4": {
         "key": "Stanton2_L4",
         "zh": "十 CRU L4",
         "en": "CRU L4"
     },
-    "cru l4-a": {
+    "cru-l4-a": {
         "key": "Stanton2_L4_01",
         "zh": "十 CRU L4-A",
         "en": "CRU L4-A"
     },
-    "cru l5": {
+    "cru-l5": {
         "key": "Stanton2_L5",
         "zh": "十 CRU L5",
         "en": "CRU L5"
     },
-    "cru l5-a": {
+    "cru-l5-a": {
         "key": "Stanton2_L5_01",
         "zh": "十 CRU L5-A",
         "en": "CRU L5-A"
@@ -2164,52 +2164,52 @@
         "zh": "Stanton3_Courier_Org",
         "en": "Stanton3_Courier_Org"
     },
-    "arc l1": {
+    "arc-l1": {
         "key": "Stanton3_L1",
         "zh": "弧 ARC L1",
         "en": "ARC L1"
     },
-    "arc l1-a": {
+    "arc-l1-a": {
         "key": "Stanton3_L1_01",
         "zh": "弧 ARC L1-A",
         "en": "ARC L1-A"
     },
-    "arc l2": {
+    "arc-l2": {
         "key": "Stanton3_L2",
         "zh": "弧 ARC L2",
         "en": "ARC L2"
     },
-    "arc l2-a": {
+    "arc-l2-a": {
         "key": "Stanton3_L2_01",
         "zh": "弧 ARC L2-A",
         "en": "ARC L2-A"
     },
-    "arc l3": {
+    "arc-l3": {
         "key": "Stanton3_L3",
         "zh": "弧 ARC L3",
         "en": "ARC L3"
     },
-    "arc l3-a": {
+    "arc-l3-a": {
         "key": "Stanton3_L3_01",
         "zh": "弧 ARC L3-A",
         "en": "ARC L3-A"
     },
-    "arc l4": {
+    "arc-l4": {
         "key": "Stanton3_L4",
         "zh": "弧 ARC L4",
         "en": "ARC L4"
     },
-    "arc l4-a": {
+    "arc-l4-a": {
         "key": "Stanton3_L4_01",
         "zh": "弧 ARC L4-A",
         "en": "ARC L4-A"
     },
-    "arc l5": {
+    "arc-l5": {
         "key": "Stanton3_L5",
         "zh": "弧 ARC L5",
         "en": "ARC L5"
     },
-    "arc l5-a": {
+    "arc-l5-a": {
         "key": "Stanton3_L5_01",
         "zh": "弧 ARC L5-A",
         "en": "ARC L5-A"
@@ -2524,17 +2524,17 @@
         "zh": "眺望点紧急避难所",
         "en": "Clear View Emergency Shelter"
     },
-    "mic l1": {
+    "mic-l1": {
         "key": "Stanton4_L1",
         "zh": "微 MIC L1",
         "en": "MIC L1"
     },
-    "mic l1-a": {
+    "mic-l1-a": {
         "key": "Stanton4_L1_01",
         "zh": "微 MIC L1-A",
         "en": "MIC L1-A"
     },
-    "mic l1-b": {
+    "mic-l1-b": {
         "key": "Stanton4_L1_02",
         "zh": "微 MIC L1-B",
         "en": "MIC L1-B"
@@ -2544,57 +2544,57 @@
         "zh": "INS-杰里科",
         "en": "INS Jericho"
     },
-    "mic l2": {
+    "mic-l2": {
         "key": "Stanton4_L2",
         "zh": "微 MIC L2",
         "en": "MIC L2"
     },
-    "mic l2-a": {
+    "mic-l2-a": {
         "key": "Stanton4_L2_01",
         "zh": "微 MIC L2-A",
         "en": "MIC L2-A"
     },
-    "mic l2-b": {
+    "mic-l2-b": {
         "key": "Stanton4_L2_02",
         "zh": "微 MIC L2-B",
         "en": "MIC L2-B"
     },
-    "mic l2-c": {
+    "mic-l2-c": {
         "key": "Stanton4_L2_03",
         "zh": "微 MIC L2-C",
         "en": "MIC L2-C"
     },
-    "mic l3": {
+    "mic-l3": {
         "key": "Stanton4_L3",
         "zh": "微 MIC L3",
         "en": "MIC L3"
     },
-    "mic l3-a": {
+    "mic-l3-a": {
         "key": "Stanton4_L3_01",
         "zh": "微 MIC L3-A",
         "en": "MIC L3-A"
     },
-    "mic l4": {
+    "mic-l4": {
         "key": "Stanton4_L4",
         "zh": "微 MIC L4",
         "en": "MIC L4"
     },
-    "mic l4-a": {
+    "mic-l4-a": {
         "key": "Stanton4_L4_01",
         "zh": "微 MIC L4-A",
         "en": "MIC L4-A"
     },
-    "mic l5": {
+    "mic-l5": {
         "key": "Stanton4_L5",
         "zh": "微 MIC L5",
         "en": "MIC L5"
     },
-    "mic l5-a": {
+    "mic-l5-a": {
         "key": "Stanton4_L5_01",
         "zh": "微 MIC L5-A",
         "en": "MIC L5-A"
     },
-    "mic l5-b": {
+    "mic-l5-b": {
         "key": "Stanton4_L5_02",
         "zh": "微 MIC L5-B",
         "en": "MIC L5-B"

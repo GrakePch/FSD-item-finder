@@ -13,6 +13,15 @@ import { AllTerminalsContext } from "../../contexts";
 import { useSearchParams } from "react-router";
 import Icon from "@mdi/react";
 import { mdiAlertCircleOutline } from "@mdi/js";
+import locationNameToType from "../../data/location_name_to_type.json";
+import { icon } from "../../assets/icon";
+
+/**
+ * @typedef {{id_terminal: number, distance: number, price_buy?: number | null, price_sell?: number | null, price_rent?: number | null, date_modified: number}} TradeOption
+ * @typedef {{name: string, subs: LocationForest, option?: TradeOption}} LocationTree
+ * @typedef {Record<string, LocationTree>} LocationForest
+ * @typedef {{locs: string[], depth: number, subs: LocationTreeShallow[], option?: TradeOption}} LocationTreeShallow
+ **/
 
 const percent = (v, zero, hundred) => {
   if (zero === hundred) return 0;
@@ -23,7 +32,9 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const terminalsData = useContext(AllTerminalsContext);
   const [options, setOptions] = useState([]);
-  const [locationForest, setLocationForest] = useState({});
+
+  /** @type {ReturnType<typeof useState<LocationTreeShallow[]>>} */
+  const [locationForestShallow, setLocationForestShallow] = useState([]);
 
   useEffect(() => {
     /* Sort by location name first, no matter sort options */
@@ -57,7 +68,7 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
 
   useEffect(() => {
     if (options.length <= 0) {
-      setLocationForest({});
+      setLocationForestShallow([]);
       return;
     }
 
@@ -68,7 +79,13 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
         addToTree(tempLocationForest, getLocPath(option, terminalsData), option);
       });
 
-    setLocationForest(tempLocationForest);
+    // console.log(tempLocationForest);
+
+    const tempLocationForestShallow = [];
+    optimizeForest(tempLocationForestShallow, tempLocationForest, 0);
+    // console.log(tempLocationForestShallow);
+
+    setLocationForestShallow(tempLocationForestShallow);
   }, [options]);
 
   return (
@@ -94,20 +111,7 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
               let locPath = getLocPath(option, terminalsData);
               return (
                 <div className="option" key={option.id_terminal}>
-                  <p className="location">
-                    {locPath.map((loc, depth) => (
-                      <span
-                        key={depth}
-                        className="location-chip"
-                        style={{
-                          backgroundColor: colorLocationDepth(depth),
-                          color: depth <= 0 && `#000`,
-                        }}
-                      >
-                        {getLocationZhName(loc)}
-                      </span>
-                    ))}
-                  </p>
+                  <LocationPathChips path={locPath} startDepth={0} />
                   <p
                     className="date-modified"
                     style={{
@@ -147,10 +151,9 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
             })
         ) : (
           <LocationForest
-            forest={locationForest}
+            forest={locationForestShallow}
             priceMin={priceMinMax[tradeType + "_min"]}
             priceMax={priceMinMax[tradeType + "_max"]}
-            depth={0}
             tradeType={tradeType}
           />
         )}
@@ -177,93 +180,115 @@ const addToTree = (tree, path, option) => {
   });
 };
 
-const LocationForest = ({ forest, priceMin, priceMax, depth, tradeType }) => {
-  const terminalsData = useContext(AllTerminalsContext);
-  return Object.entries(forest).map(([key, loc]) => {
-    if ("option" in loc) {
-      return (
-        <div className="option-in-tree" key={key}>
-          <p className="location">
-            <span
-              className="location-chip"
-              style={{ backgroundColor: colorLocationDepth(depth) }}
-            >
-              {getLocationZhName(loc.name)}
-            </span>
-          </p>
-          {loc.option.date_modified < date4_0 &&
-            getLocPath(loc.option, terminalsData)[0] !== "Pyro" && (
-              <Icon path={mdiAlertCircleOutline} size="1rem" color="#a06060" />
-            )}
-          <p className="distance-info">{readableDistance(loc.option.distance)}</p>
-          {loc.option["price_" + tradeType] > 0 ? (
-            <p
-              className="price"
-              style={{
-                color: colorPrice(
-                  percent(loc.option["price_" + tradeType], priceMin, priceMin * 2)
-                ),
-              }}
-            >
-              ¤ {loc.option["price_" + tradeType]}
-            </p>
-          ) : (
-            <p className="price" style={{ color: `hsl(0deg 0% 50%)` }}>
-              无法购买
-            </p>
-          )}
-        </div>
-      );
-    } else if (Object.keys(loc.subs).length === 1)
-      return (
-        <div key={key} className="location-tree-nowrap">
-          <p
-            className="location-chip"
-            style={{
-              backgroundColor: colorLocationDepth(depth),
-              color: depth <= 0 && `#000`,
-            }}
-          >
-            {getLocationZhName(loc.name)}
-          </p>
-          <div className="sub-location">
-            <LocationForest
-              forest={loc.subs}
-              priceMin={priceMin}
-              priceMax={priceMax}
-              depth={depth + 1}
-              tradeType={tradeType}
-            />
-          </div>
-        </div>
-      );
-    else
-      return (
-        <div key={key} className="location-tree">
-          <p
-            className="location-chip"
-            style={{
-              backgroundColor: colorLocationDepth(depth),
-              color: depth <= 0 && `#000`,
-            }}
-          >
-            {getLocationZhName(loc.name)}
-          </p>
-          <div className="line-and-list">
-            <div className="line"></div>
-            <div className="sub-location-list">
-              <LocationForest
-                forest={loc.subs}
-                priceMin={priceMin}
-                priceMax={priceMax}
-                depth={depth + 1}
-                tradeType={tradeType}
-              />
-            </div>
-          </div>
-        </div>
-      );
-  });
+/**
+ *
+ * @param {LocationTreeShallow[]} newForest
+ * @param {LocationForest} oldForest
+ * @param {number} depth
+ */
+const optimizeForest = (newForest, oldForest, depth) => {
+  for (const oldTree of Object.values(oldForest)) {
+    /** @type {LocationTreeShallow} */
+    let newTree = {
+      depth: depth,
+      locs: [oldTree.name],
+      subs: [],
+      option: oldTree.option,
+    };
+    if (Object.keys(oldTree.subs).length > 1)
+      optimizeForest(newTree.subs, oldTree.subs, depth + 1);
+    else if (Object.keys(oldTree.subs).length == 1) {
+      optimizeTree(newTree, oldTree, depth + 1);
+    }
+    newForest.push(newTree);
+  }
 };
+
+/**
+ *
+ * @param {LocationTreeShallow} newTree
+ * @param {LocationTree} oldTree
+ * @param {number} depth
+ */
+const optimizeTree = (newTree, oldTree, depth) => {
+  let onlySubTree = Object.values(oldTree.subs)[0];
+  newTree.locs.push(onlySubTree.name);
+  newTree.option = onlySubTree.option;
+  if (Object.keys(onlySubTree.subs).length == 1) {
+    optimizeTree(newTree, onlySubTree, depth + 1);
+  } else if (Object.keys(onlySubTree.subs).length > 1) {
+    optimizeForest(newTree.subs, onlySubTree.subs, depth + 1);
+  }
+};
+
+const LocationForest = ({ forest, priceMin, priceMax, tradeType }) => {
+  const terminalsData = useContext(AllTerminalsContext);
+  return forest.map((tree) =>
+    tree.option ? (
+      <div
+        className={"option-in-tree" + (tree.depth > 0 ? " not-root" : "")}
+        key={tree.locs[0]}
+      >
+        <LocationPathChips path={tree.locs} startDepth={tree.depth} />
+        {tree.option.date_modified < date4_0 &&
+          getLocPath(tree.option, terminalsData)[0] !== "Pyro" && (
+            <Icon path={mdiAlertCircleOutline} size="1rem" color="#a06060" />
+          )}
+        <p className="distance-info">{readableDistance(tree.option.distance)}</p>
+        {tree.option["price_" + tradeType] > 0 ? (
+          <p
+            className="price"
+            style={{
+              color: colorPrice(
+                percent(tree.option["price_" + tradeType], priceMin, priceMin * 2)
+              ),
+            }}
+          >
+            ¤ {tree.option["price_" + tradeType]}
+          </p>
+        ) : (
+          <p className="price" style={{ color: `hsl(0deg 0% 50%)` }}>
+            无法购买
+          </p>
+        )}
+      </div>
+    ) : (
+      <div
+        className={"location-tree" + (tree.depth > 0 ? " not-root" : "")}
+        key={tree.locs[0]}
+      >
+        <LocationPathChips path={tree.locs} startDepth={tree.depth} />
+        <div style={{ marginLeft: "1.5rem" }}>
+          <LocationForest
+            forest={tree.subs}
+            priceMin={priceMin}
+            priceMax={priceMax}
+            tradeType={tradeType}
+          />
+        </div>
+      </div>
+    )
+  );
+};
+
+const LocationPathChips = ({ path, startDepth }) => (
+  <p className="location">
+    {path.map((loc, idx) => (
+      <span
+        key={loc + idx}
+        className="location-chip"
+        style={{
+          backgroundColor: colorLocationDepth(startDepth + idx),
+          color: startDepth + idx <= 0 && `#000`,
+        }}
+      >
+        {locationNameToType[loc] === 1 && (
+          <Icon path={icon["Space Station"]} size="1rem" color="hsl(170deg 80% 50%)" />
+        )}
+        {getLocationZhName(loc)}
+      </span>
+    ))}
+  </p>
+);
 
 export default TradeOptions;

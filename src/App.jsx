@@ -9,6 +9,8 @@ import axios from "axios";
 import { AllTerminalsContext, AllItemsPriceContext } from "./contexts";
 import uexBadge from "./assets/uex-api-badge-powered.png";
 import itemsUexIdsAndI18n from "./data/items_uex_ids_and_i18n.json";
+
+import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
 import {
   date4_0,
   getItemUexFormat,
@@ -34,17 +36,21 @@ function App() {
       try {
         const res = await axios.get("https://uexcorp.space/api/2.0/terminals");
         let temp = res.data.data.map((t) => {
-          let orbit_name_fix = t.orbit_name;
+          let orbit_name_fix = uexBodiesFixM[t.orbit_name] || t.orbit_name;
           if (t.star_system_name === "Pyro" && t.orbit_name === "Pyro Jump Point")
             orbit_name_fix = "Stanton Jump Point";
           let locPath3rd = t.name.split(" - ").reverse();
           if (locPath3rd[0] === "Stanton Gateway Station")
             locPath3rd[0] = "Stanton Gateway";
+          let locationPath = [t.star_system_name, orbit_name_fix, ...locPath3rd];
+          locationPath = locationPath.filter((loc, idx) =>
+            idx > 0 ? loc !== locationPath[idx - 1] : true
+          );
           return {
             id: t.id,
             code: t.code,
             name: t.name,
-            location_path: [t.star_system_name, orbit_name_fix, ...locPath3rd],
+            location_path: locationPath,
             location: {
               name_star_system: t.star_system_name,
               name_planet: t.planet_name,
