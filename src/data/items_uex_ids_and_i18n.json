@@ -574,7 +574,7 @@
         "en": "Aegis Nautilus",
         "zh_Hans": "圣盾 鹦鹉螺"
     },
-    "vehicle_NameGRIN_PTV_short": {
+    "vehicle_NameGRIN_PTV": {
         "uex_ids": [
             "v-150"
         ],
@@ -777,7 +777,7 @@
         "en": "Gatac Railen",
         "zh_Hans": "盖塔克 锐伦"
     },
-    "vehicle_NameGRIN_ROC_short": {
+    "vehicle_NameGRIN_ROC": {
         "uex_ids": [
             "v-168"
         ],
@@ -868,12 +868,12 @@
         "en": "Tumbril Nova",
         "zh_Hans": "盾博尔 新星"
     },
-    "vehicle_NameGRIN_ROC_DS_short": {
+    "vehicle_NameGRIN_ROC_DS": {
         "uex_ids": [
             "v-169"
         ],
         "en": "Greycat ROC-DS",
-        "zh_Hans": "灰猫 ROC-双人版"
+        "zh_Hans": "灰猫 ROC-DS"
     },
     "vehicle_NameTMBL_Storm_AA": {
         "uex_ids": [
@@ -901,9 +901,7 @@
             "v-26"
         ],
         "en": "Aegis Avenger Stalker",
-        "zh_Hans": "圣盾 复仇者 追猎",
-        "type": "SeatDashboard",
-        "subtype": "UNDEFINED"
+        "zh_Hans": "圣盾 复仇者 追猎"
     },
     "vehicle_NameDRAK_Caterpillar_ShipShowdown": {
         "uex_ids": [
@@ -961,7 +959,7 @@
         "en": "Aegis Sabre",
         "zh_Hans": "圣盾 军刀"
     },
-    "vehicle_NameGRIN_STV_short": {
+    "vehicle_NameGRIN_STV": {
         "uex_ids": [
             "v-187"
         ],
@@ -1120,9 +1118,7 @@
             "v-92"
         ],
         "en": "Anvil Gladiator",
-        "zh_Hans": "铁砧 角斗士",
-        "type": "SeatDashboard",
-        "subtype": "UNDEFINED"
+        "zh_Hans": "铁砧 角斗士"
     },
     "vehicle_NameAEGS_Idris": {
         "uex_ids": [
@@ -1164,9 +1160,7 @@
             "v-189"
         ],
         "en": "Esperia Talon",
-        "zh_Hans": "埃斯佩里亚 利爪",
-        "type": "Paints",
-        "subtype": "UNDEFINED"
+        "zh_Hans": "埃斯佩里亚 利爪"
     },
     "vehicle_NameRSI_Zeus_ES": {
         "uex_ids": [
@@ -1628,9 +1622,7 @@
             116
         ],
         "en": "Focus Module",
-        "zh_Hans": "聚焦 模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "聚焦 模组"
     },
     "item_NameCOOL_JUST_S02_CoolCore": {
         "uex_ids": [
@@ -1828,12 +1820,14 @@
         "type": "Char_Armor_Legs",
         "subtype": "Light"
     },
-    "item_Namebehr_frag_grenade_01_short": {
+    "item_Namebehr_frag_grenade_01": {
         "uex_ids": [
             73
         ],
         "en": "MK-4 Frag Grenade",
-        "zh_Hans": "MK-4 破片手榴弹"
+        "zh_Hans": "MK-4 破片手榴弹",
+        "type": "WeaponPersonal",
+        "subtype": "Grenade"
     },
     "item_Name_cds_armor_medium_helmet_01_01_15": {
         "uex_ids": [
@@ -2083,18 +2077,14 @@
             782
         ],
         "en": "Stampede Module",
-        "zh_Hans": "“热潮”模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "“热潮”模组"
     },
     "item_Mining_MiningLaser_Shubin_1_S1": {
         "uex_ids": [
             109
         ],
         "en": "Hofstede-S1 Mining Laser",
-        "zh_Hans": "霍夫斯泰德-S1型采矿激光器",
-        "type": "WeaponMining",
-        "subtype": "Gun"
+        "zh_Hans": "霍夫斯泰德-S1型采矿激光器"
     },
     "item_Name_rrs_combat_heavy_backpack_01_02_01": {
         "uex_ids": [
@@ -2237,9 +2227,7 @@
             1327
         ],
         "en": "Norfield",
-        "zh_Hans": "诺菲尔德",
-        "type": "DockingCollar",
-        "subtype": "UNDEFINED"
+        "zh_Hans": "诺菲尔德"
     },
     "item_NamePOWR_SASU_S03_TigerLilly_SCItem": {
         "uex_ids": [
@@ -2354,9 +2342,7 @@
             783
         ],
         "en": "Surge Module",
-        "zh_Hans": "“电涌”模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "“电涌”模组"
     },
     "item_Name_CBD_Hat_02_01_01": {
         "uex_ids": [
@@ -2616,27 +2602,21 @@
             1328
         ],
         "en": "Harkin",
-        "zh_Hans": "哈金",
-        "type": "DockingCollar",
-        "subtype": "UNDEFINED"
+        "zh_Hans": "哈金"
     },
     "item_Mining_Modules_Passive_Rieger_MK2": {
         "uex_ids": [
             790
         ],
         "en": "Rieger-C2 Module",
-        "zh_Hans": "里格-C2 模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "里格-C2 模组"
     },
     "item_Mining_MiningLaser_Shubin_2_S2": {
         "uex_ids": [
             111
         ],
         "en": "Klein-S2 Mining Laser",
-        "zh_Hans": "克莱恩-S2型采矿激光器",
-        "type": "WeaponMining",
-        "subtype": "Gun"
+        "zh_Hans": "克莱恩-S2型采矿激光器"
     },
     "item_Name_SCU_Hat_03_01_06": {
         "uex_ids": [
@@ -2778,8 +2758,7 @@
             473
         ],
         "en": "TCS-4 Undersuit",
-        "zh_Hans": "TCS-4 基底服",
-        "id_item": []
+        "zh_Hans": "TCS-4 基底服"
     },
     "item_Name_rsi_explorer_undersuit_01_01_16": {
         "uex_ids": [
@@ -2871,12 +2850,14 @@
         "type": "WeaponAttachment",
         "subtype": "IronSight"
     },
-    "item_NameKSAR_pistol_ballistic_01_short": {
+    "item_NameKSAR_pistol_ballistic_01": {
         "uex_ids": [
             1234
         ],
         "en": "Coda Pistol",
-        "zh_Hans": "终曲手枪"
+        "zh_Hans": "终曲实弹手枪",
+        "type": "WeaponPersonal",
+        "subtype": "Small"
     },
     "item_NameFood_sachet_readymeal_01_vegetarian_a": {
         "uex_ids": [
@@ -2991,9 +2972,7 @@
             244
         ],
         "en": "Trawler Scraper Module",
-        "zh_Hans": "拖网刮削模块",
-        "type": "SalvageModifier",
-        "subtype": "UNDEFINED"
+        "zh_Hans": "拖网刮削模块"
     },
     "item_NamePOWR_JUST_S02_Trommel_SCItem": {
         "uex_ids": [
@@ -3085,12 +3064,14 @@
         "type": "WeaponAttachment",
         "subtype": "Magazine"
     },
-    "item_Namebehr_shotgun_ballistic_01_short": {
+    "item_Namebehr_shotgun_ballistic_01": {
         "uex_ids": [
             76
         ],
         "en": "BR-2 Shotgun",
-        "zh_Hans": "BR-2 霰弹枪"
+        "zh_Hans": "BR-2 霰弹枪",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_Nameklwe_pistol_energy_01_mag": {
         "uex_ids": [
@@ -3142,9 +3123,7 @@
             110
         ],
         "en": "Klein-S1 Mining Laser",
-        "zh_Hans": "克莱恩-S1型采矿激光器",
-        "type": "WeaponMining",
-        "subtype": "Gun"
+        "zh_Hans": "克莱恩-S1型采矿激光器"
     },
     "item_Name_rsi_light_utility_backpack_01_01_01": {
         "uex_ids": [
@@ -3304,18 +3283,14 @@
             784
         ],
         "en": "Torpid Module",
-        "zh_Hans": "“缓释”模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "“缓释”模组"
     },
     "item_Mining_Gadget_Gadget5": {
         "uex_ids": [
             106
         ],
         "en": "BoreMax",
-        "zh_Hans": "至钻",
-        "type": "Gadget",
-        "subtype": "Gadget"
+        "zh_Hans": "至钻"
     },
     "item_Name_gys_helmet_01_01_17": {
         "uex_ids": [
@@ -3643,12 +3618,14 @@
         "type": "Paints",
         "subtype": "UNDEFINED"
     },
-    "item_NameGMNI_smg_ballistic_01_short": {
+    "item_NameGMNI_smg_ballistic_01": {
         "uex_ids": [
             214
         ],
         "en": "C54 SMG",
-        "zh_Hans": "C54冲锋枪"
+        "zh_Hans": "C54 冲锋枪",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_Nameksar_shotgun_ballistic_01_mag": {
         "uex_ids": [
@@ -3889,9 +3866,7 @@
             781
         ],
         "en": "Rime Module",
-        "zh_Hans": "“白霜”模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "“白霜”模组"
     },
     "Human_Surnames_3793": {
         "uex_ids": [
@@ -4161,12 +4136,14 @@
         "type": "WeaponAttachment",
         "subtype": "Magazine"
     },
-    "item_Nameutfl_melee_01_short": {
+    "item_Nameutfl_melee_01": {
         "uex_ids": [
             556
         ],
         "en": "FSK-8 Combat Knife",
-        "zh_Hans": "FSK-8 战术匕首"
+        "zh_Hans": "FSK-8 战术匕首",
+        "type": "WeaponPersonal",
+        "subtype": "Knife"
     },
     "item_NameKRIG_BallisticGatling_S3": {
         "uex_ids": [
@@ -4191,9 +4168,7 @@
             245
         ],
         "en": "Abrade Scraper Module",
-        "zh_Hans": "研磨刮削模块",
-        "type": "SalvageModifier",
-        "subtype": "UNDEFINED"
+        "zh_Hans": "研磨刮削模块"
     },
     "item_Name_POWR_SASU_S03_NewDawn": {
         "uex_ids": [
@@ -4463,12 +4438,14 @@
         "type": "Char_Armor_Backpack",
         "subtype": "UNDEFINED"
     },
-    "item_Namebehr_pistol_ballistic_01_short": {
+    "item_Namebehr_pistol_ballistic_01": {
         "uex_ids": [
             74
         ],
         "en": "S-38 Pistol",
-        "zh_Hans": "S-38 手枪"
+        "zh_Hans": "S-38 手枪",
+        "type": "WeaponPersonal",
+        "subtype": "Small"
     },
     "item_NameFood_sachet_readymeal_01_beef_a": {
         "uex_ids": [
@@ -4484,18 +4461,14 @@
             776
         ],
         "en": "RN-7s",
-        "zh_Hans": "RN-7s",
-        "type": "DockingCollar",
-        "subtype": "UNDEFINED"
+        "zh_Hans": "RN-7s"
     },
     "item_Mining_Modules_Passive_Vaux_MK2": {
         "uex_ids": [
             119
         ],
         "en": "Vaux-C2 Module",
-        "zh_Hans": "沃克斯-C2 模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "沃克斯-C2 模组"
     },
     "item_Name_scu_gloves_02_01_18": {
         "uex_ids": [
@@ -4783,18 +4756,14 @@
             103
         ],
         "en": "GSX-RF",
-        "zh_Hans": "GSX-RF",
-        "type": "ExternalFuelTank",
-        "subtype": "UNDEFINED"
+        "zh_Hans": "GSX-RF"
     },
     "item_Mining_Modules_Passive_Torrent_MK3": {
         "uex_ids": [
             793
         ],
         "en": "Torrent III Module",
-        "zh_Hans": "洪流III 模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "洪流III 模组"
     },
     "item_Name_gsb_boots_04_01_15": {
         "uex_ids": [
@@ -4828,8 +4797,7 @@
             2039
         ],
         "en": "Radix",
-        "zh_Hans": "基数",
-        "id_item": []
+        "zh_Hans": "基数"
     },
     "item_NameCOOL_WCPR_S00_Fridan": {
         "uex_ids": [
@@ -4908,18 +4876,14 @@
             789
         ],
         "en": "Rieger Module",
-        "zh_Hans": "里格模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "里格模组"
     },
     "item_Mining_MiningLaser_Thermyte_1_S2": {
         "uex_ids": [
             113
         ],
         "en": "Impact II Mining Laser",
-        "zh_Hans": "冲击II型采矿激光器",
-        "type": "WeaponMining",
-        "subtype": "Gun"
+        "zh_Hans": "冲击II型采矿激光器"
     },
     "item_Name_SCU_Hat_03_01_03": {
         "uex_ids": [
@@ -4998,27 +4962,21 @@
             788
         ],
         "en": "Focus III Module",
-        "zh_Hans": "聚焦III 模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "聚焦III 模组"
     },
     "item_Mining_Consumable_Lifeline": {
         "uex_ids": [
             779
         ],
         "en": "Lifeline Module",
-        "zh_Hans": "“生命线”模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "“生命线”模组"
     },
     "item_Mining_Modules_Passive_XTR_MK2": {
         "uex_ids": [
             122
         ],
         "en": "XTR-L Module",
-        "zh_Hans": "XTR-L模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "XTR-L模组"
     },
     "item_Name_cba_mask_02_01_05": {
         "uex_ids": [
@@ -5245,12 +5203,14 @@
         "type": "Char_Armor_Legs",
         "subtype": "Light"
     },
-    "item_Namebehr_rifle_ballistic_01_short": {
+    "item_Namebehr_rifle_ballistic_01": {
         "uex_ids": [
             1597
         ],
         "en": "P4-AR Rifle",
-        "zh_Hans": "P4-AR 步枪"
+        "zh_Hans": "P4-AR 步枪",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_Name_scu_gloves_02_01_16": {
         "uex_ids": [
@@ -5983,15 +5943,6 @@
         "type": "Char_Clothing_Feet",
         "subtype": "UNDEFINED"
     },
-    "item_Name_cds_combat_medium_helmet_04_01_01": {
-        "uex_ids": [
-            2201
-        ],
-        "en": "ORC-mkX Helmet (XenoThreat v2)",
-        "zh_Hans": "ORC-mkX 头盔 （异种威胁 v2）",
-        "type": "Char_Armor_Helmet",
-        "subtype": "Medium"
-    },
     "item_Name_GRIN_utility_medium_helmet_01_01_01": {
         "uex_ids": [
             2141
@@ -6028,19 +5979,23 @@
         "type": "Char_Armor_Torso",
         "subtype": "Light"
     },
-    "item_Namebehr_lmg_ballistic_01_short": {
+    "item_Namebehr_lmg_ballistic_01": {
         "uex_ids": [
             2224
         ],
         "en": "FS-9 LMG",
-        "zh_Hans": "FS-9 轻机枪"
+        "zh_Hans": "FS-9 轻机枪",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
-    "item_Nameksar_smg_energy_01_short": {
+    "item_Nameksar_smg_energy_01": {
         "uex_ids": [
             1237
         ],
         "en": "Custodian SMG",
-        "zh_Hans": "监管者 冲锋枪"
+        "zh_Hans": "监管者 冲锋枪",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_Name_rsi_deckcrew_undersuit_01_01_10": {
         "uex_ids": [
@@ -6141,12 +6096,14 @@
         "type": "WeaponAttachment",
         "subtype": "Magazine"
     },
-    "item_Namegmni_sniper_ballistic_01_short": {
+    "item_Namegmni_sniper_ballistic_01": {
         "uex_ids": [
             2303
         ],
         "en": "A03 Sniper Rifle",
-        "zh_Hans": "A03 狙击步枪"
+        "zh_Hans": "A03 狙击步枪",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_NameMISL_S02_IR_NOVP_Rattler": {
         "uex_ids": [
@@ -6219,16 +6176,6 @@
         "zh_Hans": "汉努衬衫",
         "type": "Char_Clothing_Torso_0",
         "subtype": "UNDEFINED"
-    },
-    "item_Namebehr_optics_tsco_x4_s2": {
-        "uex_ids": [
-            2166,
-            3765
-        ],
-        "en": "EE04 (4x Telescopic)",
-        "zh_Hans": "EE04（4倍光学）",
-        "type": "WeaponAttachment",
-        "subtype": "IronSight"
     },
     "item_NameDrink_bottle_synergy_01_sport_a": {
         "uex_ids": [
@@ -6693,9 +6640,7 @@
             3466
         ],
         "en": "MISC Ore Pod",
-        "zh_Hans": "武藏 矿石 吊舱",
-        "type": "Container",
-        "subtype": "Cargo"
+        "zh_Hans": "武藏 矿石 吊舱"
     },
     "item_Name_gsb_boots_03_01_03": {
         "uex_ids": [
@@ -6792,8 +6737,7 @@
             816
         ],
         "en": "Stoneskin Undersuit",
-        "zh_Hans": "石肤 基底服",
-        "id_item": []
+        "zh_Hans": "石肤 基底服"
     },
     "item_Name_scu_jacket_03_01_02": {
         "uex_ids": [
@@ -6809,9 +6753,7 @@
             3465
         ],
         "en": "Argo Ore Pod",
-        "zh_Hans": "南船座 矿石 吊舱",
-        "type": "Container",
-        "subtype": "Cargo"
+        "zh_Hans": "南船座 矿石 吊舱"
     },
     "item_Name_r6p_shoes_02_01_15": {
         "uex_ids": [
@@ -7083,12 +7025,14 @@
         "type": "Char_Armor_Torso",
         "subtype": "Medium"
     },
-    "item_Nameklwe_smg_energy_01_short": {
+    "item_Nameklwe_smg_energy_01": {
         "uex_ids": [
             413
         ],
         "en": "Lumin V SMG",
-        "zh_Hans": "卢敏 V 冲锋枪"
+        "zh_Hans": "卢敏 V 冲锋枪",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_Namebehr_smg_ballistic_01_white01": {
         "uex_ids": [
@@ -7108,12 +7052,14 @@
         "type": "WeaponAttachment",
         "subtype": "IronSight"
     },
-    "item_Nameklwe_lmg_energy_01_short": {
+    "item_Nameklwe_lmg_energy_01": {
         "uex_ids": [
             3660
         ],
         "en": "Demeco LMG",
-        "zh_Hans": "德美科 轻机枪"
+        "zh_Hans": "德美科 轻机枪",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_Name_scu_shirt_01_01_19": {
         "uex_ids": [
@@ -7300,6 +7246,15 @@
         "type": "Char_Clothing_Torso_1",
         "subtype": "Medium"
     },
+    "item_Namebehr_optics_tsco_x4_s2": {
+        "uex_ids": [
+            3765
+        ],
+        "en": "EE04 (4x Telescopic)",
+        "zh_Hans": "EE04（4倍光学）",
+        "type": "WeaponAttachment",
+        "subtype": "IronSight"
+    },
     "item_NamePOWR_SASU_S02_DayBreak_SCItem": {
         "uex_ids": [
             1346
@@ -7378,16 +7333,16 @@
             2233
         ],
         "en": "Compboard",
-        "zh_Hans": "电路板",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "电路板"
     },
-    "item_NameGMNI_rifle_ballistic_01_short": {
+    "item_NameGMNI_rifle_ballistic_01": {
         "uex_ids": [
             2321
         ],
         "en": "S71 Rifle",
-        "zh_Hans": "S71步枪"
+        "zh_Hans": "S71步枪",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_Nameksar_smg_energy_01_gold01": {
         "uex_ids": [
@@ -7461,12 +7416,14 @@
         "type": "Char_Armor_Arms",
         "subtype": "Heavy"
     },
-    "item_Nameksar_rifle_energy_01_short": {
+    "item_Nameksar_rifle_energy_01": {
         "uex_ids": [
             1673
         ],
         "en": "Karna Rifle",
-        "zh_Hans": "卡纳 步枪"
+        "zh_Hans": "卡纳 步枪",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_Name_outlaw_legacy_armor_light_helmet_01_04_9tails": {
         "uex_ids": [
@@ -7477,12 +7434,14 @@
         "type": "Char_Armor_Helmet",
         "subtype": "Light"
     },
-    "item_Nameksar_shotgun_energy_01_short": {
+    "item_Nameksar_shotgun_energy_01": {
         "uex_ids": [
             553
         ],
         "en": "Devastator Shotgun",
-        "zh_Hans": "破坏者 霰弹枪"
+        "zh_Hans": "破坏者 霰弹枪",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_Name_rrs_specialist_light_helmet_01_01_9tails01": {
         "uex_ids": [
@@ -7502,12 +7461,14 @@
         "type": "Char_Armor_Arms",
         "subtype": "Heavy"
     },
-    "item_Namegmni_shotgun_ballistic_01_short": {
+    "item_Namegmni_shotgun_ballistic_01": {
         "uex_ids": [
             552
         ],
         "en": "R97 Shotgun",
-        "zh_Hans": "R97 霰弹枪"
+        "zh_Hans": "R97 霰弹枪",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_NameDrink_can_fizzz_01_a": {
         "uex_ids": [
@@ -7536,12 +7497,14 @@
         "type": "Char_Armor_Helmet",
         "subtype": "UNDEFINED"
     },
-    "item_Namebehr_smg_ballistic_01_short": {
+    "item_Namebehr_smg_ballistic_01": {
         "uex_ids": [
             1232
         ],
         "en": "P8-SC SMG",
-        "zh_Hans": "P8-SC 冲锋枪"
+        "zh_Hans": "P8-SC 冲锋枪",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_Name_GSB_Shoes_01_01_01": {
         "uex_ids": [
@@ -7575,9 +7538,7 @@
             212
         ],
         "en": "Golden Medmon",
-        "zh_Hans": "黄金麦德蒙果",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "黄金麦德蒙果"
     },
     "item_Name_rrs_specialist_light_helmet_01_01_01": {
         "uex_ids": [
@@ -7588,12 +7549,14 @@
         "type": "Char_Armor_Helmet",
         "subtype": "Light"
     },
-    "item_Namelbco_sniper_energy_01_short": {
+    "item_Namelbco_sniper_energy_01": {
         "uex_ids": [
             2620
         ],
         "en": "Atzkav Sniper Rifle",
-        "zh_Hans": "阿兹卡夫 狙击步枪"
+        "zh_Hans": "阿兹卡夫 狙击步枪",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_Name_grin_toxic_jumpsuit_01_01_04": {
         "uex_ids": [
@@ -7717,9 +7680,7 @@
             107
         ],
         "en": "Lancet MH2 Mining Laser",
-        "zh_Hans": "柳叶刀MH2型采矿激光器",
-        "type": "WeaponMining",
-        "subtype": "Gun"
+        "zh_Hans": "柳叶刀MH2型采矿激光器"
     },
     "item_Name_grin_toxic_jumpsuit_01_01_11": {
         "uex_ids": [
@@ -7883,12 +7844,14 @@
         "type": "Char_Armor_Backpack",
         "subtype": "UNDEFINED"
     },
-    "item_Nameklwe_rifle_energy_01_short": {
+    "item_Nameklwe_rifle_energy_01": {
         "uex_ids": [
             1594
         ],
         "en": "Gallant Rifle",
-        "zh_Hans": "加伦特 步枪"
+        "zh_Hans": "加伦特 步枪",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_Name_alb_mask_02_01_19": {
         "uex_ids": [
@@ -7958,8 +7921,7 @@
             966
         ],
         "en": "Sunflare",
-        "zh_Hans": "耀斑",
-        "id_item": []
+        "zh_Hans": "耀斑"
     },
     "item_Name_rrs_combat_heavy_backpack_01_01_01": {
         "uex_ids": [
@@ -7988,7 +7950,7 @@
         "type": "WeaponAttachment",
         "subtype": "Magazine"
     },
-    "item_Nameklwe_pistol_energy_02_short": {
+    "item_Nameklwe_pistol_energy_02": {
         "uex_ids": [
             1592
         ],
@@ -8266,9 +8228,7 @@
             4063
         ],
         "en": "Pingala Seeds",
-        "zh_Hans": "宾伽罗种子",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "宾伽罗种子"
     },
     "item_Name_outlaw_legacy_armor_light_helmet_01_03_01": {
         "uex_ids": [
@@ -8481,9 +8441,7 @@
             118
         ],
         "en": "Vaux Module",
-        "zh_Hans": "沃克斯 模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "沃克斯 模组"
     },
     "item_Name_scu_gloves_02_01_03": {
         "uex_ids": [
@@ -8643,9 +8601,7 @@
             117
         ],
         "en": "Torrent Module",
-        "zh_Hans": "洪流 模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "洪流 模组"
     },
     "item_NameCOOL_JUST_S02_Snowpack_SCItem": {
         "uex_ids": [
@@ -8958,9 +8914,7 @@
             799
         ],
         "en": "Hofstede-S2 Mining Laser",
-        "zh_Hans": "霍夫斯泰德-S2型采矿激光器",
-        "type": "WeaponMining",
-        "subtype": "Gun"
+        "zh_Hans": "霍夫斯泰德-S2型采矿激光器"
     },
     "item_Name_rrs_specialist_heavy_legs_01_01_10": {
         "uex_ids": [
@@ -9129,9 +9083,7 @@
             104
         ],
         "en": "Waveshift",
-        "zh_Hans": "波移",
-        "type": "Gadget",
-        "subtype": "Gadget"
+        "zh_Hans": "波移"
     },
     "item_Name_gys_helmet_01_01_01": {
         "uex_ids": [
@@ -9282,9 +9234,7 @@
             112
         ],
         "en": "Impact I Mining Laser",
-        "zh_Hans": "冲击I型采矿激光器",
-        "type": "WeaponMining",
-        "subtype": "Gun"
+        "zh_Hans": "冲击I型采矿激光器"
     },
     "item_Name_SCU_Hat_03_01_15": {
         "uex_ids": [
@@ -9412,12 +9362,14 @@
         "type": "Char_Armor_Arms",
         "subtype": "Medium"
     },
-    "vehicle_NameAEGS_Vulcan_short": {
+    "item_NameQDRV_JUST_S01_Vulcan_SCItem": {
         "uex_ids": [
             1530
         ],
         "en": "Vulcan",
-        "zh_Hans": "火神"
+        "zh_Hans": "伏尔甘",
+        "type": "QuantumDrive",
+        "subtype": "UNDEFINED"
     },
     "item_Name_rsi_explorer_armor_light_arms_01_01_04": {
         "uex_ids": [
@@ -9460,9 +9412,7 @@
             787
         ],
         "en": "Focus II Module",
-        "zh_Hans": "聚焦II 模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "聚焦II 模组"
     },
     "item_Name_gsb_boots_03_01_20": {
         "uex_ids": [
@@ -9577,18 +9527,14 @@
             1330
         ],
         "en": "FLTR Module",
-        "zh_Hans": "FLTR 模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "FLTR 模组"
     },
     "item_Mining_Gadget_Gadget6": {
         "uex_ids": [
             1331
         ],
         "en": "Stalwart",
-        "zh_Hans": "坚燃",
-        "type": "Gadget",
-        "subtype": "Gadget"
+        "zh_Hans": "坚燃"
     },
     "item_Name_gys_helmet_01_01_20": {
         "uex_ids": [
@@ -9829,9 +9775,7 @@
             791
         ],
         "en": "Rieger-C3 Module",
-        "zh_Hans": "里格-C3 模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "里格-C3 模组"
     },
     "item_Name_scu_jacket_02_01_11": {
         "uex_ids": [
@@ -10187,18 +10131,14 @@
             926
         ],
         "en": "CR-60",
-        "zh_Hans": "CR-60",
-        "type": "ExternalFuelTank",
-        "subtype": "UNDEFINED"
+        "zh_Hans": "CR-60"
     },
     "item_Mining_Modules_Passive_Vaux_MK3": {
         "uex_ids": [
             120
         ],
         "en": "Vaux-C3 Module",
-        "zh_Hans": "沃克斯-C3 模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "沃克斯-C3 模组"
     },
     "item_Name_r6p_boots_02_01_13": {
         "uex_ids": [
@@ -10385,9 +10325,7 @@
             1329
         ],
         "en": "GSX-HP",
-        "zh_Hans": "GSX-HP",
-        "type": "ExternalFuelTank",
-        "subtype": "UNDEFINED"
+        "zh_Hans": "GSX-HP"
     },
     "item_Name_cba_mask_01_01_01": {
         "uex_ids": [
@@ -10407,12 +10345,14 @@
         "type": "Char_Clothing_Feet",
         "subtype": "UNDEFINED"
     },
-    "vehicle_NameMRAI_Guardian_short": {
+    "item_Name_SHLD_BASL_S01_Guardian": {
         "uex_ids": [
             590
         ],
         "en": "Guardian",
-        "zh_Hans": "守护者"
+        "zh_Hans": "守卫",
+        "type": "Shield",
+        "subtype": "UNDEFINED"
     },
     "item_NameCOOL_WCPR_S00_Tepilo_SCItem": {
         "uex_ids": [
@@ -10464,9 +10404,7 @@
             115
         ],
         "en": "Helix II Mining Laser",
-        "zh_Hans": "螺旋II型采矿激光器",
-        "type": "WeaponMining",
-        "subtype": "Gun"
+        "zh_Hans": "螺旋II型采矿激光器"
     },
     "item_Name_scu_jacket_02_01_16": {
         "uex_ids": [
@@ -10491,18 +10429,14 @@
             780
         ],
         "en": "Optimum Module",
-        "zh_Hans": "顶胜模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "顶胜模组"
     },
     "item_Mining_Modules_Passive_XTR_MK3": {
         "uex_ids": [
             123
         ],
         "en": "XTR-XL Module",
-        "zh_Hans": "XTR-XL模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "XTR-XL模组"
     },
     "item_NameJOKR_DistortionCannon_S3": {
         "uex_ids": [
@@ -10825,9 +10759,7 @@
             121
         ],
         "en": "XTR Module",
-        "zh_Hans": "XTR 模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "XTR 模组"
     },
     "item_NameCOOL_TYDT_S01_VaporBlock": {
         "uex_ids": [
@@ -10960,8 +10892,7 @@
             1924
         ],
         "en": "Graupel",
-        "zh_Hans": "霰",
-        "id_item": []
+        "zh_Hans": "霰"
     },
     "item_Name_SHLD_SECO_S03_HAVEN": {
         "uex_ids": [
@@ -10977,9 +10908,7 @@
             794
         ],
         "en": "OptiMax",
-        "zh_Hans": "优佳",
-        "type": "Gadget",
-        "subtype": "Gadget"
+        "zh_Hans": "优佳"
     },
     "item_Name_scu_jacket_02_01_03": {
         "uex_ids": [
@@ -12040,9 +11969,7 @@
             2234
         ],
         "en": "Decari Pod",
-        "zh_Hans": "德卡利孢囊",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "德卡利孢囊"
     },
     "item_Nameksar_smg_energy_01_green01": {
         "uex_ids": [
@@ -12152,12 +12079,14 @@
         "type": "Drink",
         "subtype": "Can"
     },
-    "item_Namegmni_pistol_ballistic_01_short": {
+    "item_Namegmni_pistol_ballistic_01": {
         "uex_ids": [
             70
         ],
         "en": "LH86 Pistol",
-        "zh_Hans": "LH86 手枪"
+        "zh_Hans": "LH86 手枪",
+        "type": "WeaponPersonal",
+        "subtype": "Small"
     },
     "item_Name_gys_helmet_02_01_01": {
         "uex_ids": [
@@ -12525,9 +12454,7 @@
             4238
         ],
         "en": "Desert Quasi Grazer Egg",
-        "zh_Hans": "沙漠故夕食草兽蛋",
-        "type": "Misc",
-        "subtype": "Harvestable"
+        "zh_Hans": "沙漠故夕食草兽蛋"
     },
     "item_NameDrink_can_fizzz_01_berry_a": {
         "uex_ids": [
@@ -12886,8 +12813,7 @@
             579
         ],
         "en": "StarHeart",
-        "zh_Hans": "星心",
-        "id_item": []
+        "zh_Hans": "星心"
     },
     "item_Name_SHLD_BEHR_S02_6MA": {
         "uex_ids": [
@@ -13234,9 +13160,7 @@
             792
         ],
         "en": "Torrent II Module",
-        "zh_Hans": "洪流II 模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "洪流II 模组"
     },
     "item_Name_cds_legacy_armor_medium_arms_01_01_12": {
         "uex_ids": [
@@ -13382,12 +13306,14 @@
         "type": "Char_Armor_Undersuit",
         "subtype": "UNDEFINED"
     },
-    "item_Namebehr_smg_ballistic_01_white02_short": {
+    "item_Namebehr_smg_ballistic_01_white02": {
         "uex_ids": [
             1591
         ],
         "en": "P8-SC \"Boneyard\" SMG",
-        "zh_Hans": "P8-SC 冲锋枪“骸骨迷彩”"
+        "zh_Hans": "P8-SC 冲锋枪“骸骨迷彩”",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_Name_scu_jacket_03_01_16": {
         "uex_ids": [
@@ -13475,18 +13401,14 @@
             786
         ],
         "en": "FLTR-XL Module",
-        "zh_Hans": "FLTR-XL 模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "FLTR-XL 模组"
     },
     "item_Mining_MiningLaser_Greycat_1_S1": {
         "uex_ids": [
             797
         ],
         "en": "Lancet MH1 Mining Laser",
-        "zh_Hans": "柳叶刀MH1型采矿激光器",
-        "type": "WeaponMining",
-        "subtype": "Gun"
+        "zh_Hans": "柳叶刀MH1型采矿激光器"
     },
     "item_Name_cds_legacy_armor_light_helmet_01_01_05": {
         "uex_ids": [
@@ -13890,8 +13812,7 @@
             1483
         ],
         "en": "Calico Core",
-        "zh_Hans": "棉布胸甲",
-        "id_item": []
+        "zh_Hans": "棉布胸甲"
     },
     "item_Name_scu_pants_03_01_18": {
         "uex_ids": [
@@ -13961,17 +13882,14 @@
             609
         ],
         "en": "Cinch Scraper Module",
-        "zh_Hans": "紧固刮削模块",
-        "type": "SalvageModifier",
-        "subtype": "UNDEFINED"
+        "zh_Hans": "紧固刮削模块"
     },
     "item_NamePOWR_AMRS_S01_OverDrive_SCItem": {
         "uex_ids": [
             2027
         ],
         "en": "OverDrive",
-        "zh_Hans": "过载驱动",
-        "id_item": []
+        "zh_Hans": "过载驱动"
     },
     "item_Name_ops_jacket_03_01_09": {
         "uex_ids": [
@@ -14005,9 +13923,7 @@
             778
         ],
         "en": "Forel Module",
-        "zh_Hans": "“羊皮纸”模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "“羊皮纸”模组"
     },
     "item_Name_cba_mask_01_01_07": {
         "uex_ids": [
@@ -14171,12 +14087,14 @@
         "type": "WeaponAttachment",
         "subtype": "Barrel"
     },
-    "item_Namebehr_smg_ballistic_01_black01_short": {
+    "item_Namebehr_smg_ballistic_01_black01": {
         "uex_ids": [
             67
         ],
-        "en": "P8-SC \"Midnight\" SMG",
-        "zh_Hans": "P8-SC 冲锋枪“暗夜迷彩”"
+        "en": "P8-SC \"Midnight\" SMG",
+        "zh_Hans": "P8-SC 冲锋枪“暗夜迷彩”",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_Name_gsb_boots_01_01_02": {
         "uex_ids": [
@@ -14489,9 +14407,7 @@
             2232
         ],
         "en": "Amioshi Plague",
-        "zh_Hans": "阿米什瘟疫",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "阿米什瘟疫"
     },
     "item_Name_DMC_Jacket_03_01_01": {
         "uex_ids": [
@@ -14583,12 +14499,14 @@
         "type": "Drink",
         "subtype": "Bottle"
     },
-    "item_Namehdgw_pistol_ballistic_01_short": {
+    "item_Namehdgw_pistol_ballistic_01": {
         "uex_ids": [
             2227
         ],
         "en": "Salvo Frag Pistol",
-        "zh_Hans": "齐射 碎片手枪"
+        "zh_Hans": "齐射 碎片手枪",
+        "type": "WeaponPersonal",
+        "subtype": "Small"
     },
     "item_Name_cba_jacket_02_01_07": {
         "uex_ids": [
@@ -15101,12 +15019,14 @@
         "en": "High End Table Small",
         "zh_Hans": "小型高端桌子"
     },
-    "item_Namebehr_sniper_ballistic_01_short": {
+    "item_Namebehr_sniper_ballistic_01": {
         "uex_ids": [
             2625
         ],
         "en": "P6-LR Sniper Rifle",
-        "zh_Hans": "P6-LR 狙击步枪"
+        "zh_Hans": "P6-LR 狙击步枪",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_Name_clda_gloves_01_03_01": {
         "uex_ids": [
@@ -15174,9 +15094,7 @@
             2235
         ],
         "en": "Degnous Root",
-        "zh_Hans": "德古尼斯藻根",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "德古尼斯藻根"
     },
     "item_NameMODU_AEGS_Front_Cargo": {
         "uex_ids": [
@@ -15300,9 +15218,7 @@
             777
         ],
         "en": "Brandt Module",
-        "zh_Hans": "“布兰特”模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "“布兰特”模组"
     },
     "item_Name_r6p_boots_05_01_16": {
         "uex_ids": [
@@ -15453,9 +15369,7 @@
             4239
         ],
         "en": "Boreal Quasi Grazer Egg",
-        "zh_Hans": "寒带故夕食草兽蛋",
-        "type": "Misc",
-        "subtype": "Harvestable"
+        "zh_Hans": "寒带故夕食草兽蛋"
     },
     "item_Name_hdh_shirt_03_01_13": {
         "uex_ids": [
@@ -15811,9 +15725,7 @@
             785
         ],
         "en": "FLTR-L Module",
-        "zh_Hans": "FLTR-L 模组",
-        "type": "MiningModifier",
-        "subtype": "Gun"
+        "zh_Hans": "FLTR-L 模组"
     },
     "item_Name_rrs_specialist_heavy_core_01_01_10": {
         "uex_ids": [
@@ -16135,9 +16047,7 @@
             114
         ],
         "en": "Helix I Mining Laser",
-        "zh_Hans": "螺旋I型采矿激光器",
-        "type": "WeaponMining",
-        "subtype": "Gun"
+        "zh_Hans": "螺旋I型采矿激光器"
     },
     "item_Name_scu_jacket_01_01_04": {
         "uex_ids": [
@@ -16171,9 +16081,7 @@
             798
         ],
         "en": "Arbor MH2 Mining Laser",
-        "zh_Hans": "刀轴MH2型采矿激光器",
-        "type": "WeaponMining",
-        "subtype": "Gun"
+        "zh_Hans": "刀轴MH2型采矿激光器"
     },
     "item_Name_cds_legacy_armor_light_helmet_01_01_07": {
         "uex_ids": [
@@ -16594,8 +16502,7 @@
             583
         ],
         "en": "IonBurst",
-        "zh_Hans": "离子爆裂",
-        "id_item": []
+        "zh_Hans": "离子爆裂"
     },
     "item_Name_r6p_boots_02_01_05": {
         "uex_ids": [
@@ -17115,8 +17022,7 @@
             574
         ],
         "en": "FlashFreeze",
-        "zh_Hans": "急冻",
-        "id_item": []
+        "zh_Hans": "急冻"
     },
     "item_Name_vgl_armor_light_arms_01_01_13": {
         "uex_ids": [
@@ -17366,12 +17272,14 @@
         "en": "AEGS Ship Arm Chair",
         "zh_Hans": "AEGS 飞船扶手椅"
     },
-    "item_Namegmni_lmg_ballistic_01_short": {
+    "item_Namegmni_lmg_ballistic_01": {
         "uex_ids": [
             3348
         ],
         "en": "F55 LMG",
-        "zh_Hans": "F55 轻机枪"
+        "zh_Hans": "F55 轻机枪",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_Name_gsb_boots_10_01_01": {
         "uex_ids": [
@@ -17382,20 +17290,21 @@
         "type": "Char_Clothing_Feet",
         "subtype": "UNDEFINED"
     },
-    "vehicle_NameMISC_Odyssey_short": {
+    "item_NameQDRV_TARS_S02_Odyssey": {
         "uex_ids": [
             2707
         ],
         "en": "Odyssey",
-        "zh_Hans": "奥德赛"
+        "zh_Hans": "奥德赛",
+        "type": "QuantumDrive",
+        "subtype": "UNDEFINED"
     },
     "item_nameQDRV_WETK_S03_TS2_SCItem": {
         "uex_ids": [
             1909
         ],
         "en": "TS-2",
-        "zh_Hans": "TS-2",
-        "id_item": []
+        "zh_Hans": "TS-2"
     },
     "item_decoration_chair_beanbag_name": {
         "uex_ids": [
@@ -17418,16 +17327,16 @@
             3769
         ],
         "en": "Dolivine",
-        "zh_Hans": "暗橄榄石",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "暗橄榄石"
     },
-    "item_Nameksar_sniper_ballistic_01_short": {
+    "item_Nameksar_sniper_ballistic_01": {
         "uex_ids": [
             3993
         ],
         "en": "Scalpel Sniper Rifle",
-        "zh_Hans": "解剖刀 狙击步枪"
+        "zh_Hans": "解剖刀 狙击步枪",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_NameMODU_AEGS_Front_Torpedo_Placeholder": {
         "uex_ids": [
@@ -17605,9 +17514,7 @@
             4240
         ],
         "en": "Grassland Quasi Grazer Egg",
-        "zh_Hans": "草地故夕食草兽蛋",
-        "type": "Misc",
-        "subtype": "Harvestable"
+        "zh_Hans": "草地故夕食草兽蛋"
     },
     "item_Name_hdh_shirt_03_01_17": {
         "uex_ids": [
@@ -18262,8 +18169,7 @@
             943
         ],
         "en": "SonicLite",
-        "zh_Hans": "轻音",
-        "id_item": []
+        "zh_Hans": "轻音"
     },
     "item_Name_outlaw_legacy_medium_armor_helmet_02_01_10": {
         "uex_ids": [
@@ -18306,8 +18212,7 @@
             1485
         ],
         "en": "DustUp Core ",
-        "zh_Hans": "扬尘胸甲",
-        "id_item": []
+        "zh_Hans": "扬尘胸甲"
     },
     "item_Name_scu_jacket_02_01_19": {
         "uex_ids": [
@@ -18405,8 +18310,7 @@
             2044
         ],
         "en": "Taiga",
-        "zh_Hans": "针叶林",
-        "id_item": []
+        "zh_Hans": "针叶林"
     },
     "item_Name_rsi_deckcrew_armor_light_legs_01_01_04": {
         "uex_ids": [
@@ -18620,9 +18524,7 @@
             2195
         ],
         "en": "Blue Bilva",
-        "zh_Hans": "蓝木橘",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "蓝木橘"
     },
     "item_Name_cds_legacy_armor_medium_arms_01_01_07": {
         "uex_ids": [
@@ -18755,8 +18657,7 @@
             941
         ],
         "en": "LightBlossom",
-        "zh_Hans": "光绽",
-        "id_item": []
+        "zh_Hans": "光绽"
     },
     "item_Name_vgl_armor_light_helmet_01_01_07": {
         "uex_ids": [
@@ -18986,16 +18887,16 @@
             3992
         ],
         "en": "Hadanite",
-        "zh_Hans": "哈丹水晶",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "哈丹水晶"
     },
-    "item_Namelbco_pistol_energy_01_short": {
+    "item_Namelbco_pistol_energy_01": {
         "uex_ids": [
             2304
         ],
         "en": "Yubarev Pistol",
-        "zh_Hans": "尤巴列夫 手枪"
+        "zh_Hans": "尤巴列夫 手枪",
+        "type": "WeaponPersonal",
+        "subtype": "Small"
     },
     "item_NameMODU_AEGS_Rear_Cargo": {
         "uex_ids": [
@@ -19129,9 +19030,7 @@
             4241
         ],
         "en": "Jungle Quasi Grazer Egg",
-        "zh_Hans": "丛林故夕食草兽蛋",
-        "type": "Misc",
-        "subtype": "Harvestable"
+        "zh_Hans": "丛林故夕食草兽蛋"
     },
     "item_Name_outlaw_legacy_armor_light_core_01_03_01": {
         "uex_ids": [
@@ -19246,9 +19145,7 @@
             213
         ],
         "en": "Pitambu",
-        "zh_Hans": "皮坦布果",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "皮坦布果"
     },
     "item_NameESPR_BallisticCannon_S1": {
         "uex_ids": [
@@ -19444,8 +19341,7 @@
             1521
         ],
         "en": "Cryo-Star EX",
-        "zh_Hans": "低温之星 EX",
-        "id_item": []
+        "zh_Hans": "低温之星 EX"
     },
     "item_Name_rsi_explorer_armor_light_helmet_01_01_20": {
         "uex_ids": [
@@ -19564,12 +19460,14 @@
         "type": "Char_Clothing_Torso_0",
         "subtype": "UNDEFINED"
     },
-    "item_Namebehr_smg_ballistic_01_green01_short": {
+    "item_Namebehr_smg_ballistic_01_green01": {
         "uex_ids": [
             1862
         ],
-        "en": "P8-SC \"Warhawk\" SMG",
-        "zh_Hans": "P8-SC 冲锋枪“战鹰迷彩”"
+        "en": "P8-SC \"Warhawk\" SMG",
+        "zh_Hans": "P8-SC 冲锋枪“战鹰迷彩”",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
     },
     "item_Nameklwe_rifle_energy_01_black02": {
         "uex_ids": [
@@ -20204,9 +20102,7 @@
             2236
         ],
         "en": "Heart of the Woods",
-        "zh_Hans": "\"森林之心\"",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "\"森林之心\""
     },
     "item_Namelbco_pistol_energy_01_acid01": {
         "uex_ids": [
@@ -20253,12 +20149,14 @@
         "type": "WeaponPersonal",
         "subtype": "Medium"
     },
-    "item_Namenone_melee_01_short": {
+    "item_Namenone_melee_01": {
         "uex_ids": [
             2868
         ],
         "en": "Prison Shiv",
-        "zh_Hans": "监狱小刀"
+        "zh_Hans": "监狱小刀",
+        "type": "WeaponPersonal",
+        "subtype": "Knife"
     },
     "item_Name_clda_utility_heavy_backpack_01_01_01": {
         "uex_ids": [
@@ -20346,9 +20244,7 @@
             4242
         ],
         "en": "Quasi Grazer Tongue",
-        "zh_Hans": "故夕食草兽舌",
-        "type": "Misc",
-        "subtype": "Harvestable"
+        "zh_Hans": "故夕食草兽舌"
     },
     "item_Name_outlaw_legacy_armor_light_legs_01_03_01": {
         "uex_ids": [
@@ -20625,9 +20521,7 @@
             108
         ],
         "en": "Arbor MH1 Mining Laser",
-        "zh_Hans": "刀轴MH1型采矿激光器",
-        "type": "WeaponMining",
-        "subtype": "Gun"
+        "zh_Hans": "刀轴MH1型采矿激光器"
     },
     "item_Name_cds_legacy_armor_heavy_helmet_01_01_09": {
         "uex_ids": [
@@ -20706,8 +20600,7 @@
             1348
         ],
         "en": "Erebos",
-        "zh_Hans": "黑暗之神",
-        "id_item": []
+        "zh_Hans": "黑暗之神"
     },
     "item_Name_cds_legacy_armor_medium_arms_01_01_20": {
         "uex_ids": [
@@ -20930,8 +20823,7 @@
             2034
         ],
         "en": "Mirage",
-        "zh_Hans": "蜃景",
-        "id_item": []
+        "zh_Hans": "蜃景"
     },
     "item_Name_fio_shirt_02_01_03": {
         "uex_ids": [
@@ -21053,9 +20945,7 @@
             2196
         ],
         "en": "Jumping Limes",
-        "zh_Hans": "跳跳橙",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "跳跳橙"
     },
     "item_Name_GRIN_utility_medium_arms_01_01_01": {
         "uex_ids": [
@@ -21152,8 +21042,7 @@
             580
         ],
         "en": "Endurance ",
-        "zh_Hans": "耐力",
-        "id_item": []
+        "zh_Hans": "耐力"
     },
     "item_Name_vgl_armor_light_helmet_01_01_13": {
         "uex_ids": [
@@ -21896,8 +21785,7 @@
             2156
         ],
         "en": "Steadfast",
-        "zh_Hans": "坚定",
-        "id_item": []
+        "zh_Hans": "坚定"
     },
     "item_NameMISL_S03_IR_NOVP_Viper": {
         "uex_ids": [
@@ -21931,18 +21819,14 @@
             2197
         ],
         "en": "Oza",
-        "zh_Hans": "奥扎橘",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "奥扎橘"
     },
     "items_commodities_prota": {
         "uex_ids": [
             2237
         ],
         "en": "Prota",
-        "zh_Hans": "普罗塔菌",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "普罗塔菌"
     },
     "item_Name_vgl_armor_light_helmet_01_01_10": {
         "uex_ids": [
@@ -22129,9 +22013,7 @@
             3782
         ],
         "en": "High End Couch",
-        "zh_Hans": "高端沙发",
-        "type": "Usable",
-        "subtype": "Cargo"
+        "zh_Hans": "高端沙发"
     },
     "item_Name_ksar_light_armor_legs_01_01_11": {
         "uex_ids": [
@@ -22669,9 +22551,7 @@
             2238
         ],
         "en": "Ranta Dung",
-        "zh_Hans": "兰塔有机粪便",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "兰塔有机粪便"
     },
     "item_Name_cds_legacy_armor_light_legs_01_crus01_01": {
         "uex_ids": [
@@ -22796,9 +22676,7 @@
             3768
         ],
         "en": "Aphorite",
-        "zh_Hans": "紫钠水晶",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "紫钠水晶"
     },
     "item_Namebehr_sniper_ballistic_01_black01": {
         "uex_ids": [
@@ -22841,9 +22719,7 @@
             3783
         ],
         "en": "Low End Couch",
-        "zh_Hans": "低端沙发",
-        "type": "Usable",
-        "subtype": "Cargo"
+        "zh_Hans": "低端沙发"
     },
     "item_NameAlienAA_fragment_1_medium_damaged_a": {
         "uex_ids": [
@@ -23246,8 +23122,7 @@
             929
         ],
         "en": "Tundra",
-        "zh_Hans": "苔原",
-        "id_item": []
+        "zh_Hans": "苔原"
     },
     "item_Name_drn_shoes_01_01_17": {
         "uex_ids": [
@@ -23380,9 +23255,7 @@
             2239
         ],
         "en": "Revenant Pod",
-        "zh_Hans": "亡魂果荚",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "亡魂果荚"
     },
     "item_Name_CDS_Undersuit_Armor_02_01_01": {
         "uex_ids": [
@@ -23643,9 +23516,10 @@
         "type": "Char_Armor_Torso",
         "subtype": "Light"
     },
-    "ITEM_NAMEMISL_S10_IR_BEHR_TORPEDO": {
+    "item_NameMISL_S10_IR_BEHR_Torpedo": {
         "uex_ids": [
-            4260
+            4260,
+            4032
         ]
     },
     "item_NameMobiGlas_paint_16": {
@@ -23860,8 +23734,7 @@
             938
         ],
         "en": "Charger",
-        "zh_Hans": "战马",
-        "id_item": []
+        "zh_Hans": "战马"
     },
     "item_Name_outlaw_legacy_medium_armor_arms_02_01_19": {
         "uex_ids": [
@@ -23967,9 +23840,7 @@
             2240
         ],
         "en": "Sunset Berries",
-        "zh_Hans": "日落浆果",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "日落浆果"
     },
     "item_Name_cds_combat_light_helmet_04_01_01": {
         "uex_ids": [
@@ -24076,9 +23947,7 @@
             2241
         ],
         "en": "Lunes (Spiral Fruit)",
-        "zh_Hans": "月果（螺旋果）",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "月果（螺旋果）"
     },
     "item_Name_outlaw_legacy_armor_light_helmet_01_05_19": {
         "uex_ids": [
@@ -24598,8 +24467,7 @@
             2702
         ],
         "en": "Burgundy Paisley Bandana",
-        "zh_Hans": "勃艮第佩斯利头巾",
-        "id_item": []
+        "zh_Hans": "勃艮第佩斯利头巾"
     },
     "item_Name_rrs_specialist_heavy_arms_01_01_10": {
         "uex_ids": [
@@ -24975,8 +24843,7 @@
             967
         ],
         "en": "Regulus",
-        "zh_Hans": "雷古勒斯",
-        "id_item": []
+        "zh_Hans": "雷古勒斯"
     },
     "item_nameQDRV_TARS_S03_Ranger_SCItem": {
         "uex_ids": [
@@ -25073,8 +24940,7 @@
             2151
         ],
         "en": "Vortex",
-        "zh_Hans": "涡流",
-        "id_item": []
+        "zh_Hans": "涡流"
     },
     "item_Name_SHLD_GODI_S02_CoverAll": {
         "uex_ids": [
@@ -25468,8 +25334,7 @@
             928
         ],
         "en": "Bracer",
-        "zh_Hans": "寒索",
-        "id_item": []
+        "zh_Hans": "寒索"
     },
     "item_nameQDRV_TARS_S03_Drifter_SCItem": {
         "uex_ids": [
@@ -25575,8 +25440,7 @@
             2150
         ],
         "en": "Boreal",
-        "zh_Hans": "北风",
-        "id_item": []
+        "zh_Hans": "北风"
     },
     "item_NamePOWR_AEGS_S03_QuadracellMX_SCItem": {
         "uex_ids": [
@@ -26060,9 +25924,7 @@
             4062
         ],
         "en": "Fotia Seedpod",
-        "zh_Hans": "福蒂雅种荚",
-        "type": "Cargo",
-        "subtype": "Cargo"
+        "zh_Hans": "福蒂雅种荚"
     },
     "item_Name_fio_shirt_01_01_09": {
         "uex_ids": [
@@ -26334,13 +26196,6 @@
         "type": "Char_Armor_Undersuit",
         "subtype": "UNDEFINED"
     },
-    "item_NameMISL_S10_IR_BEHR_Torpedo": {
-        "uex_ids": [
-            4032
-        ],
-        "type": "Missile",
-        "subtype": "Torpedo"
-    },
     "item_Namegmni_shotgun_ballistic_01_pink_red01": {
         "uex_ids": [
             2425
@@ -26458,6 +26313,12 @@
         "en": "ORC-mkX Core (XenoThreat v2)",
         "zh_Hans": "ORC-mkX 胸甲 （异种威胁 v2）",
         "type": "Char_Armor_Torso",
+        "subtype": "Medium"
+    },
+    "item_Name_cds_combat_medium_helmet_04_01_01": {
+        "en": "ORC-mkX Helmet (XenoThreat v2)",
+        "zh_Hans": "ORC-mkX 头盔 （异种威胁 v2）",
+        "type": "Char_Armor_Helmet",
         "subtype": "Medium"
     },
     "item_Name_cds_combat_medium_legs_03_01_01": {
@@ -26820,10 +26681,6 @@
         "en": "Aegis Avenger Titan Seat",
         "zh_Hans": "圣盾 复仇者 泰坦 座椅"
     },
-    "item_NameAEGS_Avenger_shop": {
-        "en": "Aegis Avenger",
-        "zh_Hans": "圣盾 复仇者"
-    },
     "item_NameAEGS_BallisticRepeater_S5": {
         "en": "Aegis Ballistic Repeater",
         "zh_Hans": "圣盾 实弹速射炮"
@@ -26927,10 +26784,6 @@
     "item_NameAEGS_Gladius_lights": {
         "en": "Aegis Gladius Light Set",
         "zh_Hans": "圣盾 短剑 灯光套件"
-    },
-    "item_NameAEGS_Gladius_shop": {
-        "en": "Aegis Dynamics Gladius",
-        "zh_Hans": "圣盾动力 短剑"
     },
     "item_NameAEGS_Hammerhead_CML_Chaff": {
         "en": "Aegis Hammerhead - Noise Launcher",
@@ -27072,10 +26925,6 @@
         "en": "Aegis Sabre Raven - Decoy Launcher",
         "zh_Hans": "圣盾 军刀 渡鸦 - 诱饵弹发射器"
     },
-    "item_NameAEGS_Redeemer_shop": {
-        "en": "Aegis Dynamics Redeemer",
-        "zh_Hans": "圣盾动力 救赎者"
-    },
     "item_NameAEGS_Retaliator_Cockpit_Seat": {
         "en": "Aegis Retaliator Cockpit Seat",
         "zh_Hans": "圣盾 报复者 驾驶座位"
@@ -27103,10 +26952,6 @@
     "item_NameAEGS_Retaliator_Turret_Seat": {
         "en": "Aegis Retaliator Turret Seat",
         "zh_Hans": "圣盾 报复者 炮塔座位"
-    },
-    "item_NameAEGS_Retaliator_shop": {
-        "en": "Aegis Retaliator",
-        "zh_Hans": "圣盾 报复者"
     },
     "item_NameAEGS_S1_Rack_x2": {
         "en": "Aegis S1 Double Platform",
@@ -27586,23 +27431,11 @@
         "type": "Turret",
         "subtype": "CanardTurret"
     },
-    "item_NameANVL_Hornet_F7CR_shop": {
-        "en": "Anvil Hornet F7CR Tracker",
-        "zh_Hans": "铁砧 大黄蜂F7CR 追踪者"
-    },
-    "item_NameANVL_Hornet_F7CS_shop": {
-        "en": "Anvil Hornet F7CS Ghost",
-        "zh_Hans": "铁砧 大黄蜂F7CS 幽灵"
-    },
     "item_NameANVL_Hornet_F7C_Mk2_Cargo_Door": {
         "en": "Stor*All Big Box Model H2",
         "zh_Hans": "万可存大型货舱模组 H2型",
         "type": "Module",
         "subtype": "UNDEFINED"
-    },
-    "item_NameANVL_Hornet_F7C_shop": {
-        "en": "Anvil Hornet F7C",
-        "zh_Hans": "铁砧 大黄蜂F7C"
     },
     "item_NameANVL_Hornet_LandingSystem": {
         "en": "Anvil Hornet Landing System",
@@ -28692,14 +28525,6 @@
         "en": "Magma Jet (Center Engine)",
         "zh_Hans": "岩浆飞射（中部引擎）"
     },
-    "item_NameCNOU_Mustang_Alpha_shop": {
-        "en": "Mustang Alpha",
-        "zh_Hans": "联合外域 野马 阿尔法"
-    },
-    "item_NameCNOU_Mustang_Beta_shop": {
-        "en": "Consolidated Outland Mustang Beta",
-        "zh_Hans": "联合外域 野马 贝塔"
-    },
     "item_NameCNOU_Mustang_DefaultSeat": {
         "en": "Consolidated Outland Mustang Pilot Seat",
         "zh_Hans": "联合外域 野马 驾驶员座位"
@@ -28707,10 +28532,6 @@
     "item_NameCNOU_Mustang_Ejection_Seat": {
         "en": "Consolidated Outland Mustang Pilot Ejection Seat",
         "zh_Hans": "联合外域 野马 飞行员弹射座椅"
-    },
-    "item_NameCNOU_Mustang_Gamma_shop": {
-        "en": "Consolidated Outland Mustang Gamma",
-        "zh_Hans": "联合外域 野马 伽马"
     },
     "item_NameCNOU_Mustang_LandingSystem": {
         "en": "Consolidated Outland Mustang Landing System",
@@ -29476,10 +29297,6 @@
         "en": "Drake Cutlass Black External Lights",
         "zh_Hans": "德雷克 黑弯刀 外部灯光"
     },
-    "item_NameDRAK_Cutlass_Black_shop": {
-        "en": "Drake Cutlass Black",
-        "zh_Hans": "德雷克 黑弯刀"
-    },
     "item_NameDRAK_Cutlass_Blue_Transport_Copilot_Seat": {
         "en": "Drake Cutlass Blue Co-Pilot Seat",
         "zh_Hans": "德雷克 蓝弯刀 副驾驶座位"
@@ -29509,10 +29326,6 @@
         "zh_Hans": "领航E7 回声扫描仪",
         "type": "TurretBase",
         "subtype": "Unmanned"
-    },
-    "item_NameDRAK_Cutlass_Red_shop": {
-        "en": "Drake Cutlass Red",
-        "zh_Hans": "德雷克 红弯刀"
     },
     "item_NameDRAK_Cutlass_Steel_RemoteTurret": {
         "en": "Drake Cutlass Steel Remote Turret",
@@ -31654,18 +31467,6 @@
         "type": "Paints",
         "subtype": "UNDEFINED"
     },
-    "item_NameGMNI_rifle_ballistic_01": {
-        "en": "S71 Rifle",
-        "zh_Hans": "S71步枪",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
-    },
-    "item_NameGMNI_smg_ballistic_01": {
-        "en": "C54 SMG",
-        "zh_Hans": "C54 冲锋枪",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
-    },
     "item_NameGRIN_Cydnus_Engine": {
         "en": "Greycat Industrial Cydnus Engine",
         "zh_Hans": "灰猫工业 天鹅座 引擎"
@@ -32312,12 +32113,6 @@
         "en": "FL-33 Cannon",
         "zh_Hans": "FL-33能量加农炮"
     },
-    "item_NameKSAR_pistol_ballistic_01": {
-        "en": "Coda Pistol",
-        "zh_Hans": "终曲实弹手枪",
-        "type": "WeaponPersonal",
-        "subtype": "Small"
-    },
     "item_NameLPLT_SQV_S1": {
         "en": "Lightning Power LTD Powerbolt",
         "zh_Hans": "闪电之力有限公司 电力栓"
@@ -32372,17 +32167,9 @@
         "en": "MISC Freelancer Co-Pilot Seat",
         "zh_Hans": "武藏 自由枪骑兵 副驾驶位"
     },
-    "item_NameMISC_Freelancer_DUR_shop": {
-        "en": "MISC Freelancer DUR",
-        "zh_Hans": "武藏 自由枪骑兵 DUR"
-    },
     "item_NameMISC_Freelancer_LandingSystem": {
         "en": "MISC Freelancer Landing System",
         "zh_Hans": "武藏 自由枪骑兵 着陆系统"
-    },
-    "item_NameMISC_Freelancer_MAX_shop": {
-        "en": "MISC Freelancer MAX",
-        "zh_Hans": "武藏 自由枪骑兵 MAX"
     },
     "item_NameMISC_Freelancer_Rear_Left_Seat": {
         "en": "MISC Freelancer Rear Left Seat",
@@ -32411,10 +32198,6 @@
     "item_NameMISC_Freelancer_Turret_Seat": {
         "en": "MISC Freelancer Turret Seat",
         "zh_Hans": "武藏 自由枪骑兵 炮塔座位"
-    },
-    "item_NameMISC_Freelancer_shop": {
-        "en": "MISC Freelancer",
-        "zh_Hans": "武藏 自由枪骑兵"
     },
     "item_NameMISC_FuelPod": {
         "en": "MISC Fuel Pod",
@@ -33490,22 +33273,6 @@
         "en": "@ORIG 300i Light Set",
         "zh_Hans": "@起源 300i 照明设置"
     },
-    "item_NameORIG_300i_shop": {
-        "en": "Origin Jumpworks 300i",
-        "zh_Hans": "起源跃动 300i"
-    },
-    "item_NameORIG_315p_shop": {
-        "en": "Origin Jumpworks 315p",
-        "zh_Hans": "起源跃动 315p"
-    },
-    "item_NameORIG_325a_shop": {
-        "en": "Origin Jumpworks 325a",
-        "zh_Hans": "起源跃动 325a"
-    },
-    "item_NameORIG_350r_shop": {
-        "en": "Origin Jumpworks 350r",
-        "zh_Hans": "起源跃动 350r"
-    },
     "item_NameORIG_3DRadarDisplay": {
         "en": "Origin Jumpworks 3D Radar Display",
         "zh_Hans": "起源跃动 3D 雷达显示器"
@@ -33569,10 +33336,6 @@
     "item_NameORIG_M50_lights": {
         "en": "Origin Jumpworks M50 External Lights",
         "zh_Hans": "起源跃动 M50 外部照明"
-    },
-    "item_NameORIG_m50_shop": {
-        "en": "Origin Jumpworks M50 Interceptor",
-        "zh_Hans": "起源跃动 M50 截击机"
     },
     "item_NameOutlaw_Heavy_Armor": {
         "en": "Slugger Heavy Armor",
@@ -34210,12 +33973,6 @@
         "en": "Impulse",
         "zh_Hans": "脉冲"
     },
-    "item_NameQDRV_JUST_S01_Vulcan_SCItem": {
-        "en": "Vulcan",
-        "zh_Hans": "伏尔甘",
-        "type": "QuantumDrive",
-        "subtype": "UNDEFINED"
-    },
     "item_NameQDRV_JUST_S03_Agni": {
         "en": "Agni",
         "zh_Hans": "阿格尼"
@@ -34259,12 +34016,6 @@
     "item_NameQDRV_TARS_S01_Expedition": {
         "en": "Expedition",
         "zh_Hans": "远征",
-        "type": "QuantumDrive",
-        "subtype": "UNDEFINED"
-    },
-    "item_NameQDRV_TARS_S02_Odyssey": {
-        "en": "Odyssey",
-        "zh_Hans": "奥德赛",
         "type": "QuantumDrive",
         "subtype": "UNDEFINED"
     },
@@ -34480,29 +34231,13 @@
         "en": "RSI 3D Radar Display",
         "zh_Hans": "RSI 3D 雷达显示器"
     },
-    "item_NameRSI_Aurora_CL_shop": {
-        "en": "RSI Aurora CL",
-        "zh_Hans": "RSI 极光CL"
-    },
-    "item_NameRSI_Aurora_ES_shop": {
-        "en": "RSI Aurora ES",
-        "zh_Hans": "RSI 极光ES"
-    },
     "item_NameRSI_Aurora_LN_Pilot_Seat": {
         "en": "RSI Aurora LN Pilot Seat",
         "zh_Hans": "RSI 极光LN 驾驶员座位"
     },
-    "item_NameRSI_Aurora_LN_shop": {
-        "en": "RSI Aurora LN",
-        "zh_Hans": "RSI 极光LN"
-    },
     "item_NameRSI_Aurora_LandingSystem": {
         "en": "RSI Aurora Landing System",
         "zh_Hans": "RSI 极光 着陆系统"
-    },
-    "item_NameRSI_Aurora_MR_shop": {
-        "en": "RSI Aurora MR",
-        "zh_Hans": "RSI 极光MR"
     },
     "item_NameRSI_Aurora_MultiLight": {
         "en": "RSI Aurora External Lights",
@@ -34556,14 +34291,6 @@
         "en": "RSI Cockpit Audio",
         "zh_Hans": "RSI 驾驶舱音频"
     },
-    "item_NameRSI_Constellation_Andromeda_shop": {
-        "en": "RSI Constellation Andromeda",
-        "zh_Hans": "RSI 仙女座"
-    },
-    "item_NameRSI_Constellation_Aquila_shop": {
-        "en": "RSI Constellation Aquila",
-        "zh_Hans": "RSI 天鹰座"
-    },
     "item_NameRSI_Constellation_Base_Seat_Copilot_Left": {
         "en": "RSI Constellation Co-Pilot Left Seat",
         "zh_Hans": "RSI 星座 左副驾驶座位"
@@ -34607,10 +34334,6 @@
     "item_NameRSI_Constellation_Seat_Turret_Bottom": {
         "en": "RSI Constellation Lower Turret Seat",
         "zh_Hans": "RSI 星座 下炮塔座位"
-    },
-    "item_NameRSI_Constellation_Taurus_shop": {
-        "en": "RSI Constellation Taurus",
-        "zh_Hans": "RSI 金牛座"
     },
     "item_NameRSI_Constellation_Turret_Base_Lower": {
         "en": "RSI Constellation Turret",
@@ -37889,12 +37612,6 @@
     "item_Name_SHLD_BASL_S00_Siege": {
         "en": "Siege",
         "zh_Hans": "围攻"
-    },
-    "item_Name_SHLD_BASL_S01_Guardian": {
-        "en": "Guardian",
-        "zh_Hans": "守卫",
-        "type": "Shield",
-        "subtype": "UNDEFINED"
     },
     "item_Name_SHLD_BASL_S03_Ward": {
         "en": "Ward",
@@ -44806,12 +44523,6 @@
         "en": "Behring EP-5 EMP Grenade",
         "zh_Hans": "贝林EP-5 EMP 手榴弹"
     },
-    "item_Namebehr_frag_grenade_01": {
-        "en": "MK-4 Frag Grenade",
-        "zh_Hans": "MK-4 破片手榴弹",
-        "type": "WeaponPersonal",
-        "subtype": "Grenade"
-    },
     "item_Namebehr_frag_grenade_01_ammo": {
         "en": "Behring MK4 Frag Grenade",
         "zh_Hans": "贝林 MK4 破片手榴弹"
@@ -44864,12 +44575,6 @@
         "en": "Behring SC-1 LIDAR Grenade",
         "zh_Hans": "贝林 SC-1 光达手榴弹"
     },
-    "item_Namebehr_lmg_ballistic_01": {
-        "en": "FS-9 LMG",
-        "zh_Hans": "FS-9 轻机枪",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
-    },
     "item_Namebehr_lmg_ballistic_01_luminalia_green01": {
         "en": "FS-9 \"Evergreen\" LMG",
         "zh_Hans": "FS-9 轻机枪“万年青”",
@@ -44900,23 +44605,11 @@
         "type": "WeaponAttachment",
         "subtype": "IronSight"
     },
-    "item_Namebehr_pistol_ballistic_01": {
-        "en": "S-38 Pistol",
-        "zh_Hans": "S-38 手枪",
-        "type": "WeaponPersonal",
-        "subtype": "Small"
-    },
     "item_Namebehr_pistol_ballistic_01_300": {
         "en": "S-38 \"One Empire\" Pistol",
         "zh_Hans": "S-38 手枪“统一帝国”",
         "type": "WeaponPersonal",
         "subtype": "Small"
-    },
-    "item_Namebehr_rifle_ballistic_01": {
-        "en": "P4-AR Rifle",
-        "zh_Hans": "P4-AR 步枪",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
     },
     "item_Namebehr_rifle_ballistic_01_iron": {
         "en": "P4-AR Iron Sight",
@@ -44934,27 +44627,9 @@
         "en": "P8-ARM Rifle",
         "zh_Hans": "P8-ARM 步枪"
     },
-    "item_Namebehr_shotgun_ballistic_01": {
-        "en": "BR-2 Shotgun",
-        "zh_Hans": "BR-2 霰弹枪",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
-    },
-    "item_Namebehr_smg_ballistic_01": {
-        "en": "P8-SC SMG",
-        "zh_Hans": "P8-SC 冲锋枪",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
-    },
     "item_Namebehr_smg_ballistic_01_IAE2022": {
         "en": "P8-SC \"Red Alert\" SMG",
         "zh_Hans": "P8-SC 冲锋枪“红色警戒”",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
-    },
-    "item_Namebehr_smg_ballistic_01_black01": {
-        "en": "P8-SC \"Midnight\" SMG",
-        "zh_Hans": "P8-SC 冲锋枪“暗夜迷彩”",
         "type": "WeaponPersonal",
         "subtype": "Medium"
     },
@@ -44964,27 +44639,9 @@
         "type": "WeaponPersonal",
         "subtype": "Medium"
     },
-    "item_Namebehr_smg_ballistic_01_green01": {
-        "en": "P8-SC \"Warhawk\" SMG",
-        "zh_Hans": "P8-SC 冲锋枪“战鹰迷彩”",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
-    },
     "item_Namebehr_smg_ballistic_01_iron": {
         "en": "P8-SC SMG Iron Sight",
         "zh_Hans": "P8-SC 冲锋枪 金属瞄准镜"
-    },
-    "item_Namebehr_smg_ballistic_01_white02": {
-        "en": "P8-SC \"Boneyard\" SMG",
-        "zh_Hans": "P8-SC 冲锋枪“骸骨迷彩”",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
-    },
-    "item_Namebehr_sniper_ballistic_01": {
-        "en": "P6-LR Sniper Rifle",
-        "zh_Hans": "P6-LR 狙击步枪",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
     },
     "item_Namebehr_special_ballistic_01": {
         "en": "HP-284 Rocket Launcher",
@@ -45042,12 +44699,6 @@
         "en": "Drake Cutlass Ball Turret",
         "zh_Hans": "德雷克 弯刀 球形炮塔"
     },
-    "item_Namegmni_lmg_ballistic_01": {
-        "en": "F55 LMG",
-        "zh_Hans": "F55 轻机枪",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
-    },
     "item_Namegmni_lmg_ballistic_01_blue_gold_01": {
         "en": "F55 \"Valor\" LMG",
         "zh_Hans": "F55 轻机枪“英勇”",
@@ -45065,12 +44716,6 @@
         "zh_Hans": "OT4-RF（4倍光学）",
         "type": "WeaponAttachment",
         "subtype": "IronSight"
-    },
-    "item_Namegmni_pistol_ballistic_01": {
-        "en": "LH86 Pistol",
-        "zh_Hans": "LH86 手枪",
-        "type": "WeaponPersonal",
-        "subtype": "Small"
     },
     "item_Namegmni_pistol_ballistic_01_cen01": {
         "en": "LH86 \"Voyager\" Pistol",
@@ -45106,21 +44751,9 @@
         "type": "WeaponPersonal",
         "subtype": "Medium"
     },
-    "item_Namegmni_shotgun_ballistic_01": {
-        "en": "R97 Shotgun",
-        "zh_Hans": "R97 霰弹枪",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
-    },
     "item_Namegmni_smg_ballistic_01_green_grey01": {
         "en": "C54 \"Luckbringer\" SMG",
         "zh_Hans": "C54 冲锋枪“幸运使者”",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
-    },
-    "item_Namegmni_sniper_ballistic_01": {
-        "en": "A03 Sniper Rifle",
-        "zh_Hans": "A03 狙击步枪",
         "type": "WeaponPersonal",
         "subtype": "Medium"
     },
@@ -45168,12 +44801,6 @@
         "en": "Cambio SRT Canister (empty)",
         "zh_Hans": "转化宝 打捞修复罐子（空的）"
     },
-    "item_Namehdgw_pistol_ballistic_01": {
-        "en": "Salvo Frag Pistol",
-        "zh_Hans": "齐射 碎片手枪",
-        "type": "WeaponPersonal",
-        "subtype": "Small"
-    },
     "item_Namehdgw_pistol_ballistic_01_engraved01": {
         "en": "Salvo Saeed Frag Pistol",
         "zh_Hans": "齐射 碎片手枪 萨伊德",
@@ -45214,12 +44841,6 @@
         "en": "Kagi RTD ",
         "zh_Hans": "卡给 RTD"
     },
-    "item_Nameklwe_lmg_energy_01": {
-        "en": "Demeco LMG",
-        "zh_Hans": "德美科 轻机枪",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
-    },
     "item_Nameklwe_lmg_energy_01_IAE2022": {
         "en": "Demeco \"Red Alert\" LMG",
         "zh_Hans": "德美科 轻机枪“红色警戒”",
@@ -45256,16 +44877,6 @@
         "type": "WeaponPersonal",
         "subtype": "Small"
     },
-    "item_Nameklwe_pistol_energy_02": {
-        "en": "Arclight Pistol",
-        "zh_Hans": "弧光 手枪"
-    },
-    "item_Nameklwe_rifle_energy_01": {
-        "en": "Gallant Rifle",
-        "zh_Hans": "加伦特 步枪",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
-    },
     "item_Nameklwe_rifle_energy_01_IAE2022": {
         "en": "Gallant \"Red Alert\" Rifle",
         "zh_Hans": "加伦特 步枪“红色警戒”",
@@ -45281,12 +44892,6 @@
     "item_Nameklwe_rifle_energy_01_reddot": {
         "en": "Gallant Rifle Red Dot Sight",
         "zh_Hans": "加伦特步枪红点瞄准镜"
-    },
-    "item_Nameklwe_smg_energy_01": {
-        "en": "Lumin V SMG",
-        "zh_Hans": "卢敏 V 冲锋枪",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
     },
     "item_Nameklwe_smg_energy_01_blue_gold_01": {
         "en": "Lumin V \"Valor\" SMG",
@@ -45388,12 +44993,6 @@
         "type": "WeaponPersonal",
         "subtype": "Small"
     },
-    "item_Nameksar_rifle_energy_01": {
-        "en": "Karna Rifle",
-        "zh_Hans": "卡纳 步枪",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
-    },
     "item_Nameksar_rifle_energy_01_pink_red01": {
         "en": "Karna \"Fate\" Rifle",
         "zh_Hans": "卡纳 步枪“命运”",
@@ -45406,12 +45005,6 @@
         "type": "WeaponPersonal",
         "subtype": "Medium"
     },
-    "item_Nameksar_shotgun_energy_01": {
-        "en": "Devastator Shotgun",
-        "zh_Hans": "破坏者 霰弹枪",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
-    },
     "item_Nameksar_shotgun_energy_01_blue01": {
         "en": "Devastator \"Whirlwind\" Shotgun",
         "zh_Hans": "破坏者 霰弹枪“旋流”",
@@ -45421,12 +45014,6 @@
     "item_Nameksar_shotgun_energy_01_imp01": {
         "en": "Devastator \"Pathfinder\" Shotgun",
         "zh_Hans": "破坏者 霰弹枪“寻路者”",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
-    },
-    "item_Nameksar_smg_energy_01": {
-        "en": "Custodian SMG",
-        "zh_Hans": "监管者 冲锋枪",
         "type": "WeaponPersonal",
         "subtype": "Medium"
     },
@@ -45448,12 +45035,6 @@
         "type": "WeaponPersonal",
         "subtype": "Medium"
     },
-    "item_Nameksar_sniper_ballistic_01": {
-        "en": "Scalpel Sniper Rifle",
-        "zh_Hans": "解剖刀 狙击步枪",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
-    },
     "item_Nameksar_sniper_ballistic_01_blue_white01": {
         "en": "Scalpel \"Permafrost\" Sniper Rifle",
         "zh_Hans": "解剖刀 狙击步枪“冻土”",
@@ -45463,12 +45044,6 @@
     "item_Nameksar_special_energy_01": {
         "en": "Firestorm Cannon",
         "zh_Hans": "烈焰风暴 加农炮"
-    },
-    "item_Namelbco_pistol_energy_01": {
-        "en": "Yubarev Pistol",
-        "zh_Hans": "尤巴列夫 手枪",
-        "type": "WeaponPersonal",
-        "subtype": "Small"
     },
     "item_Namelbco_pistol_energy_01_chromic01": {
         "en": "Yubarev \"Mirage\" Pistol",
@@ -45481,12 +45056,6 @@
         "zh_Hans": "尤巴列夫 手枪“亡者之眼”",
         "type": "WeaponPersonal",
         "subtype": "Small"
-    },
-    "item_Namelbco_sniper_energy_01": {
-        "en": "Atzkav Sniper Rifle",
-        "zh_Hans": "阿兹卡夫 狙击步枪",
-        "type": "WeaponPersonal",
-        "subtype": "Medium"
     },
     "item_Namelbco_sniper_energy_01_acid01": {
         "en": "Atzkav \"Venom\" Sniper Rifle",
@@ -45537,12 +45106,6 @@
         "zh_Hans": "星空猫 马克杯",
         "type": "Drink",
         "subtype": "UNDEFINED"
-    },
-    "item_Namenone_melee_01": {
-        "en": "Prison Shiv",
-        "zh_Hans": "监狱小刀",
-        "type": "WeaponPersonal",
-        "subtype": "Knife"
     },
     "item_Namenone_shotgun_ballistic_01": {
         "en": "Deadrig Shotgun",
@@ -45719,12 +45282,6 @@
         "zh_Hans": "绿色“快闪”荧光棒高级版",
         "type": "WeaponPersonal",
         "subtype": "Grenade"
-    },
-    "item_Nameutfl_melee_01": {
-        "en": "FSK-8 Combat Knife",
-        "zh_Hans": "FSK-8 战术匕首",
-        "type": "WeaponPersonal",
-        "subtype": "Knife"
     },
     "item_Nameutfl_melee_01_browngold01": {
         "en": "FSK-8 \"Mirage\" Combat Knife ",
