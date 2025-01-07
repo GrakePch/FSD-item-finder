@@ -39,7 +39,6 @@ const SearchBar = ({ centered, dataAcquired }) => {
   const itemsData = useContext(AllItemsPriceContext);
   const [searchName, setSearchName] = useState("");
   const [isSearching, setIsSearching] = useState(false);
-  const [showResults, setShowResults] = useState(false);
   const [resultList, setResultList] = useState([]);
 
   const [filterType, setFilterType] = useState("");
@@ -48,6 +47,17 @@ const SearchBar = ({ centered, dataAcquired }) => {
   const handleSearchChange = (e) => {
     setSearchName(e.target.value);
   };
+
+  const setSearchBarFocusing = (isFocusing) => {
+    if (isFocusing) {
+      searchParams.set("searchFocus", "1");
+    } else {
+      searchParams.delete("searchFocus");
+    }
+    setSearchParams(searchParams);
+  };
+
+  const isSearchBarFocusing = () => searchParams.get("searchFocus") === "1";
 
   useEffect(() => {
     let _filterType = searchParams.get("type");
@@ -142,14 +152,14 @@ const SearchBar = ({ centered, dataAcquired }) => {
 
   return (
     <div className="SearchBar">
-      {showResults && (
-        <div className="search-bg" onClick={() => setShowResults(false)}></div>
+      {isSearchBarFocusing() && (
+        <div className="search-bg" onClick={() => setSearchBarFocusing(false)}></div>
       )}
       <nav
         className="search-super-container"
-        style={{ top: centered && !showResults ? "30%" : 0 }}
+        style={{ top: centered && !isSearchBarFocusing() ? "30%" : 0 }}
       >
-        {centered && !showResults && (
+        {centered && !isSearchBarFocusing() && (
           <>
             <h1>
               星际寻物<span>Beta 版</span>
@@ -159,12 +169,12 @@ const SearchBar = ({ centered, dataAcquired }) => {
           </>
         )}
         <div className="search-container">
-          {!showResults ? (
+          {!isSearchBarFocusing() ? (
             <div className="btnSearch">
               <Icon path={mdiMagnify} size="1.5rem" />
             </div>
           ) : (
-            <button className="btnBack" onClick={() => setShowResults(false)}>
+            <button className="btnBack" onClick={() => setSearchBarFocusing(false)}>
               <Icon className="iconClear" path={mdiArrowLeft} size="1.5rem" />
             </button>
           )}
@@ -173,7 +183,7 @@ const SearchBar = ({ centered, dataAcquired }) => {
             id="searchbar"
             placeholder={dataAcquired ? "搜索物品或载具名称……" : "数据加载中，请稍后……"}
             value={searchName}
-            onFocus={() => setShowResults(true)}
+            onFocus={() => setSearchBarFocusing(true)}
             onChange={handleSearchChange}
             disabled={!dataAcquired}
           />
@@ -183,7 +193,7 @@ const SearchBar = ({ centered, dataAcquired }) => {
             </button>
           )}
 
-          {showResults && (
+          {isSearchBarFocusing() && (
             <>
               <hr />
               <div className="filters">
@@ -270,7 +280,7 @@ const SearchBar = ({ centered, dataAcquired }) => {
                     </button>
                   </p>
                 ))}
-              <SearchResultList results={resultList} setShowResults={setShowResults} />
+              <SearchResultList results={resultList} />
             </>
           )}
         </div>

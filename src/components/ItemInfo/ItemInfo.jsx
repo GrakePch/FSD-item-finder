@@ -27,6 +27,12 @@ const ItemInfo = ({ item, listVariants, set }) => {
 
   if (!item) return null;
 
+  const handleTypeClick = (type, subType) => {
+    searchParams.set("type", type + "." + subType);
+    searchParams.set("searchFocus", "1");
+    setSearchParams(searchParams);
+  };
+
   return (
     <div className="ItemInfo">
       <div className="info-and-image">
@@ -36,8 +42,15 @@ const ItemInfo = ({ item, listVariants, set }) => {
             <h2 className="en">{item.name}</h2>
           </div>
           <div className="types">
-            <p className="type">{getCategoryZhName(item.type)}</p>
-            <p className="subtype">{getCategoryZhName(item.sub_type)}</p>
+            <button className="type" onClick={() => handleTypeClick(item.type, "")}>
+              {getCategoryZhName(item.type)}
+            </button>
+            <button
+              className="subtype"
+              onClick={() => handleTypeClick(item.type, item.sub_type)}
+            >
+              {getCategoryZhName(item.sub_type)}
+            </button>
           </div>
           <div className="attributes">
             {item.attributes &&

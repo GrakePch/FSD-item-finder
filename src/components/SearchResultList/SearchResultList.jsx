@@ -11,12 +11,12 @@ import {
 import { icon } from "../../assets/icon";
 import Icon from "@mdi/react";
 
-const SearchResultList = ({ results, setShowResults }) => {
+const SearchResultList = ({ results }) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const handleResultClick = (key) => {
-    setShowResults(false);
     searchParams.set("key", key);
+    searchParams.delete("searchFocus");
     setSearchParams(searchParams);
   };
 

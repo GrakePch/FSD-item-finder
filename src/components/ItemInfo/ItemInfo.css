@@ -50,8 +50,9 @@
 
 .ItemInfo .types {
   display: flex;
-  border-radius: 1rem;
-  border: var(--color-text-1) solid 1px;
+  /* border-radius: 1rem; */
+  /* border: var(--color-text-1) solid 1px; */
+  gap: .25rem;
   width: max-content;
   overflow: hidden;
 }
@@ -61,11 +62,18 @@
   color: var(--color-bg);
   background-color: var(--color-text-1);
   font-weight: 700;
+  border-radius: 1rem .25rem .25rem 1rem;
+}
+
+.ItemInfo .type:hover {
+  background-color: var(--color-text);
 }
 
 .ItemInfo .subtype {
   padding: 0 .5rem;
   color: var(--color-text);
+  border: var(--color-text-1) solid 1px;
+  border-radius: .25rem 1rem 1rem .25rem;
 }
 
 .ItemInfo .attributes {
