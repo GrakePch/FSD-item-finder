@@ -31,7 +31,7 @@ const subFilterTypes = {
   ],
   "Vehicle Weapons": ["Guns", "Missiles", "Missile Racks", "Bombs", "Turrets"],
   "Personal Weapons": ["Personal Weapons", "Attachments"],
-  Armor: ["Helmets", "Torso", "Arms", "Legs", "Backpacks"],
+  Armor: ["Undersuits", "Helmets", "Torso", "Arms", "Legs", "Backpacks"],
 };
 
 const SearchBar = ({ centered, dataAcquired }) => {

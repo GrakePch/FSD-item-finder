@@ -169,6 +169,8 @@ function App() {
           let subType = itemUexFormat?.category;
           if (subType == "Jump Modules") {
             type = "Systems";
+          } else if (subType == "Undersuits") {
+            type = "Armor";
           }
           if (!type || !subType) {
             let remapped = mapToUEXTypeSubType(value.type);
