@@ -1,14 +1,14 @@
 .Terminal {
     padding: 1.5rem;
-    padding-top: 6rem;
+    position: relative;
 }
 
 .Terminal .fab-navigate {
-    position: fixed;
+    position: sticky;
     z-index: 100;
-    top: 0rem;
+    top: 1.5rem;
     left: 0rem;
-    margin: 1.5rem;
+    margin-bottom: 1.5rem;
     width: 3rem;
     height: 3rem;
     padding: 0.75rem;
