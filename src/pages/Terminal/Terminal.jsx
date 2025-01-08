@@ -7,6 +7,7 @@ import {
   classToColor,
   getAttributeValueByName,
   getAttributeValueZhName,
+  getCategoryZhName,
   getLocationZhName,
   signalToColor,
   sizeToColor,
@@ -24,6 +25,9 @@ const Terminal = () => {
   const terminalId = useParams().tid;
   const [terminalInfo, setTerminalInfo] = useState(null);
   const [rawDictItemsPrices, setRawDictItemsPrices] = useState({});
+  const [listItemsOfTerminal, setListItemsOfTerminal] = useState([]);
+  const [hashSetSubTypes, setHashSetSubTypes] = useState(new Set());
+  const [filterSubType, setFilterSubType] = useState("");
 
   useEffect(() => {
     if (searchParams.get("key")) {
@@ -52,6 +56,24 @@ const Terminal = () => {
         console.log(err);
       });
   }, [terminalId]);
+
+  useEffect(() => {
+    const _tempList = Object.values(itemsData)
+      .filter(
+        (item) =>
+          rawDictItemsPrices[item.id_item] &&
+          rawDictItemsPrices[item.id_item].price_buy > 0
+      )
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .sort((a, b) => a.sub_type.localeCompare(b.sub_type))
+      .sort((a, b) => a.type.localeCompare(b.type));
+
+    setListItemsOfTerminal(_tempList);
+
+    const _tempSet = new Set();
+    _tempList.forEach((item) => _tempSet.add(item.sub_type));
+    setHashSetSubTypes(_tempSet);
+  }, [itemsData, rawDictItemsPrices]);
 
   const handleResultClick = (key) => {
     searchParams.set("key", key);
@@ -96,16 +118,28 @@ const Terminal = () => {
             <h3 className="faction">{terminalInfo.name_faction}</h3>
           </div>
           <div className="search-and-list">
+            <div className="filters-for-sub-type">
+              <button
+                className={!filterSubType ? "active" : undefined}
+                onClick={() => setFilterSubType("")}
+              >
+                全部
+              </button>
+              {Array.from(hashSetSubTypes).map((subType) => (
+                <button
+                  key={subType}
+                  className={filterSubType === subType ? "active" : undefined}
+                  onClick={() =>
+                    setFilterSubType(filterSubType === subType ? "" : subType)
+                  }
+                >
+                  {getCategoryZhName(subType)}
+                </button>
+              ))}
+            </div>
             <div className="list-sell">
-              {Object.values(itemsData)
-                .filter(
-                  (item) =>
-                    rawDictItemsPrices[item.id_item] &&
-                    rawDictItemsPrices[item.id_item].price_buy > 0
-                )
-                .sort((a, b) => a.name.localeCompare(b.name))
-                .sort((a, b) => a.sub_type.localeCompare(b.sub_type))
-                .sort((a, b) => a.type.localeCompare(b.type))
+              {listItemsOfTerminal
+                .filter((item) => !filterSubType || item.sub_type === filterSubType)
                 .map((item) => {
                   let attrsize, attrClass, attrGrade, attrTrackSignal;
                   if (item.type === "Systems") {

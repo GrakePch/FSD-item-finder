@@ -90,6 +90,31 @@
     overflow: hidden;
 }
 
+.Terminal .filters-for-sub-type {
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+.Terminal .filters-for-sub-type>* {
+    flex-shrink: 0;
+}
+
+.Terminal .filters-for-sub-type>button {
+    padding: 0 .5rem;
+    border: 1px solid var(--color-text-2);
+    border-radius: .25rem;
+    background-color: transparent;
+}
+
+.Terminal .filters-for-sub-type>button.active {
+    color: #000;
+    background-color: var(--color-text);
+    box-shadow: 0 0 1rem 0 var(--color-text-1);
+}
+
+
 .Terminal .list-item {
     display: flex;
     align-items: center;
