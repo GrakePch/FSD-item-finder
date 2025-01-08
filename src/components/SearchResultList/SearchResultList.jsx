@@ -1,5 +1,5 @@
 import "./SearchResultList.css";
-import { useSearchParams } from "react-router";
+import { useNavigate, useSearchParams } from "react-router";
 import i18nCategories from "../../data/categories_en_to_zh_Hans.json";
 import {
   getAttributeValueZhName,
@@ -12,12 +12,13 @@ import { icon } from "../../assets/icon";
 import Icon from "@mdi/react";
 
 const SearchResultList = ({ results }) => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
 
   const handleResultClick = (key) => {
     searchParams.set("key", key);
     searchParams.delete("searchFocus");
-    setSearchParams(searchParams);
+    navigate("/?" + searchParams.toString());
   };
 
   return (

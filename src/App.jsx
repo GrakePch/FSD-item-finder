@@ -1,33 +1,20 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import ItemInfo from "./components/ItemInfo/ItemInfo";
 import SearchBar from "./components/SearchBar/SearchBar";
-import { useSearchParams } from "react-router";
-import ItemGroupInfo from "./components/ItemGroupInfo/ItemGroupInfo";
-import ItemSetInfo from "./components/ItemSetInfo/ItemSetInfo";
+import { Route, Routes } from "react-router";
 import axios from "axios";
 import { AllTerminalsContext, AllItemsPriceContext } from "./contexts";
-import uexBadge from "./assets/uex-api-badge-powered.png";
 import itemsUexIdsAndI18n from "./data/items_uex_ids_and_i18n.json";
-
 import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
-import {
-  date4_0,
-  getItemUexFormat,
-  getSet,
-  getVariants,
-  mapToUEXTypeSubType,
-  pushLocalStorageRecent,
-} from "./utils";
+import { date4_0, getItemUexFormat, mapToUEXTypeSubType } from "./utils";
+import Item from "./pages/Item/Item";
+import Terminal from "./pages/Terminal/Terminal";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [terminalsData, setTerminalsData] = useState({});
   const [itemsData, setItemsData] = useState({});
   const [item, setItem] = useState(null);
-  const [itemListVariants, setItemListVariants] = useState([]);
-  const [itemSet, setItemSet] = useState(null);
-  const [showMode, setShowMode] = useState("");
-  const [searchParams] = useSearchParams();
   const [isItemsDataAcquired, setIsItemsDataAcquired] = useState(false);
 
   useEffect(() => {
@@ -249,51 +236,17 @@ function App() {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    setShowMode(searchParams.get("mode"));
-    let key = searchParams.get("key");
-    let _itemsData = itemsData[key];
-    if (_itemsData) {
-      pushLocalStorageRecent(key);
-      setItem(itemsData[key]);
-    } else {
-      setItem(null);
-    }
-    setItemListVariants(getVariants(key, itemsData));
-    setItemSet(getSet(key, itemsData));
-  }, [searchParams, itemsData]);
-
   return (
     <AllTerminalsContext.Provider value={terminalsData}>
       <AllItemsPriceContext.Provider value={itemsData}>
         <SearchBar centered={item === null} dataAcquired={isItemsDataAcquired} />
 
-        {item &&
-          (showMode === "variants" && itemListVariants.length > 1 ? (
-            <ItemGroupInfo item={item} listVariants={itemListVariants} />
-          ) : (
-            // ) : showMode === "set" && itemSet ? (
-            //   <ItemSetInfo item={item} set={itemSet} />
-            <ItemInfo item={item} listVariants={itemListVariants} set={itemSet} />
-          ))}
+        <Routes>
+          <Route path="/t/:tid" element={<Terminal />} />
+          <Route path="*" element={<Item item={item} setItem={setItem} />} />
+        </Routes>
 
-        <div className="footer" style={{ position: item ? "unset" : "absolute" }}>
-          <div className="uex">
-            <a href="https://uexcorp.space/" target="_blank">
-              <p>数据支持</p>
-            </a>
-            <a href="https://uexcorp.space/" target="_blank">
-              <img src={uexBadge} width="140" />
-            </a>
-          </div>
-          <p>
-            <a href="https://github.com/GrakePch/FSD-item-finder/issues" target="_blank">
-              问题反馈
-            </a>
-          </p>
-          <p>设计与开发：GrakePCH</p>
-          <p>技术支持：CxJuice</p>
-        </div>
+        <Footer style={{ position: item ? "unset" : "absolute" }} />
       </AllItemsPriceContext.Provider>
     </AllTerminalsContext.Provider>
   );

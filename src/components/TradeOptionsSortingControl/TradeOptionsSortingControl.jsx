@@ -15,11 +15,11 @@ const TradeOptionsSortingControl = () => {
     let paramSort = searchParams.get("sort");
     if (["price", "location"].includes(paramSort) === false) {
       searchParams.set("sort", "price");
-      setSearchParams(searchParams);
+      setSearchParams(searchParams, { replace: true });
     }
     if (!getBody(searchParams.get("from"))) {
       searchParams.set("from", "Crusader");
-      setSearchParams(searchParams);
+      setSearchParams(searchParams, { replace: true });
     }
     let tempStarSys = getBody(searchParams.get("from"));
     setStarSystem(tempStarSys?.parentStar || tempStarSys?.name);

@@ -10,7 +10,7 @@ import {
   readableDistance,
 } from "../../utils";
 import { AllTerminalsContext } from "../../contexts";
-import { useSearchParams } from "react-router";
+import { useNavigate, useSearchParams } from "react-router";
 import Icon from "@mdi/react";
 import { mdiAlertCircleOutline } from "@mdi/js";
 import locationNameToType from "../../data/location_name_to_type.json";
@@ -29,7 +29,8 @@ const percent = (v, zero, hundred) => {
 };
 
 const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const terminalsData = useContext(AllTerminalsContext);
   const [options, setOptions] = useState([]);
 
@@ -111,7 +112,16 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
               let locPath = getLocPath(option, terminalsData);
               return (
                 <div className="option" key={option.id_terminal}>
-                  <LocationPathChips path={locPath} startDepth={0} />
+                  <LocationPathChips
+                    path={locPath}
+                    startDepth={0}
+                    onClick={() => {
+                      searchParams.delete("key");
+                      navigate(
+                        "/t/" + option.id_terminal + "?" + searchParams.toString()
+                      );
+                    }}
+                  />
                   <p
                     className="date-modified"
                     style={{
@@ -222,6 +232,8 @@ const optimizeTree = (newTree, oldTree, depth) => {
 };
 
 const LocationForest = ({ forest, priceMin, priceMax, tradeType }) => {
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const terminalsData = useContext(AllTerminalsContext);
   return forest.map((tree) =>
     tree.option ? (
@@ -229,7 +241,14 @@ const LocationForest = ({ forest, priceMin, priceMax, tradeType }) => {
         className={"option-in-tree" + (tree.depth > 0 ? " not-root" : "")}
         key={tree.locs[0]}
       >
-        <LocationPathChips path={tree.locs} startDepth={tree.depth} />
+        <LocationPathChips
+          path={tree.locs}
+          startDepth={tree.depth}
+          onClick={() => {
+            searchParams.delete("key");
+            navigate("/t/" + tree.option.id_terminal + "?" + searchParams.toString());
+          }}
+        />
         {tree.option.date_modified < date4_0 &&
           getLocPath(tree.option, terminalsData)[0] !== "Pyro" && (
             <Icon path={mdiAlertCircleOutline} size="1rem" color="#a06060" />
@@ -271,8 +290,8 @@ const LocationForest = ({ forest, priceMin, priceMax, tradeType }) => {
   );
 };
 
-const LocationPathChips = ({ path, startDepth }) => (
-  <p className="location">
+const LocationPathChips = ({ path, startDepth, onClick }) => (
+  <p className="location" onClick={onClick}>
     {path.map((loc, idx) => (
       <span
         key={loc + idx}

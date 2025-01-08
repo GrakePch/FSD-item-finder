@@ -85,16 +85,6 @@ const ItemInfo = ({ item, listVariants, set }) => {
           <hr />
           <div className="title-and-button">
             <h3>套装</h3>
-            {/* <button
-              className="button-check-group"
-              onClick={() => {
-                searchParams.set("mode", "set");
-                setSearchParams(searchParams);
-              }}
-            >
-              <Icon path={mdiTagMultipleOutline} size="1.5rem" />
-              哪里能购买完整套装
-            </button> */}
           </div>
           <div className="set-container">
             <SetButton subType="undersuit" item={set?.undersuit} selfKey={item.key} />
