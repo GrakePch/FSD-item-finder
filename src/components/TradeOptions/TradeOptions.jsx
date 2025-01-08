@@ -291,7 +291,7 @@ const LocationForest = ({ forest, priceMin, priceMax, tradeType }) => {
 };
 
 const LocationPathChips = ({ path, startDepth, onClick }) => (
-  <p className="location" onClick={onClick}>
+  <p className="location">
     {path.map((loc, idx) => (
       <span
         key={loc + idx}
@@ -300,6 +300,7 @@ const LocationPathChips = ({ path, startDepth, onClick }) => (
           backgroundColor: colorLocationDepth(startDepth + idx),
           color: startDepth + idx <= 0 && `#000`,
         }}
+        onClick={onClick}
       >
         {locationNameToType[loc] === 1 && (
           <Icon path={icon["Space Station"]} size="1rem" color="hsl(170deg 80% 50%)" />

@@ -1,0 +1,175 @@
+.Terminal {
+    padding: 1.5rem;
+    padding-top: 6rem;
+}
+
+.Terminal .fab-navigate {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    margin: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.75rem;
+    border-radius: 50%;
+    box-shadow: var(--shadow-1);
+}
+
+.Terminal .location-path {
+    position: absolute;
+    top: 0rem;
+    left: 4rem;
+    margin: 1.5rem;
+    display: flex;
+    height: 3rem;
+    margin-bottom: 1rem;
+}
+
+.Terminal .location-path>span {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.Terminal .location-path .name-star-system {
+    color: var(--color-bg);
+    background-color: var(--color-text-1);
+    border-radius: 1.5rem 0 0 1.5rem;
+}
+
+.Terminal .location-path .name-orbit {
+    background-color: #696969;
+    border-radius: 0;
+}
+
+.Terminal .location-path .name-3rd {
+    background-color: #565656;
+    border-radius: 0 1.5rem 1.5rem 0;
+}
+
+.Terminal .basic-info {
+    padding: 0 1rem;
+}
+
+
+.Terminal .basic-info .zh {
+    overflow-wrap: anywhere;
+}
+
+.Terminal .basic-info .en {
+    color: var(--color-text-1);
+    line-height: 100%;
+    margin-top: .5rem;
+    overflow-wrap: anywhere;
+}
+
+.Terminal .basic-info .faction {
+    color: var(--color-text-2);
+    line-height: 100%;
+    margin-top: .5rem;
+}
+
+.Terminal hr {
+    border: none;
+    width: calc(100% - 2rem);
+    height: 1px;
+    margin: 1rem;
+    background-color: var(--color-text);
+    opacity: .5;
+}
+
+.Terminal h4 {
+    padding: 0 1rem;
+}
+
+.Terminal .search-and-list {
+    margin-top: 1rem;
+    background-color: var(--color-bg-1);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.Terminal .list-item {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    width: 100%;
+    text-align: start;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background .2s;
+}
+
+.Terminal .list-item:hover {
+    background-color: var(--color-bg-2);
+}
+
+.Terminal .list-item:focus,
+.Terminal .list-item:focus-visible {
+    background-color: var(--color-bg-2);
+    outline: none;
+}
+
+.Terminal .list-item>* {
+    flex-shrink: 0;
+}
+
+.Terminal .list-item .names {
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow-wrap: anywhere;
+}
+
+.Terminal .list-item .en {
+    color: var(--color-text-1);
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.Terminal .list-item .type {
+    font-size: .75rem;
+    font-weight: 400;
+    border: var(--color-text-1) solid 1px;
+    border-radius: .5rem;
+    width: max-content;
+    overflow: hidden;
+}
+
+.Terminal .list-item .type>p:first-child {
+    padding: 0 .5rem;
+    color: var(--color-bg);
+    background-color: var(--color-text-1);
+    font-weight: 700;
+}
+
+.Terminal .list-item .type>p:last-child {
+    padding: 0 .5rem;
+    color: var(--color-text);
+}
+
+.Terminal .list-item .size,
+.Terminal .list-item .class-grade,
+.Terminal .list-item .tracking-signal {
+    font-family: var(--font-slim);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    background-color: var(--color-bg-2);
+    padding: .25rem;
+    border-radius: .25rem;
+}
+
+.Terminal .list-item .size {
+    font-family: var(--font-slim);
+    font-weight: 700;
+}
+
+.Terminal .list-item .price {
+    min-width: 5rem;
+    text-align: end;
+    color: hsl(200deg 60% 50%);
+    font-family: var(--font-slim);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}

@@ -21,7 +21,7 @@ function App() {
     const fetchData = async () => {
       /* Fetch & reformat terminals */
       try {
-        const res = await axios.get("https://uexcorp.space/api/2.0/terminals");
+        const res = await axios.get("https://api.uexcorp.space/2.0/terminals");
         let temp = res.data.data.map((t) => {
           let orbit_name_fix = uexBodiesFixM[t.orbit_name] || t.orbit_name;
           if (t.star_system_name === "Pyro" && t.orbit_name === "Pyro Jump Point")
@@ -47,9 +47,6 @@ function App() {
               name_outpost: t.outpost_name,
               name_city: t.city_name,
             },
-            screenshot: t.screenshot,
-            screenshot_thumb: t.screenshot_thumb,
-            screenshot_author: t.screenshot_author,
             name_faction: t.faction_name,
           };
         });
@@ -63,7 +60,7 @@ function App() {
       /* Fetch & reformat items */
       let dictItem = {};
       try {
-        const res = await axios.get("https://uexcorp.space/api/2.0/items_prices_all");
+        const res = await axios.get("https://api.uexcorp.space/2.0/items_prices_all");
         for (const item of res.data.data) {
           let id = item.id_item;
           if (!dictItem[id]) {
@@ -87,7 +84,7 @@ function App() {
       /* Fetch & reformat vehicles */
       try {
         const res = await axios.get(
-          "https://uexcorp.space/api/2.0/vehicles_purchases_prices_all"
+          "https://api.uexcorp.space/2.0/vehicles_purchases_prices_all"
         );
         for (const v of res.data.data) {
           let id = "v-" + v.id_vehicle;
@@ -109,7 +106,7 @@ function App() {
       }
       try {
         const res = await axios.get(
-          "https://uexcorp.space/api/2.0/vehicles_rentals_prices_all"
+          "https://api.uexcorp.space/2.0/vehicles_rentals_prices_all"
         );
         for (const v of res.data.data) {
           let id = "v-" + v.id_vehicle;
@@ -239,14 +236,27 @@ function App() {
   return (
     <AllTerminalsContext.Provider value={terminalsData}>
       <AllItemsPriceContext.Provider value={itemsData}>
-        <SearchBar centered={item === null} dataAcquired={isItemsDataAcquired} />
-
         <Routes>
-          <Route path="/t/:tid" element={<Terminal />} />
-          <Route path="*" element={<Item item={item} setItem={setItem} />} />
+          <Route
+            path="/t/:tid"
+            element={
+              <>
+                <Terminal />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <>
+                <SearchBar centered={item === null} dataAcquired={isItemsDataAcquired} />
+                <Item item={item} setItem={setItem} />
+                <Footer style={{ position: item ? "unset" : "absolute" }} />
+              </>
+            }
+          />
         </Routes>
-
-        <Footer style={{ position: item ? "unset" : "absolute" }} />
       </AllItemsPriceContext.Provider>
     </AllTerminalsContext.Provider>
   );
