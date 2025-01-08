@@ -15,7 +15,7 @@ import {
 import Icon from "@mdi/react";
 import { icon } from "../../assets/icon";
 import i18nCategories from "../../data/categories_en_to_zh_Hans.json";
-import { mdiArrowLeft, mdiHomeVariantOutline } from "@mdi/js";
+import { mdiArrowLeft, mdiClose, mdiHomeVariantOutline, mdiMagnify } from "@mdi/js";
 
 const Terminal = () => {
   const navigate = useNavigate();
@@ -27,6 +27,7 @@ const Terminal = () => {
   const [rawDictItemsPrices, setRawDictItemsPrices] = useState({});
   const [listItemsOfTerminal, setListItemsOfTerminal] = useState([]);
   const [hashSetSubTypes, setHashSetSubTypes] = useState(new Set());
+  const [searchString, setSearchString] = useState("");
   const [filterSubType, setFilterSubType] = useState("");
 
   useEffect(() => {
@@ -81,6 +82,8 @@ const Terminal = () => {
     navigate("/?" + searchParams.toString());
   };
 
+  const handleSearchChange = (e) => setSearchString(e.target.value);
+
   return (
     <div className="Terminal">
       {window.history.state?.idx < 1 ? (
@@ -118,6 +121,21 @@ const Terminal = () => {
             <h3 className="faction">{terminalInfo.name_faction}</h3>
           </div>
           <div className="search-and-list">
+            <div className="searchbar-container">
+              <input
+                type="text"
+                id="searchbar"
+                placeholder="搜索本店商品……"
+                value={searchString}
+                onChange={handleSearchChange}
+              />
+              <Icon className="icon-search" path={mdiMagnify} size="1.5rem" />
+              {searchString && (
+                <button className="btn-clear" onClick={() => setSearchString("")}>
+                  <Icon className="icon-clear" path={mdiClose} size="1.5rem" />
+                </button>
+              )}
+            </div>
             <div className="filters-for-sub-type">
               <button
                 className={!filterSubType ? "active" : undefined}
@@ -140,6 +158,12 @@ const Terminal = () => {
             <div className="list-sell">
               {listItemsOfTerminal
                 .filter((item) => !filterSubType || item.sub_type === filterSubType)
+                .filter(
+                  (item) =>
+                    !searchString ||
+                    item.name.includes(searchString) ||
+                    item.name_zh_Hans.includes(searchString)
+                )
                 .map((item) => {
                   let attrsize, attrClass, attrGrade, attrTrackSignal;
                   if (item.type === "Systems") {

@@ -5,6 +5,7 @@
 
 .Terminal .fab-navigate {
     position: fixed;
+    z-index: 100;
     top: 0rem;
     left: 0rem;
     margin: 1.5rem;
@@ -90,6 +91,62 @@
     overflow: hidden;
 }
 
+.Terminal .searchbar-container {
+    position: relative;
+    height: 2.5rem;
+    margin: .75rem 1rem;
+    margin-bottom: .25rem;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+}
+
+.Terminal .searchbar-container #searchbar {
+    flex-shrink: 0;
+    flex-grow: 1;
+    border-radius: .5rem;
+    height: 2.5rem;
+    border: none;
+    padding: 0 2.5rem;
+    background-color: var(--color-bg-2);
+    font-family: inherit;
+    color: var(--color-text);
+    font-size: 1rem;
+    transition: filter .2s;
+}
+
+.Terminal .searchbar-container #searchbar:hover {
+    filter: brightness(1.1);
+}
+
+.Terminal .searchbar-container #searchbar:focus {
+    outline: none;
+}
+
+.Terminal .searchbar-container .icon-search {
+    position: absolute;
+    left: .5rem;
+}
+
+.Terminal .searchbar-container .btn-clear {
+    position: absolute;
+    right: .25rem;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transition: background .2s, filter .2s;
+}
+
+.Terminal .searchbar-container .btn-clear:hover {
+    filter: brightness(1.2);
+    background-color: var(--color-bg-2);
+}
+
 .Terminal .filters-for-sub-type {
     padding: .5rem 1rem;
     display: flex;
@@ -97,6 +154,7 @@
     gap: .5rem;
     flex-wrap: wrap;
 }
+
 .Terminal .filters-for-sub-type>* {
     flex-shrink: 0;
 }
