@@ -29,6 +29,7 @@ const Terminal = () => {
   const [hashSetSubTypes, setHashSetSubTypes] = useState(new Set());
   const [searchString, setSearchString] = useState("");
   const [filterSubType, setFilterSubType] = useState("");
+  const [listTerminalsNearby, setListTerminalsNearby] = useState([]);
 
   useEffect(() => {
     if (searchParams.get("key")) {
@@ -38,10 +39,34 @@ const Terminal = () => {
   }, [searchParams]);
 
   useEffect(() => {
-    // console.log(terminalsData[terminalId]);
-    setTerminalInfo(terminalsData[terminalId]);
+    const _tInfo = terminalsData[terminalId];
+    // console.log(_tInfo);
+    setTerminalInfo(_tInfo);
+
+    let _tempListTerminalsNearby = [];
+    let _tempFiltered = Object.values(terminalsData).filter(
+      (t) => t.type === "item" && t.id != terminalId
+    );
+    if (_tInfo?.location.name_space_station) {
+      _tempListTerminalsNearby = _tempFiltered
+        .filter(
+          (t) => t.location.name_space_station === _tInfo.location.name_space_station
+        )
+        .map((t) => t.id);
+    } else if (_tInfo?.location.name_city) {
+      _tempListTerminalsNearby = _tempFiltered
+        .filter((t) => t.location.name_city === _tInfo.location.name_city)
+        .map((t) => t.id);
+    } else if (_tInfo?.location.name_outpost) {
+      _tempListTerminalsNearby = _tempFiltered
+        .filter((t) => t.location.name_outpost === _tInfo.location.name_outpost)
+        .map((t) => t.id);
+    }
+    setListTerminalsNearby(_tempListTerminalsNearby);
+    /* Get Nearby Terminal */
   }, [terminalId, terminalsData]);
 
+  /* API Fetch: Get items prices at this terminal */
   useEffect(() => {
     axios
       .get("https://api.uexcorp.space/2.0/items_prices?id_terminal=" + terminalId)
@@ -58,6 +83,7 @@ const Terminal = () => {
       });
   }, [terminalId]);
 
+  /* Process API raw data */
   useEffect(() => {
     const _tempList = Object.values(itemsData)
       .filter(
@@ -83,6 +109,9 @@ const Terminal = () => {
   };
 
   const handleSearchChange = (e) => setSearchString(e.target.value);
+
+  const handleNearbyTerminalClick = (tid) =>
+    navigate(`/t/${tid}?` + searchParams.toString());
 
   return (
     <div className="Terminal">
@@ -120,6 +149,22 @@ const Terminal = () => {
             </div>
             <h3 className="faction">{terminalInfo.name_faction}</h3>
           </div>
+          {listTerminalsNearby.length > 0 && (
+            <>
+              <hr />
+              <h4>附近</h4>
+              <div className="nearby-terminals">
+                {listTerminalsNearby.map((tid) => (
+                  <button key={tid} onClick={() => handleNearbyTerminalClick(tid)}>
+                    {terminalsData[tid].location_path
+                      .slice(2)
+                      .map((n) => getLocationZhName(n))
+                      .join(" - ")}
+                  </button>
+                ))}
+              </div>
+            </>
+          )}
           <div className="search-and-list">
             <div className="searchbar-container">
               <input
@@ -233,7 +278,7 @@ const Terminal = () => {
                         </div>
                       )}
                       <p className="price">
-                        ¤ {rawDictItemsPrices[item.id_item].price_buy}
+                        ¤ {rawDictItemsPrices[item.id_item]?.price_buy}
                       </p>
                     </button>
                   );

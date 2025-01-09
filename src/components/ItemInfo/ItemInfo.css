@@ -79,7 +79,7 @@
 .ItemInfo .attributes {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: .5rem;
 }
 
 @media screen and (max-width: 959px) {

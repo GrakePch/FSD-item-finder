@@ -29,6 +29,8 @@ function App() {
           let locPath3rd = t.name.split(" - ").reverse();
           if (locPath3rd[0] === "Stanton Gateway Station")
             locPath3rd[0] = "Stanton Gateway";
+          if (locPath3rd[0] === "Terra Gateway Station")
+            locPath3rd[0] = "Terra Gateway";
           let locationPath = [t.star_system_name, orbit_name_fix, ...locPath3rd];
           locationPath = locationPath.filter((loc, idx) =>
             idx > 0 ? loc !== locationPath[idx - 1] : true
@@ -37,6 +39,7 @@ function App() {
             id: t.id,
             code: t.code,
             name: t.name,
+            type: t.type,
             location_path: locationPath,
             location: {
               name_star_system: t.star_system_name,
@@ -48,6 +51,23 @@ function App() {
               name_city: t.city_name,
             },
             name_faction: t.faction_name,
+            name_company: t.company_name,
+            is_affinity_influenceable: t.is_affinity_influenceable,
+            is_habitation: t.is_habitation,
+            is_refinery: t.is_refinery,
+            is_cargo_center: t.is_cargo_center,
+            is_medical: t.is_medical,
+            is_food: t.is_food,
+            is_shop_fps: t.is_shop_fps,
+            is_shop_vehicle: t.is_shop_vehicle,
+            is_refuel: t.is_refuel,
+            is_repair: t.is_repair,
+            is_nqa: t.is_nqa,
+            is_player_owned: t.is_player_owned,
+            is_auto_load: t.is_auto_load,
+            has_loading_dock: t.has_loading_dock,
+            has_docking_port: t.has_docking_port,
+            has_freight_elevator: t.has_freight_elevator,
           };
         });
         let tempDict = {};

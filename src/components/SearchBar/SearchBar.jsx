@@ -179,7 +179,7 @@ const SearchBar = ({ centered, dataAcquired }) => {
             </button>
           )}
           <input
-            type="input"
+            type="text"
             id="searchbar"
             placeholder={dataAcquired ? "搜索物品或载具名称……" : "数据加载中，请稍后……"}
             value={searchName}

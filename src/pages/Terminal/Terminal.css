@@ -84,6 +84,31 @@
     padding: 0 1rem;
 }
 
+.Terminal .nearby-terminals {
+    margin-top: .5rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .5rem;
+}
+
+@media screen and (max-width: 959px) {
+    .Terminal .nearby-terminals {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .Terminal .nearby-terminals {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.Terminal .nearby-terminals>button {
+    text-align: start;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+}
+
 .Terminal .search-and-list {
     margin-top: 1rem;
     background-color: var(--color-bg-1);
