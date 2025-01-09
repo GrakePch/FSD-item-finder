@@ -10,6 +10,7 @@ import { date4_0, getItemUexFormat, mapToUEXTypeSubType } from "./utils";
 import Item from "./pages/Item/Item";
 import Terminal from "./pages/Terminal/Terminal";
 import Footer from "./components/Footer/Footer";
+import TerminalIndex from "./pages/TerminalIndex/TerminalIndex";
 
 function App() {
   const [terminalsData, setTerminalsData] = useState({});
@@ -29,8 +30,8 @@ function App() {
           let locPath3rd = t.name.split(" - ").reverse();
           if (locPath3rd[0] === "Stanton Gateway Station")
             locPath3rd[0] = "Stanton Gateway";
-          if (locPath3rd[0] === "Terra Gateway Station")
-            locPath3rd[0] = "Terra Gateway";
+          if (locPath3rd[0] === "Terra Gateway Station") locPath3rd[0] = "Terra Gateway";
+          if (locPath3rd[0] === "Orbituary Station") locPath3rd[0] = "Orbituary";
           let locationPath = [t.star_system_name, orbit_name_fix, ...locPath3rd];
           locationPath = locationPath.filter((loc, idx) =>
             idx > 0 ? loc !== locationPath[idx - 1] : true
@@ -257,6 +258,15 @@ function App() {
     <AllTerminalsContext.Provider value={terminalsData}>
       <AllItemsPriceContext.Provider value={itemsData}>
         <Routes>
+          <Route
+            path="/t"
+            element={
+              <>
+                <TerminalIndex />
+                <Footer />
+              </>
+            }
+          />
           <Route
             path="/t/:tid"
             element={

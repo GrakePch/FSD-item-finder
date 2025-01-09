@@ -1,10 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import "./TradeOptions.css";
 import {
-  colorLocationDepth,
   colorPrice,
   date4_0,
-  getLocationZhName,
   getLocPath,
   getTerminalDistance,
   readableDistance,
@@ -13,8 +11,7 @@ import { AllTerminalsContext } from "../../contexts";
 import { useNavigate, useSearchParams } from "react-router";
 import Icon from "@mdi/react";
 import { mdiAlertCircleOutline } from "@mdi/js";
-import locationNameToType from "../../data/location_name_to_type.json";
-import { icon } from "../../assets/icon";
+import LocationPathChips from "../LocationPathChips/LocationPathChips";
 
 /**
  * @typedef {{id_terminal: number, distance: number, price_buy?: number | null, price_sell?: number | null, price_rent?: number | null, date_modified: number}} TradeOption
@@ -289,26 +286,5 @@ const LocationForest = ({ forest, priceMin, priceMax, tradeType }) => {
     )
   );
 };
-
-const LocationPathChips = ({ path, startDepth, onClick }) => (
-  <p className="location">
-    {path.map((loc, idx) => (
-      <span
-        key={loc + idx}
-        className="location-chip"
-        style={{
-          backgroundColor: colorLocationDepth(startDepth + idx),
-          color: startDepth + idx <= 0 && `#000`,
-        }}
-        onClick={onClick}
-      >
-        {locationNameToType[loc] === 1 && (
-          <Icon path={icon["Space Station"]} size="1rem" color="hsl(170deg 80% 50%)" />
-        )}
-        {getLocationZhName(loc)}
-      </span>
-    ))}
-  </p>
-);
 
 export default TradeOptions;
