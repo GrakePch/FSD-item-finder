@@ -1,7 +1,7 @@
 import "./Footer.css";
 import uexBadge from "../../assets/uex-api-badge-powered.png";
 
-const Footer = ({style}) => {
+const Footer = ({ style }) => {
   return (
     <div className="Footer" style={style}>
       <div className="uex">
@@ -13,8 +13,12 @@ const Footer = ({style}) => {
         </a>
       </div>
       <p>
-        <a href="https://github.com/GrakePch/FSD-item-finder/issues" target="_blank">
-          问题反馈
+        <a href="https://support.citizenwiki.cn/all" target="_blank">
+          反馈平台
+        </a>
+        {" | "}
+        <a href="https://github.com/GrakePch/FSD-item-finder" target="_blank">
+          开源仓库
         </a>
       </p>
       <p>设计与开发：GrakePCH</p>
