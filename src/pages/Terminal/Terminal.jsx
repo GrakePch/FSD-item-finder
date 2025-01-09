@@ -161,8 +161,12 @@ const Terminal = () => {
                 .filter(
                   (item) =>
                     !searchString ||
-                    item.name.includes(searchString) ||
-                    item.name_zh_Hans.includes(searchString)
+                    item.name
+                      .toLocaleLowerCase()
+                      .includes(searchString.toLocaleLowerCase()) ||
+                    item.name_zh_Hans
+                      ?.toLocaleLowerCase()
+                      ?.includes(searchString.toLocaleLowerCase())
                 )
                 .map((item) => {
                   let attrsize, attrClass, attrGrade, attrTrackSignal;
