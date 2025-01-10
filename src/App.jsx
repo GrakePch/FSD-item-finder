@@ -17,6 +17,9 @@ import Item from "./pages/Item/Item";
 import Terminal from "./pages/Terminal/Terminal";
 import Footer from "./components/Footer/Footer";
 import TerminalIndex from "./pages/TerminalIndex/TerminalIndex";
+import { initializeVectorSearch, vectorSearch } from './vectorsearch';
+import itemsVectorZh from "./data/items_vector_zh.json";
+import VectorSearchPage from './pages/VectorSearchPage/VectorSearchPage';
 
 function App() {
   const [terminalsData, setTerminalsData] = useState({});
@@ -297,12 +300,19 @@ function App() {
 
       // console.log(Object.values(tempItemsData));
       setItemsData(tempItemsData);
+      //initializeVectorSearch();
+      await initializeVectorSearch();
     };
 
     fetchData();
 
     setBodiesAndLocationsData([dictSystems, dictBodies, dictLocations]);
   }, []);
+
+  const handleVectorSearch = async (query) => {
+    const results = await vectorSearch(itemsVectorZh, query);
+    return results;
+  };
 
   return (
     <BodiesAndLocationsContext.Provider value={bodiesAndLocationsData}>
@@ -323,6 +333,15 @@ function App() {
             element={
               <>
                 <Terminal />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/vector-search"
+            element={
+              <>
+                <VectorSearchPage onSearch={handleVectorSearch} />
                 <Footer />
               </>
             }
