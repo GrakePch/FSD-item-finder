@@ -10,9 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@huggingface/transformers": "^3.2.4",
     "@mdi/js": "^7.4.47",
     "@mdi/react": "^1.6.1",
     "axios": "^1.7.9",
+    "fsd-item-finder": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router": "^7.0.1"
