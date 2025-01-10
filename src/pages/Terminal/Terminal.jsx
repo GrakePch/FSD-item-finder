@@ -44,26 +44,13 @@ const Terminal = () => {
     setTerminalInfo(_tInfo);
 
     let _tempListTerminalsNearby = [];
-    let _tempFiltered = Object.values(terminalsData).filter(
-      (t) => t.type === "item" && t.id != terminalId
-    );
-    if (_tInfo?.location.name_space_station) {
-      _tempListTerminalsNearby = _tempFiltered
-        .filter(
-          (t) => t.location.name_space_station === _tInfo.location.name_space_station
-        )
-        .map((t) => t.id);
-    } else if (_tInfo?.location.name_city) {
-      _tempListTerminalsNearby = _tempFiltered
-        .filter((t) => t.location.name_city === _tInfo.location.name_city)
-        .map((t) => t.id);
-    } else if (_tInfo?.location.name_outpost) {
-      _tempListTerminalsNearby = _tempFiltered
-        .filter((t) => t.location.name_outpost === _tInfo.location.name_outpost)
-        .map((t) => t.id);
+    if (_tInfo) {
+      /* Get Nearby Terminal */
+      _tempListTerminalsNearby = _tInfo.parentLocation.terminals.filter(
+        (t) => t.type === "item" && t.id != terminalId
+      );
     }
     setListTerminalsNearby(_tempListTerminalsNearby);
-    /* Get Nearby Terminal */
   }, [terminalId, terminalsData]);
 
   /* API Fetch: Get items prices at this terminal */
@@ -154,9 +141,9 @@ const Terminal = () => {
               <hr />
               <h4>附近</h4>
               <div className="nearby-terminals">
-                {listTerminalsNearby.map((tid) => (
-                  <button key={tid} onClick={() => handleNearbyTerminalClick(tid)}>
-                    {terminalsData[tid].location_path
+                {listTerminalsNearby.map((t) => (
+                  <button key={t.id} onClick={() => handleNearbyTerminalClick(t.id)}>
+                    {t.location_path
                       .slice(2)
                       .map((n) => getLocationZhName(n))
                       .join(" - ")}

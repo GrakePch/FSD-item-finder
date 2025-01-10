@@ -225,6 +225,12 @@ export function getPathTo(loc) {
     return path;
 }
 
+export function getPathToTerminal(t) {
+    let terminalSplit = t.name.split(" - ").reverse();
+    if (terminalSplit.length > 1) terminalSplit.shift();
+    return getPathTo(t.parentLocation).concat(terminalSplit)
+}
+
 export function getBodiesDistance(b1, b2) {
     let info1 = getBody(b1);
     let info2 = getBody(b2);

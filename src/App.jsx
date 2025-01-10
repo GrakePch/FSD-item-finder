@@ -3,7 +3,11 @@ import "./App.css";
 import SearchBar from "./components/SearchBar/SearchBar";
 import { Route, Routes } from "react-router";
 import axios from "axios";
-import { AllTerminalsContext, AllItemsPriceContext, BodiesAndLocationsContext } from "./contexts";
+import {
+  AllTerminalsContext,
+  AllItemsPriceContext,
+  BodiesAndLocationsContext,
+} from "./contexts";
 import itemsUexIdsAndI18n from "./data/items_uex_ids_and_i18n.json";
 import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
 import {
@@ -11,6 +15,7 @@ import {
   date4_0,
   getItemUexFormat,
   getPathTo,
+  getPathToTerminal,
   mapToUEXTypeSubType,
 } from "./utils";
 import Item from "./pages/Item/Item";
@@ -42,6 +47,7 @@ function App() {
           if (locPath3rd[0] === "Terra Gateway Station") locPath3rd[0] = "Terra Gateway";
           if (locPath3rd[0] === "Orbituary Station") locPath3rd[0] = "Orbituary";
           let locationPath = [t.star_system_name, orbit_name_fix, ...locPath3rd];
+          /* Deprecated */
           locationPath = locationPath.filter((loc, idx) =>
             idx > 0 ? loc !== locationPath[idx - 1] : true
           );
@@ -50,6 +56,7 @@ function App() {
             code: t.code,
             name: t.name,
             type: t.type,
+            parentLocation: null,
             location_path: locationPath,
             location: {
               name_star_system: t.star_system_name,
@@ -100,8 +107,8 @@ function App() {
             "HDMS-Anderson": "HDMS Anderson",
             "HDMS-Norgaard": "HDMS Norgaard",
             "Shady Glen": "Shady Glen Farms",
-            "Rod's Fuel & Supplies": "Rod's Fuel 'N Supplies"
-          }
+            "Rod's Fuel & Supplies": "Rod's Fuel 'N Supplies",
+          };
           if (d[terminalAt]) terminalAt = d[terminalAt];
 
           const regexStationLagrange = /^[A-Za-z]{3}-L\d.*Station$/;
@@ -110,12 +117,12 @@ function App() {
           }
 
           if (terminalAt.endsWith(" Gateway")) {
-            terminalAt = terminalAt + ` (${t.location.name_star_system})`
+            terminalAt = terminalAt + ` (${t.location.name_star_system})`;
           }
 
           if (dictLocations[terminalAt]) {
             t.parentLocation = dictLocations[terminalAt];
-            t.location_path = getPathTo(t.parentLocation).concat(t.name.split(" - ").reverse().slice(1));
+            t.location_path = getPathToTerminal(t);
             dictLocations[terminalAt].terminals.push(t);
           } else {
             // console.log(t.id, t.name);
@@ -306,40 +313,43 @@ function App() {
 
   return (
     <BodiesAndLocationsContext.Provider value={bodiesAndLocationsData}>
-    <AllTerminalsContext.Provider value={terminalsData}>
-      <AllItemsPriceContext.Provider value={itemsData}>
-        <Routes>
-          <Route
-            path="/t"
-            element={
-              <>
-                <TerminalIndex />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/t/:tid"
-            element={
-              <>
-                <Terminal />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="*"
-            element={
-              <>
-                <SearchBar centered={item === null} dataAcquired={isItemsDataAcquired} />
-                <Item item={item} setItem={setItem} />
-                <Footer style={{ position: item ? "unset" : "absolute" }} />
-              </>
-            }
-          />
-        </Routes>
-      </AllItemsPriceContext.Provider>
-    </AllTerminalsContext.Provider>
+      <AllTerminalsContext.Provider value={terminalsData}>
+        <AllItemsPriceContext.Provider value={itemsData}>
+          <Routes>
+            <Route
+              path="/t"
+              element={
+                <>
+                  <TerminalIndex />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/t/:tid"
+              element={
+                <>
+                  <Terminal />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="*"
+              element={
+                <>
+                  <SearchBar
+                    centered={item === null}
+                    dataAcquired={isItemsDataAcquired}
+                  />
+                  <Item item={item} setItem={setItem} />
+                  <Footer style={{ position: item ? "unset" : "absolute" }} />
+                </>
+              }
+            />
+          </Routes>
+        </AllItemsPriceContext.Provider>
+      </AllTerminalsContext.Provider>
     </BodiesAndLocationsContext.Provider>
   );
 }
