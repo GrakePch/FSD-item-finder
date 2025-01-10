@@ -10,5 +10,7 @@
 
 # 数据来源 Data Source
 
+ - [Murphy Exploration Group](https://docs.google.com/spreadsheets/d/1aGJ0_49ve1NKf0GvSteSt3-a4jSxnj2snHmTDwKTBgs/edit#gid=1238406064): 天文与地理数据。
  - [UEXCorp](https://uexcorp.space/): 交易终端数据、物品买卖数据、载具购买租赁数据等。
+ - 汉化文本来自民间汉化项目。
  - 其他数据提取自游戏文件。

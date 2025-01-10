@@ -3,10 +3,16 @@ import "./App.css";
 import SearchBar from "./components/SearchBar/SearchBar";
 import { Route, Routes } from "react-router";
 import axios from "axios";
-import { AllTerminalsContext, AllItemsPriceContext } from "./contexts";
+import { AllTerminalsContext, AllItemsPriceContext, BodiesAndLocationsContext } from "./contexts";
 import itemsUexIdsAndI18n from "./data/items_uex_ids_and_i18n.json";
 import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
-import { date4_0, getItemUexFormat, mapToUEXTypeSubType } from "./utils";
+import {
+  buildDataBodiesAndLocations,
+  date4_0,
+  getItemUexFormat,
+  getPathTo,
+  mapToUEXTypeSubType,
+} from "./utils";
 import Item from "./pages/Item/Item";
 import Terminal from "./pages/Terminal/Terminal";
 import Footer from "./components/Footer/Footer";
@@ -15,10 +21,13 @@ import TerminalIndex from "./pages/TerminalIndex/TerminalIndex";
 function App() {
   const [terminalsData, setTerminalsData] = useState({});
   const [itemsData, setItemsData] = useState({});
+  const [bodiesAndLocationsData, setBodiesAndLocationsData] = useState([{}, {}, {}]);
   const [item, setItem] = useState(null);
   const [isItemsDataAcquired, setIsItemsDataAcquired] = useState(false);
 
   useEffect(() => {
+    const [dictSystems, dictBodies, dictLocations] = buildDataBodiesAndLocations();
+
     const fetchData = async () => {
       /* Fetch & reformat terminals */
       try {
@@ -72,7 +81,46 @@ function App() {
           };
         });
         let tempDict = {};
-        for (const t of temp) tempDict[t.id] = t;
+        for (const t of temp) {
+          tempDict[t.id] = t;
+
+          let terminalAt =
+            t.location.name_space_station ||
+            t.location.name_outpost ||
+            t.location.name_city;
+
+          if (!terminalAt) continue;
+
+          const d = {
+            "Area 18": "Area18",
+            "Green Imperial Housing Exchange": "GrimHEX",
+            "Deakins Research": "Deakins Research Outpost",
+            "Hickes Research": "Hickes Research Outpost",
+            "Private Property": "PRIVATE PROPERTY",
+            "HDMS-Anderson": "HDMS Anderson",
+            "HDMS-Norgaard": "HDMS Norgaard",
+            "Shady Glen": "Shady Glen Farms",
+            "Rod's Fuel & Supplies": "Rod's Fuel 'N Supplies"
+          }
+          if (d[terminalAt]) terminalAt = d[terminalAt];
+
+          const regexStationLagrange = /^[A-Za-z]{3}-L\d.*Station$/;
+          if (regexStationLagrange.test(terminalAt)) {
+            terminalAt = terminalAt.slice(terminalAt.indexOf(" ") + 1);
+          }
+
+          if (terminalAt.endsWith(" Gateway")) {
+            terminalAt = terminalAt + ` (${t.location.name_star_system})`
+          }
+
+          if (dictLocations[terminalAt]) {
+            t.parentLocation = dictLocations[terminalAt];
+            t.location_path = getPathTo(t.parentLocation).concat(t.name.split(" - ").reverse().slice(1));
+            dictLocations[terminalAt].terminals.push(t);
+          } else {
+            // console.log(t.id, t.name);
+          }
+        }
         // console.log(tempDict);
         setTerminalsData(tempDict);
       } catch (err) {
@@ -252,9 +300,12 @@ function App() {
     };
 
     fetchData();
+
+    setBodiesAndLocationsData([dictSystems, dictBodies, dictLocations]);
   }, []);
 
   return (
+    <BodiesAndLocationsContext.Provider value={bodiesAndLocationsData}>
     <AllTerminalsContext.Provider value={terminalsData}>
       <AllItemsPriceContext.Provider value={itemsData}>
         <Routes>
@@ -289,6 +340,7 @@ function App() {
         </Routes>
       </AllItemsPriceContext.Provider>
     </AllTerminalsContext.Provider>
+    </BodiesAndLocationsContext.Provider>
   );
 }
 

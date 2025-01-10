@@ -8,6 +8,7 @@ import i18nAttributeValues from "./data/i18n_attribute_values.json";
 import uexIdsAndI18n from "./data/items_uex_ids_and_i18n.json";
 import typeMap from "./data/type_map_full_items.json";
 import bodies from "./data/bodies.json";
+import locations from "./data/locations.json";
 import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
 import attributes from "./data/categories_attributes.json";
 
@@ -22,11 +23,13 @@ export function getLocationZhName(name_en) {
     let en = name_en.toLowerCase();
     if (i18nLocations[en]) return i18nLocations[en].zh;
     if (i18nLocationsM[en]) return i18nLocationsM[en].zh;
-    if (name_en.includes("Lagrange")) {
-        let en_split = name_en.split(" ");
-        let sliceIdx = name_en.search("Lagrange");
-        let en_slice = name_en.slice(0, sliceIdx - 1);
-        return getLocationZhName(en_slice) + " 拉格朗日点 " + en_split[en_split.length - 1];
+    if (en.includes("gateway (")) {
+        return i18nLocations[en.slice(0, en.indexOf(" ("))]?.zh || name_en;
+    }
+    if (en.endsWith(" station")) {
+        for (const name of Object.keys(i18nLocations)) {
+            if (name.endsWith(en)) return i18nLocations[name].zh;
+        }
     }
     return name_en;
 }
@@ -79,30 +82,6 @@ export function getAttributeValueByName(name, attrDict) {
         if (attr && attr.name === name) return v;
     }
     return null;
-}
-
-export function getItemUexFormatBySlug(slug) {
-    for (const item of itemsUex) {
-        if (item.slug === slug) {
-            return item;
-        }
-    }
-    console.log("No item found for slug: " + slug);
-    return null;
-}
-
-export function getVehicleUEXFormatBySlug(slug) {
-    for (const vehicle of vehiclesUex) {
-        if (vehicle.id == slug.slice(2)) {
-            return vehicle;
-        }
-    }
-    console.log("No vehicle found for slug: " + slug);
-    return null;
-}
-
-export function getUexIdListFromKey(key) {
-    return uexIdsAndI18n[key].uex_id;
 }
 
 export function getKeyFromUexId(id) {
@@ -178,6 +157,7 @@ export function getBody(name) {
         || null;
 }
 
+/* Deprecated */
 export function getSystems() {
     let systems = {};
     let flattened = {};
@@ -192,6 +172,57 @@ export function getSystems() {
         }
     }
     return systems;
+}
+
+export function buildDataBodiesAndLocations() {
+    const systems = {};
+    const flattened = {};
+    const dictLocations = {};
+
+    for (const body of bodies) {
+        let cbody = structuredClone(body);
+        cbody.locations = [];
+        cbody.children = [];
+        flattened[cbody.name] = cbody;
+
+        /* Build Forest */
+        if (!cbody.parentBody) {
+            systems[cbody.name] = cbody;
+        } else {
+            flattened[cbody.parentBody].children.push(cbody);
+        }
+
+        /* Link parent body & star */
+        cbody.parentBody = flattened[cbody.parentBody] || null;
+        cbody.parentStar = flattened[cbody.parentStar] || null;
+    }
+
+    for (const location of locations) {
+        let cloc = structuredClone(location);
+        cloc.terminals = [];
+        dictLocations[cloc.name] = cloc;
+
+        /* Push to parent body */
+        flattened[cloc.parentBody].locations.push(cloc);
+
+        /* Link parent body & star */
+        cloc.parentBody = flattened[cloc.parentBody] || null;
+        cloc.parentStar = flattened[cloc.parentStar] || null;
+    }
+    return [systems, flattened, dictLocations];
+}
+
+export function getPathTo(loc) {
+    const path = [loc.name];
+    while (loc.parentBody) {
+        if (loc.type === "Lagrange Point")
+            loc = loc.parentBody.parentBody;
+        else
+            loc = loc.parentBody;
+        if (loc)
+            path.unshift(loc.name);
+    }
+    return path;
 }
 
 export function getBodiesDistance(b1, b2) {
