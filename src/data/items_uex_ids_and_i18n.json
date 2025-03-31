@@ -7248,6 +7248,7 @@
     },
     "item_Namebehr_optics_tsco_x4_s2": {
         "uex_ids": [
+            2166,
             3765
         ],
         "en": "EE04 (4x Telescopic)",
@@ -26307,7 +26308,10 @@
         "en": "ORC-mkX Arms (XenoThreat v2)",
         "zh_Hans": "ORC-mkX Arms (XenoThreat v2)",
         "type": "Char_Armor_Arms",
-        "subtype": "Medium"
+        "subtype": "Medium",
+        "uex_ids": [
+            2330
+        ]
     },
     "item_Name_cds_combat_medium_core_04_01_01": {
         "en": "ORC-mkX Core (XenoThreat v2)",
@@ -26331,7 +26335,10 @@
         "en": "ORC-mkX Legs (XenoThreat v2)",
         "zh_Hans": "ORC-mkX 腿甲 （异种威胁 v2）",
         "type": "Char_Armor_Legs",
-        "subtype": "Medium"
+        "subtype": "Medium",
+        "uex_ids": [
+            2328
+        ]
     },
     "Item_Namenvtc_optics_holo_x1_s1_LAMP": {
         "en": "Gamma LL (1x Holographic)",
@@ -47870,5 +47877,936 @@
     "item_Namegmni_smg_ballistic_01_blue_white01": {
         "en": "C54 \"Origin Racing\" SMG",
         "zh_Hans": "C54 冲锋枪 “起源竞速”"
+    },
+    "item_NameANVL_Hornet_F7CM_Mk2_Nose_Turret": {
+        "uex_ids": [
+            4286
+        ],
+        "en": "Anvil Hornet Mk II S2 Nose Turret",
+        "zh_Hans": "铁砧 大黄蜂 Mk II  S2 机鼻炮塔"
+    },
+    "item_NameMining_Head_S00_Helix_SCItem,P": {
+        "uex_ids": [
+            4361
+        ],
+        "en": "S0 Helix",
+        "zh_Hans": "S0螺旋"
+    },
+    "item_Mining_MiningSack_GRIN_ROC_Name": {
+        "uex_ids": [
+            4396
+        ],
+        "en": "Greycat ROC Ore Pod",
+        "zh_Hans": "灰猫 ROC 矿石吊舱"
+    },
+    "item_NameMining_Head_S00_Hofstede_SCItem,P": {
+        "uex_ids": [
+            4362
+        ],
+        "en": "S00 Hofstede",
+        "zh_Hans": "S00霍夫斯泰德"
+    },
+    "item_NameStorAll_ATLS_inventory": {
+        "uex_ids": [
+            4404
+        ],
+        "en": "GEO Resource Pod",
+        "zh_Hans": "GEO 资源舱",
+        "type": "Container",
+        "subtype": "Cargo"
+    },
+    "item_Namevolt_rifle_energy_01_mag": {
+        "uex_ids": [
+            4410
+        ],
+        "en": "Parallax Rifle Battery (80 Cap)",
+        "zh_Hans": "视差 步枪电池（80发）",
+        "type": "WeaponAttachment",
+        "subtype": "Magazine"
+    },
+    "item_Mining_MiningSack_GRIN_ROCDS_Name": {
+        "uex_ids": [
+            4395
+        ],
+        "en": "Greycat ROC-DS Ore Pod",
+        "zh_Hans": "灰猫 ROC-DS 矿石吊舱"
+    },
+    "item_NameMining_Head_S00_Klein_SCItem": {
+        "uex_ids": [
+            4363
+        ],
+        "en": "Lawson Mining Laser",
+        "zh_Hans": "劳森 采矿激光",
+        "type": "WeaponMining",
+        "subtype": "Gun"
+    },
+    "item_Mining_MiningSack_DRAK_Name": {
+        "uex_ids": [
+            4403
+        ],
+        "en": "Drake Ore Pod",
+        "zh_Hans": "德雷克 矿石吊舱"
+    },
+    "item_NameCarrack_Paint_Reward_Faction_CFP": {
+        "en": "Carrack Citizens for Prosperity Garnet Livery",
+        "zh_Hans": "克拉克 繁荣公民 石榴石涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameCarrack_Paint_Reward_Faction_FrontierFighters": {
+        "en": "Carrack Frontier Fighters Camo Livery",
+        "zh_Hans": "克拉克 边境战士 迷彩涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameCarrack_Paint_Reward_Faction_Headhunters": {
+        "en": "Carrack Headhunters Trauma Livery",
+        "zh_Hans": "克拉克 猎头帮 创伤涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameCarrack_Paint_Reward_Faction_XenoThreat": {
+        "en": "Carrack XenoThreat Purge Livery",
+        "zh_Hans": "克拉克 异种威胁 肃清涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameCarryable_2H_CY_plushy_coramor_1_a": {
+        "en": "Red Heart Plushie",
+        "zh_Hans": "红心抱枕",
+        "type": "Misc",
+        "subtype": "Personal"
+    },
+    "item_NameCutter_Paint_2955RedFestival_Red_Gold_Pig": {
+        "en": "Cutter 2955 Auspicious Red Pig Livery",
+        "zh_Hans": "小刀 2955吉祥红亥猪涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameCutter_Paint_2955RedFestival_Red_Gold_Snake": {
+        "en": "Cutter 2955 Auspicious Red Snake Livery",
+        "zh_Hans": "小刀 2955吉祥红巳蛇涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameCutter_Paint_Reward_Faction_CFP": {
+        "en": "Cutter Citizens for Prosperity Garnet Livery",
+        "zh_Hans": "小刀 繁荣公民 石榴石涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameCutter_Paint_Reward_Faction_FrontierFighters": {
+        "en": "Cutter Frontier Fighters Camo Livery",
+        "zh_Hans": "小刀 边境战士 迷彩涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameCutter_Paint_Reward_Faction_Headhunters": {
+        "en": "Cutter Headhunters Trauma Livery",
+        "zh_Hans": "小刀 猎头帮 创伤涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameCutter_Paint_Reward_Faction_XenoThreat": {
+        "en": "Cutter XenoThreat Purge Livery",
+        "zh_Hans": "小刀 异种威胁 肃清涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameFortune_Paint_2955RedFestival_Red_Gold_Pig": {
+        "en": "Fortune 2955 Auspicious Red Pig Livery",
+        "zh_Hans": "财运 2955吉祥红亥猪涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameFortune_Paint_2955RedFestival_Red_Gold_Snake": {
+        "en": "Fortune 2955 Auspicious Red Snake Livery",
+        "zh_Hans": "财运 2955吉祥红巳蛇涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameFortune_Paint_Black_Orange": {
+        "en": "Fortune Sunspot Livery",
+        "zh_Hans": "财运 太阳黑子涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameFortune_Paint_Black_Tan": {
+        "en": "Fortune Reserve Livery",
+        "zh_Hans": "财运 矜持涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameFortune_Paint_Black_White": {
+        "en": "Fortune Iceberg Livery",
+        "zh_Hans": "财运 冰山涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameFortune_Paint_Blue_Gray": {
+        "en": "Fortune Hightide Livery",
+        "zh_Hans": "财运 高潮涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameFortune_Paint_Copper_Black": {
+        "en": "Fortune Windfall Livery",
+        "zh_Hans": "财运 横财涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameFortune_Paint_Green_Copper": {
+        "en": "Fortune Highlander Livery",
+        "zh_Hans": "财运 高地人涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameFortune_Paint_Yellow_White": {
+        "en": "Fortune Luminance Livery",
+        "zh_Hans": "财运 光亮涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameHornet_F7A_Mk2_Paint_Lovestruck_Pink_Black": {
+        "en": "Hornet Mk II Lovestruck Livery",
+        "zh_Hans": "大黄蜂 Mk II 痴情涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameHornet_F7CM_Mk2_Paint_Bluegrey_Orange_Black": {
+        "en": "Hornet Mk II Tigerveil Livery",
+        "zh_Hans": "大黄蜂 Mk II 虎纱涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameHornet_F7CM_Mk2_Paint_Grey_Grey_Blue": {
+        "en": "Hornet Mk II Fortitude Livery",
+        "zh_Hans": "大黄蜂 Mk II 刚毅涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameHornet_F7CM_Mk2_Paint_Grey_Olive_Green": {
+        "en": "Hornet Mk II Silva Livery",
+        "zh_Hans": "大黄蜂 Mk II 林木涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameHornet_F7CM_Mk2_Paint_Heartseeker": {
+        "en": "Hornet Mk II Heartseeker Livery",
+        "zh_Hans": "大黄蜂 Mk II 寻心者涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameHornet_F7CM_Mk2_Paint_Olive_Green_Tan_Camo": {
+        "en": "Hornet Mk II Canopy Camo Livery",
+        "zh_Hans": "大黄蜂 Mk II 树荫迷彩涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameHornet_F7CM_Mk2_Paint_Silver_Bluesilver_Camo": {
+        "en": "Hornet Mk II Shikari Livery",
+        "zh_Hans": "大黄蜂 Mk II 猎手涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameHornet_F7CM_Mk2_Paint_Tan_Tan_Black": {
+        "en": "Hornet Mk II Quicksand Livery",
+        "zh_Hans": "大黄蜂 Mk II 流沙涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameMRCK_S04_ANVL_Hornet_F7CM_Mk2_Turret": {
+        "en": "Anvil F7C-M Mk II Missile Rack",
+        "zh_Hans": "铁砧 F7C-M Mk II 导弹架",
+        "type": "MissileLauncher",
+        "subtype": "MissileRack"
+    },
+    "item_NamePisces_Paint_Reward_Faction_CFP": {
+        "en": "Pisces Citizens for Prosperity Garnet Livery",
+        "zh_Hans": "双鱼座 繁荣公民 石榴石涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NamePisces_Paint_Reward_Faction_FrontierFighters": {
+        "en": "Pisces Frontier Fighters Camo Livery",
+        "zh_Hans": "双鱼座 边境战士 迷彩涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NamePisces_Paint_Reward_Faction_Headhunters": {
+        "en": "Pisces Headhunters Trauma Livery",
+        "zh_Hans": "双鱼座 猎头帮 创伤涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NamePisces_Paint_Reward_Faction_XenoThreat": {
+        "en": "Pisces XenoThreat Purge Livery",
+        "zh_Hans": "双鱼座 异种威胁 肃清涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NamePlayerDeco_DoubleBed_Flair_Coramor_a": {
+        "en": "Heartseeker Double Bed",
+        "zh_Hans": "寻心者 双人床"
+    },
+    "item_NamePlayerDeco_Flair_Lunar_Envelope_Stand": {
+        "en": "Red Festival Envelope Display",
+        "zh_Hans": "火红节红包展示架"
+    },
+    "item_NamePlayerDeco_Seat_Barstool_Col_1_a": {
+        "en": "Baltazar Stool",
+        "zh_Hans": "巴尔塔扎尔凳"
+    },
+    "item_NamePlayerDeco_Seat_Bench_2_Seat_Heart_1_a": {
+        "en": "Coramor '55 Loveseat",
+        "zh_Hans": "科拉爱人节 '55 双人沙发"
+    },
+    "item_NameZeus_Paint_Lovestruck_Pink_Black": {
+        "en": "Zeus Lovestruck Livery",
+        "zh_Hans": "宙斯 痴情涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameZeus_Paint_Reward_Faction_CFP": {
+        "en": "Zeus Citizens for Prosperity Garnet Livery",
+        "zh_Hans": "宙斯 繁荣公民 石榴石涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameZeus_Paint_Reward_Faction_FrontierFighters": {
+        "en": "Zeus Frontier Fighters Camo Livery",
+        "zh_Hans": "宙斯 边境战士 迷彩涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameZeus_Paint_Reward_Faction_Headhunters": {
+        "en": "Zeus Headhunters Trauma Livery",
+        "zh_Hans": "宙斯 猎头帮 创伤涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameZeus_Paint_Reward_Faction_XenoThreat": {
+        "en": "Zeus XenoThreat Purge Livery",
+        "zh_Hans": "宙斯 异种威胁 肃清涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameMerlin_Paint_StellaFortuna2955_Green": {
+        "en": "P-Series Fortuna Livery",
+        "zh_Hans": "P系列 福尔图娜涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameMustang_Paint_StellaFortuna2955_Green": {
+        "en": "Mustang Fortuna Livery",
+        "zh_Hans": "野马 福尔图娜涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NamePlayerDeco_Static_Diorama_Cargo_Scavanger_a": {
+        "en": "Pyro Resupply Commemorative Display",
+        "zh_Hans": "派罗补给纪念品"
+    },
+    "item_NamePulse_Paint_StellaFortuna2955_Green": {
+        "en": "Pulse Fortuna Livery",
+        "zh_Hans": "脉冲 福尔图娜涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_Name_BASL_combat_light_core_01_01_01": {
+        "en": "Advocacy Interceptor Core",
+        "zh_Hans": "督导局 截击者胸甲"
+    },
+    "item_Name_BASL_combat_light_helmet_01_01_01": {
+        "en": "Advocacy Interceptor Helmet",
+        "zh_Hans": "督导局 截击者头盔",
+        "type": "Char_Armor_Helmet",
+        "subtype": "Light"
+    },
+    "item_Name_BASL_undersuit_01_01_01": {
+        "en": "Advocacy Interceptor Undersuit",
+        "zh_Hans": "督导局 截击者基底服",
+        "type": "Char_Armor_Undersuit",
+        "subtype": "UNDEFINED"
+    },
+    "item_NamePlayerDeco_Seat_Chair_cargo_1_scavanger_a": {
+        "en": "Hazardous Cargo Chair",
+        "zh_Hans": "危险品货箱 椅子"
+    },
+    "item_NameFortune_Paint_Scavengers_Black_Black_Black": {
+        "en": "Fortune Outcast Livery (Modified)",
+        "zh_Hans": "财运 逐亡者涂装（改）",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameMerlin_Paint_Yellow_Blue_White": {
+        "en": "P-Series Murray Cup Livery",
+        "zh_Hans": "P系列 穆雷杯涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameMustang_Paint_Yellow_Blue_White": {
+        "en": "Mustang Murray Cup Livery",
+        "zh_Hans": "野马 穆雷杯涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameProspector_Paint_Scavengers_Black_Black_Black": {
+        "en": "Prospector Outcast Livery (Modified)",
+        "zh_Hans": "勘探者 逐亡者涂装（改）",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NamePulse_Paint_White_Pink_Blue": {
+        "en": "Pulse Star Kitten Livery",
+        "zh_Hans": "脉冲 星空猫涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameRazor_Paint_Red_Blue_Blue": {
+        "en": "Razor Racing Livery",
+        "zh_Hans": "剃刀 竞速涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameVulture_Paint_Scavengers_Black_Black_Black": {
+        "en": "Vulture Outcast Livery (Modified)",
+        "zh_Hans": "秃鹫 逐亡者涂装（改）",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_Name_eld_shirt_04_01_subfeb25": {
+        "en": "Big Winner T-Shirt",
+        "zh_Hans": "大赢家T恤",
+        "type": "Char_Clothing_Torso_0",
+        "subtype": "UNDEFINED"
+    },
+    "item_Nameksar_shotgun_ballistic_01_green01": {
+        "en": "Ravager-212 \"Outcast\" Twin Shotgun",
+        "zh_Hans": "劫掠者-212 双管霰弹枪 “逐亡者”",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
+    },
+    "item_NameCarryable_2H_FL_Painting_Constellation_a": {
+        "en": "RSI Constellation Painting",
+        "zh_Hans": "RSI星座绘画",
+        "type": "Misc",
+        "subtype": "Utility"
+    },
+    "item_Name_Compboard_PAF": {
+        "en": "Alignment Blade",
+        "zh_Hans": "校准刀片",
+        "type": "RemovableChip",
+        "subtype": "SystemAccess"
+    },
+    "item_Name_KeyCard_OLP_Access": {
+        "en": "OLP Storage Keycard",
+        "zh_Hans": "OLP存储钥匙卡",
+        "type": "RemovableChip",
+        "subtype": "SystemAccess"
+    },
+    "item_Name_KeyCard_OLP_PAF_BunkerCard": {
+        "en": "Laser Activation Keycard",
+        "zh_Hans": "激光激活钥匙卡",
+        "type": "RemovableChip",
+        "subtype": "SystemAccess"
+    },
+    "item_Name_KeyCard_OLP_Security": {
+        "en": "OLP Supervisor Keycard",
+        "zh_Hans": "OLP主管钥匙卡",
+        "type": "RemovableChip",
+        "subtype": "SystemAccess"
+    },
+    "item_Name_KeyCard_PAF_Maintenance": {
+        "en": "PAF Maintenance Keycard",
+        "zh_Hans": "PAF维护钥匙卡",
+        "type": "RemovableChip",
+        "subtype": "SystemAccess"
+    },
+    "item_Name_KeyCard_PAF_Security": {
+        "en": "PAF Security Keycard",
+        "zh_Hans": "PAF安全钥匙卡",
+        "type": "RemovableChip",
+        "subtype": "SystemAccess"
+    },
+    "item_Name_Powerbank": {
+        "en": "GP-XP Industrial Battery",
+        "zh_Hans": "GP-XP工业电池",
+        "type": "Battery",
+        "subtype": "Cargo"
+    },
+    "item_Name_qrt_specialist_heavy_arms_01_01_01": {
+        "en": "Antium Armor Arms",
+        "zh_Hans": "安腾护甲 臂甲",
+        "type": "Char_Armor_Arms",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_arms_01_01_10": {
+        "en": "Antium Armor Arms Storm",
+        "zh_Hans": "安腾护甲 臂甲 风暴",
+        "type": "Char_Armor_Arms",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_arms_01_01_12": {
+        "en": "Antium Armor Arms Jet",
+        "zh_Hans": "安腾护甲 臂甲 乌玉",
+        "type": "Char_Armor_Arms",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_arms_01_01_13": {
+        "en": "Antium Armor Arms Maroon",
+        "zh_Hans": "安腾护甲 臂甲 栗红",
+        "type": "Char_Armor_Arms",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_arms_01_01_15": {
+        "en": "Antium Armor Arms Sand",
+        "zh_Hans": "安腾护甲 臂甲 沙色",
+        "type": "Char_Armor_Arms",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_core_01_01_01": {
+        "en": "Antium Armor Core",
+        "zh_Hans": "安腾护甲 胸甲",
+        "type": "Char_Armor_Torso",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_core_01_01_10": {
+        "en": "Antium Armor Core Storm",
+        "zh_Hans": "安腾护甲 胸甲 风暴",
+        "type": "Char_Armor_Torso",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_core_01_01_12": {
+        "en": "Antium Armor Core Jet",
+        "zh_Hans": "安腾护甲 胸甲 乌玉",
+        "type": "Char_Armor_Torso",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_core_01_01_13": {
+        "en": "Antium Armor Core Maroon",
+        "zh_Hans": "安腾护甲 胸甲 栗红",
+        "type": "Char_Armor_Torso",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_core_01_01_15": {
+        "en": "Antium Armor Core Sand",
+        "zh_Hans": "安腾护甲 胸甲 沙色",
+        "type": "Char_Armor_Torso",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_helmet_01_01_01": {
+        "en": "Antium Armor Helmet",
+        "zh_Hans": "安腾护甲 头盔",
+        "type": "Char_Armor_Helmet",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_helmet_01_01_10": {
+        "en": "Antium Armor Helmet Storm",
+        "zh_Hans": "安腾护甲 头盔 风暴",
+        "type": "Char_Armor_Helmet",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_helmet_01_01_12": {
+        "en": "Antium Armor Core Jet",
+        "zh_Hans": "安腾护甲 胸甲 乌玉",
+        "type": "Char_Armor_Helmet",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_helmet_01_01_13": {
+        "en": "Antium Armor Helmet Maroon",
+        "zh_Hans": "安腾护甲 头盔 栗红",
+        "type": "Char_Armor_Helmet",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_helmet_01_01_15": {
+        "en": "Antium Armor Helmet Sand",
+        "zh_Hans": "安腾护甲 头盔 沙色",
+        "type": "Char_Armor_Helmet",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_legs_01_01_01": {
+        "en": "Antium Armor Legs",
+        "zh_Hans": "安腾护甲 腿甲",
+        "type": "Char_Armor_Legs",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_legs_01_01_10": {
+        "en": "Antium Armor Legs Storm",
+        "zh_Hans": "安腾护甲 腿甲 风暴",
+        "type": "Char_Armor_Legs",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_legs_01_01_12": {
+        "en": "Antium Armor Legs Jet",
+        "zh_Hans": "安腾护甲 腿甲 乌玉",
+        "type": "Char_Armor_Legs",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_legs_01_01_13": {
+        "en": "Antium Armor Legs Maroon",
+        "zh_Hans": "安腾护甲 腿甲 栗红",
+        "type": "Char_Armor_Legs",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_legs_01_01_15": {
+        "en": "Antium Armor Legs Sand",
+        "zh_Hans": "安腾护甲 腿甲 沙色",
+        "type": "Char_Armor_Legs",
+        "subtype": "Heavy"
+    },
+    "item_Namevolt_rifle_energy_01": {
+        "en": "Parallax Energy Assault Rifle",
+        "zh_Hans": "视差 能量突击步枪",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
+    },
+    "item_Namevolt_smg_energy_01": {
+        "en": "Quartz Energy SMG",
+        "zh_Hans": "石英 能量冲锋枪"
+    },
+    "item_Namevolt_smg_energy_01_mag": {
+        "en": "Quartz Energy SMG Battery (50 cap)",
+        "zh_Hans": "石英 能量冲锋枪电池（50发）"
+    },
+    "item_NamePlayerDeco_Static_Hologram_Wikelo_1_a": {
+        "en": "Wikelo Emporium Bust",
+        "zh_Hans": "维克洛百货半身像"
+    },
+    "item_Name_qrt_specialist_heavy_arms_01_02_16": {
+        "en": "Antium Armor Arms Moss Camo",
+        "zh_Hans": "安腾护甲 臂甲 苔藓迷彩",
+        "type": "Char_Armor_Arms",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_arms_01_03_01": {
+        "en": "Antium Armor Arms Midnight Sun",
+        "zh_Hans": "安腾护甲 臂甲 午夜阳光",
+        "type": "Char_Armor_Arms",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_core_01_02_16": {
+        "en": "Antium Armor Core Moss Camo",
+        "zh_Hans": "安腾护甲 胸甲 苔藓迷彩",
+        "type": "Char_Armor_Torso",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_core_01_03_01": {
+        "en": "Antium Armor Core Midnight Sun",
+        "zh_Hans": "安腾护甲 胸甲 午夜阳光",
+        "type": "Char_Armor_Torso",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_helmet_01_02_16": {
+        "en": "Antium Armor Helmet Moss Camo",
+        "zh_Hans": "安腾护甲 头盔 苔藓迷彩",
+        "type": "Char_Armor_Helmet",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_legs_01_02_16": {
+        "en": "Antium Armor Legs Moss Camo",
+        "zh_Hans": "安腾护甲 腿甲 苔藓迷彩",
+        "type": "Char_Armor_Legs",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_specialist_heavy_legs_01_03_01": {
+        "en": "Antium Armor Legs Midnight Sun",
+        "zh_Hans": "安腾护甲 腿甲 午夜阳光",
+        "type": "Char_Armor_Legs",
+        "subtype": "Heavy"
+    },
+    "item_Namevolt_rifle_energy_01_black_gold01": {
+        "en": "Parallax \"Downburst Camo\" Energy Assault Rifle",
+        "zh_Hans": "视差 能量突击步枪“暴流迷彩”",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
+    },
+    "item_Namevolt_rifle_energy_01_camo01": {
+        "en": "Parallax \"Shock Trooper\" Energy Assault Rifle",
+        "zh_Hans": "视差 能量突击步枪“震爆步兵”",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
+    },
+    "item_Namevolt_rifle_energy_01_collector02": {
+        "en": "Parallax \"Fun Kopion Skull\" Energy Assault Rifle",
+        "zh_Hans": "视差 能量突击步枪 “趣味寇骈犬头骨”",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
+    },
+    "item_Namevolt_rifle_energy_01_collector03": {
+        "en": "Parallax \"Fun Military Skull\" Energy Assault Rifle",
+        "zh_Hans": "视差 能量突击步枪 “趣味军用头骨”",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
+    },
+    "item_Namevolt_rifle_energy_01_collector04": {
+        "en": "Parallax \"Fun Military Tooth\" Energy Assault Rifle",
+        "zh_Hans": "视差 能量突击步枪 “趣味军用牙齿”",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
+    },
+    "item_Namevolt_rifle_energy_01_tint01": {
+        "en": "Parallax \"Sunstone\" Energy Assault Rifle",
+        "zh_Hans": "视差 能量突击步枪“日光石”",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
+    },
+    "item_Namevolt_rifle_energy_01_tint02": {
+        "en": "Parallax \"Sanguine\" Energy Assault Rifle",
+        "zh_Hans": "视差 能量突击步枪“血红”",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
+    },
+    "item_Name_qrt_combat_heavy_arms_02_01_01": {
+        "en": "Ana Armor Arms Iyosu",
+        "zh_Hans": "阿纳护甲 臂甲 万叶"
+    },
+    "item_Name_qrt_combat_heavy_arms_02_02_01": {
+        "en": "Ana Armor Arms Endro",
+        "zh_Hans": "阿纳护甲 臂甲 大地",
+        "type": "Char_Armor_Arms",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_combat_heavy_arms_02_03_01": {
+        "en": "Ana Armor Arms Wao",
+        "zh_Hans": "阿纳护甲 臂甲 若无",
+        "type": "Char_Armor_Arms",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_combat_heavy_core_02_01_01": {
+        "en": "Ana Armor Core Iyosu",
+        "zh_Hans": "阿纳护甲 胸甲 万叶"
+    },
+    "item_Name_qrt_combat_heavy_core_02_02_01": {
+        "en": "Ana Armor Core Endro",
+        "zh_Hans": "阿纳护甲 胸甲 大地",
+        "type": "Char_Armor_Torso",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_combat_heavy_core_02_03_01": {
+        "en": "Ana Armor Core Wao",
+        "zh_Hans": "阿纳护甲 胸甲 若无",
+        "type": "Char_Armor_Torso",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_combat_heavy_helmet_02_01_01": {
+        "en": "Ana Armor Helmet Iyosu",
+        "zh_Hans": "阿纳护甲 头盔 万叶"
+    },
+    "item_Name_qrt_combat_heavy_helmet_02_02_01": {
+        "en": "Ana Armor Helmet Endro",
+        "zh_Hans": "阿纳护甲 头盔 大地",
+        "type": "Char_Armor_Helmet",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_combat_heavy_helmet_02_03_01": {
+        "en": "Ana Armor Helmet Wao",
+        "zh_Hans": "阿纳护甲 头盔 若无",
+        "type": "Char_Armor_Helmet",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_combat_heavy_legs_02_01_01": {
+        "en": "Ana Armor Legs Iyosu",
+        "zh_Hans": "阿纳护甲 腿甲 万叶"
+    },
+    "item_Name_qrt_combat_heavy_legs_02_02_01": {
+        "en": "Ana Armor Legs Endro",
+        "zh_Hans": "阿纳护甲 腿甲 大地",
+        "type": "Char_Armor_Legs",
+        "subtype": "Heavy"
+    },
+    "item_Name_qrt_combat_heavy_legs_02_03_01": {
+        "en": "Ana Armor Legs Wao",
+        "zh_Hans": "阿纳护甲 腿甲 若无",
+        "type": "Char_Armor_Legs",
+        "subtype": "Heavy"
+    },
+    "item_Nameapar_special_ballistic_01_mat01": {
+        "en": "Scourge \"Quite Useful\" Railgun",
+        "zh_Hans": "天灾 电磁炮“实用版”",
+        "type": "WeaponPersonal",
+        "subtype": "Large"
+    },
+    "item_Nameapar_special_ballistic_02_mat01": {
+        "en": "Animus \"Quite Useful\" Missile Launcher",
+        "zh_Hans": "敌意 导弹发射器“实用版”",
+        "type": "WeaponPersonal",
+        "subtype": "Large"
+    },
+    "item_Namebehr_glauncher_ballistic_01_mat01": {
+        "en": "GP-33 MOD \"Quite Useful\" Grenade Launcher",
+        "zh_Hans": "GP-33 MOD 榴弹发射器“实用版”",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
+    },
+    "item_Namevolt_rifle_energy_01_collector01": {
+        "en": "Parallax \"Fun Kopion Tooth\" Energy Assault Rifle",
+        "zh_Hans": "视差 能量突击步枪 “趣味寇骈犬牙齿”",
+        "type": "WeaponPersonal",
+        "subtype": "Medium"
+    },
+    "item_Name_CLDA_combat_light_helmet_01_01_01": {
+        "en": "Badami Helmet",
+        "zh_Hans": "巴达米 头盔",
+        "type": "Char_Armor_Helmet",
+        "subtype": "Light"
+    },
+    "item_Name_CLDA_combat_light_helmet_01_01_02": {
+        "en": "Badami Helmet Graphite",
+        "zh_Hans": "巴达米 头盔 石墨"
+    },
+    "item_Name_CLDA_combat_light_helmet_01_01_03": {
+        "en": "Badami Helmet Olivine",
+        "zh_Hans": "巴达米 头盔 橄榄石"
+    },
+    "item_Name_SRVL_combat_light_arms_01_01_01": {
+        "en": "Piecemeal Armor Arms",
+        "zh_Hans": "零碎护甲 臂甲",
+        "type": "Char_Armor_Arms",
+        "subtype": "Light"
+    },
+    "item_Name_SRVL_combat_light_arms_01_02_01": {
+        "en": "Piecemeal Armor Arms Grey",
+        "zh_Hans": "零碎护甲 臂甲 灰色",
+        "type": "Char_Armor_Arms",
+        "subtype": "Light"
+    },
+    "item_Name_SRVL_combat_light_arms_01_03_01": {
+        "en": "Piecemeal Armor Arms Olive",
+        "zh_Hans": "零碎护甲 臂甲 橄榄色",
+        "type": "Char_Armor_Arms",
+        "subtype": "Light"
+    },
+    "item_Name_SRVL_combat_light_core_01_01_01": {
+        "en": "Piecemeal Armor Core",
+        "zh_Hans": "零碎护甲 胸甲",
+        "type": "Char_Armor_Torso",
+        "subtype": "Light"
+    },
+    "item_Name_SRVL_combat_light_core_01_02_01": {
+        "en": "Piecemeal Armor Core Grey",
+        "zh_Hans": "零碎护甲 胸甲 灰色",
+        "type": "Char_Armor_Torso",
+        "subtype": "Light"
+    },
+    "item_Name_SRVL_combat_light_core_01_03_01": {
+        "en": "Piecemeal Armor Core Olive",
+        "zh_Hans": "零碎护甲 胸甲 橄榄色",
+        "type": "Char_Armor_Torso",
+        "subtype": "Light"
+    },
+    "item_Name_SRVL_combat_light_legs_01_01_01": {
+        "en": "Piecemeal Armor Legs",
+        "zh_Hans": "零碎护甲 腿甲",
+        "type": "Char_Armor_Legs",
+        "subtype": "Light"
+    },
+    "item_Name_SRVL_combat_light_legs_01_02_01": {
+        "en": "Piecemeal Armor Legs Grey",
+        "zh_Hans": "零碎护甲 腿甲 灰色",
+        "type": "Char_Armor_Legs",
+        "subtype": "Light"
+    },
+    "item_Name_SRVL_combat_light_legs_01_03_01": {
+        "en": "Piecemeal Armor Legs Olive",
+        "zh_Hans": "零碎护甲 腿甲 橄榄色",
+        "type": "Char_Armor_Legs",
+        "subtype": "Light"
+    },
+    "item_NameATLS_Paint_Black_Grey_DarkGrey": {
+        "en": "ATLS Thunderhead Livery",
+        "zh_Hans": "ATLS 雷砧涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameATLS_Paint_Blue_Grey_White": {
+        "en": "ATLS Cobalt Camo Livery",
+        "zh_Hans": "ATLS 钴蓝迷彩涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameATLS_Paint_Orange_Grey": {
+        "en": "ATLS Safety Orange Livery",
+        "zh_Hans": "ATLS 安全橙涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameATLS_Paint_Silver_Grey_Lime": {
+        "en": "ATLS Granite Camo Livery",
+        "zh_Hans": "ATLS 花岗迷彩涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameATLS_Paint_WorkersWeek_White_Blue_Blue": {
+        "en": "ATLS Keystone Livery",
+        "zh_Hans": "ATLS 基石涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameCorsair_Paint_Black_Black_Gold_Camo": {
+        "en": "Corsair Downburst Camo Livery",
+        "zh_Hans": "海盗船 暴流迷彩涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameGolem_Paint_Black_Green_Grey": {
+        "en": "Golem Rockfall Livery",
+        "zh_Hans": "魔像 石落涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameGolem_Paint_Grey_Black_Black": {
+        "en": "Golem Coalheart Livery",
+        "zh_Hans": "魔像 煤核涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameGolem_Paint_Orange_White_Orange": {
+        "en": "Golem Flashpoint Livery",
+        "zh_Hans": "魔像 闪点涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameGolem_Paint_WorkersWeek_White_Blue_Blue": {
+        "en": "Golem Keystone Livery",
+        "zh_Hans": "魔像 基石涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameGolem_Paint_Yellow_Grey_Orange": {
+        "en": "Golem Faultline Livery",
+        "zh_Hans": "魔像 断层涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameMOLE_Paint_WorkersWeek_White_Blue_Blue": {
+        "en": "Mole Keystone Livery",
+        "zh_Hans": "鼹鼠 基石涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_NameProspector_Paint_WorkersWeek_White_Blue_Blue": {
+        "en": "Prospector Keystone Livery",
+        "zh_Hans": "勘探者 基石涂装",
+        "type": "Paints",
+        "subtype": "UNDEFINED"
+    },
+    "item_Name_CLDA_combat_light_helmet_01_02_01": {
+        "en": "Badami Helmet Graphite",
+        "zh_Hans": "巴达米 头盔 石墨",
+        "type": "Char_Armor_Helmet",
+        "subtype": "Light"
+    },
+    "item_Name_CLDA_combat_light_helmet_01_03_01": {
+        "en": "Badami Helmet Olivine",
+        "zh_Hans": "巴达米 头盔 橄榄石",
+        "type": "Char_Armor_Helmet",
+        "subtype": "Light"
+    },
+    "item_Name_DMC_Jacket_13_02_01": {
+        "en": "Wikelo Emporium Jacket",
+        "zh_Hans": "维克洛百货夹克",
+        "type": "Char_Clothing_Torso_1",
+        "subtype": "UNDEFINED"
     }
 }
