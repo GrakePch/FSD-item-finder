@@ -21,6 +21,22 @@ import { initializeVectorSearch, vectorSearch } from './vectorsearch';
 import itemsVectorZh from "./data/items_vector_zh.json";
 import VectorSearchPage from './pages/VectorSearchPage/VectorSearchPage';
 
+// Utility function to remove circular references
+const removeCircularReferences = (obj, seen = new WeakSet()) => {
+  if (obj && typeof obj === "object") {
+    if (seen.has(obj)) return undefined;
+    seen.add(obj);
+    if (Array.isArray(obj)) {
+      return obj.map((item) => removeCircularReferences(item, seen));
+    } else {
+      return Object.fromEntries(
+        Object.entries(obj).map(([key, value]) => [key, removeCircularReferences(value, seen)])
+      );
+    }
+  }
+  return obj;
+};
+
 function App() {
   const [terminalsData, setTerminalsData] = useState({});
   const [itemsData, setItemsData] = useState({});
@@ -31,100 +47,118 @@ function App() {
   useEffect(() => {
     const [dictSystems, dictBodies, dictLocations] = buildDataBodiesAndLocations();
 
-    const fetchData = async () => {
+    const fetchData = async (useCache = true) => {
+      const cacheKey = "terminalsDataCache";
+      const cacheTTL = 3600000; // 1 hour in milliseconds
+      const now = Date.now();
+
       /* Fetch & reformat terminals */
       try {
-        const res = await axios.get("https://api.uexcorp.space/2.0/terminals");
-        let temp = res.data.data.map((t) => {
-          let orbit_name_fix = uexBodiesFixM[t.orbit_name] || t.orbit_name;
-          if (t.star_system_name === "Pyro" && t.orbit_name === "Pyro Jump Point")
-            orbit_name_fix = "Stanton Jump Point";
-          let locPath3rd = t.name.split(" - ").reverse();
-          if (locPath3rd[0] === "Stanton Gateway Station")
-            locPath3rd[0] = "Stanton Gateway";
-          if (locPath3rd[0] === "Terra Gateway Station") locPath3rd[0] = "Terra Gateway";
-          if (locPath3rd[0] === "Orbituary Station") locPath3rd[0] = "Orbituary";
-          let locationPath = [t.star_system_name, orbit_name_fix, ...locPath3rd];
-          locationPath = locationPath.filter((loc, idx) =>
-            idx > 0 ? loc !== locationPath[idx - 1] : true
-          );
-          return {
-            id: t.id,
-            code: t.code,
-            name: t.name,
-            type: t.type,
-            location_path: locationPath,
-            location: {
-              name_star_system: t.star_system_name,
-              name_planet: t.planet_name,
-              name_orbit: orbit_name_fix,
-              name_moon: t.moon_name,
-              name_space_station: t.space_station_name,
-              name_outpost: t.outpost_name,
-              name_city: t.city_name,
-            },
-            name_faction: t.faction_name,
-            name_company: t.company_name,
-            is_affinity_influenceable: t.is_affinity_influenceable,
-            is_habitation: t.is_habitation,
-            is_refinery: t.is_refinery,
-            is_cargo_center: t.is_cargo_center,
-            is_medical: t.is_medical,
-            is_food: t.is_food,
-            is_shop_fps: t.is_shop_fps,
-            is_shop_vehicle: t.is_shop_vehicle,
-            is_refuel: t.is_refuel,
-            is_repair: t.is_repair,
-            is_nqa: t.is_nqa,
-            is_player_owned: t.is_player_owned,
-            is_auto_load: t.is_auto_load,
-            has_loading_dock: t.has_loading_dock,
-            has_docking_port: t.has_docking_port,
-            has_freight_elevator: t.has_freight_elevator,
-          };
-        });
-        let tempDict = {};
-        for (const t of temp) {
-          tempDict[t.id] = t;
-
-          let terminalAt =
-            t.location.name_space_station ||
-            t.location.name_outpost ||
-            t.location.name_city;
-
-          if (!terminalAt) continue;
-
-          const d = {
-            "Area 18": "Area18",
-            "Green Imperial Housing Exchange": "GrimHEX",
-            "Deakins Research": "Deakins Research Outpost",
-            "Hickes Research": "Hickes Research Outpost",
-            "Private Property": "PRIVATE PROPERTY",
-            "HDMS-Anderson": "HDMS Anderson",
-            "HDMS-Norgaard": "HDMS Norgaard",
-            "Shady Glen": "Shady Glen Farms",
-            "Rod's Fuel & Supplies": "Rod's Fuel 'N Supplies"
-          }
-          if (d[terminalAt]) terminalAt = d[terminalAt];
-
-          const regexStationLagrange = /^[A-Za-z]{3}-L\d.*Station$/;
-          if (regexStationLagrange.test(terminalAt)) {
-            terminalAt = terminalAt.slice(terminalAt.indexOf(" ") + 1);
-          }
-
-          if (terminalAt.endsWith(" Gateway")) {
-            terminalAt = terminalAt + ` (${t.location.name_star_system})`
-          }
-
-          if (dictLocations[terminalAt]) {
-            t.parentLocation = dictLocations[terminalAt];
-            t.location_path = getPathTo(t.parentLocation).concat(t.name.split(" - ").reverse().slice(1));
-            dictLocations[terminalAt].terminals.push(t);
-          } else {
-            // console.log(t.id, t.name);
+        let tempDict;
+        if (useCache) {
+          const cachedData = JSON.parse(localStorage.getItem(cacheKey));
+          if (cachedData && now - cachedData.timestamp < cacheTTL) {
+            tempDict = cachedData.data;
           }
         }
-        // console.log(tempDict);
+
+        if (!tempDict) {
+          const res = await axios.get("https://api.uexcorp.space/2.0/terminals");
+          let temp = res.data.data.map((t) => {
+            let orbit_name_fix = uexBodiesFixM[t.orbit_name] || t.orbit_name;
+            if (t.star_system_name === "Pyro" && t.orbit_name === "Pyro Jump Point")
+              orbit_name_fix = "Stanton Jump Point";
+            let locPath3rd = t.name.split(" - ").reverse();
+            if (locPath3rd[0] === "Stanton Gateway Station")
+              locPath3rd[0] = "Stanton Gateway";
+            if (locPath3rd[0] === "Terra Gateway Station") locPath3rd[0] = "Terra Gateway";
+            if (locPath3rd[0] === "Orbituary Station") locPath3rd[0] = "Orbituary";
+            let locationPath = [t.star_system_name, orbit_name_fix, ...locPath3rd];
+            locationPath = locationPath.filter((loc, idx) =>
+              idx > 0 ? loc !== locationPath[idx - 1] : true
+            );
+            return {
+              id: t.id,
+              code: t.code,
+              name: t.name,
+              type: t.type,
+              location_path: locationPath,
+              location: {
+                name_star_system: t.star_system_name,
+                name_planet: t.planet_name,
+                name_orbit: orbit_name_fix,
+                name_moon: t.moon_name,
+                name_space_station: t.space_station_name,
+                name_outpost: t.outpost_name,
+                name_city: t.city_name,
+              },
+              name_faction: t.faction_name,
+              name_company: t.company_name,
+              is_affinity_influenceable: t.is_affinity_influenceable,
+              is_habitation: t.is_habitation,
+              is_refinery: t.is_refinery,
+              is_cargo_center: t.is_cargo_center,
+              is_medical: t.is_medical,
+              is_food: t.is_food,
+              is_shop_fps: t.is_shop_fps,
+              is_shop_vehicle: t.is_shop_vehicle,
+              is_refuel: t.is_refuel,
+              is_repair: t.is_repair,
+              is_nqa: t.is_nqa,
+              is_player_owned: t.is_player_owned,
+              is_auto_load: t.is_auto_load,
+              has_loading_dock: t.has_loading_dock,
+              has_docking_port: t.has_docking_port,
+              has_freight_elevator: t.has_freight_elevator,
+            };
+          });
+          tempDict = {};
+          for (const t of temp) {
+            tempDict[t.id] = t;
+
+            let terminalAt =
+              t.location.name_space_station ||
+              t.location.name_outpost ||
+              t.location.name_city;
+
+            if (!terminalAt) continue;
+
+            const d = {
+              "Area 18": "Area18",
+              "Green Imperial Housing Exchange": "GrimHEX",
+              "Deakins Research": "Deakins Research Outpost",
+              "Hickes Research": "Hickes Research Outpost",
+              "Private Property": "PRIVATE PROPERTY",
+              "HDMS-Anderson": "HDMS Anderson",
+              "HDMS-Norgaard": "HDMS Norgaard",
+              "Shady Glen": "Shady Glen Farms",
+              "Rod's Fuel & Supplies": "Rod's Fuel 'N Supplies"
+            }
+            if (d[terminalAt]) terminalAt = d[terminalAt];
+
+            const regexStationLagrange = /^[A-Za-z]{3}-L\d.*Station$/;
+            if (regexStationLagrange.test(terminalAt)) {
+              terminalAt = terminalAt.slice(terminalAt.indexOf(" ") + 1);
+            }
+
+            if (terminalAt.endsWith(" Gateway")) {
+              terminalAt = terminalAt + ` (${t.location.name_star_system})`
+            }
+
+            if (dictLocations[terminalAt]) {
+              t.parentLocation = dictLocations[terminalAt];
+              t.location_path = getPathTo(t.parentLocation).concat(t.name.split(" - ").reverse().slice(1));
+              dictLocations[terminalAt].terminals.push(t);
+            } else {
+              // console.log(t.id, t.name);
+            }
+          }
+
+          // Remove circular references before saving to localStorage
+          const sanitizedData = removeCircularReferences(tempDict);
+          localStorage.setItem(cacheKey, JSON.stringify({ data: sanitizedData, timestamp: now }));
+        }
+
         setTerminalsData(tempDict);
       } catch (err) {
         console.log(err);
@@ -300,13 +334,13 @@ function App() {
 
       // console.log(Object.values(tempItemsData));
       setItemsData(tempItemsData);
-      //initializeVectorSearch();
       await initializeVectorSearch();
     };
 
     fetchData();
 
-    setBodiesAndLocationsData([dictSystems, dictBodies, dictLocations]);
+    const intervalId = setInterval(() => fetchData(false), 3600000); // Refresh data every hour
+    return () => clearInterval(intervalId);
   }, []);
 
   const handleVectorSearch = async (query) => {
