@@ -23,6 +23,83 @@ import Terminal from "./pages/Terminal/Terminal";
 import Footer from "./components/Footer/Footer";
 import TerminalIndex from "./pages/TerminalIndex/TerminalIndex";
 
+// Add IndexedDB caching utility functions
+function openDB() {
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open("FSDFCache", 1);
+    request.onupgradeneeded = function (event) {
+      const db = event.target.result;
+      if (!db.objectStoreNames.contains("apiCache")) {
+        db.createObjectStore("apiCache");
+      }
+    };
+    request.onsuccess = function (event) {
+      resolve(event.target.result);
+    };
+    request.onerror = function (event) {
+      reject(event.target.error);
+    };
+  });
+}
+
+async function readCache(key) {
+  const db = await openDB();
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction("apiCache", "readonly");
+    const store = transaction.objectStore("apiCache");
+    const req = store.get(key);
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+async function writeCache(key, data) {
+  const db = await openDB();
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction("apiCache", "readwrite");
+    const store = transaction.objectStore("apiCache");
+    const req = store.put(data, key);
+    req.onsuccess = () => resolve();
+    req.onerror = () => reject(req.error);
+  });
+}
+
+async function fetchWithCache(key, url) {
+  let now = Date.now();
+  const oneDay = 86400000;
+  const oneMonth = 2592000000;
+  try {
+    const cached = await readCache(key);
+    if (cached && cached.timestamp) {
+      const age = now - cached.timestamp;
+      if (age < oneDay) {
+        // Cache is less than one day, return cached data.
+        return cached.data;
+      } else if (age < oneMonth) {
+        // Cache is older than one day but less than one month: return cached data and refresh in background.
+        axios.get(url)
+          .then(res => {
+            writeCache(key, { timestamp: Date.now(), data: res.data })
+              .catch(e => console.error("Failed to refresh cache in background", e));
+          })
+          .catch(e => console.error("Failed to refresh data in background", e));
+        return cached.data;
+      }
+    }
+  } catch (e) {
+    console.error("Failed to read cache", e);
+  }
+  // No valid cache or cache older than one month: refresh cache in foreground.
+  const res = await axios.get(url);
+  const data = res.data;
+  try {
+    await writeCache(key, { timestamp: Date.now(), data });
+  } catch (e) {
+    console.error("Failed to write cache", e);
+  }
+  return data;
+}
+
 function App() {
   const [terminalsData, setTerminalsData] = useState({});
   const [itemsData, setItemsData] = useState({});
@@ -36,8 +113,8 @@ function App() {
     const fetchData = async () => {
       /* Fetch & reformat terminals */
       try {
-        const res = await axios.get("https://api.uexcorp.space/2.0/terminals");
-        let temp = res.data.data.map((t) => {
+        const res = await fetchWithCache("terminals", "https://api.uexcorp.space/2.0/terminals");
+        let temp = res.data.map((t) => {
           let orbit_name_fix = uexBodiesFixM[t.orbit_name] || t.orbit_name;
           if (t.star_system_name === "Pyro" && t.orbit_name === "Pyro Jump Point")
             orbit_name_fix = "Stanton Jump Point";
@@ -136,8 +213,8 @@ function App() {
       /* Fetch & reformat items */
       let dictItem = {};
       try {
-        const res = await axios.get("https://api.uexcorp.space/2.0/items_prices_all");
-        for (const item of res.data.data) {
+        const res = await fetchWithCache("items_prices_all", "https://api.uexcorp.space/2.0/items_prices_all");
+        for (const item of res.data) {
           let id = item.id_item;
           if (!dictItem[id]) {
             dictItem[id] = {
@@ -159,10 +236,8 @@ function App() {
       }
       /* Fetch & reformat vehicles */
       try {
-        const res = await axios.get(
-          "https://api.uexcorp.space/2.0/vehicles_purchases_prices_all"
-        );
-        for (const v of res.data.data) {
+        const res = await fetchWithCache("vehicles_purchases_prices_all", "https://api.uexcorp.space/2.0/vehicles_purchases_prices_all");
+        for (const v of res.data) {
           let id = "v-" + v.id_vehicle;
           if (!dictItem[id]) {
             dictItem[id] = {
@@ -181,10 +256,8 @@ function App() {
         console.log(err);
       }
       try {
-        const res = await axios.get(
-          "https://api.uexcorp.space/2.0/vehicles_rentals_prices_all"
-        );
-        for (const v of res.data.data) {
+        const res = await fetchWithCache("vehicles_rentals_prices_all", "https://api.uexcorp.space/2.0/vehicles_rentals_prices_all");
+        for (const v of res.data) {
           let id = "v-" + v.id_vehicle;
           if (!dictItem[id]) {
             dictItem[id] = {
