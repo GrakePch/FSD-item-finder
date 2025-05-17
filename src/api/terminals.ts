@@ -2,9 +2,10 @@ import uexBodiesFixM from "../data/uex_bodies_fix_manual.json";
 import { fetchWithCache } from "./apiFetch";
 import { getPathToTerminal } from "../utils";
 
-export async function fetchAndProcessTerminals(dictLocations) {
+export async function fetchAndProcessTerminals(dictLocations): Promise<TerminalDictionary> {
   const res = await fetchWithCache("terminals", "https://api.uexcorp.space/2.0/terminals");
-  let temp = res.data.map((t) => {
+
+  let temp: Terminal[] = res.data.map((t: TerminalApiResponse): Terminal => {
     let orbit_name_fix = uexBodiesFixM[t.orbit_name] || t.orbit_name;
     if (t.star_system_name === "Pyro" && t.orbit_name === "Pyro Jump Point")
       orbit_name_fix = "Stanton Jump Point";
@@ -35,28 +36,30 @@ export async function fetchAndProcessTerminals(dictLocations) {
       },
       name_faction: t.faction_name,
       name_company: t.company_name,
-      is_affinity_influenceable: t.is_affinity_influenceable,
-      is_habitation: t.is_habitation,
-      is_refinery: t.is_refinery,
-      is_cargo_center: t.is_cargo_center,
-      is_medical: t.is_medical,
-      is_food: t.is_food,
-      is_shop_fps: t.is_shop_fps,
-      is_shop_vehicle: t.is_shop_vehicle,
-      is_refuel: t.is_refuel,
-      is_repair: t.is_repair,
-      is_nqa: t.is_nqa,
-      is_player_owned: t.is_player_owned,
-      is_auto_load: t.is_auto_load,
-      has_loading_dock: t.has_loading_dock,
-      has_docking_port: t.has_docking_port,
-      has_freight_elevator: t.has_freight_elevator,
+      is_affinity_influenceable: !!t.is_affinity_influenceable,
+      is_habitation: !!t.is_habitation,
+      is_refinery: !!t.is_refinery,
+      is_cargo_center: !!t.is_cargo_center,
+      is_medical: !!t.is_medical,
+      is_food: !!t.is_food,
+      is_shop_fps: !!t.is_shop_fps,
+      is_shop_vehicle: !!t.is_shop_vehicle,
+      is_refuel: !!t.is_refuel,
+      is_repair: !!t.is_repair,
+      is_nqa: !!t.is_nqa,
+      is_player_owned: !!t.is_player_owned,
+      is_auto_load: !!t.is_auto_load,
+      has_loading_dock: !!t.has_loading_dock,
+      has_docking_port: !!t.has_docking_port,
+      has_freight_elevator: !!t.has_freight_elevator,
     };
   });
-  let tempDict = {};
+  let tempDict: TerminalDictionary = {};
   for (const t of temp) {
+    /* Insert Terminal into the dictionary */
     tempDict[t.id] = t;
 
+    /* Reformat "terminalAt" to match the location name in dictLocations */
     let terminalAt =
       t.location.name_space_station ||
       t.location.name_outpost ||
@@ -64,7 +67,7 @@ export async function fetchAndProcessTerminals(dictLocations) {
 
     if (!terminalAt) continue;
 
-    const d = {
+    const d: Record<string, string> = {
       "Area 18": "Area18",
       "Green Imperial Housing Exchange": "GrimHEX",
       "Deakins Research": "Deakins Research Outpost",
@@ -86,6 +89,7 @@ export async function fetchAndProcessTerminals(dictLocations) {
       terminalAt = terminalAt + ` (${t.location.name_star_system})`;
     }
 
+    /* Set parentLocation and location_path. Push Terminal into the parent location */
     if (dictLocations[terminalAt]) {
       t.parentLocation = dictLocations[terminalAt];
       t.location_path = getPathToTerminal(t);

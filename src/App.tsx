@@ -18,7 +18,7 @@ import Footer from "./components/Footer/Footer";
 import TerminalIndex from "./pages/TerminalIndex/TerminalIndex";
 
 function App() {
-  const [terminalsData, setTerminalsData] = useState<Record<string, any>>({});
+  const [terminalsData, setTerminalsData] = useState<TerminalDictionary>({});
   const [itemsData, setItemsData] = useState<Record<string, any>>({});
   const [bodiesAndLocationsData, setBodiesAndLocationsData] = useState<any[]>([{}, {}, {}]);
   const [item, setItem] = useState<any>(null);
