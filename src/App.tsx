@@ -18,11 +18,11 @@ import Footer from "./components/Footer/Footer";
 import TerminalIndex from "./pages/TerminalIndex/TerminalIndex";
 
 function App() {
-  const [terminalsData, setTerminalsData] = useState({});
-  const [itemsData, setItemsData] = useState({});
-  const [bodiesAndLocationsData, setBodiesAndLocationsData] = useState([{}, {}, {}]);
-  const [item, setItem] = useState(null);
-  const [isItemsDataAcquired, setIsItemsDataAcquired] = useState(false);
+  const [terminalsData, setTerminalsData] = useState<Record<string, any>>({});
+  const [itemsData, setItemsData] = useState<Record<string, any>>({});
+  const [bodiesAndLocationsData, setBodiesAndLocationsData] = useState<any[]>([{}, {}, {}]);
+  const [item, setItem] = useState<any>(null);
+  const [isItemsDataAcquired, setIsItemsDataAcquired] = useState<boolean>(false);
 
   const initializeAppData = async () => {
     const [dictSystems, dictBodies, dictLocations] = buildDataBodiesAndLocations();

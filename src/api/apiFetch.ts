@@ -4,25 +4,25 @@ const DB_NAME = "FSDFCache";
 const STORE_NAME = "apiCache";
 const DB_VERSION = 1;
 
-function openDB() {
+function openDB(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
     const request = indexedDB.open(DB_NAME, DB_VERSION);
-    request.onupgradeneeded = function (event) {
-      const db = event.target.result;
+    request.onupgradeneeded = function (event: IDBVersionChangeEvent) {
+      const db = (event.target as IDBOpenDBRequest).result;
       if (!db.objectStoreNames.contains(STORE_NAME)) {
         db.createObjectStore(STORE_NAME);
       }
     };
-    request.onsuccess = function (event) {
-      resolve(event.target.result);
+    request.onsuccess = function (event: Event) {
+      resolve((event.target as IDBOpenDBRequest).result);
     };
-    request.onerror = function (event) {
-      reject(event.target.error);
+    request.onerror = function (event: Event) {
+      reject((event.target as IDBOpenDBRequest).error);
     };
   });
 }
 
-async function readCache(key) {
+async function readCache(key: string): Promise<any> {
   const db = await openDB();
   return new Promise((resolve, reject) => {
     const transaction = db.transaction(STORE_NAME, "readonly");
@@ -33,7 +33,7 @@ async function readCache(key) {
   });
 }
 
-async function writeCache(key, data) {
+async function writeCache(key: string, data: any): Promise<void> {
   const db = await openDB();
   return new Promise((resolve, reject) => {
     const transaction = db.transaction(STORE_NAME, "readwrite");
@@ -44,7 +44,16 @@ async function writeCache(key, data) {
   });
 }
 
-export async function fetchWithCache(key, url, { oneDay = 86400000, oneMonth = 2592000000 } = {}) {
+interface FetchWithCacheOptions {
+  oneDay?: number;
+  oneMonth?: number;
+}
+
+export async function fetchWithCache(
+  key: string,
+  url: string,
+  { oneDay = 86400000, oneMonth = 2592000000 }: FetchWithCacheOptions = {}
+): Promise<any> {
   let now = Date.now();
   try {
     const cached = await readCache(key);
