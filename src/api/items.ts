@@ -1,7 +1,7 @@
 import { fetchWithCache } from "./apiFetch";
 
-export async function fetchAndProcessItems(): Promise<SimpleItemAndVehicleOptionsDictionary> {
-  let dictItem: SimpleItemAndVehicleOptionsDictionary = {};
+export async function fetchAndProcessItems(): Promise<SimpleItemOptionsDictionary> {
+  let dictItem: SimpleItemOptionsDictionary = {};
   try {
     const res = await fetchWithCache(
       "items_prices_all",

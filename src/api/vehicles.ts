@@ -1,8 +1,7 @@
 import { fetchWithCache } from "./apiFetch";
 
-export async function fetchAndProcessVehicles(
-  dictItem: SimpleItemAndVehicleOptionsDictionary
-): Promise<SimpleItemAndVehicleOptionsDictionary> {
+export async function fetchAndProcessVehicles(): Promise<SimpleVehicleOptionsDictionary> {
+  let dictVehicle: SimpleVehicleOptionsDictionary = {};
   try {
     const res = await fetchWithCache(
       "vehicles_purchases_prices_all",
@@ -10,14 +9,14 @@ export async function fetchAndProcessVehicles(
     );
     for (const v of res.data) {
       let id = "v-" + v.id_vehicle;
-      if (!dictItem[id]) {
-        dictItem[id] = {
+      if (!dictVehicle[id]) {
+        dictVehicle[id] = {
           id_vehicle: v.id_vehicle,
           options: [],
           options_rent: [],
         };
       }
-      dictItem[id].options.push({
+      dictVehicle[id].options.push({
         id_terminal: v.id_terminal,
         price_buy: v.price_buy || Infinity,
         price_sell: null,
@@ -34,14 +33,14 @@ export async function fetchAndProcessVehicles(
     );
     for (const v of res.data) {
       let id = "v-" + v.id_vehicle;
-      if (!dictItem[id]) {
-        dictItem[id] = {
+      if (!dictVehicle[id]) {
+        dictVehicle[id] = {
           id_vehicle: v.id_vehicle,
           options: [],
           options_rent: [],
         };
       }
-      dictItem[id].options_rent.push({
+      dictVehicle[id].options_rent.push({
         id_terminal: v.id_terminal,
         price_rent: v.price_rent || Infinity,
         date_modified: v.date_modified,
@@ -50,5 +49,5 @@ export async function fetchAndProcessVehicles(
   } catch (err) {
     throw err;
   }
-  return dictItem;
+  return dictVehicle;
 }

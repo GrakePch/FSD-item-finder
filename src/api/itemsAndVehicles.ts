@@ -2,14 +2,15 @@ import itemsUexIdsAndI18n from "../data/items_uex_ids_and_i18n.json";
 import { getItemUexFormat, mapToUEXTypeSubType, date4_0 } from "../utils";
 
 export function buildItemsData(
-  dictItem: SimpleItemAndVehicleOptionsDictionary
+  dictItem: SimpleItemOptionsDictionary,
+  dictVehicle: SimpleVehicleOptionsDictionary
 ): ItemAndVehicleDictionary {
   const tempItemsData: ItemAndVehicleDictionary = {};
   for (const [key, value] of Object.entries(itemsUexIdsAndI18n as KeyToUexIdI18nTypes)) {
     let firstId = value.uex_ids?.[0];
     let isVehicle = typeof firstId !== "number";
     if (isVehicle) {
-      let simpleVehicleData = dictItem[firstId] as SimpleVehicleOptions;
+      let simpleVehicleData = dictVehicle[firstId] || null;
       tempItemsData[key] = {
         key: key,
         name: value.en || key,

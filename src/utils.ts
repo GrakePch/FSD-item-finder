@@ -96,7 +96,7 @@ export function getLocPath(option, tdata) {
     }
 }
 
-export function getVariants(key, itemsData) {
+export function getVariants(key: string, itemsData: ItemAndVehicleDictionary) {
     if (!key) return [];
     if (!itemsData[key]) return [];
 
@@ -118,19 +118,19 @@ export function getVariants(key, itemsData) {
             item.sub_type === thisSubType && item.name.split(" ")[0] === initial);
 }
 
-export function getSet(key, itemsData) {
+export function getSet(key: string, itemsData: ItemAndVehicleDictionary) {
     if (!key) return null;
     if (!itemsData[key]) return null;
 
-    let set = {}
+    let set: ArmorSet = {};
     for (const str of ["suit", "helmet", "core", "arms", "legs", "backpack"]) {
         if (key.includes(str)) {
-            set.undersuit = itemsData[key.replace(str, "suit")] || null;
-            set.helmet = itemsData[key.replace(str, "helmet")] || null;
-            set.torso = itemsData[key.replace(str, "core")] || null;
-            set.arms = itemsData[key.replace(str, "arms")] || null;
-            set.legs = itemsData[key.replace(str, "legs")] || null;
-            set.backpack = itemsData[key.replace(str, "backpack")] || null;
+            set.undersuit = (itemsData[key.replace(str, "suit")] as Item) || null;
+            set.helmet = (itemsData[key.replace(str, "helmet")] as Item) || null;
+            set.torso = (itemsData[key.replace(str, "core")] as Item) || null;
+            set.arms = (itemsData[key.replace(str, "arms")] as Item) || null;
+            set.legs = (itemsData[key.replace(str, "legs")] as Item) || null;
+            set.backpack = (itemsData[key.replace(str, "backpack")] as Item) || null;
             return set;
         }
     }

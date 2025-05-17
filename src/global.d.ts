@@ -114,6 +114,15 @@ type PriceMinMax = {
 
 type Attributes = { [id_attribute: number]: string };
 
+type ArmorSet = {
+  undersuit?: Item | null;
+  helmet?: Item | null;
+  torso?: Item | null;
+  arms?: Item | null;
+  legs?: Item | null;
+  backpack?: Item | null;
+};
+
 type CelestialBodyDictionary = { [name: string]: CelestialBody };
 type LocationDictionary = { [name: string]: SCLocation };
 type TerminalDictionary = { [id: number]: Terminal };
@@ -144,10 +153,8 @@ interface SimpleVehicleOptions {
   options_rent: RentOption[];
 }
 
-type SimpleItemAndVehicleOptionsDictionary = {
-  [id: number]: SimpleItemOptions;
-  [id: string]: SimpleVehicleOptions; // Vehicle IDs are prefixed with 'v-'
-};
+type SimpleItemOptionsDictionary = { [id: number]: SimpleItemOptions };
+type SimpleVehicleOptionsDictionary = { [id: string]: SimpleVehicleOptions }; // Vehicle IDs are prefixed with 'v-'
 
 // API response interfaces
 

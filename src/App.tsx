@@ -23,26 +23,21 @@ function App() {
   const [bodiesAndLocationsData, setBodiesAndLocationsData] = useState<
     [CelestialBodyDictionary, CelestialBodyDictionary, LocationDictionary]
   >([{}, {}, {}]);
-  const [item, setItem] = useState<any>(null);
+  const [item, setItem] = useState<Item | Vehicle | null>(null);
   const [isItemsDataAcquired, setIsItemsDataAcquired] = useState<boolean>(false);
 
   const initializeAppData = async () => {
     const [dictSystems, dictBodies, dictLocations] = buildDataBodiesAndLocations();
 
     try {
-      // Terminals
       const terminals = await fetchAndProcessTerminals(dictLocations);
       setTerminalsData(terminals);
 
-      // Items
       let dictItem = await fetchAndProcessItems();
-
-      // Vehicles
-      dictItem = await fetchAndProcessVehicles(dictItem);
-
-      // Build items data
-      const tempItemsData = buildItemsData(dictItem);
+      let dictVehicle = await fetchAndProcessVehicles();
+      const tempItemsData = buildItemsData(dictItem, dictVehicle);
       setItemsData(tempItemsData);
+
       setIsItemsDataAcquired(true);
     } catch (err) {
       setIsItemsDataAcquired(false);
