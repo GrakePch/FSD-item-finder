@@ -1,9 +1,10 @@
 import itemsUexIdsAndI18n from "../data/items_uex_ids_and_i18n.json";
 import { getItemUexFormat, mapToUEXTypeSubType, date4_0 } from "../utils";
 
-
-export function buildItemsData(dictItem) {
-  const tempItemsData = {};
+export function buildItemsData(
+  dictItem: SimpleItemAndVehicleOptionsDictionary
+): ItemAndVehicleDictionary {
+  const tempItemsData: ItemAndVehicleDictionary = {};
   for (const [key, value] of Object.entries(itemsUexIdsAndI18n)) {
     let firstId = value.uex_ids?.[0];
     let isVehicle = typeof firstId === "string" && firstId?.startsWith("v-");
@@ -18,7 +19,7 @@ export function buildItemsData(dictItem) {
         price_min_max: {},
         options: dictItem[firstId]?.options || [],
         options_rent: dictItem[firstId]?.options_rent || [],
-      };
+      } as Vehicle;
     } else {
       let itemUexFormat = getItemUexFormat(firstId);
       let type = itemUexFormat?.section;
@@ -43,10 +44,17 @@ export function buildItemsData(dictItem) {
         screenshot: itemUexFormat?.screenshot,
         slug: itemUexFormat?.slug,
         id_item: firstId,
-        price_min_max: {},
+        price_min_max: {
+          buy_min: null,
+          buy_max: null,
+          sell_min: null,
+          sell_max: null,
+          rent_min: null,
+          rent_max: null,
+        },
         options: [],
         attributes: itemUexFormat?.attributes,
-      };
+      } as Item;
       let optionDict = {};
       if (value.uex_ids)
         for (const id of value.uex_ids) {
@@ -80,10 +88,13 @@ export function buildItemsData(dictItem) {
     let pricesSell = item.options
       .filter((a) => a.price_sell !== null && a.date_modified >= date4_0)
       .map((a) => a.price_sell);
-    let pricesRent =
-      item.options_rent
-        ?.filter((a) => a.price_rent !== null && a.date_modified >= date4_0)
-        ?.map((a) => a.price_rent) || [];
+    let pricesRent: number[] = [];
+    if ("options_rent" in item && Array.isArray(item.options_rent)) {
+      pricesRent =
+        item.options_rent
+          .filter((a) => a.price_rent !== null && a.date_modified >= date4_0)
+          .map((a) => a.price_rent) || [];
+    }
     item.price_min_max = {
       buy_min: Math.min(...pricesBuy) || null,
       buy_max: Math.max(...pricesBuy) || null,
@@ -91,7 +102,7 @@ export function buildItemsData(dictItem) {
       sell_max: Math.max(...pricesSell) || null,
       rent_min: Math.min(...pricesRent) || null,
       rent_max: Math.max(...pricesRent) || null,
-    };
+    } as PriceMinMax;
   });
   return tempItemsData;
 }

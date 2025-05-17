@@ -19,7 +19,7 @@ import TerminalIndex from "./pages/TerminalIndex/TerminalIndex";
 
 function App() {
   const [terminalsData, setTerminalsData] = useState<TerminalDictionary>({});
-  const [itemsData, setItemsData] = useState<Record<string, any>>({});
+  const [itemsData, setItemsData] = useState<ItemAndVehicleDictionary>({});
   const [bodiesAndLocationsData, setBodiesAndLocationsData] = useState<
     [CelestialBodyDictionary, CelestialBodyDictionary, LocationDictionary]
   >([{}, {}, {}]);

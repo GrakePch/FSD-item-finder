@@ -72,6 +72,78 @@ type LocationDictionary = {
   [name: string]: SCLocation;
 }
 
+interface Vehicle {
+  key: string;
+  name: string;
+  name_zh_Hans: string;
+  type: "Vehicle";
+  sub_type: "Vehicle";
+  id_vehicle: string; // Vehicle IDs are prefixed with 'v-'
+  price_min_max: PriceMinMax;
+  options: TradeOption[];
+  options_rent: RentOption[];
+}
+
+interface Item {
+  key: string;
+  name: string;
+  name_zh_Hans: string;
+  type: string;
+  sub_type: string;
+  screenshot?: string;
+  slug?: string;
+  id_item: number;
+  price_min_max: PriceMinMax;
+  options: TradeOption[];
+  attributes?: { [id_attribute: number]: string };
+}
+
+interface TradeOption {
+  id_terminal: number;
+  price_buy: number | null;
+  price_sell: number | null;
+  date_modified: number;
+  distance?: number;
+}
+
+interface RentOption {
+  id_terminal: number;
+  price_rent: number | null;
+  date_modified: number;
+  distance?: number;
+}
+
+type PriceMinMax = {
+  buy_min: number | null;
+  buy_max: number | null;
+  sell_min: number | null;
+  sell_max: number | null;
+  rent_min: number | null;
+  rent_max: number | null;
+};
+
+type ItemAndVehicleDictionary = {
+  [key: string]: Item | Vehicle;
+}
+
+// Intermediary interfaces
+
+interface SimpleItemOptions {
+  id_item: number;
+  options: TradeOption[];
+}
+
+interface SimpleVehicleOptions {
+  id_vehicle: number;
+  options: TradeOption[];
+  options_rent: RentOption[];
+}
+
+type SimpleItemAndVehicleOptionsDictionary = {
+  [id: number]: SimpleItemOptions;
+  [id: string]: SimpleVehicleOptions; // Vehicle IDs are prefixed with 'v-'
+};
+
 // API response interfaces
 
 interface TerminalApiResponse {

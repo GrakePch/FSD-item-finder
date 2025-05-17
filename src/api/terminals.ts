@@ -2,7 +2,7 @@ import uexBodiesFixM from "../data/uex_bodies_fix_manual.json";
 import { fetchWithCache } from "./apiFetch";
 import { getPathToTerminal } from "../utils";
 
-export async function fetchAndProcessTerminals(dictLocations): Promise<TerminalDictionary> {
+export async function fetchAndProcessTerminals(dictLocations: LocationDictionary): Promise<TerminalDictionary> {
   const res = await fetchWithCache("terminals", "https://api.uexcorp.space/2.0/terminals");
 
   let temp: Terminal[] = res.data.map((t: TerminalApiResponse): Terminal => {

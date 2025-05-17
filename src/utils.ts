@@ -8,7 +8,6 @@ import i18nAttributeValues from "./data/i18n_attribute_values.json";
 import uexIdsAndI18n from "./data/items_uex_ids_and_i18n.json";
 import typeMap from "./data/type_map_full_items.json";
 import bodies from "./data/bodies.json";
-import locations from "./data/locations.json";
 import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
 import attributes from "./data/categories_attributes.json";
 
