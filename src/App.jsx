@@ -24,34 +24,34 @@ function App() {
   const [item, setItem] = useState(null);
   const [isItemsDataAcquired, setIsItemsDataAcquired] = useState(false);
 
-  useEffect(() => {
+  const initializeAppData = async () => {
     const [dictSystems, dictBodies, dictLocations] = buildDataBodiesAndLocations();
 
-    const fetchData = async () => {
-      try {
-        // Terminals
-        const terminals = await fetchAndProcessTerminals(dictLocations);
-        setTerminalsData(terminals);
+    try {
+      // Terminals
+      const terminals = await fetchAndProcessTerminals(dictLocations);
+      setTerminalsData(terminals);
 
-        // Items
-        let dictItem = await fetchAndProcessItems();
+      // Items
+      let dictItem = await fetchAndProcessItems();
 
-        // Vehicles
-        dictItem = await fetchAndProcessVehicles(dictItem);
+      // Vehicles
+      dictItem = await fetchAndProcessVehicles(dictItem);
 
-        // Build items data
-        const tempItemsData = buildItemsData(dictItem);
-        setItemsData(tempItemsData);
-        setIsItemsDataAcquired(true);
-      } catch (err) {
-        setIsItemsDataAcquired(false);
-        console.log(err);
-      }
-    };
-
-    fetchData();
+      // Build items data
+      const tempItemsData = buildItemsData(dictItem);
+      setItemsData(tempItemsData);
+      setIsItemsDataAcquired(true);
+    } catch (err) {
+      setIsItemsDataAcquired(false);
+      console.log(err);
+    }
 
     setBodiesAndLocationsData([dictSystems, dictBodies, dictLocations]);
+  };
+
+  useEffect(() => {
+    initializeAppData();
   }, []);
 
   return (
