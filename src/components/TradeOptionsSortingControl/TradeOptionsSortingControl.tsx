@@ -1,14 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./TradeOptionsSortingControl.css";
 import { useSearchParams } from "react-router";
-import { getBody, getLocationZhName, getSystems } from "../../utils";
+import { getBody, getLocationZhName } from "../../utils";
 import Icon from "@mdi/react";
 import { mdiCurrencySign, mdiMapMarker } from "@mdi/js";
+import { BodiesAndLocationsContext } from "../../contexts";
 
 const TradeOptionsSortingControl = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [starSystem, setStarSystem] = useState("");
-  const [systemTree, setSystemTree] = useState({});
+  const systemTree: CelestialBodyDictionary = useContext(BodiesAndLocationsContext)[0];
 
   useEffect(() => {
     /* Update Search Params to Default values */
@@ -24,10 +25,6 @@ const TradeOptionsSortingControl = () => {
     let tempStarSys = getBody(searchParams.get("from"));
     setStarSystem(tempStarSys?.parentStar || tempStarSys?.name);
   }, [searchParams]);
-
-  useEffect(() => {
-    setSystemTree(getSystems());
-  }, []);
 
   return (
     <div style={{ padding: "0 1rem" }}>

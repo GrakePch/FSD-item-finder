@@ -3,7 +3,7 @@ interface Terminal {
   code: string;
   name: string;
   type: string;
-  parentLocation: any | null;
+  parentLocation: SCLocation | null;
   location_path: string[];
   location: {
     name_star_system: string | null;
@@ -38,6 +38,39 @@ type TerminalDictionary = {
   [id: number]: Terminal;
 }
 
+interface CelestialBody {
+  name: string;
+  type: string;
+  parentBody: CelestialBody | null;
+  parentStar: CelestialBody | null;
+  x: number;
+  y: number;
+  z: number;
+  locations: SCLocation[];
+  children: CelestialBody[];
+}
+
+type CelestialBodyDictionary = {
+  [name: string]: CelestialBody;
+}
+
+interface SCLocation {
+  name: string;
+  type: string;
+  parentBody: CelestialBody | null;
+  parentStar: CelestialBody | null;
+  coordinateX: number;
+  coordinateY: number;
+  coordinateZ: number;
+  wikiLink: string;
+  private: number;
+  quantum: number;
+  terminals: Terminal[];
+}
+
+type LocationDictionary = {
+  [name: string]: SCLocation;
+}
 
 // API response interfaces
 

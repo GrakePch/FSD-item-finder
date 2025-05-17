@@ -157,61 +157,6 @@ export function getBody(name) {
         || null;
 }
 
-/* Deprecated */
-export function getSystems() {
-    let systems = {};
-    let flattened = {};
-    for (const body of bodies) {
-        let cbody = structuredClone(body);
-        cbody.children = [];
-        flattened[cbody.name] = cbody;
-        if (!cbody.parentBody) {
-            systems[cbody.name] = cbody;
-        } else {
-            flattened[cbody.parentBody].children.push(cbody);
-        }
-    }
-    return systems;
-}
-
-export function buildDataBodiesAndLocations() {
-    const systems = {};
-    const flattened = {};
-    const dictLocations = {};
-
-    for (const body of bodies) {
-        let cbody = structuredClone(body);
-        cbody.locations = [];
-        cbody.children = [];
-        flattened[cbody.name] = cbody;
-
-        /* Build Forest */
-        if (!cbody.parentBody) {
-            systems[cbody.name] = cbody;
-        } else {
-            flattened[cbody.parentBody].children.push(cbody);
-        }
-
-        /* Link parent body & star */
-        cbody.parentBody = flattened[cbody.parentBody] || null;
-        cbody.parentStar = flattened[cbody.parentStar] || null;
-    }
-
-    for (const location of locations) {
-        let cloc = structuredClone(location);
-        cloc.terminals = [];
-        dictLocations[cloc.name] = cloc;
-
-        /* Push to parent body */
-        flattened[cloc.parentBody].locations.push(cloc);
-
-        /* Link parent body & star */
-        cloc.parentBody = flattened[cloc.parentBody] || null;
-        cloc.parentStar = flattened[cloc.parentStar] || null;
-    }
-    return [systems, flattened, dictLocations];
-}
-
 export function getPathTo(loc) {
     const path = [loc.name];
     while (loc.parentBody) {

@@ -7,7 +7,7 @@ import {
   AllItemsPriceContext,
   BodiesAndLocationsContext,
 } from "./contexts";
-import { buildDataBodiesAndLocations } from "./utils";
+import { buildDataBodiesAndLocations } from "./api/bodiesAndLocations";
 import { fetchAndProcessTerminals } from "./api/terminals";
 import { fetchAndProcessItems } from "./api/items";
 import { fetchAndProcessVehicles } from "./api/vehicles";
@@ -20,7 +20,9 @@ import TerminalIndex from "./pages/TerminalIndex/TerminalIndex";
 function App() {
   const [terminalsData, setTerminalsData] = useState<TerminalDictionary>({});
   const [itemsData, setItemsData] = useState<Record<string, any>>({});
-  const [bodiesAndLocationsData, setBodiesAndLocationsData] = useState<any[]>([{}, {}, {}]);
+  const [bodiesAndLocationsData, setBodiesAndLocationsData] = useState<
+    [CelestialBodyDictionary, CelestialBodyDictionary, LocationDictionary]
+  >([{}, {}, {}]);
   const [item, setItem] = useState<any>(null);
   const [isItemsDataAcquired, setIsItemsDataAcquired] = useState<boolean>(false);
 
