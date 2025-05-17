@@ -1,3 +1,29 @@
+interface CelestialBody {
+  name: string;
+  type: string;
+  parentBody: CelestialBody | null;
+  parentStar: CelestialBody | null;
+  x: number;
+  y: number;
+  z: number;
+  locations: SCLocation[];
+  children: CelestialBody[];
+}
+
+interface SCLocation {
+  name: string;
+  type: string;
+  parentBody: CelestialBody | null;
+  parentStar: CelestialBody | null;
+  coordinateX: number;
+  coordinateY: number;
+  coordinateZ: number;
+  wikiLink: string;
+  private: number;
+  quantum: number;
+  terminals: Terminal[];
+}
+
 interface Terminal {
   id: number;
   code: string;
@@ -32,44 +58,6 @@ interface Terminal {
   has_loading_dock: boolean;
   has_docking_port: boolean;
   has_freight_elevator: boolean;
-}
-
-type TerminalDictionary = {
-  [id: number]: Terminal;
-}
-
-interface CelestialBody {
-  name: string;
-  type: string;
-  parentBody: CelestialBody | null;
-  parentStar: CelestialBody | null;
-  x: number;
-  y: number;
-  z: number;
-  locations: SCLocation[];
-  children: CelestialBody[];
-}
-
-type CelestialBodyDictionary = {
-  [name: string]: CelestialBody;
-}
-
-interface SCLocation {
-  name: string;
-  type: string;
-  parentBody: CelestialBody | null;
-  parentStar: CelestialBody | null;
-  coordinateX: number;
-  coordinateY: number;
-  coordinateZ: number;
-  wikiLink: string;
-  private: number;
-  quantum: number;
-  terminals: Terminal[];
-}
-
-type LocationDictionary = {
-  [name: string]: SCLocation;
 }
 
 interface Vehicle {
@@ -122,9 +110,10 @@ type PriceMinMax = {
   rent_max: number | null;
 };
 
-type ItemAndVehicleDictionary = {
-  [key: string]: Item | Vehicle;
-}
+type CelestialBodyDictionary = { [name: string]: CelestialBody };
+type LocationDictionary = { [name: string]: SCLocation };
+type TerminalDictionary = { [id: number]: Terminal };
+type ItemAndVehicleDictionary = { [key: string]: Item | Vehicle };
 
 // Intermediary interfaces
 
