@@ -5,7 +5,6 @@ import i18nLocationsM from "./data/i18n_locations_manual.json";
 import i18nCategories from "./data/categories_en_to_zh_Hans.json";
 import i18nAttributes from "./data/i18n_attributes.json";
 import i18nAttributeValues from "./data/i18n_attribute_values.json";
-import uexIdsAndI18n from "./data/items_uex_ids_and_i18n.json";
 import typeMap from "./data/type_map_full_items.json";
 import bodies from "./data/bodies.json";
 import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
@@ -38,8 +37,8 @@ export function getCategoryZhName(name_en) {
     return i18nCategories[name_en] || name_en;
 }
 
-export function getItemUexFormat(id) {
-    for (const item of itemsUex) {
+export function getItemUexFormat(id: number) {
+    for (const item of (itemsUex as ItemUEXApiResponse[])) {
         if (item.id == id) {
             return item;
         }
@@ -83,15 +82,9 @@ export function getAttributeValueByName(name, attrDict) {
     return null;
 }
 
-export function getKeyFromUexId(id) {
-    for (const [key, item] of Object.entries(uexIdsAndI18n))
-        for (const uex_id of item.uex_ids)
-            if (uex_id == id) return key;
-    return null;
-}
-
 /* Map the type in items_uex_ids_and_i18n.json to UEX's type & sub-type */
-export function mapToUEXTypeSubType(rawType) {
+export function mapToUEXTypeSubType(rawType: string | undefined)
+: [string, string] | [null, null] {
     return typeMap[rawType] || [null, null];
 }
 

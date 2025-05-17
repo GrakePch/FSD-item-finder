@@ -5,10 +5,11 @@ export function buildItemsData(
   dictItem: SimpleItemAndVehicleOptionsDictionary
 ): ItemAndVehicleDictionary {
   const tempItemsData: ItemAndVehicleDictionary = {};
-  for (const [key, value] of Object.entries(itemsUexIdsAndI18n)) {
+  for (const [key, value] of Object.entries(itemsUexIdsAndI18n as KeyToUexIdI18nTypes)) {
     let firstId = value.uex_ids?.[0];
-    let isVehicle = typeof firstId === "string" && firstId?.startsWith("v-");
+    let isVehicle = typeof firstId !== "number";
     if (isVehicle) {
+      let simpleVehicleData = dictItem[firstId] as SimpleVehicleOptions;
       tempItemsData[key] = {
         key: key,
         name: value.en || key,
@@ -17,11 +18,11 @@ export function buildItemsData(
         sub_type: "Vehicle",
         id_vehicle: firstId,
         price_min_max: {},
-        options: dictItem[firstId]?.options || [],
-        options_rent: dictItem[firstId]?.options_rent || [],
+        options: simpleVehicleData?.options || [],
+        options_rent: simpleVehicleData?.options_rent || [],
       } as Vehicle;
     } else {
-      let itemUexFormat = getItemUexFormat(firstId);
+      let itemUexFormat = getItemUexFormat(firstId as number);
       let type = itemUexFormat?.section;
       let subType = itemUexFormat?.category;
       if (subType == "Jump Modules") {

@@ -1,3 +1,5 @@
+// Main data types
+
 interface CelestialBody {
   name: string;
   type: string;
@@ -83,7 +85,7 @@ interface Item {
   id_item: number;
   price_min_max: PriceMinMax;
   options: TradeOption[];
-  attributes?: { [id_attribute: number]: string };
+  attributes?: Attributes;
 }
 
 interface TradeOption {
@@ -110,10 +112,24 @@ type PriceMinMax = {
   rent_max: number | null;
 };
 
+type Attributes = { [id_attribute: number]: string };
+
 type CelestialBodyDictionary = { [name: string]: CelestialBody };
 type LocationDictionary = { [name: string]: SCLocation };
 type TerminalDictionary = { [id: number]: Terminal };
 type ItemAndVehicleDictionary = { [key: string]: Item | Vehicle };
+
+// Utility types
+
+type UexIdI18nTypes = {
+  en?: string;
+  zh_Hans?: string;
+  uex_ids?: (number | string)[];
+  type?: string;
+  subtype?: string;
+};
+
+type KeyToUexIdI18nTypes = { [key: string]: UexIdI18nTypes };
 
 // Intermediary interfaces
 
@@ -191,4 +207,24 @@ interface TerminalApiResponse {
   faction_name: string | null;
   company_name: string | null;
   max_container_size: number;
+}
+
+interface ItemUEXApiResponse {
+  id: number;
+  id_parent: number;
+  id_category: number;
+  id_vehicle: number;
+  name: string;
+  date_added: number;
+  date_modified: number;
+  section: string;
+  category: string;
+  slug: string;
+  url_store: string;
+  is_exclusive_pledge: number;
+  is_exclusive_subscriber: number;
+  is_exclusive_concierge: number;
+  screenshot: string;
+  attributes: Attributes;
+  notification: any;
 }
