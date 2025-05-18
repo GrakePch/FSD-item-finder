@@ -22,13 +22,13 @@ const Terminal = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { dictTerminals, dictItems } = useContext(ContextAllData);
   const terminalId = useParams().terminalId;
-  const [terminalInfo, setTerminalInfo] = useState(null);
+  const [terminalInfo, setTerminalInfo] = useState<Terminal>(null);
   const [rawDictItemsPrices, setRawDictItemsPrices] = useState({});
   const [listItemsOfTerminal, setListItemsOfTerminal] = useState([]);
   const [hashSetSubTypes, setHashSetSubTypes] = useState<Set<string>>(new Set<string>());
   const [searchString, setSearchString] = useState("");
   const [filterSubType, setFilterSubType] = useState("");
-  const [listTerminalsNearby, setListTerminalsNearby] = useState([]);
+  const [listTerminalsNearby, setListTerminalsNearby] = useState<Terminal[]>([]);
 
   useEffect(() => {
     if (searchParams.get("key")) {
@@ -60,7 +60,7 @@ const Terminal = () => {
         const _temp = Object.fromEntries(
           res.data.data.map((item) => [item.id_item, item])
         );
-        // console.log(_temp);
+        console.log(_temp);
         setRawDictItemsPrices(_temp);
       })
       .catch((err) => {
@@ -78,8 +78,8 @@ const Terminal = () => {
           rawDictItemsPrices[item.id_item].price_buy > 0
       )
       .sort((a, b) => a.name.localeCompare(b.name))
-      .sort((a, b) => a.sub_type.localeCompare(b.sub_type))
-      .sort((a, b) => a.type.localeCompare(b.type));
+      // .sort((a, b) => a.sub_type.localeCompare(b.sub_type))
+      // .sort((a, b) => a.type.localeCompare(b.type));
 
     setListItemsOfTerminal(_tempList);
 
