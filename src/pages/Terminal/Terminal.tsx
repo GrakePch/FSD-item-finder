@@ -39,7 +39,7 @@ const Terminal = () => {
 
   useEffect(() => {
     const _tInfo = dictTerminals[terminalId];
-    console.log(_tInfo);
+    // console.log(_tInfo);
     setTerminalInfo(_tInfo);
 
     let _tempListTerminalsNearby = [];

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { Route, Routes } from "react-router";
+import { Route, Routes } from "react-router-dom";
 import { ContextAllData, AllData } from "./contexts";
 import { buildDataBodiesAndLocations } from "./api/bodiesAndLocations";
 import { fetchAndProcessTerminals } from "./api/terminals";
@@ -12,6 +12,7 @@ import SearchLocations from "./pages/SearchLocations/SearchLocations";
 import ItemInfo from "./components/ItemInfo/ItemInfo";
 import Terminal from "./pages/Terminal/Terminal";
 import ItemGroupInfo from "./components/ItemGroupInfo/ItemGroupInfo";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   const [allData, setAllData] = useState<AllData>({
@@ -22,7 +23,6 @@ function App() {
     dictVehicles: {},
     dictItems: {},
   });
-  const [isItemsDataAcquired, setIsItemsDataAcquired] = useState<boolean>(false);
 
   const initializeAppData = async () => {
     const [dictSystems, dictBodies, dictLocations] = buildDataBodiesAndLocations();
@@ -38,10 +38,7 @@ function App() {
         dictVehicles: dictVehicles,
         dictItems: dictItems,
       }));
-
-      setIsItemsDataAcquired(true);
     } catch (err) {
-      setIsItemsDataAcquired(false);
       console.log(err);
     }
 
@@ -56,11 +53,12 @@ function App() {
   useEffect(() => {
     initializeAppData();
   }, []);
-  
+
   useEffect(() => console.log(allData), [allData]);
 
   return (
     <ContextAllData.Provider value={allData}>
+      <NavBar />
       <Routes>
         <Route path="/" element={<SearchItems />} />
         <Route path="/v" element={<SearchVehicles />} />

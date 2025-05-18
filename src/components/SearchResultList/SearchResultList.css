@@ -1,5 +1,6 @@
 .SearchResultList {
     overflow: auto;
+    padding: 0 1rem;
 }
 
 .SearchResultList .result-list-item {
@@ -8,8 +9,9 @@
     gap: .5rem;
     width: 100%;
     text-align: start;
-    padding: .5rem 1rem;
+    padding: .5rem .5rem;
     cursor: pointer;
+    border-radius: .5rem;
     background-color: transparent;
     transition: background .2s;
 }
@@ -24,9 +26,9 @@
     outline: none;
 }
 
-.SearchResultList .result-list-item:last-child {
+/* .SearchResultList .result-list-item:last-child {
     padding-bottom: 1rem;
-}
+} */
 
 .SearchResultList .result-list-item>* {
     flex-shrink: 0;

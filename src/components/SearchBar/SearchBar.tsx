@@ -1,8 +1,7 @@
 import "./SearchBar.css";
 import { useContext, useEffect, useState } from "react";
-import SearchResultList from "../SearchResultList/SearchResultList";
 import Icon from "@mdi/react";
-import { mdiArrowLeft, mdiClose, mdiMagnify, mdiTrashCanOutline } from "@mdi/js";
+import { mdiClose, mdiMagnify, mdiTrashCanOutline } from "@mdi/js";
 import { ContextAllData } from "../../contexts";
 import {
   clearLocalStorageRecent,
@@ -14,7 +13,6 @@ import {
 import { useSearchParams } from "react-router";
 
 const filterTypes = [
-  ["载具", "Vehicle."],
   ["载具系统", "Systems."],
   ["载具武器", "Vehicle Weapons."],
   ["个人武器", "Personal Weapons."],
@@ -34,30 +32,35 @@ const subFilterTypes = {
   Armor: ["Undersuits", "Helmets", "Torso", "Arms", "Legs", "Backpacks"],
 };
 
-const SearchBar = ({ centered, dataAcquired }) => {
+const SEARCH_NAME_KEY = "fsd_searchItems_searchName";
+
+const SearchBar = ({
+  resultList,
+  setResultList,
+}: {
+  resultList: Item[];
+  setResultList: React.Dispatch<React.SetStateAction<Item[]>>;
+}) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { dictItems } = useContext(ContextAllData);
-  const [searchName, setSearchName] = useState("");
   const [isSearching, setIsSearching] = useState(false);
-  const [resultList, setResultList] = useState([]);
 
   const [filterType, setFilterType] = useState("");
   const [filterSubType, setFilterSubType] = useState("");
 
-  const handleSearchChange = (e) => {
+  // Use sessionStorage directly in useState initializer
+  const [searchName, setSearchName] = useState(
+    () => sessionStorage.getItem(SEARCH_NAME_KEY) || ""
+  );
+
+  // Save searchName to sessionStorage whenever it changes
+  useEffect(() => {
+    sessionStorage.setItem(SEARCH_NAME_KEY, searchName);
+  }, [searchName]);
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchName(e.target.value);
   };
-
-  const setSearchBarFocusing = (isFocusing) => {
-    if (isFocusing) {
-      searchParams.set("searchFocus", "1");
-    } else {
-      searchParams.delete("searchFocus");
-    }
-    setSearchParams(searchParams);
-  };
-
-  const isSearchBarFocusing = () => searchParams.get("searchFocus") === "1";
 
   useEffect(() => {
     let _filterType = searchParams.get("type");
@@ -74,10 +77,11 @@ const SearchBar = ({ centered, dataAcquired }) => {
       setFilterSubType("");
     }
 
-    let tempIsSearching =
+    let tempIsSearching = Boolean(
       (searchName.length > 0 &&
-        ((isAscii(searchName) && searchName.length > 1) || !isAscii(searchName))) ||
-      _filterType;
+      ((isAscii(searchName) && searchName.length > 1) || !isAscii(searchName))) ||
+      _filterType
+    );
     setIsSearching(tempIsSearching);
 
     let tempList = [];
@@ -123,8 +127,8 @@ const SearchBar = ({ centered, dataAcquired }) => {
           )
           .sort(
             (a, b) =>
-              (getAttributeValueByName("Size", a.attributes) || Infinity) -
-              (getAttributeValueByName("Size", b.attributes) || Infinity)
+              (parseInt(getAttributeValueByName("Size", a.attributes)) || Infinity) -
+              (parseInt(getAttributeValueByName("Size", b.attributes)) || Infinity)
           );
       } else if (_filterType.startsWith("Vehicle Weapons.")) {
         tempList
@@ -135,14 +139,14 @@ const SearchBar = ({ centered, dataAcquired }) => {
           )
           .sort(
             (a, b) =>
-              (getAttributeValueByName("Size", a.attributes) || Infinity) -
-              (getAttributeValueByName("Size", b.attributes) || Infinity)
+              (parseInt(getAttributeValueByName("Size", a.attributes)) || Infinity) -
+              (parseInt(getAttributeValueByName("Size", b.attributes)) || Infinity)
           );
       } else if (_filterType.startsWith("Personal Weapons.Atta")) {
         tempList.sort(
           (a, b) =>
-            (getAttributeValueByName("Size", a.attributes) || Infinity) -
-            (getAttributeValueByName("Size", b.attributes) || Infinity)
+            (parseInt(getAttributeValueByName("Size", a.attributes)) || Infinity) -
+            (parseInt(getAttributeValueByName("Size", b.attributes)) || Infinity)
         );
       }
 
@@ -152,50 +156,24 @@ const SearchBar = ({ centered, dataAcquired }) => {
 
   return (
     <div className="SearchBar">
-      {isSearchBarFocusing() && (
-        <div className="search-bg" onClick={() => setSearchBarFocusing(false)}></div>
-      )}
-      <nav
-        className="search-super-container"
-        style={{ top: centered && !isSearchBarFocusing() ? "30%" : 0 }}
-      >
-        {centered && !isSearchBarFocusing() && (
-          <>
-            <h1>
-              星际寻物<span>Beta 版</span>
-            </h1>
-            <p>为星际公民提供查询物品购买地点与价格的服务</p>
-            <p className="small">暂不支持货物和矿物的交易地点与价格</p>
-          </>
-        )}
         <div className="search-container">
-          {!isSearchBarFocusing() ? (
             <div className="btnSearch">
               <Icon path={mdiMagnify} size="1.5rem" />
             </div>
-          ) : (
-            <button className="btnBack" onClick={() => setSearchBarFocusing(false)}>
-              <Icon className="iconClear" path={mdiArrowLeft} size="1.5rem" />
-            </button>
-          )}
           <input
             type="text"
             id="searchbar"
-            placeholder={dataAcquired ? "搜索物品或载具名称……" : "数据加载中，请稍后……"}
+            placeholder={Object.keys(dictItems).length ? "搜索物品……" : "下载数据中……"}
             value={searchName}
-            onFocus={() => setSearchBarFocusing(true)}
             onChange={handleSearchChange}
-            disabled={!dataAcquired}
+            disabled={!Object.keys(dictItems).length}
           />
           {searchName && (
             <button className="btnClear" onClick={() => setSearchName("")}>
               <Icon className="iconClear" path={mdiClose} size="1.5rem" />
             </button>
           )}
-
-          {isSearchBarFocusing() && (
-            <>
-              <hr />
+        </div>
               <div className="filters">
                 <button
                   onClick={() => {
@@ -228,7 +206,7 @@ const SearchBar = ({ centered, dataAcquired }) => {
                   id="buyable-only"
                   checked={!parseInt(searchParams.get("show_unbuyable"))}
                   onChange={(e) => {
-                    searchParams.set("show_unbuyable", e.target.checked ? 0 : 1);
+                    searchParams.set("show_unbuyable", e.target.checked ? "0" : "1");
                     setSearchParams(searchParams);
                   }}
                 />
@@ -280,11 +258,6 @@ const SearchBar = ({ centered, dataAcquired }) => {
                     </button>
                   </p>
                 ))}
-              <SearchResultList results={resultList} />
-            </>
-          )}
-        </div>
-      </nav>
     </div>
   );
 };

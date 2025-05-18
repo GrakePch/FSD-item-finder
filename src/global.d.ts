@@ -85,7 +85,7 @@ interface Item {
   id_item: number;
   price_min_max: PriceMinMax;
   options: TradeOption[];
-  attributes?: Attributes;
+  attributes?: AttributeDictionary;
 }
 
 interface TradeOption {
@@ -106,7 +106,7 @@ type PriceMinMax = {
   rent_max: number | null;
 };
 
-type Attributes = { [id_attribute: number]: string };
+type AttributeDictionary = { [id_attribute: number]: string };
 
 type ArmorSet = {
   undersuit?: Item | null;
@@ -227,6 +227,6 @@ interface ItemUEXApiResponse {
   is_exclusive_subscriber: number;
   is_exclusive_concierge: number;
   screenshot: string;
-  attributes: Attributes;
+  attributes: AttributeDictionary;
   notification: any;
 }

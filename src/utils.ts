@@ -10,7 +10,7 @@ import bodies from "./data/bodies.json";
 import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
 import attributes from "./data/categories_attributes.json";
 
-export function isAscii(char) {
+export function isAscii(char: string): boolean {
     const code = char[0].charCodeAt(0);
     return code >= 0 && code <= 127;
 }
@@ -69,17 +69,17 @@ export function getUEXAttribute(id) {
     }
 }
 
-export function getAttributeZhName(name) {
+export function getAttributeZhName(name: string): string {
     if (!name) return name;
     return i18nAttributes[name] || name;
 }
 
-export function getAttributeValueZhName(name) {
+export function getAttributeValueZhName(name: string): string {
     if (!name) return name;
     return i18nAttributeValues[name] || name;
 }
 
-export function getAttributeValueByName(name, attrDict) {
+export function getAttributeValueByName(name: string, attrDict: AttributeDictionary): string | null {
     if (!attrDict) return null;
     for (const [k, v] of Object.entries(attrDict)) {
         let attr = getUEXAttribute(k);
@@ -213,7 +213,7 @@ export function colorLocationDepth(depth) {
 
 export const date4_0 = 1734670320;
 
-export const sizeToColor = [
+export const sizeToColor: string[] = [
     "#6e7881",
     "#258f00",
     "#008f7e",
@@ -229,7 +229,7 @@ export const sizeToColor = [
     "#ff3838",
 ];
 
-export const classToColor = {
+export const classToColor: Record<string, string> = {
     Military: "#258f00",
     Stealth: "#439193",
     Civilian: "#c1af3e",
@@ -237,19 +237,19 @@ export const classToColor = {
     Competition: "#a83434",
 };
 
-export const signalToColor = {
+export const signalToColor: Record<string, string> = {
     Electromagnetic: "#439193",
     Infrared: "#a83434",
     "Cross Section": "#c1a03e",
 };
 
-export function getLocalStorageRecent() {
+export function getLocalStorageRecent(): string[] {
     let r = localStorage.getItem("recent");
     if (!r) return [];
     return r.split(",").filter(a => a);
 }
 
-export function pushLocalStorageRecent(key) {
+export function pushLocalStorageRecent(key: string): void {
     let r = getLocalStorageRecent();
     r = r.filter(k => k != key);
     r.unshift(key);
@@ -257,6 +257,6 @@ export function pushLocalStorageRecent(key) {
     localStorage.setItem("recent", r.join(","));
 }
 
-export function clearLocalStorageRecent() {
+export function clearLocalStorageRecent(): void {
     localStorage.removeItem("recent");
 }

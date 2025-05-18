@@ -11,14 +11,12 @@ import {
 import { icon } from "../../assets/icon";
 import Icon from "@mdi/react";
 
-const SearchResultList = ({ results }) => {
+const SearchResultList = ({ results } : { results: Item[] }) => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
 
   const handleResultClick = (key) => {
-    searchParams.set("key", key);
-    searchParams.delete("searchFocus");
-    navigate("/?" + searchParams.toString());
+    navigate(`/i/${key}?${searchParams.toString()}`);
   };
 
   return (

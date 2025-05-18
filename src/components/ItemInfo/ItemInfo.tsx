@@ -14,6 +14,7 @@ import {
   getSet,
   getUEXAttribute,
   getVariants,
+  pushLocalStorageRecent,
 } from "../../utils";
 import TagCurrent from "../TagCurrent/TagCurrent";
 import TradeOptionsSortingControl from "../TradeOptionsSortingControl/TradeOptionsSortingControl";
@@ -38,6 +39,7 @@ const ItemInfo = () => {
         setItem(_item);
         setListVariants(getVariants(itemKey, dictItems));
         setSet(getSet(itemKey, dictItems));
+        pushLocalStorageRecent(itemKey);
       } else {
         setItem(null);
       }
@@ -46,8 +48,7 @@ const ItemInfo = () => {
 
   const handleTypeClick = (type: string, subType: string) => {
     searchParams.set("type", type + "." + subType);
-    searchParams.set("searchFocus", "1");
-    setSearchParams(searchParams);
+    navigate(`/?${searchParams.toString()}`);
   };
 
   return (
