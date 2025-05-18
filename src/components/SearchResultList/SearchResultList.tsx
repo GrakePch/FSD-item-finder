@@ -22,18 +22,18 @@ const SearchResultList = ({ results }: { results: Item[] }) => {
   return (
     <div className="SearchResultList">
       {results.map((item) => {
-        let attrsize: number, attrClass: string, attrGrade: string, attrTrackSignal: string;
+        let attrsize: string, attrClass: string, attrGrade: string, attrTrackSignal: string;
         if (item.type === "Systems") {
-          attrsize = parseInt(getAttributeValueByName("Size", item.attributes));
+          attrsize = getAttributeValueByName("Size", item.attributes);
           attrClass = getAttributeValueByName("Class", item.attributes);
           attrGrade = getAttributeValueByName("Grade", item.attributes);
         }
         if (item.type === "Vehicle Weapons") {
-          attrsize = parseInt(getAttributeValueByName("Size", item.attributes));
+          attrsize = getAttributeValueByName("Size", item.attributes);
           attrTrackSignal = item.attributes?.[112];
         }
         if (item.sub_type === "Attachments") {
-          attrsize = parseInt(getAttributeValueByName("Size", item.attributes));
+          attrsize = getAttributeValueByName("Size", item.attributes);
         }
         return (
           <button
