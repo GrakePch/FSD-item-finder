@@ -13,6 +13,7 @@ import ItemInfo from "./components/ItemInfo/ItemInfo";
 import Terminal from "./pages/Terminal/Terminal";
 import ItemGroupInfo from "./components/ItemGroupInfo/ItemGroupInfo";
 import NavBar from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [allData, setAllData] = useState<AllData>({
@@ -71,6 +72,7 @@ function App() {
         <Route path="/t/:terminalId" element={<Terminal />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
+      <Footer />
     </ContextAllData.Provider>
   );
 }

@@ -79,8 +79,8 @@ const SearchBar = ({
 
     let tempIsSearching = Boolean(
       (searchName.length > 0 &&
-      ((isAscii(searchName) && searchName.length > 1) || !isAscii(searchName))) ||
-      _filterType
+        ((isAscii(searchName) && searchName.length > 1) || !isAscii(searchName))) ||
+        _filterType
     );
     setIsSearching(tempIsSearching);
 
@@ -156,108 +156,108 @@ const SearchBar = ({
 
   return (
     <div className="SearchBar">
-        <div className="search-container">
-            <div className="btnSearch">
-              <Icon path={mdiMagnify} size="1.5rem" />
-            </div>
-          <input
-            type="text"
-            id="searchbar"
-            placeholder={Object.keys(dictItems).length ? "搜索物品……" : "下载数据中……"}
-            value={searchName}
-            onChange={handleSearchChange}
-            disabled={!Object.keys(dictItems).length}
-          />
-          {searchName && (
-            <button className="btnClear" onClick={() => setSearchName("")}>
-              <Icon className="iconClear" path={mdiClose} size="1.5rem" />
-            </button>
-          )}
+      <div className="search-container">
+        <div className="btnSearch">
+          <Icon path={mdiMagnify} size="1.5rem" />
         </div>
-              <div className="filters">
-                <button
-                  onClick={() => {
-                    searchParams.delete("type");
-                    setSearchParams(searchParams);
-                  }}
-                  className={filterType ? undefined : "active"}
-                >
-                  全部
-                </button>
-                {filterTypes.map(([name_zh, t]) => (
-                  <button
-                    key={t}
-                    onClick={() => {
-                      if (searchParams.get("type")?.startsWith(t)) {
-                        searchParams.delete("type");
-                      } else {
-                        searchParams.set("type", t);
-                      }
-                      setSearchParams(searchParams);
-                    }}
-                    className={searchParams.get("type")?.startsWith(t) ? "active" : null}
-                  >
-                    {name_zh}
-                  </button>
-                ))}
-                <hr />
-                <input
-                  type="checkbox"
-                  id="buyable-only"
-                  checked={!parseInt(searchParams.get("show_unbuyable"))}
-                  onChange={(e) => {
-                    searchParams.set("show_unbuyable", e.target.checked ? "0" : "1");
-                    setSearchParams(searchParams);
-                  }}
-                />
-                <label htmlFor="buyable-only">仅显示可购买</label>
-              </div>
-              {subFilterTypes[filterType] && (
-                <div className="filters sub">
-                  <button
-                    onClick={() => {
-                      searchParams.set("type", filterType + ".");
-                      setSearchParams(searchParams);
-                    }}
-                    className={filterSubType ? undefined : "active"}
-                  >
-                    全部
-                  </button>
-                  {subFilterTypes[filterType].map((subt) => (
-                    <button
-                      key={subt}
-                      onClick={() => {
-                        if (filterSubType === subt) {
-                          searchParams.set("type", filterType + ".");
-                        } else {
-                          searchParams.set("type", filterType + "." + subt);
-                        }
-                        setSearchParams(searchParams);
-                      }}
-                      className={subt === filterSubType ? "active" : null}
-                    >
-                      {getCategoryZhName(subt)}
-                    </button>
-                  ))}
-                </div>
-              )}
-              {resultList.length > 0 &&
-                (isSearching ? (
-                  <p className="total">搜索结果共 {resultList.length} 个</p>
-                ) : (
-                  <p className="total">
-                    最近查询{" "}
-                    <button
-                      className="btn-clear-recent"
-                      onClick={() => {
-                        clearLocalStorageRecent();
-                        setResultList([]);
-                      }}
-                    >
-                      <Icon path={mdiTrashCanOutline} size="1rem" /> 清除
-                    </button>
-                  </p>
-                ))}
+        <input
+          type="text"
+          id="searchbar"
+          placeholder={Object.keys(dictItems).length ? "搜索物品……" : "下载数据中……"}
+          value={searchName}
+          onChange={handleSearchChange}
+          disabled={!Object.keys(dictItems).length}
+        />
+        {searchName && (
+          <button className="btnClear" onClick={() => setSearchName("")}>
+            <Icon className="iconClear" path={mdiClose} size="1.5rem" />
+          </button>
+        )}
+      </div>
+      <div className="filters">
+        <button
+          onClick={() => {
+            searchParams.delete("type");
+            setSearchParams(searchParams);
+          }}
+          className={filterType ? undefined : "active"}
+        >
+          全部
+        </button>
+        {filterTypes.map(([name_zh, t]) => (
+          <button
+            key={t}
+            onClick={() => {
+              if (searchParams.get("type")?.startsWith(t)) {
+                searchParams.delete("type");
+              } else {
+                searchParams.set("type", t);
+              }
+              setSearchParams(searchParams);
+            }}
+            className={searchParams.get("type")?.startsWith(t) ? "active" : null}
+          >
+            {name_zh}
+          </button>
+        ))}
+        <hr />
+        <input
+          type="checkbox"
+          id="buyable-only"
+          checked={!parseInt(searchParams.get("show_unbuyable"))}
+          onChange={(e) => {
+            searchParams.set("show_unbuyable", e.target.checked ? "0" : "1");
+            setSearchParams(searchParams);
+          }}
+        />
+        <label htmlFor="buyable-only">仅显示可购买</label>
+      </div>
+      {subFilterTypes[filterType] && (
+        <div className="filters sub">
+          <button
+            onClick={() => {
+              searchParams.set("type", filterType + ".");
+              setSearchParams(searchParams);
+            }}
+            className={filterSubType ? undefined : "active"}
+          >
+            全部
+          </button>
+          {subFilterTypes[filterType].map((subt) => (
+            <button
+              key={subt}
+              onClick={() => {
+                if (filterSubType === subt) {
+                  searchParams.set("type", filterType + ".");
+                } else {
+                  searchParams.set("type", filterType + "." + subt);
+                }
+                setSearchParams(searchParams);
+              }}
+              className={subt === filterSubType ? "active" : null}
+            >
+              {getCategoryZhName(subt)}
+            </button>
+          ))}
+        </div>
+      )}
+      {resultList.length > 0 &&
+        (isSearching ? (
+          <p className="total">搜索结果共 {resultList.length} 个</p>
+        ) : (
+          <p className="total">
+            最近查询{" "}
+            <button
+              className="btn-clear-recent"
+              onClick={() => {
+                clearLocalStorageRecent();
+                setResultList([]);
+              }}
+            >
+              <Icon path={mdiTrashCanOutline} size="1rem" /> 清除
+            </button>
+          </p>
+        ))}
     </div>
   );
 };

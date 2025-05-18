@@ -11,29 +11,29 @@ import {
 import { icon } from "../../assets/icon";
 import Icon from "@mdi/react";
 
-const SearchResultList = ({ results } : { results: Item[] }) => {
+const SearchResultList = ({ results }: { results: Item[] }) => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
 
-  const handleResultClick = (key) => {
+  const handleResultClick = (key: string) => {
     navigate(`/i/${key}?${searchParams.toString()}`);
   };
 
   return (
     <div className="SearchResultList">
       {results.map((item) => {
-        let attrsize, attrClass, attrGrade, attrTrackSignal;
+        let attrsize: number, attrClass: string, attrGrade: string, attrTrackSignal: string;
         if (item.type === "Systems") {
-          attrsize = getAttributeValueByName("Size", item.attributes);
+          attrsize = parseInt(getAttributeValueByName("Size", item.attributes));
           attrClass = getAttributeValueByName("Class", item.attributes);
           attrGrade = getAttributeValueByName("Grade", item.attributes);
         }
         if (item.type === "Vehicle Weapons") {
-          attrsize = getAttributeValueByName("Size", item.attributes);
+          attrsize = parseInt(getAttributeValueByName("Size", item.attributes));
           attrTrackSignal = item.attributes?.[112];
         }
         if (item.sub_type === "Attachments") {
-          attrsize = getAttributeValueByName("Size", item.attributes);
+          attrsize = parseInt(getAttributeValueByName("Size", item.attributes));
         }
         return (
           <button

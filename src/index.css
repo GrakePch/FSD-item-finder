@@ -88,6 +88,9 @@ body {
   padding-top: 6.5rem;
   min-width: 320px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
