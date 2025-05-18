@@ -1,42 +1,43 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import SearchBar from "./components/SearchBar/SearchBar";
 import { Route, Routes } from "react-router";
-import {
-  AllTerminalsContext,
-  AllItemsPriceContext,
-  BodiesAndLocationsContext,
-} from "./contexts";
+import { ContextAllData, AllData } from "./contexts";
 import { buildDataBodiesAndLocations } from "./api/bodiesAndLocations";
 import { fetchAndProcessTerminals } from "./api/terminals";
 import { fetchAndProcessItems } from "./api/items";
 import { fetchAndProcessVehicles } from "./api/vehicles";
-import { buildItemsData } from "./api/itemsAndVehicles";
-import Item from "./pages/Item/Item";
+import SearchItems from "./pages/SearchItems/SearchItems";
+import SearchVehicles from "./pages/SearchVehicles/SearchVehicles";
+import SearchLocations from "./pages/SearchLocations/SearchLocations";
+import ItemInfo from "./components/ItemInfo/ItemInfo";
 import Terminal from "./pages/Terminal/Terminal";
-import Footer from "./components/Footer/Footer";
-import TerminalIndex from "./pages/TerminalIndex/TerminalIndex";
+import ItemGroupInfo from "./components/ItemGroupInfo/ItemGroupInfo";
 
 function App() {
-  const [terminalsData, setTerminalsData] = useState<TerminalDictionary>({});
-  const [itemsData, setItemsData] = useState<ItemAndVehicleDictionary>({});
-  const [bodiesAndLocationsData, setBodiesAndLocationsData] = useState<
-    [CelestialBodyDictionary, CelestialBodyDictionary, LocationDictionary]
-  >([{}, {}, {}]);
-  const [item, setItem] = useState<Item | Vehicle | null>(null);
+  const [allData, setAllData] = useState<AllData>({
+    dictSystems: {},
+    dictCelestialBodies: {},
+    dictLocations: {},
+    dictTerminals: {},
+    dictVehicles: {},
+    dictItems: {},
+  });
   const [isItemsDataAcquired, setIsItemsDataAcquired] = useState<boolean>(false);
 
   const initializeAppData = async () => {
     const [dictSystems, dictBodies, dictLocations] = buildDataBodiesAndLocations();
 
     try {
-      const terminals = await fetchAndProcessTerminals(dictLocations);
-      setTerminalsData(terminals);
+      const dictTerminals = await fetchAndProcessTerminals(dictLocations);
+      const dictVehicles = await fetchAndProcessVehicles();
+      const dictItems = await fetchAndProcessItems();
 
-      let dictItem = await fetchAndProcessItems();
-      let dictVehicle = await fetchAndProcessVehicles();
-      const tempItemsData = buildItemsData(dictItem, dictVehicle);
-      setItemsData(tempItemsData);
+      setAllData((prev) => ({
+        ...prev,
+        dictTerminals: dictTerminals,
+        dictVehicles: dictVehicles,
+        dictItems: dictItems,
+      }));
 
       setIsItemsDataAcquired(true);
     } catch (err) {
@@ -44,53 +45,35 @@ function App() {
       console.log(err);
     }
 
-    setBodiesAndLocationsData([dictSystems, dictBodies, dictLocations]);
+    setAllData((prev) => ({
+      ...prev,
+      dictSystems: dictSystems,
+      dictCelestialBodies: dictBodies,
+      dictLocations: dictLocations,
+    }));
   };
 
   useEffect(() => {
     initializeAppData();
   }, []);
+  
+  useEffect(() => console.log(allData), [allData]);
 
   return (
-    <BodiesAndLocationsContext.Provider value={bodiesAndLocationsData}>
-      <AllTerminalsContext.Provider value={terminalsData}>
-        <AllItemsPriceContext.Provider value={itemsData}>
-          <Routes>
-            <Route
-              path="/t"
-              element={
-                <>
-                  <TerminalIndex />
-                  <Footer />
-                </>
-              }
-            />
-            <Route
-              path="/t/:tid"
-              element={
-                <>
-                  <Terminal />
-                  <Footer />
-                </>
-              }
-            />
-            <Route
-              path="*"
-              element={
-                <>
-                  <SearchBar
-                    centered={item === null}
-                    dataAcquired={isItemsDataAcquired}
-                  />
-                  <Item item={item} setItem={setItem} />
-                  <Footer style={{ position: item ? "unset" : "absolute" }} />
-                </>
-              }
-            />
-          </Routes>
-        </AllItemsPriceContext.Provider>
-      </AllTerminalsContext.Provider>
-    </BodiesAndLocationsContext.Provider>
+    <ContextAllData.Provider value={allData}>
+      <Routes>
+        <Route path="/" element={<SearchItems />} />
+        <Route path="/v" element={<SearchVehicles />} />
+        <Route path="/l" element={<SearchLocations />} />
+        <Route path="/i/:itemKey" element={<ItemInfo />} />
+        <Route path="/iv/:itemKey" element={<ItemGroupInfo />} />
+        {/* <Route path="/v/:vehicleKey" element={<VehicleInfo />} />
+        <Route path="/b/:celestialBodyKey" element={<CelestialBodyInfo />} />
+        <Route path="/l/:locationKey" element={<LocationInfo />} /> */}
+        <Route path="/t/:terminalId" element={<Terminal />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
+      </Routes>
+    </ContextAllData.Provider>
   );
 }
 

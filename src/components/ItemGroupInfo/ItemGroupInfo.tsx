@@ -1,12 +1,31 @@
 import "./ItemGroupInfo.css";
 import TradeOptions from "../TradeOptions/TradeOptions";
-import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router";
-import { getCategoryZhName } from "../../utils";
+import { useContext, useEffect, useState } from "react";
+import { useNavigate, useSearchParams } from "react-router";
+import { getCategoryZhName, getVariants } from "../../utils";
 import ItemColorIcon from "../ItemColorIcon/ItemColorIcon";
+import { useParams } from "react-router";
+import { ContextAllData } from "../../contexts";
 
-const ItemGroupInfo = ({ item, listVariants }) => {
+const ItemGroupInfo = () => {
+  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
+  const { dictItems } = useContext(ContextAllData);
+  const itemKey = useParams().itemKey;
+  const [item, setItem] = useState<Item | null>(null);
+  const [listVariants, setListVariants] = useState<Item[]>([]);
+
+  useEffect(() => {
+    if (itemKey) {
+      const _item = dictItems[itemKey];
+      if (_item) {
+        setItem(_item);
+        setListVariants(getVariants(itemKey, dictItems));
+      } else {
+        setItem(null);
+      }
+    }
+  }, [itemKey, dictItems]);
 
   const [firstVariant, setFirstVariant] = useState(null);
   const [totalPriceData, setTotalPriceData] = useState([]);
@@ -15,7 +34,7 @@ const ItemGroupInfo = ({ item, listVariants }) => {
   useEffect(() => {
     setFirstVariant(listVariants[0]);
 
-    let optionDict = {};
+    let optionDict: Record<number, TradeOption> = {};
     for (const item of listVariants) {
       for (const option of item.options) {
         if (!optionDict[option.id_terminal]) {
@@ -55,7 +74,7 @@ const ItemGroupInfo = ({ item, listVariants }) => {
     setTotalPriceMinMax(tempTotalPriceMinMax);
   }, [item, listVariants]);
 
-  return (
+  return item && (
     <div className="ItemGroupInfo">
       <div className="item-info">
         <h1 className="zh">
@@ -86,9 +105,7 @@ const ItemGroupInfo = ({ item, listVariants }) => {
             className="variant"
             key={vItem.key}
             onClick={() => {
-              searchParams.delete("mode");
-              searchParams.set("key", vItem.key);
-              setSearchParams(searchParams);
+              navigate(`/i/${vItem.key}?${searchParams.toString()}`);
             }}
           >
             <ItemColorIcon name={vItem.name} />

@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import SearchResultList from "../SearchResultList/SearchResultList";
 import Icon from "@mdi/react";
 import { mdiArrowLeft, mdiClose, mdiMagnify, mdiTrashCanOutline } from "@mdi/js";
-import { AllItemsPriceContext } from "../../contexts";
+import { ContextAllData } from "../../contexts";
 import {
   clearLocalStorageRecent,
   getAttributeValueByName,
@@ -36,7 +36,7 @@ const subFilterTypes = {
 
 const SearchBar = ({ centered, dataAcquired }) => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const itemsData = useContext(AllItemsPriceContext);
+  const { dictItems } = useContext(ContextAllData);
   const [searchName, setSearchName] = useState("");
   const [isSearching, setIsSearching] = useState(false);
   const [resultList, setResultList] = useState([]);
@@ -82,7 +82,7 @@ const SearchBar = ({ centered, dataAcquired }) => {
 
     let tempList = [];
     if (tempIsSearching) {
-      for (const item of Object.values(itemsData)
+      for (const item of Object.values(dictItems)
         .filter((i) =>
           !parseInt(searchParams.get("show_unbuyable"))
             ? i.price_min_max.buy_min && i.price_min_max.buy_min < Infinity
@@ -104,7 +104,7 @@ const SearchBar = ({ centered, dataAcquired }) => {
       }
     } else {
       tempList = getLocalStorageRecent()
-        .map((k) => itemsData[k])
+        .map((k) => dictItems[k])
         .filter((i) => i);
     }
 
@@ -148,7 +148,7 @@ const SearchBar = ({ centered, dataAcquired }) => {
 
     // console.log(tempList);
     setResultList(tempList);
-  }, [itemsData, searchName, searchParams]);
+  }, [dictItems, searchName, searchParams]);
 
   return (
     <div className="SearchBar">

@@ -68,10 +68,10 @@ interface Vehicle {
   name_zh_Hans: string;
   type: "Vehicle";
   sub_type: "Vehicle";
-  id_vehicle: string; // Vehicle IDs are prefixed with 'v-'
+  id_vehicle: number;
   price_min_max: PriceMinMax;
   options: TradeOption[];
-  options_rent: RentOption[];
+  options_rent: TradeOption[];
 }
 
 interface Item {
@@ -92,12 +92,6 @@ interface TradeOption {
   id_terminal: number;
   price_buy: number | null;
   price_sell: number | null;
-  date_modified: number;
-  distance?: number;
-}
-
-interface RentOption {
-  id_terminal: number;
   price_rent: number | null;
   date_modified: number;
   distance?: number;
@@ -126,7 +120,8 @@ type ArmorSet = {
 type CelestialBodyDictionary = { [name: string]: CelestialBody };
 type LocationDictionary = { [name: string]: SCLocation };
 type TerminalDictionary = { [id: number]: Terminal };
-type ItemAndVehicleDictionary = { [key: string]: Item | Vehicle };
+type ItemDictionary = { [key: string]: Item };
+type VehicleDictionary = { [key: string]: Vehicle };
 
 // Utility types
 
@@ -150,11 +145,11 @@ interface SimpleItemOptions {
 interface SimpleVehicleOptions {
   id_vehicle: number;
   options: TradeOption[];
-  options_rent: RentOption[];
+  options_rent: TradeOption[];
 }
 
 type SimpleItemOptionsDictionary = { [id: number]: SimpleItemOptions };
-type SimpleVehicleOptionsDictionary = { [id: string]: SimpleVehicleOptions }; // Vehicle IDs are prefixed with 'v-'
+type SimpleVehicleOptionsDictionary = { [id: number]: SimpleVehicleOptions };
 
 // API response interfaces
 

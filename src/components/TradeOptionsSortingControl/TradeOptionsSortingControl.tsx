@@ -4,12 +4,12 @@ import { useSearchParams } from "react-router";
 import { getBody, getLocationZhName } from "../../utils";
 import Icon from "@mdi/react";
 import { mdiCurrencySign, mdiMapMarker } from "@mdi/js";
-import { BodiesAndLocationsContext } from "../../contexts";
+import { ContextAllData } from "../../contexts";
 
 const TradeOptionsSortingControl = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [starSystem, setStarSystem] = useState("");
-  const systemTree: CelestialBodyDictionary = useContext(BodiesAndLocationsContext)[0];
+  const { dictSystems } = useContext(ContextAllData);
 
   useEffect(() => {
     /* Update Search Params to Default values */
@@ -36,7 +36,8 @@ const TradeOptionsSortingControl = () => {
             setSearchParams(searchParams);
           }}
         >
-          <Icon path={mdiCurrencySign} size={"1rem"} /><p>价格低优先</p>
+          <Icon path={mdiCurrencySign} size={"1rem"} />
+          <p>价格低优先</p>
         </button>
         <button
           className={searchParams.get("sort") === "location" ? "active" : undefined}
@@ -45,7 +46,8 @@ const TradeOptionsSortingControl = () => {
             setSearchParams(searchParams);
           }}
         >
-          <Icon path={mdiMapMarker} size={"1rem"} /><p>距离近优先</p>
+          <Icon path={mdiMapMarker} size={"1rem"} />
+          <p>距离近优先</p>
         </button>
         <div className="selectors">
           <select
@@ -56,7 +58,7 @@ const TradeOptionsSortingControl = () => {
               setSearchParams(searchParams);
             }}
           >
-            {Object.keys(systemTree).map((s) => (
+            {Object.keys(dictSystems).map((s) => (
               <option key={s} value={s}>
                 {getLocationZhName(s)}星系
               </option>
@@ -72,7 +74,7 @@ const TradeOptionsSortingControl = () => {
             }}
           >
             <option value={starSystem}>{getLocationZhName(starSystem)}</option>
-            {systemTree[starSystem]?.children.map((b) =>
+            {dictSystems[starSystem]?.children.map((b) =>
               b.children.length > 0 ? (
                 <optgroup key={b.name} label={getLocationZhName(b.name) + " 引力系统"}>
                   <option value={b.name}>{getLocationZhName(b.name)}</option>

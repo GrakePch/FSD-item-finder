@@ -3,10 +3,16 @@ import Icon from "@mdi/react";
 import { colorLocationDepth, getLocationZhName } from "../../utils";
 import { icon } from "../../assets/icon";
 import { useContext } from "react";
-import { BodiesAndLocationsContext } from "../../contexts";
+import { ContextAllData } from "../../contexts";
 
-const LocationPathChips = ({ path, startDepth, onClick }) => {
-  const dictLocations = useContext(BodiesAndLocationsContext)[2];
+type LocationPathChipsProps = {
+  path: string[];
+  startDepth: number;
+  onClick?: (e: React.MouseEvent<HTMLSpanElement>) => void;
+};
+
+const LocationPathChips = ({ path, startDepth, onClick }: LocationPathChipsProps) => {
+  const { dictLocations } = useContext(ContextAllData);
 
   return (
     <p className="LocationPathChips">

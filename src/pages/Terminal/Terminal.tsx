@@ -1,7 +1,7 @@
 import { useNavigate, useParams, useSearchParams } from "react-router";
 import "./Terminal.css";
 import { useContext, useEffect, useState } from "react";
-import { AllItemsPriceContext, AllTerminalsContext } from "../../contexts";
+import { ContextAllData } from "../../contexts";
 import axios from "axios";
 import {
   classToColor,
@@ -20,13 +20,12 @@ import { mdiArrowLeft, mdiClose, mdiHomeVariantOutline, mdiMagnify } from "@mdi/
 const Terminal = () => {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
-  const terminalsData = useContext(AllTerminalsContext);
-  const itemsData = useContext(AllItemsPriceContext);
-  const terminalId = useParams().tid;
+  const { dictTerminals, dictItems } = useContext(ContextAllData);
+  const terminalId = useParams().terminalId;
   const [terminalInfo, setTerminalInfo] = useState(null);
   const [rawDictItemsPrices, setRawDictItemsPrices] = useState({});
   const [listItemsOfTerminal, setListItemsOfTerminal] = useState([]);
-  const [hashSetSubTypes, setHashSetSubTypes] = useState(new Set());
+  const [hashSetSubTypes, setHashSetSubTypes] = useState<Set<string>>(new Set<string>());
   const [searchString, setSearchString] = useState("");
   const [filterSubType, setFilterSubType] = useState("");
   const [listTerminalsNearby, setListTerminalsNearby] = useState([]);
@@ -39,8 +38,8 @@ const Terminal = () => {
   }, [searchParams]);
 
   useEffect(() => {
-    const _tInfo = terminalsData[terminalId];
-    // console.log(_tInfo);
+    const _tInfo = dictTerminals[terminalId];
+    console.log(_tInfo);
     setTerminalInfo(_tInfo);
 
     let _tempListTerminalsNearby = [];
@@ -51,7 +50,7 @@ const Terminal = () => {
       );
     }
     setListTerminalsNearby(_tempListTerminalsNearby);
-  }, [terminalId, terminalsData]);
+  }, [terminalId, dictTerminals]);
 
   /* API Fetch: Get items prices at this terminal */
   useEffect(() => {
@@ -72,7 +71,7 @@ const Terminal = () => {
 
   /* Process API raw data */
   useEffect(() => {
-    const _tempList = Object.values(itemsData)
+    const _tempList = Object.values(dictItems)
       .filter(
         (item) =>
           rawDictItemsPrices[item.id_item] &&
@@ -84,21 +83,20 @@ const Terminal = () => {
 
     setListItemsOfTerminal(_tempList);
 
-    const _tempSet = new Set();
+    const _tempSet = new Set<string>();
     _tempList.forEach((item) => _tempSet.add(item.sub_type));
     setHashSetSubTypes(_tempSet);
-  }, [itemsData, rawDictItemsPrices]);
+  }, [dictItems, rawDictItemsPrices]);
 
   const handleResultClick = (key) => {
-    searchParams.set("key", key);
     searchParams.delete("searchFocus");
-    navigate("/?" + searchParams.toString());
+    navigate(`/i/${key}?${searchParams.toString()}`);
   };
 
   const handleSearchChange = (e) => setSearchString(e.target.value);
 
   const handleNearbyTerminalClick = (tid) =>
-    navigate(`/t/${tid}?` + searchParams.toString());
+    navigate(`/t/${tid}?${searchParams.toString()}`);
 
   return (
     <div className="Terminal">

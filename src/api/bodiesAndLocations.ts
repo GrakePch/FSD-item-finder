@@ -1,5 +1,6 @@
 import bodies from "../data/bodies.json";
 import locations from "../data/locations.json";
+import { toUrlKey } from "../utils";
 
 export function buildDataBodiesAndLocations(): [
   CelestialBodyDictionary,
@@ -22,18 +23,20 @@ export function buildDataBodiesAndLocations(): [
       locations: [],
       children: [],
     };
-    flattened[body.name] = cbody;
+    const urlKey = toUrlKey(body.name);
+    flattened[urlKey] = cbody;
 
     /* Build Forest */
     if (!body.parentBody) {
-      systems[body.name] = cbody;
+      systems[urlKey] = cbody;
     } else {
-      flattened[body.parentBody].children.push(cbody);
+      const parentKey = toUrlKey(body.parentBody);
+      flattened[parentKey].children.push(cbody);
     }
 
     /* Link parent body & star */
-    cbody.parentBody = flattened[body.parentBody] || null;
-    cbody.parentStar = flattened[body.parentStar] || null;
+    cbody.parentBody = flattened[toUrlKey(body.parentBody)] || null;
+    cbody.parentStar = flattened[toUrlKey(body.parentStar)] || null;
   }
 
   for (const location of locations) {
@@ -50,14 +53,15 @@ export function buildDataBodiesAndLocations(): [
       quantum: location.quantum,
       terminals: [],
     };
-    dictLocations[location.name] = cloc;
+    const urlKey = toUrlKey(location.name);
+    dictLocations[urlKey] = cloc;
 
     /* Push to parent body */
-    flattened[location.parentBody].locations.push(cloc);
+    flattened[toUrlKey(location.parentBody)].locations.push(cloc);
 
     /* Link parent body & star */
-    cloc.parentBody = flattened[location.parentBody] || null;
-    cloc.parentStar = flattened[location.parentStar] || null;
+    cloc.parentBody = flattened[toUrlKey(location.parentBody)] || null;
+    cloc.parentStar = flattened[toUrlKey(location.parentStar)] || null;
   }
   return [systems, flattened, dictLocations];
 }

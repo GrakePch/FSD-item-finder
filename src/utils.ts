@@ -15,6 +15,12 @@ export function isAscii(char) {
     return code >= 0 && code <= 127;
 }
 
+// Utility to sanitize body/location names to keys for URL usage
+export function toUrlKey(str: string): string {
+  return str
+    ?.replace(/[^a-zA-Z0-9-]+/g, "_") || null;
+}
+
 export function getLocationZhName(name_en) {
     // return name_en;
     if (!name_en) return name_en;
@@ -96,7 +102,7 @@ export function getLocPath(option, tdata) {
     }
 }
 
-export function getVariants(key: string, itemsData: ItemAndVehicleDictionary) {
+export function getVariants(key: string, itemsData: ItemDictionary) {
     if (!key) return [];
     if (!itemsData[key]) return [];
 
@@ -118,7 +124,7 @@ export function getVariants(key: string, itemsData: ItemAndVehicleDictionary) {
             item.sub_type === thisSubType && item.name.split(" ")[0] === initial);
 }
 
-export function getSet(key: string, itemsData: ItemAndVehicleDictionary) {
+export function getSet(key: string, itemsData: ItemDictionary) {
     if (!key) return null;
     if (!itemsData[key]) return null;
 

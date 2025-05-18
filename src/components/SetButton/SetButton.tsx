@@ -1,8 +1,9 @@
-import { useSearchParams } from "react-router";
+import { useNavigate, useSearchParams } from "react-router";
 import "./SetButton.css";
 import TagCurrent from "../TagCurrent/TagCurrent";
 
 const SetButton = ({ subType, item, selfKey }) => {
+  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const tIcon = {
     undersuit: "🩲",
@@ -20,8 +21,7 @@ const SetButton = ({ subType, item, selfKey }) => {
         item.key === selfKey
           ? null
           : () => {
-              searchParams.set("key", item.key);
-              setSearchParams(searchParams);
+              navigate(`/i/${item.key}?${searchParams.toString()}`);
             }
       }
     >

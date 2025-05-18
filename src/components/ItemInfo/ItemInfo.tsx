@@ -1,6 +1,9 @@
+import { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router";
+import { ContextAllData } from "../../contexts";
 import "./ItemInfo.css";
 import TradeOptions from "../TradeOptions/TradeOptions";
-import { useSearchParams } from "react-router";
+import { useNavigate, useSearchParams } from "react-router";
 import Icon from "@mdi/react";
 import { mdiTagMultipleOutline } from "@mdi/js";
 import SetButton from "../SetButton/SetButton";
@@ -8,32 +11,46 @@ import {
   getAttributeValueZhName,
   getAttributeZhName,
   getCategoryZhName,
+  getSet,
   getUEXAttribute,
+  getVariants,
 } from "../../utils";
 import TagCurrent from "../TagCurrent/TagCurrent";
 import TradeOptionsSortingControl from "../TradeOptionsSortingControl/TradeOptionsSortingControl";
 import ItemColorIcon from "../ItemColorIcon/ItemColorIcon";
-import { useEffect } from "react";
 
 const uexLinkItem = "https://uexcorp.space/items/info?name=";
 const uexLinkVehicle = "https://uexcorp.space/vehicles/home/list/in_game_sell/";
 
-const ItemInfo = ({ item, listVariants, set }) => {
+const ItemInfo = () => {
+  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
+  const [item, setItem] = useState<Item | null>(null);
+  const [listVariants, setListVariants] = useState<Item[]>([]);
+  const [set, setSet] = useState<ArmorSet | null>(null);
+  const { dictItems } = useContext(ContextAllData);
+  const itemKey = useParams().itemKey;
 
   useEffect(() => {
-    console.log(item);
-  }, [item]);
+    if (itemKey) {
+      const _item = dictItems[itemKey];
+      if (_item) {
+        setItem(_item);
+        setListVariants(getVariants(itemKey, dictItems));
+        setSet(getSet(itemKey, dictItems));
+      } else {
+        setItem(null);
+      }
+    }
+  }, [itemKey, dictItems]);
 
-  if (!item) return null;
-
-  const handleTypeClick = (type, subType) => {
+  const handleTypeClick = (type: string, subType: string) => {
     searchParams.set("type", type + "." + subType);
     searchParams.set("searchFocus", "1");
     setSearchParams(searchParams);
   };
 
-  return (
+  return item && (
     <div className="ItemInfo">
       <div className="info-and-image">
         <div className="item-info">
@@ -120,13 +137,13 @@ const ItemInfo = ({ item, listVariants, set }) => {
           />
         )}
 
-      {item.options_rent && item.options_rent.length > 0 && (
+      {/* {item.options_rent && item.options_rent.length > 0 && (
         <TradeOptions
           pricesData={item.options_rent}
           priceMinMax={item.price_min_max}
           tradeType="rent"
         />
-      )}
+      )} */}
 
       {listVariants.length > 1 && (
         <>
@@ -136,8 +153,7 @@ const ItemInfo = ({ item, listVariants, set }) => {
             <button
               className="button-check-group"
               onClick={() => {
-                searchParams.set("mode", "variants");
-                setSearchParams(searchParams);
+                navigate(`/iv/${item.key}?${searchParams.toString()}`);
               }}
             >
               <Icon path={mdiTagMultipleOutline} size="1.5rem" />
@@ -153,8 +169,7 @@ const ItemInfo = ({ item, listVariants, set }) => {
                   item.key === vItem.key
                     ? null
                     : () => {
-                        searchParams.set("key", vItem.key);
-                        setSearchParams(searchParams);
+                        navigate(`/i/${vItem.key}?${searchParams.toString()}`);
                       }
                 }
               >

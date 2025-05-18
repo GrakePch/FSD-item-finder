@@ -7,20 +7,24 @@ import {
   getTerminalDistance,
   readableDistance,
 } from "../../utils";
-import { AllTerminalsContext } from "../../contexts";
+import { ContextAllData } from "../../contexts";
 import { useNavigate, useSearchParams } from "react-router";
 import Icon from "@mdi/react";
 import { mdiAlertCircleOutline } from "@mdi/js";
 import LocationPathChips from "../LocationPathChips/LocationPathChips";
 
-/**
- * @typedef {{id_terminal: number, distance: number, price_buy?: number | null, price_sell?: number | null, price_rent?: number | null, date_modified: number}} TradeOption
- * @typedef {{name: string, subs: LocationForest, option?: TradeOption}} LocationTree
- * @typedef {Record<string, LocationTree>} LocationForest
- * @typedef {{locs: string[], depth: number, subs: LocationTreeShallow[], option?: TradeOption}} LocationTreeShallow
- **/
+type LocationTree = { name: string; subs: LocationForest; option?: TradeOption };
 
-const percent = (v, zero, hundred) => {
+type LocationForest = Record<string, LocationTree>;
+
+type LocationTreeShallow = {
+  locs: string[];
+  depth: number;
+  subs: LocationTreeShallow[];
+  option?: TradeOption;
+};
+
+const percent = (v: number, zero: number, hundred: number) => {
   if (zero === hundred) return 0;
   return Math.max(Math.min(((v - zero) / (hundred - zero)) * 100, 100), 0);
 };
@@ -28,26 +32,27 @@ const percent = (v, zero, hundred) => {
 const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const terminalsData = useContext(AllTerminalsContext);
+  const { dictTerminals } = useContext(ContextAllData);
   const [options, setOptions] = useState([]);
 
-  /** @type {ReturnType<typeof useState<LocationTreeShallow[]>>} */
-  const [locationForestShallow, setLocationForestShallow] = useState([]);
+  const [locationForestShallow, setLocationForestShallow] = useState<
+    LocationTreeShallow[]
+  >([]);
 
   useEffect(() => {
     /* Sort by location name first, no matter sort options */
     let tempOptions = pricesData
-      .filter((o) => o.id_terminal in terminalsData)
+      .filter((o) => o.id_terminal in dictTerminals)
       .toSorted((a, b) =>
-        getLocPath(a, terminalsData)
+        getLocPath(a, dictTerminals)
           .join("  ")
-          .localeCompare(getLocPath(b, terminalsData).join("  "))
+          .localeCompare(getLocPath(b, dictTerminals).join("  "))
       );
 
     /* Compute Distances from the "from" param, and sort by distance */
     let fromBodyName = searchParams.get("from");
     tempOptions.forEach((e) => {
-      e.distance = getTerminalDistance(e, fromBodyName, terminalsData);
+      e.distance = getTerminalDistance(e, fromBodyName, dictTerminals);
     });
     tempOptions.sort((a, b) => a.distance - b.distance);
 
@@ -74,7 +79,7 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
     options
       .filter((option) => option["price_" + tradeType] > 0)
       .forEach((option) => {
-        addToTree(tempLocationForest, getLocPath(option, terminalsData), option);
+        addToTree(tempLocationForest, getLocPath(option, dictTerminals), option);
       });
 
     // console.log(tempLocationForest);
@@ -106,7 +111,7 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
             .filter((option) => option["price_" + tradeType] > 0)
             .map((option) => {
               let date = new Date(option.date_modified * 1000);
-              let locPath = getLocPath(option, terminalsData);
+              let locPath = getLocPath(option, dictTerminals);
               return (
                 <div className="option" key={option.id_terminal}>
                   <LocationPathChips
@@ -187,16 +192,13 @@ const addToTree = (tree, path, option) => {
   });
 };
 
-/**
- *
- * @param {LocationTreeShallow[]} newForest
- * @param {LocationForest} oldForest
- * @param {number} depth
- */
-const optimizeForest = (newForest, oldForest, depth) => {
+const optimizeForest = (
+  newForest: LocationTreeShallow[],
+  oldForest: LocationForest,
+  depth: number
+) => {
   for (const oldTree of Object.values(oldForest)) {
-    /** @type {LocationTreeShallow} */
-    let newTree = {
+    let newTree: LocationTreeShallow = {
       depth: depth,
       locs: [oldTree.name],
       subs: [],
@@ -211,13 +213,11 @@ const optimizeForest = (newForest, oldForest, depth) => {
   }
 };
 
-/**
- *
- * @param {LocationTreeShallow} newTree
- * @param {LocationTree} oldTree
- * @param {number} depth
- */
-const optimizeTree = (newTree, oldTree, depth) => {
+const optimizeTree = (
+  newTree: LocationTreeShallow,
+  oldTree: LocationTree,
+  depth: number
+) => {
   let onlySubTree = Object.values(oldTree.subs)[0];
   newTree.locs.push(onlySubTree.name);
   newTree.option = onlySubTree.option;
@@ -228,10 +228,22 @@ const optimizeTree = (newTree, oldTree, depth) => {
   }
 };
 
-const LocationForest = ({ forest, priceMin, priceMax, tradeType }) => {
+type LocationForestProps = {
+  forest: LocationTreeShallow[];
+  priceMin: number;
+  priceMax: number;
+  tradeType: string;
+};
+
+const LocationForest = ({
+  forest,
+  priceMin,
+  priceMax,
+  tradeType,
+}: LocationForestProps) => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const terminalsData = useContext(AllTerminalsContext);
+  const { dictTerminals } = useContext(ContextAllData);
   return forest.map((tree) =>
     tree.option ? (
       <div
@@ -247,7 +259,7 @@ const LocationForest = ({ forest, priceMin, priceMax, tradeType }) => {
           }}
         />
         {tree.option.date_modified < date4_0 &&
-          getLocPath(tree.option, terminalsData)[0] !== "Pyro" && (
+          getLocPath(tree.option, dictTerminals)[0] !== "Pyro" && (
             <Icon path={mdiAlertCircleOutline} size="1rem" color="#a06060" />
           )}
         <p className="distance-info">{readableDistance(tree.option.distance)}</p>
