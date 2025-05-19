@@ -6,10 +6,10 @@ import axios from "axios";
 import {
   classToColor,
   getAttributeValueByName,
-  getAttributeValueZhName,
   getLocationZhName,
   signalToColor,
   sizeToColor,
+  toI18nKey,
   typeCapitalizedToKey,
 } from "../../utils";
 import Icon from "@mdi/react";
@@ -18,7 +18,7 @@ import { mdiArrowLeft, mdiClose, mdiHomeVariantOutline, mdiMagnify } from "@mdi/
 import { useTranslation } from "react-i18next";
 
 const Terminal = () => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const { dictTerminals, dictItems } = useContext(ContextAllData);
@@ -78,9 +78,9 @@ const Terminal = () => {
           rawDictItemsPrices[item.id_item] &&
           rawDictItemsPrices[item.id_item].price_buy > 0
       )
-      .sort((a, b) => a.name.localeCompare(b.name))
-      // .sort((a, b) => a.sub_type.localeCompare(b.sub_type))
-      // .sort((a, b) => a.type.localeCompare(b.type));
+      .sort((a, b) => a.name.localeCompare(b.name));
+    // .sort((a, b) => a.sub_type.localeCompare(b.sub_type))
+    // .sort((a, b) => a.type.localeCompare(b.type));
 
     setListItemsOfTerminal(_tempList);
 
@@ -223,9 +223,16 @@ const Terminal = () => {
                         <Icon path={icon[item.sub_type]} size="2rem" />
                       ) : (
                         <div className="type">
-                          <p>{t("FilterType."+typeCapitalizedToKey(item.type || "unknown"))}</p>
                           <p>
-                            {t("FilterType."+typeCapitalizedToKey(item.sub_type || "unknown"))}
+                            {t(
+                              "FilterType." + typeCapitalizedToKey(item.type || "unknown")
+                            )}
+                          </p>
+                          <p>
+                            {t(
+                              "FilterType." +
+                                typeCapitalizedToKey(item.sub_type || "unknown")
+                            )}
                           </p>
                         </div>
                       )}
@@ -233,14 +240,6 @@ const Terminal = () => {
                         <p className="zh">{item.name_zh_Hans || item.name}</p>
                         <p className="en">{item.name}</p>
                       </div>
-                      {attrsize != null && (
-                        <div
-                          className="size"
-                          style={{ backgroundColor: sizeToColor[attrsize] }}
-                        >
-                          S{attrsize}
-                        </div>
-                      )}
                       {attrClass && attrGrade && (
                         <div
                           className="class-grade"
@@ -249,7 +248,10 @@ const Terminal = () => {
                             backgroundColor: classToColor[attrClass] + "18",
                           }}
                         >
-                          {getAttributeValueZhName(attrClass)}-{attrGrade}
+                          {t("UEXAttributeValue." + toI18nKey(attrClass), {
+                            defaultValue: attrClass,
+                          })}
+                          -{attrGrade}
                         </div>
                       )}
                       {attrTrackSignal && (
@@ -260,7 +262,17 @@ const Terminal = () => {
                             backgroundColor: signalToColor[attrTrackSignal] + "18",
                           }}
                         >
-                          {getAttributeValueZhName(attrTrackSignal)}
+                          {t("UEXAttributeValue." + toI18nKey(attrTrackSignal), {
+                            defaultValue: attrTrackSignal,
+                          })}
+                        </div>
+                      )}
+                      {attrsize != null && (
+                        <div
+                          className="size"
+                          style={{ backgroundColor: sizeToColor[attrsize] }}
+                        >
+                          S{attrsize}
                         </div>
                       )}
                       <p className="price">
@@ -275,7 +287,7 @@ const Terminal = () => {
       ) : (
         <div className="name">
           <h1 className="zh">{t("TerminalInfo.notFound")}</h1>
-          <h2 className="en">{t("TerminalInfo.notFound", {lng: "en"})}</h2>
+          <h2 className="en">{t("TerminalInfo.notFound", { lng: "en" })}</h2>
         </div>
       )}
     </div>

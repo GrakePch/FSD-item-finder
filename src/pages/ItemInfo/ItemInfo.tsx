@@ -6,12 +6,10 @@ import { useNavigate, useSearchParams } from "react-router";
 import Icon from "@mdi/react";
 import { mdiTagMultipleOutline } from "@mdi/js";
 import {
-  getAttributeValueZhName,
-  getAttributeZhName,
   getSet,
-  getUEXAttribute,
   getVariants,
   pushLocalStorageRecent,
+  toI18nKey,
   typeCapitalizedToKey,
 } from "../../utils";
 import ItemColorIcon from "../../components/ItemColorIcon/ItemColorIcon";
@@ -77,8 +75,10 @@ const ItemInfo = () => {
               {item.attributes &&
                 Object.entries(item.attributes).map(([aid, v]) => (
                   <div key={aid} className="attribute">
-                    <p>{getAttributeZhName(getUEXAttribute(aid)?.name)}</p>
-                    <p>{getAttributeValueZhName(v)}</p>
+                    <p>{t("UEXAttribute." + aid)}</p>
+                    <p>
+                      {t("UEXAttributeValue." + toI18nKey(v), { defaultValue: v, })}
+                    </p>
                   </div>
                 ))}
             </div>

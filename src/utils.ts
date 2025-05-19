@@ -1,8 +1,6 @@
 import itemsUex from "./data/items_uex.json";
 import i18nLocations from "./data/i18n_locations.json";
 import i18nLocationsM from "./data/i18n_locations_manual.json";
-import i18nAttributes from "./data/i18n_attributes.json";
-import i18nAttributeValues from "./data/i18n_attribute_values.json";
 import typeMap from "./data/type_map_full_items.json";
 import bodies from "./data/bodies.json";
 import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
@@ -52,16 +50,6 @@ export function getUEXAttribute(id) {
             return attr;
         }
     }
-}
-
-export function getAttributeZhName(name: string): string {
-    if (!name) return name;
-    return i18nAttributes[name] || name;
-}
-
-export function getAttributeValueZhName(name: string): string {
-    if (!name) return name;
-    return i18nAttributeValues[name] || name;
 }
 
 export function getAttributeValueByName(name: string, attrDict: AttributeDictionary): string | null {
@@ -297,3 +285,11 @@ export const typeCapitalizedToKey = (capitalized: string) =>
 
 export const spvRoleToKey = (role: string) => 
     role.toLowerCase().replaceAll(" ","").replaceAll("/","");
+
+export const toI18nKey = (str: string) => str.normalize("NFD")
+    .replaceAll(/[\u0300-\u036f]/g, "")
+    .replaceAll("'", "_")
+    .replaceAll(".", "_")
+    .replaceAll(" ", "_")
+    .toLowerCase()
+    .trimEnd()

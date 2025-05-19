@@ -1,12 +1,12 @@
 import "./SearchResultList.css";
 import { useNavigate, useSearchParams } from "react-router";
 import {
-  getAttributeValueZhName,
   getAttributeValueByName,
   sizeToColor,
   classToColor,
   signalToColor,
   typeCapitalizedToKey,
+  toI18nKey,
 } from "../../../utils";
 import { icon } from "../../../assets/icon";
 import Icon from "@mdi/react";
@@ -24,7 +24,10 @@ const SearchResultList = ({ results }: { results: Item[] }) => {
   return (
     <div className="SearchResultList">
       {results.map((item) => {
-        let attrsize: string, attrClass: string, attrGrade: string, attrTrackSignal: string;
+        let attrsize: string,
+          attrClass: string,
+          attrGrade: string,
+          attrTrackSignal: string;
         if (item.type === "Systems") {
           attrsize = getAttributeValueByName("Size", item.attributes);
           attrClass = getAttributeValueByName("Class", item.attributes);
@@ -47,19 +50,16 @@ const SearchResultList = ({ results }: { results: Item[] }) => {
               <Icon path={icon[item.sub_type]} size="2rem" />
             ) : (
               <div className="type">
-                <p>{t("FilterType."+typeCapitalizedToKey(item.type || "unknown"))}</p>
-                <p>{t("FilterType."+typeCapitalizedToKey(item.sub_type || "unknown"))}</p>
+                <p>{t("FilterType." + typeCapitalizedToKey(item.type || "unknown"))}</p>
+                <p>
+                  {t("FilterType." + typeCapitalizedToKey(item.sub_type || "unknown"))}
+                </p>
               </div>
             )}
             <div className="names">
               <p className="zh">{item.name_zh_Hans || item.name}</p>
               <p className="en">{item.name}</p>
             </div>
-            {attrsize != null && (
-              <div className="size" style={{ backgroundColor: sizeToColor[attrsize] }}>
-                S{attrsize}
-              </div>
-            )}
             {attrClass && attrGrade && (
               <div
                 className="class-grade"
@@ -68,7 +68,10 @@ const SearchResultList = ({ results }: { results: Item[] }) => {
                   backgroundColor: classToColor[attrClass] + "18",
                 }}
               >
-                {getAttributeValueZhName(attrClass)}-{attrGrade}
+                {t("UEXAttributeValue." + toI18nKey(attrClass), {
+                  defaultValue: attrClass,
+                })}
+                -{attrGrade}
               </div>
             )}
             {attrTrackSignal && (
@@ -79,7 +82,14 @@ const SearchResultList = ({ results }: { results: Item[] }) => {
                   backgroundColor: signalToColor[attrTrackSignal] + "18",
                 }}
               >
-                {getAttributeValueZhName(attrTrackSignal)}
+                {t("UEXAttributeValue." + toI18nKey(attrTrackSignal), {
+                  defaultValue: attrTrackSignal,
+                })}
+              </div>
+            )}
+            {attrsize != null && (
+              <div className="size" style={{ backgroundColor: sizeToColor[attrsize] }}>
+                S{attrsize}
               </div>
             )}
             {item.price_min_max.buy_min && item.price_min_max.buy_min < Infinity ? (
