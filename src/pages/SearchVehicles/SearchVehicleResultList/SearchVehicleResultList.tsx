@@ -15,9 +15,12 @@ type seriesInfo = {
 const SearchVehicleResultList = ({ searchName }: { searchName: string }) => {
   const { t } = useTranslation();
   // Filter vehicles based on searchName (case-insensitive)
-  const vehicles = spvVehicleIndex.filter((vehicle) =>
-    vehicle.Name.toLowerCase().includes(searchName.toLowerCase())
-  );
+  const vehicles = spvVehicleIndex.filter((vehicle) => {
+    const nameMatch = vehicle.Name.toLowerCase().includes(searchName.toLowerCase());
+    const i18nName = t(`Vehicle.vehicle_Name${vehicle.ClassName}`, { defaultValue: "" });
+    const i18nMatch = i18nName.toLowerCase().includes(searchName.toLowerCase());
+    return nameMatch || i18nMatch;
+  });
   // Group vehicles into listSeries: seriesInfo[]
   const seriesMap: { [seriesKey: string]: SpvVehicleIndex[] } = {};
   vehicles.forEach((vehicle) => {
