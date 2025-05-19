@@ -16,7 +16,7 @@ const VehicleCard = ({ vehicle }: VehicleCardProps) => {
   };
 
   return (
-    <div className="VehicleCard" onClick={handleClick}>
+    <div className={`VehicleCard ${vehicle.Size > 4 ? "big" : ""}`} onClick={handleClick}>
       <div className="vehicle-info">
         <p className="vehicle-role">
           {t("VehicleClass.vehicle_class_" + spvRoleToKey(vehicle.Role), {
@@ -45,7 +45,7 @@ const VehicleCard = ({ vehicle }: VehicleCardProps) => {
         className="vehicle-thumbnail"
         style={{
           backgroundImage: `url(${formatVehicleImageSrc(vehicle)})`,
-          width: vehicle.Type === "Ship" ? "33%" : "25%",
+          width: vehicle.Type === "Ship" ? (vehicle.Size > 4 ? "45%" : "33%") : "25%",
         }}
       ></div>
     </div>

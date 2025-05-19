@@ -18,6 +18,10 @@
     transform: scale(1.01);
 }
 
+.VehicleCard.big {
+    height: 10rem;
+}
+
 .VehicleCard .vehicle-info {
     align-self: stretch;
     padding: .25rem 0;
@@ -30,6 +34,10 @@
 .VehicleCard .vehicle-name-big {
     font-size: 1rem;
     font-weight: 500;
+}
+
+.VehicleCard.big .vehicle-name-big {
+    line-height: 1.5;
 }
 
 .VehicleCard .vehicle-role {
