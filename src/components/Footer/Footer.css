@@ -12,3 +12,10 @@
 .Footer>.uex {
     float: right;
 }
+
+
+@media (max-width: 719px) {
+    .Footer {
+        padding-bottom: 8rem;
+    }
+}

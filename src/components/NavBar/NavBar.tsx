@@ -18,6 +18,7 @@ const NavBar = () => {
   }, [location.pathname]);
 
   return (
+    <>
     <div className="NavBar">
       <div className="nav-container">
         <h1 className="title">
@@ -41,6 +42,22 @@ const NavBar = () => {
         </nav>
       </div>
     </div>
+
+      <nav className="NavBarBottom">
+        <Link to="/" className={tabSearch === "items" ? "active" : ""}>
+          <Icon path={mdiWidgetsOutline}/>
+          <span>寻物</span>
+        </Link>
+        <Link to="/v" className={tabSearch === "vehicles" ? "active" : ""}>
+          <Icon path={icon.Vehicle}/>
+          <span>寻船</span>
+        </Link>
+        <Link to="/l" className={tabSearch === "locations" ? "active" : ""}>
+          <Icon path={mdiMapMarker}/>
+          <span>寻址</span>
+        </Link>
+      </nav>
+    </>
   );
 };
 

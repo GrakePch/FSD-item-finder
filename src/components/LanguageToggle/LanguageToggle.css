@@ -13,3 +13,12 @@
     box-shadow: var(--shadow-2);
     z-index: 999;
 }
+
+@media (max-width: 719px) {
+    .LanguageToggle {
+        width: 4rem;
+        height: 4rem;
+        font-size: 1.2rem;
+        bottom: 6rem;
+    }
+}
