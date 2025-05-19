@@ -2,11 +2,9 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { ContextAllData } from "../../contexts";
 import "./ItemInfo.css";
-import TradeOptions from "../TradeOptions/TradeOptions";
 import { useNavigate, useSearchParams } from "react-router";
 import Icon from "@mdi/react";
 import { mdiTagMultipleOutline } from "@mdi/js";
-import SetButton from "../SetButton/SetButton";
 import {
   getAttributeValueZhName,
   getAttributeZhName,
@@ -16,9 +14,11 @@ import {
   getVariants,
   pushLocalStorageRecent,
 } from "../../utils";
-import TagCurrent from "../TagCurrent/TagCurrent";
-import TradeOptionsSortingControl from "../TradeOptionsSortingControl/TradeOptionsSortingControl";
-import ItemColorIcon from "../ItemColorIcon/ItemColorIcon";
+import ItemColorIcon from "../../components/ItemColorIcon/ItemColorIcon";
+import SetButton from "../../components/SetButton/SetButton";
+import TradeOptions from "../../components/TradeOptions/TradeOptions";
+import TagCurrent from "../../components/TagCurrent/TagCurrent";
+import TradeOptionsSortingControl from "../../components/TradeOptionsSortingControl/TradeOptionsSortingControl";
 
 const uexLinkItem = "https://uexcorp.space/items/info?name=";
 const uexLinkVehicle = "https://uexcorp.space/vehicles/home/list/in_game_sell/";

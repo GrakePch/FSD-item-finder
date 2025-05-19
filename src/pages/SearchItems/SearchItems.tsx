@@ -1,6 +1,6 @@
 import { useState } from "react";
-import SearchResultList from "../../components/SearchResultList/SearchResultList";
-import SearchBar from "../../components/SearchBar/SearchBar";
+import SearchResultList from "./SearchResultList/SearchResultList";
+import SearchBar from "./SearchBar/SearchBar";
 import "./SearchItems.css";
 
 const SearchItems = () => {

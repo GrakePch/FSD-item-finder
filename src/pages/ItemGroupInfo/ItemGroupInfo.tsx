@@ -1,11 +1,11 @@
 import "./ItemGroupInfo.css";
-import TradeOptions from "../TradeOptions/TradeOptions";
 import { useContext, useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router";
 import { getCategoryZhName, getVariants } from "../../utils";
-import ItemColorIcon from "../ItemColorIcon/ItemColorIcon";
 import { useParams } from "react-router";
 import { ContextAllData } from "../../contexts";
+import TradeOptions from "../../components/TradeOptions/TradeOptions";
+import ItemColorIcon from "../../components/ItemColorIcon/ItemColorIcon";
 
 const ItemGroupInfo = () => {
   const navigate = useNavigate();

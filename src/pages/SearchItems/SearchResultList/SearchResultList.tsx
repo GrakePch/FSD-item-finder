@@ -1,14 +1,14 @@
 import "./SearchResultList.css";
 import { useNavigate, useSearchParams } from "react-router";
-import i18nCategories from "../../data/categories_en_to_zh_Hans.json";
+import i18nCategories from "../../../data/categories_en_to_zh_Hans.json";
 import {
   getAttributeValueZhName,
   getAttributeValueByName,
   sizeToColor,
   classToColor,
   signalToColor,
-} from "../../utils";
-import { icon } from "../../assets/icon";
+} from "../../../utils";
+import { icon } from "../../../assets/icon";
 import Icon from "@mdi/react";
 
 const SearchResultList = ({ results }: { results: Item[] }) => {

@@ -2,14 +2,14 @@ import "./SearchBar.css";
 import { useContext, useEffect, useState } from "react";
 import Icon from "@mdi/react";
 import { mdiClose, mdiMagnify, mdiTrashCanOutline } from "@mdi/js";
-import { ContextAllData } from "../../contexts";
+import { ContextAllData } from "../../../contexts";
 import {
   clearLocalStorageRecent,
   getAttributeValueByName,
   getCategoryZhName,
   getLocalStorageRecent,
   isAscii,
-} from "../../utils";
+} from "../../../utils";
 import { useSearchParams } from "react-router";
 
 const filterTypes = [
