@@ -1,0 +1,46 @@
+.SearchVehicleResultList {}
+
+.SearchVehicleResultList .vehicle-group-list {
+    padding-left: 0;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.SearchVehicleResultList .vehicle-group {
+    list-style: none;
+    grid-column: 1 / -1;
+    border: 2px solid var(--color-bg-2);
+    border-radius: 1rem;
+    padding: .75rem;
+    width: calc(100% + 1.5rem);
+}
+
+.SearchVehicleResultList .vehicle-series-title {
+    line-height: 1;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+.SearchVehicleResultList .vehicle-list {
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.SearchVehicleResultList .single-vehicle-item {
+    list-style: none;
+    width: 100%;
+}
+
+@media (max-width: 719px) {
+    .SearchVehicleResultList .vehicle-group-list {
+        grid-template-columns: 1fr;
+    }
+
+    .SearchVehicleResultList .vehicle-list {
+        grid-template-columns: 1fr;
+    }
+}

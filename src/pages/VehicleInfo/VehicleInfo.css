@@ -1,0 +1,27 @@
+.VehicleInfo .highlight-info {
+    padding: 0 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 719px) {
+    .VehicleInfo .highlight-info {
+        flex-direction: column;
+    }
+}
+
+.VehicleInfo .vehicle-main-info {
+    flex-grow: 1;
+}
+
+.VehicleInfo .vehicle-image {
+    height: 16rem;
+    align-self: center;
+    filter: drop-shadow(0 1.5rem 1rem #00000080);
+    padding-bottom: 1rem;
+}
+
+.VehicleInfo .trading-info {
+    padding: 0 .5rem;
+}

@@ -14,6 +14,7 @@ import Terminal from "./pages/Terminal/Terminal";
 import ItemGroupInfo from "./components/ItemGroupInfo/ItemGroupInfo";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
+import VehicleInfo from "./pages/VehicleInfo/VehicleInfo";
 
 function App() {
   const [allData, setAllData] = useState<AllData>({
@@ -66,9 +67,9 @@ function App() {
         <Route path="/l" element={<SearchLocations />} />
         <Route path="/i/:itemKey" element={<ItemInfo />} />
         <Route path="/iv/:itemKey" element={<ItemGroupInfo />} />
-        {/* <Route path="/v/:vehicleKey" element={<VehicleInfo />} />
-        <Route path="/b/:celestialBodyKey" element={<CelestialBodyInfo />} />
-        <Route path="/l/:locationKey" element={<LocationInfo />} /> */}
+        <Route path="/v/:vehicleClassName" element={<VehicleInfo />} />
+        {/* <Route path="/b/:celestialBodyKey" element={<CelestialBodyInfo />} /> */}
+        {/* <Route path="/l/:locationKey" element={<LocationInfo />} /> */}
         <Route path="/t/:terminalId" element={<Terminal />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>

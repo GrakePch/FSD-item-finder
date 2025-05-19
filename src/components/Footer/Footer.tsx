@@ -15,7 +15,7 @@ const Footer = () => {
           </a>
         </div>
         <p>
-          <a href="https://support.citizenwiki.cn/all" target="_blank">
+          <a href="https://support.citizenwiki.cn/t/StarFinder" target="_blank">
             反馈平台
           </a>
           {" | "}

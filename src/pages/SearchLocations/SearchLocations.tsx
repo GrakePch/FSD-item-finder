@@ -1,8 +1,9 @@
+import TerminalIndex from "../TerminalIndex/TerminalIndex";
+
 const SearchLocations = () => {
   return (
     <div>
-      <h1>Search Locations</h1>
-      <p>Search for locations here.</p>
+      <TerminalIndex />
     </div>
   );
 };

@@ -1,0 +1,63 @@
+.SearchVehicleBar {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.SearchVehicleBar .search-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg-1);
+    border-radius: .5rem;
+    max-height: calc(100vh - var(--margin) * 4);
+    overflow: hidden;
+    /* box-shadow: var(--shadow-1); */
+}
+
+.SearchVehicleBar #searchvehiclebar {
+    flex-shrink: 0;
+    /* border-radius: 2rem; */
+    height: 3rem;
+    border: none;
+    padding: 0 3rem;
+    background-color: var(--color-bg-1);
+    font-family: inherit;
+    color: var(--color-text);
+    font-size: 1rem;
+    transition: background .2s;
+}
+
+.SearchVehicleBar #searchvehiclebar:hover {
+    background-color: var(--color-bg-2);
+}
+
+.SearchVehicleBar #searchvehiclebar:focus {
+    outline: none;
+}
+
+.SearchVehicleBar .btnSearch, .SearchVehicleBar .btnClear, .SearchVehicleBar .btnBack {
+    position: absolute;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    padding: .25rem;
+    margin: .5rem;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.SearchVehicleBar .btnClear:hover, .SearchVehicleBar .btnBack:hover {
+    background-color: var(--color-bg-2);
+}
+
+.SearchVehicleBar .btnSearch {
+    left: 0;
+}
+
+.SearchVehicleBar .btnBack {
+    left: 0;
+}
+
+.SearchVehicleBar .btnClear {
+    right: 0;
+}

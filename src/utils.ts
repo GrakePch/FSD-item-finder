@@ -260,3 +260,40 @@ export function pushLocalStorageRecent(key: string): void {
 export function clearLocalStorageRecent(): void {
     localStorage.removeItem("recent");
 }
+
+export function getVehicleNameNoBrand(spvVehicleIndex: SpvVehicleIndex): string {
+  let name = spvVehicleIndex.Name;
+  if (name.includes(" ")) {
+    name = name.split(" ").slice(1).join(" ");
+  }
+  return name;
+}
+
+export function formatVehicleImageSrc(
+  spvVehicleIndex: SpvVehicleIndex,
+  view: string = "top"
+): string {
+  const specialFileName: Record<string, string> = {
+    ANVL_Hornet_F7A_Mk1: "f7a-hornet",
+    ANVL_Hornet_F7A_Mk2: "f7a-mkii",
+    ANVL_Hornet_F7C: "f7c-hornet",
+    ANVL_Hornet_F7C_Mk2: "f7c-mkii",
+    AEGS_Retaliator: "retaliator-bomber",
+    RSI_Zeus_CL: "zeus-mkii-cl",
+    RSI_Zeus_ES: "zeus-mkii-es",
+    RSI_Zeus_MR: "zeus-mkii-mr",
+    RSI_Polaris_FW: "polaris",
+    CNOU_Pionneer: "pioneer",
+  };
+  const fileNameBeforeProcess =
+    specialFileName[spvVehicleIndex.ClassName] || getVehicleNameNoBrand(spvVehicleIndex);
+  return `https://ships.42kit.com/resized/${fileNameBeforeProcess
+    ?.normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace("'", "-")
+    .replace(".", "-")
+    .toLowerCase()
+    .trimEnd()
+    .replaceAll(" ", "-")}%20${view}.png`;
+}
+    
