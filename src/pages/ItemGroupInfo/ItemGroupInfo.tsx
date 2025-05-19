@@ -1,13 +1,15 @@
 import "./ItemGroupInfo.css";
 import { useContext, useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router";
-import { getCategoryZhName, getVariants } from "../../utils";
+import { getVariants, typeCapitalizedToKey } from "../../utils";
 import { useParams } from "react-router";
 import { ContextAllData } from "../../contexts";
 import TradeOptions from "../../components/TradeOptions/TradeOptions";
 import ItemColorIcon from "../../components/ItemColorIcon/ItemColorIcon";
+import { useTranslation } from "react-i18next";
 
 const ItemGroupInfo = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const { dictItems } = useContext(ContextAllData);
@@ -83,8 +85,12 @@ const ItemGroupInfo = () => {
           </h1>
           <h2 className="en">{firstVariant?.name} ...</h2>
           <div className="types">
-            <p className="type">{getCategoryZhName(item.type) || "未知"}</p>
-            <p className="subtype">{getCategoryZhName(item.sub_type) || "未知"}</p>
+            <p className="type">
+              {t("FilterType." + typeCapitalizedToKey(item.type || "unknown"))}
+            </p>
+            <p className="subtype">
+              {t("FilterType." + typeCapitalizedToKey(item.sub_type || "unknown"))}
+            </p>
           </div>
         </div>
         {totalPriceData && totalPriceData.length > 0 && (

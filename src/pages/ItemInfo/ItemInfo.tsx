@@ -8,22 +8,24 @@ import { mdiTagMultipleOutline } from "@mdi/js";
 import {
   getAttributeValueZhName,
   getAttributeZhName,
-  getCategoryZhName,
   getSet,
   getUEXAttribute,
   getVariants,
   pushLocalStorageRecent,
+  typeCapitalizedToKey,
 } from "../../utils";
 import ItemColorIcon from "../../components/ItemColorIcon/ItemColorIcon";
 import SetButton from "../../components/SetButton/SetButton";
 import TradeOptions from "../../components/TradeOptions/TradeOptions";
 import TagCurrent from "../../components/TagCurrent/TagCurrent";
 import TradeOptionsSortingControl from "../../components/TradeOptionsSortingControl/TradeOptionsSortingControl";
+import { useTranslation } from "react-i18next";
 
 const uexLinkItem = "https://uexcorp.space/items/info?name=";
 const uexLinkVehicle = "https://uexcorp.space/vehicles/home/list/in_game_sell/";
 
 const ItemInfo = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const [item, setItem] = useState<Item | null>(null);
@@ -62,13 +64,13 @@ const ItemInfo = () => {
             </div>
             <div className="types">
               <button className="type" onClick={() => handleTypeClick(item.type, "")}>
-                {getCategoryZhName(item.type)}
+                {t("FilterType." + typeCapitalizedToKey(item.type))}
               </button>
               <button
                 className="subtype"
                 onClick={() => handleTypeClick(item.type, item.sub_type)}
               >
-                {getCategoryZhName(item.sub_type)}
+                {t("FilterType." + typeCapitalizedToKey(item.sub_type))}
               </button>
             </div>
             <div className="attributes">

@@ -1,0 +1,15 @@
+.LanguageToggle {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    font-weight: 600;
+    background-color: var(--color-bg-2);
+    box-shadow: var(--shadow-2);
+    z-index: 999;
+}

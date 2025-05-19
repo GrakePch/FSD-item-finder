@@ -6,30 +6,47 @@ import { ContextAllData } from "../../../contexts";
 import {
   clearLocalStorageRecent,
   getAttributeValueByName,
-  getCategoryZhName,
   getLocalStorageRecent,
   isAscii,
+  typeKeyToCapitalized,
 } from "../../../utils";
 import { useSearchParams } from "react-router";
+import { useTranslation } from "react-i18next";
 
 const filterTypes = [
-  ["载具系统", "Systems."],
-  ["载具武器", "Vehicle Weapons."],
-  ["个人武器", "Personal Weapons."],
-  ["护甲", "Armor."],
+  ["systems", "Systems."],
+  ["vehicle_weapons", "Vehicle Weapons."],
+  ["personal_weapons", "Personal Weapons."],
+  ["armor", "Armor."],
 ];
 
-const subFilterTypes = {
+const subFilterTypes: Record<string, string[]> = {
   Systems: [
-    "Power Plants",
-    "Shield Generators",
-    "Coolers",
-    "Quantum Drives",
-    "Jump Modules",
+    "power_plants",
+    "shield_generators",
+    "coolers",
+    "quantum_drives",
+    "jump_modules",
   ],
-  "Vehicle Weapons": ["Guns", "Missiles", "Missile Racks", "Bombs", "Turrets"],
-  "Personal Weapons": ["Personal Weapons", "Attachments"],
-  Armor: ["Undersuits", "Helmets", "Torso", "Arms", "Legs", "Backpacks"],
+  "Vehicle Weapons": [
+    "guns",
+    "missiles",
+    "missile_racks",
+    "bombs",
+    "turrets",
+  ],
+  "Personal Weapons": [
+    "personal_weapons",
+    "attachments",
+  ],
+  Armor: [
+    "undersuits",
+    "helmets",
+    "torso",
+    "arms",
+    "legs",
+    "backpacks",
+  ],
 };
 
 const SEARCH_NAME_KEY = "fsd_searchItems_searchName";
@@ -41,6 +58,7 @@ const SearchBar = ({
   resultList: Item[];
   setResultList: React.Dispatch<React.SetStateAction<Item[]>>;
 }) => {
+  const {t} = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
   const { dictItems } = useContext(ContextAllData);
   const [isSearching, setIsSearching] = useState(false);
@@ -163,7 +181,7 @@ const SearchBar = ({
         <input
           type="text"
           id="searchbar"
-          placeholder={Object.keys(dictItems).length ? "搜索物品……" : "下载数据中……"}
+          placeholder={Object.keys(dictItems).length ? t("SearchItemBar.placeholder") : t("SearchItemBar.loadingData")}
           value={searchName}
           onChange={handleSearchChange}
           disabled={!Object.keys(dictItems).length}
@@ -182,22 +200,22 @@ const SearchBar = ({
           }}
           className={filterType ? undefined : "active"}
         >
-          全部
+          {t("FilterType.all")}
         </button>
-        {filterTypes.map(([name_zh, t]) => (
+        {filterTypes.map(([key, type]) => (
           <button
-            key={t}
+            key={type}
             onClick={() => {
-              if (searchParams.get("type")?.startsWith(t)) {
+              if (searchParams.get("type")?.startsWith(type)) {
                 searchParams.delete("type");
               } else {
-                searchParams.set("type", t);
+                searchParams.set("type", type);
               }
               setSearchParams(searchParams);
             }}
-            className={searchParams.get("type")?.startsWith(t) ? "active" : null}
+            className={searchParams.get("type")?.startsWith(type) ? "active" : null}
           >
-            {name_zh}
+            {t("FilterType." + key)}
           </button>
         ))}
         <hr />
@@ -210,7 +228,7 @@ const SearchBar = ({
             setSearchParams(searchParams);
           }}
         />
-        <label htmlFor="buyable-only">仅显示可购买</label>
+        <label htmlFor="buyable-only">{t("SearchItemBar.buyableOnly")}</label>
       </div>
       {subFilterTypes[filterType] && (
         <div className="filters sub">
@@ -221,32 +239,34 @@ const SearchBar = ({
             }}
             className={filterSubType ? undefined : "active"}
           >
-            全部
+            {t("FilterType.all")}
           </button>
           {subFilterTypes[filterType].map((subt) => (
             <button
               key={subt}
               onClick={() => {
-                if (filterSubType === subt) {
+                if (filterSubType === typeKeyToCapitalized(subt)) {
                   searchParams.set("type", filterType + ".");
                 } else {
-                  searchParams.set("type", filterType + "." + subt);
+                  searchParams.set("type", filterType + "." + typeKeyToCapitalized(subt));
                 }
                 setSearchParams(searchParams);
               }}
-              className={subt === filterSubType ? "active" : null}
+              className={typeKeyToCapitalized(subt) === filterSubType ? "active" : null}
             >
-              {getCategoryZhName(subt)}
+              {t("FilterType." + subt)}
             </button>
           ))}
         </div>
       )}
       {resultList.length > 0 &&
         (isSearching ? (
-          <p className="total">搜索结果共 {resultList.length} 个</p>
+            <p className="total">
+            {t("SearchItemBar.searchResultsTotal", { count: resultList.length })}
+            </p>
         ) : (
           <p className="total">
-            最近查询{" "}
+            {t("SearchItemBar.recentSearches")}{" "}
             <button
               className="btn-clear-recent"
               onClick={() => {
@@ -254,7 +274,7 @@ const SearchBar = ({
                 setResultList([]);
               }}
             >
-              <Icon path={mdiTrashCanOutline} size="1rem" /> 清除
+              <Icon path={mdiTrashCanOutline} size="1rem" /> {t("SearchItemBar.clear")}
             </button>
           </p>
         ))}

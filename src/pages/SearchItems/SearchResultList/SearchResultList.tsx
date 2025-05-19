@@ -1,17 +1,19 @@
 import "./SearchResultList.css";
 import { useNavigate, useSearchParams } from "react-router";
-import i18nCategories from "../../../data/categories_en_to_zh_Hans.json";
 import {
   getAttributeValueZhName,
   getAttributeValueByName,
   sizeToColor,
   classToColor,
   signalToColor,
+  typeCapitalizedToKey,
 } from "../../../utils";
 import { icon } from "../../../assets/icon";
 import Icon from "@mdi/react";
+import { useTranslation } from "react-i18next";
 
 const SearchResultList = ({ results }: { results: Item[] }) => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
 
@@ -45,8 +47,8 @@ const SearchResultList = ({ results }: { results: Item[] }) => {
               <Icon path={icon[item.sub_type]} size="2rem" />
             ) : (
               <div className="type">
-                <p>{i18nCategories[item.type] || item.type || "未知"}</p>
-                <p>{i18nCategories[item.sub_type] || item.sub_type || "未知"}</p>
+                <p>{t("FilterType."+typeCapitalizedToKey(item.type || "unknown"))}</p>
+                <p>{t("FilterType."+typeCapitalizedToKey(item.sub_type || "unknown"))}</p>
               </div>
             )}
             <div className="names">
@@ -81,10 +83,10 @@ const SearchResultList = ({ results }: { results: Item[] }) => {
               </div>
             )}
             {item.price_min_max.buy_min && item.price_min_max.buy_min < Infinity ? (
-              <p className="price">¤ {item.price_min_max.buy_min} 起</p>
+              <p className="price">¤ {item.price_min_max.buy_min} +</p>
             ) : (
               <p className="price" style={{ color: "hsl(0deg 0% 60%)" }}>
-                无法购买
+                {t("SearchItemResultList.notBuyable")}
               </p>
             )}
           </button>

@@ -2,6 +2,7 @@ import "./SearchVehicleBar.css";
 import React from "react";
 import Icon from "@mdi/react";
 import { mdiMagnify, mdiClose } from "@mdi/js";
+import { useTranslation } from "react-i18next";
 
 const SearchVehicleBar = ({
   searchName,
@@ -10,6 +11,7 @@ const SearchVehicleBar = ({
   searchName: string;
   setSearchName: React.Dispatch<React.SetStateAction<string>>;
 }) => {
+  const {t} = useTranslation();
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchName(e.target.value);
   };
@@ -23,7 +25,7 @@ const SearchVehicleBar = ({
         <input
           type="text"
           id="searchvehiclebar"
-          placeholder="搜索飞船……"
+          placeholder={t("SearchVehicleBar.placeholder")}
           value={searchName}
           onChange={handleSearchChange}
         />

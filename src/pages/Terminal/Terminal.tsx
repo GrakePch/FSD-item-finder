@@ -7,17 +7,18 @@ import {
   classToColor,
   getAttributeValueByName,
   getAttributeValueZhName,
-  getCategoryZhName,
   getLocationZhName,
   signalToColor,
   sizeToColor,
+  typeCapitalizedToKey,
 } from "../../utils";
 import Icon from "@mdi/react";
 import { icon } from "../../assets/icon";
-import i18nCategories from "../../data/categories_en_to_zh_Hans.json";
 import { mdiArrowLeft, mdiClose, mdiHomeVariantOutline, mdiMagnify } from "@mdi/js";
+import { useTranslation } from "react-i18next";
 
 const Terminal = () => {
+  const {t} = useTranslation();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const { dictTerminals, dictItems } = useContext(ContextAllData);
@@ -137,7 +138,7 @@ const Terminal = () => {
           {listTerminalsNearby.length > 0 && (
             <>
               <hr />
-              <h4>附近</h4>
+              <h4>{t("TerminalInfo.nearby")}</h4>
               <div className="nearby-terminals">
                 {listTerminalsNearby.map((t) => (
                   <button key={t.id} onClick={() => handleNearbyTerminalClick(t.id)}>
@@ -155,7 +156,7 @@ const Terminal = () => {
               <input
                 type="text"
                 id="searchbar"
-                placeholder="搜索本店商品……"
+                placeholder={t("TerminalInfoSearchBar.placeholder")}
                 value={searchString}
                 onChange={handleSearchChange}
               />
@@ -171,7 +172,7 @@ const Terminal = () => {
                 className={!filterSubType ? "active" : undefined}
                 onClick={() => setFilterSubType("")}
               >
-                全部
+                {t("FilterType.all")}
               </button>
               {Array.from(hashSetSubTypes).map((subType) => (
                 <button
@@ -181,7 +182,7 @@ const Terminal = () => {
                     setFilterSubType(filterSubType === subType ? "" : subType)
                   }
                 >
-                  {getCategoryZhName(subType)}
+                  {t("FilterType." + typeCapitalizedToKey(subType))}
                 </button>
               ))}
             </div>
@@ -222,9 +223,9 @@ const Terminal = () => {
                         <Icon path={icon[item.sub_type]} size="2rem" />
                       ) : (
                         <div className="type">
-                          <p>{i18nCategories[item.type] || item.type || "未知"}</p>
+                          <p>{t("FilterType."+typeCapitalizedToKey(item.type || "unknown"))}</p>
                           <p>
-                            {i18nCategories[item.sub_type] || item.sub_type || "未知"}
+                            {t("FilterType."+typeCapitalizedToKey(item.sub_type || "unknown"))}
                           </p>
                         </div>
                       )}
@@ -273,8 +274,8 @@ const Terminal = () => {
         </>
       ) : (
         <div className="name">
-          <h1 className="zh">商店不存在</h1>
-          <h2 className="en">Terminal Not Found</h2>
+          <h1 className="zh">{t("TerminalInfo.notFound")}</h1>
+          <h2 className="en">{t("TerminalInfo.notFound", {lng: "en"})}</h2>
         </div>
       )}
     </div>

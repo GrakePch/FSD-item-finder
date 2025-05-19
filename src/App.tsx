@@ -15,6 +15,9 @@ import ItemGroupInfo from "./pages/ItemGroupInfo/ItemGroupInfo";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import VehicleInfo from "./pages/VehicleInfo/VehicleInfo";
+import { I18nextProvider } from "react-i18next";
+import i18n from "./i18n";
+import LanguageToggle from "./components/LanguageToggle/LanguageToggle";
 
 function App() {
   const [allData, setAllData] = useState<AllData>({
@@ -59,22 +62,25 @@ function App() {
   useEffect(() => console.log(allData), [allData]);
 
   return (
-    <ContextAllData.Provider value={allData}>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<SearchItems />} />
-        <Route path="/v" element={<SearchVehicles />} />
-        <Route path="/l" element={<SearchLocations />} />
-        <Route path="/i/:itemKey" element={<ItemInfo />} />
-        <Route path="/iv/:itemKey" element={<ItemGroupInfo />} />
-        <Route path="/v/:vehicleClassName" element={<VehicleInfo />} />
-        {/* <Route path="/b/:celestialBodyKey" element={<CelestialBodyInfo />} /> */}
-        {/* <Route path="/l/:locationKey" element={<LocationInfo />} /> */}
-        <Route path="/t/:terminalId" element={<Terminal />} />
-        {/* <Route path="*" element={<NotFound />} /> */}
-      </Routes>
-      <Footer />
-    </ContextAllData.Provider>
+    <I18nextProvider i18n={i18n}>
+      <ContextAllData.Provider value={allData}>
+        <NavBar />
+        <LanguageToggle />
+        <Routes>
+          <Route path="/" element={<SearchItems />} />
+          <Route path="/v" element={<SearchVehicles />} />
+          <Route path="/l" element={<SearchLocations />} />
+          <Route path="/i/:itemKey" element={<ItemInfo />} />
+          <Route path="/iv/:itemKey" element={<ItemGroupInfo />} />
+          <Route path="/v/:vehicleClassName" element={<VehicleInfo />} />
+          {/* <Route path="/b/:celestialBodyKey" element={<CelestialBodyInfo />} /> */}
+          {/* <Route path="/l/:locationKey" element={<LocationInfo />} /> */}
+          <Route path="/t/:terminalId" element={<Terminal />} />
+          {/* <Route path="*" element={<NotFound />} /> */}
+        </Routes>
+        <Footer />
+      </ContextAllData.Provider>
+    </I18nextProvider>
   );
 }
 

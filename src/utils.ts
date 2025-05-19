@@ -1,8 +1,6 @@
 import itemsUex from "./data/items_uex.json";
-import vehiclesUex from "./data/vehicles_uex.json";
 import i18nLocations from "./data/i18n_locations.json";
 import i18nLocationsM from "./data/i18n_locations_manual.json";
-import i18nCategories from "./data/categories_en_to_zh_Hans.json";
 import i18nAttributes from "./data/i18n_attributes.json";
 import i18nAttributeValues from "./data/i18n_attribute_values.json";
 import typeMap from "./data/type_map_full_items.json";
@@ -38,11 +36,6 @@ export function getLocationZhName(name_en) {
     return name_en;
 }
 
-export function getCategoryZhName(name_en) {
-    if (!name_en) return name_en;
-    return i18nCategories[name_en] || name_en;
-}
-
 export function getItemUexFormat(id: number) {
     for (const item of (itemsUex as ItemUEXApiResponse[])) {
         if (item.id == id) {
@@ -51,14 +44,6 @@ export function getItemUexFormat(id: number) {
     }
     // console.log("No item found for id: " + id);
     return null;
-}
-
-export function getVehicleUEXFormat(id) {
-    for (const vehicle of vehiclesUex) {
-        if (vehicle.id == id) {
-            return vehicle;
-        }
-    }
 }
 
 export function getUEXAttribute(id) {
@@ -296,4 +281,19 @@ export function formatVehicleImageSrc(
     .trimEnd()
     .replaceAll(" ", "-")}%20${view}.png`;
 }
-    
+
+// Type i18n key <-> capitalized string
+export const typeKeyToCapitalized = (key: string) =>
+  key
+    .split("_")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
+export const typeCapitalizedToKey = (capitalized: string) =>
+    capitalized
+        .split(" ")
+        .map(word => word.toLowerCase())
+        .join("_");
+
+export const spvRoleToKey = (role: string) => 
+    role.toLowerCase().replaceAll(" ","").replaceAll("/","");

@@ -6,9 +6,11 @@ import spvVehicleIndex from "../../data/vehicles/spv_vehicle_index";
 import spvClassNameToUexId from "../../data/vehicles/spv_classname_to_uex_id.json";
 import TradeOptionsSortingControl from "../../components/TradeOptionsSortingControl/TradeOptionsSortingControl";
 import TradeOptions from "../../components/TradeOptions/TradeOptions";
-import { formatVehicleImageSrc } from "../../utils";
+import { formatVehicleImageSrc, spvRoleToKey } from "../../utils";
+import { useTranslation } from "react-i18next";
 
 const VehicleInfo = () => {
+  const { t } = useTranslation();
   const vehicleClassName = useParams().vehicleClassName;
   const { dictVehicles } = useContext(ContextAllData);
 
@@ -23,21 +25,32 @@ const VehicleInfo = () => {
   }, [dictVehicles, spvClassNameToUexId, vehicleClassName]);
 
   return (
+    spvVehicle && (
     <div className="VehicleInfo">
       <div className="highlight-info">
         <img
           src={formatVehicleImageSrc(spvVehicle, "iso")}
-          alt={spvVehicle?.Name}
+          alt={spvVehicle.Name}
           className="vehicle-image"
         />
         <div className="vehicle-main-info">
-          <h1>{spvVehicle?.Name ?? "Unknown Vehicle"}</h1>
-          <h2>{uexVehicle?.name ?? "Unknown UEX Vehicle"}</h2>
+          <h1>{t("Vehicle.vehicle_Name" + spvVehicle.ClassName)}</h1>
+          <h2>{t("Vehicle.vehicle_Name" + spvVehicle.ClassName, { lng: "en" })}</h2>
+          <p className="vehicle-role">
+            {t("VehicleClass.vehicle_class_" + spvRoleToKey(spvVehicle.Role), {
+              defaultValue: t(
+                "VehicleFocus.vehicle_focus_" + spvRoleToKey(spvVehicle.Role),
+                {
+                  defaultValue: spvVehicle.Role,
+                }
+              ),
+            })}
+          </p>
         </div>
       </div>
       <div className="trading-info">
         <TradeOptionsSortingControl />
-        {uexVehicle.options &&
+        {uexVehicle?.options &&
           uexVehicle.options.length > 0 &&
           uexVehicle.price_min_max.buy_min &&
           uexVehicle.price_min_max.buy_min < Infinity && (
@@ -47,7 +60,7 @@ const VehicleInfo = () => {
               tradeType="buy"
             />
           )}
-        {uexVehicle.options_rent && uexVehicle.options_rent.length > 0 && (
+        {uexVehicle?.options_rent && uexVehicle.options_rent.length > 0 && (
           <TradeOptions
             pricesData={uexVehicle.options_rent}
             priceMinMax={uexVehicle.price_min_max}
@@ -56,6 +69,7 @@ const VehicleInfo = () => {
         )}
       </div>
     </div>
+    )
   );
 };
 

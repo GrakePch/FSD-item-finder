@@ -10,11 +10,11 @@
     background-color: var(--color-bg-1);
     border-radius: .5rem;
     transform-origin: center;
-    transition: background-color .2s, transform .2s;
+    transition: filter .2s, transform .2s;
 }
 
 .VehicleCard:hover {
-    background-color: var(--color-bg-2);
+    filter: brightness(1.2);
     transform: scale(1.01);
 }
 
@@ -29,6 +29,19 @@
 
 .VehicleCard .vehicle-name-big {
     font-size: 1rem;
+    font-weight: 500;
+}
+
+.VehicleCard .vehicle-role {
+    font-size: .75rem;
+    color: var(--color-bg);
+    font-family: var(--font-slim);
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: var(--color-text-2);
+    width: max-content;
+    padding: 1px 5px;
+    border-radius: 2px;
 }
 
 .VehicleCard .vehicle-price-container {
@@ -58,11 +71,6 @@
 .VehicleCard .vehicle-price-UEC.inactive {
     color: var(--color-text-2);
     font-size: .75rem;
-}
-
-.VehicleCard .vehicle-name-small {
-    font-size: .75rem;
-    color: var(--color-text-1);
 }
 
 .VehicleCard .vehicle-thumbnail {

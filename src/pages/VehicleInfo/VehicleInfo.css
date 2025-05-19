@@ -15,6 +15,18 @@
     flex-grow: 1;
 }
 
+.VehicleInfo .vehicle-role {
+    font-size: 1rem;
+    color: var(--color-bg);
+    font-family: var(--font-slim);
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: var(--color-text-2);
+    width: max-content;
+    padding: 1px 5px;
+    border-radius: 2px;
+}
+
 .VehicleInfo .vehicle-image {
     height: 16rem;
     align-self: center;

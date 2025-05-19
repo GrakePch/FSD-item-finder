@@ -2,6 +2,7 @@ import "./SearchVehicleResultList.css";
 import spvVehicleIndex from "../../../data/vehicles/spv_vehicle_index";
 import vehicleClassNameToSeries from "../../../data/vehicles/manual_vehicle_classname_to_series";
 import VehicleCard from "./VehicleCard/VehicleCard";
+import { useTranslation } from "react-i18next";
 
 type seriesInfo = {
   isSeries: boolean;
@@ -12,6 +13,7 @@ type seriesInfo = {
 };
 
 const SearchVehicleResultList = ({ searchName }: { searchName: string }) => {
+  const { t } = useTranslation();
   // Filter vehicles based on searchName (case-insensitive)
   const vehicles = spvVehicleIndex.filter((vehicle) =>
     vehicle.Name.toLowerCase().includes(searchName.toLowerCase())
@@ -58,7 +60,7 @@ const SearchVehicleResultList = ({ searchName }: { searchName: string }) => {
   });
 
   return !vehicles.length ? (
-    <div className="SearchVehicleResultList">暂无搜索结果</div>
+    <div className="SearchVehicleResultList">{t("SearchVehicleResultList.noResult")}</div>
   ) : (
     <div className="SearchVehicleResultList">
       <ul className="vehicle-group-list">
@@ -67,7 +69,7 @@ const SearchVehicleResultList = ({ searchName }: { searchName: string }) => {
           .map((group) =>
             group.isSeries ? (
               <li key={group.seriesKey} className="vehicle-group">
-                <div className="vehicle-series-title">{group.seriesKey}</div>
+                <div className="vehicle-series-title">{t("VehicleSeries."+group.seriesKey)}</div>
                 <ul className="vehicle-list">
                   {group.vehicles
                     .sort((a, b) => (a.Store.Buy || Infinity) - (b.Store.Buy || Infinity))

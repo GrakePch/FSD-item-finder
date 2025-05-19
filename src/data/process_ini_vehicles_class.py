@@ -6,7 +6,7 @@ output_en = "en.json"
 output_zh = "zh.json"
 
 # Only include keys that start with any of these
-initials = ["vehicle_Name"]
+initials = ["vehicle_class"]
 
 def ini_to_dict(filepath, initials):
     result = {}
