@@ -1,0 +1,133 @@
+.VelocitiesScmNav {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    min-height: 20px;
+    height: 100%;
+    flex-shrink: 0;
+    /* background-color: var(--color-bg-2); */
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--color-primary);
+    container-type: size; /* For child to use unit cqh */
+    --color-primary: var(--color-text);
+    --color-primary-dim: var(--color-text-1);
+    --color-boost: hsl(0, 83%, 60%);
+    --color-nav-mode: hsla(200, 60%, 60%);
+}
+
+.VelocitiesScmNav .axis-lr {
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: var(--color-primary);
+}
+
+.VelocitiesScmNav .axis-fb {
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: var(--color-primary);
+}
+
+.VelocitiesScmNav .nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: var(--color-nav-mode);
+    opacity: 0.5;
+}
+
+.VelocitiesScmNav .scm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: var(--color-primary-dim);
+}
+
+.VelocitiesScmNav .scm-boost-forward-left {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -100%);
+    border-radius: 100% 0 0 0;
+    background-color: var(--color-boost);
+    opacity: .7;
+}
+
+.VelocitiesScmNav .scm-boost-forward-right {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0, -100%);
+    border-radius: 0 100% 0 0;
+    background-color: var(--color-boost);
+    opacity: .7;
+}
+
+.VelocitiesScmNav .scm-boost-backward {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 0 0 100vh 100vh;
+    background-color: var(--color-boost);
+    opacity: .7;
+}
+
+.VelocitiesScmNav .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    line-height: 1;
+    font-size: 6cqh;
+    font-family: var(--font-slim);
+    font-variant-numeric: tabular-nums;
+}
+
+.VelocitiesScmNav .value-nav {
+    font-weight: 600;
+    color: var(--color-nav-mode);
+    transform: translate(-50%, -50%) rotate(-45deg) translateY(-50cqh) translateY(-100%);
+}
+
+.VelocitiesScmNav .value-scm-boost-forward {
+    font-weight: 600;
+    color: var(--color-boost);
+    transform: translate(-50%, -50%) rotate(45deg) translateY(50cqh) translateY(100%);
+}
+
+.VelocitiesScmNav .value-scm {
+    font-weight: 600;
+    color: var(--color-text);
+    transform: translate(-50%, -50%) rotate(-45deg) translateY(50cqh) translateY(100%);
+}
+
+.VelocitiesScmNav .title-nav {
+    font-size: 5cqh;
+    color: var(--color-nav-mode);
+    transform: translate(-50%, -50%) rotate(-45deg) translateY(-50cqh) translateY(-250%);
+}
+
+.VelocitiesScmNav .title-scm-boost-forward {
+    font-size: 5cqh;
+    color: var(--color-boost);
+    transform: translate(-50%, -50%) rotate(45deg) translateY(50cqh) translateY(250%);
+}
+
+.VelocitiesScmNav .title-scm {
+    font-size: 5cqh;
+    color: var(--color-text);
+    transform: translate(-50%, -50%) rotate(-45deg) translateY(50cqh) translateY(250%);
+}

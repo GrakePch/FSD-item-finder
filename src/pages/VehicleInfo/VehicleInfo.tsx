@@ -9,6 +9,7 @@ import TradeOptionsSortingControl from "../../components/TradeOptionsSortingCont
 import TradeOptions from "../../components/TradeOptions/TradeOptions";
 import { formatVehicleImageSrc, spvRoleToKey } from "../../utils";
 import { useTranslation } from "react-i18next";
+import FlightVelocities from "./FlightVelocities/FlightVelocities";
 
 const VehicleInfo = () => {
   const { t } = useTranslation();
@@ -96,6 +97,11 @@ const VehicleInfo = () => {
           />
         )}
       </div>
+      {
+        spvVehicleMain && (
+          <FlightVelocities spvVehicleMain={spvVehicleMain} />
+        )
+      }
       </div>
     </div>
     )
