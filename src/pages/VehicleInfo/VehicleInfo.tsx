@@ -98,8 +98,8 @@ const VehicleInfo = () => {
         )}
       </div>
       {
-        spvVehicleMain && (
-          <FlightVelocities spvVehicleMain={spvVehicleMain} />
+        spvVehicleMain?.FlightCharacteristics && (
+          <FlightVelocities spvFC={spvVehicleMain.FlightCharacteristics} />
         )
       }
       </div>

@@ -2,8 +2,7 @@ import "./FlightVelocities.css";
 import PitchYawRoll from "./PitchYawRoll/PitchYawRoll";
 import VelocitiesScmNav from "./VelocitiesScmNav/VelocitiesScmNav";
 
-const FlightVelocities = ({ spvVehicleMain }: { spvVehicleMain: SpvVehicleMain }) => {
-  const spvFC = spvVehicleMain.FlightCharacteristics;
+const FlightVelocities = ({ spvFC }: { spvFC: SpvFlightCharacteristics }) => {
   const spvFCBAngular = spvFC.Boost.AngularVelocityMultiplier;
   return (
     <div className="FlightVelocities">

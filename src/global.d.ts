@@ -243,81 +243,8 @@ interface SpvVehicleMain {
       Maneuvering: { [key: string]: number };
     };
   };
-  FlightCharacteristics?: {
-    ScmSpeed: number;
-    HoverMaxSpeed?: number;
-    MaxSpeed: number;
-    Pitch: number;
-    Yaw: number;
-    Roll: number;
-    IsVtolAssisted: boolean;
-    UseDirectionModifiers: boolean;
-    ThrustCapacity: {
-      Main: number;
-      Retro: number;
-      Vtol: number;
-      Maneuvering: number;
-    };
-    AccelerationG: {
-      IsValidated: boolean;
-      Main: number;
-      Retro: number;
-      Strafe: number;
-      Up: number;
-      Down: number;
-      CheckDate?: string;
-    };
-    MasterModes: {
-      BaseSpoolTime: number;
-      QuantumDriveSpoolTime?: number;
-      ScmMode: {
-        BoostSpeedForward: number;
-        BoostSpeedBackward: number;
-      };
-    };
-    Boost: {
-      PreDelay: number;
-      RampUp: number;
-      RampDown: number;
-      AccelerationMultiplier: {
-        PositiveAxis: { X: number; Y: number; Z: number };
-        NegativeAxis: { X: number; Y: number; Z: number };
-      };
-      AngularAccelerationMultiplier: { Pitch: number; Yaw: number; Roll: number };
-      AngularVelocityMultiplier: { Pitch: number; Yaw: number; Roll: number };
-    };
-    Capacitors: {
-      ThrusterCapacitorSize: number;
-      CapacitorRegenPerSec: number;
-      CapacitorIdleCost: number;
-      CapacitorLinearCost: number;
-      CapacitorUsageModifier: number;
-      CapacitorRegenDelay: number;
-      RegenerationTime: number;
-      X_AccelMultiplicator: number;
-      Y_AccelMultiplicator: number;
-      Z_AccelMultiplicator: number;
-    };
-  };
-  FuelManagement?: {
-    FuelCapacity: number;
-    FuelIntakeRate: number;
-    QuantumFuelCapacity: number;
-    FuelBurnRatePer10KNewton: {
-      Main: number;
-      Retro: number;
-      Vtol: number;
-      Maneuvering: number;
-    };
-    FuelUsagePerSecond: {
-      Main: number;
-      Retro: number;
-      Vtol: number;
-      Maneuvering: number;
-    };
-    IntakeToMainFuelRatio: number;
-    TimeForIntakesToFillTank: number | "Infinity";
-  };
+  FlightCharacteristics?: SpvFlightCharacteristics;
+  FuelManagement?: SpvFuelManagement;
   SteerCharacteristics?: {
     V0SteerSpeed: number;
     VMaxSteerSpeed: number;
@@ -392,6 +319,83 @@ interface SpvVehicleMain {
   Buy?: {
     [location: string]: number;
   };
+}
+
+interface SpvFlightCharacteristics {
+  ScmSpeed: number;
+  HoverMaxSpeed?: number;
+  MaxSpeed: number;
+  Pitch: number;
+  Yaw: number;
+  Roll: number;
+  IsVtolAssisted: boolean;
+  UseDirectionModifiers: boolean;
+  ThrustCapacity: {
+    Main: number;
+    Retro: number;
+    Vtol: number;
+    Maneuvering: number;
+  };
+  AccelerationG: {
+    IsValidated: boolean;
+    Main: number;
+    Retro: number;
+    Strafe: number;
+    Up: number;
+    Down: number;
+    CheckDate?: string;
+  };
+  MasterModes: {
+    BaseSpoolTime: number;
+    QuantumDriveSpoolTime?: number;
+    ScmMode: {
+      BoostSpeedForward: number;
+      BoostSpeedBackward: number;
+    };
+  };
+  Boost: {
+    PreDelay: number;
+    RampUp: number;
+    RampDown: number;
+    AccelerationMultiplier: {
+      PositiveAxis: { X: number; Y: number; Z: number };
+      NegativeAxis: { X: number; Y: number; Z: number };
+    };
+    AngularAccelerationMultiplier: { Pitch: number; Yaw: number; Roll: number };
+    AngularVelocityMultiplier: { Pitch: number; Yaw: number; Roll: number };
+  };
+  Capacitors: {
+    ThrusterCapacitorSize: number;
+    CapacitorRegenPerSec: number;
+    CapacitorIdleCost: number;
+    CapacitorLinearCost: number;
+    CapacitorUsageModifier: number;
+    CapacitorRegenDelay: number;
+    RegenerationTime: number;
+    X_AccelMultiplicator: number;
+    Y_AccelMultiplicator: number;
+    Z_AccelMultiplicator: number;
+  };
+}
+
+interface SpvFuelManagement {
+  FuelCapacity: number;
+  FuelIntakeRate: number;
+  QuantumFuelCapacity: number;
+  FuelBurnRatePer10KNewton: {
+    Main: number;
+    Retro: number;
+    Vtol: number;
+    Maneuvering: number;
+  };
+  FuelUsagePerSecond: {
+    Main: number;
+    Retro: number;
+    Vtol: number;
+    Maneuvering: number;
+  };
+  IntakeToMainFuelRatio: number;
+  TimeForIntakesToFillTank: number | "Infinity";
 }
 
 // API response interfaces
