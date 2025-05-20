@@ -23,6 +23,19 @@
   "TerminalInfoSearchBar": {
     "placeholder": "Search Items in this terminal..."
   },
+  "VehicleInfo": {
+    "isLimitedSale": "Limited Sale",
+    "isPromotionOnly": "Promotion Only",
+    "notBuyableUSD": "Not Sell in Store",
+    "notBuyableUEC": "Not Sell in Game",
+    "Dimensions": "{{L}} L × {{W}} W × {{H}} H m"
+  },
+  "SPVProgressTrackerStatus": {
+    "Concept": "Concept",
+    "InProd": "In Production",
+    "Released": "Released",
+    "OnHold": "On Hold"
+  },
   "UEXAttribute": {
     "1": "Armor Class",
     "2": "Type",
@@ -248,7 +261,8 @@
     "AEGS_Sabre": "Aegis Sabre Series",
     "AEGS_Vanguard": "Aegis Vanguard Series",
     "ANVL_C8_Pisces": "Anvil C8 Pisces Series",
-    "ANVL_Hornet_F7": "Anvil F7 Hornet Series",
+    "ANVL_Hornet_F7": "Anvil F7 Hornet Mk I Series",
+    "ANVL_Hornet_F7_Mk2": "Anvil F7 Hornet Mk II Series",
     "ANVL_Terrapin": "Anvil Terrapin Series",
     "ARGO_MPUV": "Argo MPUV Series",
     "ARGO_CSV": "Argo CSV Series",
@@ -271,6 +285,7 @@
     "MISC_Reliant": "MISC Reliant Series",
     "MISC_Starfarer": "MISC Starfarer Series",
     "MISC_Starlancer": "MISC Starlancer Series",
+    "MRAI_Guardian": "Mirai Guardian Series",
     "MRAI_Pulse": "Mirai Pulse Series",
     "ORIG_100": "Origin 100 Series",
     "ORIG_300": "Origin 300 Series",

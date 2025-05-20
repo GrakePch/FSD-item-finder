@@ -251,6 +251,8 @@ export function formatVehicleImageSrc(
     ANVL_Hornet_F7A_Mk2: "f7a-mkii",
     ANVL_Hornet_F7C: "f7c-hornet",
     ANVL_Hornet_F7C_Mk2: "f7c-mkii",
+    ANVL_Hornet_F7CM: "f7c-m-super-hornet",
+    ANVL_Hornet_F7CM_Heartseeker: "f7c-m-super-hornet-heartseeker",
     AEGS_Retaliator: "retaliator-bomber",
     RSI_Zeus_CL: "zeus-mkii-cl",
     RSI_Zeus_ES: "zeus-mkii-es",

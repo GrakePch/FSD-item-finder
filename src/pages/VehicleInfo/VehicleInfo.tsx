@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { ContextAllData } from "../../contexts";
 import { useContext, useMemo } from "react";
 import spvVehicleIndex from "../../data/vehicles/spv_vehicle_index";
+import spvVehicleList from "../../data/vehicles/spv_vehicle_list";
 import spvClassNameToUexId from "../../data/vehicles/spv_classname_to_uex_id.json";
 import TradeOptionsSortingControl from "../../components/TradeOptionsSortingControl/TradeOptionsSortingControl";
 import TradeOptions from "../../components/TradeOptions/TradeOptions";
@@ -19,24 +20,30 @@ const VehicleInfo = () => {
     [vehicleClassName]
   );
 
+  const spvVehicleMain = useMemo(
+    () => spvVehicleList.find((v) => v.ClassName === vehicleClassName),
+    [vehicleClassName]
+  );
+
   const uexVehicle = useMemo(() => {
     const uexId = spvClassNameToUexId[vehicleClassName];
     return Object.values(dictVehicles).find((v) => v.id_vehicle === uexId);
   }, [dictVehicles, spvClassNameToUexId, vehicleClassName]);
 
   return (
-    spvVehicle && (
+    spvVehicle  && (
     <div className="VehicleInfo">
       <div className="highlight-info">
-        <img
-          src={formatVehicleImageSrc(spvVehicle, "iso")}
-          alt={spvVehicle.Name}
+        <div
+          style={{
+            backgroundImage: `url(${formatVehicleImageSrc(spvVehicle, "iso")})`,}}
           className="vehicle-image"
-        />
+        ></div>
         <div className="vehicle-main-info">
           <h1>{t("Vehicle.vehicle_Name" + spvVehicle.ClassName, { defaultValue: spvVehicle.Name})}</h1>
           <h2>{t("Vehicle.vehicle_Name" + spvVehicle.ClassName, { defaultValue: spvVehicle.Name, lng: "en" })}</h2>
-          <p className="vehicle-role">
+          <p>
+          <span className="vehicle-role">
             {t("VehicleClass.vehicle_class_" + spvRoleToKey(spvVehicle.Role), {
               defaultValue: t(
                 "VehicleFocus.vehicle_focus_" + spvRoleToKey(spvVehicle.Role),
@@ -45,9 +52,30 @@ const VehicleInfo = () => {
                 }
               ),
             })}
+          </span>
+            <span className={`vehicle-status ${spvVehicle.ProgressTracker.Status}`}>
+              {t("SPVProgressTrackerStatus." + spvVehicle.ProgressTracker.Status)} {spvVehicle.ProgressTracker.Patch}
+            </span>
           </p>
+          {/* {spvVehicleMain &&
+            <p className="dimensions">{t("VehicleInfo.Dimensions", {
+              L: spvVehicleMain.Dimensions.Length, 
+              W: spvVehicleMain.Dimensions.Width, 
+              H: spvVehicleMain.Dimensions.Height
+              })}
+            </p>
+          } */}
+          <div style={{flexGrow: 1, flexBasis: "1rem"}}></div>
+          <p className="store-info">
+            {spvVehicle.Store.Buy ? 
+            <span className="price-USD">$ {spvVehicle.Store.Buy}</span> : 
+            <span className="price-USD inactive">{t("VehicleInfo.notBuyableUSD")}</span>}
+            {spvVehicle.Store.IsLimitedSale && <span className="is-limited-sale">{t("VehicleInfo.isLimitedSale")}</span>}
+            {spvVehicle.Store.IsPromotionOnly && <span className="is-promotion-only">{t("VehicleInfo.isPromotionOnly")}</span>}
+            </p>
         </div>
       </div>
+      <div className="grid">
       <div className="trading-info">
         <TradeOptionsSortingControl />
         {uexVehicle?.options &&
@@ -67,6 +95,7 @@ const VehicleInfo = () => {
             tradeType="rent"
           />
         )}
+      </div>
       </div>
     </div>
     )

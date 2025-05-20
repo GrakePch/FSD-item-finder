@@ -169,7 +169,7 @@ interface SpvVehicleIndex {
     Url: string;
   };
   ProgressTracker: {
-    Status: string;
+    Status: "Concept" | "InProd" | "Released" | "OnHold";
     Patch?: string;
     IsOnPT: boolean;
     ID: string;

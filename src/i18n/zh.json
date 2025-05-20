@@ -23,6 +23,19 @@
   "TerminalInfoSearchBar": {
     "placeholder": "搜索本终端商品……"
   },
+  "VehicleInfo": {
+    "isLimitedSale": "限量发售",
+    "isPromotionOnly": "活动专属",
+    "notBuyableUSD": "无法官网购买",
+    "notBuyableUEC": "无法游戏内购买",
+    "Dimensions": "长 {{L}} × 宽 {{W}} × 高 {{H}} m"
+  },
+  "SPVProgressTrackerStatus": {
+    "Concept": "概念",
+    "InProd": "制作中",
+    "Released": "已交付",
+    "OnHold": "暂停制作"
+  },
   "UEXAttribute": {
     "1": "护甲级别",
     "2": "类型",
@@ -248,7 +261,8 @@
     "AEGS_Sabre": "圣盾 军刀 系列",
     "AEGS_Vanguard": "圣盾 先锋 系列",
     "ANVL_C8_Pisces": "铁砧 C8 双鱼座 系列",
-    "ANVL_Hornet_F7": "铁砧 F7 大黄蜂 系列",
+    "ANVL_Hornet_F7": "铁砧 F7 大黄蜂 Mk I 系列",
+    "ANVL_Hornet_F7_Mk2": "铁砧 F7 大黄蜂 Mk II 系列",
     "ANVL_Terrapin": "铁砧 水龟 系列",
     "ARGO_MPUV": "南船 MPUV 系列",
     "ARGO_CSV": "南船座 CSV 系列",
@@ -271,7 +285,8 @@
     "MISC_Reliant": "武藏 信赖 系列",
     "MISC_Starfarer": "武藏 星际远航者 系列",
     "MISC_Starlancer": "武藏 星际枪骑兵 系列",
-    "MRAI_Pulse": "未来 Pulse 系列",
+    "MRAI_Guardian": "未来 守护者 系列",
+    "MRAI_Pulse": "未来 脉冲 系列",
     "ORIG_100": "起源 100 系列",
     "ORIG_300": "起源 300 系列",
     "ORIG_600": "起源 600 系列",

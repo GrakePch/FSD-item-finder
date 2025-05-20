@@ -32,12 +32,12 @@ const VehicleCard = ({ vehicle }: VehicleCardProps) => {
           {vehicle.Store.Buy ? (
             <p className="vehicle-price-USD">{`$ ${vehicle.Store.Buy.toLocaleString()}`}</p>
           ) : (
-            <p className="vehicle-price-USD inactive">无法官网购买</p>
+            <p className="vehicle-price-USD inactive">{t("VehicleInfo.notBuyableUSD")}</p>
           )}
           {vehicle.PU.Buy ? (
             <p className="vehicle-price-UEC">{`¤ ${vehicle.PU.Buy.toLocaleString()}`}</p>
           ) : (
-            <p className="vehicle-price-UEC inactive">无法游戏内购买</p>
+            <p className="vehicle-price-UEC inactive">{t("VehicleInfo.notBuyableUEC")}</p>
           )}
         </div>
       </div>
