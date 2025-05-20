@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import "./VelocitiesScmNav.css";
 
 interface VelocitiesScmNavProps {
@@ -15,6 +16,7 @@ const VelocitiesScmNav = ({
   nav,
   max,
 }: VelocitiesScmNavProps) => {
+  const { t } = useTranslation();
   return (
     <div className="VelocitiesScmNav">
       <div className="nav" style={{ width: (nav / max) * 100 + "%" }}></div>
@@ -45,9 +47,11 @@ const VelocitiesScmNav = ({
       <div className="text value-nav">{Math.round(nav)} m/s</div>
       <div className="text value-scm-boost-forward">{Math.round(scmBoostF)} m/s</div>
       <div className="text value-scm">{Math.round(scm)} m/s</div>
-      <div className="text title-nav">NAV</div>
-      <div className="text title-scm-boost-forward">Boost</div>
-      <div className="text title-scm">SCM</div>
+      <div className="text title-nav">{t("VehicleInfo.FlightVelocities.NAV")}</div>
+      <div className="text title-scm-boost-forward">
+        {t("VehicleInfo.FlightVelocities.Boost")}
+      </div>
+      <div className="text title-scm">{t("VehicleInfo.FlightVelocities.SCM")}</div>
     </div>
   );
 };

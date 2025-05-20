@@ -18,6 +18,7 @@
 
 .VelocitiesScmNav .axis-lr {
     height: 2px;
+    margin-top: -1px;
     width: 100%;
     position: absolute;
     top: 50%;
@@ -27,6 +28,7 @@
 
 .VelocitiesScmNav .axis-fb {
     width: 2px;
+    margin-left: -1px;
     height: 100%;
     position: absolute;
     top: 0;
@@ -105,13 +107,13 @@
 .VelocitiesScmNav .value-scm-boost-forward {
     font-weight: 600;
     color: var(--color-boost);
-    transform: translate(-50%, -50%) rotate(45deg) translateY(50cqh) translateY(100%);
+    transform: translate(-50%, -50%) rotate(-45deg) translateY(50cqh) translateY(100%);
 }
 
 .VelocitiesScmNav .value-scm {
     font-weight: 600;
     color: var(--color-text);
-    transform: translate(-50%, -50%) rotate(-45deg) translateY(50cqh) translateY(100%);
+    transform: translate(-50%, -50%) rotate(45deg) translateY(50cqh) translateY(100%);
 }
 
 .VelocitiesScmNav .title-nav {
@@ -123,11 +125,11 @@
 .VelocitiesScmNav .title-scm-boost-forward {
     font-size: 5cqh;
     color: var(--color-boost);
-    transform: translate(-50%, -50%) rotate(45deg) translateY(50cqh) translateY(250%);
+    transform: translate(-50%, -50%) rotate(-45deg) translateY(50cqh) translateY(250%);
 }
 
 .VelocitiesScmNav .title-scm {
     font-size: 5cqh;
     color: var(--color-text);
-    transform: translate(-50%, -50%) rotate(-45deg) translateY(50cqh) translateY(250%);
+    transform: translate(-50%, -50%) rotate(45deg) translateY(50cqh) translateY(250%);
 }

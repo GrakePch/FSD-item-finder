@@ -28,7 +28,15 @@
     "isPromotionOnly": "活动专属",
     "notBuyableUSD": "无法官网购买",
     "notBuyableUEC": "无法游戏内购买",
-    "Dimensions": "长 {{L}} × 宽 {{W}} × 高 {{H}} m"
+    "Dimensions": "长 {{L}} × 宽 {{W}} × 高 {{H}} m",
+    "FlightVelocities": {
+      "NAV": "导航",
+      "SCM": "作战",
+      "Boost": "加力",
+      "Pitch": "俯仰",
+      "Yaw": "偏航",
+      "Roll": "滚转"
+    }
   },
   "SPVProgressTrackerStatus": {
     "Concept": "概念",

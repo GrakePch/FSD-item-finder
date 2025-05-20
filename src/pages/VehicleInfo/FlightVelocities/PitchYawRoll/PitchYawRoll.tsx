@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 // import icons from "../../../assets/icons";
+import { useTranslation } from "react-i18next";
 import "./PitchYawRoll.css";
 
 interface PitchYawRollProps {
@@ -15,6 +16,7 @@ interface PitchYawRollProps {
 }
 
 function PitchYawRoll({ P, Y, R, PB, YB, RB, PM, YM, RM }: PitchYawRollProps) {
+  const { t } = useTranslation();
   return (
     <div className="PitchYawRoll">
       <div
@@ -81,12 +83,18 @@ function PitchYawRoll({ P, Y, R, PB, YB, RB, PM, YM, RM }: PitchYawRollProps) {
       </div>
       <div className="axis-yaw"></div>
       <div className="axis-pit"></div>
-      <div className="text value-pitch">{P} <span>/{Math.round(PB)}</span> °/s</div>
-      <div className="text value-yaw">{Y} <span>/{Math.round(YB)}</span> °/s</div>
-      <div className="text value-roll">{R} <span>/{Math.round(RB)}</span> °/s</div>
-      <div className="text title-pitch">Pitch</div>
-      <div className="text title-yaw">Yaw</div>
-      <div className="text title-roll">Roll</div>
+      <div className="text value-pitch">
+        {P} <span>/ {Math.round(PB)}</span> °/s
+      </div>
+      <div className="text value-yaw">
+        {Y} <span>/ {Math.round(YB)}</span> °/s
+      </div>
+      <div className="text value-roll">
+        {R} <span>/ {Math.round(RB)}</span> °/s
+      </div>
+      <div className="text title-pitch">{t("VehicleInfo.FlightVelocities.Pitch")}</div>
+      <div className="text title-yaw">{t("VehicleInfo.FlightVelocities.Yaw")}</div>
+      <div className="text title-roll">{t("VehicleInfo.FlightVelocities.Roll")}</div>
     </div>
   );
 }

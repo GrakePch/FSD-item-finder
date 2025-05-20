@@ -28,7 +28,15 @@
     "isPromotionOnly": "Promotion Only",
     "notBuyableUSD": "Not Sell in Store",
     "notBuyableUEC": "Not Sell in Game",
-    "Dimensions": "{{L}} L × {{W}} W × {{H}} H m"
+    "Dimensions": "{{L}} L × {{W}} W × {{H}} H m",
+    "FlightVelocities": {
+      "NAV": "NAV",
+      "SCM": "SCM",
+      "Boost": "Boost",
+      "Pitch": "Pitch",
+      "Yaw": "Yaw",
+      "Roll": "Roll"
+    }
   },
   "SPVProgressTrackerStatus": {
     "Concept": "Concept",
@@ -199,7 +207,7 @@
     "infrared": "Infrared",
     "cross_section": "Cross Section",
     "electromagnetic": "Electromagnetic"
-},
+  },
   "FilterType": {
     "all": "All",
     "armor": "Armor",
