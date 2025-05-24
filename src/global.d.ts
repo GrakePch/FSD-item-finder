@@ -44,7 +44,6 @@ type SCLocationType =
   | "Cave"
   | "Shipwreck"
   | "Prison"
-  | "Landing zone"
   | "Racetrack"
   | "Distribution center"
   | "Asteroid cluster"

@@ -1,18 +1,25 @@
 import { Link } from "react-router";
-import { toUrlKey } from "../../../../utils";
+import { locationNameToI18nKey, toUrlKey } from "../../../../utils";
 import "./LocationCard.css";
+import { useTranslation } from "react-i18next";
 
 const LocationCard = ({ location }: { location: SCLocation }) => {
+  const { t } = useTranslation();
   const description = location.parentBody
-    ? `${location.type} of ${location.parentBody.name}`
-    : location.type;
-  return <Link className="LocationCard" to={`/l/${toUrlKey(location.name)}`}>
-    <div className="icon"></div>
-    <div className="info">
-      <p className="name">{location.name}</p>
-      <p className="descrip">{description}</p>
-    </div>
-  </Link>;
+    ? t("LocationInfo.typeOfParent", {
+        type: t(`LocationType.${location.type}`),
+        parent: t(`Location.${locationNameToI18nKey(location.parentBody.name)}`),
+      })
+    : t(`LocationType.${location.type}`);
+  return (
+    <Link className="LocationCard" to={`/l/${toUrlKey(location.name)}`}>
+      <div className="icon"></div>
+      <div className="info">
+        <p className="name">{t(`Location.${locationNameToI18nKey(location.name)}`)}</p>
+        <p className="descrip">{description}</p>
+      </div>
+    </Link>
+  );
 };
 
 export default LocationCard;

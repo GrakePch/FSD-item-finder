@@ -1,6 +1,4 @@
 import itemsUex from "./data/items_uex.json";
-import i18nLocations from "./data/i18n_locations.json";
-import i18nLocationsM from "./data/i18n_locations_manual.json";
 import location_name_to_i18n_key from "./data/location_name_to_i18n_key.json";
 import typeMap from "./data/type_map_full_items.json";
 import bodies from "./data/bodies.json";
@@ -16,23 +14,6 @@ export function isAscii(char: string): boolean {
 export function toUrlKey(str: string): string {
   return str
     ?.replace(/[^a-zA-Z0-9-]+/g, "_") || null;
-}
-
-export function getLocationZhName(name_en) {
-    // return name_en;
-    if (!name_en) return name_en;
-    let en = name_en.toLowerCase();
-    if (i18nLocations[en]) return i18nLocations[en].zh;
-    if (i18nLocationsM[en]) return i18nLocationsM[en].zh;
-    if (en.includes("gateway (")) {
-        return i18nLocations[en.slice(0, en.indexOf(" ("))]?.zh || name_en;
-    }
-    if (en.endsWith(" station")) {
-        for (const name of Object.keys(i18nLocations)) {
-            if (name.endsWith(en)) return i18nLocations[name].zh;
-        }
-    }
-    return name_en;
 }
 
 export function locationNameToI18nKey(name: string): string {

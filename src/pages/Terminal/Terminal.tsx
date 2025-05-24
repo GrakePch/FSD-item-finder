@@ -6,7 +6,7 @@ import axios from "axios";
 import {
   classToColor,
   getAttributeValueByName,
-  getLocationZhName,
+  locationNameToI18nKey,
   signalToColor,
   sizeToColor,
   toI18nKey,
@@ -114,13 +114,17 @@ const Terminal = () => {
         <>
           <div className="location-path">
             <span className="name-star-system">
-              {getLocationZhName(terminalInfo.location.name_star_system)}
+              {t(
+                `Location.${locationNameToI18nKey(
+                  terminalInfo.location.name_star_system
+                )}`
+              )}
             </span>
             <span className="name-orbit">
-              {getLocationZhName(terminalInfo.location.name_orbit)}
+              {t(`Location.${locationNameToI18nKey(terminalInfo.location.name_orbit)}`)}
             </span>
             <span className="name-3rd">
-              {getLocationZhName(terminalInfo.location_path[2])}
+              {t(`Location.${locationNameToI18nKey(terminalInfo.location_path[2])}`)}
             </span>
           </div>
           <div className="basic-info">
@@ -128,7 +132,7 @@ const Terminal = () => {
               <h1 className="zh">
                 {terminalInfo.location_path
                   .slice(2)
-                  .map((n) => getLocationZhName(n))
+                  .map((n) => t(`Location.${locationNameToI18nKey(n)}`))
                   .join(" - ")}
               </h1>
               <h2 className="en">{terminalInfo.name}</h2>
@@ -140,11 +144,11 @@ const Terminal = () => {
               <hr />
               <h4>{t("TerminalInfo.nearby")}</h4>
               <div className="nearby-terminals">
-                {listTerminalsNearby.map((t) => (
-                  <button key={t.id} onClick={() => handleNearbyTerminalClick(t.id)}>
-                    {t.location_path
+                {listTerminalsNearby.map((tnb) => (
+                  <button key={tnb.id} onClick={() => handleNearbyTerminalClick(tnb.id)}>
+                    {tnb.location_path
                       .slice(2)
-                      .map((n) => getLocationZhName(n))
+                      .map((n) => t(`Location.${locationNameToI18nKey(n)}`))
                       .join(" - ")}
                   </button>
                 ))}

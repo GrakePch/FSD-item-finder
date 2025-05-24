@@ -4,13 +4,17 @@ import { useContext } from "react";
 import { ContextAllData } from "../../../contexts";
 import CelestialBodyCard from "./CelestialBodyCard/CelestialBodyCard";
 import LocationCard from "./LocationCard/LocationCard";
+import { locationNameToI18nKey } from "../../../utils";
 
 const SearchLocationResultList = ({ searchName }: { searchName: string }) => {
   const { t } = useTranslation();
   const { dictCelestialBodies, dictLocations } = useContext(ContextAllData);
-  const celestialBody = Object.values(dictCelestialBodies).filter((cb) =>
-    cb.name.toLowerCase().includes(searchName.trim().toLowerCase())
-  );
+  const celestialBody = Object.values(dictCelestialBodies).filter((cb) => {
+    const nameMatch = cb.name.toLowerCase().includes(searchName.trim().toLowerCase());
+    const i18nName = t(`Location.${locationNameToI18nKey(cb.name)}`, cb.name);
+    const i18nMatch = i18nName.toLowerCase().includes(searchName.trim().toLowerCase());
+    return nameMatch || i18nMatch;
+  });
   const locations = searchName
     ? Object.values(dictLocations).filter((loc) =>
         loc.name.toLowerCase().includes(searchName.trim().toLowerCase())

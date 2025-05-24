@@ -1,9 +1,10 @@
 import "./LocationPathChips.css";
 import Icon from "@mdi/react";
-import { colorLocationDepth, getLocationZhName } from "../../utils";
+import { colorLocationDepth, locationNameToI18nKey } from "../../utils";
 import { icon } from "../../assets/icon";
 import { useContext } from "react";
 import { ContextAllData } from "../../contexts";
+import { useTranslation } from "react-i18next";
 
 type LocationPathChipsProps = {
   path: string[];
@@ -12,6 +13,7 @@ type LocationPathChipsProps = {
 };
 
 const LocationPathChips = ({ path, startDepth, onClick }: LocationPathChipsProps) => {
+  const {t} = useTranslation();
   const { dictLocations } = useContext(ContextAllData);
 
   return (
@@ -29,7 +31,7 @@ const LocationPathChips = ({ path, startDepth, onClick }: LocationPathChipsProps
           {dictLocations[loc]?.type?.toLowerCase() === "space station" && (
             <Icon path={icon["Space Station"]} size="1rem" color="hsl(170deg 80% 50%)" />
           )}
-          {getLocationZhName(loc)}
+          {t(`Location.${locationNameToI18nKey(loc)}`)}
         </span>
       ))}
     </p>

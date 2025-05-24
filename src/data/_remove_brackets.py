@@ -15,4 +15,6 @@ for k, v in j_zh.items():
                 i = v.find("[", i+1)
                 if i >= 0:
                     new_v = v[0:i]
-        print(new_v)
+        j_zh[k] = new_v
+        
+json.dump(j_zh, open(f_input, "w", encoding="UTF-8"), ensure_ascii=False, indent=2)

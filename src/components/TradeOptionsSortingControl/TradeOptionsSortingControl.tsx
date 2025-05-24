@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import "./TradeOptionsSortingControl.css";
 import { useSearchParams } from "react-router";
-import { getBody, getLocationZhName } from "../../utils";
+import { getBody } from "../../utils";
 import Icon from "@mdi/react";
 import { mdiCurrencySign, mdiMapMarker } from "@mdi/js";
 import { ContextAllData } from "../../contexts";
@@ -49,7 +49,7 @@ const TradeOptionsSortingControl = () => {
           <Icon path={mdiMapMarker} size={"1rem"} />
           <p>距离近优先</p>
         </button>
-        <div className="selectors">
+        {/* <div className="selectors">
           <select
             className="systems"
             value={starSystem}
@@ -93,7 +93,7 @@ const TradeOptionsSortingControl = () => {
               )
             )}
           </select>
-        </div>
+        </div> */}
       </div>
     </div>
   );

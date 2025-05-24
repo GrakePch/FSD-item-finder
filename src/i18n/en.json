@@ -16,6 +16,12 @@
   "SearchVehicleResultList": {
     "noResult": "No search results"
   },
+  "SearchLocationBar": {
+    "placeholder": "Search Locations..."
+  },
+  "LocationInfo": {
+    "typeOfParent": "{{type}} of {{parent}}"
+  },
   "TerminalInfo": {
     "nearby": "Nearby",
     "notFound": "Terminal Not Found"
@@ -2321,5 +2327,31 @@
     "ui_dest_security_dock_c_deck": "Security Dock C Deck",
     "ui_dest_workerarea,P": "Worker's Area",
     "ui_destinationSelector": "Destination"
+  },
+  "LocationType": {
+    "Star": "Star",
+    "Planet": "Planet",
+    "Moon": "Moon",
+    "Lagrange Point": "Lagrange Point",
+    "Jump Point": "Jump Point",
+    "Ruins": "Ruins",
+    "Underground bunker": "Underground bunker",
+    "Outpost": "Outpost",
+    "City": "City",
+    "Landing zone": "Landing zone",
+    "Emergency shelter": "Emergency shelter",
+    "Settlement": "Settlement",
+    "Space station": "Space station",
+    "Landmark": "Landmark",
+    "Scrapyard": "Scrapyard",
+    "CommArray": "CommArray",
+    "Asteroid base": "Asteroid base",
+    "Cave": "Cave",
+    "Shipwreck": "Shipwreck",
+    "Prison": "Prison",
+    "Racetrack": "Racetrack",
+    "Distribution center": "Distribution center",
+    "Asteroid cluster": "Asteroid cluster",
+    "Forward operating base": "Forward operating base"
   }
 }
