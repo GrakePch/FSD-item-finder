@@ -20,7 +20,14 @@
     "placeholder": "搜索地点……"
   },
   "LocationInfo": {
-    "typeOfParent": "{{parent}} 的{{type}}"
+    "typeOfParent": "{{parent}} 的{{type}}",
+    "notFoundCelestial": "天体不存在",
+    "notFoundLocation": "地点不存在",
+    "titleParentBody": "上级天体",
+    "titleChildBodies": "下级天体",
+    "titleLocations": "地点",
+    "titleTerminals": "商店终端",
+    "titleParentLocation": "所在地点"
   },
   "TerminalInfo": {
     "nearby": "附近",
@@ -28,6 +35,13 @@
   },
   "TerminalInfoSearchBar": {
     "placeholder": "搜索本终端商品……"
+  },
+  "UEXTerminalType": {
+    "item": "物品商店",
+    "commodity": "大宗商品交易",
+    "vehicle_buy": "载具购买商店",
+    "vehicle_rent": "载具租赁商店",
+    "fuel": "燃料补给服务"
   },
   "VehicleInfo": {
     "isLimitedSale": "限量发售",

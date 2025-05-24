@@ -14,8 +14,10 @@ import {
 } from "../../utils";
 import Icon from "@mdi/react";
 import { icon } from "../../assets/icon";
-import { mdiArrowLeft, mdiClose, mdiHomeVariantOutline, mdiMagnify } from "@mdi/js";
+import { mdiClose, mdiMagnify } from "@mdi/js";
 import { useTranslation } from "react-i18next";
+import TerminalCard from "../SearchLocations/SearchLocationResultList/TerminalCard/TerminalCard";
+import LocationCard from "../SearchLocations/SearchLocationResultList/LocationCard/LocationCard";
 
 const Terminal = () => {
   const { t } = useTranslation();
@@ -44,7 +46,7 @@ const Terminal = () => {
     setTerminalInfo(_tInfo);
 
     let _tempListTerminalsNearby = [];
-    if (_tInfo) {
+    if (_tInfo && _tInfo.parentLocation) {
       /* Get Nearby Terminal */
       _tempListTerminalsNearby = _tInfo.parentLocation.terminals.filter(
         (t) => t.type === "item" && t.id != terminalId
@@ -96,64 +98,43 @@ const Terminal = () => {
 
   const handleSearchChange = (e) => setSearchString(e.target.value);
 
-  const handleNearbyTerminalClick = (tid) =>
-    navigate(`/t/${tid}?${searchParams.toString()}`);
-
   return (
     <div className="Terminal">
-      {window.history.state?.idx < 1 ? (
-        <button className="fab-navigate" onClick={() => navigate("/")}>
-          <Icon path={mdiHomeVariantOutline} size="1.5rem" />
-        </button>
-      ) : (
-        <button className="fab-navigate" onClick={() => navigate(-1)}>
-          <Icon path={mdiArrowLeft} size="1.5rem" />
-        </button>
-      )}
       {terminalInfo ? (
         <>
-          <div className="location-path">
-            <span className="name-star-system">
-              {t(
-                `Location.${locationNameToI18nKey(
-                  terminalInfo.location.name_star_system
-                )}`
-              )}
-            </span>
-            <span className="name-orbit">
-              {t(`Location.${locationNameToI18nKey(terminalInfo.location.name_orbit)}`)}
-            </span>
-            <span className="name-3rd">
-              {t(`Location.${locationNameToI18nKey(terminalInfo.location_path[2])}`)}
-            </span>
-          </div>
           <div className="basic-info">
             <div className="name">
-              <h1 className="zh">
+              <h1>
                 {terminalInfo.location_path
-                  .slice(2)
+                  .slice(3)
                   .map((n) => t(`Location.${locationNameToI18nKey(n)}`))
                   .join(" - ")}
               </h1>
-              <h2 className="en">{terminalInfo.name}</h2>
+              <h2>{terminalInfo.name}</h2>
             </div>
             <h3 className="faction">{terminalInfo.name_faction}</h3>
           </div>
+          {terminalInfo.parentLocation && (
+            <div className="location-links">
+              <h4>{t(`LocationInfo.titleParentLocation`)}</h4>
+              <ul>
+                <li>
+                  <LocationCard location={terminalInfo.parentLocation} />
+                </li>
+              </ul>
+            </div>
+          )}
           {listTerminalsNearby.length > 0 && (
-            <>
-              <hr />
+            <div className="location-links">
               <h4>{t("TerminalInfo.nearby")}</h4>
-              <div className="nearby-terminals">
+              <ul className="nearby-terminals">
                 {listTerminalsNearby.map((tnb) => (
-                  <button key={tnb.id} onClick={() => handleNearbyTerminalClick(tnb.id)}>
-                    {tnb.location_path
-                      .slice(2)
-                      .map((n) => t(`Location.${locationNameToI18nKey(n)}`))
-                      .join(" - ")}
-                  </button>
+                  <li key={tnb.id}>
+                    <TerminalCard terminal={tnb} />
+                  </li>
                 ))}
-              </div>
-            </>
+              </ul>
+            </div>
           )}
           <div className="search-and-list">
             <div className="searchbar-container">

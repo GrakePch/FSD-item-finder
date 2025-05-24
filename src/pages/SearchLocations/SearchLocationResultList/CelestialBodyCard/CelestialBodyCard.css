@@ -21,6 +21,7 @@
     height: 2rem;
     background-color: #fff;
     border-radius: 50%;
+    flex-shrink: 0;
 }
 
 .CelestialBodyCard .descrip {

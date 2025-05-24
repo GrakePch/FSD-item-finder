@@ -265,11 +265,13 @@ export const typeKeyToCapitalized = (key: string) =>
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 
-export const typeCapitalizedToKey = (capitalized: string) =>
-    capitalized
+export const typeCapitalizedToKey = (capitalized: string | null) =>
+  capitalized
+    ? capitalized
         .split(" ")
-        .map(word => word.toLowerCase())
-        .join("_");
+        .map((word) => word.toLowerCase())
+        .join("_")
+    : "";
 
 export const spvRoleToKey = (role: string) => 
     role.toLowerCase().replaceAll(" ","").replaceAll("/","");

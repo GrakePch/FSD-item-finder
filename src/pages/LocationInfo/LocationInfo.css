@@ -1,0 +1,54 @@
+.LocationInfo {
+    padding: 0 1.5rem;
+}
+
+.LocationInfo .name h1 {
+    overflow-wrap: anywhere;
+}
+
+.LocationInfo .name h2 {
+    color: var(--color-text-1);
+    overflow-wrap: anywhere;
+}
+
+.LocationInfo .type {
+    color: var(--color-text-2);
+}
+
+.LocationInfo .location-links {
+    background-color: var(--color-bg-1);
+    border-radius: 1rem;
+    margin-top: 1rem;
+    padding: .5rem;
+}
+
+.LocationInfo .location-links>h4 {
+    margin-left: 1rem;
+    margin-bottom: .5rem;
+}
+
+.LocationInfo .location-links ul {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media screen and (max-width: 959px) {
+    .LocationInfo .location-links ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .LocationInfo .location-links ul {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.LocationInfo .location-links ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.LocationInfo .location-links li>a:hover {
+    background-color: var(--color-bg-2);
+}

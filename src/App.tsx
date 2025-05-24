@@ -18,6 +18,8 @@ import VehicleInfo from "./pages/VehicleInfo/VehicleInfo";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import LanguageToggle from "./components/LanguageToggle/LanguageToggle";
+import CelestialBodyInfo from "./pages/CelestialBodyInfo/CelestialBodyInfo";
+import LocationInfo from "./pages/LocationInfo/LocationInfo";
 
 function App() {
   const [allData, setAllData] = useState<AllData>({
@@ -73,8 +75,8 @@ function App() {
           <Route path="/i/:itemKey" element={<ItemInfo />} />
           <Route path="/iv/:itemKey" element={<ItemGroupInfo />} />
           <Route path="/v/:vehicleClassName" element={<VehicleInfo />} />
-          {/* <Route path="/b/:celestialBodyKey" element={<CelestialBodyInfo />} /> */}
-          {/* <Route path="/l/:locationKey" element={<LocationInfo />} /> */}
+          <Route path="/b/:celestialBodyKey" element={<CelestialBodyInfo />} />
+          <Route path="/l/:locationKey" element={<LocationInfo />} />
           <Route path="/t/:terminalId" element={<Terminal />} />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>

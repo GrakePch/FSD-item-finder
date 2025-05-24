@@ -1,4 +1,4 @@
-.LocationCard {
+.TerminalCard {
     display: block;
     color: initial;
     text-decoration: none;
@@ -10,19 +10,19 @@
     transition: background .15s;
 }
 
-.LocationCard:hover {
+.TerminalCard:hover {
     color: initial;
     text-decoration: none;
     background-color: var(--color-bg-1);
 }
 
-.LocationCard .icon {
+.TerminalCard .icon {
     width: 2rem;
     height: 2rem;
     flex-shrink: 0;
 }
 
-.LocationCard .descrip {
+.TerminalCard .descrip {
     color: var(--color-text-1);
     font-size: .8rem;
 }

@@ -20,7 +20,14 @@
     "placeholder": "Search Locations..."
   },
   "LocationInfo": {
-    "typeOfParent": "{{type}} of {{parent}}"
+    "typeOfParent": "{{type}} of {{parent}}",
+    "notFoundCelestial": "Celestial Body Not Found",
+    "notFoundLocation": "Location Not Found",
+    "titleParentBody": "Primary Body",
+    "titleChildBodies": "Secondary Bodies",
+    "titleLocations": "Locations",
+    "titleTerminals": "Shop Terminals",
+    "titleParentLocation": "Location"
   },
   "TerminalInfo": {
     "nearby": "Nearby",
@@ -28,6 +35,13 @@
   },
   "TerminalInfoSearchBar": {
     "placeholder": "Search Items in this terminal..."
+  },
+  "UEXTerminalType": {
+    "item": "Item Shop",
+    "commodity": "Commodity Trade",
+    "vehicle_buy": "Vehicle Buying Shop",
+    "vehicle_rent": "Vehicle Rental Shop",
+    "fuel": "Refueling Service"
   },
   "VehicleInfo": {
     "isLimitedSale": "Limited Sale",

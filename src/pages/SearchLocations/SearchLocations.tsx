@@ -1,3 +1,4 @@
+import "./SearchLocations.css";
 import { useEffect, useState } from "react";
 import SearchLocationBar from "./SearchLocationBar/SearchLocationBar";
 import SearchLocationResultList from "./SearchLocationResultList/SearchLocationResultList";

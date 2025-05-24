@@ -1,74 +1,59 @@
 .Terminal {
-    padding: 1.5rem;
+    padding: 0 1.5rem;
     position: relative;
 }
 
-.Terminal .fab-navigate {
-    position: sticky;
-    z-index: 100;
-    top: 1.5rem;
-    left: 0rem;
-    margin-bottom: 1.5rem;
-    width: 3rem;
-    height: 3rem;
-    padding: 0.75rem;
-    border-radius: 50%;
-    box-shadow: var(--shadow-1);
-}
-
-.Terminal .location-path {
-    position: absolute;
-    top: 0rem;
-    left: 4rem;
-    margin: 1.5rem;
-    display: flex;
-    height: 3rem;
-    margin-bottom: 1rem;
-}
-
-.Terminal .location-path>span {
-    padding: 0 1rem;
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-}
-
-.Terminal .location-path .name-star-system {
-    color: var(--color-bg);
-    background-color: var(--color-text-1);
-    border-radius: 1.5rem 0 0 1.5rem;
-}
-
-.Terminal .location-path .name-orbit {
-    background-color: #696969;
-    border-radius: 0;
-}
-
-.Terminal .location-path .name-3rd {
-    background-color: #565656;
-    border-radius: 0 1.5rem 1.5rem 0;
-}
-
-.Terminal .basic-info {
-    padding: 0 1rem;
-}
-
-
-.Terminal .basic-info .zh {
+.Terminal .name h1 {
     overflow-wrap: anywhere;
 }
 
-.Terminal .basic-info .en {
+.Terminal .name h2 {
     color: var(--color-text-1);
-    line-height: 100%;
-    margin-top: .5rem;
     overflow-wrap: anywhere;
 }
 
-.Terminal .basic-info .faction {
+.Terminal .faction {
     color: var(--color-text-2);
-    line-height: 100%;
-    margin-top: .5rem;
+}
+
+.Terminal .location-links {
+    background-color: var(--color-bg-1);
+    border-radius: 1rem;
+    margin-top: 1rem;
+    padding: .5rem;
+}
+
+.Terminal .location-links>h4 {
+    margin-left: 1rem;
+    margin-bottom: .5rem;
+}
+
+.Terminal .location-links ul {
+    /* margin-top: .5rem; */
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* gap: .5rem; */
+}
+
+@media screen and (max-width: 959px) {
+    .Terminal .location-links ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .Terminal .location-links ul {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.Terminal .location-links ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.Terminal .location-links li>a:hover {
+    background-color: var(--color-bg-2);
 }
 
 .Terminal hr {
@@ -78,10 +63,6 @@
     margin: 1rem;
     background-color: var(--color-text);
     opacity: .5;
-}
-
-.Terminal h4 {
-    padding: 0 1rem;
 }
 
 .Terminal .nearby-terminals {
