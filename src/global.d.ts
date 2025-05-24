@@ -26,6 +26,30 @@ interface SCLocation {
   terminals: Terminal[];
 }
 
+type CelestialBodyType = "Star" | "Planet" | "Moon" | "Lagrange Point" | "Jump Point";
+
+type SCLocationType =
+  | "Ruins"
+  | "Underground bunker"
+  | "Outpost"
+  | "City"
+  | "Landing zone"
+  | "Emergency shelter"
+  | "Settlement"
+  | "Space station"
+  | "Landmark"
+  | "Scrapyard"
+  | "CommArray"
+  | "Asteroid base"
+  | "Cave"
+  | "Shipwreck"
+  | "Prison"
+  | "Landing zone"
+  | "Racetrack"
+  | "Distribution center"
+  | "Asteroid cluster"
+  | "Forward operating base";
+
 interface Terminal {
   id: number;
   code: string;

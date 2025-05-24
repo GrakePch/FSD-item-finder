@@ -1,0 +1,63 @@
+.SearchLocationBar {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.SearchLocationBar .search-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg-1);
+    border-radius: .5rem;
+    max-height: calc(100vh - var(--margin) * 4);
+    overflow: hidden;
+    /* box-shadow: var(--shadow-1); */
+}
+
+.SearchLocationBar #searchlocationbar {
+    flex-shrink: 0;
+    /* border-radius: 2rem; */
+    height: 3rem;
+    border: none;
+    padding: 0 3rem;
+    background-color: var(--color-bg-1);
+    font-family: inherit;
+    color: var(--color-text);
+    font-size: 1rem;
+    transition: background .2s;
+}
+
+.SearchLocationBar #searchlocationbar:hover {
+    background-color: var(--color-bg-2);
+}
+
+.SearchLocationBar #searchlocationbar:focus {
+    outline: none;
+}
+
+.SearchLocationBar .btnSearch, .SearchLocationBar .btnClear, .SearchLocationBar .btnBack {
+    position: absolute;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    padding: .25rem;
+    margin: .5rem;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.SearchLocationBar .btnClear:hover, .SearchLocationBar .btnBack:hover {
+    background-color: var(--color-bg-2);
+}
+
+.SearchLocationBar .btnSearch {
+    left: 0;
+}
+
+.SearchLocationBar .btnBack {
+    left: 0;
+}
+
+.SearchLocationBar .btnClear {
+    right: 0;
+}

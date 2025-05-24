@@ -1,0 +1,27 @@
+.LocationCard {
+    display: block;
+    color: initial;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    transition: background .15s;
+}
+
+.LocationCard:hover {
+    color: initial;
+    text-decoration: none;
+    background-color: var(--color-bg-1);
+}
+
+.LocationCard .icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.LocationCard .descrip {
+    color: var(--color-text-1);
+    font-size: .8rem;
+}

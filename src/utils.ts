@@ -1,6 +1,7 @@
 import itemsUex from "./data/items_uex.json";
 import i18nLocations from "./data/i18n_locations.json";
 import i18nLocationsM from "./data/i18n_locations_manual.json";
+import location_name_to_i18n_key from "./data/location_name_to_i18n_key.json";
 import typeMap from "./data/type_map_full_items.json";
 import bodies from "./data/bodies.json";
 import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
@@ -32,6 +33,10 @@ export function getLocationZhName(name_en) {
         }
     }
     return name_en;
+}
+
+export function locationNameToI18nKey(name: string): string {
+    return location_name_to_i18n_key[name] as string || name;
 }
 
 export function getItemUexFormat(id: number) {
