@@ -897,6 +897,14 @@
     "vehicle_class_turret": "炮塔"
   },
   "Location": {
+    "Shop Terminal": "商店终端",
+    "Mining Center": "采矿中心",
+    "Supplies": "补给",
+    "Last Landings Store": "终陆镇商店",
+    "FPS Shop": "FPS 商店",
+    "Equipment Contested Zone Checkmate": "Equipment Contested Zone Checkmate",
+    "IO North Tower": "IO North Tower",
+    "///": "///",
     "Orison_Destination_AugustDunlowConventionHangar": "奥古斯特·顿洛展厅",
     "Orison_Destination_AugustDunlowSpaceport": "奥古斯特·顿洛空港",
     "Orison_Destination_CloudviewCenter": "云景中心",

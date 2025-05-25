@@ -897,6 +897,14 @@
     "vehicle_class_turret": "Turret"
   },
   "Location": {
+    "Shop Terminal": "Shop Terminal",
+    "Mining Center": "Mining Center",
+    "Supplies": "Supplies",
+    "Last Landings Store": "Last Landings Store",
+    "FPS Shop": "FPS Shop",
+    "Equipment Contested Zone Checkmate": "Equipment Contested Zone Checkmate",
+    "IO North Tower": "IO North Tower",
+    "///": "///",
     "Orison_Destination_AugustDunlowConventionHangar": "August Dunlow Exhibition Hall",
     "Orison_Destination_AugustDunlowSpaceport": "August Dunlow Spaceport",
     "Orison_Destination_CloudviewCenter": "Cloudview Center",
