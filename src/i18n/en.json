@@ -19,6 +19,10 @@
   "SearchLocationBar": {
     "placeholder": "Search Locations..."
   },
+  "TradeOptions": {
+    "sortByDistance": "Nearest Shop",
+    "sortByPrice": "Lowest Price"
+  },
   "LocationInfo": {
     "typeOfParent": "{{type}} of {{parent}}",
     "notFoundCelestial": "Celestial Body Not Found",

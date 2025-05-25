@@ -1,12 +1,43 @@
-import { useLocation, Link } from "react-router-dom";
-import { useMemo } from "react";
+import { useLocation, Link, useNavigate } from "react-router-dom";
+import { useMemo, useEffect, useState } from "react";
 import Icon from "@mdi/react";
 import { icon } from "../../assets/icon";
-import { mdiMapMarker, mdiWidgetsOutline } from "@mdi/js";
+import { mdiCrosshairsGps, mdiMapMarker, mdiWidgetsOutline } from "@mdi/js";
 import "./NavBar.css";
+import SearchLocationBar from "../../pages/SearchLocations/SearchLocationBar/SearchLocationBar";
+import SearchLocationResultList from "../../pages/SearchLocations/SearchLocationResultList/SearchLocationResultList";
+import { locationNameToI18nKey } from "../../utils";
+import { useTranslation } from "react-i18next";
+
+export const KEY_CURRENT_LOCATION = "fsd_current_location";
 
 const NavBar = () => {
+  const { t } = useTranslation();
   const location = useLocation();
+  const navigate = useNavigate();
+  const [currentLocation, setCurrentLocation] = useState<string>(
+    () => localStorage.getItem(KEY_CURRENT_LOCATION) || ""
+  );
+
+  useEffect(() => {
+    // Check for 'from' in search params
+    const params = new URLSearchParams(location.search);
+    const fromParam = params.get("from");
+    let stored = localStorage.getItem(KEY_CURRENT_LOCATION);
+    if (fromParam) {
+      localStorage.setItem(KEY_CURRENT_LOCATION, fromParam);
+      setCurrentLocation(fromParam);
+    } else {
+      // If 'from' is not present, check if current location is stored
+      if (!stored) {
+        // If not, set default location
+        stored = "Crusader";
+        localStorage.setItem(KEY_CURRENT_LOCATION, stored);
+      }
+      setCurrentLocation(stored);
+    }
+  }, [location.search]);
+
   const tabSearch = useMemo<"items" | "vehicles" | "locations">(() => {
     if (location.pathname.startsWith("/v")) {
       return "vehicles";
@@ -20,6 +51,23 @@ const NavBar = () => {
       return "items";
     }
   }, [location.pathname]);
+
+  // Use search param for popup state
+  const params = new URLSearchParams(location.search);
+  const isPopupShowing = params.get("selectLoc") === "1";
+
+  const openPopup = () => {
+    params.set("selectLoc", "1");
+    navigate({ search: params.toString() }, { replace: false });
+  };
+  const closePopup = () => {
+    params.delete("selectLoc");
+    navigate({ search: params.toString() }, { replace: false });
+  };
+
+  const nameCurrentLocation = currentLocation.startsWith("_loc_")
+    ? currentLocation.substring(5)
+    : currentLocation;
 
   return (
     <>
@@ -44,6 +92,11 @@ const NavBar = () => {
               <Icon path={mdiMapMarker} size="2rem" />
             </Link>
           </nav>
+          <div className="grow" />
+          <button className="current-location" onClick={openPopup}>
+            <Icon path={mdiCrosshairsGps} size="1.5rem" />
+            <span>{t(`Location.${locationNameToI18nKey(nameCurrentLocation)}`)}</span>
+          </button>
         </div>
       </div>
 
@@ -61,8 +114,59 @@ const NavBar = () => {
           <span>寻址</span>
         </Link>
       </nav>
+
+      <WindowSelectCurrentLocation isDisplaying={isPopupShowing} close={closePopup} />
     </>
   );
 };
 
 export default NavBar;
+
+type WindowSelectCurrentLocationProps = {
+  isDisplaying: boolean;
+  close: () => void;
+};
+
+const WindowSelectCurrentLocation = ({
+  isDisplaying,
+  close,
+}: WindowSelectCurrentLocationProps) => {
+  const navigate = useNavigate();
+  const [searchName, setSearchName] = useState("");
+
+  /*
+   * When Clicking on Celestial Body card, from := celestialBody.name
+   * When Clicking on Location card, from := "_loc_" + location.name
+   */
+
+  const handleCelestialBodyClick = (body: CelestialBody) => {
+    const params = new URLSearchParams(window.location.search);
+    params.set("from", body.name);
+    params.delete("selectLoc");
+    navigate({ search: params.toString() }, { replace: false });
+  };
+  const handleLocationClick = (location: SCLocation) => {
+    const params = new URLSearchParams(window.location.search);
+    if (location.parentBody && location.parentBody.name) {
+      params.set("from", "_loc_" + location.name);
+    }
+    params.delete("selectLoc");
+    navigate({ search: params.toString() }, { replace: false });
+  };
+
+  return (
+    <div className={`WindowSelectCurrentLocation ${isDisplaying ? "on" : ""}`}>
+      <div className="bg" onClick={close}></div>
+      <div className="window-container">
+        <SearchLocationBar searchName={searchName} setSearchName={setSearchName} />
+        <div className="result-list-scrollable">
+          <SearchLocationResultList
+            searchName={searchName}
+            onCelestialBodyClick={handleCelestialBodyClick}
+            onLocationClick={handleLocationClick}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};

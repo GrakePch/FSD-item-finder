@@ -15,7 +15,7 @@ const SearchLocations = () => {
   return (
     <div className="SearchLocations">
       <SearchLocationBar searchName={searchName} setSearchName={setSearchName} />
-      <SearchLocationResultList searchName={searchName} />
+      <SearchLocationResultList searchName={searchName} includeTerminal/>
     </div>
   );
 };

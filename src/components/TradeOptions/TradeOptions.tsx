@@ -6,12 +6,14 @@ import {
   getLocPath,
   getTerminalDistance,
   readableDistance,
+  toUrlKey,
 } from "../../utils";
 import { ContextAllData } from "../../contexts";
 import { useNavigate, useSearchParams } from "react-router";
 import Icon from "@mdi/react";
 import { mdiAlertCircleOutline } from "@mdi/js";
 import LocationPathChips from "../LocationPathChips/LocationPathChips";
+import { KEY_CURRENT_LOCATION } from "../NavBar/NavBar";
 
 type LocationTree = { name: string; subs: LocationForest; option?: TradeOption };
 
@@ -32,7 +34,7 @@ const percent = (v: number, zero: number, hundred: number) => {
 const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const { dictTerminals } = useContext(ContextAllData);
+  const { dictLocations, dictTerminals } = useContext(ContextAllData);
   const [options, setOptions] = useState([]);
 
   const [locationForestShallow, setLocationForestShallow] = useState<
@@ -49,8 +51,17 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
           .localeCompare(getLocPath(b, dictTerminals).join("  "))
       );
 
-    /* Compute Distances from the "from" param, and sort by distance */
-    let fromBodyName = searchParams.get("from");
+    /* Compute Distances from the local storage stored value, and sort by distance */
+    let fromBodyName = localStorage.getItem(KEY_CURRENT_LOCATION);
+    if (fromBodyName.startsWith("_loc_")) {
+      let storedLocationName = fromBodyName.slice(5);
+      let location = dictLocations[toUrlKey(storedLocationName)];
+      if (location) {
+        fromBodyName = location.parentBody.name;
+      } else {
+        fromBodyName = "Crusader";
+      }
+    }
     tempOptions.forEach((e) => {
       e.distance = getTerminalDistance(e, fromBodyName, dictTerminals);
     });

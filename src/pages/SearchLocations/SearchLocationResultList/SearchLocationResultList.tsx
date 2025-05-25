@@ -14,7 +14,21 @@ const isNameOrI18nMatch = (searchName: string, nameEn: string, nameI18n: string)
   return nameMatch || i18nMatch;
 };
 
-const SearchLocationResultList = ({ searchName }: { searchName: string }) => {
+interface SearchLocationResultListProps {
+  searchName: string;
+  includeTerminal?: boolean;
+  onCelestialBodyClick?: (body: CelestialBody) => void;
+  onLocationClick?: (location: SCLocation) => void;
+  onTerminalClick?: (terminal: Terminal) => void;
+}
+
+const SearchLocationResultList = ({
+  searchName,
+  includeTerminal = false,
+  onCelestialBodyClick,
+  onLocationClick,
+  onTerminalClick,
+}: SearchLocationResultListProps) => {
   const { t } = useTranslation();
   const { dictCelestialBodies, dictLocations, dictTerminals } =
     useContext(ContextAllData);
@@ -37,7 +51,7 @@ const SearchLocationResultList = ({ searchName }: { searchName: string }) => {
       )
     : [];
 
-  const terminals = searchName
+  const terminals = includeTerminal && searchName
     ? Object.values(dictTerminals).filter((term) => {
         const terminalNameEn = Array.isArray(term.location_path)
           ? term.location_path
@@ -61,13 +75,13 @@ const SearchLocationResultList = ({ searchName }: { searchName: string }) => {
     <div className="SearchLocationResultList">
       <ul className="location-list">
         {celestialBody.map((body) => (
-          <CelestialBodyCard key={body.name} celestialBody={body} />
+          <CelestialBodyCard key={body.name} celestialBody={body} onClick={onCelestialBodyClick} />
         ))}
         {locations.map((location) => (
-          <LocationCard key={location.name} location={location} />
+          <LocationCard key={location.name} location={location} onClick={onLocationClick} />
         ))}
         {terminals.map((terminal) => (
-          <TerminalCard key={terminal.id} terminal={terminal} />
+          <TerminalCard key={terminal.id} terminal={terminal} onClick={onTerminalClick} />
         ))}
       </ul>
     </div>

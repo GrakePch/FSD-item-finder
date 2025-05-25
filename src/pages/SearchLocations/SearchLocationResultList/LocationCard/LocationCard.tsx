@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { locationNameToI18nKey, toUrlKey } from "../../../../utils";
 import "./LocationCard.css";
 import { useTranslation } from "react-i18next";
@@ -7,16 +7,35 @@ import locationIcon from "../../../../assets/locationIcon";
 import LocationIconColor from "../../../../assets/locationIconColor";
 import { icon } from "../../../../assets/icon";
 
-const LocationCard = ({ location }: { location: SCLocation }) => {
+interface LocationCardProps {
+  location: SCLocation;
+  onClick?: (location: SCLocation) => void;
+}
+
+const LocationCard = ({ location, onClick }: LocationCardProps) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const description = location.parentBody
     ? t("LocationInfo.typeOfParent", {
         type: t(`LocationType.${location.type}`),
         parent: t(`Location.${locationNameToI18nKey(location.parentBody.name)}`),
       })
     : t(`LocationType.${location.type}`);
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (onClick) {
+      onClick(location);
+    } else {
+      navigate(`/l/${toUrlKey(location.name)}`);
+    }
+  };
+
   return (
-    <Link className="LocationCard" to={`/l/${toUrlKey(location.name)}`}>
+    <a
+      className="LocationCard"
+      href={`/l/${toUrlKey(location.name)}`}
+      onClick={handleClick}
+    >
       <div
         className="icon"
         style={{
@@ -44,7 +63,7 @@ const LocationCard = ({ location }: { location: SCLocation }) => {
           )}
         </p>
       </div>
-    </Link>
+    </a>
   );
 };
 

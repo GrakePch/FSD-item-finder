@@ -24,6 +24,7 @@
   font-size: 2rem;
   line-height: 1;
   margin-right: 1rem;
+  flex-shrink: 0;
 }
 
 .NavBar .links-container {
@@ -51,6 +52,19 @@
 .NavBar .links-container a.active {
   color: var(--color-bg);
   background-color: var(--color-text);
+}
+
+.NavBar .grow {
+  flex-grow: 1;
+}
+
+.NavBar .current-location {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  line-height: 1;
+  padding: .5rem .5rem;
+  border-radius: .5rem;
 }
 
 .NavBarBottom {
@@ -116,4 +130,55 @@
   .NavBarBottom {
     display: flex;
   }
+}
+
+
+.WindowSelectCurrentLocation {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1100;
+}
+
+.WindowSelectCurrentLocation.on {
+  display: block;
+}
+
+.WindowSelectCurrentLocation .bg {
+  display: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000080;
+  cursor: pointer;
+}
+
+.WindowSelectCurrentLocation .window-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 3rem);
+  height: calc(100% - 3rem);
+  max-width: 720px;
+  background-color: var(--color-bg);
+  border-radius: 1rem;
+  padding: 1rem;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.WindowSelectCurrentLocation .SearchLocationBar {
+  margin-bottom: 0;
+}
+
+.result-list-scrollable {
+  overflow-y: auto;
+  margin-top: 0;
+  padding: 1rem 0;
 }

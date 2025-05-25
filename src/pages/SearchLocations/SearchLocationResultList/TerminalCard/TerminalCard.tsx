@@ -1,20 +1,35 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import "./TerminalCard.css";
 import { useTranslation } from "react-i18next";
 import { locationNameToI18nKey } from "../../../../utils";
 import Icon from "@mdi/react";
 import locationIcon from "../../../../assets/locationIcon";
 
-const TerminalCard = ({ terminal }: { terminal: Terminal }) => {
+interface TerminalCardProps {
+  terminal: Terminal;
+  onClick?: (terminal: Terminal) => void;
+}
+
+const TerminalCard = ({ terminal, onClick }: TerminalCardProps) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const description = terminal.parentLocation
     ? t("LocationInfo.typeOfParent", {
         type: t(`UEXTerminalType.${terminal.type}`),
         parent: t(`Location.${locationNameToI18nKey(terminal.parentLocation.name)}`),
       })
     : t(`UEXTerminalType.${terminal.type}`);
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (onClick) {
+      onClick(terminal);
+    } else {
+      navigate(`/t/${terminal.id}`);
+    }
+  };
+
   return (
-    <Link className="TerminalCard" to={`/t/${terminal.id}`}>
+    <a className="TerminalCard" href={`/t/${terminal.id}`} onClick={handleClick}>
       <div className="icon">
         <Icon path={locationIcon[`Terminal_${terminal.type}`]} />
       </div>
@@ -27,7 +42,7 @@ const TerminalCard = ({ terminal }: { terminal: Terminal }) => {
         </p>
         <p className="descrip">{description}</p>
       </div>
-    </Link>
+    </a>
   );
 };
 
