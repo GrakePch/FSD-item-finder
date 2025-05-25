@@ -1,4 +1,7 @@
 {
+  "Navbar": {
+    "currentLocation": "当前地点："
+  },
   "SearchItemBar": {
     "placeholder": "搜索物品……",
     "loadingData": "加载数据……",

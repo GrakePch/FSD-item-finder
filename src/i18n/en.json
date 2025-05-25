@@ -1,4 +1,7 @@
 {
+  "Navbar": {
+    "currentLocation": "Current Location: "
+  },
   "SearchItemBar": {
     "placeholder": "Search Items...",
     "loadingData": "Loading data...",

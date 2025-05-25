@@ -2,7 +2,7 @@ import { useLocation, Link, useNavigate } from "react-router-dom";
 import { useMemo, useEffect, useState } from "react";
 import Icon from "@mdi/react";
 import { icon } from "../../assets/icon";
-import { mdiCrosshairsGps, mdiMapMarker, mdiWidgetsOutline } from "@mdi/js";
+import { mdiClose, mdiCrosshairsGps, mdiMapMarker, mdiWidgetsOutline } from "@mdi/js";
 import "./NavBar.css";
 import SearchLocationBar from "../../pages/SearchLocations/SearchLocationBar/SearchLocationBar";
 import SearchLocationResultList from "../../pages/SearchLocations/SearchLocationResultList/SearchLocationResultList";
@@ -115,7 +115,11 @@ const NavBar = () => {
         </Link>
       </nav>
 
-      <WindowSelectCurrentLocation isDisplaying={isPopupShowing} close={closePopup} />
+      <WindowSelectCurrentLocation
+        isDisplaying={isPopupShowing}
+        close={closePopup}
+        currentLocationName={nameCurrentLocation}
+      />
     </>
   );
 };
@@ -125,12 +129,15 @@ export default NavBar;
 type WindowSelectCurrentLocationProps = {
   isDisplaying: boolean;
   close: () => void;
+  currentLocationName: string;
 };
 
 const WindowSelectCurrentLocation = ({
   isDisplaying,
   close,
+  currentLocationName,
 }: WindowSelectCurrentLocationProps) => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [searchName, setSearchName] = useState("");
 
@@ -158,6 +165,15 @@ const WindowSelectCurrentLocation = ({
     <div className={`WindowSelectCurrentLocation ${isDisplaying ? "on" : ""}`}>
       <div className="bg" onClick={close}></div>
       <div className="window-container">
+        <div className="current-location-info">
+          <h4>
+            {t(`Navbar.currentLocation`)}{" "}
+            {t(`Location.${locationNameToI18nKey(currentLocationName)}`)}
+          </h4>
+          <button className="close" onClick={close}>
+            <Icon path={mdiClose} />
+          </button>
+        </div>
         <SearchLocationBar searchName={searchName} setSearchName={setSearchName} />
         <div className="result-list-scrollable">
           <SearchLocationResultList
