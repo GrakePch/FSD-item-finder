@@ -2,6 +2,8 @@ import { Link } from "react-router";
 import { locationNameToI18nKey, toUrlKey } from "../../../../utils";
 import "./LocationCard.css";
 import { useTranslation } from "react-i18next";
+import Icon from "@mdi/react";
+import locationIcon from "../../../../assets/locationIcon";
 
 const LocationCard = ({ location }: { location: SCLocation }) => {
   const { t } = useTranslation();
@@ -13,7 +15,9 @@ const LocationCard = ({ location }: { location: SCLocation }) => {
     : t(`LocationType.${location.type}`);
   return (
     <Link className="LocationCard" to={`/l/${toUrlKey(location.name)}`}>
-      <div className="icon"></div>
+      <div className="icon">
+        <Icon path={locationIcon[location.type]} />
+      </div>
       <div className="info">
         <p className="name">{t(`Location.${locationNameToI18nKey(location.name)}`)}</p>
         <p className="descrip">{description}</p>
