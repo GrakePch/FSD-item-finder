@@ -23,6 +23,8 @@
     "typeOfParent": "{{parent}} 的{{type}}",
     "notFoundCelestial": "天体不存在",
     "notFoundLocation": "地点不存在",
+    "quantumNotAvailable": "无量子标记",
+    "privateProperty": "私有财产",
     "titleParentBody": "上级天体",
     "titleChildBodies": "下级天体",
     "titleLocations": "地点",

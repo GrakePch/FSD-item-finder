@@ -29,3 +29,23 @@
     color: var(--color-text-1);
     font-size: .8rem;
 }
+
+.LocationCard .descrip span {
+    padding: 1px;
+    margin-left: .25rem;
+    border-radius: 100rem;
+}
+
+.LocationCard .descrip svg {
+    vertical-align: text-top;
+}
+
+.LocationCard .quantum-not-available {
+    color: hsl(25, 100%, 60%);
+    background-color: hsla(25, 100%, 60%, .3);
+}
+
+.LocationCard .private-property {
+    color: hsl(0, 100%, 65%);
+    background-color: hsla(0, 100%, 65%, .3);
+}

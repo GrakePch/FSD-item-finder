@@ -23,6 +23,8 @@
     "typeOfParent": "{{type}} of {{parent}}",
     "notFoundCelestial": "Celestial Body Not Found",
     "notFoundLocation": "Location Not Found",
+    "quantumNotAvailable": "No Quantum Marker",
+    "privateProperty": "Private Property",
     "titleParentBody": "Primary Body",
     "titleChildBodies": "Secondary Bodies",
     "titleLocations": "Locations",

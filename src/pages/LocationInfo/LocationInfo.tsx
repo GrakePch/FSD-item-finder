@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next";
 import { locationNameToI18nKey } from "../../utils";
 import CelestialBodyCard from "../SearchLocations/SearchLocationResultList/CelestialBodyCard/CelestialBodyCard";
 import TerminalCard from "../SearchLocations/SearchLocationResultList/TerminalCard/TerminalCard";
+import Icon from "@mdi/react";
+import { icon } from "../../assets/icon";
 
 const LocationInfo = () => {
   const { t } = useTranslation();
@@ -40,7 +42,21 @@ const LocationInfo = () => {
           <h1>{t(`Location.${locationNameToI18nKey(location.name)}`)}</h1>
           <h2>{t(`Location.${locationNameToI18nKey(location.name)}`, { lng: "en" })}</h2>
         </div>
-        <h3 className="type">{typeInfo}</h3>
+        <h3 className="type">
+          {typeInfo}
+          {location.quantum === 0 && (
+            <span className="quantum-not-available">
+              <Icon path={icon.quantum_off} size="1.5rem" />
+              {t("LocationInfo.quantumNotAvailable")}
+            </span>
+          )}
+          {location.private === 1 && (
+            <span className="private-property">
+              <Icon path={icon.private_property} size="1.5rem" />
+              {t("LocationInfo.privateProperty")}
+            </span>
+          )}
+        </h3>
       </div>
       {location.parentBody && (
         <div className="location-links">

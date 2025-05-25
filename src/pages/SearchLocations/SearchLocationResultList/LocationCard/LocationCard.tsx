@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import Icon from "@mdi/react";
 import locationIcon from "../../../../assets/locationIcon";
 import LocationIconColor from "../../../../assets/locationIconColor";
+import { icon } from "../../../../assets/icon";
 
 const LocationCard = ({ location }: { location: SCLocation }) => {
   const { t } = useTranslation();
@@ -29,7 +30,19 @@ const LocationCard = ({ location }: { location: SCLocation }) => {
       </div>
       <div className="info">
         <p className="name">{t(`Location.${locationNameToI18nKey(location.name)}`)}</p>
-        <p className="descrip">{description}</p>
+        <p className="descrip">
+          {description}
+          {location.quantum === 0 && (
+            <span className="quantum-not-available">
+              <Icon path={icon.quantum_off} size="1rem" />
+            </span>
+          )}
+          {location.private === 1 && (
+            <span className="private-property">
+              <Icon path={icon.private_property} size="1rem" />
+            </span>
+          )}
+        </p>
       </div>
     </Link>
   );

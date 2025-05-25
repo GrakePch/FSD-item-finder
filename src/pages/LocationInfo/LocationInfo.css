@@ -15,6 +15,27 @@
     color: var(--color-text-2);
 }
 
+.LocationInfo .type span {
+    padding: 2px .5rem;
+    margin-left: .25rem;
+    border-radius: 100rem;
+}
+
+.LocationInfo .type svg {
+    vertical-align: text-top;
+    margin-right: .25rem;
+}
+
+.LocationInfo .quantum-not-available {
+    color: hsl(25, 100%, 60%);
+    background-color: hsla(25, 100%, 60%, .3);
+}
+
+.LocationInfo .private-property {
+    color: hsl(0, 100%, 65%);
+    background-color: hsla(0, 100%, 65%, .3);
+}
+
 .LocationInfo .location-links {
     background-color: var(--color-bg-1);
     border-radius: 1rem;
