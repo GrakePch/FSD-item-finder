@@ -39,6 +39,8 @@
   "UEXTerminalType": {
     "item": "Item Shop",
     "commodity": "Commodity Trade",
+    "commodity_raw": "Ore Trade",
+    "refinery": "Refinery",
     "vehicle_buy": "Vehicle Buying Shop",
     "vehicle_rent": "Vehicle Rental Shop",
     "fuel": "Refueling Service"
@@ -2346,8 +2348,8 @@
     "Star": "Star",
     "Planet": "Planet",
     "Moon": "Moon",
-    "Lagrange Point": "Lagrange Point",
-    "Jump Point": "Jump Point",
+    "Lagrange Point": "Lagrange point",
+    "Jump Point": "Jump point",
     "Ruins": "Ruins",
     "Underground bunker": "Underground bunker",
     "Outpost": "Outpost",
@@ -2356,6 +2358,7 @@
     "Emergency shelter": "Emergency shelter",
     "Settlement": "Settlement",
     "Space station": "Space station",
+    "Space Station": "Space station",
     "Landmark": "Landmark",
     "Scrapyard": "Scrapyard",
     "CommArray": "CommArray",

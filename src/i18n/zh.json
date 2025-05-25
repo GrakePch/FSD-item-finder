@@ -39,6 +39,8 @@
   "UEXTerminalType": {
     "item": "物品商店",
     "commodity": "大宗商品交易",
+    "commodity_raw": "原矿交易",
+    "refinery": "精炼站",
     "vehicle_buy": "载具购买商店",
     "vehicle_rent": "载具租赁商店",
     "fuel": "燃料补给服务"
@@ -2356,6 +2358,7 @@
     "Emergency shelter": "紧急避难所",
     "Settlement": "定居点",
     "Space station": "空间站",
+    "Space Station": "空间站",
     "Landmark": "地标",
     "Scrapyard": "废品回收站",
     "CommArray": "通信阵列",
