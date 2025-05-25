@@ -31,7 +31,8 @@
   },
   "TerminalInfo": {
     "nearby": "附近",
-    "notFound": "终端不存在"
+    "notFound": "终端不存在",
+    "typeNotSupported": "暂不支持此类终端的交易查询"
   },
   "TerminalInfoSearchBar": {
     "placeholder": "搜索本终端商品……"

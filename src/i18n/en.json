@@ -31,7 +31,8 @@
   },
   "TerminalInfo": {
     "nearby": "Nearby",
-    "notFound": "Terminal Not Found"
+    "notFound": "Terminal Not Found",
+    "typeNotSupported": "Terminal Type Not Currently Supported"
   },
   "TerminalInfoSearchBar": {
     "placeholder": "Search Items in this terminal..."

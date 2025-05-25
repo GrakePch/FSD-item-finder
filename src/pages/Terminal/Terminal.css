@@ -12,6 +12,10 @@
     overflow-wrap: anywhere;
 }
 
+.Terminal .type {
+    color: var(--color-text-2);
+}
+
 .Terminal .faction {
     color: var(--color-text-2);
 }
