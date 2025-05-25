@@ -2,6 +2,8 @@ import { Link } from "react-router";
 import "./TerminalCard.css";
 import { useTranslation } from "react-i18next";
 import { locationNameToI18nKey } from "../../../../utils";
+import Icon from "@mdi/react";
+import locationIcon from "../../../../assets/locationIcon";
 
 const TerminalCard = ({ terminal }: { terminal: Terminal }) => {
   const { t } = useTranslation();
@@ -13,7 +15,9 @@ const TerminalCard = ({ terminal }: { terminal: Terminal }) => {
     : t(`UEXTerminalType.${terminal.type}`);
   return (
     <Link className="TerminalCard" to={`/t/${terminal.id}`}>
-      <div className="icon"></div>
+      <div className="icon">
+        <Icon path={locationIcon[`Terminal_${terminal.type}`]} />
+      </div>
       <div className="info">
         <p className="name">
           {terminal.location_path

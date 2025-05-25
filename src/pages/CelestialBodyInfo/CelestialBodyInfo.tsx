@@ -33,6 +33,36 @@ const CelestialBodyInfo = () => {
       })
     : t(`LocationType.${celestialBody.type}`);
 
+  const typeOrder = [
+    "Landing zone",
+    "Asteroid base",
+    "Space station",
+    "Space Station",
+    "Landmark",
+    "Shipwreck",
+    "Racetrack",
+    "Prison",
+    "Scrapyard",
+    "Emergency shelter",
+    "City",
+    "Settlement",
+    "Distribution center",
+    "Forward operating base",
+    "Outpost",
+    "Underground bunker",
+    "Ruins",
+    "Cave",
+    "CommArray",
+    "Asteroid cluster",
+  ];
+  const sortedLocations = [...celestialBody.locations].sort((a, b) => {
+    const idxA = typeOrder.indexOf(a.type);
+    const idxB = typeOrder.indexOf(b.type);
+    const orderA = idxA === -1 ? typeOrder.length : idxA;
+    const orderB = idxB === -1 ? typeOrder.length : idxB;
+    return orderA - orderB;
+  });
+
   return (
     <div className="CelestialBodyInfo">
       <div className="basic-info">
@@ -70,7 +100,7 @@ const CelestialBodyInfo = () => {
         <div className="location-links">
           <h4>{t(`LocationInfo.titleLocations`)}</h4>
           <ul>
-            {celestialBody.locations.map((location) => (
+            {sortedLocations.map((location) => (
               <li key={location.name}>
                 <LocationCard location={location} />
               </li>

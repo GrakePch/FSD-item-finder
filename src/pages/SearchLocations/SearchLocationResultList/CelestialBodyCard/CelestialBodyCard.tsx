@@ -25,7 +25,7 @@ const CelestialBodyCard = ({ celestialBody }: { celestialBody: CelestialBody }) 
               : null,
         }}
       >
-        <Icon path={locationIcon[celestialBody.type]} />
+        <Icon path={locationIcon[celestialBody.type] || ""} />
       </div>
       <div className="info">
         <p className="name">

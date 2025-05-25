@@ -1,23 +1,30 @@
 import {
-  mdiArrowRightCircleOutline,
+  mdiArrowRight,
   mdiCamera,
   mdiChessRook,
-  mdiChevronDownCircleOutline,
-  mdiCloseCircleOutline,
+  mdiChevronDown,
+  mdiClose,
   mdiHomeVariant,
   mdiPackageVariantClosed,
-  mdiRecordCircleOutline,
+  mdiCircleMedium,
   mdiRecycleVariant,
   mdiRun,
   mdiStar,
   mdiStarOutline,
   mdiTrophyVariantOutline,
   mdiWhiteBalanceSunny,
+  mdiDotsHexagon,
+  mdiWidgetsOutline,
+  mdiDiamondStone,
+  mdiCubeOutline,
+  mdiFire,
+  mdiFuel,
 } from "@mdi/js";
 
 const locationIcon: Record<string, string> = {
   Star: mdiWhiteBalanceSunny,
-  "Lagrange Point": "M12,3.515L20.485,12L12,20.485L3.515,12L12,3.515ZM12,6.343L6.343,12L12,17.657L17.657,12L12,6.343Z",
+  "Lagrange Point":
+    "M12,3.515L20.485,12L12,20.485L3.515,12L12,3.515ZM12,6.343L6.343,12L12,17.657L17.657,12L12,6.343Z",
   "Jump Point":
     "M7.342,16.999C6.792,18.828 5.947,20 5,20C3.344,20 2,16.415 2,12C2,7.585 3.344,4 5,4C5.947,4 6.792,5.172 7.342,7.001C8.341,8.153 9.897,9.375 12,9.375C14.103,9.375 15.659,8.153 16.658,7.001C17.208,5.172 18.053,4 19,4C20.656,4 22,7.585 22,12C22,16.415 20.656,20 19,20C18.053,20 17.208,18.828 16.658,16.999C15.659,15.847 14.103,14.625 12,14.625C9.897,14.625 8.341,15.847 7.342,16.999ZM19,7C18.08,7 17.333,9.24 17.333,12C17.333,14.76 18.08,17 19,17C19.92,17 20.667,14.76 20.667,12C20.667,9.24 19.92,7 19,7ZM5,7C4.08,7 3.333,9.24 3.333,12C3.333,14.76 4.08,17 5,17C5.92,17 6.667,14.76 6.667,12C6.667,9.24 5.92,7 5,7ZM16.15,9.494C15.038,10.291 13.65,10.875 12,10.875C10.35,10.875 8.962,10.291 7.85,9.494C7.947,10.282 8,11.125 8,12C8,12.875 7.947,13.718 7.85,14.506C8.962,13.709 10.35,13.125 12,13.125C13.65,13.125 15.038,13.709 16.15,14.506C16.053,13.718 16,12.875 16,12C16,11.125 16.053,10.282 16.15,9.494Z",
   "Space station":
@@ -36,12 +43,22 @@ const locationIcon: Record<string, string> = {
   Settlement: mdiHomeVariant,
   Landmark: mdiCamera,
   Shipwreck: mdiCamera,
-  "Underground bunker": mdiChevronDownCircleOutline,
+  "Underground bunker": mdiChevronDown,
   Prison: mdiChessRook,
-  Outpost: mdiRecordCircleOutline,
-  Ruins: mdiCloseCircleOutline,
-  "Forward operating base": mdiArrowRightCircleOutline,
-  City: mdiRecordCircleOutline,
+  Outpost: mdiCircleMedium,
+  Ruins: mdiClose,
+  "Forward operating base": mdiArrowRight,
+  City: mdiCircleMedium,
+  "Asteroid cluster": mdiDotsHexagon,
+  Terminal_item: mdiWidgetsOutline,
+  Terminal_commodity: mdiCubeOutline,
+  Terminal_vehicle_buy:
+    "M16,16.813l-0,0.937l1.688,2.125l-0,2.125l-3.563,-2l0,-3.687l-0.875,-0.75l-0.438,1.687l-1.624,0l-0.438,-1.687l-0.875,0.75l0,3.687l-3.563,2l0.001,-2.125l1.687,-2.125l0,-0.937l-1.313,-0.875l-2.562,2.5l0,-2.875l5.188,-6.75l1.625,-6.813l2.125,-0l1.625,6.813l5.187,6.75l0,2.875l-2.562,-2.5l-1.313,0.875Z",
+  Terminal_vehicle_rent:
+    "M16,16.813l-0,0.937l1.688,2.125l-0,2.125l-3.563,-2l0,-3.687l-0.875,-0.75l-0.438,1.687l-1.624,0l-0.438,-1.687l-0.875,0.75l0,3.687l-3.563,2l0.001,-2.125l1.687,-2.125l0,-0.937l-1.313,-0.875l-2.562,2.5l0,-2.875l5.188,-6.75l1.625,-6.813l2.125,-0l1.625,6.813l5.187,6.75l0,2.875l-2.562,-2.5l-1.313,0.875Z",
+  Terminal_commodity_raw: mdiDiamondStone,
+  Terminal_refinery: mdiFire,
+  Terminal_fuel: mdiFuel,
 };
 
 export default locationIcon;

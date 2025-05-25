@@ -20,6 +20,9 @@
     width: 2rem;
     height: 2rem;
     flex-shrink: 0;
+    background-color: #78909c;
+    border-radius: .5rem;
+    border: 2px solid var(--color-text);
 }
 
 .LocationCard .descrip {
