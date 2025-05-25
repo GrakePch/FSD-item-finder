@@ -1,11 +1,11 @@
 import { Link, useNavigate } from "react-router";
-import { locationNameToI18nKey, toUrlKey } from "../../../../utils";
+import { locationNameToI18nKey, toUrlKey } from "../../utils";
 import "./LocationCard.css";
 import { useTranslation } from "react-i18next";
 import Icon from "@mdi/react";
-import locationIcon from "../../../../assets/locationIcon";
-import LocationIconColor from "../../../../assets/locationIconColor";
-import { icon } from "../../../../assets/icon";
+import locationIcon from "../../assets/locationIcon";
+import LocationIconColor from "../../assets/locationIconColor";
+import { icon } from "../../assets/icon";
 
 interface LocationCardProps {
   location: SCLocation;

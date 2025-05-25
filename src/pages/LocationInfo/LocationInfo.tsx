@@ -4,8 +4,8 @@ import { useParams } from "react-router";
 import { ContextAllData } from "../../contexts";
 import { useTranslation } from "react-i18next";
 import { locationNameToI18nKey } from "../../utils";
-import CelestialBodyCard from "../SearchLocations/SearchLocationResultList/CelestialBodyCard/CelestialBodyCard";
-import TerminalCard from "../SearchLocations/SearchLocationResultList/TerminalCard/TerminalCard";
+import CelestialBodyCard from "../../components/CelestialBodyCard/CelestialBodyCard";
+import TerminalCard from "../../components/TerminalCard/TerminalCard";
 import Icon from "@mdi/react";
 import { icon } from "../../assets/icon";
 

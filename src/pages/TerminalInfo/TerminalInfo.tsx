@@ -16,8 +16,8 @@ import Icon from "@mdi/react";
 import { icon } from "../../assets/icon";
 import { mdiClose, mdiMagnify } from "@mdi/js";
 import { useTranslation } from "react-i18next";
-import TerminalCard from "../SearchLocations/SearchLocationResultList/TerminalCard/TerminalCard";
-import LocationCard from "../SearchLocations/SearchLocationResultList/LocationCard/LocationCard";
+import TerminalCard from "../../components/TerminalCard/TerminalCard";
+import LocationCard from "../../components/LocationCard/LocationCard";
 
 const TerminalInfo = () => {
   const { t } = useTranslation();

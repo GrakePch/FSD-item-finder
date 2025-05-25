@@ -1,9 +1,9 @@
 import { Link, useNavigate } from "react-router";
 import "./CelestialBodyCard.css";
-import { locationNameToI18nKey, toUrlKey } from "../../../../utils";
+import { locationNameToI18nKey, toUrlKey } from "../../utils";
 import { useTranslation } from "react-i18next";
 import Icon from "@mdi/react";
-import locationIcon from "../../../../assets/locationIcon";
+import locationIcon from "../../assets/locationIcon";
 
 interface CelestialBodyCardProps {
   celestialBody: CelestialBody;

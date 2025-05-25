@@ -2,10 +2,10 @@ import { useTranslation } from "react-i18next";
 import "./SearchLocationResultList.css";
 import { useContext } from "react";
 import { ContextAllData } from "../../../contexts";
-import CelestialBodyCard from "./CelestialBodyCard/CelestialBodyCard";
-import LocationCard from "./LocationCard/LocationCard";
+import CelestialBodyCard from "../../../components/CelestialBodyCard/CelestialBodyCard";
+import LocationCard from "../../../components/LocationCard/LocationCard";
 import { locationNameToI18nKey } from "../../../utils";
-import TerminalCard from "./TerminalCard/TerminalCard";
+import TerminalCard from "../../../components/TerminalCard/TerminalCard";
 
 const isNameOrI18nMatch = (searchName: string, nameEn: string, nameI18n: string) => {
   const trimmedSearch = searchName.trim().toLowerCase();

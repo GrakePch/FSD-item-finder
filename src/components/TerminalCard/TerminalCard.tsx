@@ -1,9 +1,9 @@
 import { Link, useNavigate } from "react-router";
 import "./TerminalCard.css";
 import { useTranslation } from "react-i18next";
-import { locationNameToI18nKey } from "../../../../utils";
+import { locationNameToI18nKey } from "../../utils";
 import Icon from "@mdi/react";
-import locationIcon from "../../../../assets/locationIcon";
+import locationIcon from "../../assets/locationIcon";
 
 interface TerminalCardProps {
   terminal: Terminal;

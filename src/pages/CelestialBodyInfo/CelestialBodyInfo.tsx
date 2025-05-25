@@ -4,8 +4,8 @@ import { useParams } from "react-router";
 import { ContextAllData } from "../../contexts";
 import { useTranslation } from "react-i18next";
 import { locationNameToI18nKey } from "../../utils";
-import CelestialBodyCard from "../SearchLocations/SearchLocationResultList/CelestialBodyCard/CelestialBodyCard";
-import LocationCard from "../SearchLocations/SearchLocationResultList/LocationCard/LocationCard";
+import CelestialBodyCard from "../../components/CelestialBodyCard/CelestialBodyCard";
+import LocationCard from "../../components/LocationCard/LocationCard";
 
 const CelestialBodyInfo = () => {
   const { t } = useTranslation();
