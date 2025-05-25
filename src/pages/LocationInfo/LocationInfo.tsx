@@ -33,8 +33,6 @@ const LocationInfo = () => {
       })
     : t(`LocationType.${location.type}`);
 
-  const filteredTerminals = location.terminals?.filter((t) => t.type === "item") || [];
-
   return (
     <div className="LocationInfo">
       <div className="basic-info">
@@ -54,11 +52,11 @@ const LocationInfo = () => {
           </ul>
         </div>
       )}
-      {filteredTerminals.length > 0 && (
+      {location.terminals && location.terminals.length > 0 && (
         <div className="location-links">
           <h4>{t(`LocationInfo.titleTerminals`)}</h4>
           <ul>
-            {filteredTerminals.map((terminal) => (
+            {location.terminals.map((terminal) => (
               <li key={terminal.id}>
                 <TerminalCard terminal={terminal} />
               </li>

@@ -10,7 +10,7 @@ import SearchItems from "./pages/SearchItems/SearchItems";
 import SearchVehicles from "./pages/SearchVehicles/SearchVehicles";
 import SearchLocations from "./pages/SearchLocations/SearchLocations";
 import ItemInfo from "./pages/ItemInfo/ItemInfo";
-import Terminal from "./pages/Terminal/Terminal";
+import TerminalInfo from "./pages/TerminalInfo/TerminalInfo";
 import ItemGroupInfo from "./pages/ItemGroupInfo/ItemGroupInfo";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
@@ -77,7 +77,7 @@ function App() {
           <Route path="/v/:vehicleClassName" element={<VehicleInfo />} />
           <Route path="/b/:celestialBodyKey" element={<CelestialBodyInfo />} />
           <Route path="/l/:locationKey" element={<LocationInfo />} />
-          <Route path="/t/:terminalId" element={<Terminal />} />
+          <Route path="/t/:terminalId" element={<TerminalInfo />} />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
         <Footer />

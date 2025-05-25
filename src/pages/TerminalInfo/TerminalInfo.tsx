@@ -1,5 +1,5 @@
 import { useNavigate, useParams, useSearchParams } from "react-router";
-import "./Terminal.css";
+import "./TerminalInfo.css";
 import { useContext, useEffect, useState } from "react";
 import { ContextAllData } from "../../contexts";
 import axios from "axios";
@@ -19,7 +19,7 @@ import { useTranslation } from "react-i18next";
 import TerminalCard from "../SearchLocations/SearchLocationResultList/TerminalCard/TerminalCard";
 import LocationCard from "../SearchLocations/SearchLocationResultList/LocationCard/LocationCard";
 
-const Terminal = () => {
+const TerminalInfo = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -99,7 +99,7 @@ const Terminal = () => {
   const handleSearchChange = (e) => setSearchString(e.target.value);
 
   return (
-    <div className="Terminal">
+    <div className="TerminalInfo">
       {terminalInfo ? (
         <>
           <div className="basic-info">
@@ -287,4 +287,4 @@ const Terminal = () => {
   );
 };
 
-export default Terminal;
+export default TerminalInfo;

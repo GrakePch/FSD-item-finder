@@ -1,38 +1,38 @@
-.Terminal {
+.TerminalInfo {
     padding: 0 1.5rem;
     position: relative;
 }
 
-.Terminal .name h1 {
+.TerminalInfo .name h1 {
     overflow-wrap: anywhere;
 }
 
-.Terminal .name h2 {
+.TerminalInfo .name h2 {
     color: var(--color-text-1);
     overflow-wrap: anywhere;
 }
 
-.Terminal .type {
+.TerminalInfo .type {
     color: var(--color-text-2);
 }
 
-.Terminal .faction {
+.TerminalInfo .faction {
     color: var(--color-text-2);
 }
 
-.Terminal .location-links {
+.TerminalInfo .location-links {
     background-color: var(--color-bg-1);
     border-radius: 1rem;
     margin-top: 1rem;
     padding: .5rem;
 }
 
-.Terminal .location-links>h4 {
+.TerminalInfo .location-links>h4 {
     margin-left: 1rem;
     margin-bottom: .5rem;
 }
 
-.Terminal .location-links ul {
+.TerminalInfo .location-links ul {
     /* margin-top: .5rem; */
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -40,27 +40,27 @@
 }
 
 @media screen and (max-width: 959px) {
-    .Terminal .location-links ul {
+    .TerminalInfo .location-links ul {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media screen and (max-width: 639px) {
-    .Terminal .location-links ul {
+    .TerminalInfo .location-links ul {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
 
-.Terminal .location-links ul {
+.TerminalInfo .location-links ul {
     padding-left: 0;
     list-style: none;
 }
 
-.Terminal .location-links li>a:hover {
+.TerminalInfo .location-links li>a:hover {
     background-color: var(--color-bg-2);
 }
 
-.Terminal hr {
+.TerminalInfo hr {
     border: none;
     width: calc(100% - 2rem);
     height: 1px;
@@ -69,7 +69,7 @@
     opacity: .5;
 }
 
-.Terminal .nearby-terminals {
+.TerminalInfo .nearby-terminals {
     margin-top: .5rem;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -77,31 +77,31 @@
 }
 
 @media screen and (max-width: 959px) {
-    .Terminal .nearby-terminals {
+    .TerminalInfo .nearby-terminals {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media screen and (max-width: 639px) {
-    .Terminal .nearby-terminals {
+    .TerminalInfo .nearby-terminals {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
 
-.Terminal .nearby-terminals>button {
+.TerminalInfo .nearby-terminals>button {
     text-align: start;
     border-radius: .5rem;
     padding: .5rem 1rem;
 }
 
-.Terminal .search-and-list {
+.TerminalInfo .search-and-list {
     margin-top: 1rem;
     background-color: var(--color-bg-1);
     border-radius: 1rem;
     overflow: hidden;
 }
 
-.Terminal .searchbar-container {
+.TerminalInfo .searchbar-container {
     position: relative;
     height: 2.5rem;
     margin: .75rem 1rem;
@@ -111,7 +111,7 @@
     justify-content: stretch;
 }
 
-.Terminal .searchbar-container #searchbar {
+.TerminalInfo .searchbar-container #searchbar {
     flex-shrink: 0;
     flex-grow: 1;
     border-radius: .5rem;
@@ -125,20 +125,20 @@
     transition: filter .2s;
 }
 
-.Terminal .searchbar-container #searchbar:hover {
+.TerminalInfo .searchbar-container #searchbar:hover {
     filter: brightness(1.1);
 }
 
-.Terminal .searchbar-container #searchbar:focus {
+.TerminalInfo .searchbar-container #searchbar:focus {
     outline: none;
 }
 
-.Terminal .searchbar-container .icon-search {
+.TerminalInfo .searchbar-container .icon-search {
     position: absolute;
     left: .5rem;
 }
 
-.Terminal .searchbar-container .btn-clear {
+.TerminalInfo .searchbar-container .btn-clear {
     position: absolute;
     right: .25rem;
     width: 2rem;
@@ -152,12 +152,12 @@
     transition: background .2s, filter .2s;
 }
 
-.Terminal .searchbar-container .btn-clear:hover {
+.TerminalInfo .searchbar-container .btn-clear:hover {
     filter: brightness(1.2);
     background-color: var(--color-bg-2);
 }
 
-.Terminal .filters-for-sub-type {
+.TerminalInfo .filters-for-sub-type {
     padding: .5rem 1rem;
     display: flex;
     align-items: center;
@@ -165,25 +165,25 @@
     flex-wrap: wrap;
 }
 
-.Terminal .filters-for-sub-type>* {
+.TerminalInfo .filters-for-sub-type>* {
     flex-shrink: 0;
 }
 
-.Terminal .filters-for-sub-type>button {
+.TerminalInfo .filters-for-sub-type>button {
     padding: 0 .5rem;
     border: 1px solid var(--color-text-2);
     border-radius: .25rem;
     background-color: transparent;
 }
 
-.Terminal .filters-for-sub-type>button.active {
+.TerminalInfo .filters-for-sub-type>button.active {
     color: #000;
     background-color: var(--color-text);
     box-shadow: 0 0 1rem 0 var(--color-text-1);
 }
 
 
-.Terminal .list-item {
+.TerminalInfo .list-item {
     display: flex;
     align-items: center;
     gap: .5rem;
@@ -195,33 +195,33 @@
     transition: background .2s;
 }
 
-.Terminal .list-item:hover {
+.TerminalInfo .list-item:hover {
     background-color: var(--color-bg-2);
 }
 
-.Terminal .list-item:focus,
-.Terminal .list-item:focus-visible {
+.TerminalInfo .list-item:focus,
+.TerminalInfo .list-item:focus-visible {
     background-color: var(--color-bg-2);
     outline: none;
 }
 
-.Terminal .list-item>* {
+.TerminalInfo .list-item>* {
     flex-shrink: 0;
 }
 
-.Terminal .list-item .names {
+.TerminalInfo .list-item .names {
     flex-grow: 1;
     flex-shrink: 1;
     overflow-wrap: anywhere;
 }
 
-.Terminal .list-item .en {
+.TerminalInfo .list-item .en {
     color: var(--color-text-1);
     font-size: .8rem;
     font-weight: 400;
 }
 
-.Terminal .list-item .type {
+.TerminalInfo .list-item .type {
     font-size: .75rem;
     font-weight: 400;
     border: var(--color-text-1) solid 1px;
@@ -230,21 +230,21 @@
     overflow: hidden;
 }
 
-.Terminal .list-item .type>p:first-child {
+.TerminalInfo .list-item .type>p:first-child {
     padding: 0 .5rem;
     color: var(--color-bg);
     background-color: var(--color-text-1);
     font-weight: 700;
 }
 
-.Terminal .list-item .type>p:last-child {
+.TerminalInfo .list-item .type>p:last-child {
     padding: 0 .5rem;
     color: var(--color-text);
 }
 
-.Terminal .list-item .size,
-.Terminal .list-item .class-grade,
-.Terminal .list-item .tracking-signal {
+.TerminalInfo .list-item .size,
+.TerminalInfo .list-item .class-grade,
+.TerminalInfo .list-item .tracking-signal {
     font-family: var(--font-slim);
     font-variant-numeric: tabular-nums;
     line-height: 1;
@@ -253,12 +253,12 @@
     border-radius: .25rem;
 }
 
-.Terminal .list-item .size {
+.TerminalInfo .list-item .size {
     font-family: var(--font-slim);
     font-weight: 700;
 }
 
-.Terminal .list-item .price {
+.TerminalInfo .list-item .price {
     min-width: 5rem;
     text-align: end;
     color: hsl(200deg 60% 50%);
