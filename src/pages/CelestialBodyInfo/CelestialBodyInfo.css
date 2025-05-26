@@ -12,7 +12,7 @@
 }
 
 .CelestialBodyInfo-map3d-container.blurred {
-    filter: drop-shadow(0 0 1rem var(--color-bg-2)) blur(1rem);
+    filter: drop-shadow(0 0 1rem var(--color-bg-2)) blur(1rem) brightness(0.8);
 }
 
 .CelestialBodyInfo {
@@ -31,6 +31,7 @@
     justify-content: end;
     height: 30rem;
     pointer-events: none;
+    filter: drop-shadow(0 0 .25rem var(--color-bg));
 }
 
 .CelestialBodyInfo .name h1 {
