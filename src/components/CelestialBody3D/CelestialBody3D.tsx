@@ -1,13 +1,21 @@
+import "./CelestialBody3D.css";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useTexture } from "@react-three/drei";
+import { OrbitControls, useTexture, Html } from "@react-three/drei";
 import texture from "../../assets/texture";
 import * as THREE from "three";
+import Icon from "@mdi/react";
+import locationIcon from "../../assets/locationIcon";
+import LocationIconColor from "../../assets/locationIconColor";
+import { useTranslation } from "react-i18next";
+import { locationNameToI18nKey, toUrlKey } from "../../utils";
+import { useState } from "react";
+import { useNavigate } from "react-router";
 
 function CelestialBodySphere({ map, radius }: { map?: string; radius: number }) {
   const textureMap = map ? useTexture(map) : undefined;
   return (
     <mesh>
-      <sphereGeometry args={[radius, 64, 32]} />
+      <sphereGeometry args={[radius, 64, 32, Math.PI]} />
       {textureMap ? (
         <meshStandardMaterial map={textureMap} />
       ) : (
@@ -17,7 +25,17 @@ function CelestialBodySphere({ map, radius }: { map?: string; radius: number }) 
   );
 }
 
-function LatLongLines({ radius, latCount = 8, longCount = 16, color = '#808080' }: { radius: number; latCount?: number; longCount?: number; color?: string }) {
+function LatLongLines({
+  radius,
+  latCount = 8,
+  longCount = 16,
+  color = "#808080",
+}: {
+  radius: number;
+  latCount?: number;
+  longCount?: number;
+  color?: string;
+}) {
   // Latitude lines (excluding poles)
   const latLines = [];
   for (let i = 1; i < latCount; i++) {
@@ -57,7 +75,7 @@ function LatLongLines({ radius, latCount = 8, longCount = 16, color = '#808080' 
       points.push(new THREE.Vector3(x, y, z));
     }
     longLines.push(
-      <line key={`long-${i}`}> 
+      <line key={`long-${i}`}>
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
@@ -70,7 +88,50 @@ function LatLongLines({ radius, latCount = 8, longCount = 16, color = '#808080' 
       </line>
     );
   }
-  return <>{latLines}{longLines}</>;
+  return (
+    <>
+      {latLines}
+      {longLines}
+    </>
+  );
+}
+
+function LocationLabel({ loc }: { loc: SCLocation }) {
+  const { t } = useTranslation();
+  const [occluded, setOccluded] = useState(false);
+  const navigate = useNavigate();
+  const handleClick = (e: any) => {
+    e.stopPropagation();
+    navigate(`/l/${toUrlKey(loc.name)}`);
+  };
+  const isLarge =
+    loc.type === "Landing zone" ||
+    loc.type === "Space station" ||
+    loc.type === "Asteroid base";
+  return (
+    <Html
+      position={[loc.coordinateX, loc.coordinateZ, -loc.coordinateY]}
+      center
+      occlude
+      onOcclude={setOccluded}
+      className={`location-label ${occluded ? "occluded" : ""} ${isLarge ? "large" : ""}`}
+    >
+      <div className="wrapper" onClick={handleClick}>
+        <div
+          className="icon"
+          style={{
+            backgroundColor:
+              loc.private === 1 ? "#f74a55" : LocationIconColor[loc.type] || "#78909c",
+          }}
+        >
+          <Icon path={locationIcon[loc.type]} color="#fff" />
+        </div>
+        <p className="name">
+          {t(`Location.${locationNameToI18nKey(loc.name)}`, { defaultValue: loc.name })}
+        </p>
+      </div>
+    </Html>
+  );
 }
 
 export default function CelestialBody3D({
@@ -81,8 +142,12 @@ export default function CelestialBody3D({
   const bodyTexture = texture.body[celestialBody.name];
   const radius = celestialBody.bodyRadius || 1;
   const zoom = 200 / radius;
-  const cameraPosition: [number, number, number] = [0, 0, 1.5 * radius];
-  const cameraFar = 2 * radius;
+  const cameraPosition: [number, number, number] = [0, 0, 4 * radius];
+  const cameraFar = 10 * radius;
+  const themeColor =
+    celestialBody.themeColorR && celestialBody.themeColorG && celestialBody.themeColorB
+      ? `rgb(${celestialBody.themeColorR}, ${celestialBody.themeColorG}, ${celestialBody.themeColorB})`
+      : undefined;
   return (
     <Canvas
       key={celestialBody.name}
@@ -93,11 +158,14 @@ export default function CelestialBody3D({
         near: 0.1,
         far: cameraFar,
       }}
+      className="CelestialBody3D"
     >
       <ambientLight intensity={1} />
-      <directionalLight position={[1,0,1]} intensity={1} />
+      <directionalLight position={[1, 0, 1]} intensity={1} />
       <CelestialBodySphere map={bodyTexture} radius={radius} />
-      <LatLongLines radius={radius+.1} />
+      <LatLongLines radius={radius + 0.1} color={themeColor} />
+      {celestialBody.locations &&
+        celestialBody.locations.map((loc) => <LocationLabel loc={loc} key={loc.name} />)}
       <OrbitControls enablePan={false} enableZoom={false} />
     </Canvas>
   );

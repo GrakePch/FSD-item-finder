@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     height: 30rem;
-    max-width: 30rem;
+    /* max-width: 30rem; */
     margin: 0 auto;
     margin-top: 6rem;
     filter: drop-shadow(0 0 1rem var(--color-bg-2));

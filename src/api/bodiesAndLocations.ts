@@ -26,7 +26,7 @@ export function buildDataBodiesAndLocations(): [
       quaternionY: body.quaternionY,
       quaternionZ: body.quaternionZ,
       bodyRadius: body.bodyRadius,
-      rotationRate: body.rotationRate,
+      hoursPerCycle: body.rotationRate,
       rotationCorrection: body.rotationCorrection,
       orbitAngle: body.orbitAngle,
       orbitRadius: body.orbitRadius,

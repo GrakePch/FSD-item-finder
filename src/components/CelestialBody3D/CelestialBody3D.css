@@ -1,0 +1,57 @@
+.CelestialBody3D .location-label {
+    transition: opacity .15s, visibility 0s .15s;
+}
+
+.CelestialBody3D .location-label.occluded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.CelestialBody3D .wrapper {
+    cursor: pointer;
+    user-select: none;
+    transition: transform .15s;
+}
+
+.CelestialBody3D .wrapper:hover {
+    transform: scale(1.1);
+}
+
+.CelestialBody3D .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+    background-color: #78909c;
+    border-radius: .4rem;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 2px 0px #00000080;
+    display: flex;
+    place-items: center;
+}
+
+.CelestialBody3D .name {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -130%);
+    width: max-content;
+    color: #fff;
+    font-size: .75rem;
+    font-family: var(--font-slim);
+    line-height: 1;
+    text-shadow:
+        1px 1px 3px #000,
+        1px -1px 3px #000,
+        -1px -1px 3px #000,
+        -1px 1px 3px #000;
+}
+
+.CelestialBody3D .location-label.large .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.CelestialBody3D .location-label.large .name {
+    font-size: 1rem;
+    font-weight: 500;
+}

@@ -14,7 +14,7 @@ interface CelestialBody {
   quaternionY: number;
   quaternionZ: number;
   bodyRadius: number;
-  rotationRate?: number;
+  hoursPerCycle?: number;
   rotationCorrection?: number;
   orbitAngle?: number;
   orbitRadius?: number;
