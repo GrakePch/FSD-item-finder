@@ -845,9 +845,9 @@
       "orbitRadius": 0.0,
       "ringRadiusInner": 410.0,
       "ringRadiusOuter": 670.0,
-      "themeColorR": 47.0,
-      "themeColorG": 48.0,
-      "themeColorB": 50.0
+      "themeColorR": 94.0,
+      "themeColorG": 96.0,
+      "themeColorB": 100.0
     },
     {
       "name": "Ignis",

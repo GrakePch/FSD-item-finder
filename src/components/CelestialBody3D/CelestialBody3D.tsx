@@ -10,6 +10,7 @@ import texture from "../../assets/texture";
 import * as THREE from "three";
 import RotatingDirectionalLight from "./RotatingDirectionalLight";
 import CelestialBodyRing from "./CelestialBodyRing";
+import { OrbitalMarkers } from "./OrbitalMarkers";
 
 export default function CelestialBody3D({
   celestialBody,
@@ -77,6 +78,8 @@ export default function CelestialBody3D({
         celestialBody.locations.map((loc) => (
           <LocationLabel loc={loc} key={loc.name} sphereRef={sphereRef} />
         ))}
+      {/* Render Orbital Markers */}
+      <OrbitalMarkers radius={radius} color={themeColor} sphereRef={sphereRef} />
       <OrbitControls enablePan={false} enableZoom={false} />
     </Canvas>
   );
