@@ -4,19 +4,22 @@ import React from "react";
 
 export default function CelestialBodySphere({
   map,
+  mapRoughness,
   radius,
   sphereRef,
 }: {
   map?: string;
+  mapRoughness?: string;
   radius: number;
   sphereRef: React.Ref<THREE.Mesh>;
 }) {
   const textureMap = map ? useTexture(map) : undefined;
+  const roughnessMap = mapRoughness ? useTexture(mapRoughness) : undefined;
   return (
     <mesh ref={sphereRef}>
       <sphereGeometry args={[radius, 64, 32, Math.PI]} />
       {textureMap ? (
-        <meshStandardMaterial map={textureMap} />
+        <meshStandardMaterial map={textureMap} roughnessMap={roughnessMap} />
       ) : (
         <meshStandardMaterial color="#ffffff" />
       )}

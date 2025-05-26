@@ -17,6 +17,7 @@ export default function CelestialBody3D({
   celestialBody: CelestialBody;
 }) {
   const bodyTexture = texture.body[celestialBody.name];
+  const bodyTextureRoughness = texture.roughness[celestialBody.name];
   const radius = celestialBody.bodyRadius || 1;
   const zoom = 200 / radius;
   const cameraPosition: [number, number, number] = [0, 0, 4 * radius];
@@ -45,7 +46,12 @@ export default function CelestialBody3D({
     >
       <ambientLight intensity={0.7} />
       <RotatingDirectionalLight intensity={5} celestialBody={celestialBody} />
-      <CelestialBodySphere map={bodyTexture} radius={radius} sphereRef={sphereRef} />
+      <CelestialBodySphere
+        map={bodyTexture}
+        mapRoughness={bodyTextureRoughness}
+        radius={radius}
+        sphereRef={sphereRef}
+      />
       <LatLongLines radius={radius + 0.1} color={themeColor} />
       {/* Render ring*/}
       {celestialBody.ringRadiusInner && celestialBody.ringRadiusOuter && (

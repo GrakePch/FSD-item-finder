@@ -27,8 +27,12 @@ import bodyVuur from "./bodies/vuur.webp";
 import bodyWala from "./bodies/wala.webp";
 import bodyYela from "./bodies/yela.webp";
 import ringYela from "./rings/asteroid_ring_yela_diff.png";
+import roughnessClio from "./bodies-roughness/clio.webp";
+import roughnessEuterpe from "./bodies-roughness/euterpe.webp";
+import roughnessHurston from "./bodies-roughness/hurston.webp";
+import roughnessMicroTech from "./bodies-roughness/microtech.webp";
 
-const texture: { body: Record<string, string>, ring: Record<string, string> } = {
+const texture: { body: Record<string, string>; ring: Record<string, string>; roughness: Record<string, string> } = {
   body: {
     Aberdeen: bodyAberdeen,
     Adir: bodyAdir,
@@ -61,7 +65,13 @@ const texture: { body: Record<string, string>, ring: Record<string, string> } = 
   },
   ring: {
     Yela: ringYela,
-  }
+  },
+  roughness: {
+    Clio: roughnessClio,
+    Euterpe: roughnessEuterpe,
+    Hurston: roughnessHurston,
+    microTech: roughnessMicroTech,
+  },
 };
 
 export default texture;
