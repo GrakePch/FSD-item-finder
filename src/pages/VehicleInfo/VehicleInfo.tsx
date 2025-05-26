@@ -1,5 +1,5 @@
 import "./VehicleInfo.css";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router";
 import { ContextAllData } from "../../contexts";
 import { useContext, useMemo } from "react";
 import spvVehicleIndex from "../../data/vehicles/spv_vehicle_index";

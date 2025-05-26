@@ -1,4 +1,4 @@
-import { useLocation, Link, useNavigate } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router";
 import { useMemo, useEffect, useState } from "react";
 import Icon from "@mdi/react";
 import { icon } from "../../assets/icon";

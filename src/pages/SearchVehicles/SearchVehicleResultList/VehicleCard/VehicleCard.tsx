@@ -1,5 +1,5 @@
 import "./VehicleCard.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { formatVehicleImageSrc, spvRoleToKey } from "../../../../utils";
 import { useTranslation } from "react-i18next";
 

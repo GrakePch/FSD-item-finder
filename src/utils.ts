@@ -139,8 +139,8 @@ export function getBodiesDistance(b1, b2) {
     if (!info1 || !info2) return Infinity;
     if ((info1.parentStar || info1.name) !== (info2.parentStar || info2.name)) return Infinity; //TODO: Better calculation for interstellar distance
     return getDistance(
-        [info1.x, info1.y, info1.z],
-        [info2.x, info2.y, info2.z]
+        [info1.coordinateX, info1.coordinateY, info1.coordinateZ],
+        [info2.coordinateX, info2.coordinateY, info2.coordinateZ]
     )
 }
 

@@ -1,5 +1,36 @@
+.CelestialBodyInfo-map3d-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30rem;
+    max-width: 30rem;
+    margin: 0 auto;
+    margin-top: 6rem;
+    filter: drop-shadow(0 0 1rem var(--color-bg-2));
+    transition: filter 0.3s ease-in-out;
+}
+
+.CelestialBodyInfo-map3d-container.blurred {
+    filter: drop-shadow(0 0 1rem var(--color-bg-2)) blur(1rem);
+}
+
 .CelestialBodyInfo {
     padding: 0 1.5rem;
+    position: relative;
+    pointer-events: none;
+}
+
+.CelestialBodyInfo>* {
+    pointer-events: auto;
+}
+
+.CelestialBodyInfo .basic-info.load-map-3d {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 30rem;
+    pointer-events: none;
 }
 
 .CelestialBodyInfo .name h1 {
@@ -16,7 +47,7 @@
 }
 
 .CelestialBodyInfo .location-links {
-    background-color: var(--color-bg-1);
+    background-color: var(--color-bg-2a);
     border-radius: 1rem;
     margin-top: 1rem;
     padding: .5rem;
@@ -52,5 +83,5 @@
 }
 
 .CelestialBodyInfo .location-links li>a:hover {
-    background-color: var(--color-bg-2);
+    background-color: var(--color-bg-3a);
 }

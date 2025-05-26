@@ -12,6 +12,9 @@
   "dependencies": {
     "@mdi/js": "^7.4.47",
     "@mdi/react": "^1.6.1",
+    "@react-three/drei": "^10.0.8",
+    "@react-three/fiber": "^8.18.0",
+    "@types/three": "^0.176.0",
     "axios": "^1.7.9",
     "fsd-item-finder": "file:",
     "i18next": "^25.2.0",
@@ -20,7 +23,8 @@
     "react-dom": "^18.3.1",
     "react-i18next": "^15.5.1",
     "react-router": "^7.0.1",
-    "react-router-dom": "^7.6.0"
+    "react-router-dom": "^7.6.0",
+    "three": "^0.176.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",

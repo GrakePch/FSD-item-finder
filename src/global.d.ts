@@ -3,11 +3,24 @@
 interface CelestialBody {
   name: string;
   type: string;
+  ordinal?: string;
   parentBody: CelestialBody | null;
   parentStar: CelestialBody | null;
-  x: number;
-  y: number;
-  z: number;
+  coordinateX: number;
+  coordinateY: number;
+  coordinateZ: number;
+  quaternionW: number;
+  quaternionX: number;
+  quaternionY: number;
+  quaternionZ: number;
+  bodyRadius: number;
+  rotationRate?: number;
+  rotationCorrection?: number;
+  orbitAngle?: number;
+  orbitRadius?: number;
+  themeColorR?: number;
+  themeColorG?: number;
+  themeColorB?: number;
   locations: SCLocation[];
   children: CelestialBody[];
 }
