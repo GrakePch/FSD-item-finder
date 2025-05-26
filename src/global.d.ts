@@ -23,6 +23,8 @@ interface CelestialBody {
   themeColorB?: number;
   locations: SCLocation[];
   children: CelestialBody[];
+  ringRadiusInner?: number;
+  ringRadiusOuter?: number;
 }
 
 interface SCLocation {

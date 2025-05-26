@@ -9,6 +9,7 @@ import LocationLabel from "./LocationLabel";
 import texture from "../../assets/texture";
 import * as THREE from "three";
 import RotatingDirectionalLight from "./RotatingDirectionalLight";
+import CelestialBodyRing from "./CelestialBodyRing";
 
 export default function CelestialBody3D({
   celestialBody,
@@ -46,6 +47,14 @@ export default function CelestialBody3D({
       <RotatingDirectionalLight intensity={5} celestialBody={celestialBody} />
       <CelestialBodySphere map={bodyTexture} radius={radius} sphereRef={sphereRef} />
       <LatLongLines radius={radius + 0.1} color={themeColor} />
+      {/* Render ring*/}
+      {celestialBody.ringRadiusInner && celestialBody.ringRadiusOuter && (
+        <CelestialBodyRing
+          innerRadius={celestialBody.ringRadiusInner}
+          outerRadius={celestialBody.ringRadiusOuter}
+          map={texture.ring.Yela}
+        />
+      )}
       {/* Render orbits for space stations and comm arrays */}
       {celestialBody.locations &&
         celestialBody.locations

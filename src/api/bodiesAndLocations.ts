@@ -30,6 +30,8 @@ export function buildDataBodiesAndLocations(): [
       rotationCorrection: body.rotationCorrection,
       orbitAngle: body.orbitAngle,
       orbitRadius: body.orbitRadius,
+      ringRadiusInner: body.ringRadiusInner,
+      ringRadiusOuter: body.ringRadiusOuter,
       themeColorR: body.themeColorR,
       themeColorG: body.themeColorG,
       themeColorB: body.themeColorB,

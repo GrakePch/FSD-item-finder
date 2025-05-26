@@ -26,8 +26,9 @@ import bodyVatra from "./bodies/vatra.webp";
 import bodyVuur from "./bodies/vuur.webp";
 import bodyWala from "./bodies/wala.webp";
 import bodyYela from "./bodies/yela.webp";
+import ringYela from "./rings/asteroid_ring_yela_diff.png";
 
-const texture: { body: Record<string, string> } = {
+const texture: { body: Record<string, string>, ring: Record<string, string> } = {
   body: {
     Aberdeen: bodyAberdeen,
     Adir: bodyAdir,
@@ -58,6 +59,9 @@ const texture: { body: Record<string, string> } = {
     Wala: bodyWala,
     Yela: bodyYela,
   },
+  ring: {
+    Yela: ringYela,
+  }
 };
 
 export default texture;
