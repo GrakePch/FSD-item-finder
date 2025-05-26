@@ -7,12 +7,12 @@
     /* max-width: 30rem; */
     margin: 0 auto;
     margin-top: 6rem;
-    filter: drop-shadow(0 0 1rem var(--color-bg-2));
+    filter: drop-shadow(0 0 1rem var(--body-theme-color));
     transition: filter 0.3s ease-in-out;
 }
 
 .CelestialBodyInfo-map3d-container.blurred {
-    filter: drop-shadow(0 0 1rem var(--color-bg-2)) blur(1rem) brightness(0.8);
+    filter: drop-shadow(0 0 1rem var(--body-theme-color)) blur(1rem) brightness(0.8);
 }
 
 .CelestialBodyInfo {

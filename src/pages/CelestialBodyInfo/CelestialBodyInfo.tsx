@@ -79,6 +79,10 @@ const CelestialBodyInfo = () => {
   });
 
   const loadMap3D = celestialBody.type === "Planet" || celestialBody.type === "Moon";
+  const themeColor =
+    celestialBody.themeColorR && celestialBody.themeColorG && celestialBody.themeColorB
+      ? `rgba(${celestialBody.themeColorR}, ${celestialBody.themeColorG}, ${celestialBody.themeColorB}, .25)`
+      : `#80808040`;
 
   return (
     <>
@@ -86,6 +90,7 @@ const CelestialBodyInfo = () => {
         <div
           ref={map3dRef}
           className={`CelestialBodyInfo-map3d-container${blurred ? " blurred" : ""}`}
+          style={{ "--body-theme-color": themeColor } as React.CSSProperties}
         >
           <CelestialBody3D celestialBody={celestialBody} />
         </div>

@@ -20,6 +20,7 @@ import bodyMicroTech from "./bodies/microtech.webp";
 import bodyMonox from "./bodies/monox.webp";
 import bodyPyroI from "./bodies/pyro i.webp";
 import bodyPyroIV from "./bodies/pyro iv.webp";
+import bodyPyroV from "./bodies/pyro v.webp";
 import bodyTerminus from "./bodies/terminus.webp";
 import bodyVatra from "./bodies/vatra.webp";
 import bodyVuur from "./bodies/vuur.webp";
@@ -50,6 +51,7 @@ const texture: { body: Record<string, string> } = {
     Monox: bodyMonox,
     "Pyro I": bodyPyroI,
     "Pyro IV": bodyPyroIV,
+    "Pyro V": bodyPyroV,
     Terminus: bodyTerminus,
     Vatra: bodyVatra,
     Vuur: bodyVuur,
