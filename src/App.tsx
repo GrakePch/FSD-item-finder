@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { Route, Routes } from "react-router";
+import { Route, Routes, useLocation } from "react-router";
 import { ContextAllData, AllData } from "./contexts";
 import { buildDataBodiesAndLocations } from "./api/bodiesAndLocations";
 import { fetchAndProcessTerminals } from "./api/terminals";
@@ -30,6 +30,8 @@ function App() {
     dictVehicles: {},
     dictItems: {},
   });
+
+  const location = useLocation();
 
   const initializeAppData = async () => {
     const [dictSystems, dictBodies, dictLocations] = buildDataBodiesAndLocations();
@@ -62,6 +64,29 @@ function App() {
   }, []);
 
   useEffect(() => console.log(allData), [allData]);
+
+  useEffect(() => {
+    const path = location.pathname;
+    if (
+      path === "/" ||
+      path.startsWith("/i/") ||
+      path.startsWith("/iv/")
+    ) {
+      document.title = "星际寻物";
+    } else if (
+      path === "/v" ||
+      path.startsWith("/v/")
+    ) {
+      document.title = "星际寻船";
+    } else if (
+      path === "/l" ||
+      path.startsWith("/l/") ||
+      path.startsWith("/b/") ||
+      path.startsWith("/t/")
+    ) {
+      document.title = "星际寻址";
+    }
+  }, [location]);
 
   return (
     <I18nextProvider i18n={i18n}>

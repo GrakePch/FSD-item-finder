@@ -73,14 +73,6 @@ const NavBar = () => {
     <>
       <div className="NavBar">
         <div className="nav-container">
-          <h1 className="title">
-            星际
-            {tabSearch === "vehicles"
-              ? "寻船"
-              : tabSearch === "locations"
-              ? "寻址"
-              : "寻物"}
-          </h1>
           <nav className="links-container">
             <Link to="/" className={tabSearch === "items" ? "active" : ""}>
               <Icon path={mdiWidgetsOutline} size="2rem" />
