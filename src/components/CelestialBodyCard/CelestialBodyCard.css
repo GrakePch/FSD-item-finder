@@ -1,6 +1,6 @@
 .CelestialBodyCard {
     display: block;
-    color: initial;
+    color: var(--color-text);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -11,7 +11,7 @@
 }
 
 .CelestialBodyCard:hover {
-    color: initial;
+    color: var(--color-text);
     text-decoration: none;
     background-color: var(--color-bg-1);
 }
