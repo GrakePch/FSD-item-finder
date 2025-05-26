@@ -8,6 +8,7 @@ import OrbitCircle from "./OrbitCircle";
 import LocationLabel from "./LocationLabel";
 import texture from "../../assets/texture";
 import * as THREE from "three";
+import RotatingDirectionalLight from "./RotatingDirectionalLight";
 
 export default function CelestialBody3D({
   celestialBody,
@@ -28,6 +29,7 @@ export default function CelestialBody3D({
     loc.type === "Asteroid base" ||
     loc.type === "CommArray";
   const sphereRef = useRef<THREE.Mesh>(null);
+
   return (
     <Canvas
       key={celestialBody.name}
@@ -40,8 +42,8 @@ export default function CelestialBody3D({
       }}
       className="CelestialBody3D"
     >
-      <ambientLight intensity={1} />
-      <directionalLight position={[1, 0, 1]} intensity={1} />
+      <ambientLight intensity={0.7} />
+      <RotatingDirectionalLight intensity={5} celestialBody={celestialBody} />
       <CelestialBodySphere map={bodyTexture} radius={radius} sphereRef={sphereRef} />
       <LatLongLines radius={radius + 0.1} color={themeColor} />
       {/* Render orbits for space stations and comm arrays */}
