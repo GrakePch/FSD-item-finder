@@ -3,13 +3,16 @@ import CelestialBody3D from "../../components/CelestialBody3D/CelestialBody3D";
 import "./EyesOnStarCitizen.css";
 import { ContextAllData } from "../../contexts";
 import { toUrlKey } from "../../utils";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import CelestialBodyInfo from "../CelestialBodyInfo/CelestialBodyInfo";
 import LocationInfo from "../LocationInfo/LocationInfo";
 import SearchLocationBar from "../SearchLocations/SearchLocationBar/SearchLocationBar";
 import SearchLocationResultList from "../SearchLocations/SearchLocationResultList/SearchLocationResultList";
 import CardCelestialBody from "./CardCelestialBody/CardCelestialBody";
 import CardLocation from "./CardLocation/CardLocation";
+import Icon from "@mdi/react";
+import { mdiChevronUp, mdiMapMarker, mdiWidgetsOutline } from "@mdi/js";
+import { icon } from "../../assets/icon";
 
 const SEARCH_LOCATIONS_NAME_KEY = "fsd_searchLocations_searchName";
 
@@ -20,6 +23,8 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
   const locationKey = useParams().locationKey || "";
   const [seeCelestialBody, setSeeCelestialBody] = useState<CelestialBody | null>(null);
   const seeLocation = dictLocations[locationKey] || null;
+  const [isSearchCardOpen, setIsSearchCardOpen] = useState(false);
+  const [isInfoCardOpen, setIsInfoCardOpen] = useState(false);
 
   useEffect(() => {
     let tempCB = null;
@@ -69,15 +74,42 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
   }
   return (
     <div className="EyesOnStarCitizen">
-      <CelestialBody3D celestialBody={seeCelestialBody} />
+      <div
+        onClick={() => setIsSearchCardOpen(false)}
+        style={{ width: "100%", height: "100%" }}
+      >
+        <CelestialBody3D celestialBody={seeCelestialBody} />
+      </div>
+
+      <nav className="special-nav-bar">
+        <Link to="/">
+          <Icon path={mdiWidgetsOutline} size="2rem" />
+        </Link>
+        <Link to="/v">
+          <Icon path={icon.Vehicle} size="2rem" />
+        </Link>
+        <Link to="/l" className={"active"}>
+          <Icon path={mdiMapMarker} size="2rem" />
+        </Link>
+      </nav>
 
       <div className="fixed-search-bar">
-        <SearchLocationBar searchName={searchName} setSearchName={setSearchName} />
+        <SearchLocationBar
+          searchName={searchName}
+          setSearchName={setSearchName}
+          setIsSearchCardOpen={setIsSearchCardOpen}
+        />
       </div>
-      <div className="search-card">
+      <div className={`search-card ${isSearchCardOpen ? "open" : ""}`}>
         <SearchLocationResultList searchName={searchName} includeTerminal />
       </div>
-      <div className="info-card">
+      <div className={`info-card ${isInfoCardOpen ? "open" : ""}`}>
+        <button
+          className="info-card-toggle"
+          onClick={() => setIsInfoCardOpen((prev) => !prev)}
+        >
+          <Icon path={mdiChevronUp} size={"1.5rem"} rotate={isInfoCardOpen ? 180 : 0} />
+        </button>
         {routing === "l" ? (
           <CardLocation location={seeLocation} />
         ) : (

@@ -7,9 +7,11 @@ import { mdiMagnify, mdiClose } from "@mdi/js";
 const SearchLocationBar = ({
   searchName,
   setSearchName,
+  setIsSearchCardOpen,
 }: {
   searchName: string;
   setSearchName: React.Dispatch<React.SetStateAction<string>>;
+  setIsSearchCardOpen?: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   const { t } = useTranslation();
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,6 +30,7 @@ const SearchLocationBar = ({
           placeholder={t("SearchLocationBar.placeholder")}
           value={searchName}
           onChange={handleSearchChange}
+          onFocus={() => setIsSearchCardOpen && setIsSearchCardOpen(true)}
         />
         {searchName && (
           <button className="btnClear" onClick={() => setSearchName("")}>
