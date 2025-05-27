@@ -1,0 +1,44 @@
+.CardCelestialBody {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+
+.CardCelestialBody .name h1 {
+    font-size: 1.5rem;
+    overflow-wrap: anywhere;
+}
+
+.CardCelestialBody .name h2 {
+    font-size: 1.25rem;
+    color: var(--color-text-1);
+    overflow-wrap: anywhere;
+}
+
+.CardCelestialBody .type {
+    font-size: 1rem;
+    color: var(--color-text-2);
+}
+
+.CardCelestialBody .location-links {
+    padding: .5rem;
+    background-color: var(--color-bg-1);
+    border-radius: 1rem;
+}
+
+.CardCelestialBody .location-links>h4 {
+    margin-left: 1rem;
+    margin-bottom: .25rem;
+}
+
+.CardCelestialBody .location-links ul{
+    padding-left: 0;
+    list-style: none;
+}
+
+.CardCelestialBody .location-links ul a:hover {
+    background-color: var(--color-bg-2);
+}

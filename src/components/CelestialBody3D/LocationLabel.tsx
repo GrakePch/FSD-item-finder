@@ -33,6 +33,7 @@ export default function LocationLabel({
       occlude={[sphereRef]}
       onOcclude={setOccluded}
       className={`location-label ${occluded ? "occluded" : ""} ${isLarge ? "large" : ""}`}
+      zIndexRange={[500, 0]}
     >
       <div className="wrapper" onClick={handleClick}>
         <div

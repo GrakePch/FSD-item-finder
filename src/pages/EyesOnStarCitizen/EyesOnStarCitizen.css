@@ -13,6 +13,7 @@
   top: 1rem;
   left: 1.5rem;
   width: 20rem;
+  z-index: 1000;
 }
 
 .EyesOnStarCitizen .search-card {
@@ -21,9 +22,12 @@
   left: 1.5rem;
   bottom: 1rem;
   width: 20rem;
-  background-color: var(--color-bg-2a);
+  height: max-content;
+  max-height: calc(100% - 6rem);
+  background-color: var(--color-bg);
   border-radius: .5rem;
   overflow: hidden auto;
+  z-index: 1000;
 }
 
 .EyesOnStarCitizen .info-card {
@@ -31,8 +35,9 @@
   top: 0;
   right: 0;
   bottom: 0;
-  width: 20rem;
-  padding-top: 1rem;
-  background-color: var(--color-bg-2a);
+  width: 24rem;
+  padding: 1rem 0;
+  background-color: var(--color-bg);
   overflow: hidden auto;
+  z-index: 1000;
 }

@@ -8,6 +8,8 @@ import CelestialBodyInfo from "../CelestialBodyInfo/CelestialBodyInfo";
 import LocationInfo from "../LocationInfo/LocationInfo";
 import SearchLocationBar from "../SearchLocations/SearchLocationBar/SearchLocationBar";
 import SearchLocationResultList from "../SearchLocations/SearchLocationResultList/SearchLocationResultList";
+import CardCelestialBody from "./CardCelestialBody/CardCelestialBody";
+import CardLocation from "./CardLocation/CardLocation";
 
 const SEARCH_LOCATIONS_NAME_KEY = "fsd_searchLocations_searchName";
 
@@ -76,7 +78,11 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
         <SearchLocationResultList searchName={searchName} includeTerminal />
       </div>
       <div className="info-card">
-        {routing === "l" ? <LocationInfo /> : <CelestialBodyInfo />}
+        {routing === "l" ? (
+          <CardLocation location={seeLocation} />
+        ) : (
+          <CardCelestialBody celestialBody={seeCelestialBody} />
+        )}
       </div>
     </div>
   );

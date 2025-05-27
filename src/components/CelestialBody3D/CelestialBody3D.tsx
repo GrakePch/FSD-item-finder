@@ -21,6 +21,8 @@ export default function CelestialBody3D({
   const bodyTextureRoughness = texture.roughness[celestialBody.name];
   const radius = celestialBody.bodyRadius || 1;
   const zoom = 200 / radius;
+  const zoomMax = 1000 / radius;
+  const zoomMin = 100 / radius;
   const cameraPosition: [number, number, number] = [0, 0, 4 * radius];
   const cameraFar = 10 * radius;
   const themeColor =
@@ -80,7 +82,12 @@ export default function CelestialBody3D({
         ))}
       {/* Render Orbital Markers */}
       <OrbitalMarkers radius={radius} color={themeColor} sphereRef={sphereRef} />
-      <OrbitControls enablePan={false} enableZoom={false} />
+      <OrbitControls
+        enablePan={false}
+        enableZoom={true}
+        maxZoom={zoomMax}
+        minZoom={zoomMin}
+      />
     </Canvas>
   );
 }

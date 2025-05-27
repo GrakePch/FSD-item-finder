@@ -1,0 +1,65 @@
+.CardLocation {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+
+.CardLocation .name h1 {
+    font-size: 1.5rem;
+    overflow-wrap: anywhere;
+}
+
+.CardLocation .name h2 {
+    font-size: 1.25rem;
+    color: var(--color-text-1);
+    overflow-wrap: anywhere;
+}
+
+.CardLocation .type {
+    font-size: 1rem;
+    color: var(--color-text-2);
+}
+
+.CardLocation .type span {
+    padding: 2px .5rem;
+    margin-left: .25rem;
+    border-radius: 100rem;
+}
+
+.CardLocation .type svg {
+    vertical-align: text-top;
+    margin-right: .25rem;
+}
+
+.CardLocation .quantum-not-available {
+    color: hsl(25, 100%, 60%);
+    background-color: hsla(25, 100%, 60%, .3);
+}
+
+.CardLocation .private-property {
+    color: hsl(0, 100%, 65%);
+    background-color: hsla(0, 100%, 65%, .3);
+}
+
+.CardLocation .location-links {
+    padding: .5rem;
+    background-color: var(--color-bg-1);
+    border-radius: 1rem;
+}
+
+.CardLocation .location-links>h4 {
+    margin-left: 1rem;
+    margin-bottom: .25rem;
+}
+
+.CardLocation .location-links ul{
+    padding-left: 0;
+    list-style: none;
+}
+
+.CardLocation .location-links ul a:hover {
+    background-color: var(--color-bg-2);
+}

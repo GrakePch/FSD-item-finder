@@ -76,6 +76,7 @@ export function OrbitalMarkers({
           className="orbital-marker-label"
           style={{ color }}
           occlude={[sphereRef]}
+          zIndexRange={[500, 0]}
         >
           {`OM-${i + 1}`}
         </Html>
