@@ -1,0 +1,38 @@
+.EyesOnStarCitizen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1050;
+  background: #000;
+}
+
+.EyesOnStarCitizen .fixed-search-bar {
+  position: fixed;
+  top: 1rem;
+  left: 1.5rem;
+  width: 20rem;
+}
+
+.EyesOnStarCitizen .search-card {
+  position: fixed;
+  top: 5rem;
+  left: 1.5rem;
+  bottom: 1rem;
+  width: 20rem;
+  background-color: var(--color-bg-2a);
+  border-radius: .5rem;
+  overflow: hidden auto;
+}
+
+.EyesOnStarCitizen .info-card {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 20rem;
+  padding-top: 1rem;
+  background-color: var(--color-bg-2a);
+  overflow: hidden auto;
+}

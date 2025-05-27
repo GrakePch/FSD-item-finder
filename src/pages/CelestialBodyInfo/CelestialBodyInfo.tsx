@@ -6,27 +6,12 @@ import { useTranslation } from "react-i18next";
 import { locationNameToI18nKey } from "../../utils";
 import CelestialBodyCard from "../../components/CelestialBodyCard/CelestialBodyCard";
 import LocationCard from "../../components/LocationCard/LocationCard";
-import CelestialBody3D from "../../components/CelestialBody3D/CelestialBody3D";
 
 const CelestialBodyInfo = () => {
   const { t } = useTranslation();
   const celestialBodyKey = useParams().celestialBodyKey;
   const { dictCelestialBodies } = useContext(ContextAllData);
   const celestialBody = dictCelestialBodies[celestialBodyKey || ""] || null;
-
-  /* Blur the map3D after scrolling */
-  const [blurred, setBlurred] = useState(false);
-  const map3dRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!map3dRef.current) return;
-      const rect = map3dRef.current.getBoundingClientRect();
-      setBlurred(window.scrollY > rect.top + 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   if (!celestialBody) {
     return (
@@ -78,25 +63,10 @@ const CelestialBodyInfo = () => {
     return orderA - orderB;
   });
 
-  const loadMap3D = celestialBody.type === "Planet" || celestialBody.type === "Moon";
-  const themeColor =
-    celestialBody.themeColorR && celestialBody.themeColorG && celestialBody.themeColorB
-      ? `rgba(${celestialBody.themeColorR}, ${celestialBody.themeColorG}, ${celestialBody.themeColorB}, .25)`
-      : `#80808040`;
-
   return (
     <>
-      {loadMap3D && (
-        <div
-          ref={map3dRef}
-          className={`CelestialBodyInfo-map3d-container${blurred ? " blurred" : ""}`}
-          style={{ "--body-theme-color": themeColor } as React.CSSProperties}
-        >
-          <CelestialBody3D celestialBody={celestialBody} />
-        </div>
-      )}
       <div className="CelestialBodyInfo">
-        <div className={`basic-info ${loadMap3D ? "load-map-3d" : ""}`}>
+        <div className={`basic-info`}>
           <div className="name">
             <h1>{t(`Location.${locationNameToI18nKey(celestialBody.name)}`)}</h1>
             <h2>

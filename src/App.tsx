@@ -25,6 +25,8 @@ import {
   WindowSelectCurrentLocation,
 } from "./components/CurrentLocation/CurrentLocation";
 import NavBarBottom from "./components/NavBarBottom/NavBarBottom";
+import CelestialBody3D from "./components/CelestialBody3D/CelestialBody3D";
+import EyesOnStarCitizen from "./pages/EyesOnStarCitizen/EyesOnStarCitizen";
 
 function App() {
   const [currentLocation, setCurrentLocation] = useState<string>(
@@ -128,12 +130,36 @@ function App() {
         <Routes>
           <Route path="/" element={<SearchItems />} />
           <Route path="/v" element={<SearchVehicles />} />
-          <Route path="/l" element={<SearchLocations />} />
           <Route path="/i/:itemKey" element={<ItemInfo />} />
           <Route path="/iv/:itemKey" element={<ItemGroupInfo />} />
           <Route path="/v/:vehicleClassName" element={<VehicleInfo />} />
-          <Route path="/b/:celestialBodyKey" element={<CelestialBodyInfo />} />
-          <Route path="/l/:locationKey" element={<LocationInfo />} />
+          <Route
+            path="/l"
+            element={
+              <>
+                <EyesOnStarCitizen routing="_" />
+                {/* <SearchLocations /> */}
+              </>
+            }
+          />
+          <Route
+            path="/b/:celestialBodyKey"
+            element={
+              <>
+                <EyesOnStarCitizen routing="b" />
+                {/* <CelestialBodyInfo /> */}
+              </>
+            }
+          />
+          <Route
+            path="/l/:locationKey"
+            element={
+              <>
+                <EyesOnStarCitizen routing="l" />
+                {/* <LocationInfo /> */}
+              </>
+            }
+          />
           <Route path="/t/:terminalId" element={<TerminalInfo />} />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>

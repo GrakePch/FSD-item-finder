@@ -9,7 +9,7 @@
   justify-content: space-around;
   gap: .25rem;
   border-top: 1px solid var(--color-bg-2);
-  z-index: 1000;
+  z-index: 1090;
   backdrop-filter: blur(1rem) saturate(1.5);
 }
 
