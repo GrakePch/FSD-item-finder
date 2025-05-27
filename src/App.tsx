@@ -20,8 +20,21 @@ import i18n from "./i18n";
 import LanguageToggle from "./components/LanguageToggle/LanguageToggle";
 import CelestialBodyInfo from "./pages/CelestialBodyInfo/CelestialBodyInfo";
 import LocationInfo from "./pages/LocationInfo/LocationInfo";
+import {
+  KEY_CURRENT_LOCATION,
+  WindowSelectCurrentLocation,
+} from "./components/CurrentLocation/CurrentLocation";
+import NavBarBottom from "./components/NavBarBottom/NavBarBottom";
 
 function App() {
+  const [currentLocation, setCurrentLocation] = useState<string>(
+    () => localStorage.getItem(KEY_CURRENT_LOCATION) || "Crusader"
+  );
+  const setCurrentLocationWithLocalStorage = (location: string) => {
+    localStorage.setItem(KEY_CURRENT_LOCATION, location);
+    setCurrentLocation(location);
+  };
+
   const [allData, setAllData] = useState<AllData>({
     dictSystems: {},
     dictCelestialBodies: {},
@@ -29,6 +42,8 @@ function App() {
     dictTerminals: {},
     dictVehicles: {},
     dictItems: {},
+    currentLocation: currentLocation,
+    setCurrentLocation: setCurrentLocationWithLocalStorage,
   });
 
   const location = useLocation();
@@ -67,16 +82,9 @@ function App() {
 
   useEffect(() => {
     const path = location.pathname;
-    if (
-      path === "/" ||
-      path.startsWith("/i/") ||
-      path.startsWith("/iv/")
-    ) {
+    if (path === "/" || path.startsWith("/i/") || path.startsWith("/iv/")) {
       document.title = "星际寻物";
-    } else if (
-      path === "/v" ||
-      path.startsWith("/v/")
-    ) {
+    } else if (path === "/v" || path.startsWith("/v/")) {
       document.title = "星际寻船";
     } else if (
       path === "/l" ||
@@ -88,11 +96,35 @@ function App() {
     }
   }, [location]);
 
+  useEffect(() => {
+    // Check for 'from' in search params
+    const params = new URLSearchParams(location.search);
+    const fromParam = params.get("from");
+    let stored = localStorage.getItem(KEY_CURRENT_LOCATION);
+    if (fromParam) {
+      setCurrentLocationWithLocalStorage(fromParam);
+    } else {
+      // If 'from' is not present, check if current location is stored
+      if (!stored) {
+        // If not, set default location
+        localStorage.setItem(KEY_CURRENT_LOCATION, "Crusader");
+      }
+    }
+  }, [location.search]);
+
+  // Update allData.currentLocation when currentLocation changes
+  useEffect(() => {
+    setAllData((prev) => ({
+      ...prev,
+      currentLocation: currentLocation,
+    }));
+  }, [currentLocation]);
+
   return (
     <I18nextProvider i18n={i18n}>
       <ContextAllData.Provider value={allData}>
         <NavBar />
-        <LanguageToggle />
+        <NavBarBottom />
         <Routes>
           <Route path="/" element={<SearchItems />} />
           <Route path="/v" element={<SearchVehicles />} />
@@ -106,6 +138,8 @@ function App() {
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
         <Footer />
+        <LanguageToggle />
+        <WindowSelectCurrentLocation />
       </ContextAllData.Provider>
     </I18nextProvider>
   );

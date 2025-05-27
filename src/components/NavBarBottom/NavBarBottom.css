@@ -1,0 +1,61 @@
+.NavBarBottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 5rem;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  gap: .25rem;
+  border-top: 1px solid var(--color-bg-2);
+  z-index: 1000;
+  backdrop-filter: blur(1rem) saturate(1.5);
+}
+
+.NavBarBottom a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  color: var(--color-text-1);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color .2s, background-color .2s;
+}
+
+.NavBarBottom a:hover {
+  color: var(--color-text);
+}
+
+.NavBarBottom a.active {
+  color: var(--color-bg);
+  background-color: var(--color-text);
+}
+
+.NavBarBottom a>svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.NavBarBottom a>span {
+  font-size: .75rem;
+  height: 0rem;
+  opacity: 0;
+  transition: all .2s;
+}
+
+.NavBarBottom a.active>span {
+  height: 1rem;
+  opacity: 1;
+}
+
+@media (max-width: 719px) {
+  .NavBarBottom {
+    display: flex;
+  }
+}

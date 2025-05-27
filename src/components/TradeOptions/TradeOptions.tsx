@@ -13,7 +13,6 @@ import { useNavigate, useSearchParams } from "react-router";
 import Icon from "@mdi/react";
 import { mdiAlertCircleOutline } from "@mdi/js";
 import LocationPathChips from "../LocationPathChips/LocationPathChips";
-import { KEY_CURRENT_LOCATION } from "../NavBar/NavBar";
 
 type LocationTree = { name: string; subs: LocationForest; option?: TradeOption };
 
@@ -34,7 +33,7 @@ const percent = (v: number, zero: number, hundred: number) => {
 const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const { dictLocations, dictTerminals } = useContext(ContextAllData);
+  const { dictLocations, dictTerminals, currentLocation } = useContext(ContextAllData);
   const [options, setOptions] = useState([]);
 
   const [locationForestShallow, setLocationForestShallow] = useState<
@@ -51,8 +50,8 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
           .localeCompare(getLocPath(b, dictTerminals).join("  "))
       );
 
-    /* Compute Distances from the local storage stored value, and sort by distance */
-    let fromBodyName = localStorage.getItem(KEY_CURRENT_LOCATION);
+    /* Compute Distances from the context value, and sort by distance */
+    let fromBodyName = currentLocation;
     if (fromBodyName.startsWith("_loc_")) {
       let storedLocationName = fromBodyName.slice(5);
       let location = dictLocations[toUrlKey(storedLocationName)];

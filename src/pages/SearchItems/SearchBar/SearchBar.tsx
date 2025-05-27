@@ -174,6 +174,7 @@ const SearchBar = ({
 
   return (
     <div className="SearchBar">
+      <div className="fixed-search-bar">
       <div className="search-container">
         <div className="btnSearch">
           <Icon path={mdiMagnify} size="1.5rem" />
@@ -191,6 +192,7 @@ const SearchBar = ({
             <Icon className="iconClear" path={mdiClose} size="1.5rem" />
           </button>
         )}
+      </div>
       </div>
       <div className="filters">
         <button

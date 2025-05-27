@@ -4,6 +4,7 @@ import { useSearchParams } from "react-router";
 import Icon from "@mdi/react";
 import { mdiCurrencySign, mdiMapMarker } from "@mdi/js";
 import { useTranslation } from "react-i18next";
+import { CurrentLocationButton } from "../CurrentLocation/CurrentLocation";
 
 const TradeOptionsSortingControl = () => {
   const { t } = useTranslation();
@@ -19,7 +20,15 @@ const TradeOptionsSortingControl = () => {
   }, [searchParams]);
 
   return (
-    <div style={{ padding: "0 1rem" }}>
+    <div
+      style={{
+        padding: "0 1rem",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        gap: ".5rem",
+      }}
+    >
       <div className="TradeOptionsSortingControl">
         <button
           className={searchParams.get("sort") === "location" ? "active" : undefined}
@@ -42,6 +51,7 @@ const TradeOptionsSortingControl = () => {
           <p>{t("TradeOptions.sortByPrice")}</p>
         </button>
       </div>
+      <CurrentLocationButton />
     </div>
   );
 };

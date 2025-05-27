@@ -8,6 +8,7 @@ const SearchItems = () => {
 
   return (
     <div className="SearchItems">
+      <div className="TopFiller-when-narrow-and-searchbar"></div>
       <SearchBar resultList={resultList} setResultList={setResultList} />
       <SearchResultList results={resultList} />
     </div>

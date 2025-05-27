@@ -7,6 +7,8 @@ export type AllData = {
   dictTerminals: TerminalDictionary;
   dictVehicles: VehicleDictionary;
   dictItems: ItemDictionary;
+  currentLocation: string;
+  setCurrentLocation: (location: string) => void;
 }
 
 export const ContextAllData = createContext<AllData>({
@@ -16,4 +18,6 @@ export const ContextAllData = createContext<AllData>({
   dictTerminals: {},
   dictVehicles: {},
   dictItems: {},
+  currentLocation: "",
+  setCurrentLocation: () => {},
 });

@@ -2,3 +2,24 @@
   padding: 0 1.5rem;
 }
 
+.SearchVehicles .fixed-search-bar {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 1rem 12rem;
+  pointer-events: none;
+}
+
+.SearchVehicles .fixed-search-bar>* {
+  pointer-events: auto;
+}
+
+@media (max-width: 719px) {
+  .SearchVehicles .fixed-search-bar {
+    padding: 1rem 1.5rem;
+  }
+}

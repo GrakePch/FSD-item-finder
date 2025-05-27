@@ -11,6 +11,12 @@
     transition: filter 0.3s ease-in-out;
 }
 
+@media (max-width: 719px) {
+  .CelestialBodyInfo-map3d-container {
+    margin-top: 0;
+  }
+}
+
 .CelestialBodyInfo-map3d-container.blurred {
     filter: drop-shadow(0 0 1rem var(--body-theme-color)) blur(1rem) brightness(0.8);
 }

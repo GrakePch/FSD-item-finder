@@ -14,8 +14,11 @@ const SearchLocations = () => {
   }, [searchName]);
   return (
     <div className="SearchLocations">
-      <SearchLocationBar searchName={searchName} setSearchName={setSearchName} />
-      <SearchLocationResultList searchName={searchName} includeTerminal/>
+      <div className="TopFiller-when-narrow-and-searchbar"></div>
+      <div className="fixed-search-bar">
+        <SearchLocationBar searchName={searchName} setSearchName={setSearchName} />
+      </div>
+      <SearchLocationResultList searchName={searchName} includeTerminal />
     </div>
   );
 };

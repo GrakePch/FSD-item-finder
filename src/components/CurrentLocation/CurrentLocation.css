@@ -1,0 +1,80 @@
+.CurrentLocationButton {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .8333rem;
+  padding: .5rem 1rem;
+  padding-left: .75rem;
+  border-radius: .5rem;
+}
+
+.WindowSelectCurrentLocation {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1200;
+}
+
+.WindowSelectCurrentLocation.on {
+  display: block;
+}
+
+.WindowSelectCurrentLocation .bg {
+  display: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000080;
+  cursor: pointer;
+}
+
+.WindowSelectCurrentLocation .window-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 3rem);
+  height: calc(100% - 3rem);
+  max-width: 720px;
+  background-color: var(--color-bg);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.WindowSelectCurrentLocation .current-location-info {
+  margin-bottom: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  height: 4rem;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--color-bg-2);
+}
+
+.WindowSelectCurrentLocation .close {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  place-items: center;
+  padding: .5rem;
+  background-color: transparent;
+}
+
+.WindowSelectCurrentLocation .SearchLocationBar {
+  margin: .5rem 1rem 0 1rem;
+  width: auto;
+}
+
+.WindowSelectCurrentLocation .result-list-scrollable {
+  overflow-y: auto;
+  margin-top: 0;
+  padding: 1rem 0;
+  margin: 0 1rem;
+}

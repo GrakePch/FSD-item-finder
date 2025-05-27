@@ -16,7 +16,10 @@ const SearchVehicles = () => {
   }, [searchName]);
   return (
     <div className="SearchVehicles">
-      <SearchVehicleBar searchName={searchName} setSearchName={setSearchName} />
+      <div className="TopFiller-when-narrow-and-searchbar"></div>
+      <div className="fixed-search-bar">
+        <SearchVehicleBar searchName={searchName} setSearchName={setSearchName} />
+      </div>
       <SearchVehicleResultList searchName={searchName} />
     </div>
   );

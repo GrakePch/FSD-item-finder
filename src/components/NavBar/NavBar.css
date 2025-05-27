@@ -1,3 +1,8 @@
+.TopFiller-when-navbar-present {
+  height: 5rem;
+  width: 100%;
+}
+
 .NavBar {
   position: fixed;
   top: 0;
@@ -58,149 +63,11 @@
   flex-grow: 1;
 }
 
-.NavBar .current-location {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-  line-height: 1;
-  padding: .5rem .5rem;
-  border-radius: .5rem;
-}
-
-.NavBarBottom {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 5rem;
-  width: 100%;
-  display: none;
-  align-items: center;
-  justify-content: space-around;
-  gap: .25rem;
-  border-top: 1px solid var(--color-bg-2);
-  z-index: 1000;
-  backdrop-filter: blur(1rem) saturate(1.5);
-}
-
-.NavBarBottom a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  color: var(--color-text-1);
-  text-decoration: none;
-  cursor: pointer;
-  transition: color .2s, background-color .2s;
-}
-
-.NavBarBottom a:hover {
-  color: var(--color-text);
-}
-
-.NavBarBottom a.active {
-  color: var(--color-bg);
-  background-color: var(--color-text);
-}
-
-.NavBarBottom a>svg {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-}
-
-.NavBarBottom a>span {
-  font-size: .75rem;
-  height: 0rem;
-  opacity: 0;
-  transition: all .2s;
-}
-
-.NavBarBottom a.active>span {
-  height: 1rem;
-  opacity: 1;
-}
-
 @media (max-width: 719px) {
-  .NavBar .links-container {
+  .NavBar {
     display: none;
   }
-
-  .NavBarBottom {
-    display: flex;
+  .TopFiller-when-navbar-present {
+    display: none;
   }
-}
-
-
-.WindowSelectCurrentLocation {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1200;
-}
-
-.WindowSelectCurrentLocation.on {
-  display: block;
-}
-
-.WindowSelectCurrentLocation .bg {
-  display: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #00000080;
-  cursor: pointer;
-}
-
-.WindowSelectCurrentLocation .window-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100% - 3rem);
-  height: calc(100% - 3rem);
-  max-width: 720px;
-  background-color: var(--color-bg);
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.WindowSelectCurrentLocation .current-location-info {
-  margin-bottom: .5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1rem;
-  height: 4rem;
-  flex-shrink: 0;
-  border-bottom: 1px solid var(--color-bg-2);
-}
-
-.WindowSelectCurrentLocation .close {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  display: flex;
-  place-items: center;
-  padding: .5rem;
-  background-color: transparent;
-}
-
-.WindowSelectCurrentLocation .SearchLocationBar {
-  margin: .5rem 1rem 0 1rem;
-  width: auto;
-}
-
-.result-list-scrollable {
-  overflow-y: auto;
-  margin-top: 0;
-  padding: 1rem 0;
-  margin: 0 1rem;
 }
