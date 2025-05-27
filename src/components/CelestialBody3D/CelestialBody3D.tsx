@@ -52,6 +52,7 @@ export default function CelestialBody3D({
       <CelestialBodySphere
         map={bodyTexture}
         mapRoughness={bodyTextureRoughness}
+        color={themeColor}
         radius={radius}
         sphereRef={sphereRef}
       />

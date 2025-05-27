@@ -1,27 +1,35 @@
 import { useTexture } from "@react-three/drei";
 import * as THREE from "three";
-import React from "react";
+import React, { Suspense } from "react";
+
+function SurfaceMaterial({ map, mapRoughness }: { map?: string; mapRoughness?: string }) {
+  const diffuseMap = map ? useTexture(map) : undefined;
+  const roughnessMap = mapRoughness ? useTexture(mapRoughness) : undefined;
+  return <meshStandardMaterial map={diffuseMap} roughnessMap={roughnessMap} />;
+}
 
 export default function CelestialBodySphere({
   map,
   mapRoughness,
+  color,
   radius,
   sphereRef,
 }: {
   map?: string;
   mapRoughness?: string;
+  color?: string;
   radius: number;
   sphereRef: React.Ref<THREE.Mesh>;
 }) {
-  const textureMap = map ? useTexture(map) : undefined;
-  const roughnessMap = mapRoughness ? useTexture(mapRoughness) : undefined;
   return (
     <mesh ref={sphereRef}>
       <sphereGeometry args={[radius, 64, 32, Math.PI]} />
-      {textureMap ? (
-        <meshStandardMaterial map={textureMap} roughnessMap={roughnessMap} />
+      {map ? (
+        <Suspense fallback={<meshStandardMaterial color={color || "#ffffff"} />}>
+          <SurfaceMaterial map={map} mapRoughness={mapRoughness} />
+        </Suspense>
       ) : (
-        <meshStandardMaterial color="#ffffff" />
+        <meshStandardMaterial color={color || "#ffffff"} />
       )}
     </mesh>
   );
