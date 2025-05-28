@@ -11,11 +11,14 @@ import * as THREE from "three";
 import RotatingDirectionalLight from "./RotatingDirectionalLight";
 import CelestialBodyRing from "./CelestialBodyRing";
 import { OrbitalMarkers } from "./OrbitalMarkers";
+import CameraUpdater from "./CameraUpdater";
 
 export default function CelestialBody3D({
   celestialBody,
+  location,
 }: {
   celestialBody: CelestialBody;
+  location?: SCLocation | null;
 }) {
   const bodyTexture = texture.body[celestialBody.name];
   const bodyTextureRoughness = texture.roughness[celestialBody.name];
@@ -47,6 +50,7 @@ export default function CelestialBody3D({
       }}
       className="CelestialBody3D"
     >
+      <CameraUpdater location={location} radius={radius} />
       <ambientLight intensity={0.7} />
       <RotatingDirectionalLight intensity={5} celestialBody={celestialBody} />
       <CelestialBodySphere

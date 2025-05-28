@@ -78,7 +78,7 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
         onClick={() => setIsSearchCardOpen(false)}
         style={{ width: "100%", height: "100%" }}
       >
-        <CelestialBody3D celestialBody={seeCelestialBody} />
+        <CelestialBody3D celestialBody={seeCelestialBody} location={seeLocation}/>
       </div>
 
       <nav className="special-nav-bar">
