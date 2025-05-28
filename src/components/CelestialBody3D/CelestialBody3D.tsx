@@ -13,6 +13,13 @@ import CelestialBodyRing from "./CelestialBodyRing";
 import { OrbitalMarkers } from "./OrbitalMarkers";
 import CameraUpdater from "./CameraUpdater";
 
+/** NOTE:
+ * The coordinate system used by Star Citizen is Z-up, Y-forward.
+ * Transform from SC's coordinate system to Three.js's coordinate system:
+ * [Three.js's := Star Citizen's]
+ * x := x, y := z, z := -y.
+ */
+
 export default function CelestialBody3D({
   celestialBody,
   location,
@@ -53,40 +60,44 @@ export default function CelestialBody3D({
       <CameraUpdater location={location} radius={radius} />
       <ambientLight intensity={0.7} />
       <RotatingDirectionalLight intensity={5} celestialBody={celestialBody} />
-      <CelestialBodySphere
-        map={bodyTexture}
-        mapRoughness={bodyTextureRoughness}
-        color={themeColor}
-        radius={radius}
-        sphereRef={sphereRef}
-      />
-      <LatLongLines radius={radius + 0.1} color={themeColor} />
-      {/* Render ring*/}
-      {celestialBody.ringRadiusInner && celestialBody.ringRadiusOuter && (
-        <CelestialBodyRing
-          innerRadius={celestialBody.ringRadiusInner}
-          outerRadius={celestialBody.ringRadiusOuter}
-          map={texture.ring.Yela}
+
+      <group>
+        <CelestialBodySphere
+          map={bodyTexture}
+          mapRoughness={bodyTextureRoughness}
+          color={themeColor}
+          radius={radius}
+          sphereRef={sphereRef}
         />
-      )}
-      {/* Render orbits for space stations and comm arrays */}
-      {celestialBody.locations &&
-        celestialBody.locations
-          .filter((loc) => needOrbitCircle(loc))
-          .map((loc) => (
-            <OrbitCircle
-              key={loc.name + "-orbit"}
-              centerY={loc.coordinateZ}
-              radius={Math.sqrt(loc.coordinateX ** 2 + loc.coordinateY ** 2)}
-            />
+        <LatLongLines radius={radius + 0.1} color={themeColor} />
+        {/* Render ring*/}
+        {celestialBody.ringRadiusInner && celestialBody.ringRadiusOuter && (
+          <CelestialBodyRing
+            innerRadius={celestialBody.ringRadiusInner}
+            outerRadius={celestialBody.ringRadiusOuter}
+            map={texture.ring.Yela}
+          />
+        )}
+        {/* Render orbits for space stations and comm arrays */}
+        {celestialBody.locations &&
+          celestialBody.locations
+            .filter((loc) => needOrbitCircle(loc))
+            .map((loc) => (
+              <OrbitCircle
+                key={loc.name + "-orbit"}
+                centerY={loc.coordinateZ}
+                radius={Math.sqrt(loc.coordinateX ** 2 + loc.coordinateY ** 2)}
+              />
+            ))}
+        {/* Render location labels */}
+        {celestialBody.locations &&
+          celestialBody.locations.map((loc) => (
+            <LocationLabel loc={loc} key={loc.name} sphereRef={sphereRef} />
           ))}
-      {/* Render location labels */}
-      {celestialBody.locations &&
-        celestialBody.locations.map((loc) => (
-          <LocationLabel loc={loc} key={loc.name} sphereRef={sphereRef} />
-        ))}
-      {/* Render Orbital Markers */}
-      <OrbitalMarkers radius={radius} color={themeColor} sphereRef={sphereRef} />
+        {/* Render Orbital Markers */}
+        <OrbitalMarkers radius={radius} color={themeColor} sphereRef={sphereRef} />
+      </group>
+
       <OrbitControls
         enablePan={false}
         enableZoom={true}
