@@ -758,5 +758,6 @@
   "Security Dock C Deck": "ui_dest_security_dock_c_deck",
   "Worker's Area": "ui_dest_workerarea,P",
   "Destination": "ui_destinationSelector",
-  "Covalex Shipping Hub Gundo": "mission_location_stanton_0120"
+  "Covalex Shipping Hub Gundo": "mission_location_stanton_0120",
+  "Security Post Kareah": "stanton2_security_kareah"
 }
