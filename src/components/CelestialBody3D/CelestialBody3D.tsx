@@ -1,7 +1,7 @@
 import "./CelestialBody3D.css";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { useRef, useState, useCallback, useEffect } from "react";
+import { useRef } from "react";
 import CelestialBodySphere from "./CelestialBodySphere";
 import LatLongLines from "./LatLongLines";
 import OrbitCircle from "./OrbitCircle";
@@ -12,6 +12,7 @@ import RotatingDirectionalLight from "./RotatingDirectionalLight";
 import CelestialBodyRing from "./CelestialBodyRing";
 import { OrbitalMarkers } from "./OrbitalMarkers";
 import CameraUpdater from "./CameraUpdater";
+import { useOrbitInertia } from "./hooks/useOrbitInertia";
 
 /** NOTE:
  * The coordinate system used by Star Citizen is Z-up, Y-forward.
@@ -45,81 +46,20 @@ export default function CelestialBody3D({
     loc.type === "CommArray" ||
     loc.type === "Orbital laser platform";
   const sphereRef = useRef<THREE.Mesh>(null);
-  const [currentZoom, setCurrentZoom] = useState(zoom);
   const controlsRef = useRef<any>(null);
   const sphereApiRef = useRef<{ setRotationTarget: (target: number) => void } | null>(null);
 
-  const inertiaRef = useRef({
-    lastAzimuthal: 0,
-    lastPolar: 0,
-    velocityAzimuthal: 0,
-    velocityPolar: 0,
-    lastTime: 0,
-    isUserInteracting: false,
-    animationFrame: 0,
-    isAnimating: false,
+  // Use custom inertia hook
+  const {
+    currentZoom,
+    handleControlsChange,
+    onControlsStart,
+    onControlsEnd,
+  } = useOrbitInertia({
+    controlsRef,
+    initialZoom: zoom,
+    radius,
   });
-
-  const handleControlsChange = useCallback(() => {
-    if (controlsRef.current) {
-      setCurrentZoom(controlsRef.current.object.zoom);
-      const controls = controlsRef.current;
-      const now = performance.now();
-      const azimuthal = controls.getAzimuthalAngle();
-      const polar = controls.getPolarAngle();
-      if (inertiaRef.current.isUserInteracting) {
-        const dt = (now - inertiaRef.current.lastTime) / 1000;
-        if (dt > 0) {
-          inertiaRef.current.velocityAzimuthal = (azimuthal - inertiaRef.current.lastAzimuthal) / dt;
-          inertiaRef.current.velocityPolar = (polar - inertiaRef.current.lastPolar) / dt;
-        }
-      }
-      inertiaRef.current.lastAzimuthal = azimuthal;
-      inertiaRef.current.lastPolar = polar;
-      inertiaRef.current.lastTime = now;
-    }
-  }, []);
-
-
-  const onControlsStart = () => {
-    inertiaRef.current.isUserInteracting = true;
-    if (inertiaRef.current.animationFrame) {
-      cancelAnimationFrame(inertiaRef.current.animationFrame);
-      inertiaRef.current.animationFrame = 0;
-      inertiaRef.current.isAnimating = false;
-    }
-  };
-  const onControlsEnd = () => {
-    inertiaRef.current.isUserInteracting = false;
-    if (Math.abs(inertiaRef.current.velocityAzimuthal) < 0.0001 && Math.abs(inertiaRef.current.velocityPolar) < 0.0001) {
-      return;
-    }
-    const animateInertia = () => {
-      if (!controlsRef.current) return;
-      const vA = Math.abs(inertiaRef.current.velocityAzimuthal);
-      const vP = Math.abs(inertiaRef.current.velocityPolar);
-      const baseDampingA = 0.97, maxDampingA = 0.98;
-      const baseDampingP = 0.97, maxDampingP = 0.98;
-      const sigmoid = (x: number) => 1 / (1 + Math.exp(-2.0 * (x - 0.2)));
-      const dampingA = baseDampingA + (maxDampingA - baseDampingA) * sigmoid(vA);
-      const dampingP = baseDampingP + (maxDampingP - baseDampingP) * sigmoid(vP);
-      const maxVA = 512 / currentZoom / radius;
-      const maxVP = 256 / currentZoom / radius;
-      inertiaRef.current.velocityAzimuthal = Math.min(Math.max(inertiaRef.current.velocityAzimuthal * dampingA, -maxVA), maxVA);
-      inertiaRef.current.velocityPolar = Math.min(Math.max(inertiaRef.current.velocityPolar * dampingP, -maxVP), maxVP);
-      if (Math.abs(inertiaRef.current.velocityAzimuthal) < 0.0001 && Math.abs(inertiaRef.current.velocityPolar) < 0.0001) {
-        inertiaRef.current.isAnimating = false;
-        inertiaRef.current.animationFrame = 0;
-        return;
-      }
-      controlsRef.current.setAzimuthalAngle(controlsRef.current.getAzimuthalAngle() + inertiaRef.current.velocityAzimuthal * 0.016);
-      controlsRef.current.setPolarAngle(controlsRef.current.getPolarAngle() + inertiaRef.current.velocityPolar * 0.016);
-      controlsRef.current.update();
-      inertiaRef.current.animationFrame = requestAnimationFrame(animateInertia);
-      inertiaRef.current.isAnimating = true;
-    };
-    animateInertia();
-  };
 
   return (
     <Canvas
