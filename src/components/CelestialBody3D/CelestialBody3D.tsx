@@ -1,7 +1,7 @@
 import "./CelestialBody3D.css";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { useRef, useState, useCallback } from "react";
+import { useRef, useState, useCallback, useEffect } from "react";
 import CelestialBodySphere from "./CelestialBodySphere";
 import LatLongLines from "./LatLongLines";
 import OrbitCircle from "./OrbitCircle";
@@ -47,13 +47,138 @@ export default function CelestialBody3D({
   const sphereRef = useRef<THREE.Mesh>(null);
   const [currentZoom, setCurrentZoom] = useState(zoom);
   const controlsRef = useRef<any>(null);
+  const sphereApiRef = useRef<{ setRotationTarget: (target: number) => void } | null>(null);
+  // Inertia state for camera rotation
+  const inertiaRef = useRef({
+    lastAzimuthal: 0,
+    lastPolar: 0,
+    velocityAzimuthal: 0,
+    velocityPolar: 0,
+    lastTime: 0,
+    isUserInteracting: false,
+    animationFrame: 0,
+    isAnimating: false,
+  });
 
   // Handler to update zoom when OrbitControls changes
   const handleControlsChange = useCallback(() => {
     if (controlsRef.current) {
       setCurrentZoom(controlsRef.current.object.zoom);
+      const controls = controlsRef.current;
+      const now = performance.now();
+      const azimuthal = controls.getAzimuthalAngle();
+      const polar = controls.getPolarAngle();
+      if (inertiaRef.current.isUserInteracting) {
+        const dt = (now - inertiaRef.current.lastTime) / 1000;
+        if (dt > 0) {
+          inertiaRef.current.velocityAzimuthal = (azimuthal - inertiaRef.current.lastAzimuthal) / dt;
+          inertiaRef.current.velocityPolar = (polar - inertiaRef.current.lastPolar) / dt;
+        }
+      }
+      inertiaRef.current.lastAzimuthal = azimuthal;
+      inertiaRef.current.lastPolar = polar;
+      inertiaRef.current.lastTime = now;
     }
   }, []);
+
+  // Effect to handle inertia on user interaction
+  useEffect(() => {
+    const controls = controlsRef.current;
+    if (!controls) return;
+    const onStart = () => {
+      inertiaRef.current.isUserInteracting = true;
+      if (inertiaRef.current.animationFrame) {
+        cancelAnimationFrame(inertiaRef.current.animationFrame);
+        inertiaRef.current.animationFrame = 0;
+      }
+    };
+    const onEnd = () => {
+      inertiaRef.current.isUserInteracting = false;
+      const animate = () => {
+        if (!controlsRef.current) return;
+        // Calculate velocity magnitude for each axis
+        const vA = Math.abs(inertiaRef.current.velocityAzimuthal);
+        const vP = Math.abs(inertiaRef.current.velocityPolar);
+        // Use sigmoid for both horizontal and vertical inertia for smooth transition and no excessive tail decay
+        const baseDampingA = 0.97;
+        const maxDampingA = 0.98;
+        const baseDampingP = 0.97;
+        const maxDampingP = 0.98;
+        // Sigmoid function for smooth damping transition
+        const sigmoid = (x: number) => 1 / (1 + Math.exp(-2.0 * (x - 0.2)));
+        const dampingCurveA = baseDampingA + (maxDampingA - baseDampingA) * sigmoid(vA);
+        const dampingCurveP = baseDampingP + (maxDampingP - baseDampingP) * sigmoid(vP);
+
+        // Limit maximum velocity based on zoom and radius
+        const maxVelocityAzimuthal = 512 / currentZoom / radius; // Maximum velocity for Azimuthal
+        const maxVelocityPolar = 256 / currentZoom / radius; // Maximum velocity for Polar
+        // Apply dynamic damping to each velocity
+        inertiaRef.current.velocityAzimuthal = Math.min(
+          Math.max(inertiaRef.current.velocityAzimuthal * dampingCurveA, -maxVelocityAzimuthal),
+          maxVelocityAzimuthal
+        );
+        inertiaRef.current.velocityPolar = Math.min(
+          Math.max(inertiaRef.current.velocityPolar * dampingCurveP, -maxVelocityPolar),
+          maxVelocityPolar
+        );
+
+        // Stop inertia if velocity is very small
+        if (Math.abs(inertiaRef.current.velocityAzimuthal) < 0.0001 && Math.abs(inertiaRef.current.velocityPolar) < 0.0001) {
+          inertiaRef.current.velocityAzimuthal = 0;
+          inertiaRef.current.velocityPolar = 0;
+          inertiaRef.current.animationFrame = 0;
+          inertiaRef.current.isAnimating = false;
+          return;
+        }
+        // Apply inertia to camera angles (azimuthal and polar)
+        controlsRef.current.setAzimuthalAngle(
+          controlsRef.current.getAzimuthalAngle() + inertiaRef.current.velocityAzimuthal * 1/60
+        );
+        controlsRef.current.setPolarAngle(
+          controlsRef.current.getPolarAngle() + inertiaRef.current.velocityPolar * 1/60
+        );
+        controlsRef.current.update();
+        inertiaRef.current.animationFrame = requestAnimationFrame(animate);
+        inertiaRef.current.isAnimating = true;
+      };
+      animate();
+    };
+    controls.addEventListener('start', onStart);
+    controls.addEventListener('end', onEnd);
+    return () => {
+      controls.removeEventListener('start', onStart);
+      controls.removeEventListener('end', onEnd);
+      if (inertiaRef.current.animationFrame) {
+        cancelAnimationFrame(inertiaRef.current.animationFrame);
+      }
+      inertiaRef.current.isAnimating = false;
+    };
+  }, [celestialBody, currentZoom]);
+
+
+  useEffect(() => {
+    const controls = controlsRef.current;
+    if (!controls) return;
+    const domElement = controls.domElement;
+    if (!domElement) return;
+    const clearInertia = () => {
+      if (inertiaRef.current.isAnimating) {
+        inertiaRef.current.velocityAzimuthal = 0;
+        inertiaRef.current.velocityPolar = 0;
+        if (inertiaRef.current.animationFrame) {
+          cancelAnimationFrame(inertiaRef.current.animationFrame);
+          inertiaRef.current.animationFrame = 0;
+        }
+        inertiaRef.current.isAnimating = false;
+      }
+    };
+    domElement.addEventListener('pointerdown', clearInertia);
+    domElement.addEventListener('touchstart', clearInertia);
+    return () => {
+      domElement.removeEventListener('pointerdown', clearInertia);
+      domElement.removeEventListener('touchstart', clearInertia);
+    };
+  }, [celestialBody, currentZoom]);
 
   return (
     <Canvas
@@ -78,6 +203,7 @@ export default function CelestialBody3D({
           color={themeColor}
           radius={radius}
           sphereRef={sphereRef}
+          setApiRef={(api) => (sphereApiRef.current = api)}
         />
         <LatLongLines radius={radius + 0.1} color={themeColor} />
         {/* Render ring*/}
