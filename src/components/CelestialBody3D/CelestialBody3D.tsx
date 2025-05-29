@@ -116,6 +116,7 @@ export default function CelestialBody3D({
         minZoom={zoomMin}
         rotateSpeed={125 / currentZoom / radius}
         onChange={handleControlsChange}
+        dampingFactor={0.2}
       />
     </Canvas>
   );
