@@ -114,7 +114,7 @@ export default function CelestialBody3D({
         enableZoom={true}
         maxZoom={zoomMax}
         minZoom={zoomMin}
-        rotateSpeed={.5 / currentZoom}
+        rotateSpeed={125 / currentZoom / radius}
         onChange={handleControlsChange}
       />
     </Canvas>
