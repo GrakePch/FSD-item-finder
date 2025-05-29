@@ -26,6 +26,13 @@
     "sortByDistance": "Nearest Shop",
     "sortByPrice": "Lowest Price"
   },
+  "EOSC": {
+    "showLocationLabels": "Show location labels",
+    "showOrbitLines": "Show orbit lines",
+    "showLongitudeLatitudeLines": "Show longitude/latitude lines",
+    "showOMs": "Show orbital markers",
+    "showNoQTMarkers": "Show hidden locations"
+  },
   "LocationInfo": {
     "typeOfParent": "{{type}} of {{parent}}",
     "notFoundCelestial": "Celestial Body Not Found",

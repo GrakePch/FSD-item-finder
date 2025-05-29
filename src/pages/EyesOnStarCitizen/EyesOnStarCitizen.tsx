@@ -11,12 +11,20 @@ import SearchLocationResultList from "../SearchLocations/SearchLocationResultLis
 import CardCelestialBody from "./CardCelestialBody/CardCelestialBody";
 import CardLocation from "./CardLocation/CardLocation";
 import Icon from "@mdi/react";
-import { mdiChevronUp, mdiMapMarker, mdiWidgetsOutline } from "@mdi/js";
+import {
+  mdiChevronUp,
+  mdiClose,
+  mdiLayers,
+  mdiMapMarker,
+  mdiWidgetsOutline,
+} from "@mdi/js";
 import { icon } from "../../assets/icon";
+import { useTranslation } from "react-i18next";
 
 const SEARCH_LOCATIONS_NAME_KEY = "fsd_searchLocations_searchName";
 
 const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
+  const { t } = useTranslation();
   const { dictCelestialBodies, dictLocations, currentLocation } =
     useContext(ContextAllData);
   const celestialBodyKey = useParams().celestialBodyKey || "";
@@ -25,6 +33,14 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
   const seeLocation = dictLocations[locationKey] || null;
   const [isSearchCardOpen, setIsSearchCardOpen] = useState(false);
   const [isInfoCardOpen, setIsInfoCardOpen] = useState(false);
+  const [isLayersSettingOpen, setIsLayersSettingOpen] = useState(false);
+
+  /* Layers setting states */
+  const [showLocationLabels, setShowLocationLabels] = useState(true);
+  const [showOrbitLines, setShowOrbitLines] = useState(true);
+  const [showLongitudeLatitudeLines, setShowLongitudeLatitudeLines] = useState(true);
+  const [showOMs, setShowOMs] = useState(true);
+  const [showNoQTMarkers, setShowNoQTMarkers] = useState(false);
 
   useEffect(() => {
     let tempCB = null;
@@ -78,7 +94,17 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
         onClick={() => setIsSearchCardOpen(false)}
         style={{ width: "100%", height: "100%" }}
       >
-        <CelestialBody3D celestialBody={seeCelestialBody} location={seeLocation}/>
+        <CelestialBody3D
+          celestialBody={seeCelestialBody}
+          location={seeLocation}
+          layersSetting={{
+            showLocationLabels,
+            showLongitudeLatitudeLines,
+            showOrbitLines,
+            showOMs,
+            showNoQTMarkers,
+          }}
+        />
       </div>
 
       <nav className="special-nav-bar">
@@ -115,6 +141,63 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
         ) : (
           <CardCelestialBody celestialBody={seeCelestialBody} />
         )}
+      </div>
+
+      <div className="layers-setting">
+        <button
+          className="layers-setting-toggle"
+          onClick={() => setIsLayersSettingOpen((prev) => !prev)}
+        >
+          <Icon path={mdiLayers} size="1.5rem" />
+        </button>
+        <div className={`layers-setting-panel ${isLayersSettingOpen ? "open" : ""}`}>
+          <button
+            className="layers-setting-close"
+            onClick={() => setIsLayersSettingOpen(false)}
+          >
+            <Icon path={mdiClose} size="1rem" />
+          </button>
+          <label>
+            <input
+              type="checkbox"
+              checked={showLocationLabels}
+              onChange={(e) => setShowLocationLabels(e.target.checked)}
+            />
+            {t("EOSC.showLocationLabels")}
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={showOrbitLines}
+              onChange={(e) => setShowOrbitLines(e.target.checked)}
+            />
+            {t("EOSC.showOrbitLines")}
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={showLongitudeLatitudeLines}
+              onChange={(e) => setShowLongitudeLatitudeLines(e.target.checked)}
+            />
+            {t("EOSC.showLongitudeLatitudeLines")}
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={showOMs}
+              onChange={(e) => setShowOMs(e.target.checked)}
+            />
+            {t("EOSC.showOMs")}
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={showNoQTMarkers}
+              onChange={(e) => setShowNoQTMarkers(e.target.checked)}
+            />
+            {t("EOSC.showNoQTMarkers")}
+          </label>
+        </div>
       </div>
     </div>
   );

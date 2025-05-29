@@ -23,10 +23,31 @@ import { useOrbitInertia } from "./hooks/useOrbitInertia";
 export default function CelestialBody3D({
   celestialBody,
   location,
+  layersSetting = {
+    showLocationLabels: true,
+    showLongitudeLatitudeLines: true,
+    showOrbitLines: true,
+    showOMs: true,
+    showNoQTMarkers: false,
+  },
 }: {
   celestialBody: CelestialBody;
   location?: SCLocation | null;
+  layersSetting: {
+    showLocationLabels: boolean;
+    showOrbitLines: boolean;
+    showLongitudeLatitudeLines: boolean;
+    showOMs: boolean;
+    showNoQTMarkers: boolean;
+  };
 }) {
+  const {
+    showLocationLabels,
+    showLongitudeLatitudeLines,
+    showOrbitLines,
+    showOMs,
+    showNoQTMarkers,
+  } = layersSetting;
   const bodyTexture = texture.body[celestialBody.name];
   const bodyTextureRoughness = texture.roughness[celestialBody.name];
   const radius = celestialBody.bodyRadius || 1;
@@ -83,7 +104,9 @@ export default function CelestialBody3D({
           radius={radius}
           setApiRef={(api) => (sphereApiRef.current = api)}
         />
-        <LatLongLines radius={radius + 0.1} color={themeColor} />
+        {showLongitudeLatitudeLines && (
+          <LatLongLines radius={radius + 0.1} color={themeColor} />
+        )}
         {/* Render ring*/}
         {celestialBody.ringRadiusInner && celestialBody.ringRadiusOuter && (
           <CelestialBodyRing
@@ -93,7 +116,8 @@ export default function CelestialBody3D({
           />
         )}
         {/* Render orbits for space stations and comm arrays */}
-        {celestialBody.locations &&
+        {showOrbitLines &&
+          celestialBody.locations &&
           celestialBody.locations
             .filter((loc) => needOrbitCircle(loc))
             .map((loc) => (
@@ -104,12 +128,13 @@ export default function CelestialBody3D({
               />
             ))}
         {/* Render location labels */}
-        {celestialBody.locations &&
-          celestialBody.locations.map((loc) => (
-            <LocationLabel loc={loc} key={loc.name} bodyRadius={radius} />
-          ))}
+        {showLocationLabels &&
+          celestialBody.locations &&
+          celestialBody.locations
+            .filter((loc) => showNoQTMarkers || loc.quantum != 0)
+            .map((loc) => <LocationLabel loc={loc} key={loc.name} bodyRadius={radius} />)}
         {/* Render Orbital Markers */}
-        <OrbitalMarkers radius={radius} color={themeColor} />
+        {showOMs && <OrbitalMarkers radius={radius} color={themeColor} />}
       </group>
 
       <OrbitControls

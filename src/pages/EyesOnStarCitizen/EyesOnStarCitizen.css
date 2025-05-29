@@ -156,3 +156,65 @@
 .EyesOnStarCitizen .info-card .info-card-toggle>svg {
   transition: transform .5s ease-out;
 }
+
+.EyesOnStarCitizen .layers-setting {
+  position: fixed;
+  bottom: 1rem;
+  right: 25rem;
+  z-index: 999;
+}
+
+@media (max-width: 719px) {
+  .EyesOnStarCitizen .layers-setting {
+    right: 1rem;
+    bottom: 15rem;
+  }
+}
+
+.EyesOnStarCitizen .layers-setting-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  background-color: var(--color-bg);
+  border-radius: 50%;
+}
+
+.EyesOnStarCitizen .layers-setting-panel {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  flex-direction: column;
+  width: max-content;
+  background-color: var(--color-bg);
+  padding: .5rem;
+  border-radius: .5rem;
+}
+
+.EyesOnStarCitizen .layers-setting-panel.open {
+  display: flex;
+}
+
+.EyesOnStarCitizen .layers-setting-close {
+  align-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.EyesOnStarCitizen .layers-setting-panel label {
+  cursor: pointer;
+  width: max-content;
+}
+
+.EyesOnStarCitizen .layers-setting-panel label>input {
+  margin-right: .5rem;
+}
