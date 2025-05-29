@@ -48,7 +48,7 @@ export default function CelestialBody3D({
   const [currentZoom, setCurrentZoom] = useState(zoom);
   const controlsRef = useRef<any>(null);
   const sphereApiRef = useRef<{ setRotationTarget: (target: number) => void } | null>(null);
-  // Inertia state for camera rotation
+
   const inertiaRef = useRef({
     lastAzimuthal: 0,
     lastPolar: 0,
@@ -60,7 +60,6 @@ export default function CelestialBody3D({
     isAnimating: false,
   });
 
-  // Handler to update zoom when OrbitControls changes
   const handleControlsChange = useCallback(() => {
     if (controlsRef.current) {
       setCurrentZoom(controlsRef.current.object.zoom);
@@ -81,104 +80,46 @@ export default function CelestialBody3D({
     }
   }, []);
 
-  // Effect to handle inertia on user interaction
-  useEffect(() => {
-    const controls = controlsRef.current;
-    if (!controls) return;
-    const onStart = () => {
-      inertiaRef.current.isUserInteracting = true;
-      if (inertiaRef.current.animationFrame) {
-        cancelAnimationFrame(inertiaRef.current.animationFrame);
-        inertiaRef.current.animationFrame = 0;
-      }
-    };
-    const onEnd = () => {
-      inertiaRef.current.isUserInteracting = false;
-      const animate = () => {
-        if (!controlsRef.current) return;
-        // Calculate velocity magnitude for each axis
-        const vA = Math.abs(inertiaRef.current.velocityAzimuthal);
-        const vP = Math.abs(inertiaRef.current.velocityPolar);
-        // Use sigmoid for both horizontal and vertical inertia for smooth transition and no excessive tail decay
-        const baseDampingA = 0.97;
-        const maxDampingA = 0.98;
-        const baseDampingP = 0.97;
-        const maxDampingP = 0.98;
-        // Sigmoid function for smooth damping transition
-        const sigmoid = (x: number) => 1 / (1 + Math.exp(-2.0 * (x - 0.2)));
-        const dampingCurveA = baseDampingA + (maxDampingA - baseDampingA) * sigmoid(vA);
-        const dampingCurveP = baseDampingP + (maxDampingP - baseDampingP) * sigmoid(vP);
 
-        // Limit maximum velocity based on zoom and radius
-        const maxVelocityAzimuthal = 512 / currentZoom / radius; // Maximum velocity for Azimuthal
-        const maxVelocityPolar = 256 / currentZoom / radius; // Maximum velocity for Polar
-        // Apply dynamic damping to each velocity
-        inertiaRef.current.velocityAzimuthal = Math.min(
-          Math.max(inertiaRef.current.velocityAzimuthal * dampingCurveA, -maxVelocityAzimuthal),
-          maxVelocityAzimuthal
-        );
-        inertiaRef.current.velocityPolar = Math.min(
-          Math.max(inertiaRef.current.velocityPolar * dampingCurveP, -maxVelocityPolar),
-          maxVelocityPolar
-        );
-
-        // Stop inertia if velocity is very small
-        if (Math.abs(inertiaRef.current.velocityAzimuthal) < 0.0001 && Math.abs(inertiaRef.current.velocityPolar) < 0.0001) {
-          inertiaRef.current.velocityAzimuthal = 0;
-          inertiaRef.current.velocityPolar = 0;
-          inertiaRef.current.animationFrame = 0;
-          inertiaRef.current.isAnimating = false;
-          return;
-        }
-        // Apply inertia to camera angles (azimuthal and polar)
-        controlsRef.current.setAzimuthalAngle(
-          controlsRef.current.getAzimuthalAngle() + inertiaRef.current.velocityAzimuthal * 1/60
-        );
-        controlsRef.current.setPolarAngle(
-          controlsRef.current.getPolarAngle() + inertiaRef.current.velocityPolar * 1/60
-        );
-        controlsRef.current.update();
-        inertiaRef.current.animationFrame = requestAnimationFrame(animate);
-        inertiaRef.current.isAnimating = true;
-      };
-      animate();
-    };
-    controls.addEventListener('start', onStart);
-    controls.addEventListener('end', onEnd);
-    return () => {
-      controls.removeEventListener('start', onStart);
-      controls.removeEventListener('end', onEnd);
-      if (inertiaRef.current.animationFrame) {
-        cancelAnimationFrame(inertiaRef.current.animationFrame);
-      }
+  const onControlsStart = () => {
+    inertiaRef.current.isUserInteracting = true;
+    if (inertiaRef.current.animationFrame) {
+      cancelAnimationFrame(inertiaRef.current.animationFrame);
+      inertiaRef.current.animationFrame = 0;
       inertiaRef.current.isAnimating = false;
-    };
-  }, [celestialBody, currentZoom]);
-
-
-  useEffect(() => {
-    const controls = controlsRef.current;
-    if (!controls) return;
-    const domElement = controls.domElement;
-    if (!domElement) return;
-    const clearInertia = () => {
-      if (inertiaRef.current.isAnimating) {
-        inertiaRef.current.velocityAzimuthal = 0;
-        inertiaRef.current.velocityPolar = 0;
-        if (inertiaRef.current.animationFrame) {
-          cancelAnimationFrame(inertiaRef.current.animationFrame);
-          inertiaRef.current.animationFrame = 0;
-        }
+    }
+  };
+  const onControlsEnd = () => {
+    inertiaRef.current.isUserInteracting = false;
+    if (Math.abs(inertiaRef.current.velocityAzimuthal) < 0.0001 && Math.abs(inertiaRef.current.velocityPolar) < 0.0001) {
+      return;
+    }
+    const animateInertia = () => {
+      if (!controlsRef.current) return;
+      const vA = Math.abs(inertiaRef.current.velocityAzimuthal);
+      const vP = Math.abs(inertiaRef.current.velocityPolar);
+      const baseDampingA = 0.97, maxDampingA = 0.98;
+      const baseDampingP = 0.97, maxDampingP = 0.98;
+      const sigmoid = (x: number) => 1 / (1 + Math.exp(-2.0 * (x - 0.2)));
+      const dampingA = baseDampingA + (maxDampingA - baseDampingA) * sigmoid(vA);
+      const dampingP = baseDampingP + (maxDampingP - baseDampingP) * sigmoid(vP);
+      const maxVA = 512 / currentZoom / radius;
+      const maxVP = 256 / currentZoom / radius;
+      inertiaRef.current.velocityAzimuthal = Math.min(Math.max(inertiaRef.current.velocityAzimuthal * dampingA, -maxVA), maxVA);
+      inertiaRef.current.velocityPolar = Math.min(Math.max(inertiaRef.current.velocityPolar * dampingP, -maxVP), maxVP);
+      if (Math.abs(inertiaRef.current.velocityAzimuthal) < 0.0001 && Math.abs(inertiaRef.current.velocityPolar) < 0.0001) {
         inertiaRef.current.isAnimating = false;
+        inertiaRef.current.animationFrame = 0;
+        return;
       }
+      controlsRef.current.setAzimuthalAngle(controlsRef.current.getAzimuthalAngle() + inertiaRef.current.velocityAzimuthal * 0.016);
+      controlsRef.current.setPolarAngle(controlsRef.current.getPolarAngle() + inertiaRef.current.velocityPolar * 0.016);
+      controlsRef.current.update();
+      inertiaRef.current.animationFrame = requestAnimationFrame(animateInertia);
+      inertiaRef.current.isAnimating = true;
     };
-    domElement.addEventListener('pointerdown', clearInertia);
-    domElement.addEventListener('touchstart', clearInertia);
-    return () => {
-      domElement.removeEventListener('pointerdown', clearInertia);
-      domElement.removeEventListener('touchstart', clearInertia);
-    };
-  }, [celestialBody, currentZoom]);
+    animateInertia();
+  };
 
   return (
     <Canvas
@@ -242,6 +183,8 @@ export default function CelestialBody3D({
         minZoom={zoomMin}
         rotateSpeed={125 / currentZoom / radius}
         onChange={handleControlsChange}
+        onStart={onControlsStart}
+        onEnd={onControlsEnd}
         dampingFactor={0.2}
       />
     </Canvas>
