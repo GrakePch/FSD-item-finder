@@ -19,6 +19,7 @@ import {
   mdiCubeOutline,
   mdiFire,
   mdiFuel,
+  mdiFlare,
 } from "@mdi/js";
 
 const locationIcon: Record<string, string> = {
@@ -50,6 +51,8 @@ const locationIcon: Record<string, string> = {
   "Forward operating base": mdiArrowRight,
   City: mdiCircleMedium,
   "Asteroid cluster": mdiDotsHexagon,
+  "Planetary alignment facility": undefined,
+  "Orbital laser platform": mdiFlare,
   Terminal_item: mdiWidgetsOutline,
   Terminal_commodity: mdiCubeOutline,
   Terminal_vehicle_buy:

@@ -2390,6 +2390,9 @@
     "Racetrack": "Racetrack",
     "Distribution center": "Distribution center",
     "Asteroid cluster": "Asteroid cluster",
-    "Forward operating base": "Forward operating base"
+    "Forward operating base": "Forward operating base",
+    "Planetary alignment facility": "Planetary alignment facility",
+    "Orbital laser platform": "Orbital laser platform",
+    "Depot": "Depot"
   }
 }

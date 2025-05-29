@@ -14,6 +14,8 @@ const LocationIconColor: Record<string, string> = {
   Ruins: "#a7a59b",
   "Forward operating base": "#0597ff",
   City: "#0597ff",
+  "Planetary alignment facility": "#ff8126",
+  "Orbital laser platform": "#ff8126",
 };
 
 export default LocationIconColor;

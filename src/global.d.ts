@@ -52,6 +52,7 @@ type SCLocationType =
   | "Emergency shelter"
   | "Settlement"
   | "Space station"
+  | "Space Station"
   | "Landmark"
   | "Scrapyard"
   | "CommArray"
@@ -62,7 +63,10 @@ type SCLocationType =
   | "Racetrack"
   | "Distribution center"
   | "Asteroid cluster"
-  | "Forward operating base";
+  | "Forward operating base"
+  | "Planetary alignment facility"
+  | "Orbital laser platform"
+  | "Depot";
 
 interface Terminal {
   id: number;

@@ -45,7 +45,7 @@ const LocationCard = ({ location, onClick }: LocationCardProps) => {
               : LocationIconColor[location.type] || "#78909c",
         }}
       >
-        <Icon path={locationIcon[location.type]} />
+        <Icon path={locationIcon[location.type] || locationIcon.Outpost} />
       </div>
       <div className="info">
         <p className="name">{t(`Location.${locationNameToI18nKey(location.name)}`)}</p>

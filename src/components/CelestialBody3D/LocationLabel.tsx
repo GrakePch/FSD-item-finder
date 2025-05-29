@@ -43,7 +43,7 @@ export default function LocationLabel({
               loc.private === 1 ? "#f74a55" : LocationIconColor[loc.type] || "#78909c",
           }}
         >
-          <Icon path={locationIcon[loc.type]} color="#fff" />
+          <Icon path={locationIcon[loc.type] || locationIcon.Outpost} color="#fff" />
         </div>
         <p className="name">
           {t(`Location.${locationNameToI18nKey(loc.name)}`, { defaultValue: loc.name })}

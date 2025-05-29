@@ -31,7 +31,7 @@ export default function CelestialBody3D({
   const bodyTextureRoughness = texture.roughness[celestialBody.name];
   const radius = celestialBody.bodyRadius || 1;
   const zoom = 200 / radius;
-  const zoomMax = 1000 / radius;
+  const zoomMax = 2000 / radius;
   const zoomMin = 100 / radius;
   const cameraPosition: [number, number, number] = [0, 0, 4 * radius];
   const cameraFar = 10 * radius;
@@ -42,7 +42,8 @@ export default function CelestialBody3D({
   const needOrbitCircle = (loc: SCLocation) =>
     loc.type === "Space station" ||
     loc.type === "Asteroid base" ||
-    loc.type === "CommArray";
+    loc.type === "CommArray" ||
+    loc.type === "Orbital laser platform";
   const sphereRef = useRef<THREE.Mesh>(null);
 
   return (
