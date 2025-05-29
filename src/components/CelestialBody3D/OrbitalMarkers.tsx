@@ -1,5 +1,7 @@
 import { Html } from "@react-three/drei";
 import * as THREE from "three";
+import { useThree, useFrame } from "@react-three/fiber";
+import { useState } from "react";
 
 const omScalar = 1.42;
 const omCoordinates = [
@@ -11,14 +13,53 @@ const omCoordinates = [
   [-omScalar, 0, 0],
 ];
 
+function OMLabel({
+  position,
+  bodyRadius,
+  label,
+  color,
+}: {
+  position: [number, number, number];
+  bodyRadius: number;
+  label: string;
+  color: string;
+}) {
+  const { camera } = useThree();
+  const [occluded, setOccluded] = useState(false);
+  const labelPos = new THREE.Vector3(...position);
+
+  useFrame(() => {
+    const dir = new THREE.Vector3();
+    camera.getWorldDirection(dir);
+    const t = -labelPos.dot(dir);
+    const closest = new THREE.Vector3().copy(labelPos).add(
+      dir.clone().multiplyScalar(t)
+    );
+    const dist = closest.length();
+    const isBack = dir.dot(labelPos) > 0;
+    const shouldOcclude = dist < bodyRadius && isBack;
+    if (shouldOcclude !== occluded) setOccluded(shouldOcclude);
+  });
+
+  return (
+    <Html
+      position={position}
+      center
+      className={`orbital-marker-label${occluded ? " occluded" : ""}`}
+      style={{ color }}
+      zIndexRange={[500, 0]}
+    >
+      {label}
+    </Html>
+  );
+}
+
 export function OrbitalMarkers({
   radius,
   color = "#808080",
-  sphereRef,
 }: {
   radius: number;
   color?: string;
-  sphereRef: React.RefObject<THREE.Mesh>;
 }) {
   // Helper to scale coordinates
   const scale = (coord: number[], s: number = radius) =>
@@ -69,17 +110,13 @@ export function OrbitalMarkers({
       </line>
       {/* OM labels */}
       {omCoordinates.map((coord, i) => (
-        <Html
+        <OMLabel
           key={`om-label-${i}`}
           position={scale(scale(coord), 1.06)}
-          center
-          className="orbital-marker-label"
-          style={{ color }}
-          occlude={[sphereRef]}
-          zIndexRange={[500, 0]}
-        >
-          {`OM-${i + 1}`}
-        </Html>
+          bodyRadius={radius}
+          label={`OM-${i + 1}`}
+          color={color}
+        />
       ))}
     </>
   );

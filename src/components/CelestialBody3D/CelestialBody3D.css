@@ -1,16 +1,23 @@
+.CelestialBody3D {
+    --label-trans-duration: 0.15s;
+}
+
 .CelestialBody3D .location-label {
-    transition: opacity .15s, visibility 0s .15s;
+    transition: opacity var(--label-trans-duration);
 }
 
 .CelestialBody3D .location-label.occluded {
     opacity: 0;
     visibility: hidden;
+    transition:
+        opacity var(--label-trans-duration),
+        visibility 0s var(--label-trans-duration);
 }
 
 .CelestialBody3D .wrapper {
     cursor: pointer;
     user-select: none;
-    transition: transform .15s;
+    transition: transform var(--label-trans-duration);
 }
 
 .CelestialBody3D .wrapper:hover {
@@ -63,4 +70,13 @@
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
     user-select: none;
+    transition: opacity var(--label-trans-duration);
+}
+
+.CelestialBody3D .orbital-marker-label.occluded {
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity var(--label-trans-duration),
+        visibility 0s var(--label-trans-duration);
 }

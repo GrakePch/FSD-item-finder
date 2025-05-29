@@ -105,7 +105,7 @@ export default function CelestialBody3D({
             <LocationLabel loc={loc} key={loc.name} bodyRadius={radius} />
           ))}
         {/* Render Orbital Markers */}
-        <OrbitalMarkers radius={radius} color={themeColor} sphereRef={sphereRef} />
+        <OrbitalMarkers radius={radius} color={themeColor} />
       </group>
 
       <OrbitControls
