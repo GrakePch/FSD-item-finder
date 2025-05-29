@@ -1,7 +1,7 @@
 import "./CelestialBody3D.css";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { useRef } from "react";
+import { useRef, useState, useCallback } from "react";
 import CelestialBodySphere from "./CelestialBodySphere";
 import LatLongLines from "./LatLongLines";
 import OrbitCircle from "./OrbitCircle";
@@ -45,6 +45,15 @@ export default function CelestialBody3D({
     loc.type === "CommArray" ||
     loc.type === "Orbital laser platform";
   const sphereRef = useRef<THREE.Mesh>(null);
+  const [currentZoom, setCurrentZoom] = useState(zoom);
+  const controlsRef = useRef<any>(null);
+
+  // Handler to update zoom when OrbitControls changes
+  const handleControlsChange = useCallback(() => {
+    if (controlsRef.current) {
+      setCurrentZoom(controlsRef.current.object.zoom);
+    }
+  }, []);
 
   return (
     <Canvas
@@ -100,10 +109,13 @@ export default function CelestialBody3D({
       </group>
 
       <OrbitControls
+        ref={controlsRef}
         enablePan={false}
         enableZoom={true}
         maxZoom={zoomMax}
         minZoom={zoomMin}
+        rotateSpeed={.5 / currentZoom}
+        onChange={handleControlsChange}
       />
     </Canvas>
   );
