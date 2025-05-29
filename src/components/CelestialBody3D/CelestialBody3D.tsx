@@ -7,7 +7,6 @@ import LatLongLines from "./LatLongLines";
 import OrbitCircle from "./OrbitCircle";
 import LocationLabel from "./LocationLabel";
 import texture from "../../assets/texture";
-import * as THREE from "three";
 import RotatingDirectionalLight from "./RotatingDirectionalLight";
 import CelestialBodyRing from "./CelestialBodyRing";
 import { OrbitalMarkers } from "./OrbitalMarkers";
@@ -45,21 +44,20 @@ export default function CelestialBody3D({
     loc.type === "Asteroid base" ||
     loc.type === "CommArray" ||
     loc.type === "Orbital laser platform";
-  const sphereRef = useRef<THREE.Mesh>(null);
   const controlsRef = useRef<any>(null);
-  const sphereApiRef = useRef<{ setRotationTarget: (target: number) => void } | null>(null);
+  const sphereApiRef = useRef<{ setRotationTarget: (target: number) => void } | null>(
+    null
+  );
 
   // Use custom inertia hook
-  const {
-    currentZoom,
-    handleControlsChange,
-    onControlsStart,
-    onControlsEnd,
-  } = useOrbitInertia({
-    controlsRef,
-    initialZoom: zoom,
-    radius,
-  });
+  const { currentZoom, handleControlsChange, onControlsStart, onControlsEnd } =
+    useOrbitInertia({
+      controlsRef,
+      initialZoom: zoom,
+      radius,
+    });
+
+  const dynamicRotationSpeed = 125 / currentZoom / radius;
 
   return (
     <Canvas
@@ -83,7 +81,6 @@ export default function CelestialBody3D({
           mapRoughness={bodyTextureRoughness}
           color={themeColor}
           radius={radius}
-          sphereRef={sphereRef}
           setApiRef={(api) => (sphereApiRef.current = api)}
         />
         <LatLongLines radius={radius + 0.1} color={themeColor} />
@@ -121,7 +118,7 @@ export default function CelestialBody3D({
         enableZoom={true}
         maxZoom={zoomMax}
         minZoom={zoomMin}
-        rotateSpeed={125 / currentZoom / radius}
+        rotateSpeed={dynamicRotationSpeed}
         onChange={handleControlsChange}
         onStart={onControlsStart}
         onEnd={onControlsEnd}
