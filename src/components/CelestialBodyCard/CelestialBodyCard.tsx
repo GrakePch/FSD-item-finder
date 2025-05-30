@@ -29,6 +29,11 @@ const CelestialBodyCard = ({ celestialBody, onClick }: CelestialBodyCardProps) =
     }
   };
 
+  const themeColor =
+    celestialBody.themeColorR && celestialBody.themeColorG && celestialBody.themeColorB
+      ? `rgb(${celestialBody.themeColorR}, ${celestialBody.themeColorG}, ${celestialBody.themeColorB})`
+      : undefined;
+
   return (
     <a
       className="CelestialBodyCard"
@@ -41,7 +46,7 @@ const CelestialBodyCard = ({ celestialBody, onClick }: CelestialBodyCardProps) =
           backgroundImage: `url(/body_thumbnails/${celestialBody.name}.png)`,
           backgroundColor:
             celestialBody.type === "Planet" || celestialBody.type === "Moon"
-              ? "var(--color-text-2)"
+              ? themeColor
               : null,
         }}
       >
