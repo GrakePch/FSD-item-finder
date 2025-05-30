@@ -3,7 +3,8 @@ import * as THREE from "three";
 import { useThree, useFrame } from "@react-three/fiber";
 import { useState } from "react";
 
-const omCoordinates = [
+/* The unit vectors for the orbital markers (OMs) in the three.js's coordinate system. */
+export const omCoordinates = [
   [0, +1, 0],
   [0, -1, 0],
   [0, 0, -1],

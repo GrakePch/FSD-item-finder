@@ -44,6 +44,32 @@
     background-color: hsla(0, 100%, 65%, .3);
 }
 
+.CardLocation .section-wrapper {
+    padding: .5rem;
+    background-color: var(--color-bg-1);
+    border-radius: 1rem;
+}
+
+.CardLocation .section-wrapper>h4 {
+    margin-left: 1rem;
+    margin-bottom: .25rem;
+}
+
+.CardLocation .section-wrapper ul{
+    padding-left: 0;
+    margin: 0 1rem;
+    list-style: none;
+    font-family: var(--font-slim);
+    font-variant-numeric: tabular-nums;
+}
+
+.CardLocation .section-wrapper ul>li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
 .CardLocation .location-links {
     padding: .5rem;
     background-color: var(--color-bg-1);

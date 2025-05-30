@@ -283,3 +283,12 @@ export const toI18nKey = (str: string) => str.normalize("NFD")
     .replaceAll(" ", "_")
     .toLowerCase()
     .trimEnd()
+
+/**
+ * Convert Star Citizen coordinates (X, Y, Z) to three.js coordinates (X, Z, -Y).
+ * SC: X (east), Y (up), Z (north)
+ * three.js: X (right), Y (up), Z (backward)
+ */
+export function scToThree([x, y, z]: [number, number, number]): [number, number, number] {
+  return [x, z, -y];
+}

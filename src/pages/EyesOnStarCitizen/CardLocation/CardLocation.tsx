@@ -5,9 +5,41 @@ import Icon from "@mdi/react";
 import { icon } from "../../../assets/icon";
 import CelestialBodyCard from "../../../components/CelestialBodyCard/CelestialBodyCard";
 import TerminalCard from "../../../components/TerminalCard/TerminalCard";
+import { omCoordinates } from '../../../components/CelestialBody3D/OrbitalMarkers';
+import { scToThree } from '../../../utils';
+
+function getDistancesToOM(location: SCLocation): [number, number][] {
+  if (!location.parentBody || !location.parentBody.omRadius) return [];
+  const omRadius = location.parentBody.omRadius;
+  const locPos = scToThree([
+    location.coordinateX,
+    location.coordinateY,
+    location.coordinateZ,
+  ]);
+  const distances = omCoordinates.map((omVec, i) => {
+    const omPos = [
+      omVec[0] * omRadius,
+      omVec[1] * omRadius,
+      omVec[2] * omRadius,
+    ];
+    const dist = Math.sqrt(
+      Math.pow(locPos[0] - omPos[0], 2) +
+      Math.pow(locPos[1] - omPos[1], 2) +
+      Math.pow(locPos[2] - omPos[2], 2)
+    );
+    return [i + 1, dist] as [number, number];
+  });
+  distances.sort((a, b) => a[1] - b[1]);
+  return distances;
+}
 
 const CardLocation = ({ location }: { location: SCLocation }) => {
   const { t } = useTranslation();
+
+  const canNavigatedByOMs = location.parentBody && location.parentBody.omRadius;
+
+  // Compute distances to each OM (orbital marker)
+  const distancesToOMs = canNavigatedByOMs ? getDistancesToOM(location) : [];
 
   if (!location) {
     return (
@@ -51,6 +83,19 @@ const CardLocation = ({ location }: { location: SCLocation }) => {
           )}
         </h3>
       </div>
+      {distancesToOMs && (
+        <div className="section-wrapper">
+          <h4>{t("LocationInfo.titleNavigation")}</h4>
+          {/* Show sorted OM distances */}
+          <ul>
+            {distancesToOMs.map(([omIndex, dist]) => (
+              <li key={omIndex}>
+                <span>OM-{omIndex}</span><span>{dist.toFixed(1)} km</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       {location.parentBody && (
         <div className="location-links">
           <h4>{t(`LocationInfo.titleParentBody`)}</h4>
