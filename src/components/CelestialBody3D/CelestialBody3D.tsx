@@ -29,6 +29,7 @@ export default function CelestialBody3D({
     showOrbitLines: true,
     showOMs: true,
     showNoQTMarkers: false,
+    applyHDMaps: false,
   },
 }: {
   celestialBody: CelestialBody;
@@ -39,6 +40,7 @@ export default function CelestialBody3D({
     showLongitudeLatitudeLines: boolean;
     showOMs: boolean;
     showNoQTMarkers: boolean;
+    applyHDMaps: boolean;
   };
 }) {
   const {
@@ -47,8 +49,10 @@ export default function CelestialBody3D({
     showOrbitLines,
     showOMs,
     showNoQTMarkers,
+    applyHDMaps,
   } = layersSetting;
   const bodyTexture = texture.body[celestialBody.name];
+  const bodyHDTexture = texture.bodyHD[celestialBody.name];
   const bodyTextureRoughness = texture.roughness[celestialBody.name];
   const radius = celestialBody.bodyRadius || 1;
   const zoom = 200 / radius;
@@ -98,7 +102,7 @@ export default function CelestialBody3D({
 
       <group>
         <CelestialBodySphere
-          map={bodyTexture}
+          map={applyHDMaps && bodyHDTexture ? bodyHDTexture : bodyTexture}
           mapRoughness={bodyTextureRoughness}
           color={themeColor}
           radius={radius}

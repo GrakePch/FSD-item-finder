@@ -41,6 +41,7 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
   const [showLongitudeLatitudeLines, setShowLongitudeLatitudeLines] = useState(true);
   const [showOMs, setShowOMs] = useState(true);
   const [showNoQTMarkers, setShowNoQTMarkers] = useState(false);
+  const [applyHDMaps, setApplyHDMaps] = useState(false);
 
   useEffect(() => {
     let tempCB = null;
@@ -103,6 +104,7 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
             showOrbitLines,
             showOMs,
             showNoQTMarkers,
+            applyHDMaps,
           }}
         />
       </div>
@@ -196,6 +198,14 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
               onChange={(e) => setShowNoQTMarkers(e.target.checked)}
             />
             {t("EOSC.showNoQTMarkers")}
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={applyHDMaps}
+              onChange={(e) => setApplyHDMaps(e.target.checked)}
+            />
+            {t("EOSC.applyHDMaps")}
           </label>
         </div>
       </div>
