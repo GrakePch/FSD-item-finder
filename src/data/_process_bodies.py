@@ -39,7 +39,7 @@ def process_row(row):
     # (ordinal, quaternion, bodyRadius, rotationRate, rotationCorrection, orbitAngle, orbitRadius, ringRadiusInner, ringRadiusOuter, themeColorR/G/B)
     extra_fields = [
         'ordinal', 'quaternionW', 'quaternionX', 'quaternionY', 'quaternionZ',
-        'bodyRadius', 'rotationRate', 'rotationCorrection', 'orbitAngle', 'orbitRadius',
+        'bodyRadius', "omRadius", 'rotationRate', 'rotationCorrection', 'orbitAngle', 'orbitRadius',
         'ringRadiusInner', 'ringRadiusOuter', 'themeColorR', 'themeColorG', 'themeColorB'
     ]
     for field in extra_fields:

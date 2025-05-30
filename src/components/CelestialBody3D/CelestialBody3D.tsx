@@ -134,7 +134,13 @@ export default function CelestialBody3D({
             .filter((loc) => showNoQTMarkers || loc.quantum != 0)
             .map((loc) => <LocationLabel loc={loc} key={loc.name} bodyRadius={radius} />)}
         {/* Render Orbital Markers */}
-        {showOMs && <OrbitalMarkers radius={radius} color={themeColor} />}
+        {showOMs && celestialBody.omRadius && (
+          <OrbitalMarkers
+            radius={radius}
+            omRadius={celestialBody.omRadius}
+            color={themeColor}
+          />
+        )}
       </group>
 
       <OrbitControls

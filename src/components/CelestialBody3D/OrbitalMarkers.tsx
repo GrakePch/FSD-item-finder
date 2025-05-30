@@ -3,14 +3,13 @@ import * as THREE from "three";
 import { useThree, useFrame } from "@react-three/fiber";
 import { useState } from "react";
 
-const omScalar = 1.42;
 const omCoordinates = [
-  [0, +omScalar, 0],
-  [0, -omScalar, 0],
-  [0, 0, -omScalar],
-  [0, 0, +omScalar],
-  [+omScalar, 0, 0],
-  [-omScalar, 0, 0],
+  [0, +1, 0],
+  [0, -1, 0],
+  [0, 0, -1],
+  [0, 0, +1],
+  [+1, 0, 0],
+  [-1, 0, 0],
 ];
 
 function OMLabel({
@@ -32,9 +31,7 @@ function OMLabel({
     const dir = new THREE.Vector3();
     camera.getWorldDirection(dir);
     const t = -labelPos.dot(dir);
-    const closest = new THREE.Vector3().copy(labelPos).add(
-      dir.clone().multiplyScalar(t)
-    );
+    const closest = new THREE.Vector3().copy(labelPos).add(dir.clone().multiplyScalar(t));
     const dist = closest.length();
     const isBack = dir.dot(labelPos) > 0;
     const shouldOcclude = dist < bodyRadius && isBack;
@@ -56,13 +53,15 @@ function OMLabel({
 
 export function OrbitalMarkers({
   radius,
+  omRadius,
   color = "#808080",
 }: {
   radius: number;
+  omRadius: number;
   color?: string;
 }) {
   // Helper to scale coordinates
-  const scale = (coord: number[], s: number = radius) =>
+  const scale = (coord: number[], s: number = omRadius) =>
     coord.map((v) => v * s) as [number, number, number];
   return (
     <>
