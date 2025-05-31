@@ -5,8 +5,14 @@ import Icon from "@mdi/react";
 import { icon } from "../../../assets/icon";
 import CelestialBodyCard from "../../../components/CelestialBodyCard/CelestialBodyCard";
 import TerminalCard from "../../../components/TerminalCard/TerminalCard";
-import { omCoordinates } from '../../../components/CelestialBody3D/OrbitalMarkers';
-import { scToThree } from '../../../utils';
+import { omCoordinates } from "../../../components/CelestialBody3D/OrbitalMarkers";
+import {
+  cartesianToSpherical,
+  formatLatitude,
+  formatLongitude,
+  scToThree,
+  sphericalToLatLong,
+} from "../../../components/CelestialBody3D/utils";
 
 function getDistancesToOM(location: SCLocation): [number, number][] {
   if (!location.parentBody || !location.parentBody.omRadius) return [];
@@ -17,15 +23,11 @@ function getDistancesToOM(location: SCLocation): [number, number][] {
     location.coordinateZ,
   ]);
   const distances = omCoordinates.map((omVec, i) => {
-    const omPos = [
-      omVec[0] * omRadius,
-      omVec[1] * omRadius,
-      omVec[2] * omRadius,
-    ];
+    const omPos = [omVec[0] * omRadius, omVec[1] * omRadius, omVec[2] * omRadius];
     const dist = Math.sqrt(
       Math.pow(locPos[0] - omPos[0], 2) +
-      Math.pow(locPos[1] - omPos[1], 2) +
-      Math.pow(locPos[2] - omPos[2], 2)
+        Math.pow(locPos[1] - omPos[1], 2) +
+        Math.pow(locPos[2] - omPos[2], 2)
     );
     return [i + 1, dist] as [number, number];
   });
@@ -35,10 +37,16 @@ function getDistancesToOM(location: SCLocation): [number, number][] {
 
 const CardLocation = ({ location }: { location: SCLocation }) => {
   const { t } = useTranslation();
-
-  const canNavigatedByOMs = location.parentBody && location.parentBody.omRadius;
+  const position = scToThree([
+    location.coordinateX,
+    location.coordinateY,
+    location.coordinateZ,
+  ]);
+  const { r, theta, phi } = cartesianToSpherical(...position);
+  const { lat, long } = sphericalToLatLong(theta, phi);
 
   // Compute distances to each OM (orbital marker)
+  const canNavigatedByOMs = location.parentBody && location.parentBody.omRadius;
   const distancesToOMs = canNavigatedByOMs ? getDistancesToOM(location) : [];
 
   if (!location) {
@@ -83,6 +91,23 @@ const CardLocation = ({ location }: { location: SCLocation }) => {
           )}
         </h3>
       </div>
+      <div className="section-wrapper">
+        <h4>{t("LocationInfo.titleBasicInfo")}</h4>
+        <ul>
+          <li>
+            <span>{t("LocationInfo.latitude")}</span>
+            <span>{formatLatitude(lat)}</span>
+          </li>
+          <li>
+            <span>{t("LocationInfo.longitude")}</span>
+            <span>{formatLongitude(long)}</span>
+          </li>
+          <li>
+            <span>{t("LocationInfo.altitude")}</span>
+            <span>{(r - (location.parentBody?.bodyRadius ?? 0)).toFixed(2)} km</span>
+          </li>
+        </ul>
+      </div>
       {distancesToOMs && (
         <div className="section-wrapper">
           <h4>{t("LocationInfo.titleNavigation")}</h4>
@@ -90,7 +115,8 @@ const CardLocation = ({ location }: { location: SCLocation }) => {
           <ul>
             {distancesToOMs.map(([omIndex, dist]) => (
               <li key={omIndex}>
-                <span>OM-{omIndex}</span><span>{dist.toFixed(1)} km</span>
+                <span>OM-{omIndex}</span>
+                <span>{dist.toFixed(1)} km</span>
               </li>
             ))}
           </ul>

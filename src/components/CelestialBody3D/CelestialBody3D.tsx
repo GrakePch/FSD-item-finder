@@ -58,7 +58,7 @@ export default function CelestialBody3D({
   const zoom = 200 / radius;
   const zoomMax = 2000 / radius;
   const zoomMin = 100 / radius;
-  const cameraPosition: [number, number, number] = [0, 0, 4 * radius];
+  const cameraPosition: [number, number, number] = [4 * radius, 0, 0];
   const cameraFar = 10 * radius;
   const themeColor =
     celestialBody.themeColorR && celestialBody.themeColorG && celestialBody.themeColorB

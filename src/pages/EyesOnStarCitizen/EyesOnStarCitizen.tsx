@@ -32,7 +32,7 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
   const [seeCelestialBody, setSeeCelestialBody] = useState<CelestialBody | null>(null);
   const seeLocation = dictLocations[locationKey] || null;
   const [isSearchCardOpen, setIsSearchCardOpen] = useState(false);
-  const [isInfoCardOpen, setIsInfoCardOpen] = useState(false);
+  const [isInfoCardOpen, setIsInfoCardOpen] = useState(true);
   const [isLayersSettingOpen, setIsLayersSettingOpen] = useState(false);
 
   /* Layers setting states */
