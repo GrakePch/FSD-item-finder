@@ -12,6 +12,7 @@ import CelestialBodyRing from "./CelestialBodyRing";
 import { OrbitalMarkers } from "./OrbitalMarkers";
 import CameraUpdater from "./CameraUpdater";
 import { useOrbitInertia } from "./hooks/useOrbitInertia";
+import Starfield from "./Starfield";
 
 /** NOTE:
  * The coordinate system used by Star Citizen is Z-up, Y-forward.
@@ -99,6 +100,7 @@ export default function CelestialBody3D({
       <CameraUpdater location={location} radius={radius} />
       <ambientLight intensity={0.7} />
       <RotatingDirectionalLight intensity={5} celestialBody={celestialBody} />
+      <Starfield />
 
       <group>
         <CelestialBodySphere
