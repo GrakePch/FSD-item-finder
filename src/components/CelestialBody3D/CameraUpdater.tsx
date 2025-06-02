@@ -12,12 +12,11 @@ export default function CameraUpdater({ location, radius }: { location?: SCLocat
     const { coordinateX: x, coordinateY: y, coordinateZ: z } = location;
     const len = Math.sqrt(x * x + y * y + z * z);
     if (len === 0) return;
-    const scale = (4 * radius) / len;
-    const target = new THREE.Vector3(x * scale, z * scale, -y * scale);
+    const target = new THREE.Vector3(x, z, -y);
     const start = camera.position.clone();
     const startDir = start.clone().normalize();
     const endDir = target.clone().normalize();
-    const distance = 4 * radius;
+    const distance = camera.position.length();
     const duration = 500; // ms
     let startTime: number | null = null;
     if (animRef.current) {
