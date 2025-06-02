@@ -35,9 +35,9 @@ export default function LocationLabel({
 
   // More efficient occlusion check
   useFrame(() => {
-    // Camera direction (normalized)
-    const dir = new THREE.Vector3();
-    camera.getWorldDirection(dir);
+    // Ray direction (normalized)
+    const dir = new THREE.Vector3().copy(labelPos);
+    dir.sub(camera.position).normalize();
     // Compute t for closest point on the line to the origin
     const t = -labelPos.dot(dir);
     // Closest point on the line

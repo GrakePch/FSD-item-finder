@@ -29,8 +29,8 @@ function OMLabel({
   const labelPos = new THREE.Vector3(...position);
 
   useFrame(() => {
-    const dir = new THREE.Vector3();
-    camera.getWorldDirection(dir);
+    const dir = new THREE.Vector3().copy(labelPos);
+    dir.sub(camera.position).normalize();
     const t = -labelPos.dot(dir);
     const closest = new THREE.Vector3().copy(labelPos).add(dir.clone().multiplyScalar(t));
     const dist = closest.length();
