@@ -1,6 +1,6 @@
 import "./CelestialBody3D.css";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { useRef } from "react";
 import CelestialBodySphere from "./CelestialBodySphere";
 import LatLongLines from "./LatLongLines";
@@ -12,6 +12,8 @@ import CelestialBodyRing from "./CelestialBodyRing";
 import { OrbitalMarkers } from "./OrbitalMarkers";
 import CameraUpdater from "./CameraUpdater";
 import { useOrbitInertia } from "./hooks/useOrbitInertia";
+import { EffectComposer } from "@react-three/postprocessing";
+import CustomPostProcessing from "./CustomPostProcessing";
 
 /** NOTE:
  * The coordinate system used by Star Citizen is Z-up, Y-forward.
@@ -55,11 +57,13 @@ export default function CelestialBody3D({
   const bodyHDTexture = texture.bodyHD[celestialBody.name];
   const bodyTextureRoughness = texture.roughness[celestialBody.name];
   const radius = celestialBody.bodyRadius || 1;
-  const zoom = 200 / radius;
-  const zoomMax = 2000 / radius;
-  const zoomMin = 100 / radius;
-  const cameraPosition: [number, number, number] = [4 * radius, 0, 0];
-  const cameraFar = 10 * radius;
+  const distance = 8 * radius;
+  const distanceMax = 16 * radius;
+  const distanceMin = 1.5 * radius;
+  const cameraPosition: [number, number, number] = [distance, 0, 0];
+  const cameraFOVY = (60 / 16) * 9;
+  const cameraNear = 0.09 * radius;
+  const cameraFar = 20 * radius;
   const themeColor =
     celestialBody.themeColorR && celestialBody.themeColorG && celestialBody.themeColorB
       ? `rgb(${celestialBody.themeColorR}, ${celestialBody.themeColorG}, ${celestialBody.themeColorB})`
@@ -75,27 +79,24 @@ export default function CelestialBody3D({
   );
 
   // Use custom inertia hook
-  const { currentZoom, handleControlsChange, onControlsStart, onControlsEnd } =
+  const { currentDistance, handleControlsChange, onControlsStart, onControlsEnd } =
     useOrbitInertia({
       controlsRef,
-      initialZoom: zoom,
+      initialDistance: distance,
       radius,
     });
 
-  const dynamicRotationSpeed = 125 / currentZoom / radius;
+  const dynamicRotationSpeed = (0.1 * (currentDistance - radius)) / radius;
 
   return (
-    <Canvas
-      key={celestialBody.name}
-      orthographic
-      camera={{
-        position: cameraPosition,
-        zoom: zoom,
-        near: 0.1,
-        far: cameraFar,
-      }}
-      className="CelestialBody3D"
-    >
+    <Canvas key={celestialBody.name} className="CelestialBody3D">
+      <PerspectiveCamera
+        makeDefault
+        position={cameraPosition}
+        fov={cameraFOVY}
+        near={cameraNear}
+        far={cameraFar}
+      />
       <CameraUpdater location={location} radius={radius} />
       <ambientLight intensity={0.7} />
       <RotatingDirectionalLight intensity={5} celestialBody={celestialBody} />
@@ -109,7 +110,7 @@ export default function CelestialBody3D({
           setApiRef={(api) => (sphereApiRef.current = api)}
         />
         {showLongitudeLatitudeLines && (
-          <LatLongLines radius={radius + 0.1} color={themeColor} />
+          <LatLongLines radius={radius + 1} color={themeColor} />
         )}
         {/* Render ring*/}
         {celestialBody.ringRadiusInner && celestialBody.ringRadiusOuter && (
@@ -150,15 +151,18 @@ export default function CelestialBody3D({
       <OrbitControls
         ref={controlsRef}
         enablePan={false}
-        enableZoom={true}
-        maxZoom={zoomMax}
-        minZoom={zoomMin}
+        maxDistance={distanceMax}
+        minDistance={distanceMin}
         rotateSpeed={dynamicRotationSpeed}
         onChange={handleControlsChange}
         onStart={onControlsStart}
         onEnd={onControlsEnd}
         dampingFactor={0.2}
       />
+      {/* Post-processing composer with custom effect */}
+      <EffectComposer>
+        <CustomPostProcessing />
+      </EffectComposer>
     </Canvas>
   );
 }
