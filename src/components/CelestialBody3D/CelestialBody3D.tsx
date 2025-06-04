@@ -14,6 +14,9 @@ import CameraUpdater from "./CameraUpdater";
 import { useOrbitInertia } from "./hooks/useOrbitInertia";
 import { EffectComposer } from "@react-three/postprocessing";
 import CustomPostProcessing from "./CustomPostProcessing";
+import { useParentStarRotation } from "./useParentStarRotation";
+import * as THREE from "three";
+import { scToThree } from "./utils";
 
 /** NOTE:
  * The coordinate system used by Star Citizen is Z-up, Y-forward.
@@ -63,11 +66,50 @@ export default function CelestialBody3D({
   const cameraPosition: [number, number, number] = [distance, 0, 0];
   const cameraFOVY = (60 / 16) * 9;
   const cameraNear = 0.09 * radius;
-  const cameraFar = 20 * radius;
+  const cameraFar = 50000000;
   const themeColor =
     celestialBody.themeColorR && celestialBody.themeColorG && celestialBody.themeColorB
       ? `rgb(${celestialBody.themeColorR}, ${celestialBody.themeColorG}, ${celestialBody.themeColorB})`
       : undefined;
+  const bodyPositionAbs: [number, number, number] = scToThree([
+    celestialBody.coordinateX,
+    celestialBody.coordinateY,
+    celestialBody.coordinateZ,
+  ]);
+  const parentStarPositionAbs: [number, number, number] = celestialBody.parentStar
+    ? scToThree([
+        celestialBody.parentStar.coordinateX,
+        celestialBody.parentStar.coordinateY,
+        celestialBody.parentStar.coordinateZ,
+      ])
+    : [0, 0, 0];
+  const parentStarPositionRelInitial: [number, number, number] = [
+    parentStarPositionAbs[0] - bodyPositionAbs[0],
+    parentStarPositionAbs[1] - bodyPositionAbs[1],
+    parentStarPositionAbs[2] - bodyPositionAbs[2],
+  ];
+  const distanceToParentStar = Math.sqrt(
+    parentStarPositionRelInitial[0] ** 2 +
+      parentStarPositionRelInitial[1] ** 2 +
+      parentStarPositionRelInitial[2] ** 2
+  );
+
+  // Use custom hook to recalculate rotation every 10 seconds
+  const { parentStarRotateDeg, parentStarPositionRelRotated } = useParentStarRotation({
+    celestialBody,
+    parentStarPositionRelInitial,
+  });
+
+  // Compute a THREE.Vector3 for parentStarPositionRelRotated, adjusted for camera rotation
+  // We'll use the camera's world matrix to transform the direction vector
+  const cameraRef = useRef<any>(null);
+  let dirToSunCameraAdjusted = new THREE.Vector3(...parentStarPositionRelRotated);
+  dirToSunCameraAdjusted.multiplyScalar(-1);
+  if (cameraRef.current) {
+    // Transform the direction vector by the camera's rotation (ignore translation)
+    dirToSunCameraAdjusted.applyQuaternion(cameraRef.current.quaternion.clone().invert());
+  }
+
   const needOrbitCircle = (loc: SCLocation) =>
     loc.type === "Space station" ||
     loc.type === "Asteroid base" ||
@@ -91,6 +133,7 @@ export default function CelestialBody3D({
   return (
     <Canvas key={celestialBody.name} className="CelestialBody3D">
       <PerspectiveCamera
+        ref={cameraRef}
         makeDefault
         position={cameraPosition}
         fov={cameraFOVY}
@@ -109,6 +152,15 @@ export default function CelestialBody3D({
           radius={radius}
           setApiRef={(api) => (sphereApiRef.current = api)}
         />
+        {/* Render parent star at rotated position */}
+        <mesh
+          position={new THREE.Vector3(...parentStarPositionRelRotated)
+            .normalize()
+            .multiplyScalar(distanceToParentStar)}
+        >
+          <sphereGeometry args={[celestialBody.parentStar.bodyRadius, 32, 32]} />
+          <meshBasicMaterial color={"#fff"} />
+        </mesh>
         {showLongitudeLatitudeLines && (
           <LatLongLines radius={radius + 1} color={themeColor} />
         )}
@@ -161,7 +213,13 @@ export default function CelestialBody3D({
       />
       {/* Post-processing composer with custom effect */}
       <EffectComposer>
-        <CustomPostProcessing />
+        <CustomPostProcessing
+          fovy={cameraFOVY}
+          currentDistance={currentDistance}
+          radiusBody={radius}
+          radiusAtmos={1.5 * radius}
+          dirToSun={dirToSunCameraAdjusted.normalize()}
+        />
       </EffectComposer>
     </Canvas>
   );
