@@ -12,6 +12,7 @@ import CelestialBodyRing from "./CelestialBodyRing";
 import { OrbitalMarkers } from "./OrbitalMarkers";
 import CameraUpdater from "./CameraUpdater";
 import { useOrbitInertia } from "./hooks/useOrbitInertia";
+import SubsolarDirectionLine from "./SubsolarDirectionLine";
 
 /** NOTE:
  * The coordinate system used by Star Citizen is Z-up, Y-forward.
@@ -137,6 +138,10 @@ export default function CelestialBody3D({
           celestialBody.locations
             .filter((loc) => showNoQTMarkers || loc.quantum != 0)
             .map((loc) => <LocationLabel loc={loc} key={loc.name} bodyRadius={radius} />)}
+        {/* Render Subsolar Point Direction Line */}
+        {celestialBody.parentStar && (
+          <SubsolarDirectionLine celestialBody={celestialBody} />
+        )}
         {/* Render Orbital Markers */}
         {showOMs && celestialBody.omRadius && (
           <OrbitalMarkers
