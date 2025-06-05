@@ -40,7 +40,7 @@
 
 .CelestialBody3D .location-label.night .icon {
     color: #222;
-    border-color: #444;
+    border-color: #222;
     filter: brightness(1.2) saturate(0.8);
 }
 
