@@ -31,6 +31,7 @@
     "showOrbitLines": "Orbit lines",
     "showLongitudeLatitudeLines": "Longitude/latitude lines",
     "showOMs": "Orbital markers",
+    "showSubsolarDirection": "Subsolar direction line",
     "showNoQTMarkers": "Hidden locations",
     "applyHDMaps": "HD Maps"
   },

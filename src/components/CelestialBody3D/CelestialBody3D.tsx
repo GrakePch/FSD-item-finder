@@ -29,26 +29,21 @@ export default function CelestialBody3D({
     showLongitudeLatitudeLines: true,
     showOrbitLines: true,
     showOMs: true,
+    showSubsolarDirection: true,
     showNoQTMarkers: false,
     applyHDMaps: false,
   },
 }: {
   celestialBody: CelestialBody;
   location?: SCLocation | null;
-  layersSetting: {
-    showLocationLabels: boolean;
-    showOrbitLines: boolean;
-    showLongitudeLatitudeLines: boolean;
-    showOMs: boolean;
-    showNoQTMarkers: boolean;
-    applyHDMaps: boolean;
-  };
+  layersSetting: Record<string, boolean>;
 }) {
   const {
     showLocationLabels,
     showLongitudeLatitudeLines,
     showOrbitLines,
     showOMs,
+    showSubsolarDirection,
     showNoQTMarkers,
     applyHDMaps,
   } = layersSetting;
@@ -139,7 +134,7 @@ export default function CelestialBody3D({
             .filter((loc) => showNoQTMarkers || loc.quantum != 0)
             .map((loc) => <LocationLabel loc={loc} key={loc.name} bodyRadius={radius} />)}
         {/* Render Subsolar Point Direction Line */}
-        {celestialBody.parentStar && (
+        {showSubsolarDirection && celestialBody.parentStar && (
           <SubsolarDirectionLine celestialBody={celestialBody} />
         )}
         {/* Render Orbital Markers */}

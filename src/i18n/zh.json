@@ -31,7 +31,8 @@
     "showOrbitLines": "轨道线",
     "showLongitudeLatitudeLines": "经纬线",
     "showOMs": "轨道标记点",
-    "showNoQTMarkers": "隐藏地点显示",
+    "showSubsolarDirection": "恒星直射方向",
+    "showNoQTMarkers": "隐藏的地点",
     "applyHDMaps": "高清地图"
   },
   "LocationInfo": {

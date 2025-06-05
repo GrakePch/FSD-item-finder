@@ -40,6 +40,7 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
   const [showOrbitLines, setShowOrbitLines] = useState(true);
   const [showLongitudeLatitudeLines, setShowLongitudeLatitudeLines] = useState(true);
   const [showOMs, setShowOMs] = useState(true);
+  const [showSubsolarDirection, setShowSubsolarDirection] = useState(true);
   const [showNoQTMarkers, setShowNoQTMarkers] = useState(false);
   const [applyHDMaps, setApplyHDMaps] = useState(false);
 
@@ -103,6 +104,7 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
             showLongitudeLatitudeLines,
             showOrbitLines,
             showOMs,
+            showSubsolarDirection,
             showNoQTMarkers,
             applyHDMaps,
           }}
@@ -190,6 +192,14 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
               onChange={(e) => setShowOMs(e.target.checked)}
             />
             {t("EOSC.showOMs")}
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={showSubsolarDirection}
+              onChange={(e) => setShowSubsolarDirection(e.target.checked)}
+            />
+            {t("EOSC.showSubsolarDirection")}
           </label>
           <label>
             <input
