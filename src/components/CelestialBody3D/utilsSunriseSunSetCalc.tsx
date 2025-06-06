@@ -222,9 +222,12 @@ export function getRotateDegreesPerMinute(location: SCLocation): number {
   return 360 / (body.hoursPerCycle * 60);
 }
 
-export function getMinutesToNextSunrise(location: SCLocation): number {
+export function getMinutesToNextSunrise(
+  location: SCLocation,
+  offsetDegree: number = 0
+): number {
   const currentHourAngle = getCurrentHourAngle(location);
-  const sunriseHourAngle = getSunriseSunsetHourAngleDeg(location);
+  const sunriseHourAngle = getSunriseSunsetHourAngleDeg(location) + offsetDegree;
   if (isNaN(sunriseHourAngle)) return NaN;
   const rotateDegreesPerMinute = getRotateDegreesPerMinute(location);
   const angleToSunrise = -sunriseHourAngle + currentHourAngle;
@@ -234,9 +237,12 @@ export function getMinutesToNextSunrise(location: SCLocation): number {
   return angleToSunrise / rotateDegreesPerMinute;
 }
 
-export function getMinutesToNextSunset(location: SCLocation): number {
+export function getMinutesToNextSunset(
+  location: SCLocation,
+  offsetDegree: number = 0
+): number {
   const currentHourAngle = getCurrentHourAngle(location);
-  const sunsetHourAngle = -getSunriseSunsetHourAngleDeg(location);
+  const sunsetHourAngle = -getSunriseSunsetHourAngleDeg(location) - offsetDegree;
   if (isNaN(sunsetHourAngle)) return NaN;
   const rotateDegreesPerMinute = getRotateDegreesPerMinute(location);
   const angleToSunset = -sunsetHourAngle + currentHourAngle;
@@ -251,4 +257,18 @@ export function isLocationInDaylight(location: SCLocation): boolean {
   const sunriseHourAngle = getSunriseSunsetHourAngleDeg(location);
   if (isNaN(sunriseHourAngle)) return true;
   return Math.abs(currentHourAngle) < sunriseHourAngle;
+}
+
+export function getLengthOfDaylightInMinutes(location: SCLocation): number {
+  const sunriseHourAngle = getSunriseSunsetHourAngleDeg(location);
+  if (isNaN(sunriseHourAngle)) return 0;
+  const rotateDegreesPerMinute = getRotateDegreesPerMinute(location);
+  return (2 * sunriseHourAngle) / rotateDegreesPerMinute;
+}
+
+export function getLengthOfNightInMinutes(location: SCLocation): number {
+  const sunriseHourAngle = getSunriseSunsetHourAngleDeg(location);
+  if (isNaN(sunriseHourAngle)) return 0;
+  const rotateDegreesPerMinute = getRotateDegreesPerMinute(location);
+  return (360 - 2 * sunriseHourAngle) / rotateDegreesPerMinute;
 }

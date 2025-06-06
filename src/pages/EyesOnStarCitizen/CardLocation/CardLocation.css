@@ -67,7 +67,29 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: .5rem;
+    flex-wrap: wrap;
+    gap: 0 .5rem;
+}
+
+.CardLocation .section-wrapper ul>li>span:last-child {
+    text-align: right;
+    flex-grow: 1;
+}
+
+.CardLocation .section-local-time {
+    display: flex;
+    gap: 1rem;
+}
+
+.CardLocation .section-local-time .ClockFace {
+    flex-shrink: 0;
+}
+
+.CardLocation .section-local-time .section-wrapper {
+    flex-grow: 1;
+    overflow: wrap;
+    padding-left: 0rem;
+    /* font-size: .8rem; */
 }
 
 .CardLocation .location-links {

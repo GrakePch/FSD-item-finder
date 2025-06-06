@@ -115,3 +115,16 @@ export function formatLongitude(degree: number): string {
     ? formatAngle(degree) + " E"
     : formatAngle(-degree) + " W";
 }
+
+export function formatTime(hours: number): string {
+  if (hours === Infinity) return "Infinity";
+  if (hours === -Infinity) return "Infinity";
+  const hourNumber = Math.floor(hours);
+  const remainMinutes = (hours - hourNumber) * 60;
+  const minuteNumber = Math.floor(remainMinutes);
+  const remainSeconds = (remainMinutes - minuteNumber) * 60;
+  const secondNumber = Math.round(remainSeconds);
+  return `${hourNumber}:${minuteNumber.toString().padStart(2, "0")}:${secondNumber
+    .toString()
+    .padStart(2, "0")}`;
+}

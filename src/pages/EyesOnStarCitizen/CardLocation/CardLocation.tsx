@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./CardLocation.css";
 import { locationNameToI18nKey } from "../../../utils";
@@ -10,9 +11,20 @@ import {
   cartesianToSpherical,
   formatLatitude,
   formatLongitude,
+  formatTime,
   scToThree,
   sphericalToLatLong,
 } from "../../../components/CelestialBody3D/utils";
+import ClockFace from "./ClockFace/ClockFace";
+import {
+  getCurrentHourAngle,
+  getLengthOfDaylightInMinutes,
+  getLengthOfNightInMinutes,
+  getMinutesToNextSunrise,
+  getMinutesToNextSunset,
+  getRotateDegreesPerMinute,
+  getSunriseSunsetHourAngleDeg,
+} from "../../../components/CelestialBody3D/utilsSunriseSunSetCalc";
 
 function getDistancesToOM(location: SCLocation): [number, number][] {
   if (!location.parentBody || !location.parentBody.omRadius) return [];
@@ -48,6 +60,62 @@ const CardLocation = ({ location }: { location: SCLocation }) => {
   // Compute distances to each OM (orbital marker)
   const canNavigatedByOMs = location.parentBody && location.parentBody.omRadius;
   const distancesToOMs = canNavigatedByOMs ? getDistancesToOM(location) : [];
+
+  // Time related values
+  const lengthOfDayInHour = location.parentBody?.hoursPerCycle ?? 0;
+  const rotationDegPerMinute = getRotateDegreesPerMinute(location);
+  const lengthOfDaylightInHour = getLengthOfDaylightInMinutes(location) / 60;
+  const lengthOfNightInHour = getLengthOfNightInMinutes(location) / 60;
+
+  // Compute time related values every second, and immediately on location change
+  const [currentHourAngleDeg, setCurrentHourAngleDeg] = useState(() =>
+    getCurrentHourAngle(location)
+  );
+  const [sunriseHourAngleDeg, setSunriseHourAngleDeg] = useState(() =>
+    getSunriseSunsetHourAngleDeg(location)
+  );
+  const [hourToNextNauticalDawn, setHourToNextNauticalDawn] = useState(
+    () => getMinutesToNextSunrise(location, 12) / 60
+  );
+  const [hourToNextCivilDawn, setHourToNextCivilDawn] = useState(
+    () => getMinutesToNextSunrise(location, 6) / 60
+  );
+  const [hourToNextSunrise, setHourToNextSunrise] = useState(
+    () => getMinutesToNextSunrise(location) / 60
+  );
+  const [hourToNextSunset, setHourToNextSunset] = useState(
+    () => getMinutesToNextSunset(location) / 60
+  );
+  const [hourToNextCivilDusk, setHourToNextCivilDusk] = useState(
+    () => getMinutesToNextSunset(location, 6) / 60
+  );
+  const [hourToNextNauticalDusk, setHourToNextNauticalDusk] = useState(
+    () => getMinutesToNextSunset(location, 12) / 60
+  );
+
+  useEffect(() => {
+    // Update immediately on location change
+    setCurrentHourAngleDeg(getCurrentHourAngle(location));
+    setSunriseHourAngleDeg(getSunriseSunsetHourAngleDeg(location));
+    setHourToNextNauticalDawn(getMinutesToNextSunrise(location, 12) / 60);
+    setHourToNextCivilDawn(getMinutesToNextSunrise(location, 6) / 60);
+    setHourToNextSunrise(getMinutesToNextSunrise(location) / 60);
+    setHourToNextSunset(getMinutesToNextSunset(location) / 60);
+    setHourToNextCivilDusk(getMinutesToNextSunset(location, 6) / 60);
+    setHourToNextNauticalDusk(getMinutesToNextSunset(location, 12) / 60);
+    // Then update every second
+    const interval = setInterval(() => {
+      setCurrentHourAngleDeg(getCurrentHourAngle(location));
+      setSunriseHourAngleDeg(getSunriseSunsetHourAngleDeg(location));
+      setHourToNextNauticalDawn(getMinutesToNextSunrise(location, 12) / 60);
+      setHourToNextCivilDawn(getMinutesToNextSunrise(location, 6) / 60);
+      setHourToNextSunrise(getMinutesToNextSunrise(location) / 60);
+      setHourToNextSunset(getMinutesToNextSunset(location) / 60);
+      setHourToNextCivilDusk(getMinutesToNextSunset(location, 6) / 60);
+      setHourToNextNauticalDusk(getMinutesToNextSunset(location, 12) / 60);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [location]);
 
   if (!location) {
     return (
@@ -105,6 +173,61 @@ const CardLocation = ({ location }: { location: SCLocation }) => {
           <li>
             <span>{t("LocationInfo.altitude")}</span>
             <span>{(r - (location.parentBody?.bodyRadius ?? 0)).toFixed(2)} km</span>
+          </li>
+        </ul>
+      </div>
+      <div className="section-local-time">
+        <ClockFace
+          hourAngleDeg={currentHourAngleDeg}
+          sunriseHourAngleDeg={sunriseHourAngleDeg}
+        />
+        <div className="section-wrapper">
+          <ul>
+            <li>
+              <span>{t("LocationInfo.lengthOfDay")}</span>
+              <span>{formatTime(lengthOfDayInHour)}</span>
+            </li>
+            {/* <li>
+              <span>{t("LocationInfo.rotationDegPerMinute")}</span>
+              <span>{rotationDegPerMinute.toFixed(2)}°/min</span>
+            </li> */}
+            <li>
+              <span>{t("LocationInfo.lengthOfDaylight")}</span>
+              <span>{formatTime(lengthOfDaylightInHour)}</span>
+            </li>
+            <li>
+              <span>{t("LocationInfo.lengthOfNight")}</span>
+              <span>{formatTime(lengthOfNightInHour)}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="section-wrapper">
+        {/* <h4>{t("LocationInfo.titleLocalTime")}</h4> */}
+        <ul>
+          <li>
+            <span>{t("LocationInfo.timeTillNextNauticalDawn")}</span>
+            <span>{formatTime(hourToNextNauticalDawn)}</span>
+          </li>
+          <li>
+            <span>{t("LocationInfo.timeTillNextCivilDawn")}</span>
+            <span>{formatTime(hourToNextCivilDawn)}</span>
+          </li>
+          <li>
+            <span>{t("LocationInfo.timeTillNextSunrise")}</span>
+            <span>{formatTime(hourToNextSunrise)}</span>
+          </li>
+          <li>
+            <span>{t("LocationInfo.timeTillNextSunset")}</span>
+            <span>{formatTime(hourToNextSunset)}</span>
+          </li>
+          <li>
+            <span>{t("LocationInfo.timeTillNextCivilDusk")}</span>
+            <span>{formatTime(hourToNextCivilDusk)}</span>
+          </li>
+          <li>
+            <span>{t("LocationInfo.timeTillNextNauticalDusk")}</span>
+            <span>{formatTime(hourToNextNauticalDusk)}</span>
           </li>
         </ul>
       </div>
