@@ -62,6 +62,7 @@
 .EyesOnStarCitizen .date-time-picker-wrapper input {
   border-radius: .25rem;
   border: none;
+  min-width: 10rem;
   /* background-color: var(--color-bg-1);
   color: var(--color-text); */
 }
