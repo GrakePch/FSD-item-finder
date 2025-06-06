@@ -117,8 +117,8 @@ export function formatLongitude(degree: number): string {
 }
 
 export function formatTime(hours: number): string {
-  if (hours === Infinity) return "Infinity";
-  if (hours === -Infinity) return "Infinity";
+  if (hours === Infinity) return "∞";
+  if (hours === -Infinity) return "∞";
   const hourNumber = Math.floor(hours);
   const remainMinutes = (hours - hourNumber) * 60;
   const minuteNumber = Math.floor(remainMinutes);

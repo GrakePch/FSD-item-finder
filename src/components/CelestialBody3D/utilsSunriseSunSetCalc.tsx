@@ -166,6 +166,8 @@ export function getElevationCorrection(location: SCLocation): number {
 
 /**
  * Sunrise occurs between 180 and 0, sunset occurs between 0 and -180.
+ * Returns +Infinity -> Polar day;
+ * Returns -Infinity -> Polar night;
  *
  * @param location
  * @returns

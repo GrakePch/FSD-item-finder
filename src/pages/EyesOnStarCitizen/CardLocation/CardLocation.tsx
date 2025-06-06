@@ -191,14 +191,28 @@ const CardLocation = ({ location }: { location: SCLocation }) => {
               <span>{t("LocationInfo.rotationDegPerMinute")}</span>
               <span>{rotationDegPerMinute.toFixed(2)}°/min</span>
             </li> */}
-            <li>
-              <span>{t("LocationInfo.lengthOfDaylight")}</span>
-              <span>{formatTime(lengthOfDaylightInHour)}</span>
-            </li>
-            <li>
-              <span>{t("LocationInfo.lengthOfNight")}</span>
-              <span>{formatTime(lengthOfNightInHour)}</span>
-            </li>
+            {sunriseHourAngleDeg >= Infinity ? (
+              <li>
+                <span>{t("LocationInfo.polarDay")}</span>
+                <span></span>
+              </li>
+            ) : sunriseHourAngleDeg <= -Infinity ? (
+              <li>
+                <span>{t("LocationInfo.polarNight")}</span>
+                <span></span>
+              </li>
+            ) : (
+              <>
+                <li>
+                  <span>{t("LocationInfo.lengthOfDaylight")}</span>
+                  <span>{formatTime(lengthOfDaylightInHour)}</span>
+                </li>
+                <li>
+                  <span>{t("LocationInfo.lengthOfNight")}</span>
+                  <span>{formatTime(lengthOfNightInHour)}</span>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </div>
