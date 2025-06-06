@@ -24,12 +24,20 @@ const TerminalCard = ({ terminal, onClick }: TerminalCardProps) => {
     if (onClick) {
       onClick(terminal);
     } else {
-      navigate(`/t/${terminal.id}`);
+      // Keep query params when navigating
+      const search = typeof window !== "undefined" ? window.location.search : "";
+      navigate(`/t/${terminal.id}${search}`);
     }
   };
 
   return (
-    <a className="TerminalCard" href={`/t/${terminal.id}`} onClick={handleClick}>
+    <a
+      className="TerminalCard"
+      href={`/t/${terminal.id}${
+        typeof window !== "undefined" ? window.location.search : ""
+      }`}
+      onClick={handleClick}
+    >
       <div className="icon">
         <Icon path={locationIcon[`Terminal_${terminal.type}`]} />
       </div>

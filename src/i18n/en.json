@@ -27,6 +27,7 @@
     "sortByPrice": "Lowest Price"
   },
   "EOSC": {
+    "setToRealTime": "Real Time",
     "showLocationLabels": "Location labels",
     "showOrbitLines": "Orbit lines",
     "showLongitudeLatitudeLines": "Longitude/latitude lines",

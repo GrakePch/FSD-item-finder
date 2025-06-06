@@ -3,7 +3,7 @@ import CelestialBody3D from "../../components/CelestialBody3D/CelestialBody3D";
 import "./EyesOnStarCitizen.css";
 import { ContextAllData } from "../../contexts";
 import { toUrlKey } from "../../utils";
-import { Link, useParams } from "react-router";
+import { Link, useParams, useSearchParams } from "react-router";
 import CelestialBodyInfo from "../CelestialBodyInfo/CelestialBodyInfo";
 import LocationInfo from "../LocationInfo/LocationInfo";
 import SearchLocationBar from "../SearchLocations/SearchLocationBar/SearchLocationBar";
@@ -43,6 +43,20 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
   const [showSubsolarDirection, setShowSubsolarDirection] = useState(true);
   const [showNoQTMarkers, setShowNoQTMarkers] = useState(false);
   const [applyHDMaps, setApplyHDMaps] = useState(false);
+
+  // DateTime Picker state stored in query params
+  const [searchParams, setSearchParams] = useSearchParams();
+  const searchDateTime = searchParams.get("datetime") || "";
+
+  const handleDateTimeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    if (value) {
+      searchParams.set("datetime", value);
+    } else {
+      searchParams.delete("datetime");
+    }
+    setSearchParams(searchParams, { replace: true });
+  };
 
   useEffect(() => {
     let tempCB = null;
@@ -122,6 +136,24 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
           <Icon path={mdiMapMarker} size="2rem" />
         </Link>
       </nav>
+
+      <div className="date-time-picker-wrapper">
+        <input
+          type="datetime-local"
+          value={searchDateTime}
+          onChange={handleDateTimeChange}
+          style={{ width: "100%", maxWidth: 240 }}
+        />
+        <button
+          className="set-to-real-time"
+          onClick={() => {
+            searchParams.delete("datetime");
+            setSearchParams(searchParams, { replace: true });
+          }}
+        >
+          {t("EOSC.setToRealTime")}
+        </button>
+      </div>
 
       <div className="fixed-search-bar">
         <SearchLocationBar

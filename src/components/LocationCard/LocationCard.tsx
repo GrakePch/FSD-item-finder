@@ -26,14 +26,18 @@ const LocationCard = ({ location, onClick }: LocationCardProps) => {
     if (onClick) {
       onClick(location);
     } else {
-      navigate(`/l/${toUrlKey(location.name)}`);
+      // Keep query params when navigating
+      const search = window.location.search;
+      navigate(`/l/${toUrlKey(location.name)}${search}`);
     }
   };
 
   return (
     <a
       className="LocationCard"
-      href={`/l/${toUrlKey(location.name)}`}
+      href={`/l/${toUrlKey(location.name)}${
+        typeof window !== "undefined" ? window.location.search : ""
+      }`}
       onClick={handleClick}
     >
       <div

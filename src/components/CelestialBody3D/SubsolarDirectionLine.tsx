@@ -42,7 +42,7 @@ const SubsolarDirectionLine = ({ celestialBody }: SubsolarDirectionLineProps) =>
 
   useFrame(() => {
     const now = Date.now();
-    if (now - lastUpdateRef.current > 10000 || lastUpdateRef.current === 0) {
+    if (now - lastUpdateRef.current > 100 || lastUpdateRef.current === 0) {
       lastUpdateRef.current = now;
       const declinationDeg = getParentStarDeclinationDeg(celestialBody);
       const longitudeDeg = getParentStarLongitudeDeg(celestialBody);

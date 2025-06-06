@@ -103,7 +103,7 @@ const CardLocation = ({ location }: { location: SCLocation }) => {
     setHourToNextSunset(getMinutesToNextSunset(location) / 60);
     setHourToNextCivilDusk(getMinutesToNextSunset(location, 6) / 60);
     setHourToNextNauticalDusk(getMinutesToNextSunset(location, 12) / 60);
-    // Then update every second
+    // Then update every 0.1 seconds
     const interval = setInterval(() => {
       setCurrentHourAngleDeg(getCurrentHourAngle(location));
       setSunriseHourAngleDeg(getSunriseSunsetHourAngleDeg(location));
@@ -113,7 +113,7 @@ const CardLocation = ({ location }: { location: SCLocation }) => {
       setHourToNextSunset(getMinutesToNextSunset(location) / 60);
       setHourToNextCivilDusk(getMinutesToNextSunset(location, 6) / 60);
       setHourToNextNauticalDusk(getMinutesToNextSunset(location, 12) / 60);
-    }, 1000);
+    }, 100);
     return () => clearInterval(interval);
   }, [location]);
 

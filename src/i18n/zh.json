@@ -27,6 +27,7 @@
     "sortByPrice": "价格低"
   },
   "EOSC": {
+    "setToRealTime": "实时",
     "showLocationLabels": "地点标签",
     "showOrbitLines": "轨道线",
     "showLongitudeLatitudeLines": "经纬线",
