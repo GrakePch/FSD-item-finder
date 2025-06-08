@@ -3,6 +3,8 @@ import { BlendFunction, Effect } from "postprocessing";
 import { Uniform, Vector3, WebGLRenderer, WebGLRenderTarget } from "three";
 
 const fsh = `
+/* Adapted from https://www.youtube.com/watch?v=DxfEbulyFcY by Sebastian Lague*/
+
 uniform float uTime;
 uniform float uFovy;
 uniform float uRadiusBody;
@@ -15,8 +17,8 @@ uniform vec3 uAtmosColor;
 #define FLT_MAX 3.402823466e+38
 
 const int NUM_IN_SCATTER_POINTS = 10;
-const int NUM_OPTICAL_DEPTH_POINTS = 5;
-const float DENSITY_FALLOFF = 5.;
+const int NUM_OPTICAL_DEPTH_POINTS = 10;
+const float DENSITY_FALLOFF = 4.;
 
 vec3 bodyCenter = vec3(0.);
 
@@ -170,10 +172,10 @@ class ShaderProgramAtmosphere extends Effect {
   ): void {
     this.uniforms.get("uTime").value += deltaTime;
     this.uniforms.get("uFovy").value = _uFovy;
-    this.uniforms.get("uRadiusBody").value = _uRadiusBody;
-    this.uniforms.get("uRadiusAtmos").value = _uRadiusAtmos;
+    this.uniforms.get("uRadiusBody").value = _uRadiusBody / _uRadiusBody;
+    this.uniforms.get("uRadiusAtmos").value = _uRadiusAtmos / _uRadiusBody;
     this.uniforms.get("uDirToSun").value = _uDirToSun;
-    this.uniforms.get("uCameraPos").value = _uCameraPos;
+    this.uniforms.get("uCameraPos").value = _uCameraPos.clone().divideScalar(_uRadiusBody);
     this.uniforms.get("uAtmosColor").value = this.uniforms.get("uAtmosColor").value;
     this.cameraRef.current?.getWorldDirection(this.uniforms.get("uCameraDir").value);
   }
