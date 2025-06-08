@@ -14,10 +14,10 @@ import CameraUpdater from "./CameraUpdater";
 import { useOrbitInertia } from "./hooks/useOrbitInertia";
 import SubsolarDirectionLine from "./SubsolarDirectionLine";
 import { EffectComposer } from "@react-three/postprocessing";
-import CustomPostProcessing from "./CustomPostProcessing";
+import CustomPostProcessing from "./post_processings/CustomPostProcessing";
 import { useParentStarRotation } from "./useParentStarRotation";
-import * as THREE from "three";
 import { scToThree } from "./utils";
+import { Vector3 } from "three";
 
 /** NOTE:
  * The coordinate system used by Star Citizen is Z-up, Y-forward.
@@ -99,7 +99,7 @@ export default function CelestialBody3D({
   // Compute a THREE.Vector3 for parentStarPositionRelRotated, adjusted for camera rotation
   // We'll use the camera's world matrix to transform the direction vector
   const cameraRef = useRef<any>(null);
-  let dirToSunCameraAdjusted = new THREE.Vector3(...parentStarPositionRelRotated);
+  let dirToSunCameraAdjusted = new Vector3(...parentStarPositionRelRotated);
   dirToSunCameraAdjusted.multiplyScalar(-1);
   if (cameraRef.current) {
     // Transform the direction vector by the camera's rotation (ignore translation)
@@ -150,7 +150,7 @@ export default function CelestialBody3D({
         />
         {/* Render parent star at rotated position */}
         <mesh
-          position={new THREE.Vector3(...parentStarPositionRelRotated)
+          position={new Vector3(...parentStarPositionRelRotated)
             .normalize()
             .multiplyScalar(distanceToParentStar)}
         >
