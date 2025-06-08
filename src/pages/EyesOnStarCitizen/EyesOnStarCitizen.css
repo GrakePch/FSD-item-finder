@@ -221,6 +221,7 @@
   right: 0;
   flex-direction: column;
   width: max-content;
+  font-family: var(--font-slim);
   background-color: var(--color-bg);
   padding: .5rem;
   border-radius: .5rem;

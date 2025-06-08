@@ -43,6 +43,7 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
   const [showSubsolarDirection, setShowSubsolarDirection] = useState(true);
   const [showNoQTMarkers, setShowNoQTMarkers] = useState(false);
   const [applyHDMaps, setApplyHDMaps] = useState(false);
+  const [applyRealisticAtmosphere, setApplyRealisticAtmosphere] = useState(false);
 
   // DateTime Picker state stored in query params
   const [searchParams, setSearchParams] = useSearchParams();
@@ -121,6 +122,7 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
             showSubsolarDirection,
             showNoQTMarkers,
             applyHDMaps,
+            applyRealisticAtmosphere,
           }}
         />
       </div>
@@ -248,6 +250,14 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
               onChange={(e) => setApplyHDMaps(e.target.checked)}
             />
             {t("EOSC.applyHDMaps")}
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={applyRealisticAtmosphere}
+              onChange={(e) => setApplyRealisticAtmosphere(e.target.checked)}
+            />
+            {t("EOSC.applyRealisticAtmosphere")}
           </label>
         </div>
       </div>

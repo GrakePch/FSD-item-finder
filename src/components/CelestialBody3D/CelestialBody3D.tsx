@@ -14,10 +14,11 @@ import CameraUpdater from "./CameraUpdater";
 import { useOrbitInertia } from "./hooks/useOrbitInertia";
 import SubsolarDirectionLine from "./SubsolarDirectionLine";
 import { EffectComposer } from "@react-three/postprocessing";
-import CustomPostProcessing from "./post_processings/CustomPostProcessing";
 import { useParentStarRotation } from "./useParentStarRotation";
 import { scToThree } from "./utils";
 import { Vector3 } from "three";
+import Atmosphere from "./post_processings/Atmosphere";
+import AtmosphereLite from "./post_processings/AtmosphereLite";
 
 /** NOTE:
  * The coordinate system used by Star Citizen is Z-up, Y-forward.
@@ -37,6 +38,7 @@ export default function CelestialBody3D({
     showSubsolarDirection: true,
     showNoQTMarkers: false,
     applyHDMaps: false,
+    applyRealisticAtmosphere: false,
   },
 }: {
   celestialBody: CelestialBody;
@@ -51,6 +53,7 @@ export default function CelestialBody3D({
     showSubsolarDirection,
     showNoQTMarkers,
     applyHDMaps,
+    applyRealisticAtmosphere,
   } = layersSetting;
   const bodyTexture = texture.body[celestialBody.name];
   const bodyHDTexture = texture.bodyHD[celestialBody.name];
@@ -67,6 +70,8 @@ export default function CelestialBody3D({
     celestialBody.themeColorR && celestialBody.themeColorG && celestialBody.themeColorB
       ? `rgb(${celestialBody.themeColorR}, ${celestialBody.themeColorG}, ${celestialBody.themeColorB})`
       : undefined;
+  const atmosphereRadius = 1.05 * radius;
+  const atmosphereColor = new Vector3(0.5, 0.7, 1);
   const bodyPositionAbs: [number, number, number] = scToThree([
     celestialBody.coordinateX,
     celestialBody.coordinateY,
@@ -96,15 +101,8 @@ export default function CelestialBody3D({
     parentStarPositionRelInitial,
   });
 
-  // Compute a THREE.Vector3 for parentStarPositionRelRotated, adjusted for camera rotation
-  // We'll use the camera's world matrix to transform the direction vector
   const cameraRef = useRef<any>(null);
-  let dirToSunCameraAdjusted = new Vector3(...parentStarPositionRelRotated);
-  dirToSunCameraAdjusted.multiplyScalar(-1);
-  if (cameraRef.current) {
-    // Transform the direction vector by the camera's rotation (ignore translation)
-    dirToSunCameraAdjusted.applyQuaternion(cameraRef.current.quaternion.clone().invert());
-  }
+  const dirToSunCameraAdjusted = new Vector3(...parentStarPositionRelRotated).normalize();
 
   const needOrbitCircle = (loc: SCLocation) =>
     loc.type === "Space station" ||
@@ -213,13 +211,25 @@ export default function CelestialBody3D({
       />
       {/* Post-processing composer with custom effect */}
       <EffectComposer>
-        <CustomPostProcessing
-          fovy={cameraFOVY}
-          currentDistance={currentDistance}
-          radiusBody={radius}
-          radiusAtmos={1.5 * radius}
-          dirToSun={dirToSunCameraAdjusted.normalize()}
-        />
+        {applyRealisticAtmosphere ? (
+          <Atmosphere
+            cameraRef={cameraRef}
+            fovy={cameraFOVY}
+            radiusBody={radius}
+            radiusAtmos={atmosphereRadius}
+            dirToSun={dirToSunCameraAdjusted}
+            atmosColor={atmosphereColor}
+          />
+        ) : (
+          <AtmosphereLite
+            cameraRef={cameraRef}
+            fovy={cameraFOVY}
+            radiusBody={radius}
+            radiusAtmos={atmosphereRadius}
+            dirToSun={dirToSunCameraAdjusted}
+            atmosColor={atmosphereColor}
+          />
+        )}
       </EffectComposer>
     </Canvas>
   );

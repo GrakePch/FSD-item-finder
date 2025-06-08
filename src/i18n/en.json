@@ -34,7 +34,8 @@
     "showOMs": "Orbital markers",
     "showSubsolarDirection": "Subsolar direction line",
     "showNoQTMarkers": "Hidden locations",
-    "applyHDMaps": "HD Maps"
+    "applyHDMaps": "HD Maps",
+    "applyRealisticAtmosphere": "Realistic Atmosphere"
   },
   "LocationInfo": {
     "typeOfParent": "{{type}} of {{parent}}",
