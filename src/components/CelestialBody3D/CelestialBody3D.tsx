@@ -18,7 +18,6 @@ import { useParentStarRotation } from "./useParentStarRotation";
 import { scToThree } from "./utils";
 import { Vector3 } from "three";
 import Atmosphere from "./post_processings/Atmosphere";
-import AtmosphereLite from "./post_processings/AtmosphereLite";
 
 /** NOTE:
  * The coordinate system used by Star Citizen is Z-up, Y-forward.
@@ -135,7 +134,7 @@ export default function CelestialBody3D({
         far={cameraFar}
       />
       <CameraUpdater location={location} radius={radius} />
-      <ambientLight intensity={0.7} />
+      <ambientLight intensity={applyRealisticAtmosphere ? 0.05 : 0.5} />
       <RotatingDirectionalLight intensity={5} celestialBody={celestialBody} />
 
       <group>
@@ -210,26 +209,15 @@ export default function CelestialBody3D({
         dampingFactor={0.2}
       />
       {/* Post-processing composer with custom effect */}
-      <EffectComposer>
-        {applyRealisticAtmosphere ? (
-          <Atmosphere
-            cameraRef={cameraRef}
-            fovy={cameraFOVY}
-            radiusBody={radius}
-            radiusAtmos={atmosphereRadius}
-            dirToSun={dirToSunCameraAdjusted}
-            atmosColor={atmosphereColor}
-          />
-        ) : (
-          <AtmosphereLite
-            cameraRef={cameraRef}
-            fovy={cameraFOVY}
-            radiusBody={radius}
-            radiusAtmos={atmosphereRadius}
-            dirToSun={dirToSunCameraAdjusted}
-            atmosColor={atmosphereColor}
-          />
-        )}
+      <EffectComposer enabled={applyRealisticAtmosphere}>
+        <Atmosphere
+          cameraRef={cameraRef}
+          fovy={cameraFOVY}
+          radiusBody={radius}
+          radiusAtmos={atmosphereRadius}
+          dirToSun={dirToSunCameraAdjusted}
+          atmosColor={atmosphereColor}
+        />
       </EffectComposer>
     </Canvas>
   );

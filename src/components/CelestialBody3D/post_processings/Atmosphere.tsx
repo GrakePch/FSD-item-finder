@@ -13,11 +13,12 @@ uniform vec3 uCameraPos;
 uniform vec3 uCameraDir;
 uniform vec3 uDirToSun;
 uniform vec3 uAtmosColor;
+uniform vec3 uScatteringCoefficients;
 
 #define FLT_MAX 3.402823466e+38
 
-const int NUM_IN_SCATTER_POINTS = 10;
-const int NUM_OPTICAL_DEPTH_POINTS = 10;
+const int NUM_IN_SCATTER_POINTS = 6;
+const int NUM_OPTICAL_DEPTH_POINTS = 4;
 const float DENSITY_FALLOFF = 4.;
 
 vec3 bodyCenter = vec3(0.);
@@ -63,26 +64,25 @@ float opticalDepth(vec3 rayOrigin, vec3 rayDir, float rayLength) {
   return opticalDepth;
 }
 
-float getLight(vec3 rayOrigin, vec3 rayDir, float rayLength) {
+vec3 getLight(vec3 rayOrigin, vec3 rayDir, float rayLength, vec3 originalColor) {
   vec3 inScatterPoint = rayOrigin;
   float stepSize = rayLength / float(NUM_IN_SCATTER_POINTS - 1);
-  float inScatteredLight = 0.0;
+  vec3 inScatteredLight = vec3(0.0);
+  float viewRayOpticalDepth = 0.;
 
   for (int i = 0; i < NUM_IN_SCATTER_POINTS; ++i) {
     float sunRayLength = raySphere(inScatterPoint, uDirToSun, bodyCenter, uRadiusAtmos).y;
     float sunRayOpticalDepth = opticalDepth(inScatterPoint, uDirToSun, sunRayLength);
-    // sunRayOpticalDepth = 0.;
-    float viewRayOpticalDepth = opticalDepth(inScatterPoint, -rayDir, stepSize * float(i));
-    // viewRayOpticalDepth = 0.;
+    viewRayOpticalDepth = opticalDepth(inScatterPoint, -rayDir, stepSize * float(i));
     /* The proportion of light reaches inScatterPoint */
-    float transmittance = exp(-(sunRayOpticalDepth + viewRayOpticalDepth));  
+    vec3 transmittance = exp(-(sunRayOpticalDepth + viewRayOpticalDepth) * uScatteringCoefficients);  
     float localDensity = densityAtPoint(inScatterPoint);
 
-    inScatteredLight += localDensity * transmittance * stepSize;
+    inScatteredLight += localDensity * transmittance * uScatteringCoefficients * stepSize;
     inScatterPoint += rayDir * stepSize;
   }
-
-  return inScatteredLight;
+  float originalColorTransmittance = exp(-viewRayOpticalDepth);
+  return originalColor * originalColorTransmittance + inScatteredLight;
 }
 
 void mainImage(const in vec4 inputColor, const in vec2 uv, out vec4 outputColor) {
@@ -114,8 +114,9 @@ void mainImage(const in vec4 inputColor, const in vec2 uv, out vec4 outputColor)
 
   if (dstThroughAtmos > 0.) {
     vec3 pointInAtmos = rayOrigin + rayDir * dstEnterAtmos;
-    float light = getLight(pointInAtmos, rayDir, dstThroughAtmos);
-    outputColor = mix(inputColor, vec4(uAtmosColor, 1.), light);
+    vec3 light = getLight(pointInAtmos, rayDir, dstThroughAtmos, inputColor.rgb);
+    outputColor = vec4(light, 0.);
+    // outputColor = mix(inputColor, vec4(uAtmosColor, 1.), light);
     // outputColor = mix(vec4(vec3(0.),1.), vec4(1.), light);
   } else {
     outputColor = inputColor;
@@ -134,6 +135,9 @@ let _uDirToSun: Vector3;
 
 class ShaderProgramAtmosphere extends Effect {
   cameraRef: React.RefObject<any>;
+  waveLengths = new Vector3(700, 530, 440);
+  scatteringStrength = 16;
+
   constructor(
     fovy: number,
     radiusBody: number,
@@ -153,6 +157,7 @@ class ShaderProgramAtmosphere extends Effect {
         ["uCameraPos", new Uniform(new Vector3())],
         ["uCameraDir", new Uniform(new Vector3())],
         ["uAtmosColor", new Uniform(atmosColor)],
+        ["uScatteringCoefficients", new Uniform(new Vector3())],
       ]),
     });
 
@@ -175,9 +180,18 @@ class ShaderProgramAtmosphere extends Effect {
     this.uniforms.get("uRadiusBody").value = _uRadiusBody / _uRadiusBody;
     this.uniforms.get("uRadiusAtmos").value = _uRadiusAtmos / _uRadiusBody;
     this.uniforms.get("uDirToSun").value = _uDirToSun;
-    this.uniforms.get("uCameraPos").value = _uCameraPos.clone().divideScalar(_uRadiusBody);
-    this.uniforms.get("uAtmosColor").value = this.uniforms.get("uAtmosColor").value;
+    this.uniforms.get("uCameraPos").value = _uCameraPos
+      .clone()
+      .divideScalar(_uRadiusBody);
     this.cameraRef.current?.getWorldDirection(this.uniforms.get("uCameraDir").value);
+    let scatterR = Math.pow(400 / this.waveLengths.x, 4) * this.scatteringStrength;
+    let scatterG = Math.pow(400 / this.waveLengths.y, 4) * this.scatteringStrength;
+    let scatterB = Math.pow(400 / this.waveLengths.z, 4) * this.scatteringStrength;
+    this.uniforms.get("uScatteringCoefficients").value = new Vector3(
+      scatterR,
+      scatterG,
+      scatterB
+    );
   }
 }
 
