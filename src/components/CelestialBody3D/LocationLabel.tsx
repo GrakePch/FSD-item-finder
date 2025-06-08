@@ -23,7 +23,8 @@ export default function LocationLabel({
   const navigate = useNavigate();
   const handleClick = (e: any) => {
     e.stopPropagation();
-    navigate(`/l/${toUrlKey(loc.name)}`);
+    const search = window.location.search;
+    navigate(`/l/${toUrlKey(loc.name)}${search}`);
   };
   const isLarge =
     loc.type === "Landing zone" ||
