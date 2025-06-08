@@ -12,6 +12,7 @@ import CelestialBodyRing from "./CelestialBodyRing";
 import { OrbitalMarkers } from "./OrbitalMarkers";
 import CameraUpdater from "./CameraUpdater";
 import { useOrbitInertia } from "./hooks/useOrbitInertia";
+import SubsolarDirectionLine from "./SubsolarDirectionLine";
 import { EffectComposer } from "@react-three/postprocessing";
 import CustomPostProcessing from "./CustomPostProcessing";
 import { useParentStarRotation } from "./useParentStarRotation";
@@ -33,26 +34,21 @@ export default function CelestialBody3D({
     showLongitudeLatitudeLines: true,
     showOrbitLines: true,
     showOMs: true,
+    showSubsolarDirection: true,
     showNoQTMarkers: false,
     applyHDMaps: false,
   },
 }: {
   celestialBody: CelestialBody;
   location?: SCLocation | null;
-  layersSetting: {
-    showLocationLabels: boolean;
-    showOrbitLines: boolean;
-    showLongitudeLatitudeLines: boolean;
-    showOMs: boolean;
-    showNoQTMarkers: boolean;
-    applyHDMaps: boolean;
-  };
+  layersSetting: Record<string, boolean>;
 }) {
   const {
     showLocationLabels,
     showLongitudeLatitudeLines,
     showOrbitLines,
     showOMs,
+    showSubsolarDirection,
     showNoQTMarkers,
     applyHDMaps,
   } = layersSetting;
@@ -190,6 +186,10 @@ export default function CelestialBody3D({
           celestialBody.locations
             .filter((loc) => showNoQTMarkers || loc.quantum != 0)
             .map((loc) => <LocationLabel loc={loc} key={loc.name} bodyRadius={radius} />)}
+        {/* Render Subsolar Point Direction Line */}
+        {showSubsolarDirection && celestialBody.parentStar && (
+          <SubsolarDirectionLine celestialBody={celestialBody} />
+        )}
         {/* Render Orbital Markers */}
         {showOMs && celestialBody.omRadius && (
           <OrbitalMarkers

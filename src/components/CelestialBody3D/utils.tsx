@@ -1,6 +1,24 @@
 export function getNumDaysSinceAnchor() {
   const anchor = new Date("2020-01-01T00:00:00.000Z");
-  const now = new Date();
+  let now: Date;
+  /* If running in a browser, use the URL parameter "datetime" to set the current time.
+   * If the parameter is not set or invalid, use the current time. */
+  if (typeof window !== "undefined") {
+    const params = new URLSearchParams(window.location.search);
+    const dt = params.get("datetime");
+    if (dt) {
+      const parsed = new Date(dt);
+      if (!isNaN(parsed.getTime())) {
+        now = parsed;
+      } else {
+        now = new Date();
+      }
+    } else {
+      now = new Date();
+    }
+  } else {
+    now = new Date();
+  }
   const timeSinceAnchor = now.getTime() - anchor.getTime();
   return timeSinceAnchor / 1000 / 60 / 60 / 24;
 }
@@ -114,4 +132,17 @@ export function formatLongitude(degree: number): string {
     : degree > 0
     ? formatAngle(degree) + " E"
     : formatAngle(-degree) + " W";
+}
+
+export function formatTime(hours: number): string {
+  if (hours === Infinity) return "∞";
+  if (hours === -Infinity) return "∞";
+  const hourNumber = Math.floor(hours);
+  const remainMinutes = (hours - hourNumber) * 60;
+  const minuteNumber = Math.floor(remainMinutes);
+  const remainSeconds = (remainMinutes - minuteNumber) * 60;
+  const secondNumber = Math.round(remainSeconds);
+  return `${hourNumber}:${minuteNumber.toString().padStart(2, "0")}:${secondNumber
+    .toString()
+    .padStart(2, "0")}`;
 }

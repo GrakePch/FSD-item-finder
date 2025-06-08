@@ -48,12 +48,51 @@
   }
 }
 
+.EyesOnStarCitizen .date-time-picker-wrapper {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  right: auto;
+  display: flex;
+  justify-content: center;
+  gap: .25rem;
+  z-index: 900;
+}
+
+.EyesOnStarCitizen .date-time-picker-wrapper input {
+  border-radius: .25rem;
+  border: none;
+  min-width: 10rem;
+  /* background-color: var(--color-bg-1);
+  color: var(--color-text); */
+}
+
+.EyesOnStarCitizen .date-time-picker-wrapper .set-to-real-time {
+  flex-shrink: 0;
+  font-size: .8rem;
+  font-family: var(--font-slim);
+  line-height: 1;
+  padding: .5rem .75rem;
+  border-radius: .25rem;
+}
+
+@media (max-width: 719px) {
+  .EyesOnStarCitizen .date-time-picker-wrapper {
+    top: 5rem;
+    bottom: unset;
+  }
+}
+
 .EyesOnStarCitizen .fixed-search-bar {
   position: fixed;
   top: 1rem;
   left: 5rem;
   width: 20rem;
   z-index: 1000;
+}
+
+.EyesOnStarCitizen .fixed-search-bar .SearchLocationBar {
+  margin-bottom: 0;
 }
 
 .EyesOnStarCitizen .fixed-search-bar input {
@@ -164,13 +203,6 @@
   z-index: 999;
 }
 
-@media (max-width: 719px) {
-  .EyesOnStarCitizen .layers-setting {
-    right: 1rem;
-    bottom: 15rem;
-  }
-}
-
 .EyesOnStarCitizen .layers-setting-toggle {
   display: flex;
   align-items: center;
@@ -192,6 +224,19 @@
   background-color: var(--color-bg);
   padding: .5rem;
   border-radius: .5rem;
+}
+
+@media (max-width: 719px) {
+  .EyesOnStarCitizen .layers-setting {
+    right: 1rem;
+    top: 5rem;
+    bottom: unset;
+  }
+
+  .EyesOnStarCitizen .layers-setting-panel {
+    top: 0;
+    bottom: unset;
+  }
 }
 
 .EyesOnStarCitizen .layers-setting-panel.open {

@@ -25,7 +25,9 @@ const CelestialBodyCard = ({ celestialBody, onClick }: CelestialBodyCardProps) =
     if (onClick) {
       onClick(celestialBody);
     } else {
-      navigate(`/b/${toUrlKey(celestialBody.name)}`);
+      // Keep query params when navigating
+      const search = typeof window !== "undefined" ? window.location.search : "";
+      navigate(`/b/${toUrlKey(celestialBody.name)}${search}`);
     }
   };
 
@@ -37,7 +39,9 @@ const CelestialBodyCard = ({ celestialBody, onClick }: CelestialBodyCardProps) =
   return (
     <a
       className="CelestialBodyCard"
-      href={`/b/${toUrlKey(celestialBody.name)}`}
+      href={`/b/${toUrlKey(celestialBody.name)}${
+        typeof window !== "undefined" ? window.location.search : ""
+      }`}
       onClick={handleClick}
     >
       <div
