@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./CardLocation.css";
-import { locationNameToI18nKey } from "../../../utils";
+import { locationNameToI18nKey, mixHexColor } from "../../../utils";
 import Icon from "@mdi/react";
 import { icon } from "../../../assets/icon";
 import CelestialBodyCard from "../../../components/CelestialBodyCard/CelestialBodyCard";
@@ -180,6 +180,15 @@ const CardLocation = ({ location }: { location: SCLocation }) => {
         <ClockFace
           hourAngleDeg={currentHourAngleDeg}
           sunriseHourAngleDeg={sunriseHourAngleDeg}
+          colorDay={location.parentBody?.colorSkyNoon}
+          colorDawn={
+            location.parentBody?.colorSkyHorizon ??
+            mixHexColor(
+              location.parentBody?.colorSkyNoon,
+              location.parentBody?.colorSkyNight
+            )
+          }
+          colorNight={location.parentBody?.colorSkyNight}
         />
         <div className="section-wrapper">
           <ul>

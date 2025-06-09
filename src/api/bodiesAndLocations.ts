@@ -1,6 +1,11 @@
 import bodies from "../data/bodies.json";
+import bodies_info from "../data/bodies_info.json";
 import locations from "../data/locations.json";
 import { toUrlKey } from "../utils";
+
+function getBodyInfo(name: string) {
+  return bodies_info.find((b) => b.name === name);
+}
 
 export function buildDataBodiesAndLocations(): [
   CelestialBodyDictionary,
@@ -39,6 +44,14 @@ export function buildDataBodiesAndLocations(): [
       locations: [],
       children: [],
     };
+
+    let cbodyInfo = getBodyInfo(body.name);
+    if (cbodyInfo) {
+      cbody.colorSkyNoon = cbodyInfo.colorSkyNoon;
+      cbody.colorSkyHorizon = cbodyInfo.colorSkyHorizon;
+      cbody.colorSkyNight = cbodyInfo.colorSkyNight;
+    }
+
     const urlKey = toUrlKey(body.name);
     flattened[urlKey] = cbody;
 

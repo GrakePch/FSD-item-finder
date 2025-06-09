@@ -26,6 +26,10 @@ interface CelestialBody {
   children: CelestialBody[];
   ringRadiusInner?: number;
   ringRadiusOuter?: number;
+  atmosphereHeight?: number;
+  colorSkyNoon?: string;
+  colorSkyHorizon?: string;
+  colorSkyNight?: string;
 }
 
 interface SCLocation {
