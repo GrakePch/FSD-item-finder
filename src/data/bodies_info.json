@@ -1,0 +1,88 @@
+[
+  {
+    "name": "Hurston",
+    "colorSkyNoon": "#d4d5bc",
+    "colorSkyHorizon": "#ffb57c",
+    "colorSkyNight": "#161a19"
+  },
+  {
+    "name": "Crusader",
+    "colorSkyNoon": "#a7deea",
+    "colorSkyHorizon": "#f4a47e",
+    "colorSkyNight": "#081f26"
+  },
+  {
+    "name": "ArcCorp",
+    "colorSkyNoon": "#9ecfc4",
+    "colorSkyHorizon": "#feac84",
+    "colorSkyNight": "#22292d"
+  },
+  {
+    "name": "microTech",
+    "colorSkyNoon": "#80beff",
+    "colorSkyHorizon": "#ec8d5c",
+    "colorSkyNight": "#0f1628"
+  },
+  {
+    "name": "Arial",
+    "colorSkyNoon": "#e0c286",
+    "colorSkyHorizon": "#e18557",
+    "colorSkyNight": "#152b59"
+  },
+  {
+    "name": "Aberdeen",
+    "colorSkyNoon": "#bca36c",
+    "colorSkyNight": "#151104"
+  },
+  {
+    "name": "Magda",
+    "colorSkyNoon": "#318789",
+    "colorSkyNight": "#0e2124"
+  },
+  {
+    "name": "Ita",
+    "colorSkyNoon": "#557b6e",
+    "colorSkyNight": "#2e242b"
+  },
+  {
+    "name": "Cellin",
+    "colorSkyNoon": "#495d69",
+    "colorSkyNight": "#161f26"
+  },
+  {
+    "name": "Daymar",
+    "colorSkyNoon": "#ababa9",
+    "colorSkyNight": "#363232"
+  },
+  {
+    "name": "Yela",
+    "colorSkyNoon": "#65809b",
+    "colorSkyNight": "#132333"
+  },
+  {
+    "name": "Wala",
+    "colorSkyNoon": "#3a4353",
+    "colorSkyNight": "#0e1e2b"
+  },
+  {
+    "name": "Lyria",
+    "colorSkyNoon": "#6c7f9c",
+    "colorSkyNight": "#202f43"
+  },
+  {
+    "name": "Calliope",
+    "colorSkyNoon": "#889198",
+    "colorSkyNight": "#28232f"
+  },
+  {
+    "name": "Clio",
+    "colorSkyNoon": "#5e8e82",
+    "colorSkyHorizon": "#b86690",
+    "colorSkyNight": "#102423"
+  },
+  {
+    "name": "Euterpe",
+    "colorSkyNoon": "#6f7882",
+    "colorSkyNight": "#202126"
+  }
+]
