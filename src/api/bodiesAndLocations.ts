@@ -47,9 +47,16 @@ export function buildDataBodiesAndLocations(): [
 
     let cbodyInfo = getBodyInfo(body.name);
     if (cbodyInfo) {
+      cbody.surfacePressureAtm = cbodyInfo.surfacePressureAtm;
+      cbody.atmosphereHeightM = cbodyInfo.atmosphereHeightM;
       cbody.colorSkyNoon = cbodyInfo.colorSkyNoon;
       cbody.colorSkyHorizon = cbodyInfo.colorSkyHorizon;
       cbody.colorSkyNight = cbodyInfo.colorSkyNight;
+      cbody.atmosphereColorOverrideCoefficient = cbodyInfo.atmosphereColorOverrideCoefficient;
+      cbody.atmosphereWaveLengthR = cbodyInfo.atmosphereWaveLengthR;
+      cbody.atmosphereWaveLengthG = cbodyInfo.atmosphereWaveLengthG;
+      cbody.atmosphereWaveLengthB = cbodyInfo.atmosphereWaveLengthB;
+      cbody.atmosphereScatteringStrength = cbodyInfo.atmosphereScatteringStrength;
     }
 
     const urlKey = toUrlKey(body.name);

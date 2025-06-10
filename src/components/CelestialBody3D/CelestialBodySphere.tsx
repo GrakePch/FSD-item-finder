@@ -1,21 +1,40 @@
 import { useTexture } from "@react-three/drei";
 import { Suspense, useEffect, useRef } from "react";
 
-function SurfaceMaterial({ map, mapRoughness }: { map?: string; mapRoughness?: string }) {
+function SurfaceMaterial({
+  map,
+  mapRoughness,
+  mapEmission,
+}: {
+  map?: string;
+  mapRoughness?: string;
+  mapEmission?: string;
+}) {
   const diffuseMap = map ? useTexture(map) : undefined;
   const roughnessMap = mapRoughness ? useTexture(mapRoughness) : undefined;
-  return <meshStandardMaterial map={diffuseMap} roughnessMap={roughnessMap} />;
+  const emissionMap = mapEmission ? useTexture(mapEmission) : undefined;
+  return (
+    <meshStandardMaterial
+      map={diffuseMap}
+      roughnessMap={roughnessMap}
+      emissiveMap={emissionMap}
+      emissiveIntensity={emissionMap ? .3 : 0}
+      emissive={emissionMap ? 0xffffdd : null}
+    />
+  );
 }
 
 export default function CelestialBodySphere({
   map,
   mapRoughness,
+  mapEmission,
   color,
   radius,
   setApiRef,
 }: {
   map?: string;
   mapRoughness?: string;
+  mapEmission?: string;
   color?: string;
   radius: number;
   setApiRef?: (api: { setRotationTarget: (target: number) => void }) => void;
@@ -39,7 +58,11 @@ export default function CelestialBodySphere({
       <sphereGeometry args={[radius, 64, 32, Math.PI]} />
       {map ? (
         <Suspense fallback={<meshStandardMaterial color={color || "#ffffff"} />}>
-          <SurfaceMaterial map={map} mapRoughness={mapRoughness} />
+          <SurfaceMaterial
+            map={map}
+            mapRoughness={mapRoughness}
+            mapEmission={mapEmission}
+          />
         </Suspense>
       ) : (
         <meshStandardMaterial color={color || "#ffffff"} />

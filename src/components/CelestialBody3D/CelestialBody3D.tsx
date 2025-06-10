@@ -18,6 +18,7 @@ import { useParentStarRotation } from "./useParentStarRotation";
 import { scToThree } from "./utils";
 import { Vector3 } from "three";
 import Atmosphere from "./post_processings/Atmosphere";
+import { hexColorToVector3 } from "../../utils";
 
 /** NOTE:
  * The coordinate system used by Star Citizen is Z-up, Y-forward.
@@ -57,6 +58,7 @@ export default function CelestialBody3D({
   const bodyTexture = texture.body[celestialBody.name];
   const bodyHDTexture = texture.bodyHD[celestialBody.name];
   const bodyTextureRoughness = texture.roughness[celestialBody.name];
+  const bodyTextureEmission = texture.emission[celestialBody.name];
   const radius = celestialBody.bodyRadius || 1;
   const distance = 8 * radius;
   const distanceMax = 16 * radius;
@@ -69,8 +71,16 @@ export default function CelestialBody3D({
     celestialBody.themeColorR && celestialBody.themeColorG && celestialBody.themeColorB
       ? `rgb(${celestialBody.themeColorR}, ${celestialBody.themeColorG}, ${celestialBody.themeColorB})`
       : undefined;
-  const atmosphereRadius = 1.05 * radius;
-  const atmosphereColor = new Vector3(0.5, 0.7, 1);
+  const atmosphereRadius = celestialBody.atmosphereHeightM
+    ? radius + celestialBody.atmosphereHeightM / 1000
+    : 1.05 * radius;
+  const atmosphereColor = celestialBody.colorSkyNoon
+    ? new Vector3(...hexColorToVector3(celestialBody.colorSkyNoon))
+    : undefined;
+  const atmosphereColorNight = celestialBody.colorSkyNight
+    ? new Vector3(...hexColorToVector3(celestialBody.colorSkyNight))
+    : undefined;
+
   const bodyPositionAbs: [number, number, number] = scToThree([
     celestialBody.coordinateX,
     celestialBody.coordinateY,
@@ -134,13 +144,14 @@ export default function CelestialBody3D({
         far={cameraFar}
       />
       <CameraUpdater location={location} radius={radius} />
-      <ambientLight intensity={applyRealisticAtmosphere ? 0.05 : 0.5} />
+      <ambientLight intensity={applyRealisticAtmosphere ? 0.05 : 0.3} />
       <RotatingDirectionalLight intensity={5} celestialBody={celestialBody} />
 
       <group>
         <CelestialBodySphere
           map={applyHDMaps && bodyHDTexture ? bodyHDTexture : bodyTexture}
           mapRoughness={bodyTextureRoughness}
+          mapEmission={bodyTextureEmission}
           color={themeColor}
           radius={radius}
           setApiRef={(api) => (sphereApiRef.current = api)}
@@ -217,6 +228,20 @@ export default function CelestialBody3D({
           radiusAtmos={atmosphereRadius}
           dirToSun={dirToSunCameraAdjusted}
           atmosColor={atmosphereColor}
+          atmosColorNight={atmosphereColorNight}
+          atmosColorOverrideCoefficient={celestialBody.atmosphereColorOverrideCoefficient}
+          waveLengths={
+            celestialBody.atmosphereWaveLengthR &&
+            celestialBody.atmosphereWaveLengthG &&
+            celestialBody.atmosphereWaveLengthB
+              ? new Vector3(
+                  celestialBody.atmosphereWaveLengthR,
+                  celestialBody.atmosphereWaveLengthG,
+                  celestialBody.atmosphereWaveLengthB
+                )
+              : undefined
+          }
+          scatteringStrength={celestialBody.atmosphereScatteringStrength}
         />
       </EffectComposer>
     </Canvas>

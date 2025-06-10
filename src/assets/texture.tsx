@@ -31,6 +31,7 @@ import roughnessClio from "./bodies-roughness/clio.webp";
 import roughnessEuterpe from "./bodies-roughness/euterpe.webp";
 import roughnessHurston from "./bodies-roughness/hurston.webp";
 import roughnessMicroTech from "./bodies-roughness/microtech.webp";
+import emissionArcCorp from "./bodies-emissive/planet_arccorp_worn_glow_white_wide.png";
 import bodyHDAberdeen from "./bodies-hd/aberdeen.webp";
 import bodyHDAdir from "./bodies-hd/adir.webp";
 import bodyHDArcCorp from "./bodies-hd/arccorp.webp";
@@ -64,6 +65,7 @@ const texture: {
   bodyHD: Record<string, string>;
   ring: Record<string, string>;
   roughness: Record<string, string>;
+  emission: Record<string, string>;
 } = {
   body: {
     Aberdeen: bodyAberdeen,
@@ -103,6 +105,9 @@ const texture: {
     Euterpe: roughnessEuterpe,
     Hurston: roughnessHurston,
     microTech: roughnessMicroTech,
+  },
+  emission: {
+    ArcCorp: emissionArcCorp,
   },
   bodyHD: {
     Aberdeen: bodyHDAberdeen,

@@ -1,88 +1,200 @@
 [
   {
     "name": "Hurston",
+    "surfacePressureAtm": 0.89,
+    "atmosphereHeightM": 100000,
     "colorSkyNoon": "#d4d5bc",
     "colorSkyHorizon": "#ffb57c",
-    "colorSkyNight": "#161a19"
+    "colorSkyNight": "#161a19",
+    "atmosphereColorOverrideCoefficient": 1,
+    "atmosphereWaveLengthR": 700,
+    "atmosphereWaveLengthG": 650,
+    "atmosphereWaveLengthB": 650,
+    "atmosphereScatteringStrength": 16
   },
   {
     "name": "Crusader",
+    "surfacePressureAtm": 1.0,
+    "atmosphereHeightM": 745000,
     "colorSkyNoon": "#a7deea",
     "colorSkyHorizon": "#f4a47e",
-    "colorSkyNight": "#081f26"
+    "colorSkyNight": "#081f26",
+    "atmosphereColorOverrideCoefficient": 0,
+    "atmosphereWaveLengthR": 700,
+    "atmosphereWaveLengthG": 560,
+    "atmosphereWaveLengthB": 500,
+    "atmosphereScatteringStrength": 16
   },
   {
     "name": "ArcCorp",
+    "surfacePressureAtm": 0.84,
+    "atmosphereHeightM": 80000,
     "colorSkyNoon": "#9ecfc4",
     "colorSkyHorizon": "#feac84",
-    "colorSkyNight": "#22292d"
+    "colorSkyNight": "#22292d",
+    "atmosphereColorOverrideCoefficient": 0,
+    "atmosphereWaveLengthR": 700,
+    "atmosphereWaveLengthG": 530,
+    "atmosphereWaveLengthB": 500,
+    "atmosphereScatteringStrength": 16
   },
   {
     "name": "microTech",
+    "surfacePressureAtm": 1.1,
+    "atmosphereHeightM": 100000,
     "colorSkyNoon": "#80beff",
     "colorSkyHorizon": "#ec8d5c",
-    "colorSkyNight": "#0f1628"
+    "colorSkyNight": "#0f1628",
+    "atmosphereColorOverrideCoefficient": 0,
+    "atmosphereWaveLengthR": 700,
+    "atmosphereWaveLengthG": 530,
+    "atmosphereWaveLengthB": 440,
+    "atmosphereScatteringStrength": 16
   },
   {
     "name": "Arial",
+    "surfacePressureAtm": 0.77,
+    "atmosphereHeightM": 34450,
     "colorSkyNoon": "#e0c286",
     "colorSkyHorizon": "#e18557",
-    "colorSkyNight": "#152b59"
+    "colorSkyNight": "#152b59",
+    "atmosphereColorOverrideCoefficient": 1,
+    "atmosphereWaveLengthR": 700,
+    "atmosphereWaveLengthG": 700,
+    "atmosphereWaveLengthB": 700,
+    "atmosphereScatteringStrength": 16
   },
   {
     "name": "Aberdeen",
-    "colorSkyNoon": "#bca36c",
-    "colorSkyNight": "#151104"
+    "surfacePressureAtm": 1.04,
+    "atmosphereHeightM": 27400,
+    "colorSkyNoon": "#b08d38",
+    "colorSkyNight": "#151104",
+    "atmosphereColorOverrideCoefficient": 1,
+    "atmosphereWaveLengthR": 700,
+    "atmosphereWaveLengthG": 700,
+    "atmosphereWaveLengthB": 700,
+    "atmosphereScatteringStrength": 16
   },
   {
     "name": "Magda",
+    "surfacePressureAtm": 0.33,
+    "atmosphereHeightM": 34000,
     "colorSkyNoon": "#318789",
-    "colorSkyNight": "#0e2124"
+    "colorSkyNight": "#0e2124",
+    "atmosphereColorOverrideCoefficient": 1,
+    "atmosphereWaveLengthR": 700,
+    "atmosphereWaveLengthG": 700,
+    "atmosphereWaveLengthB": 700,
+    "atmosphereScatteringStrength": 4
   },
   {
     "name": "Ita",
+    "surfacePressureAtm": 0.15,
+    "atmosphereHeightM": 32500,
     "colorSkyNoon": "#557b6e",
-    "colorSkyNight": "#2e242b"
+    "colorSkyNight": "#2e242b",
+    "atmosphereColorOverrideCoefficient": 1,
+    "atmosphereWaveLengthR": 700,
+    "atmosphereWaveLengthG": 700,
+    "atmosphereWaveLengthB": 700,
+    "atmosphereScatteringStrength": 4
   },
   {
     "name": "Cellin",
+    "surfacePressureAtm": 0.19,
+    "atmosphereHeightM": 26000,
     "colorSkyNoon": "#495d69",
-    "colorSkyNight": "#161f26"
+    "colorSkyNight": "#161f26",
+    "atmosphereColorOverrideCoefficient": 1,
+    "atmosphereWaveLengthR": 700,
+    "atmosphereWaveLengthG": 650,
+    "atmosphereWaveLengthB": 600,
+    "atmosphereScatteringStrength": 4
   },
   {
     "name": "Daymar",
+    "surfacePressureAtm": 0.6,
+    "atmosphereHeightM": 29500,
     "colorSkyNoon": "#ababa9",
-    "colorSkyNight": "#363232"
+    "colorSkyNight": "#363232",
+    "atmosphereColorOverrideCoefficient": 1,
+    "atmosphereWaveLengthR": 700,
+    "atmosphereWaveLengthG": 700,
+    "atmosphereWaveLengthB": 700,
+    "atmosphereScatteringStrength": 8
   },
   {
     "name": "Yela",
+    "surfacePressureAtm": 0.19,
+    "atmosphereHeightM": 31300,
     "colorSkyNoon": "#65809b",
-    "colorSkyNight": "#132333"
+    "colorSkyNight": "#132333",
+    "atmosphereColorOverrideCoefficient": 1,
+    "atmosphereWaveLengthR": 700,
+    "atmosphereWaveLengthG": 650,
+    "atmosphereWaveLengthB": 600,
+    "atmosphereScatteringStrength": 4
   },
   {
     "name": "Wala",
+    "surfacePressureAtm": 0.09,
+    "atmosphereHeightM": 28300,
     "colorSkyNoon": "#3a4353",
-    "colorSkyNight": "#0e1e2b"
+    "colorSkyNight": "#0e1e2b",
+    "atmosphereColorOverrideCoefficient": 1,
+    "atmosphereWaveLengthR": 700,
+    "atmosphereWaveLengthG": 700,
+    "atmosphereWaveLengthB": 700,
+    "atmosphereScatteringStrength": 4
   },
   {
     "name": "Lyria",
+    "surfacePressureAtm": 0.09,
+    "atmosphereHeightM": 22300,
     "colorSkyNoon": "#6c7f9c",
-    "colorSkyNight": "#202f43"
+    "colorSkyNight": "#202f43",
+    "atmosphereColorOverrideCoefficient": 1,
+    "atmosphereWaveLengthR": 700,
+    "atmosphereWaveLengthG": 650,
+    "atmosphereWaveLengthB": 600,
+    "atmosphereScatteringStrength": 8
   },
   {
     "name": "Calliope",
+    "surfacePressureAtm": 0.8,
+    "atmosphereHeightM": 24000,
     "colorSkyNoon": "#889198",
-    "colorSkyNight": "#28232f"
+    "colorSkyNight": "#28232f",
+    "atmosphereColorOverrideCoefficient": 1,
+    "atmosphereWaveLengthR": 700,
+    "atmosphereWaveLengthG": 700,
+    "atmosphereWaveLengthB": 700,
+    "atmosphereScatteringStrength": 16
   },
   {
     "name": "Clio",
+    "surfacePressureAtm": 0.62,
+    "atmosphereHeightM": 33700,
     "colorSkyNoon": "#5e8e82",
     "colorSkyHorizon": "#b86690",
-    "colorSkyNight": "#102423"
+    "colorSkyNight": "#102423",
+    "atmosphereColorOverrideCoefficient": 0,
+    "atmosphereWaveLengthR": 600,
+    "atmosphereWaveLengthG": 300,
+    "atmosphereWaveLengthB": 300,
+    "atmosphereScatteringStrength": 4
   },
   {
     "name": "Euterpe",
+    "surfacePressureAtm": 0.79,
+    "atmosphereHeightM": 21300,
     "colorSkyNoon": "#6f7882",
-    "colorSkyNight": "#202126"
+    "colorSkyNight": "#202126",
+    "atmosphereColorOverrideCoefficient": 1,
+    "atmosphereWaveLengthR": 700,
+    "atmosphereWaveLengthG": 600,
+    "atmosphereWaveLengthB": 600,
+    "atmosphereScatteringStrength": 8
   }
 ]

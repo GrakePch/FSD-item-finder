@@ -38,9 +38,9 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
   /* Layers setting states */
   const [showLocationLabels, setShowLocationLabels] = useState(true);
   const [showOrbitLines, setShowOrbitLines] = useState(true);
-  const [showLongitudeLatitudeLines, setShowLongitudeLatitudeLines] = useState(true);
-  const [showOMs, setShowOMs] = useState(true);
-  const [showSubsolarDirection, setShowSubsolarDirection] = useState(true);
+  const [showLongitudeLatitudeLines, setShowLongitudeLatitudeLines] = useState(false);
+  const [showOMs, setShowOMs] = useState(false);
+  const [showSubsolarDirection, setShowSubsolarDirection] = useState(false);
   const [showNoQTMarkers, setShowNoQTMarkers] = useState(false);
   const [applyHDMaps, setApplyHDMaps] = useState(false);
   const [applyRealisticAtmosphere, setApplyRealisticAtmosphere] = useState(false);

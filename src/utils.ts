@@ -321,3 +321,8 @@ export const mixHexColor = (
 
   return rgbToHex(r, g, b);
 };
+
+export const hexColorToVector3 = (hex: string) => {
+  const [r, g, b] = hexToRgb(hex);
+  return [r / 255, g / 255, b / 255];
+};

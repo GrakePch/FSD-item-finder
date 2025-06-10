@@ -35,7 +35,7 @@
     "showSubsolarDirection": "恒星直射方向",
     "showNoQTMarkers": "隐藏的地点",
     "applyHDMaps": "高清地图",
-    "applyRealisticAtmosphere": "真实大气"
+    "applyRealisticAtmosphere": "大气层"
   },
   "LocationInfo": {
     "typeOfParent": "{{parent}} 的{{type}}",
