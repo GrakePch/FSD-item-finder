@@ -1811,12 +1811,13 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 2444000000.0
       },
       "AccelerationG": {
-        "IsValidated": false,
-        "Main": 2.6,
-        "Retro": 0.7,
-        "Strafe": 0.8,
-        "Up": 1.6,
-        "Down": 2.0
+        "IsValidated": true,
+        "Main": 2.0,
+        "Retro": 1.5,
+        "Strafe": 1.0,
+        "Up": 2.0,
+        "Down": 2.0,
+        "CheckDate": "2025-05-16"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -2038,12 +2039,13 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 2444000000.0
       },
       "AccelerationG": {
-        "IsValidated": false,
-        "Main": 2.62,
-        "Retro": 1.47,
-        "Strafe": 0,
-        "Up": 0,
-        "Down": 0
+        "IsValidated": true,
+        "Main": 2.0,
+        "Retro": 1.5,
+        "Strafe": 1.0,
+        "Up": 2.0,
+        "Down": 2.0,
+        "CheckDate": "2025-05-16"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -5016,7 +5018,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 180.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
+      "ExternalStorage": 1.5,
       "PersonalInventory": 8.0
     },
     "Crew": 1,
@@ -5025,9 +5027,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Mass": 610246.06,
     "ComponentsMass": 38814.0,
     "Dimensions": {
-      "Length": 48.0,
-      "Width": 38.0,
-      "Height": 12.0
+      "Length": 48.7,
+      "Width": 34.1,
+      "Height": 14.1
     },
     "IsSpaceship": true,
     "Armor": {
@@ -5112,12 +5114,13 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 95000000.0
       },
       "AccelerationG": {
-        "IsValidated": false,
-        "Main": 4.91,
-        "Retro": 2.74,
-        "Strafe": 0.0,
-        "Up": 0.0,
-        "Down": 0.0
+        "IsValidated": true,
+        "Main": 4.6,
+        "Retro": 2.5,
+        "Strafe": 3.6,
+        "Up": 3.8,
+        "Down": 3.8,
+        "CheckDate": "2025-05-23"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -5229,6 +5232,11 @@ const spvVehicleList: SpvVehicleMain[] = [
       "StandardClaimTime": 17.0,
       "ExpeditedClaimTime": 4.25,
       "ExpeditedCost": 9430.0
+    },
+    "Dimensions2": {
+      "Length": 48.7,
+      "Width": 34.1,
+      "Height": 15.5
     }
   },
   {
@@ -20382,7 +20390,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.75,
+      "ExternalStorage": 3.75,
       "PersonalInventory": 0.0
     },
     "Crew": 1,
@@ -25992,7 +26000,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 96.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
+      "ExternalStorage": 11.7,
       "PersonalInventory": 8.0
     },
     "Crew": 1,
@@ -26114,12 +26122,13 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 73200000.0
       },
       "AccelerationG": {
-        "IsValidated": false,
-        "Main": 4.49,
-        "Retro": 2.07,
-        "Strafe": 0.0,
-        "Up": 0.0,
-        "Down": 0.0
+        "IsValidated": true,
+        "Main": 2.9,
+        "Retro": 1.6,
+        "Strafe": 1.8,
+        "Up": 2.1,
+        "Down": 2.1,
+        "CheckDate": "2025-05-23"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -26470,7 +26479,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.45,
+      "ExternalStorage": 0.9,
       "PersonalInventory": 0.65
     },
     "Crew": 1,
@@ -26480,8 +26489,8 @@ const spvVehicleList: SpvVehicleMain[] = [
     "ComponentsMass": 12692.0,
     "Dimensions": {
       "Length": 25.0,
-      "Width": 16.5,
-      "Height": 9.0
+      "Width": 20.0,
+      "Height": 11.0
     },
     "IsSpaceship": true,
     "Armor": {
