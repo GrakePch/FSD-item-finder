@@ -82,7 +82,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 48.5,
       "Roll": 180.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 6174081.0,
         "Retro": 2000.0,
@@ -139,10 +138,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 2.25,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -290,7 +286,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 48.5,
       "Roll": 180.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 6237929.0,
         "Retro": 2000.0,
@@ -347,10 +342,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 2.25,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -498,7 +490,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 48.5,
       "Roll": 180.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 6237929.0,
         "Retro": 2000.0,
@@ -555,10 +546,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 2.25,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -706,7 +694,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 48.5,
       "Roll": 180.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 6226192.0,
         "Retro": 2000.0,
@@ -763,10 +750,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 2.25,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -917,7 +901,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 33.0,
       "Roll": 110.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 3566000.0,
         "Retro": 216000.0,
@@ -974,10 +957,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.6,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 2.25,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -1139,7 +1119,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 52.0,
       "Roll": 200.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 4910000.0,
         "Retro": 412000.0,
@@ -1196,10 +1175,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.5,
-        "Y_AccelMultiplicator": 1.2,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -1361,7 +1337,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 52.0,
       "Roll": 200.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 4910000.0,
         "Retro": 412000.0,
@@ -1418,10 +1393,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.5,
-        "Y_AccelMultiplicator": 1.2,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -1573,7 +1545,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 18.0,
       "Roll": 30.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 232600000.0,
         "Retro": 93000000.0,
@@ -1630,10 +1601,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -1720,7 +1688,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "WeaponCrew": 11,
     "OperationsCrew": 0,
     "Mass": 37854373.0,
-    "ComponentsMass": 354585.0,
+    "ComponentsMass": 358585.0,
     "Dimensions": {
       "Length": 240.0,
       "Width": 125.0,
@@ -1803,7 +1771,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 7.0,
       "Roll": 12.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 754000000.0,
         "Retro": 566000000.0,
@@ -1861,10 +1828,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 1.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.3,
-        "RegenerationTime": 30.0,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 30.0
       }
     },
     "FuelManagement": {
@@ -1888,12 +1852,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "Emissions": {
       "Electromagnetic": {
-        "SCMIdle": 28809.0,
-        "SCMActive": 51000.0,
-        "NAV": 28814.0
+        "SCMIdle": 28911.0,
+        "SCMActive": 51103.0,
+        "NAV": 28916.0
       },
       "Infrared": {
-        "Start": 24120.0
+        "Start": 30720.0
       },
       "CrossSection": {
         "Front": 10000.0,
@@ -1906,9 +1870,9 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 10.0
       },
       "Modifiers": {
-        "PowerRatioMultiplier": 2.7,
-        "MaxAmmoLoadMultiplier": 1.0,
-        "MaxRegenPerSecMultiplier": 1.0
+        "PowerRatioMultiplier": 1.0,
+        "MaxAmmoLoadMultiplier": 6.0,
+        "MaxRegenPerSecMultiplier": 1.9
       }
     },
     "Weapons": {
@@ -1922,7 +1886,7 @@ const spvVehicleList: SpvVehicleMain[] = [
       },
       "TotalShieldHP": 2340000.0,
       "PilotBurstDPS": 9611.0,
-      "TurretsBurstDPS": 35442.0,
+      "TurretsBurstDPS": 35443.0,
       "TotalMissilesDmg": 170917.0
     },
     "Insurance": {
@@ -1948,7 +1912,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "WeaponCrew": 12,
     "OperationsCrew": 0,
     "Mass": 37854373.0,
-    "ComponentsMass": 351355.0,
+    "ComponentsMass": 355555.0,
     "Dimensions": {
       "Length": 240.0,
       "Width": 125.0,
@@ -2031,7 +1995,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 7.0,
       "Roll": 12.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 754000000.0,
         "Retro": 566000000.0,
@@ -2089,10 +2052,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 1.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.3,
-        "RegenerationTime": 30.0,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 30.0
       }
     },
     "FuelManagement": {
@@ -2116,12 +2076,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "Emissions": {
       "Electromagnetic": {
-        "SCMIdle": 28735.0,
-        "SCMActive": 50927.0,
-        "NAV": 28740.0
+        "SCMIdle": 28843.0,
+        "SCMActive": 51035.0,
+        "NAV": 28848.0
       },
       "Infrared": {
-        "Start": 24045.0
+        "Start": 31245.0
       },
       "CrossSection": {
         "Front": 10000.0,
@@ -2134,9 +2094,9 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 10.0
       },
       "Modifiers": {
-        "PowerRatioMultiplier": 2.7,
-        "MaxAmmoLoadMultiplier": 1.0,
-        "MaxRegenPerSecMultiplier": 1.0
+        "PowerRatioMultiplier": 1.0,
+        "MaxAmmoLoadMultiplier": 6.0,
+        "MaxRegenPerSecMultiplier": 1.9
       }
     },
     "Weapons": {
@@ -2294,7 +2254,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 11.0,
       "Roll": 14.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 195000000.0,
         "Retro": 146500000.0,
@@ -2352,10 +2311,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -2518,7 +2474,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 32.0,
       "Roll": 115.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 27840000.0,
         "Retro": 220000.0,
@@ -2575,10 +2530,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.0,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.5,
-        "Y_AccelMultiplicator": 1.3,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -2762,7 +2714,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 30.0,
       "Roll": 60.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 12440000.0,
         "Retro": 8940000.0,
@@ -2819,10 +2770,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.9,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 2.25,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -2981,7 +2929,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 55.0,
       "Roll": 160.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 8800000.0,
         "Retro": 1800000.0,
@@ -3038,10 +2985,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -3190,7 +3134,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 55.0,
       "Roll": 160.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 8800000.0,
         "Retro": 1800000.0,
@@ -3247,10 +3190,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -3397,7 +3337,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 42.0,
       "Roll": 160.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 9259129.0,
         "Retro": 280000.0,
@@ -3454,10 +3393,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.4,
-        "RegenerationTime": 33.3,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 33.3
       }
     },
     "FuelManagement": {
@@ -3613,7 +3549,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 51.0,
       "Roll": 187.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 10595000.0,
         "Retro": 350000.0,
@@ -3670,10 +3605,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.4,
-        "RegenerationTime": 33.3,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 33.3
       }
     },
     "FuelManagement": {
@@ -3814,7 +3746,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 42.0,
       "Roll": 160.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 9136699.0,
         "Retro": 650000.0,
@@ -3871,10 +3802,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.4,
-        "RegenerationTime": 33.3,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 33.3
       }
     },
     "FuelManagement": {
@@ -4028,7 +3956,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 35.0,
       "Roll": 124.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 21911216.0,
         "Retro": 8140000.0,
@@ -4086,10 +4013,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.7,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -4245,7 +4169,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 33.0,
       "Roll": 120.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 21988742.0,
         "Retro": 7920000.0,
@@ -4303,10 +4226,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.7,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -4462,7 +4382,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 30.0,
       "Roll": 105.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 21470806.0,
         "Retro": 5960564.0,
@@ -4520,10 +4439,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.9,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -4679,7 +4595,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 36.0,
       "Roll": 126.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 21007886.0,
         "Retro": 7800000.0,
@@ -4737,10 +4652,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.7,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -4883,7 +4795,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 55.0,
       "Roll": 189.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 4400000.0,
         "Retro": 1530000.0,
@@ -4940,10 +4851,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.5,
-        "Y_AccelMultiplicator": 1.2,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -5106,7 +5014,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 27.5,
       "Roll": 95.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 29400000.0,
         "Retro": 16400000.0,
@@ -5164,10 +5071,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.9,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -5199,9 +5103,9 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Start": 18482.0
       },
       "CrossSection": {
-        "Front": 9810.0,
-        "Side": 31000.0,
-        "Top": 39240.0
+        "Front": 8310.0,
+        "Side": 21952.0,
+        "Top": 30424.0
       }
     },
     "ResourceNetwork": {
@@ -5210,7 +5114,7 @@ const spvVehicleList: SpvVehicleMain[] = [
       },
       "Modifiers": {
         "PowerRatioMultiplier": 1.0,
-        "MaxAmmoLoadMultiplier": 3.0,
+        "MaxAmmoLoadMultiplier": 5.0,
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
@@ -5249,7 +5153,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
+      "ExternalStorage": 1.05,
       "PersonalInventory": 2.11
     },
     "Crew": 2,
@@ -5435,7 +5339,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 56.0,
       "Roll": 142.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 3800000.0,
         "Retro": 1200000.0,
@@ -5492,10 +5395,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -5643,7 +5543,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 60.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 3800000.0,
         "Retro": 1200000.0,
@@ -5700,10 +5599,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -5851,7 +5747,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 60.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 3800000.0,
         "Retro": 1200000.0,
@@ -5908,10 +5803,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -6064,7 +5956,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 16.0,
       "Roll": 30.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 166600000.0,
         "Retro": 66500000.0,
@@ -6121,10 +6012,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 0.75,
         "CapacitorRegenDelay": 1.3,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -6211,7 +6099,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "WeaponCrew": 2,
     "OperationsCrew": 0,
     "Mass": 77016.0,
-    "ComponentsMass": 2052.0,
+    "ComponentsMass": 2627.0,
     "Dimensions": {
       "Length": 17.0,
       "Width": 7.0,
@@ -6259,12 +6147,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "Emissions": {
       "Electromagnetic": {
-        "SCMIdle": 79.0,
-        "SCMActive": 367.0,
+        "SCMIdle": 99.0,
+        "SCMActive": 387.0,
         "NAV": 0.0
       },
       "Infrared": {
-        "Start": 983.0
+        "Start": 1583.0
       },
       "CrossSection": {
         "Front": 2193.0,
@@ -6275,6 +6163,11 @@ const spvVehicleList: SpvVehicleMain[] = [
     "ResourceNetwork": {
       "ItemPools": {
         "WeaponPoolSize": 6.0
+      },
+      "Modifiers": {
+        "PowerRatioMultiplier": 1.0,
+        "MaxAmmoLoadMultiplier": 6.0,
+        "MaxRegenPerSecMultiplier": 1.05
       }
     },
     "Weapons": {
@@ -6411,7 +6304,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 40.0,
       "Roll": 130.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 4220000.0,
         "Retro": 730000.0,
@@ -6468,10 +6360,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -6584,13 +6473,13 @@ const spvVehicleList: SpvVehicleMain[] = [
           "body": 1500.0
         },
         "Parts": {
-          "canopy": 1500.0,
           "Nacelle_left": 1000.0,
           "rear_wing_left": 800.0,
           "wing_left": 800.0,
           "Nacelle_right": 1000.0,
           "rear_wing_right": 800.0,
           "wing_right": 800.0,
+          "canopy": 1500.0,
           "tail": 1500.0
         }
       },
@@ -6624,7 +6513,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 48.0,
       "Roll": 178.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 8200000.0,
         "Retro": 2900000.0,
@@ -6681,10 +6569,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -6838,7 +6723,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 45.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 2814000.0,
         "Retro": 2482000.0,
@@ -6895,10 +6779,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -7050,7 +6931,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 45.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 8646000.0,
         "Retro": 3128000.0,
@@ -7108,10 +6988,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -7266,7 +7143,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 45.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 5581000.0,
         "Retro": 2482000.0,
@@ -7323,10 +7199,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -7477,7 +7350,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 45.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 8648000.0,
         "Retro": 2216000.0,
@@ -7534,10 +7406,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -7688,7 +7557,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 45.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 8648000.0,
         "Retro": 2216000.0,
@@ -7745,10 +7613,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -7901,7 +7766,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 40.0,
       "Roll": 140.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 8000000.0,
         "Retro": 2599374.0,
@@ -7959,10 +7823,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -8120,7 +7981,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 40.0,
       "Roll": 140.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 8000000.0,
         "Retro": 2599374.0,
@@ -8178,10 +8038,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -8335,7 +8192,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 45.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 5581000.0,
         "Retro": 2482000.0,
@@ -8392,10 +8248,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -8550,7 +8403,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 45.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 8070928.0,
         "Retro": 2922927.0,
@@ -8607,10 +8459,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -8765,7 +8614,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 45.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 5581000.0,
         "Retro": 2482000.0,
@@ -8822,10 +8670,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -8980,7 +8825,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 45.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 8069988.0,
         "Retro": 2923778.0,
@@ -9037,10 +8881,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -9198,7 +9039,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 45.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 8646000.0,
         "Retro": 3128000.0,
@@ -9256,10 +9096,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -9417,7 +9254,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 45.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 5581000.0,
         "Retro": 2482000.0,
@@ -9474,10 +9310,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -9629,7 +9462,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 35.0,
       "Roll": 130.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 9200000.0,
         "Retro": 3340000.0,
@@ -9687,10 +9519,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.7,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -9864,7 +9693,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 31.0,
       "Roll": 115.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 13530000.0,
         "Retro": 5580000.0,
@@ -9922,10 +9750,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.7,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -10005,7 +9830,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "WeaponCrew": 1,
     "OperationsCrew": 0,
     "Mass": 80016.0,
-    "ComponentsMass": 627.0,
+    "ComponentsMass": 727.0,
     "Dimensions": {
       "Length": 17.0,
       "Width": 7.0,
@@ -10054,12 +9879,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "Emissions": {
       "Electromagnetic": {
-        "SCMIdle": 10.0,
-        "SCMActive": 505.0,
+        "SCMIdle": 11.0,
+        "SCMActive": 506.0,
         "NAV": 0.0
       },
       "Infrared": {
-        "Start": 969.0
+        "Start": 1479.0
       },
       "CrossSection": {
         "Front": 1229.0,
@@ -10201,7 +10026,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 35.0,
       "Roll": 120.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 4240000.0,
         "Retro": 4173886.0,
@@ -10258,10 +10082,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.9,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -10425,7 +10246,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 35.0,
       "Roll": 120.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 4240000.0,
         "Retro": 4173886.0,
@@ -10482,10 +10302,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.9,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -10655,7 +10472,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 29.0,
       "Roll": 98.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 34800000.0,
         "Retro": 15800000.0,
@@ -10713,10 +10529,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.9,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -10759,7 +10572,7 @@ const spvVehicleList: SpvVehicleMain[] = [
       },
       "Modifiers": {
         "PowerRatioMultiplier": 1.0,
-        "MaxAmmoLoadMultiplier": 3.0,
+        "MaxAmmoLoadMultiplier": 3.5,
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
@@ -10990,7 +10803,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 30.0,
       "Roll": 75.0,
       "IsVtolAssisted": true,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 42800000.0,
         "Retro": 30000000.0,
@@ -11047,10 +10859,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -11195,7 +11004,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 30.0,
       "Roll": 85.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 385000.0,
         "Retro": 0.0,
@@ -11252,10 +11060,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.5,
-        "Y_AccelMultiplicator": 1.5,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -11405,7 +11210,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 35.0,
       "Roll": 85.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 256400.0,
         "Retro": 0.0,
@@ -11462,10 +11266,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.5,
-        "Y_AccelMultiplicator": 1.5,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -11611,7 +11412,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 30.0,
       "Roll": 85.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 385000.0,
         "Retro": 0.0,
@@ -11668,10 +11468,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.5,
-        "Y_AccelMultiplicator": 1.5,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -11830,7 +11627,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 40.0,
       "Roll": 117.0,
       "IsVtolAssisted": true,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 25960000.0,
         "Retro": 14000000.0,
@@ -11888,10 +11684,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -12062,7 +11855,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 30.0,
       "Roll": 60.0,
       "IsVtolAssisted": true,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 17200000.0,
         "Retro": 9160000.0,
@@ -12119,10 +11911,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.5,
-        "Y_AccelMultiplicator": 1.5,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -12205,7 +11994,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 119930.0,
-    "ComponentsMass": 6042.0,
+    "ComponentsMass": 6288.0,
     "Dimensions": {
       "Length": 25.5,
       "Width": 20.0,
@@ -12270,7 +12059,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 47.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 13658000.0,
         "Retro": 4964000.0,
@@ -12327,10 +12115,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -12354,12 +12139,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "Emissions": {
       "Electromagnetic": {
-        "SCMIdle": 8055.0,
-        "SCMActive": 10182.0,
-        "NAV": 15588.0
+        "SCMIdle": 8117.0,
+        "SCMActive": 10245.0,
+        "NAV": 15651.0
       },
       "Infrared": {
-        "Start": 8271.0
+        "Start": 8296.0
       },
       "CrossSection": {
         "Front": 3063.0,
@@ -12384,7 +12169,7 @@ const spvVehicleList: SpvVehicleMain[] = [
       "TotalShieldHP": 5100.0,
       "PilotBurstDPS": 1276.0,
       "TurretsBurstDPS": 0.0,
-      "TotalMissilesDmg": 9515.0
+      "TotalMissilesDmg": 14272.0
     },
     "Insurance": {
       "StandardClaimTime": 13.61,
@@ -12486,7 +12271,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 70.0,
       "Roll": 130.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 135000.0,
         "Retro": 113000.0,
@@ -12542,10 +12326,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 3.5,
-        "RegenerationTime": 16.0,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 16.0
       }
     },
     "FuelManagement": {
@@ -12700,7 +12481,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 53.7,
       "Roll": 205.3,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 4835000.0,
         "Retro": 1672000.0,
@@ -12757,10 +12537,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.5,
-        "Y_AccelMultiplicator": 1.3,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -12914,7 +12691,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 53.7,
       "Roll": 205.3,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 5711318.0,
         "Retro": 1975041.0,
@@ -12971,10 +12747,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.5,
-        "Y_AccelMultiplicator": 1.3,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -13128,7 +12901,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 53.7,
       "Roll": 205.3,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 5534000.0,
         "Retro": 1916000.0,
@@ -13185,10 +12957,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.5,
-        "Y_AccelMultiplicator": 1.3,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -13343,7 +13112,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 65.0,
       "Roll": 234.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 4458000.0,
         "Retro": 1421630.8,
@@ -13400,10 +13168,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.5,
-        "Y_AccelMultiplicator": 1.3,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -13558,7 +13323,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 65.0,
       "Roll": 234.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 4458000.0,
         "Retro": 1421630.8,
@@ -13615,10 +13379,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.5,
-        "Y_AccelMultiplicator": 1.3,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -13766,7 +13527,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 45.0,
       "Roll": 120.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 23000000.0,
         "Retro": 8000000.0,
@@ -13823,10 +13583,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -13997,7 +13754,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 48.0,
       "Roll": 145.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 4000000.0,
         "Retro": 3000000.0,
@@ -14054,10 +13810,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -14089,9 +13842,9 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Start": 9991.0
       },
       "CrossSection": {
-        "Front": 0.0,
-        "Side": 0.0,
-        "Top": 0.0
+        "Front": 1202.0,
+        "Side": 1435.0,
+        "Top": 1983.0
       }
     },
     "ResourceNetwork": {
@@ -14229,7 +13982,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 36.0,
       "Roll": 101.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 26948752.0,
         "Retro": 10000000.0,
@@ -14287,10 +14039,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.9,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -14460,7 +14209,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 36.0,
       "Roll": 101.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 26948752.0,
         "Retro": 10000000.0,
@@ -14518,10 +14266,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.9,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -14671,7 +14416,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 30.0,
       "Roll": 105.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 25910000.0,
         "Retro": 9600000.0,
@@ -14729,10 +14473,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.7,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -14881,7 +14622,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 30.0,
       "Roll": 105.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 25910000.0,
         "Retro": 9600000.0,
@@ -14939,10 +14679,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.7,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -15033,7 +14770,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "IsSpaceship": true,
     "Armor": {
       "DamageMultipliers": {
-        "Physical": 1.0,
+        "Physical": 0.5,
         "Energy": 0.8,
         "Distortion": 1.0
       },
@@ -15104,7 +14841,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 18.0,
       "Roll": 30.0,
       "IsVtolAssisted": true,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 217148286.0,
         "Retro": 13400000.0,
@@ -15161,10 +14897,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -15331,7 +15064,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 18.0,
       "Roll": 30.0,
       "IsVtolAssisted": true,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 217148286.0,
         "Retro": 13400000.0,
@@ -15388,10 +15120,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -15559,7 +15288,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 18.0,
       "Roll": 30.0,
       "IsVtolAssisted": true,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 217148286.0,
         "Retro": 13400000.0,
@@ -15616,10 +15344,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -15774,7 +15499,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 30.0,
       "Roll": 60.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 44750000.0,
         "Retro": 22350000.0,
@@ -15831,10 +15555,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 0.75,
         "CapacitorRegenDelay": 0.9,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -16011,7 +15732,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 42.0,
       "Roll": 160.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 6240000.0,
         "Retro": 1456000.0,
@@ -16068,10 +15788,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 0.75,
         "CapacitorRegenDelay": 0.4,
-        "RegenerationTime": 33.3,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 33.3
       }
     },
     "FuelManagement": {
@@ -16240,7 +15957,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 16.0,
       "Roll": 25.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 58800000.0,
         "Retro": 25200000.0,
@@ -16297,10 +16013,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.3,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -16493,7 +16206,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 30.0,
       "Roll": 60.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 23190000.0,
         "Retro": 11580000.0,
@@ -16550,10 +16262,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.9,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -16728,7 +16437,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 39.0,
       "Roll": 137.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 18830926.0,
         "Retro": 2920000.0,
@@ -16786,10 +16494,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 1.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.7,
-        "RegenerationTime": 28.0,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 28.0
       }
     },
     "FuelManagement": {
@@ -16959,7 +16664,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 36.0,
       "Roll": 137.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 17000000.0,
         "Retro": 2220000.0,
@@ -17017,10 +16721,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 1.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.7,
-        "RegenerationTime": 28.0,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 28.0
       }
     },
     "FuelManagement": {
@@ -17188,7 +16889,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 35.0,
       "Roll": 135.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 16660000.0,
         "Retro": 2120000.0,
@@ -17246,10 +16946,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 1.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.7,
-        "RegenerationTime": 28.0,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 28.0
       }
     },
     "FuelManagement": {
@@ -17419,7 +17116,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 30.0,
       "Roll": 100.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 18638648.0,
         "Retro": 2115366.0,
@@ -17477,10 +17173,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.9,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -17638,7 +17331,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 36.0,
       "Roll": 100.0,
       "IsVtolAssisted": true,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 7446000.0,
         "Retro": 2800000.0,
@@ -17695,10 +17387,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -17851,7 +17540,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 36.0,
       "Roll": 100.0,
       "IsVtolAssisted": true,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 7446000.0,
         "Retro": 2800000.0,
@@ -17908,10 +17596,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -18065,7 +17750,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 36.0,
       "Roll": 100.0,
       "IsVtolAssisted": true,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 7546000.0,
         "Retro": 2800000.0,
@@ -18122,10 +17806,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -18275,7 +17956,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 70.0,
       "Roll": 130.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 80500.0,
         "Retro": 135000.0,
@@ -18331,10 +18011,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 3.5,
-        "RegenerationTime": 16.0,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 16.0
       }
     },
     "FuelManagement": {
@@ -18483,7 +18160,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 70.0,
       "Roll": 130.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 80500.0,
         "Retro": 135000.0,
@@ -18539,10 +18215,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 3.5,
-        "RegenerationTime": 16.0,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 16.0
       }
     },
     "FuelManagement": {
@@ -18708,7 +18381,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 43.0,
       "Roll": 140.0,
       "IsVtolAssisted": true,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 7462000.0,
         "Retro": 2990000.0,
@@ -18766,10 +18438,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 1.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 3.0,
-        "RegenerationTime": 20.0,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 20.0
       }
     },
     "FuelManagement": {
@@ -18801,9 +18470,9 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Start": 9021.0
       },
       "CrossSection": {
-        "Front": 0.0,
-        "Side": 0.0,
-        "Top": 0.0
+        "Front": 613.0,
+        "Side": 910.0,
+        "Top": 482.0
       }
     },
     "ResourceNetwork": {
@@ -18926,7 +18595,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 42.0,
       "Roll": 160.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 7565034.0,
         "Retro": 2892150.0,
@@ -18983,10 +18651,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.4,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -19263,7 +18928,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 55.0,
       "Roll": 125.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 10480000.0,
         "Retro": 5710000.0,
@@ -19320,10 +18984,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -19398,14 +19059,14 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
+      "ExternalStorage": 1.2,
       "PersonalInventory": 1.85
     },
     "Crew": 1,
     "WeaponCrew": 1,
     "OperationsCrew": 0,
     "Mass": 148900.0,
-    "ComponentsMass": 43080.0,
+    "ComponentsMass": 43290.0,
     "Dimensions": {
       "Length": 34.0,
       "Width": 32.0,
@@ -19414,7 +19075,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "IsSpaceship": true,
     "Armor": {
       "DamageMultipliers": {
-        "Physical": 0.5,
+        "Physical": 0.46,
         "Energy": 1.0,
         "Distortion": 1.0
       },
@@ -19427,19 +19088,19 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Hull": {
       "StructureHealthPoints": {
         "VitalParts": {
-          "nose": 8500.0
+          "nose": 12500.0
         },
         "Parts": {
-          "body": 40000.0,
+          "body": 22000.0,
           "rear_wing_stabilizer_right": 4000.0,
           "rear_wing_stabilizer_left": 4000.0,
-          "humerus_base_e_left": 1000.0,
-          "humerus_left": 2000.0,
-          "ulna_left": 8000.0,
+          "humerus_base_e_left": 3500.0,
+          "humerus_left": 6500.0,
+          "ulna_left": 6500.0,
           "phalange_shield_left": 700.0,
-          "humerus_base_e_right": 1000.0,
-          "humerus_right": 2000.0,
-          "ulna_right": 8000.0,
+          "humerus_base_e_right": 3500.0,
+          "humerus_right": 6500.0,
+          "ulna_right": 6500.0,
           "phalange_shield_right": 700.0
         }
       },
@@ -19483,13 +19144,12 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 205.0,
-      "MaxSpeed": 1150.0,
+      "ScmSpeed": 212.0,
+      "MaxSpeed": 1200.0,
       "Pitch": 38.0,
       "Yaw": 32.0,
       "Roll": 110.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 3800000.0,
         "Retro": 5720000.0,
@@ -19509,7 +19169,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "BaseSpoolTime": 1.0,
         "QuantumDriveSpoolTime": 6.0,
         "ScmMode": {
-          "BoostSpeedForward": 420.0,
+          "BoostSpeedForward": 450.0,
           "BoostSpeedBackward": 240.0
         }
       },
@@ -19547,16 +19207,13 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.9,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
       "FuelCapacity": 39000000.0,
       "FuelIntakeRate": 0.0,
-      "QuantumFuelCapacity": 1800000.0,
+      "QuantumFuelCapacity": 2000000.0,
       "FuelBurnRatePer10KNewton": {
         "Main": 2.5,
         "Retro": 5.0,
@@ -19574,17 +19231,17 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "Emissions": {
       "Electromagnetic": {
-        "SCMIdle": 7275.0,
-        "SCMActive": 9102.0,
-        "NAV": 12693.0
+        "SCMIdle": 9410.0,
+        "SCMActive": 12091.0,
+        "NAV": 14828.0
       },
       "Infrared": {
-        "Start": 7433.0
+        "Start": 7508.0
       },
       "CrossSection": {
-        "Front": 4055.0,
-        "Side": 8671.0,
-        "Top": 9233.0
+        "Front": 1855.0,
+        "Side": 3721.0,
+        "Top": 3733.0
       }
     },
     "ResourceNetwork": {
@@ -19601,7 +19258,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "RegenFillRate": 0.0,
         "AmmoLoad": 0
       },
-      "TotalShieldHP": 5780.0,
+      "TotalShieldHP": 11560.0,
       "PilotBurstDPS": 3414.0,
       "TurretsBurstDPS": 923.0,
       "TotalMissilesDmg": 0.0
@@ -19613,6 +19270,236 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "Buy": {
       "Astro Armada, Area 18": 18711000.0
+    }
+  },
+  {
+    "ClassName": "ESPR_Prowler_Utility",
+    "Name": "Esperia Prowler Utility",
+    "Description": "While no known Tevarin-made examples of this historical ship exist, historians at Esperia studied contemporary UPE military field reports to reconstruct this modified Prowler. Used by the Tevarin military to deliver urgently needed supplies to the frontlines, the Prowler Utility pairs a tractor beam with a fully accessible hold, alongside the warship’s still significant armaments, to make the transfer of cargo in battlefield conditions a precision operation. ",
+    "Career": "Transporter",
+    "Role": "Medium Freight",
+    "Size": 3,
+    "Cargo": {
+      "CargoGrid": 32.0,
+      "CargoContainers": 0.0,
+      "ExternalStorage": 1.05,
+      "PersonalInventory": 1.85
+    },
+    "Crew": 1,
+    "WeaponCrew": 1,
+    "OperationsCrew": 1,
+    "Mass": 171700.0,
+    "ComponentsMass": 43000.0,
+    "Dimensions": {
+      "Length": 34.0,
+      "Width": 32.0,
+      "Height": 15.0
+    },
+    "IsSpaceship": true,
+    "Armor": {
+      "DamageMultipliers": {
+        "Physical": 0.5,
+        "Energy": 1.0,
+        "Distortion": 1.0
+      },
+      "SignalMultipliers": {
+        "Electromagnetic": 0.43,
+        "Infrared": 0.45,
+        "CrossSection": 0.62
+      }
+    },
+    "Hull": {
+      "StructureHealthPoints": {
+        "VitalParts": {
+          "nose": 10500.0
+        },
+        "Parts": {
+          "body": 18000.0,
+          "rear_wing_stabilizer_right": 2500.0,
+          "geo_rear_wing_vertical_stabilizer_right": 600.0,
+          "geo_rear_wing_vertical_stabilizer_extra_right": 600.0,
+          "rear_wing_stabilizer_left": 2500.0,
+          "geo_rear_wing_vertical_stabilizer_left": 600.0,
+          "geo_rear_wing_vertical_stabilizer_extra_left": 600.0,
+          "humerus_base_e_left": 3500.0,
+          "humerus_left": 6000.0,
+          "ulna_left": 6000.0,
+          "geo_phalange_a_left": 300.0,
+          "geo_phalange_b_left": 300.0,
+          "geo_phalange_c_left": 300.0,
+          "geo_phalange_d_left": 300.0,
+          "humerus_base_e_right": 3500.0,
+          "humerus_right": 6000.0,
+          "ulna_right": 6000.0,
+          "geo_phalange_a_right": 300.0,
+          "geo_phalange_b_right": 300.0,
+          "geo_phalange_c_right": 300.0,
+          "geo_phalange_d_right": 300.0
+        }
+      },
+      "ThrustersHealthPoints": {
+        "Main": {
+          "main_thruster_wing_left": 19500.0,
+          "main_thruster_wing_right": 19500.0
+        },
+        "Retro": {
+          "retro_thruster_body_right": 18000.0,
+          "retro_thruster_body_left": 18000.0,
+          "retro_thruster_wing_left": 18000.0,
+          "retro_thruster_wing_right": 18000.0
+        },
+        "Maneuvering": {
+          "mav_thruster_nose_left_top": 17000.0,
+          "mav_thruster_nose_left_bot": 17000.0,
+          "mav_thruster_nose_right_top": 17000.0,
+          "mav_thruster_nose_right_bot": 17000.0,
+          "grav_nose_left_rear": 19500.0,
+          "mav_thruster_nose_left_mid": 17000.0,
+          "mav_thruster_nose_right_mid": 17000.0,
+          "grav_nose_left_front": 19500.0,
+          "grav_nose_right_front": 19500.0,
+          "grav_nose_right_rear": 19500.0,
+          "mav_thruster_tail_left_mid": 17000.0,
+          "mav_thruster_tail_left_bot": 17000.0,
+          "mav_thruster_tail_left_top": 17000.0,
+          "mav_thruster_tail_right_top": 17000.0,
+          "mav_thruster_tail_right_mid": 17000.0,
+          "mav_thruster_tail_right_bot": 17000.0,
+          "grav_body_right_rear": 19500.0,
+          "grav_body_left_rear": 19500.0,
+          "grav_body_left_front": 19500.0,
+          "grav_body_right_front": 19500.0,
+          "mav_thruster_spine_left": 17000.0,
+          "mav_thruster_spine_right": 17000.0,
+          "mav_thruster_wing_left_mid": 17000.0,
+          "mav_thruster_wing_right_mid": 17000.0
+        }
+      }
+    },
+    "FlightCharacteristics": {
+      "ScmSpeed": 208.0,
+      "MaxSpeed": 1110.0,
+      "Pitch": 35.0,
+      "Yaw": 30.0,
+      "Roll": 100.0,
+      "IsVtolAssisted": false,
+      "ThrustCapacity": {
+        "Main": 3630000.0,
+        "Retro": 6400000.0,
+        "Vtol": 0.0,
+        "Maneuvering": 47423546.0
+      },
+      "AccelerationG": {
+        "IsValidated": true,
+        "Main": 8.1,
+        "Retro": 3.0,
+        "Strafe": 3.5,
+        "Up": 4.5,
+        "Down": 4.5,
+        "CheckDate": "2025-06-12"
+      },
+      "MasterModes": {
+        "BaseSpoolTime": 1.0,
+        "QuantumDriveSpoolTime": 6.0,
+        "ScmMode": {
+          "BoostSpeedForward": 437.0,
+          "BoostSpeedBackward": 240.0
+        }
+      },
+      "Boost": {
+        "PreDelay": 0.0,
+        "RampUp": 1.2,
+        "RampDown": 0.2,
+        "AccelerationMultiplier": {
+          "PositiveAxis": {
+            "X": 1.2,
+            "Y": 1.5,
+            "Z": 1.3
+          },
+          "NegativeAxis": {
+            "X": 1.2,
+            "Y": 1.4,
+            "Z": 1.4
+          }
+        },
+        "AngularAccelerationMultiplier": {
+          "Pitch": 1.2,
+          "Yaw": 1.2,
+          "Roll": 1.2
+        },
+        "AngularVelocityMultiplier": {
+          "Pitch": 1.2,
+          "Yaw": 1.2,
+          "Roll": 1.2
+        }
+      },
+      "Capacitors": {
+        "ThrusterCapacitorSize": 20.0,
+        "CapacitorRegenPerSec": 0.75,
+        "CapacitorIdleCost": 1.0,
+        "CapacitorLinearCost": 0.0,
+        "CapacitorUsageModifier": 1.0,
+        "CapacitorRegenDelay": 0.9,
+        "RegenerationTime": 26.7
+      }
+    },
+    "FuelManagement": {
+      "FuelCapacity": 43000000.0,
+      "FuelIntakeRate": 0.0,
+      "QuantumFuelCapacity": 2250000.0,
+      "FuelBurnRatePer10KNewton": {
+        "Main": 2.5,
+        "Retro": 5.0,
+        "Vtol": 0.0,
+        "Maneuvering": 30.0
+      },
+      "FuelUsagePerSecond": {
+        "Main": 453.75,
+        "Retro": 800.0,
+        "Vtol": 0.0,
+        "Maneuvering": 5927.943
+      },
+      "IntakeToMainFuelRatio": 0.0,
+      "TimeForIntakesToFillTank": "Infinity"
+    },
+    "Emissions": {
+      "Electromagnetic": {
+        "SCMIdle": 11556.0,
+        "SCMActive": 14851.0,
+        "NAV": 18212.0
+      },
+      "Infrared": {
+        "Start": 9418.0
+      },
+      "CrossSection": {
+        "Front": 2091.0,
+        "Side": 4194.0,
+        "Top": 4208.0
+      }
+    },
+    "ResourceNetwork": {
+      "ItemPools": {
+        "WeaponPoolSize": 6.0
+      }
+    },
+    "Weapons": {
+      "PilotWeaponRegenPool": {
+        "RegenFillRate": 0.0,
+        "AmmoLoad": 0
+      },
+      "TurretsWeaponRegenPool": {
+        "RegenFillRate": 0.0,
+        "AmmoLoad": 0
+      },
+      "TotalShieldHP": 11560.0,
+      "PilotBurstDPS": 1385.0,
+      "TurretsBurstDPS": 1518.0,
+      "TotalMissilesDmg": 0.0
+    },
+    "Insurance": {
+      "StandardClaimTime": 21.0,
+      "ExpeditedClaimTime": 5.25,
+      "ExpeditedCost": 9200.0
     }
   },
   {
@@ -19660,56 +19547,56 @@ const spvVehicleList: SpvVehicleMain[] = [
           "eject_joint": 80.0,
           "Leg_Right": 1900.0,
           "Leg_Lower_Right": 1500.0,
-          "leg_feathers_01_right": 50.0,
-          "leg_feathers_02_right": 50.0,
-          "leg_feathers_03_right": 50.0,
-          "leg_feathers_04_right": 50.0,
-          "leg_feathers_05_right": 50.0,
-          "wing_small_segment_01_right": 200.0,
-          "wings_small_feathers_01_right": 50.0,
-          "wings_small_feathers_02_right": 50.0,
-          "wings_small_feathers_03_right": 50.0,
-          "wings_small_feathers_04_right": 50.0,
-          "wings_small_feathers_05_right": 50.0,
-          "wings_small_feathers_06_right": 50.0,
-          "wings_small_feathers_07_right": 50.0,
-          "comp_jumpdrive_door_front": 50.0,
-          "comp_jumpdrive_door_mid": 50.0,
-          "comp_jumpdrive_door_rear": 50.0,
-          "comp_jumpdrive_door_right": 50.0,
-          "comp_jumpdrive_door_left": 50.0,
-          "radar_scanner_door_right": 50.0,
-          "radar_scanner_door_rear": 50.0,
-          "radar_scanner_door_mid": 50.0,
-          "radar_scanner_door_front": 50.0,
-          "radar_scanner_door_left": 50.0,
-          "coolers_door_mid": 50.0,
-          "coolers_door_rear": 50.0,
-          "coolers_door_right": 50.0,
-          "coolers_door_front": 50.0,
-          "coolers_door_left": 50.0,
-          "shieldgen_door_outer_right": 50.0,
-          "shieldgen_door_inner_right": 50.0,
-          "shieldgen_door_inner_left": 50.0,
-          "shieldgen_door_outer_left": 50.0,
+          "leg_feathers_01_right": 150.0,
+          "leg_feathers_02_right": 150.0,
+          "leg_feathers_03_right": 150.0,
+          "leg_feathers_04_right": 150.0,
+          "leg_feathers_05_right": 150.0,
+          "wing_small_segment_01_right": 1300.0,
+          "wings_small_feathers_01_right": 150.0,
+          "wings_small_feathers_02_right": 150.0,
+          "wings_small_feathers_03_right": 150.0,
+          "wings_small_feathers_04_right": 150.0,
+          "wings_small_feathers_05_right": 150.0,
+          "wings_small_feathers_06_right": 150.0,
+          "wings_small_feathers_07_right": 150.0,
+          "comp_jumpdrive_door_front": 150.0,
+          "comp_jumpdrive_door_mid": 150.0,
+          "comp_jumpdrive_door_rear": 150.0,
+          "comp_jumpdrive_door_right": 150.0,
+          "comp_jumpdrive_door_left": 150.0,
+          "radar_scanner_door_right": 150.0,
+          "radar_scanner_door_rear": 150.0,
+          "radar_scanner_door_mid": 150.0,
+          "radar_scanner_door_front": 150.0,
+          "radar_scanner_door_left": 150.0,
+          "coolers_door_mid": 150.0,
+          "coolers_door_rear": 150.0,
+          "coolers_door_right": 150.0,
+          "coolers_door_front": 150.0,
+          "coolers_door_left": 150.0,
+          "shieldgen_door_outer_right": 150.0,
+          "shieldgen_door_inner_right": 150.0,
+          "shieldgen_door_inner_left": 150.0,
+          "shieldgen_door_outer_left": 150.0,
           "Leg_Left": 1900.0,
           "Leg_Lower_Left": 1500.0,
-          "leg_feathers_05_left": 50.0,
-          "leg_feathers_04_left": 50.0,
-          "leg_feathers_03_left": 50.0,
-          "leg_feathers_02_left": 50.0,
-          "leg_feathers_01_left": 50.0,
-          "wing_small_segment_01_left": 200.0,
-          "wings_small_feathers_01_left": 50.0,
-          "wings_small_feathers_02_left": 50.0,
-          "wings_small_feathers_03_left": 50.0,
-          "wings_small_feathers_04_left": 50.0,
-          "wings_small_feathers_05_left": 50.0,
-          "wings_small_feathers_06_left": 50.0,
-          "wings_small_feathers_07_left": 50.0,
+          "leg_feathers_05_left": 150.0,
+          "leg_feathers_04_left": 150.0,
+          "leg_feathers_03_left": 150.0,
+          "leg_feathers_02_left": 150.0,
+          "leg_feathers_01_left": 150.0,
+          "wing_small_segment_01_left": 1300.0,
+          "wings_small_feathers_01_left": 150.0,
+          "wings_small_feathers_02_left": 150.0,
+          "wings_small_feathers_03_left": 150.0,
+          "wings_small_feathers_04_left": 150.0,
+          "wings_small_feathers_05_left": 150.0,
+          "wings_small_feathers_06_left": 150.0,
+          "wings_small_feathers_07_left": 150.0,
           "Tail_Left": 1650.0,
-          "Wing_Left": 1650.0,
-          "Wing_Right": 1650.0,
+          "Wing_Left": 1850.0,
+          "Wing_Right": 1850.0,
           "Tail_Right": 1650.0
         }
       },
@@ -19751,7 +19638,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 52.0,
       "Roll": 200.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 7548000.0,
         "Retro": 2614000.0,
@@ -19808,10 +19694,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.3,
-        "Y_AccelMultiplicator": 1.25,
-        "Z_AccelMultiplicator": 1.4
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -19921,56 +19804,56 @@ const spvVehicleList: SpvVehicleMain[] = [
           "eject_joint": 80.0,
           "Leg_Right": 1900.0,
           "Leg_Lower_Right": 1500.0,
-          "leg_feathers_01_right": 50.0,
-          "leg_feathers_02_right": 50.0,
-          "leg_feathers_03_right": 50.0,
-          "leg_feathers_04_right": 50.0,
-          "leg_feathers_05_right": 50.0,
-          "wing_small_segment_01_right": 200.0,
-          "wings_small_feathers_01_right": 50.0,
-          "wings_small_feathers_02_right": 50.0,
-          "wings_small_feathers_03_right": 50.0,
-          "wings_small_feathers_04_right": 50.0,
-          "wings_small_feathers_05_right": 50.0,
-          "wings_small_feathers_06_right": 50.0,
-          "wings_small_feathers_07_right": 50.0,
-          "comp_jumpdrive_door_front": 50.0,
-          "comp_jumpdrive_door_mid": 50.0,
-          "comp_jumpdrive_door_rear": 50.0,
-          "comp_jumpdrive_door_right": 50.0,
-          "comp_jumpdrive_door_left": 50.0,
-          "radar_scanner_door_right": 50.0,
-          "radar_scanner_door_rear": 50.0,
-          "radar_scanner_door_mid": 50.0,
-          "radar_scanner_door_front": 50.0,
-          "radar_scanner_door_left": 50.0,
-          "coolers_door_mid": 50.0,
-          "coolers_door_rear": 50.0,
-          "coolers_door_right": 50.0,
-          "coolers_door_front": 50.0,
-          "coolers_door_left": 50.0,
-          "shieldgen_door_outer_right": 50.0,
-          "shieldgen_door_inner_right": 50.0,
-          "shieldgen_door_inner_left": 50.0,
-          "shieldgen_door_outer_left": 50.0,
+          "leg_feathers_01_right": 150.0,
+          "leg_feathers_02_right": 150.0,
+          "leg_feathers_03_right": 150.0,
+          "leg_feathers_04_right": 150.0,
+          "leg_feathers_05_right": 150.0,
+          "wing_small_segment_01_right": 1300.0,
+          "wings_small_feathers_01_right": 150.0,
+          "wings_small_feathers_02_right": 150.0,
+          "wings_small_feathers_03_right": 150.0,
+          "wings_small_feathers_04_right": 150.0,
+          "wings_small_feathers_05_right": 150.0,
+          "wings_small_feathers_06_right": 150.0,
+          "wings_small_feathers_07_right": 150.0,
+          "comp_jumpdrive_door_front": 150.0,
+          "comp_jumpdrive_door_mid": 150.0,
+          "comp_jumpdrive_door_rear": 150.0,
+          "comp_jumpdrive_door_right": 150.0,
+          "comp_jumpdrive_door_left": 150.0,
+          "radar_scanner_door_right": 150.0,
+          "radar_scanner_door_rear": 150.0,
+          "radar_scanner_door_mid": 150.0,
+          "radar_scanner_door_front": 150.0,
+          "radar_scanner_door_left": 150.0,
+          "coolers_door_mid": 150.0,
+          "coolers_door_rear": 150.0,
+          "coolers_door_right": 150.0,
+          "coolers_door_front": 150.0,
+          "coolers_door_left": 150.0,
+          "shieldgen_door_outer_right": 150.0,
+          "shieldgen_door_inner_right": 150.0,
+          "shieldgen_door_inner_left": 150.0,
+          "shieldgen_door_outer_left": 150.0,
           "Leg_Left": 1900.0,
           "Leg_Lower_Left": 1500.0,
-          "leg_feathers_05_left": 50.0,
-          "leg_feathers_04_left": 50.0,
-          "leg_feathers_03_left": 50.0,
-          "leg_feathers_02_left": 50.0,
-          "leg_feathers_01_left": 50.0,
-          "wing_small_segment_01_left": 200.0,
-          "wings_small_feathers_01_left": 50.0,
-          "wings_small_feathers_02_left": 50.0,
-          "wings_small_feathers_03_left": 50.0,
-          "wings_small_feathers_04_left": 50.0,
-          "wings_small_feathers_05_left": 50.0,
-          "wings_small_feathers_06_left": 50.0,
-          "wings_small_feathers_07_left": 50.0,
+          "leg_feathers_05_left": 150.0,
+          "leg_feathers_04_left": 150.0,
+          "leg_feathers_03_left": 150.0,
+          "leg_feathers_02_left": 150.0,
+          "leg_feathers_01_left": 150.0,
+          "wing_small_segment_01_left": 1300.0,
+          "wings_small_feathers_01_left": 150.0,
+          "wings_small_feathers_02_left": 150.0,
+          "wings_small_feathers_03_left": 150.0,
+          "wings_small_feathers_04_left": 150.0,
+          "wings_small_feathers_05_left": 150.0,
+          "wings_small_feathers_06_left": 150.0,
+          "wings_small_feathers_07_left": 150.0,
           "Tail_Left": 1650.0,
-          "Wing_Left": 1650.0,
-          "Wing_Right": 1650.0,
+          "Wing_Left": 1850.0,
+          "Wing_Right": 1850.0,
           "Tail_Right": 1650.0
         }
       },
@@ -20012,7 +19895,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 52.0,
       "Roll": 200.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 7548000.0,
         "Retro": 2614000.0,
@@ -20069,10 +19951,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.3,
-        "Y_AccelMultiplicator": 1.25,
-        "Z_AccelMultiplicator": 1.4
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -20163,7 +20042,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "IsSpaceship": true,
     "Armor": {
       "DamageMultipliers": {
-        "Physical": 1.0,
+        "Physical": 0.5,
         "Energy": 1.0,
         "Distortion": 1.0
       },
@@ -20249,7 +20128,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 42.0,
       "Roll": 135.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 8454000.0,
         "Retro": 3759000.0,
@@ -20306,10 +20184,14 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.5,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
+      },
+      "Emissions": {
+        "CrossSection": {
+          "Front": 1304.0,
+          "Side": 2201.0,
+          "Top": 2187.0
+        }
       }
     },
     "FuelManagement": {
@@ -20341,9 +20223,9 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Start": 13362.0
       },
       "CrossSection": {
-        "Front": 0.0,
-        "Side": 0.0,
-        "Top": 0.0
+        "Front": 1304.0,
+        "Side": 2201.0,
+        "Top": 2187.0
       }
     },
     "ResourceNetwork": {
@@ -20397,7 +20279,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 15700.0,
-    "ComponentsMass": 539.2,
+    "ComponentsMass": 639.2,
     "Dimensions": {
       "Length": 7.0,
       "Width": 5.5,
@@ -20454,17 +20336,17 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "Emissions": {
       "Electromagnetic": {
-        "SCMIdle": 767.0,
-        "SCMActive": 1217.0,
+        "SCMIdle": 770.0,
+        "SCMActive": 1220.0,
         "NAV": 0.0
       },
       "Infrared": {
-        "Start": 1150.0
+        "Start": 1750.0
       },
       "CrossSection": {
-        "Front": 0.0,
-        "Side": 0.0,
-        "Top": 0.0
+        "Front": 303.0,
+        "Side": 208.0,
+        "Top": 172.0
       }
     },
     "ResourceNetwork": {
@@ -21044,7 +20926,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 55.0,
       "Roll": 200.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 1957000.0,
         "Retro": 380000.0,
@@ -21100,10 +20981,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 0.75,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 33.3,
-        "X_AccelMultiplicator": 2.2,
-        "Y_AccelMultiplicator": 1.4,
-        "Z_AccelMultiplicator": 1.6
+        "RegenerationTime": 33.3
       }
     },
     "FuelManagement": {
@@ -21249,7 +21127,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 50.0,
       "Roll": 190.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 1497000.0,
         "Retro": 363000.0,
@@ -21305,10 +21182,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 0.75,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 33.3,
-        "X_AccelMultiplicator": 2.2,
-        "Y_AccelMultiplicator": 1.4,
-        "Z_AccelMultiplicator": 1.6
+        "RegenerationTime": 33.3
       }
     },
     "FuelManagement": {
@@ -21465,7 +21339,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 32.0,
       "Roll": 75.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 7517735.0,
         "Retro": 5602014.0,
@@ -21523,10 +21396,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 2.0,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.4,
-        "Y_AccelMultiplicator": 1.4,
-        "Z_AccelMultiplicator": 1.4
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -21673,7 +21543,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 32.0,
       "Roll": 105.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 14500000.0,
         "Retro": 5445000.0,
@@ -21730,10 +21599,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.7,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -21886,7 +21752,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 32.0,
       "Roll": 105.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 14500000.0,
         "Retro": 5445000.0,
@@ -21943,10 +21808,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.7,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -22098,7 +21960,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 32.0,
       "Roll": 105.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 29000000.0,
         "Retro": 11200000.0,
@@ -22155,10 +22016,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.7,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -22240,7 +22098,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "WeaponCrew": 1,
     "OperationsCrew": 0,
     "Mass": 223553.0,
-    "ComponentsMass": 22022.0,
+    "ComponentsMass": 23232.0,
     "Dimensions": {
       "Length": 38.0,
       "Width": 23.5,
@@ -22308,7 +22166,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 32.0,
       "Roll": 105.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 14500000.0,
         "Retro": 7260000.0,
@@ -22365,10 +22222,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.7,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -22392,12 +22246,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "Emissions": {
       "Electromagnetic": {
-        "SCMIdle": 12671.0,
-        "SCMActive": 16799.0,
-        "NAV": 28152.0
+        "SCMIdle": 12752.0,
+        "SCMActive": 16880.0,
+        "NAV": 28233.0
       },
       "Infrared": {
-        "Start": 9594.0
+        "Start": 9669.0
       },
       "CrossSection": {
         "Front": 3814.0,
@@ -22422,7 +22276,7 @@ const spvVehicleList: SpvVehicleMain[] = [
       "TotalShieldHP": 14220.0,
       "PilotBurstDPS": 2735.0,
       "TurretsBurstDPS": 1091.0,
-      "TotalMissilesDmg": 52975.0
+      "TotalMissilesDmg": 85739.0
     },
     "Insurance": {
       "StandardClaimTime": 15.59,
@@ -22521,7 +22375,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 65.0,
       "Roll": 215.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 2917000.0,
         "Retro": 0.0,
@@ -22577,10 +22430,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.5,
-        "Y_AccelMultiplicator": 1.2,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -22736,7 +22586,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 71.5,
       "Roll": 232.1,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 2620000.0,
         "Retro": 0.0,
@@ -22792,10 +22641,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.5,
-        "Y_AccelMultiplicator": 1.2,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -22954,7 +22800,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 65.0,
       "Roll": 215.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 3020000.0,
         "Retro": 0.0,
@@ -23010,10 +22855,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.5,
-        "Y_AccelMultiplicator": 1.2,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -23216,7 +23058,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 35.0,
       "Roll": 100.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 6330000.0,
         "Retro": 5080000.0,
@@ -23273,10 +23114,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -23308,9 +23146,9 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Start": 11166.0
       },
       "CrossSection": {
-        "Front": 0.0,
-        "Side": 0.0,
-        "Top": 0.0
+        "Front": 643.0,
+        "Side": 1123.0,
+        "Top": 1453.0
       }
     },
     "ResourceNetwork": {
@@ -23472,7 +23310,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 16.0,
       "Roll": 25.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 27600000.0,
         "Retro": 20100000.0,
@@ -23529,10 +23366,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -23693,7 +23527,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 35.0,
       "Roll": 75.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 6900000.0,
         "Retro": 5300000.0,
@@ -23750,10 +23583,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -23906,7 +23736,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 55.0,
       "Roll": 200.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 2320000.0,
         "Retro": 451400.0,
@@ -23963,10 +23792,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 0.75,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 33.3,
-        "X_AccelMultiplicator": 2.5,
-        "Y_AccelMultiplicator": 1.5,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 33.3
       }
     },
     "FuelManagement": {
@@ -24119,7 +23945,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 55.0,
       "Roll": 200.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 2320000.0,
         "Retro": 451400.0,
@@ -24176,10 +24001,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 0.75,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 33.3,
-        "X_AccelMultiplicator": 2.5,
-        "Y_AccelMultiplicator": 1.5,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 33.3
       }
     },
     "FuelManagement": {
@@ -24333,7 +24155,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 55.0,
       "Roll": 200.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 2280000.0,
         "Retro": 451400.0,
@@ -24390,10 +24211,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 0.75,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 33.3,
-        "X_AccelMultiplicator": 2.5,
-        "Y_AccelMultiplicator": 1.5,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 33.3
       }
     },
     "FuelManagement": {
@@ -24546,7 +24364,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 45.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 2000000.0,
         "Retro": 2128000.0,
@@ -24603,10 +24420,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -24758,7 +24572,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 45.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 2000000.0,
         "Retro": 2128000.0,
@@ -24815,10 +24628,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -24970,7 +24780,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 45.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 2000000.0,
         "Retro": 2128000.0,
@@ -25027,10 +24836,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -25182,7 +24988,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 45.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 2000000.0,
         "Retro": 2128000.0,
@@ -25239,10 +25044,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -25396,7 +25198,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 23.0,
       "Roll": 45.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 91500000.0,
         "Retro": 50000000.0,
@@ -25453,10 +25254,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -25615,7 +25413,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 23.0,
       "Roll": 45.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 91000000.0,
         "Retro": 50000000.0,
@@ -25672,10 +25469,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -25851,13 +25645,12 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 135.0,
+      "ScmSpeed": 160.0,
       "MaxSpeed": 990.0,
       "Pitch": 31.0,
       "Yaw": 31.0,
       "Roll": 65.0,
       "IsVtolAssisted": true,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 35500000.0,
         "Retro": 15000000.0,
@@ -25877,8 +25670,8 @@ const spvVehicleList: SpvVehicleMain[] = [
         "BaseSpoolTime": 1.0,
         "QuantumDriveSpoolTime": 6.0,
         "ScmMode": {
-          "BoostSpeedForward": 315.0,
-          "BoostSpeedBackward": 140.0
+          "BoostSpeedForward": 325.0,
+          "BoostSpeedBackward": 165.0
         }
       },
       "Boost": {
@@ -25915,10 +25708,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 3.0,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -25950,9 +25740,9 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Start": 15623.0
       },
       "CrossSection": {
-        "Front": 0.0,
-        "Side": 0.0,
-        "Top": 0.0
+        "Front": 8423.0,
+        "Side": 8772.0,
+        "Top": 17868.0
       }
     },
     "ResourceNetwork": {
@@ -25961,7 +25751,7 @@ const spvVehicleList: SpvVehicleMain[] = [
       },
       "Modifiers": {
         "PowerRatioMultiplier": 1.0,
-        "MaxAmmoLoadMultiplier": 3.0,
+        "MaxAmmoLoadMultiplier": 4.0,
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
@@ -26108,13 +25898,12 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 110.0,
-      "MaxSpeed": 915.0,
+      "ScmSpeed": 150.0,
+      "MaxSpeed": 960.0,
       "Pitch": 27.0,
       "Yaw": 27.0,
       "Roll": 60.0,
       "IsVtolAssisted": true,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 32500000.0,
         "Retro": 15000000.0,
@@ -26134,8 +25923,8 @@ const spvVehicleList: SpvVehicleMain[] = [
         "BaseSpoolTime": 1.0,
         "QuantumDriveSpoolTime": 6.0,
         "ScmMode": {
-          "BoostSpeedForward": 305.0,
-          "BoostSpeedBackward": 140.0
+          "BoostSpeedForward": 315.0,
+          "BoostSpeedBackward": 155.0
         }
       },
       "Boost": {
@@ -26172,16 +25961,13 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 3.0,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
-      "FuelCapacity": 50000000.0,
+      "FuelCapacity": 48000000.0,
       "FuelIntakeRate": 50.0,
-      "QuantumFuelCapacity": 3600000.0,
+      "QuantumFuelCapacity": 3350000.0,
       "FuelBurnRatePer10KNewton": {
         "Main": 8.8,
         "Retro": 2.5,
@@ -26195,7 +25981,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 9150.0
       },
       "IntakeToMainFuelRatio": 0.95,
-      "TimeForIntakesToFillTank": 1000000.0
+      "TimeForIntakesToFillTank": 960000.0
     },
     "Emissions": {
       "Electromagnetic": {
@@ -26207,9 +25993,9 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Start": 15959.0
       },
       "CrossSection": {
-        "Front": 0.0,
-        "Side": 0.0,
-        "Top": 0.0
+        "Front": 8836.0,
+        "Side": 9016.0,
+        "Top": 18651.0
       }
     },
     "ResourceNetwork": {
@@ -26218,7 +26004,7 @@ const spvVehicleList: SpvVehicleMain[] = [
       },
       "Modifiers": {
         "PowerRatioMultiplier": 1.0,
-        "MaxAmmoLoadMultiplier": 3.0,
+        "MaxAmmoLoadMultiplier": 4.25,
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
@@ -26345,7 +26131,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 40.0,
       "Roll": 130.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 4710000.0,
         "Retro": 4700000.0,
@@ -26403,10 +26188,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.7,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -26575,7 +26357,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 35.0,
       "Roll": 120.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 10000000.0,
         "Retro": 4760000.0,
@@ -26633,10 +26414,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.7,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -26660,12 +26438,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "Emissions": {
       "Electromagnetic": {
-        "SCMIdle": 9043.0,
-        "SCMActive": 12263.0,
-        "NAV": 29167.0
+        "SCMIdle": 9039.0,
+        "SCMActive": 12261.0,
+        "NAV": 29163.0
       },
       "Infrared": {
-        "Start": 13697.0
+        "Start": 13690.0
       },
       "CrossSection": {
         "Front": 3333.0,
@@ -26800,7 +26578,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 37.5,
       "Roll": 125.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 4710000.0,
         "Retro": 4700000.0,
@@ -26858,10 +26635,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.7,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -27015,7 +26789,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 84.0,
       "Roll": 135.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 68800.0,
         "Retro": 59600.0,
@@ -27071,10 +26844,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 2.0,
-        "RegenerationTime": 7.5,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 7.5
       }
     },
     "FuelManagement": {
@@ -27232,7 +27002,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 97.0,
       "Roll": 145.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 67500.0,
         "Retro": 58200.0,
@@ -27288,10 +27057,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.0,
-        "RegenerationTime": 2.5,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 2.5
       }
     },
     "FuelManagement": {
@@ -27436,7 +27202,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 50.0,
       "Roll": 195.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 8192000.0,
         "Retro": 1740029.6,
@@ -27493,10 +27258,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.2,
-        "Y_AccelMultiplicator": 1.5,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -27641,7 +27403,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 52.0,
       "Roll": 200.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 8192000.0,
         "Retro": 1740029.6,
@@ -27698,10 +27459,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.2,
-        "Y_AccelMultiplicator": 1.5,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -27845,7 +27603,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 53.0,
       "Roll": 212.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 8192000.0,
         "Retro": 1740029.6,
@@ -27902,10 +27659,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.2,
-        "Y_AccelMultiplicator": 1.5,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -27987,7 +27741,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 69677.0,
-    "ComponentsMass": 12289.0,
+    "ComponentsMass": 12249.0,
     "Dimensions": {
       "Length": 27.0,
       "Width": 17.0,
@@ -28055,7 +27809,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 48.0,
       "Roll": 180.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 13420000.0,
         "Retro": 2850000.0,
@@ -28113,10 +27866,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 0.75,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.2,
-        "Y_AccelMultiplicator": 2.25,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -28168,7 +27918,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "AmmoLoad": 0
       },
       "TotalShieldHP": 3000.0,
-      "PilotBurstDPS": 1766.0,
+      "PilotBurstDPS": 2034.0,
       "TurretsBurstDPS": 0.0,
       "TotalMissilesDmg": 4115.0
     },
@@ -28198,7 +27948,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 70592.0,
-    "ComponentsMass": 12019.0,
+    "ComponentsMass": 11939.0,
     "Dimensions": {
       "Length": 27.0,
       "Width": 17.0,
@@ -28266,7 +28016,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 48.0,
       "Roll": 180.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 13420000.0,
         "Retro": 2850000.0,
@@ -28324,10 +28073,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 0.75,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.2,
-        "Y_AccelMultiplicator": 2.25,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -28379,7 +28125,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "AmmoLoad": 0
       },
       "TotalShieldHP": 2100.0,
-      "PilotBurstDPS": 1091.0,
+      "PilotBurstDPS": 1350.0,
       "TurretsBurstDPS": 0.0,
       "TotalMissilesDmg": 3340.0
     },
@@ -28409,7 +28155,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 69324.0,
-    "ComponentsMass": 13645.0,
+    "ComponentsMass": 13565.0,
     "Dimensions": {
       "Length": 27.0,
       "Width": 17.0,
@@ -28477,7 +28223,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 48.0,
       "Roll": 180.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 13420000.0,
         "Retro": 2850000.0,
@@ -28535,10 +28280,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 0.75,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.2,
-        "Y_AccelMultiplicator": 2.25,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -28590,7 +28332,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "AmmoLoad": 0
       },
       "TotalShieldHP": 3460.0,
-      "PilotBurstDPS": 2357.0,
+      "PilotBurstDPS": 2375.0,
       "TurretsBurstDPS": 0.0,
       "TotalMissilesDmg": 19707.0
     },
@@ -28620,7 +28362,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 78107.0,
-    "ComponentsMass": 11972.0,
+    "ComponentsMass": 12012.0,
     "Dimensions": {
       "Length": 27.0,
       "Width": 17.0,
@@ -28688,7 +28430,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 48.0,
       "Roll": 180.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 13420000.0,
         "Retro": 2850000.0,
@@ -28746,10 +28487,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 0.75,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.2,
-        "Y_AccelMultiplicator": 2.25,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -28801,7 +28539,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "AmmoLoad": 0
       },
       "TotalShieldHP": 2940.0,
-      "PilotBurstDPS": 1766.0,
+      "PilotBurstDPS": 1775.0,
       "TurretsBurstDPS": 0.0,
       "TotalMissilesDmg": 4115.0
     },
@@ -28899,7 +28637,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 35.0,
       "Roll": 70.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 24665060.0,
         "Retro": 12100000.0,
@@ -28956,10 +28693,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.9,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -29115,7 +28849,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 19.0,
       "Roll": 30.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 66200000.0,
         "Retro": 33100000.0,
@@ -29172,10 +28905,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 0.75,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -29330,7 +29060,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 19.0,
       "Roll": 30.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 66200000.0,
         "Retro": 33100000.0,
@@ -29387,10 +29116,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 0.75,
         "CapacitorRegenDelay": 1.1,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -29538,7 +29264,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 65.0,
       "Roll": 215.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 2892112.0,
         "Retro": 1179512.8,
@@ -29595,10 +29320,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.6,
-        "Y_AccelMultiplicator": 1.6,
-        "Z_AccelMultiplicator": 1.6
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -29771,7 +29493,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 10.0,
       "Roll": 15.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 1092000000.0,
         "Retro": 655000000.0,
@@ -29829,10 +29550,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 0.75,
         "CapacitorRegenDelay": 4.0,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -29988,7 +29706,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 55.0,
       "Roll": 200.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 1968000.0,
         "Retro": 383000.0,
@@ -30045,10 +29762,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 0.75,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 33.3,
-        "X_AccelMultiplicator": 2.2,
-        "Y_AccelMultiplicator": 1.5,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 33.3
       }
     },
     "FuelManagement": {
@@ -30228,7 +29942,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 80.0,
       "Roll": 135.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 121500.0,
         "Retro": 135000.0,
@@ -30284,10 +29997,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 2.0,
-        "RegenerationTime": 7.5,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 7.5
       }
     },
     "FuelManagement": {
@@ -30468,7 +30178,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 80.0,
       "Roll": 135.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 121500.0,
         "Retro": 135000.0,
@@ -30524,10 +30233,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 2.0,
-        "RegenerationTime": 7.5,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 7.5
       }
     },
     "FuelManagement": {
@@ -30707,7 +30413,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 93.0,
       "Roll": 140.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 133500.0,
         "Retro": 147000.0,
@@ -30763,10 +30468,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 2.0,
-        "RegenerationTime": 2.8,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 2.8
       }
     },
     "FuelManagement": {
@@ -30909,7 +30611,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 53.0,
       "Roll": 135.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 2750000.0,
         "Retro": 1044000.0,
@@ -30967,10 +30668,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.2,
-        "Y_AccelMultiplicator": 1.2,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -31111,7 +30809,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 57.0,
       "Roll": 140.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 2974000.0,
         "Retro": 1046000.0,
@@ -31169,10 +30866,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.2,
-        "Y_AccelMultiplicator": 1.2,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -31313,7 +31007,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 59.0,
       "Roll": 146.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 3500000.0,
         "Retro": 1170000.0,
@@ -31371,10 +31064,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.2,
-        "Y_AccelMultiplicator": 1.2,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -31515,7 +31205,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 53.0,
       "Roll": 135.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 3121000.0,
         "Retro": 1072000.0,
@@ -31573,10 +31262,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.2,
-        "Y_AccelMultiplicator": 1.2,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -31717,7 +31403,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 51.0,
       "Roll": 137.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 3480000.0,
         "Retro": 1114000.0,
@@ -31775,10 +31460,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.2,
-        "Y_AccelMultiplicator": 1.2,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -31986,7 +31668,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 30.0,
       "Roll": 60.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 22280000.0,
         "Retro": 11160000.0,
@@ -32043,10 +31724,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.9,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -32253,13 +31931,12 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 146.0,
-      "MaxSpeed": 988.0,
+      "ScmSpeed": 200.0,
+      "MaxSpeed": 1000.0,
       "Pitch": 30.0,
       "Yaw": 30.0,
       "Roll": 60.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 22280000.0,
         "Retro": 11160000.0,
@@ -32316,10 +31993,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.9,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -32531,7 +32205,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 30.0,
       "Roll": 60.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 22280000.0,
         "Retro": 11160000.0,
@@ -32588,10 +32261,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.9,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -32802,7 +32472,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 30.0,
       "Roll": 60.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 22280000.0,
         "Retro": 11160000.0,
@@ -32859,10 +32528,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.9,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -32949,7 +32615,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 11963.7,
-    "ComponentsMass": 399.0,
+    "ComponentsMass": 499.0,
     "Dimensions": {
       "Length": 7.75,
       "Width": 5.7,
@@ -33000,12 +32666,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "Emissions": {
       "Electromagnetic": {
-        "SCMIdle": 1516.0,
-        "SCMActive": 1966.0,
+        "SCMIdle": 1519.0,
+        "SCMActive": 1969.0,
         "NAV": 0.0
       },
       "Infrared": {
-        "Start": 1155.0
+        "Start": 1165.0
       },
       "CrossSection": {
         "Front": 499.0,
@@ -33065,7 +32731,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 224923.0,
-    "ComponentsMass": 5728.0,
+    "ComponentsMass": 6220.0,
     "Dimensions": {
       "Length": 30.0,
       "Width": 17.0,
@@ -33138,7 +32804,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 42.0,
       "Roll": 160.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 33580000.0,
         "Retro": 7940000.0,
@@ -33195,10 +32860,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 0.75,
         "CapacitorRegenDelay": 0.4,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.8,
-        "Y_AccelMultiplicator": 1.8,
-        "Z_AccelMultiplicator": 1.8
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -33222,12 +32884,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "Emissions": {
       "Electromagnetic": {
-        "SCMIdle": 8720.0,
-        "SCMActive": 13246.0,
-        "NAV": 16253.0
+        "SCMIdle": 8845.0,
+        "SCMActive": 13371.0,
+        "NAV": 16379.0
       },
       "Infrared": {
-        "Start": 7175.0
+        "Start": 7225.0
       },
       "CrossSection": {
         "Front": 3126.0,
@@ -33252,7 +32914,7 @@ const spvVehicleList: SpvVehicleMain[] = [
       "TotalShieldHP": 3460.0,
       "PilotBurstDPS": 923.0,
       "TurretsBurstDPS": 0.0,
-      "TotalMissilesDmg": 9558.0
+      "TotalMissilesDmg": 19073.0
     },
     "Insurance": {
       "StandardClaimTime": 6.48,
@@ -33432,7 +33094,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 8.0,
       "Roll": 14.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 303200000.0,
         "Retro": 165971100.0,
@@ -33490,10 +33151,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.3,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -33525,9 +33183,9 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Start": 21871.0
       },
       "CrossSection": {
-        "Front": 0.0,
-        "Side": 0.0,
-        "Top": 0.0
+        "Front": 4310.0,
+        "Side": 26089.0,
+        "Top": 68485.0
       }
     },
     "ResourceNetwork": {
@@ -33660,7 +33318,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 30.0,
       "Roll": 145.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 15200000.0,
         "Retro": 4000000.0,
@@ -33718,10 +33375,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 0.75,
         "CapacitorRegenDelay": 0.6,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.1,
-        "Y_AccelMultiplicator": 1.2,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -33890,7 +33544,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 30.0,
       "Roll": 145.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 15200000.0,
         "Retro": 4000000.0,
@@ -33948,10 +33601,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 0.75,
         "CapacitorRegenDelay": 0.6,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.1,
-        "Y_AccelMultiplicator": 1.2,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -34044,7 +33694,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 14258.7,
-    "ComponentsMass": 399.0,
+    "ComponentsMass": 499.0,
     "Dimensions": {
       "Length": 7.75,
       "Width": 5.7,
@@ -34097,12 +33747,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "Emissions": {
       "Electromagnetic": {
-        "SCMIdle": 16.0,
-        "SCMActive": 466.0,
+        "SCMIdle": 19.0,
+        "SCMActive": 469.0,
         "NAV": 0.0
       },
       "Infrared": {
-        "Start": 1867.0
+        "Start": 1877.0
       },
       "CrossSection": {
         "Front": 1787.0,
@@ -34162,7 +33812,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 13563.7,
-    "ComponentsMass": 399.0,
+    "ComponentsMass": 499.0,
     "Dimensions": {
       "Length": 7.75,
       "Width": 5.7,
@@ -34215,12 +33865,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "Emissions": {
       "Electromagnetic": {
-        "SCMIdle": 16.0,
-        "SCMActive": 466.0,
+        "SCMIdle": 19.0,
+        "SCMActive": 469.0,
         "NAV": 0.0
       },
       "Infrared": {
-        "Start": 1867.0
+        "Start": 1877.0
       },
       "CrossSection": {
         "Front": 1787.0,
@@ -34352,7 +34002,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 31.0,
       "Roll": 105.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 23400000.0,
         "Retro": 7800000.0,
@@ -34409,10 +34058,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.9,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -34573,7 +34219,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 32.5,
       "Roll": 110.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 25060000.0,
         "Retro": 7800000.0,
@@ -34630,10 +34275,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.9,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -35962,11 +35604,10 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 225.0,
       "MaxSpeed": 1200.0,
-      "Pitch": 55.0,
-      "Yaw": 65.0,
+      "Pitch": 65.0,
+      "Yaw": 55.0,
       "Roll": 200.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 3712000.0,
         "Retro": 1285000.0,
@@ -36023,10 +35664,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 1.5,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -36219,7 +35857,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 45.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 5949678.0,
         "Retro": 3092728.0,
@@ -36276,10 +35913,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -36446,7 +36080,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 45.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 2600000.0,
         "Retro": 2904083.0,
@@ -36503,10 +36136,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -36654,7 +36284,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 89.0,
       "Roll": 138.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 152000.0,
         "Retro": 134200.0,
@@ -36711,10 +36340,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 1.0,
-        "RegenerationTime": 2.5,
-        "X_AccelMultiplicator": 2.0,
-        "Y_AccelMultiplicator": 2.0,
-        "Z_AccelMultiplicator": 2.0
+        "RegenerationTime": 2.5
       }
     },
     "FuelManagement": {
@@ -36870,7 +36496,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 55.0,
       "Roll": 211.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 6304000.0,
         "Retro": 0.0,
@@ -36927,10 +36552,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 1.5,
-        "Y_AccelMultiplicator": 1.5,
-        "Z_AccelMultiplicator": 1.5
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {
@@ -37088,7 +36710,6 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Yaw": 51.0,
       "Roll": 150.0,
       "IsVtolAssisted": false,
-      "UseDirectionModifiers": true,
       "ThrustCapacity": {
         "Main": 8400000.0,
         "Retro": 524000.0,
@@ -37145,10 +36766,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorLinearCost": 0.0,
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.5,
-        "RegenerationTime": 26.7,
-        "X_AccelMultiplicator": 2.2,
-        "Y_AccelMultiplicator": 2.2,
-        "Z_AccelMultiplicator": 2.2
+        "RegenerationTime": 26.7
       }
     },
     "FuelManagement": {

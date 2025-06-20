@@ -3755,7 +3755,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null
     },
     "ProgressTracker": {
-      "Status": "NextPatch",
+      "Status": "Released",
       "IsOnPT": false,
       "ID": null
     },
@@ -3763,12 +3763,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": null
+      "Buy": 300
     },
     "PU": {
       "Patch": "4.2.0",
+      "Date": "2025-06-19",
       "HasPerf": true,
-      "IsPTUOnly": true,
+      "IsPTUOnly": false,
       "Buy": null
     }
   },
