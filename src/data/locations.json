@@ -828,7 +828,7 @@
         "quantum": 1
     },
     {
-        "name": "HDES Calthrope (NA)",
+        "name": "HDES-Calthrope (NA)",
         "type": "Cave",
         "parentBody": "Hurston",
         "parentStar": "Stanton",
@@ -1556,18 +1556,6 @@
         "coordinateY": 62.442,
         "coordinateZ": 985.998,
         "wikiLink": "https://starcitizen.tools/MT_DataCenter_TMG-XEV-2",
-        "private": 1,
-        "quantum": 1
-    },
-    {
-        "name": "MT OpCenter TLI-4",
-        "type": "Underground bunker",
-        "parentBody": "microTech",
-        "parentStar": "Stanton",
-        "coordinateX": 68.364,
-        "coordinateY": 64.276,
-        "coordinateZ": -996.49,
-        "wikiLink": "https://starcitizen.tools/MT_OpCenter_TLI-4",
         "private": 1,
         "quantum": 1
     },
@@ -2844,14 +2832,14 @@
         "quantum": 1
     },
     {
-        "name": "HDPC-Cassilo",
+        "name": "HDPC-Cassillo",
         "type": "Distribution center",
         "parentBody": "Hurston",
         "parentStar": "Stanton",
         "coordinateX": -789.716,
         "coordinateY": 615.354,
         "coordinateZ": -2.353,
-        "wikiLink": "https://starcitizen.tools/HDPC-Cassilo",
+        "wikiLink": "https://starcitizen.tools/HDPC-Cassillo",
         "private": -1,
         "quantum": 1
     },
@@ -2983,7 +2971,7 @@
         "coordinateX": -383.466,
         "coordinateY": 106.78,
         "coordinateZ": -103.639,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Stag%27s_Rut",
         "private": -1,
         "quantum": 1
     },
@@ -2995,7 +2983,7 @@
         "coordinateX": -6.319,
         "coordinateY": 521.28,
         "coordinateZ": -92.75,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Arid_Reach",
         "private": -1,
         "quantum": 1
     },
@@ -3079,7 +3067,7 @@
         "coordinateX": 196.206,
         "coordinateY": -361.924,
         "coordinateZ": -48.106,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Carver%27s_Ridge",
         "private": -1,
         "quantum": 1
     },
@@ -3091,7 +3079,7 @@
         "coordinateX": 230.664,
         "coordinateY": 23.844,
         "coordinateZ": -342.91,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Frigid_Knot",
         "private": -1,
         "quantum": -1
     },
@@ -3103,7 +3091,7 @@
         "coordinateX": -395.485,
         "coordinateY": 122.932,
         "coordinateZ": -11.78,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Narena%27s_Rest",
         "private": -1,
         "quantum": 1
     },
@@ -3175,7 +3163,7 @@
         "coordinateX": 129.791,
         "coordinateY": -393.57,
         "coordinateZ": -12.215,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Windfall",
         "private": -1,
         "quantum": 1
     },
@@ -3187,7 +3175,7 @@
         "coordinateX": -244.78,
         "coordinateY": -86.153,
         "coordinateZ": 189.634,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Chawla%27s_Beach",
         "private": -1,
         "quantum": 1
     },
@@ -3211,7 +3199,7 @@
         "coordinateX": 104.786,
         "coordinateY": -151.985,
         "coordinateZ": 265.305,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Goner%27s_Deal",
         "private": -1,
         "quantum": 1
     },
@@ -3235,7 +3223,7 @@
         "coordinateX": -292.47,
         "coordinateY": -25.566,
         "coordinateZ": 265.63,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Ashland",
         "private": -1,
         "quantum": 1
     },
@@ -3247,7 +3235,7 @@
         "coordinateX": -155.802,
         "coordinateY": 347.945,
         "coordinateZ": 108.787,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Kabir%27s_Post",
         "private": -1,
         "quantum": -1
     },
@@ -3259,7 +3247,7 @@
         "coordinateX": -234.185,
         "coordinateY": -328.845,
         "coordinateZ": 154.695,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Prophet%27s_Peak",
         "private": -1,
         "quantum": 1
     },
@@ -3271,7 +3259,7 @@
         "coordinateX": 83.985,
         "coordinateY": 337.165,
         "coordinateZ": -119.605,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Seer%27s_Canyon",
         "private": -1,
         "quantum": -1
     },
@@ -3283,7 +3271,7 @@
         "coordinateX": -211.807,
         "coordinateY": 190.954,
         "coordinateZ": -31.482,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Blackrock_Exchange",
         "private": -1,
         "quantum": 1
     },
@@ -3295,7 +3283,7 @@
         "coordinateX": 269.893,
         "coordinateY": 9.428,
         "coordinateZ": -93.113,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Bullock%27s_Reach",
         "private": -1,
         "quantum": -1
     },
@@ -3307,7 +3295,7 @@
         "coordinateX": -199.995,
         "coordinateY": 179.15,
         "coordinateZ": -102.07,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Canard_View",
         "private": -1,
         "quantum": 1
     },
@@ -3319,7 +3307,7 @@
         "coordinateX": -256.764,
         "coordinateY": 51.878,
         "coordinateZ": -115.526,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Kinder_Plots",
         "private": -1,
         "quantum": 1
     },
@@ -3331,7 +3319,7 @@
         "coordinateX": -284.62,
         "coordinateY": -12.703,
         "coordinateZ": -7.854,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Last_Landings",
         "private": -1,
         "quantum": 1
     },
@@ -3343,7 +3331,7 @@
         "coordinateX": -198.809,
         "coordinateY": -188.787,
         "coordinateZ": 77.973,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Rough_Landing",
         "private": -1,
         "quantum": 1
     },
@@ -3367,7 +3355,7 @@
         "coordinateX": -282.325,
         "coordinateY": 39.306,
         "coordinateZ": 0.249,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Scarper%27s_Turn",
         "private": -1,
         "quantum": 1
     },
@@ -3379,7 +3367,7 @@
         "coordinateX": -259.098,
         "coordinateY": 38.135,
         "coordinateZ": -115.813,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Stonetree",
         "private": -1,
         "quantum": 1
     },
@@ -3391,33 +3379,9 @@
         "coordinateX": 0.0,
         "coordinateY": 0.0,
         "coordinateZ": 0.0,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Supply_Gap",
         "private": -1,
         "quantum": 1
-    },
-    {
-        "name": "PYAM-FARSTAT-1-2",
-        "type": "Space station",
-        "parentBody": "PYR1 L2",
-        "parentStar": "Pyro",
-        "coordinateX": 1892033.736,
-        "coordinateY": -8901175.59,
-        "coordinateZ": 0.0,
-        "wikiLink": null,
-        "private": -1,
-        "quantum": -1
-    },
-    {
-        "name": "PYAM-FARSTAT-1-3",
-        "type": "Space station",
-        "parentBody": "PYR1 L3",
-        "parentStar": "Pyro",
-        "coordinateX": -1533855.859,
-        "coordinateY": 8431465.506,
-        "coordinateZ": 0.0,
-        "wikiLink": null,
-        "private": -1,
-        "quantum": -1
     },
     {
         "name": "Checkmate",
@@ -3456,30 +3420,6 @@
         "quantum": 1
     },
     {
-        "name": "PYAM-FARSTAT-3-5",
-        "type": "Space station",
-        "parentBody": "PYR3 L5",
-        "parentStar": "Pyro",
-        "coordinateX": -11443002.538,
-        "coordinateY": 13637233.035,
-        "coordinateZ": 0.0,
-        "wikiLink": null,
-        "private": -1,
-        "quantum": -1
-    },
-    {
-        "name": "PYAM-FARSTAT-5-1",
-        "type": "Space station",
-        "parentBody": "PYR5 L1",
-        "parentStar": "Pyro",
-        "coordinateX": 38056546.47,
-        "coordinateY": -6710238.083,
-        "coordinateZ": 0.0,
-        "wikiLink": null,
-        "private": -1,
-        "quantum": -1
-    },
-    {
         "name": "Gaslight",
         "type": "Space station",
         "parentBody": "PYR5 L2",
@@ -3492,18 +3432,6 @@
         "quantum": 1
     },
     {
-        "name": "PYAM-FARSTAT-5-3",
-        "type": "Space station",
-        "parentBody": "PYR5 L3",
-        "parentStar": "Pyro",
-        "coordinateX": -37184863.543,
-        "coordinateY": 21468613.29,
-        "coordinateZ": 0.0,
-        "wikiLink": null,
-        "private": -1,
-        "quantum": -1
-    },
-    {
         "name": "Rod's Fuel 'N Supplies",
         "type": "Space station",
         "parentBody": "PYR5 L4",
@@ -3511,7 +3439,7 @@
         "coordinateX": 14685416.672,
         "coordinateY": 40347900.081,
         "coordinateZ": 0.0,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Rod%27s_Fuel_%27N_Supplies",
         "private": -1,
         "quantum": -1
     },
@@ -3523,19 +3451,7 @@
         "coordinateX": 3742466.61,
         "coordinateY": -42773928.702,
         "coordinateZ": 0.0,
-        "wikiLink": null,
-        "private": -1,
-        "quantum": -1
-    },
-    {
-        "name": "PYAM-FARSTAT-6-2",
-        "type": "Space station",
-        "parentBody": "PYR6 L2",
-        "parentStar": "Pyro",
-        "coordinateX": -54297046.592,
-        "coordinateY": -45561095.035,
-        "coordinateZ": 0.0,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Rat%27s_Nest",
         "private": -1,
         "quantum": -1
     },
@@ -3547,7 +3463,7 @@
         "coordinateX": 48311253.893,
         "coordinateY": 48311302.761,
         "coordinateZ": 0.0,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Endgame",
         "private": -1,
         "quantum": 1
     },
@@ -3559,7 +3475,7 @@
         "coordinateX": 23368016.469,
         "coordinateY": -64202027.675,
         "coordinateZ": 0.0,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Dudley_%26_Daughters",
         "private": -1,
         "quantum": -1
     },
@@ -3571,7 +3487,7 @@
         "coordinateX": -59169086.144,
         "coordinateY": 34161126.286,
         "coordinateZ": 0.0,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Megumi_Refueling",
         "private": -1,
         "quantum": -1
     },
@@ -3823,7 +3739,7 @@
         "coordinateX": -740.15,
         "coordinateY": -401.507,
         "coordinateZ": -543.923,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Broken_Patch",
         "private": -1,
         "quantum": -1
     },
@@ -3835,7 +3751,7 @@
         "coordinateX": -93.423,
         "coordinateY": 890.632,
         "coordinateZ": -448.814,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Lowdown",
         "private": -1,
         "quantum": -1
     },
@@ -3847,7 +3763,7 @@
         "coordinateX": -118.731,
         "coordinateY": -23.754,
         "coordinateZ": 993.786,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Rico%27s_Remains",
         "private": -1,
         "quantum": -1
     },
@@ -3859,7 +3775,7 @@
         "coordinateX": 421.159,
         "coordinateY": -901.888,
         "coordinateZ": 115.085,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Trilo",
         "private": -1,
         "quantum": -1
     },
@@ -3871,7 +3787,7 @@
         "coordinateX": 143.735,
         "coordinateY": -232.741,
         "coordinateZ": 210.212,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/The_Dregs",
         "private": -1,
         "quantum": -1
     },
@@ -3883,7 +3799,7 @@
         "coordinateX": -311.896,
         "coordinateY": -147.411,
         "coordinateZ": -10.655,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Smokestack",
         "private": -1,
         "quantum": -1
     },
@@ -3895,7 +3811,7 @@
         "coordinateX": 134.643,
         "coordinateY": 285.357,
         "coordinateZ": -139.695,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Coven",
         "private": -1,
         "quantum": -1
     },
@@ -3907,7 +3823,7 @@
         "coordinateX": 134.849,
         "coordinateY": -191.27,
         "coordinateZ": -144.287,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Boondoggle",
         "private": -1,
         "quantum": -1
     },
@@ -3919,7 +3835,7 @@
         "coordinateX": -187.075,
         "coordinateY": 169.927,
         "coordinateZ": -108.364,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/The_Grove",
         "private": -1,
         "quantum": -1
     },
@@ -3931,7 +3847,7 @@
         "coordinateX": -214.094,
         "coordinateY": -180.366,
         "coordinateZ": 194.506,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Nevermind",
         "private": -1,
         "quantum": -1
     },
@@ -3943,7 +3859,7 @@
         "coordinateX": 315.109,
         "coordinateY": -86.768,
         "coordinateZ": -96.936,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Gonzo",
         "private": -1,
         "quantum": -1
     },
@@ -3955,7 +3871,7 @@
         "coordinateX": -215.66,
         "coordinateY": -147.318,
         "coordinateZ": -193.859,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Thimblerig",
         "private": -1,
         "quantum": -1
     },
@@ -3967,7 +3883,7 @@
         "coordinateX": 167.705,
         "coordinateY": 231.211,
         "coordinateZ": -155.324,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/The_Shades",
         "private": -1,
         "quantum": -1
     },
@@ -3979,7 +3895,7 @@
         "coordinateX": -187.393,
         "coordinateY": -71.585,
         "coordinateZ": -166.115,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Stone%27s_Throw",
         "private": -1,
         "quantum": -1
     },
@@ -3991,7 +3907,7 @@
         "coordinateX": 241.761,
         "coordinateY": -47.094,
         "coordinateZ": -84.846,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Fetch",
         "private": -1,
         "quantum": -1
     },
@@ -4003,7 +3919,7 @@
         "coordinateX": 2.938,
         "coordinateY": 201.304,
         "coordinateZ": 165.52,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/The_Hollows",
         "private": -1,
         "quantum": -1
     },
@@ -4015,7 +3931,7 @@
         "coordinateX": 64.288,
         "coordinateY": -237.509,
         "coordinateZ": 85.093,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Consumption",
         "private": -1,
         "quantum": -1
     },
@@ -4027,7 +3943,7 @@
         "coordinateX": 32.019,
         "coordinateY": -203.544,
         "coordinateZ": 211.215,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Minlo_Spire",
         "private": -1,
         "quantum": -1
     },
@@ -4039,7 +3955,7 @@
         "coordinateX": 291.271,
         "coordinateY": 14.332,
         "coordinateZ": 44.391,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Wailing_Rock",
         "private": -1,
         "quantum": -1
     },
@@ -4051,7 +3967,7 @@
         "coordinateX": -9.001,
         "coordinateY": 71.718,
         "coordinateZ": -286.52,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Hospice",
         "private": -1,
         "quantum": -1
     },
@@ -4063,7 +3979,7 @@
         "coordinateX": 241.301,
         "coordinateY": -10.196,
         "coordinateZ": -199.123,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Half_Stack",
         "private": -1,
         "quantum": -1
     },
@@ -4075,7 +3991,7 @@
         "coordinateX": -124.437,
         "coordinateY": -191.255,
         "coordinateZ": -214.861,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Rolo%27s_Crater",
         "private": -1,
         "quantum": -1
     },
@@ -4087,7 +4003,7 @@
         "coordinateX": -68.611,
         "coordinateY": 302.162,
         "coordinateZ": -46.109,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Mainline",
         "private": -1,
         "quantum": -1
     },
@@ -4099,7 +4015,7 @@
         "coordinateX": 81.65,
         "coordinateY": 139.798,
         "coordinateZ": 154.66,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Rock_Bottom",
         "private": -1,
         "quantum": -1
     },
@@ -4111,7 +4027,7 @@
         "coordinateX": 82.35,
         "coordinateY": -155.839,
         "coordinateZ": 138.588,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/World%27s_End",
         "private": -1,
         "quantum": -1
     },
@@ -4123,7 +4039,7 @@
         "coordinateX": 216.316,
         "coordinateY": -50.93,
         "coordinateZ": -28.836,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Downlow",
         "private": -1,
         "quantum": -1
     },
@@ -4135,7 +4051,7 @@
         "coordinateX": -95.229,
         "coordinateY": 94.387,
         "coordinateZ": -179.594,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Last_Day",
         "private": -1,
         "quantum": -1
     },
@@ -4147,7 +4063,7 @@
         "coordinateX": -213.528,
         "coordinateY": 1.117,
         "coordinateZ": 68.089,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Burnout",
         "private": -1,
         "quantum": -1
     },
@@ -4159,7 +4075,7 @@
         "coordinateX": -80.96,
         "coordinateY": -208.719,
         "coordinateZ": 0.596,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Balto%27s_Blind",
         "private": -1,
         "quantum": -1
     },
@@ -4171,7 +4087,7 @@
         "coordinateX": 227.662,
         "coordinateY": 78.831,
         "coordinateZ": 147.02,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Ako%27s_Return",
         "private": -1,
         "quantum": -1
     },
@@ -4183,7 +4099,7 @@
         "coordinateX": 10.026,
         "coordinateY": -280.775,
         "coordinateZ": -26.625,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Scuttle",
         "private": -1,
         "quantum": -1
     },
@@ -4195,7 +4111,7 @@
         "coordinateX": -200.344,
         "coordinateY": 179.033,
         "coordinateZ": 90.388,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Washout",
         "private": -1,
         "quantum": -1
     },
@@ -4207,7 +4123,7 @@
         "coordinateX": -231.254,
         "coordinateY": -64.899,
         "coordinateZ": -150.276,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Wiley_Flats",
         "private": -1,
         "quantum": -1
     },
@@ -4219,7 +4135,7 @@
         "coordinateX": 896.329,
         "coordinateY": 430.723,
         "coordinateZ": -116.471,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Kelo_Bottom",
         "private": -1,
         "quantum": -1
     },
@@ -4231,7 +4147,7 @@
         "coordinateX": -331.818,
         "coordinateY": 694.177,
         "coordinateZ": -640.38,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Drifters",
         "private": -1,
         "quantum": -1
     },
@@ -4243,7 +4159,7 @@
         "coordinateX": -666.883,
         "coordinateY": -561.293,
         "coordinateZ": -490.322,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Hela%27s_Regret",
         "private": -1,
         "quantum": -1
     },
@@ -4255,7 +4171,7 @@
         "coordinateX": 231.942,
         "coordinateY": -973.238,
         "coordinateZ": -1.731,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/The_Barrens",
         "private": -1,
         "quantum": -1
     },
@@ -4267,7 +4183,7 @@
         "coordinateX": 206.788,
         "coordinateY": -51.687,
         "coordinateZ": 110.564,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Blighter%27s_Run",
         "private": -1,
         "quantum": -1
     },
@@ -4279,7 +4195,7 @@
         "coordinateX": 181.913,
         "coordinateY": -149.785,
         "coordinateZ": -46.792,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Hasbin_Hall",
         "private": -1,
         "quantum": -1
     },
@@ -4291,7 +4207,7 @@
         "coordinateX": -60.059,
         "coordinateY": 226.418,
         "coordinateZ": -52.74,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Regiment_Downs",
         "private": -1,
         "quantum": -1
     },
@@ -4303,7 +4219,7 @@
         "coordinateX": -218.837,
         "coordinateY": -52.591,
         "coordinateZ": 84.53,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Hard_Knocks",
         "private": -1,
         "quantum": -1
     },
@@ -4315,7 +4231,7 @@
         "coordinateX": -63.761,
         "coordinateY": 220.298,
         "coordinateZ": 247.966,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Kant%27s_Peak",
         "private": -1,
         "quantum": -1
     },
@@ -4327,7 +4243,7 @@
         "coordinateX": 170.603,
         "coordinateY": -270.457,
         "coordinateZ": 107.535,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Tremonte",
         "private": -1,
         "quantum": -1
     },
@@ -4339,7 +4255,7 @@
         "coordinateX": 212.586,
         "coordinateY": -4.558,
         "coordinateZ": 18.229,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Shanks",
         "private": -1,
         "quantum": -1
     },
@@ -4351,7 +4267,7 @@
         "coordinateX": -165.447,
         "coordinateY": 134.814,
         "coordinateZ": -4.2,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Adair%27s_Retreat",
         "private": -1,
         "quantum": -1
     },
@@ -4363,7 +4279,7 @@
         "coordinateX": -65.555,
         "coordinateY": 129.836,
         "coordinateZ": 256.575,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Attritus_PAF-I",
         "private": -1,
         "quantum": -1
     },
@@ -4375,7 +4291,7 @@
         "coordinateX": -57.973,
         "coordinateY": 131.036,
         "coordinateZ": 257.946,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Attritus_PAF-II",
         "private": -1,
         "quantum": -1
     },
@@ -4387,7 +4303,7 @@
         "coordinateX": -60.601,
         "coordinateY": 122.899,
         "coordinateZ": 261.369,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Attritus_PAF-III",
         "private": -1,
         "quantum": -1
     },
@@ -4399,7 +4315,7 @@
         "coordinateX": -63.545,
         "coordinateY": 132.861,
         "coordinateZ": 269.975,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Attritus_OLP",
         "private": -1,
         "quantum": -1
     },
@@ -4411,7 +4327,7 @@
         "coordinateX": -71.073,
         "coordinateY": -262.047,
         "coordinateZ": -115.642,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Lamina_PAF-I",
         "private": -1,
         "quantum": -1
     },
@@ -4423,7 +4339,7 @@
         "coordinateX": -78.987,
         "coordinateY": -263.371,
         "coordinateZ": -107.23,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Lamina_PAF-II",
         "private": -1,
         "quantum": -1
     },
@@ -4435,7 +4351,7 @@
         "coordinateX": -81.511,
         "coordinateY": -259.065,
         "coordinateZ": -116.457,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Lamina_PAF-III",
         "private": -1,
         "quantum": -1
     },
@@ -4447,7 +4363,7 @@
         "coordinateX": -80.372,
         "coordinateY": -272.419,
         "coordinateZ": -118.208,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Lamina_OLP",
         "private": -1,
         "quantum": -1
     },
@@ -4459,7 +4375,7 @@
         "coordinateX": -135.103,
         "coordinateY": 69.995,
         "coordinateZ": 229.333,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Ruptura_PAF-I",
         "private": -1,
         "quantum": -1
     },
@@ -4471,7 +4387,7 @@
         "coordinateX": -141.271,
         "coordinateY": 69.076,
         "coordinateZ": 226.037,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Ruptura_PAF-II",
         "private": -1,
         "quantum": -1
     },
@@ -4483,7 +4399,7 @@
         "coordinateX": -138.452,
         "coordinateY": 75.932,
         "coordinateZ": 224.923,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Ruptura_PAF-III",
         "private": -1,
         "quantum": -1
     },
@@ -4495,7 +4411,7 @@
         "coordinateX": -143.751,
         "coordinateY": 75.492,
         "coordinateZ": 237.353,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Ruptura_OLP",
         "private": -1,
         "quantum": -1
     },
@@ -4507,7 +4423,7 @@
         "coordinateX": 194.316,
         "coordinateY": 95.552,
         "coordinateZ": -169.697,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Vivere_PAF-I",
         "private": -1,
         "quantum": -1
     },
@@ -4519,7 +4435,7 @@
         "coordinateX": 190.769,
         "coordinateY": 89.322,
         "coordinateZ": -177.233,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Vivere_PAF-II",
         "private": -1,
         "quantum": -1
     },
@@ -4531,7 +4447,7 @@
         "coordinateX": 187.7,
         "coordinateY": 97.786,
         "coordinateZ": -176.091,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Vivere_PAF-III",
         "private": -1,
         "quantum": -1
     },
@@ -4543,7 +4459,7 @@
         "coordinateX": 199.731,
         "coordinateY": 98.275,
         "coordinateZ": -182.208,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Vivere_OLP",
         "private": -1,
         "quantum": -1
     },
@@ -4555,7 +4471,7 @@
         "coordinateX": 94.159,
         "coordinateY": -155.84,
         "coordinateZ": 267.272,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Dinger%27s_Depot",
         "private": -1,
         "quantum": -1
     },
@@ -4567,7 +4483,7 @@
         "coordinateX": -328.583,
         "coordinateY": -198.056,
         "coordinateZ": 81.622,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/FEO_Canyon_Depot",
         "private": -1,
         "quantum": -1
     },
@@ -4579,7 +4495,7 @@
         "coordinateX": -380.335,
         "coordinateY": 120.557,
         "coordinateZ": -101.323,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Gray_Gardens_Depot",
         "private": -1,
         "quantum": -1
     },
@@ -4591,7 +4507,7 @@
         "coordinateX": 162.825,
         "coordinateY": -378.221,
         "coordinateZ": -45.329,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Prospect_Depot",
         "private": -1,
         "quantum": -1
     },
@@ -4603,7 +4519,7 @@
         "coordinateX": -139.082,
         "coordinateY": -38.392,
         "coordinateZ": 509.79,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Slowburn_Depot",
         "private": -1,
         "quantum": -1
     },
@@ -4615,7 +4531,199 @@
         "coordinateX": -178.043,
         "coordinateY": -198.998,
         "coordinateZ": 103.144,
-        "wikiLink": null,
+        "wikiLink": "https://starcitizen.tools/Watcher%27s_Depot",
+        "private": -1,
+        "quantum": -1
+    },
+    {
+        "name": "Lazarus Transport Hub Phoenix-I",
+        "type": "Outpost",
+        "parentBody": "Pyro I",
+        "parentStar": "Pyro",
+        "coordinateX": -141.001,
+        "coordinateY": 311.699,
+        "coordinateZ": 229.269,
+        "wikiLink": "https://starcitizen.tools/Lazarus_Transport_Hub_Phoenix-I",
+        "private": -1,
+        "quantum": -1
+    },
+    {
+        "name": "Lazarus Transport Hub Phoenix-II",
+        "type": "Outpost",
+        "parentBody": "Pyro I",
+        "parentStar": "Pyro",
+        "coordinateX": -139.636,
+        "coordinateY": 368.426,
+        "coordinateZ": 120.664,
+        "wikiLink": "https://starcitizen.tools/Lazarus_Transport_Hub_Phoenix-II",
+        "private": -1,
+        "quantum": -1
+    },
+    {
+        "name": "Lazarus Transport Hub Phoenix-III",
+        "type": "Outpost",
+        "parentBody": "Pyro I",
+        "parentStar": "Pyro",
+        "coordinateX": -268.24,
+        "coordinateY": 273.048,
+        "coordinateZ": 151.651,
+        "wikiLink": "https://starcitizen.tools/Lazarus_Transport_Hub_Phoenix-III",
+        "private": -1,
+        "quantum": -1
+    },
+    {
+        "name": "Lazarus Transport Hub Tithonus-I",
+        "type": "Outpost",
+        "parentBody": "Pyro I",
+        "parentStar": "Pyro",
+        "coordinateX": 98.46,
+        "coordinateY": -339.14,
+        "coordinateZ": -211.927,
+        "wikiLink": "https://starcitizen.tools/Lazarus_Transport_Hub_Tithonus-I",
+        "private": -1,
+        "quantum": -1
+    },
+    {
+        "name": "Lazarus Transport Hub Tithonus-II",
+        "type": "Outpost",
+        "parentBody": "Pyro I",
+        "parentStar": "Pyro",
+        "coordinateX": 229.528,
+        "coordinateY": -265.424,
+        "coordinateZ": -216.913,
+        "wikiLink": "https://starcitizen.tools/Lazarus_Transport_Hub_Tithonus-II",
+        "private": -1,
+        "quantum": -1
+    },
+    {
+        "name": "Lazarus Transport Hub Tithonus-III",
+        "type": "Outpost",
+        "parentBody": "Pyro I",
+        "parentStar": "Pyro",
+        "coordinateX": 199.11,
+        "coordinateY": -330.693,
+        "coordinateZ": -143.834,
+        "wikiLink": "https://starcitizen.tools/Lazarus_Transport_Hub_Tithonus-III",
+        "private": -1,
+        "quantum": -1
+    },
+    {
+        "name": "Farro Data Center I",
+        "type": "Outpost",
+        "parentBody": "Pyro IV",
+        "parentStar": "Pyro",
+        "coordinateX": 270.703,
+        "coordinateY": -172.381,
+        "coordinateZ": 17.854,
+        "wikiLink": "https://starcitizen.tools/Farro_Data_Center_I",
+        "private": -1,
+        "quantum": -1
+    },
+    {
+        "name": "Farro Data Center II",
+        "type": "Outpost",
+        "parentBody": "Pyro IV",
+        "parentStar": "Pyro",
+        "coordinateX": 312.23,
+        "coordinateY": 15.05,
+        "coordinateZ": -74.817,
+        "wikiLink": "https://starcitizen.tools/Farro_Data_Center_II",
+        "private": -1,
+        "quantum": -1
+    },
+    {
+        "name": "Farro Data Center III",
+        "type": "Outpost",
+        "parentBody": "Pyro IV",
+        "parentStar": "Pyro",
+        "coordinateX": 196.156,
+        "coordinateY": 196.986,
+        "coordinateZ": -161.386,
+        "wikiLink": "https://starcitizen.tools/Farro_Data_Center_III",
+        "private": -1,
+        "quantum": -1
+    },
+    {
+        "name": "Farro Data Center IV",
+        "type": "Outpost",
+        "parentBody": "Pyro IV",
+        "parentStar": "Pyro",
+        "coordinateX": -2.597,
+        "coordinateY": 224.629,
+        "coordinateZ": -230.649,
+        "wikiLink": "https://starcitizen.tools/Farro_Data_Center_IV",
+        "private": -1,
+        "quantum": -1
+    },
+    {
+        "name": "Farro Data Center V",
+        "type": "Outpost",
+        "parentBody": "Pyro IV",
+        "parentStar": "Pyro",
+        "coordinateX": -78.154,
+        "coordinateY": 307.384,
+        "coordinateZ": -54.007,
+        "wikiLink": "https://starcitizen.tools/Farro_Data_Center_V",
+        "private": -1,
+        "quantum": -1
+    },
+    {
+        "name": "Farro Data Center VI",
+        "type": "Outpost",
+        "parentBody": "Pyro IV",
+        "parentStar": "Pyro",
+        "coordinateX": 86.118,
+        "coordinateY": 305.944,
+        "coordinateZ": -47.804,
+        "wikiLink": "https://starcitizen.tools/Farro_Data_Center_VI",
+        "private": -1,
+        "quantum": -1
+    },
+    {
+        "name": "Farro Data Center VII",
+        "type": "Outpost",
+        "parentBody": "Pyro IV",
+        "parentStar": "Pyro",
+        "coordinateX": -75.724,
+        "coordinateY": 60.775,
+        "coordinateZ": 306.394,
+        "wikiLink": "https://starcitizen.tools/Farro_Data_Center_VII",
+        "private": -1,
+        "quantum": -1
+    },
+    {
+        "name": "Farro Data Center VIII",
+        "type": "Outpost",
+        "parentBody": "Pyro IV",
+        "parentStar": "Pyro",
+        "coordinateX": 137.495,
+        "coordinateY": 103.253,
+        "coordinateZ": 271.748,
+        "wikiLink": "https://starcitizen.tools/Farro_Data_Center_VIII",
+        "private": -1,
+        "quantum": -1
+    },
+    {
+        "name": "Farro Data Center IX",
+        "type": "Outpost",
+        "parentBody": "Pyro IV",
+        "parentStar": "Pyro",
+        "coordinateX": 109.613,
+        "coordinateY": -206.013,
+        "coordinateZ": -221.84,
+        "wikiLink": "https://starcitizen.tools/Farro_Data_Center_IX",
+        "private": -1,
+        "quantum": -1
+    },
+    {
+        "name": "Farro Data Center X",
+        "type": "Outpost",
+        "parentBody": "Pyro IV",
+        "parentStar": "Pyro",
+        "coordinateX": -40.669,
+        "coordinateY": -105.83,
+        "coordinateZ": -300.991,
+        "wikiLink": "https://starcitizen.tools/Farro_Data_Center_X",
         "private": -1,
         "quantum": -1
     }
