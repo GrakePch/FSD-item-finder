@@ -1,33 +1,18 @@
 import { useTexture } from "@react-three/drei";
 import { Suspense, useEffect, useRef, useCallback } from "react";
 
-function CustomStandardMaterial(props: any) {
-  // Use a ref to persist the callback
-  const handleBeforeCompile = useCallback((shader: { fragmentShader: string; }) => {
-    // Modify the lighting falloff in the fragment shader
-    // Find the line to inject after
-    const lines = shader.fragmentShader.split("\n");
-    const targetLine = "#include <lights_physical_pars_fragment>";
-    const idx = lines.findIndex((line: string) => line.includes(targetLine));
-    if (idx !== -1) {
-      let code = `
-float f(float x) {
-  if (x > 1.) return 1.;
-  if (x < -1.) return 0.;
-  return 0.43478261 * x * x + 0.5 * x + 0.06521739;
-}
+const shaderFuncCustomLighting = `
 void RE_Direct_Physical_CUSTOM( const in IncidentLight directLight, const in vec3 geometryPosition, const in vec3 geometryNormal, const in vec3 geometryViewDir, const in vec3 geometryClearcoatNormal, const in PhysicalMaterial material, inout ReflectedLight reflectedLight ) {
 
-  /* Make the lighting falloff smoother */
   float dotNLRaw = dot( geometryNormal, directLight.direction );
-  float adjustedDotNL = dotNLRaw / (1. + exp(-dotNLRaw * 4.4)) + 0.05;
-  adjustedDotNL = dotNLRaw < -0.4 ? -1. : adjustedDotNL;
-
-  // adjustedDotNL = f(min(1., dotNLRaw));
-
-	float dotNL = saturate( adjustedDotNL );
-
+	float dotNL = saturate( dotNLRaw );
 	vec3 irradiance = dotNL * directLight.color;
+
+  /* Make the diffuse lighting falloff smoother */
+  float adjustedDotNL = dotNLRaw / (1. + exp(-dotNLRaw * 4.4)) + 0.05;
+        adjustedDotNL = dotNLRaw < -0.4 ? -1. : adjustedDotNL;
+  float dotNLDiffuse = saturate( adjustedDotNL );
+  vec3 irradianceDiffuse = dotNLDiffuse * directLight.color;
 
 	#ifdef USE_CLEARCOAT
 
@@ -47,12 +32,22 @@ void RE_Direct_Physical_CUSTOM( const in IncidentLight directLight, const in vec
 
 	reflectedLight.directSpecular += irradiance * BRDF_GGX( directLight.direction, geometryViewDir, geometryNormal, material );
 
-	reflectedLight.directDiffuse += irradiance * BRDF_Lambert( material.diffuseColor );
+	reflectedLight.directDiffuse += irradianceDiffuse * BRDF_Lambert( material.diffuseColor );
 }
 
 #undef RE_Direct
 #define RE_Direct				RE_Direct_Physical_CUSTOM`;
-      lines.splice(idx + 1, 0, code);
+
+function CustomStandardMaterial(props: any) {
+  // Use a ref to persist the callback
+  const handleBeforeCompile = useCallback((shader: { fragmentShader: string }) => {
+    // Modify the lighting falloff in the fragment shader
+    // Find the line to inject after
+    const lines = shader.fragmentShader.split("\n");
+    const targetLine = "#include <lights_physical_pars_fragment>";
+    const idx = lines.findIndex((line: string) => line.includes(targetLine));
+    if (idx !== -1) {
+      lines.splice(idx + 1, 0, shaderFuncCustomLighting);
       shader.fragmentShader = lines.join("\n");
     }
   }, []);
