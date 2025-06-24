@@ -83,6 +83,17 @@ export function cartesianToSpherical(
   return { r: r, theta: theta, phi: phi };
 }
 
+export function sphericalToCartesian(
+  r: number,
+  theta: number,
+  phi: number
+): [number, number, number] {
+  const x = r * Math.cos(theta) * Math.sin(phi);
+  const y = r * Math.cos(phi);
+  const z = r * Math.sin(theta) * Math.sin(phi);
+  return [x, y, z];
+}
+
 /* Spherical to Latitude-longitude coordinates centered at OM-5 */
 export interface LatLongCoordinates {
   lat: number;

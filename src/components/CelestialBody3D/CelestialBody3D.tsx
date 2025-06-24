@@ -148,7 +148,7 @@ export default function CelestialBody3D({
       <CameraUpdater location={location} radius={radius} />
       <ambientLight intensity={applyRealisticAtmosphere ? 0.05 : 0.3} />
       <RotatingDirectionalLight intensity={5} celestialBody={celestialBody} />
-      <Starfield />
+      <Starfield rotateYDeg={parentStarRotateDeg}/>
 
       <group>
         <CelestialBodySphere
