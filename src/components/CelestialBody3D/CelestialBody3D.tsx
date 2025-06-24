@@ -59,6 +59,7 @@ export default function CelestialBody3D({
   const bodyHDTexture = texture.bodyHD[celestialBody.name];
   const bodyTextureRoughness = texture.roughness[celestialBody.name];
   const bodyTextureEmission = texture.emission[celestialBody.name];
+  const bodyTextureNormal = texture.normal[celestialBody.name];
   const radius = celestialBody.bodyRadius || 1;
   const distance = 8 * radius;
   const distanceMax = 16 * radius;
@@ -152,6 +153,7 @@ export default function CelestialBody3D({
           map={applyHDMaps && bodyHDTexture ? bodyHDTexture : bodyTexture}
           mapRoughness={bodyTextureRoughness}
           mapEmission={bodyTextureEmission}
+          mapNormal={bodyTextureNormal}
           color={themeColor}
           radius={radius}
           setApiRef={(api) => (sphereApiRef.current = api)}

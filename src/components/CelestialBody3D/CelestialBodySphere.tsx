@@ -59,14 +59,17 @@ function SurfaceMaterial({
   map,
   mapRoughness,
   mapEmission,
+  mapNormal,
 }: {
   map?: string;
   mapRoughness?: string;
   mapEmission?: string;
+  mapNormal?: string;
 }) {
   const diffuseMap = map ? useTexture(map) : undefined;
   const roughnessMap = mapRoughness ? useTexture(mapRoughness) : undefined;
   const emissionMap = mapEmission ? useTexture(mapEmission) : undefined;
+  const normalMap = mapNormal ? useTexture(mapNormal) : undefined;
   return (
     <CustomStandardMaterial
       map={diffuseMap}
@@ -74,6 +77,8 @@ function SurfaceMaterial({
       emissiveMap={emissionMap}
       emissiveIntensity={emissionMap ? 0.3 : 0}
       emissive={emissionMap ? 0xffffdd : null}
+      normalMap={normalMap}
+      normalScale={[.3, .3]}
     />
   );
 }
@@ -82,6 +87,7 @@ export default function CelestialBodySphere({
   map,
   mapRoughness,
   mapEmission,
+  mapNormal,
   color,
   radius,
   setApiRef,
@@ -89,6 +95,7 @@ export default function CelestialBodySphere({
   map?: string;
   mapRoughness?: string;
   mapEmission?: string;
+  mapNormal?: string;
   color?: string;
   radius: number;
   setApiRef?: (api: { setRotationTarget: (target: number) => void }) => void;
@@ -116,6 +123,7 @@ export default function CelestialBodySphere({
             map={map}
             mapRoughness={mapRoughness}
             mapEmission={mapEmission}
+            mapNormal={mapNormal}
           />
         </Suspense>
       ) : (
