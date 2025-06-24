@@ -1,6 +1,6 @@
 import "./CelestialBody3D.css";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { useRef } from "react";
 import CelestialBodySphere from "./CelestialBodySphere";
 import LatLongLines from "./LatLongLines";
@@ -12,6 +12,13 @@ import CelestialBodyRing from "./CelestialBodyRing";
 import { OrbitalMarkers } from "./OrbitalMarkers";
 import CameraUpdater from "./CameraUpdater";
 import { useOrbitInertia } from "./hooks/useOrbitInertia";
+import SubsolarDirectionLine from "./SubsolarDirectionLine";
+import { EffectComposer } from "@react-three/postprocessing";
+import { useParentStarRotation } from "./useParentStarRotation";
+import { scToThree } from "./utils";
+import { Vector3 } from "three";
+import Atmosphere from "./post_processings/Atmosphere";
+import { hexColorToVector3 } from "../../utils";
 import Starfield from "./Starfield";
 
 /** NOTE:
@@ -29,42 +36,85 @@ export default function CelestialBody3D({
     showLongitudeLatitudeLines: true,
     showOrbitLines: true,
     showOMs: true,
+    showSubsolarDirection: true,
     showNoQTMarkers: false,
     applyHDMaps: false,
+    applyRealisticAtmosphere: false,
   },
 }: {
   celestialBody: CelestialBody;
   location?: SCLocation | null;
-  layersSetting: {
-    showLocationLabels: boolean;
-    showOrbitLines: boolean;
-    showLongitudeLatitudeLines: boolean;
-    showOMs: boolean;
-    showNoQTMarkers: boolean;
-    applyHDMaps: boolean;
-  };
+  layersSetting: Record<string, boolean>;
 }) {
   const {
     showLocationLabels,
     showLongitudeLatitudeLines,
     showOrbitLines,
     showOMs,
+    showSubsolarDirection,
     showNoQTMarkers,
     applyHDMaps,
+    applyRealisticAtmosphere,
   } = layersSetting;
   const bodyTexture = texture.body[celestialBody.name];
   const bodyHDTexture = texture.bodyHD[celestialBody.name];
   const bodyTextureRoughness = texture.roughness[celestialBody.name];
+  const bodyTextureEmission = texture.emission[celestialBody.name];
+  const bodyTextureNormal = texture.normal[celestialBody.name];
   const radius = celestialBody.bodyRadius || 1;
-  const zoom = 200 / radius;
-  const zoomMax = 2000 / radius;
-  const zoomMin = 100 / radius;
-  const cameraPosition: [number, number, number] = [0, 0, 4 * radius];
-  const cameraFar = 10 * radius;
+  const distance = 8 * radius;
+  const distanceMax = 16 * radius;
+  const distanceMin = 1.5 * radius;
+  const cameraPosition: [number, number, number] = [distance, 0, 0];
+  const cameraFOVY = (60 / 16) * 9;
+  const cameraNear = 0.09 * radius;
+  const cameraFar = 50000000;
   const themeColor =
     celestialBody.themeColorR && celestialBody.themeColorG && celestialBody.themeColorB
       ? `rgb(${celestialBody.themeColorR}, ${celestialBody.themeColorG}, ${celestialBody.themeColorB})`
       : undefined;
+  const atmosphereRadius = celestialBody.atmosphereHeightM
+    ? radius + celestialBody.atmosphereHeightM / 1000
+    : 1.05 * radius;
+  const atmosphereColor = celestialBody.colorSkyNoon
+    ? new Vector3(...hexColorToVector3(celestialBody.colorSkyNoon))
+    : undefined;
+  const atmosphereColorNight = celestialBody.colorSkyNight
+    ? new Vector3(...hexColorToVector3(celestialBody.colorSkyNight))
+    : undefined;
+
+  const bodyPositionAbs: [number, number, number] = scToThree([
+    celestialBody.coordinateX,
+    celestialBody.coordinateY,
+    celestialBody.coordinateZ,
+  ]);
+  const parentStarPositionAbs: [number, number, number] = celestialBody.parentStar
+    ? scToThree([
+        celestialBody.parentStar.coordinateX,
+        celestialBody.parentStar.coordinateY,
+        celestialBody.parentStar.coordinateZ,
+      ])
+    : [0, 0, 0];
+  const parentStarPositionRelInitial: [number, number, number] = [
+    parentStarPositionAbs[0] - bodyPositionAbs[0],
+    parentStarPositionAbs[1] - bodyPositionAbs[1],
+    parentStarPositionAbs[2] - bodyPositionAbs[2],
+  ];
+  const distanceToParentStar = Math.sqrt(
+    parentStarPositionRelInitial[0] ** 2 +
+      parentStarPositionRelInitial[1] ** 2 +
+      parentStarPositionRelInitial[2] ** 2
+  );
+
+  // Use custom hook to recalculate rotation every 10 seconds
+  const { parentStarRotateDeg, parentStarPositionRelRotated } = useParentStarRotation({
+    celestialBody,
+    parentStarPositionRelInitial,
+  });
+
+  const cameraRef = useRef<any>(null);
+  const dirToSunCameraAdjusted = new Vector3(...parentStarPositionRelRotated).normalize();
+
   const needOrbitCircle = (loc: SCLocation) =>
     loc.type === "Space station" ||
     loc.type === "Asteroid base" ||
@@ -76,29 +126,27 @@ export default function CelestialBody3D({
   );
 
   // Use custom inertia hook
-  const { currentZoom, handleControlsChange, onControlsStart, onControlsEnd } =
+  const { currentDistance, handleControlsChange, onControlsStart, onControlsEnd } =
     useOrbitInertia({
       controlsRef,
-      initialZoom: zoom,
+      initialDistance: distance,
       radius,
     });
 
-  const dynamicRotationSpeed = 125 / currentZoom / radius;
+  const dynamicRotationSpeed = (0.1 * (currentDistance - radius)) / radius;
 
   return (
-    <Canvas
-      key={celestialBody.name}
-      orthographic
-      camera={{
-        position: cameraPosition,
-        zoom: zoom,
-        near: 0.1,
-        far: cameraFar,
-      }}
-      className="CelestialBody3D"
-    >
+    <Canvas key={celestialBody.name} className="CelestialBody3D">
+      <PerspectiveCamera
+        ref={cameraRef}
+        makeDefault
+        position={cameraPosition}
+        fov={cameraFOVY}
+        near={cameraNear}
+        far={cameraFar}
+      />
       <CameraUpdater location={location} radius={radius} />
-      <ambientLight intensity={0.7} />
+      <ambientLight intensity={applyRealisticAtmosphere ? 0.05 : 0.3} />
       <RotatingDirectionalLight intensity={5} celestialBody={celestialBody} />
       <Starfield />
 
@@ -106,12 +154,23 @@ export default function CelestialBody3D({
         <CelestialBodySphere
           map={applyHDMaps && bodyHDTexture ? bodyHDTexture : bodyTexture}
           mapRoughness={bodyTextureRoughness}
+          mapEmission={bodyTextureEmission}
+          mapNormal={bodyTextureNormal}
           color={themeColor}
           radius={radius}
           setApiRef={(api) => (sphereApiRef.current = api)}
         />
+        {/* Render parent star at rotated position */}
+        <mesh
+          position={new Vector3(...parentStarPositionRelRotated)
+            .normalize()
+            .multiplyScalar(distanceToParentStar)}
+        >
+          <sphereGeometry args={[celestialBody.parentStar.bodyRadius, 32, 32]} />
+          <meshBasicMaterial color={"#fff"} />
+        </mesh>
         {showLongitudeLatitudeLines && (
-          <LatLongLines radius={radius + 0.1} color={themeColor} />
+          <LatLongLines radius={radius + 1} color={themeColor} />
         )}
         {/* Render ring*/}
         {celestialBody.ringRadiusInner && celestialBody.ringRadiusOuter && (
@@ -139,6 +198,10 @@ export default function CelestialBody3D({
           celestialBody.locations
             .filter((loc) => showNoQTMarkers || loc.quantum != 0)
             .map((loc) => <LocationLabel loc={loc} key={loc.name} bodyRadius={radius} />)}
+        {/* Render Subsolar Point Direction Line */}
+        {showSubsolarDirection && celestialBody.parentStar && (
+          <SubsolarDirectionLine celestialBody={celestialBody} />
+        )}
         {/* Render Orbital Markers */}
         {showOMs && celestialBody.omRadius && (
           <OrbitalMarkers
@@ -152,15 +215,39 @@ export default function CelestialBody3D({
       <OrbitControls
         ref={controlsRef}
         enablePan={false}
-        enableZoom={true}
-        maxZoom={zoomMax}
-        minZoom={zoomMin}
+        maxDistance={distanceMax}
+        minDistance={distanceMin}
         rotateSpeed={dynamicRotationSpeed}
         onChange={handleControlsChange}
         onStart={onControlsStart}
         onEnd={onControlsEnd}
         dampingFactor={0.2}
       />
+      {/* Post-processing composer with custom effect */}
+      <EffectComposer enabled={applyRealisticAtmosphere}>
+        <Atmosphere
+          cameraRef={cameraRef}
+          fovy={cameraFOVY}
+          radiusBody={radius}
+          radiusAtmos={atmosphereRadius}
+          dirToSun={dirToSunCameraAdjusted}
+          atmosColor={atmosphereColor}
+          atmosColorNight={atmosphereColorNight}
+          atmosColorOverrideCoefficient={celestialBody.atmosphereColorOverrideCoefficient}
+          waveLengths={
+            celestialBody.atmosphereWaveLengthR &&
+            celestialBody.atmosphereWaveLengthG &&
+            celestialBody.atmosphereWaveLengthB
+              ? new Vector3(
+                  celestialBody.atmosphereWaveLengthR,
+                  celestialBody.atmosphereWaveLengthG,
+                  celestialBody.atmosphereWaveLengthB
+                )
+              : undefined
+          }
+          scatteringStrength={celestialBody.atmosphereScatteringStrength}
+        />
+      </EffectComposer>
     </Canvas>
   );
 }

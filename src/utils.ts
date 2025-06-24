@@ -6,218 +6,224 @@ import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
 import attributes from "./data/categories_attributes.json";
 
 export function isAscii(char: string): boolean {
-    const code = char[0].charCodeAt(0);
-    return code >= 0 && code <= 127;
+  const code = char[0].charCodeAt(0);
+  return code >= 0 && code <= 127;
 }
 
 // Utility to sanitize body/location names to keys for URL usage
 export function toUrlKey(str: string): string {
-  return str
-    ?.replace(/[^a-zA-Z0-9-]+/g, "_") || null;
+  return str?.replace(/[^a-zA-Z0-9-]+/g, "_") || null;
 }
 
 export function locationNameToI18nKey(name: string): string {
-    return location_name_to_i18n_key[name] as string || name;
+  return (location_name_to_i18n_key[name] as string) || name;
 }
 
 export function getItemUexFormat(id: number) {
-    for (const item of (itemsUex as ItemUEXApiResponse[])) {
-        if (item.id == id) {
-            return item;
-        }
+  for (const item of itemsUex as ItemUEXApiResponse[]) {
+    if (item.id == id) {
+      return item;
     }
-    // console.log("No item found for id: " + id);
-    return null;
+  }
+  // console.log("No item found for id: " + id);
+  return null;
 }
 
 export function getUEXAttribute(id) {
-    for (const attr of attributes) {
-        if (attr.id == id) {
-            return attr;
-        }
+  for (const attr of attributes) {
+    if (attr.id == id) {
+      return attr;
     }
+  }
 }
 
-export function getAttributeValueByName(name: string, attrDict: AttributeDictionary): string | null {
-    if (!attrDict) return null;
-    for (const [k, v] of Object.entries(attrDict)) {
-        let attr = getUEXAttribute(k);
-        if (attr && attr.name === name) return v;
-    }
-    return null;
+export function getAttributeValueByName(
+  name: string,
+  attrDict: AttributeDictionary
+): string | null {
+  if (!attrDict) return null;
+  for (const [k, v] of Object.entries(attrDict)) {
+    let attr = getUEXAttribute(k);
+    if (attr && attr.name === name) return v;
+  }
+  return null;
 }
 
 /* Map the type in items_uex_ids_and_i18n.json to UEX's type & sub-type */
-export function mapToUEXTypeSubType(rawType: string | undefined)
-: [string, string] | [null, null] {
-    return typeMap[rawType] || [null, null];
+export function mapToUEXTypeSubType(
+  rawType: string | undefined
+): [string, string] | [null, null] {
+  return typeMap[rawType] || [null, null];
 }
 
 export function getLocPath(option, tdata) {
-    try {
-        return tdata[option.id_terminal].location_path;
-    } catch (err) {
-        console.log(option.id_terminal);
-    }
+  try {
+    return tdata[option.id_terminal].location_path;
+  } catch (err) {
+    console.log(option.id_terminal);
+  }
 }
 
 export function getVariants(key: string, itemsData: ItemDictionary) {
-    if (!key) return [];
-    if (!itemsData[key]) return [];
+  if (!key) return [];
+  if (!itemsData[key]) return [];
 
-    let thisName = itemsData[key].name;
-    let thisSubType = itemsData[key].sub_type;
-    if ([
-        "Personal Weapons",
-        "Undersuits",
-        "Helmets",
-        "Torso",
-        "Arms",
-        "Legs",
-        "Backpacks",
-    ].includes(thisSubType) === false) return [];
-    let initial = thisName.split(" ")[0];
-    return Object.values(itemsData)
-        .sort((a, b) => a.key.localeCompare(b.key))
-        .filter((item) =>
-            item.sub_type === thisSubType && item.name.split(" ")[0] === initial);
+  let thisName = itemsData[key].name;
+  let thisSubType = itemsData[key].sub_type;
+  if (
+    [
+      "Personal Weapons",
+      "Undersuits",
+      "Helmets",
+      "Torso",
+      "Arms",
+      "Legs",
+      "Backpacks",
+    ].includes(thisSubType) === false
+  )
+    return [];
+  let initial = thisName.split(" ")[0];
+  return Object.values(itemsData)
+    .sort((a, b) => a.key.localeCompare(b.key))
+    .filter(
+      (item) => item.sub_type === thisSubType && item.name.split(" ")[0] === initial
+    );
 }
 
 export function getSet(key: string, itemsData: ItemDictionary) {
-    if (!key) return null;
-    if (!itemsData[key]) return null;
+  if (!key) return null;
+  if (!itemsData[key]) return null;
 
-    let set: ArmorSet = {};
-    for (const str of ["suit", "helmet", "core", "arms", "legs", "backpack"]) {
-        if (key.includes(str)) {
-            set.undersuit = (itemsData[key.replace(str, "suit")] as Item) || null;
-            set.helmet = (itemsData[key.replace(str, "helmet")] as Item) || null;
-            set.torso = (itemsData[key.replace(str, "core")] as Item) || null;
-            set.arms = (itemsData[key.replace(str, "arms")] as Item) || null;
-            set.legs = (itemsData[key.replace(str, "legs")] as Item) || null;
-            set.backpack = (itemsData[key.replace(str, "backpack")] as Item) || null;
-            return set;
-        }
+  let set: ArmorSet = {};
+  for (const str of ["suit", "helmet", "core", "arms", "legs", "backpack"]) {
+    if (key.includes(str)) {
+      set.undersuit = (itemsData[key.replace(str, "suit")] as Item) || null;
+      set.helmet = (itemsData[key.replace(str, "helmet")] as Item) || null;
+      set.torso = (itemsData[key.replace(str, "core")] as Item) || null;
+      set.arms = (itemsData[key.replace(str, "arms")] as Item) || null;
+      set.legs = (itemsData[key.replace(str, "legs")] as Item) || null;
+      set.backpack = (itemsData[key.replace(str, "backpack")] as Item) || null;
+      return set;
     }
-    return null;
+  }
+  return null;
 }
 
 function getDistance(v1, v2) {
-    return Math.sqrt((v1[0] - v2[0]) ** 2 + (v1[1] - v2[1]) ** 2 + (v1[2] - v2[2]) ** 2);
+  return Math.sqrt((v1[0] - v2[0]) ** 2 + (v1[1] - v2[1]) ** 2 + (v1[2] - v2[2]) ** 2);
 }
 
 export function getBody(name) {
-    /* Manually fix the name difference between UEX and bodies.json */
-    let manualFixIfPossible = uexBodiesFixM[name];
-    return bodies.find(e => e.name === name)
-        || bodies.find(e => e.name === manualFixIfPossible)
-        || null;
+  /* Manually fix the name difference between UEX and bodies.json */
+  let manualFixIfPossible = uexBodiesFixM[name];
+  return (
+    bodies.find((e) => e.name === name) ||
+    bodies.find((e) => e.name === manualFixIfPossible) ||
+    null
+  );
 }
 
 export function getPathTo(loc) {
-    const path = [loc.name];
-    while (loc.parentBody) {
-        if (loc.type === "Lagrange Point")
-            loc = loc.parentBody.parentBody;
-        else
-            loc = loc.parentBody;
-        if (loc)
-            path.unshift(loc.name);
-    }
-    return path;
+  const path = [loc.name];
+  while (loc.parentBody) {
+    if (loc.type === "Lagrange Point") loc = loc.parentBody.parentBody;
+    else loc = loc.parentBody;
+    if (loc) path.unshift(loc.name);
+  }
+  return path;
 }
 
 export function getPathToTerminal(t) {
-    let terminalSplit = t.name.split(" - ").reverse();
-    if (terminalSplit.length > 1) terminalSplit.shift();
-    return getPathTo(t.parentLocation).concat(terminalSplit)
+  let terminalSplit = t.name.split(" - ").reverse();
+  if (terminalSplit.length > 1) terminalSplit.shift();
+  return getPathTo(t.parentLocation).concat(terminalSplit);
 }
 
 export function getBodiesDistance(b1, b2) {
-    let info1 = getBody(b1);
-    let info2 = getBody(b2);
-    if (!info1 || !info2) return Infinity;
-    if ((info1.parentStar || info1.name) !== (info2.parentStar || info2.name)) return Infinity; //TODO: Better calculation for interstellar distance
-    return getDistance(
-        [info1.coordinateX, info1.coordinateY, info1.coordinateZ],
-        [info2.coordinateX, info2.coordinateY, info2.coordinateZ]
-    )
+  let info1 = getBody(b1);
+  let info2 = getBody(b2);
+  if (!info1 || !info2) return Infinity;
+  if ((info1.parentStar || info1.name) !== (info2.parentStar || info2.name))
+    return Infinity; //TODO: Better calculation for interstellar distance
+  return getDistance(
+    [info1.coordinateX, info1.coordinateY, info1.coordinateZ],
+    [info2.coordinateX, info2.coordinateY, info2.coordinateZ]
+  );
 }
 
 export function getTerminalDistance(op, body, tdata) {
-    let locPath = getLocPath(op, tdata);
-    if (!locPath) return Infinity;
-    return getBodiesDistance(locPath[1], body);
+  let locPath = getLocPath(op, tdata);
+  if (!locPath) return Infinity;
+  return getBodiesDistance(locPath[1], body);
 }
 
 export function readableDistance(dist) {
-    if (dist === 0) return "附近";
-    if (dist === Infinity) return "星系外";
-    if (dist < 1000) return Math.round(dist * 10) / 10 + " km";
-    dist /= 1000;
-    if (dist < 1000) return Math.round(dist * 10) / 10 + " Mm";
-    dist /= 1000;
-    return Math.round(dist * 10) / 10 + " Gm";
+  if (dist === 0) return "附近";
+  if (dist === Infinity) return "星系外";
+  if (dist < 1000) return Math.round(dist * 10) / 10 + " km";
+  dist /= 1000;
+  if (dist < 1000) return Math.round(dist * 10) / 10 + " Mm";
+  dist /= 1000;
+  return Math.round(dist * 10) / 10 + " Gm";
 }
 
 export function colorPrice(percent100) {
-    return `color-mix(in hsl longer hue, hsl(200deg 60% 50%), hsl(0deg 60% 50%) ${percent100}%`
+  return `color-mix(in hsl longer hue, hsl(200deg 60% 50%), hsl(0deg 60% 50%) ${percent100}%`;
 }
 
 export function colorLocationDepth(depth) {
-    if (depth == 0) return `#a5a5a5`;
-    return `color-mix(in hsl, #ffffff50, #ffffff0d ${((depth - 1) / 3) * 100
-        }%)`
+  if (depth == 0) return `#a5a5a5`;
+  return `color-mix(in hsl, #ffffff50, #ffffff0d ${((depth - 1) / 3) * 100}%)`;
 }
 
 export const date4_0 = 1734670320;
 
 export const sizeToColor: string[] = [
-    "#6e7881",
-    "#258f00",
-    "#008f7e",
-    "#006dd1",
-    "#371cdf",
-    "#8022dc",
-    "#cc29cf",
-    "#ff9900",
-    "#ff5c00",
-    "#ff3838",
-    "#af0000",
-    "#ff9900",
-    "#ff3838",
+  "#6e7881",
+  "#258f00",
+  "#008f7e",
+  "#006dd1",
+  "#371cdf",
+  "#8022dc",
+  "#cc29cf",
+  "#ff9900",
+  "#ff5c00",
+  "#ff3838",
+  "#af0000",
+  "#ff9900",
+  "#ff3838",
 ];
 
 export const classToColor: Record<string, string> = {
-    Military: "#258f00",
-    Stealth: "#439193",
-    Civilian: "#c1af3e",
-    Industrial: "#a86834",
-    Competition: "#a83434",
+  Military: "#258f00",
+  Stealth: "#439193",
+  Civilian: "#c1af3e",
+  Industrial: "#a86834",
+  Competition: "#a83434",
 };
 
 export const signalToColor: Record<string, string> = {
-    Electromagnetic: "#439193",
-    Infrared: "#a83434",
-    "Cross Section": "#c1a03e",
+  Electromagnetic: "#439193",
+  Infrared: "#a83434",
+  "Cross Section": "#c1a03e",
 };
 
 export function getLocalStorageRecent(): string[] {
-    let r = localStorage.getItem("recent");
-    if (!r) return [];
-    return r.split(",").filter(a => a);
+  let r = localStorage.getItem("recent");
+  if (!r) return [];
+  return r.split(",").filter((a) => a);
 }
 
 export function pushLocalStorageRecent(key: string): void {
-    let r = getLocalStorageRecent();
-    r = r.filter(k => k != key);
-    r.unshift(key);
-    if (r.length > 5) r = r.slice(0, 5);
-    localStorage.setItem("recent", r.join(","));
+  let r = getLocalStorageRecent();
+  r = r.filter((k) => k != key);
+  r.unshift(key);
+  if (r.length > 5) r = r.slice(0, 5);
+  localStorage.setItem("recent", r.join(","));
 }
 
 export function clearLocalStorageRecent(): void {
-    localStorage.removeItem("recent");
+  localStorage.removeItem("recent");
 }
 
 export function getVehicleNameNoBrand(spvVehicleIndex: SpvVehicleIndex): string {
@@ -262,7 +268,7 @@ export function formatVehicleImageSrc(
 export const typeKeyToCapitalized = (key: string) =>
   key
     .split("_")
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 
 export const typeCapitalizedToKey = (capitalized: string | null) =>
@@ -273,22 +279,50 @@ export const typeCapitalizedToKey = (capitalized: string | null) =>
         .join("_")
     : "";
 
-export const spvRoleToKey = (role: string) => 
-    role.toLowerCase().replaceAll(" ","").replaceAll("/","");
+export const spvRoleToKey = (role: string) =>
+  role.toLowerCase().replaceAll(" ", "").replaceAll("/", "");
 
-export const toI18nKey = (str: string) => str.normalize("NFD")
+export const toI18nKey = (str: string) =>
+  str
+    .normalize("NFD")
     .replaceAll(/[\u0300-\u036f]/g, "")
     .replaceAll("'", "_")
     .replaceAll(".", "_")
     .replaceAll(" ", "_")
     .toLowerCase()
-    .trimEnd()
+    .trimEnd();
 
-/**
- * Convert Star Citizen coordinates (X, Y, Z) to three.js coordinates (X, Z, -Y).
- * SC: X (east), Y (up), Z (north)
- * three.js: X (right), Y (up), Z (backward)
- */
-export function scToThree([x, y, z]: [number, number, number]): [number, number, number] {
-  return [x, z, -y];
+/* Color utils */
+export function hexToRgb(hex: string) {
+  const bigint = parseInt(hex.slice(1), 16);
+  const r = (bigint >> 16) & 255;
+  const g = (bigint >> 8) & 255;
+  const b = bigint & 255;
+  return [r, g, b];
 }
+
+export function rgbToHex(r: number, g: number, b: number) {
+  return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase();
+}
+
+export const mixHexColor = (
+  color1: string | undefined,
+  color2: string | undefined,
+  weight: number = 0.5
+) => {
+  if (!color1) return color2;
+  if (!color2) return color1;
+  const rgb1 = hexToRgb(color1);
+  const rgb2 = hexToRgb(color2);
+
+  const r = Math.round(rgb1[0] * (1 - weight) + rgb2[0] * weight);
+  const g = Math.round(rgb1[1] * (1 - weight) + rgb2[1] * weight);
+  const b = Math.round(rgb1[2] * (1 - weight) + rgb2[2] * weight);
+
+  return rgbToHex(r, g, b);
+};
+
+export const hexColorToVector3 = (hex: string) => {
+  const [r, g, b] = hexToRgb(hex);
+  return [r / 255, g / 255, b / 255];
+};

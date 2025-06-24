@@ -133,7 +133,6 @@ interface SpvFlightCharacteristics {
   Yaw: number;
   Roll: number;
   IsVtolAssisted: boolean;
-  UseDirectionModifiers: boolean;
   ThrustCapacity: {
     Main: number;
     Retro: number;
@@ -176,9 +175,13 @@ interface SpvFlightCharacteristics {
     CapacitorUsageModifier: number;
     CapacitorRegenDelay: number;
     RegenerationTime: number;
-    X_AccelMultiplicator: number;
-    Y_AccelMultiplicator: number;
-    Z_AccelMultiplicator: number;
+  };
+  Emissions?: {
+    CrossSection: {
+      Front: number;
+      Side: number;
+      Top: number;
+    };
   };
 }
 

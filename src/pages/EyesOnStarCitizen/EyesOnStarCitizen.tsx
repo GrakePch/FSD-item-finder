@@ -3,7 +3,7 @@ import CelestialBody3D from "../../components/CelestialBody3D/CelestialBody3D";
 import "./EyesOnStarCitizen.css";
 import { ContextAllData } from "../../contexts";
 import { toUrlKey } from "../../utils";
-import { Link, useParams } from "react-router";
+import { Link, useParams, useSearchParams } from "react-router";
 import CelestialBodyInfo from "../CelestialBodyInfo/CelestialBodyInfo";
 import LocationInfo from "../LocationInfo/LocationInfo";
 import SearchLocationBar from "../SearchLocations/SearchLocationBar/SearchLocationBar";
@@ -32,16 +32,32 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
   const [seeCelestialBody, setSeeCelestialBody] = useState<CelestialBody | null>(null);
   const seeLocation = dictLocations[locationKey] || null;
   const [isSearchCardOpen, setIsSearchCardOpen] = useState(false);
-  const [isInfoCardOpen, setIsInfoCardOpen] = useState(false);
+  const [isInfoCardOpen, setIsInfoCardOpen] = useState(true);
   const [isLayersSettingOpen, setIsLayersSettingOpen] = useState(false);
 
   /* Layers setting states */
   const [showLocationLabels, setShowLocationLabels] = useState(true);
   const [showOrbitLines, setShowOrbitLines] = useState(true);
-  const [showLongitudeLatitudeLines, setShowLongitudeLatitudeLines] = useState(true);
-  const [showOMs, setShowOMs] = useState(true);
+  const [showLongitudeLatitudeLines, setShowLongitudeLatitudeLines] = useState(false);
+  const [showOMs, setShowOMs] = useState(false);
+  const [showSubsolarDirection, setShowSubsolarDirection] = useState(false);
   const [showNoQTMarkers, setShowNoQTMarkers] = useState(false);
   const [applyHDMaps, setApplyHDMaps] = useState(false);
+  const [applyRealisticAtmosphere, setApplyRealisticAtmosphere] = useState(false);
+
+  // DateTime Picker state stored in query params
+  const [searchParams, setSearchParams] = useSearchParams();
+  const searchDateTime = searchParams.get("datetime") || "";
+
+  const handleDateTimeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    if (value) {
+      searchParams.set("datetime", value);
+    } else {
+      searchParams.delete("datetime");
+    }
+    setSearchParams(searchParams, { replace: true });
+  };
 
   useEffect(() => {
     let tempCB = null;
@@ -103,8 +119,10 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
             showLongitudeLatitudeLines,
             showOrbitLines,
             showOMs,
+            showSubsolarDirection,
             showNoQTMarkers,
             applyHDMaps,
+            applyRealisticAtmosphere,
           }}
         />
       </div>
@@ -120,6 +138,24 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
           <Icon path={mdiMapMarker} size="2rem" />
         </Link>
       </nav>
+
+      <div className="date-time-picker-wrapper">
+        <input
+          type="datetime-local"
+          value={searchDateTime}
+          onChange={handleDateTimeChange}
+          style={{ width: "100%", maxWidth: 240 }}
+        />
+        <button
+          className="set-to-real-time"
+          onClick={() => {
+            searchParams.delete("datetime");
+            setSearchParams(searchParams, { replace: true });
+          }}
+        >
+          {t("EOSC.setToRealTime")}
+        </button>
+      </div>
 
       <div className="fixed-search-bar">
         <SearchLocationBar
@@ -194,6 +230,14 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
           <label>
             <input
               type="checkbox"
+              checked={showSubsolarDirection}
+              onChange={(e) => setShowSubsolarDirection(e.target.checked)}
+            />
+            {t("EOSC.showSubsolarDirection")}
+          </label>
+          <label>
+            <input
+              type="checkbox"
               checked={showNoQTMarkers}
               onChange={(e) => setShowNoQTMarkers(e.target.checked)}
             />
@@ -206,6 +250,14 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
               onChange={(e) => setApplyHDMaps(e.target.checked)}
             />
             {t("EOSC.applyHDMaps")}
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={applyRealisticAtmosphere}
+              onChange={(e) => setApplyRealisticAtmosphere(e.target.checked)}
+            />
+            {t("EOSC.applyRealisticAtmosphere")}
           </label>
         </div>
       </div>

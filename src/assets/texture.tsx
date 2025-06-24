@@ -31,6 +31,28 @@ import roughnessClio from "./bodies-roughness/clio.webp";
 import roughnessEuterpe from "./bodies-roughness/euterpe.webp";
 import roughnessHurston from "./bodies-roughness/hurston.webp";
 import roughnessMicroTech from "./bodies-roughness/microtech.webp";
+import emissionArcCorp from "./bodies-emissive/planet_arccorp_worn_glow_white_wide.png";
+import normalAberdeen from "./bodies-normal/aberdeen.webp";
+import normalArial from "./bodies-normal/arial.webp";
+import normalBloom from "./bodies-normal/bloom.webp";
+import normalCalliope from "./bodies-normal/calliope.webp";
+import normalCellin from "./bodies-normal/cellin.webp";
+import normalClio from "./bodies-normal/clio.webp";
+import normalCrusader from "./bodies-normal/crusader.webp";
+import normalDaymar from "./bodies-normal/daymar.webp";
+import normalEuterpe from "./bodies-normal/euterpe.webp";
+import normalHurston from "./bodies-normal/hurston.webp";
+import normalIta from "./bodies-normal/ita.webp";
+import normalLyria from "./bodies-normal/lyria.webp";
+import normalMagda from "./bodies-normal/magda.webp";
+import normalMicroTech from "./bodies-normal/microtech.webp";
+import normalMonox from "./bodies-normal/monox.webp";
+import normalPyroI from "./bodies-normal/pyro i.webp";
+import normalPyroIV from "./bodies-normal/pyro iv.webp";
+import normalPyroV from "./bodies-normal/pyro v.webp";
+import normalTerminus from "./bodies-normal/terminus.webp";
+import normalWala from "./bodies-normal/wala.webp";
+import normalYela from "./bodies-normal/yela.webp";
 import bodyHDAberdeen from "./bodies-hd/aberdeen.webp";
 import bodyHDAdir from "./bodies-hd/adir.webp";
 import bodyHDArcCorp from "./bodies-hd/arccorp.webp";
@@ -64,6 +86,8 @@ const texture: {
   bodyHD: Record<string, string>;
   ring: Record<string, string>;
   roughness: Record<string, string>;
+  emission: Record<string, string>;
+  normal: Record<string, string>;
 } = {
   body: {
     Aberdeen: bodyAberdeen,
@@ -103,6 +127,39 @@ const texture: {
     Euterpe: roughnessEuterpe,
     Hurston: roughnessHurston,
     microTech: roughnessMicroTech,
+  },
+  emission: {
+    ArcCorp: emissionArcCorp,
+  },
+  normal: {
+    Aberdeen: normalAberdeen,
+    Adir: undefined,
+    ArcCorp: undefined,
+    Arial: normalArial,
+    Bloom: normalBloom,
+    Calliope: normalCalliope,
+    Cellin: normalCellin,
+    Clio: normalClio,
+    Crusader: normalCrusader,
+    Daymar: normalDaymar,
+    Euterpe: normalEuterpe,
+    Fairo: undefined,
+    Fuego: undefined,
+    Hurston: normalHurston,
+    Ignis: undefined,
+    Ita: normalIta,
+    Lyria: normalLyria,
+    Magda: normalMagda,
+    microTech: normalMicroTech,
+    Monox: normalMonox,
+    "Pyro I": normalPyroI,
+    "Pyro IV": normalPyroIV,
+    "Pyro V": normalPyroV,
+    Terminus: normalTerminus,
+    Vatra: undefined,
+    Vuur: undefined,
+    Wala: normalWala,
+    Yela: normalYela,
   },
   bodyHD: {
     Aberdeen: bodyHDAberdeen,

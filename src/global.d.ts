@@ -26,6 +26,16 @@ interface CelestialBody {
   children: CelestialBody[];
   ringRadiusInner?: number;
   ringRadiusOuter?: number;
+  surfacePressureAtm?: number;
+  atmosphereHeightM?: number;
+  colorSkyNoon?: string;
+  colorSkyHorizon?: string;
+  colorSkyNight?: string;
+  atmosphereColorOverrideCoefficient?: number;
+  atmosphereWaveLengthR?: number;
+  atmosphereWaveLengthG?: number;
+  atmosphereWaveLengthB?: number;
+  atmosphereScatteringStrength?: number;
 }
 
 interface SCLocation {
@@ -212,7 +222,7 @@ interface SpvVehicleIndex {
     Url: string;
   };
   ProgressTracker: {
-    Status: "Concept" | "InProd" | "Released" | "OnHold";
+    Status: "Concept" | "InProd" | "Released" | "OnHold" | "NextPatch";
     Patch?: string;
     IsOnPT: boolean;
     ID: string;

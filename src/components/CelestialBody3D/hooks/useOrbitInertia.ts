@@ -1,11 +1,15 @@
 import { useRef, useState, useCallback } from "react";
 
-export function useOrbitInertia({ controlsRef, initialZoom, radius }: {
-  controlsRef: React.RefObject<any>,
-  initialZoom: number,
-  radius: number
+export function useOrbitInertia({
+  controlsRef,
+  initialDistance,
+  radius,
+}: {
+  controlsRef: React.RefObject<any>;
+  initialDistance: number;
+  radius: number;
 }) {
-  const [currentZoom, setCurrentZoom] = useState(initialZoom);
+  const [currentDistance, setCurrentDistance] = useState(initialDistance);
   const inertiaRef = useRef({
     lastAzimuthal: 0,
     lastPolar: 0,
@@ -19,7 +23,7 @@ export function useOrbitInertia({ controlsRef, initialZoom, radius }: {
 
   const handleControlsChange = useCallback(() => {
     if (controlsRef.current) {
-      setCurrentZoom(controlsRef.current.object.zoom);
+      setCurrentDistance(controlsRef.current.object.position.length());
       const controls = controlsRef.current;
       const now = performance.now();
       const azimuthal = controls.getAzimuthalAngle();
@@ -27,7 +31,8 @@ export function useOrbitInertia({ controlsRef, initialZoom, radius }: {
       if (inertiaRef.current.isUserInteracting) {
         const dt = (now - inertiaRef.current.lastTime) / 1000;
         if (dt > 0) {
-          inertiaRef.current.velocityAzimuthal = (azimuthal - inertiaRef.current.lastAzimuthal) / dt;
+          inertiaRef.current.velocityAzimuthal =
+            (azimuthal - inertiaRef.current.lastAzimuthal) / dt;
           inertiaRef.current.velocityPolar = (polar - inertiaRef.current.lastPolar) / dt;
         }
       }
@@ -58,15 +63,23 @@ export function useOrbitInertia({ controlsRef, initialZoom, radius }: {
       if (!controlsRef.current) return;
       const vA = Math.abs(inertiaRef.current.velocityAzimuthal);
       const vP = Math.abs(inertiaRef.current.velocityPolar);
-      const baseDampingA = 0.97, maxDampingA = 0.98;
-      const baseDampingP = 0.97, maxDampingP = 0.98;
+      const baseDampingA = 0.97,
+        maxDampingA = 0.98;
+      const baseDampingP = 0.97,
+        maxDampingP = 0.98;
       const sigmoid = (x: number) => 1 / (1 + Math.exp(-2.0 * (x - 0.2)));
       const dampingA = baseDampingA + (maxDampingA - baseDampingA) * sigmoid(vA);
       const dampingP = baseDampingP + (maxDampingP - baseDampingP) * sigmoid(vP);
-      const maxVA = 512 / currentZoom / radius;
-      const maxVP = 256 / currentZoom / radius;
-      inertiaRef.current.velocityAzimuthal = Math.min(Math.max(inertiaRef.current.velocityAzimuthal * dampingA, -maxVA), maxVA);
-      inertiaRef.current.velocityPolar = Math.min(Math.max(inertiaRef.current.velocityPolar * dampingP, -maxVP), maxVP);
+      const maxVA = (0.4 * (currentDistance - radius)) / radius;
+      const maxVP = (0.2 * (currentDistance - radius)) / radius;
+      inertiaRef.current.velocityAzimuthal = Math.min(
+        Math.max(inertiaRef.current.velocityAzimuthal * dampingA, -maxVA),
+        maxVA
+      );
+      inertiaRef.current.velocityPolar = Math.min(
+        Math.max(inertiaRef.current.velocityPolar * dampingP, -maxVP),
+        maxVP
+      );
       if (
         Math.abs(inertiaRef.current.velocityAzimuthal) < 0.0001 &&
         Math.abs(inertiaRef.current.velocityPolar) < 0.0001
@@ -76,7 +89,8 @@ export function useOrbitInertia({ controlsRef, initialZoom, radius }: {
         return;
       }
       controlsRef.current.setAzimuthalAngle(
-        controlsRef.current.getAzimuthalAngle() + inertiaRef.current.velocityAzimuthal * 0.016
+        controlsRef.current.getAzimuthalAngle() +
+          inertiaRef.current.velocityAzimuthal * 0.016
       );
       controlsRef.current.setPolarAngle(
         controlsRef.current.getPolarAngle() + inertiaRef.current.velocityPolar * 0.016
@@ -86,10 +100,10 @@ export function useOrbitInertia({ controlsRef, initialZoom, radius }: {
       inertiaRef.current.isAnimating = true;
     };
     animateInertia();
-  }, [controlsRef, currentZoom, radius]);
+  }, [controlsRef, currentDistance, radius]);
 
   return {
-    currentZoom,
+    currentDistance,
     handleControlsChange,
     onControlsStart,
     onControlsEnd,

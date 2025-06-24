@@ -259,37 +259,6 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
     }
   },
   {
-    "ClassName": "AEGS_Idris_K",
-    "Name": "Aegis Idris-K",
-    "Manufacturer": "Aegis Dynamics",
-    "Career": "Combat",
-    "Role": "Frigate",
-    "Size": 6,
-    "Cargo": 0,
-    "Type": "Ship",
-    "CommLink": {
-      "HasCommLink": true,
-      "Date": "2013-06-29",
-      "Url": "https://robertsspaceindustries.com/comm-link/transmission/13097-Idris-Corvette-Revealed"
-    },
-    "ProgressTracker": {
-      "Status": "InProd",
-      "IsOnPT": false,
-      "ID": null
-    },
-    "Store": {
-      "Url": null,
-      "IsPromotionOnly": false,
-      "IsLimitedSale": true,
-      "Buy": 1800.0
-    },
-    "PU": {
-      "HasPerf": false,
-      "IsPTUOnly": false,
-      "Buy": null
-    }
-  },
-  {
     "ClassName": "AEGS_Idris_M",
     "Name": "Aegis Idris-M",
     "Manufacturer": "Aegis Dynamics",
@@ -312,7 +281,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": "https://robertsspaceindustries.com/pledge/ships/aegis-idris/Idris-M",
       "IsPromotionOnly": true,
       "IsLimitedSale": false,
-      "Buy": 1000.0
+      "Buy": null
     },
     "PU": {
       "Patch": "4.1.1",
@@ -897,7 +866,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": null
+      "Buy": 350
     },
     "PU": {
       "Patch": "4.1.1",
@@ -1916,6 +1885,9 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
+      "IsShipOfTheMonth": true,
+      "ShipOfTheMonth": "June 2025",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20582-June-2025-Subscriber-Promotions",
       "Buy": 375.0
     },
     "PU": {
@@ -3222,6 +3194,9 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
+      "IsShipOfTheMonth": true,
+      "ShipOfTheMonth": "June 2025",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20582-June-2025-Subscriber-Promotions",
       "Buy": 235.0
     },
     "PU": {
@@ -3763,6 +3738,39 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "Buy": 18711000.0
+    }
+  },
+  {
+    "ClassName": "ESPR_Prowler_Utility",
+    "Name": "Esperia Prowler Utility",
+    "Manufacturer": "Esperia",
+    "Career": "Transporter",
+    "Role": "Medium Freight",
+    "Size": 3,
+    "Cargo": 32,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 300
+    },
+    "PU": {
+      "Patch": "4.2.0",
+      "Date": "2025-06-19",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "Buy": null
     }
   },
   {
@@ -5044,7 +5052,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": "https://robertsspaceindustries.com/comm-link/transmission/20213-MISC-Starlancer-TAC",
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 330
+      "Buy": 375
     },
     "PU": {
       "Patch": "4.1.1",
@@ -5113,7 +5121,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": null
+      "Buy": 290
     },
     "PU": {
       "Patch": "4.1.1",
@@ -5516,7 +5524,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "IsShipOfTheMonth": true,
+      "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "May 2025",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20568-May-2025-Subscriber-Promotions",
       "Buy": 475.0
@@ -5551,7 +5559,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "IsShipOfTheMonth": true,
+      "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "May 2025",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20568-May-2025-Subscriber-Promotions",
       "Buy": 435.0

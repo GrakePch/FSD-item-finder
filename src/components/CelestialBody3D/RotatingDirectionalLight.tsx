@@ -38,14 +38,14 @@ export default function RotatingDirectionalLight({
     return v.normalize();
   }, [lightSourceRelativePosition]);
 
-  // Only update the light position every 10 seconds or on first render
+  // Only update the light position every 0.1 seconds or on first render
   const lastUpdateRef = useRef<number>(0);
   useFrame(() => {
     const now = Date.now();
     if (
       dirLightRef.current &&
       celestialBody.hoursPerCycle &&
-      (now - lastUpdateRef.current > 10000 || lastUpdateRef.current === 0)
+      (now - lastUpdateRef.current > 100 || lastUpdateRef.current === 0)
     ) {
       lastUpdateRef.current = now;
       const deg = -getRotationDeg(

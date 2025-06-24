@@ -3,7 +3,7 @@ import * as THREE from "three";
 export default function OrbitCircle({
   centerY,
   radius,
-  color = "#fff",
+  color = "#888",
 }: {
   centerY: number;
   radius: number;

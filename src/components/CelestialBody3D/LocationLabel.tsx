@@ -8,6 +8,7 @@ import locationIcon from "../../assets/locationIcon";
 import LocationIconColor from "../../assets/locationIconColor";
 import { locationNameToI18nKey, toUrlKey } from "../../utils";
 import { useThree, useFrame } from "@react-three/fiber";
+import { isLocationInDaylight } from "./utilsSunriseSunSetCalc";
 
 export default function LocationLabel({
   loc,
@@ -18,10 +19,12 @@ export default function LocationLabel({
 }) {
   const { t } = useTranslation();
   const [occluded, setOccluded] = useState(false);
+  const [isDaylight, setIsDaylight] = useState(true);
   const navigate = useNavigate();
   const handleClick = (e: any) => {
     e.stopPropagation();
-    navigate(`/l/${toUrlKey(loc.name)}`);
+    const search = window.location.search;
+    navigate(`/l/${toUrlKey(loc.name)}${search}`);
   };
   const isLarge =
     loc.type === "Landing zone" ||
@@ -33,11 +36,10 @@ export default function LocationLabel({
   // Label position
   const labelPos = new THREE.Vector3(loc.coordinateX, loc.coordinateZ, -loc.coordinateY);
 
-  // More efficient occlusion check
   useFrame(() => {
-    // Camera direction (normalized)
-    const dir = new THREE.Vector3();
-    camera.getWorldDirection(dir);
+    // Ray direction (normalized)
+    const dir = new THREE.Vector3().copy(labelPos);
+    dir.sub(camera.position).normalize();
     // Compute t for closest point on the line to the origin
     const t = -labelPos.dot(dir);
     // Closest point on the line
@@ -49,6 +51,9 @@ export default function LocationLabel({
     // Occluded if distance < sphere radius AND label is on the back
     const shouldOcclude = dist < bodyRadius && isBack;
     if (shouldOcclude !== occluded) setOccluded(shouldOcclude);
+
+    /* Check if the label is in daylight */
+    setIsDaylight(isLocationInDaylight(loc));
   });
 
   return (
@@ -56,7 +61,9 @@ export default function LocationLabel({
       position={[loc.coordinateX, loc.coordinateZ, -loc.coordinateY]}
       center
       occlude={false} /* Implemented a more efficient occlusion check */
-      className={`location-label ${occluded ? "occluded" : ""} ${isLarge ? "large" : ""}`}
+      className={`location-label ${occluded ? "occluded" : ""} ${
+        isLarge ? "large" : ""
+      } ${!isDaylight ? "night" : ""}`}
       zIndexRange={[500, 0]}
     >
       <div className="wrapper" onClick={handleClick}>
@@ -67,7 +74,7 @@ export default function LocationLabel({
               loc.private === 1 ? "#f74a55" : LocationIconColor[loc.type] || "#78909c",
           }}
         >
-          <Icon path={locationIcon[loc.type] || locationIcon.Outpost} color="#fff" />
+          <Icon path={locationIcon[loc.type] || locationIcon.Outpost} />
         </div>
         <p className="name">
           {t(`Location.${locationNameToI18nKey(loc.name)}`, { defaultValue: loc.name })}

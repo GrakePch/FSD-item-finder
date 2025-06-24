@@ -1,0 +1,60 @@
+@property --sunrise-hour-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 90deg;
+}
+
+.ClockFace {
+    aspect-ratio: 1 / 1;
+    height: 10rem;
+    position: relative;
+    margin: 0 auto;
+
+    --width: 100%;
+    --color-day: #dceaff;
+    --color-dawn: #af5e53;
+    --color-dusk: #af5e53;
+    --color-night: #192029;
+    --sunrise-hour-angle: 60deg;
+    --hand-direction: 0deg;
+    --hand-width: 6px;
+    --hand-width-half: calc(var(--hand-width) / 2);
+}
+
+.ClockFace>* {
+    position: absolute;
+}
+
+.ClockFace>.face {
+    top: calc(calc(100% - var(--width)) / 2);
+    left: calc(calc(100% - var(--width)) / 2);
+    width: var(--width);
+    aspect-ratio: 1 / 1;
+    background: conic-gradient(var(--color-day) 0deg,
+            var(--color-day) var(--sunrise-hour-angle),
+            var(--color-dusk) min(180deg, var(--sunrise-hour-angle) + 6deg),
+            var(--color-night) min(180deg, var(--sunrise-hour-angle) + 12deg),
+            var(--color-night) max(180deg, 360deg - var(--sunrise-hour-angle) - 12deg),
+            var(--color-dawn) max(180deg, 360deg - var(--sunrise-hour-angle) - 6deg),
+            var(--color-day) calc(360deg - var(--sunrise-hour-angle)),
+            var(--color-day) 0deg);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 0 #000;
+    transition: --sunrise-hour-angle .2s ease-out;
+}
+
+.ClockFace>.hand {
+    bottom: calc(50% - var(--hand-width-half));
+    left: calc(50% - var(--hand-width-half));
+    width: var(--hand-width);
+    height: calc(0.42 * var(--width));
+    background-color: #222222;
+    backdrop-filter: invert(1);
+    transform-origin: 50% calc(100% - var(--hand-width-half));
+    transform: rotate(var(--hand-direction));
+    box-shadow: 0 0 2px 0 #000;
+    border-radius: var(--hand-width-half);
+    border: 2px solid #ffffff;
+    /* transition: transform .2s ease-out; */
+}

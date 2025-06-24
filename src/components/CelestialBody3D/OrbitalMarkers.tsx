@@ -1,16 +1,16 @@
 import { Html } from "@react-three/drei";
-import * as THREE from "three";
 import { useThree, useFrame } from "@react-three/fiber";
 import { useState } from "react";
+import { Vector3 } from "three";
 
 /* The unit vectors for the orbital markers (OMs) in the three.js's coordinate system. */
 export const omCoordinates = [
-  [0, +1, 0],
-  [0, -1, 0],
-  [0, 0, -1],
-  [0, 0, +1],
-  [+1, 0, 0],
-  [-1, 0, 0],
+  [0, +1, 0], // OM-1: +Y
+  [0, -1, 0], // OM-2: -Y
+  [0, 0, -1], // OM-3: -Z
+  [0, 0, +1], // OM-4: +Z
+  [+1, 0, 0], // OM-5: +X
+  [-1, 0, 0], // OM-6: -X
 ];
 
 function OMLabel({
@@ -26,13 +26,13 @@ function OMLabel({
 }) {
   const { camera } = useThree();
   const [occluded, setOccluded] = useState(false);
-  const labelPos = new THREE.Vector3(...position);
+  const labelPos = new Vector3(...position);
 
   useFrame(() => {
-    const dir = new THREE.Vector3();
-    camera.getWorldDirection(dir);
+    const dir = new Vector3().copy(labelPos);
+    dir.sub(camera.position).normalize();
     const t = -labelPos.dot(dir);
-    const closest = new THREE.Vector3().copy(labelPos).add(dir.clone().multiplyScalar(t));
+    const closest = new Vector3().copy(labelPos).add(dir.clone().multiplyScalar(t));
     const dist = closest.length();
     const isBack = dir.dot(labelPos) > 0;
     const shouldOcclude = dist < bodyRadius && isBack;
