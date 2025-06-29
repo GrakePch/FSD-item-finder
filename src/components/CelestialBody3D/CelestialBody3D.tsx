@@ -62,13 +62,13 @@ export default function CelestialBody3D({
   const bodyTextureEmission = texture.emission[celestialBody.name];
   const bodyTextureNormal = texture.normal[celestialBody.name];
   const radius = celestialBody.bodyRadius || 1;
-  const distance = 8 * radius;
+  const distance = 5 * radius;
   const distanceMax = 16 * radius;
   const distanceMin = 1.5 * radius;
   const cameraPosition: [number, number, number] = [distance, 0, 0];
   const cameraFOVY = (60 / 16) * 9;
   const cameraNear = 0.09 * radius;
-  const cameraFar = 50000000;
+  const cameraFar = 70000000;
   const themeColor =
     celestialBody.themeColorR && celestialBody.themeColorG && celestialBody.themeColorB
       ? `rgb(${celestialBody.themeColorR}, ${celestialBody.themeColorG}, ${celestialBody.themeColorB})`
