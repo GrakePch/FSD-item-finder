@@ -1,8 +1,10 @@
 import { useNavigate, useSearchParams } from "react-router";
 import "./SetButton.css";
 import TagCurrent from "../TagCurrent/TagCurrent";
+import { useTranslation } from "react-i18next";
 
 const SetButton = ({ subType, item, selfKey }) => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const tIcon = {
@@ -27,7 +29,7 @@ const SetButton = ({ subType, item, selfKey }) => {
     >
       <p>{tIcon[subType]}</p>
       <p className="zh">
-        {item.name_zh_Hans}
+        {t(item.key, { ns: "items", lng: "zh" })}
         {item.key === selfKey && <TagCurrent />}
       </p>
       {item.price_min_max.buy_min && item.price_min_max.buy_min < Infinity ? (

@@ -179,10 +179,10 @@ const TerminalInfo = () => {
                   .filter(
                     (item) =>
                       !searchString ||
-                      item.name
+                      t(item.key, { ns: "items", lng: "en" })
                         .toLocaleLowerCase()
                         .includes(searchString.toLocaleLowerCase()) ||
-                      item.name_zh_Hans
+                      t(item.key, { ns: "items", lng: "zh" })
                         ?.toLocaleLowerCase()
                         ?.includes(searchString.toLocaleLowerCase())
                   )
@@ -225,8 +225,10 @@ const TerminalInfo = () => {
                           </div>
                         )}
                         <div className="names">
-                          <p className="zh">{item.name_zh_Hans || item.name}</p>
-                          <p className="en">{item.name}</p>
+                          <p className="zh">
+                            {t(item.key, { ns: "items", lng: "zh" }) || item.name}
+                          </p>
+                          <p className="en">{t(item.key, { ns: "items", lng: "en" })}</p>
                         </div>
                         {attrClass && attrGrade && (
                           <div

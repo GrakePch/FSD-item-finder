@@ -1,0 +1,632 @@
+{
+    "vehicle_NameANVL_Hawk": {
+        "id": [
+            99
+        ]
+    },
+    "vehicle_NameANVL_Arrow": {
+        "id": [
+            20
+        ]
+    },
+    "vehicle_NameANVL_Gladiator": {
+        "id": [
+            92
+        ]
+    },
+    "vehicle_NameANVL_Hurricane": {
+        "id": [
+            107
+        ]
+    },
+    "vehicle_NameANVL_Terrapin": {
+        "id": [
+            191
+        ]
+    },
+    "vehicle_NameANVL_Valkyrie": {
+        "id": [
+            194
+        ]
+    },
+    "vehicle_NameANVL_Ballista": {
+        "id": [
+            30
+        ]
+    },
+    "vehicle_nameANVL_Carrack": {
+        "id": [
+            39
+        ]
+    },
+    "vehicle_NameANVL_Spartan": {
+        "id": [
+            177
+        ]
+    },
+    "vehicle_NameANVL_Centurion": {
+        "id": [
+            44
+        ]
+    },
+    "vehicle_NameANVL_C8_Pisces": {
+        "id": [
+            36
+        ]
+    },
+    "vehicle_NameANVL_C8R_Pisces_Rescue": {
+        "id": [
+            37
+        ]
+    },
+    "vehicle_NameXIAN_Nox": {
+        "id": [
+            138
+        ]
+    },
+    "vehicle_NameXIAN_Scout": {
+        "id": [
+            111
+        ]
+    },
+    "vehicle_NameBanu_Defender": {
+        "id": [
+            66
+        ]
+    },
+    "vehicle_NameCNOU_Mustang_Delta": {
+        "id": [
+            131
+        ]
+    },
+    "vehicle_NameCNOU_Mustang_Gamma": {
+        "id": [
+            132
+        ]
+    },
+    "vehicle_NameCNOU_HoverQuad": {
+        "id": [
+            101
+        ]
+    },
+    "vehicle_NameESPR_Prowler": {
+        "id": [
+            149
+        ]
+    },
+    "vehicle_NameVNCL_Blade": {
+        "id": [
+            33
+        ]
+    },
+    "vehicle_NameESPR_Talon": {
+        "id": [
+            189
+        ]
+    },
+    "vehicle_NameESPR_Talon_Shrike": {
+        "id": [
+            190
+        ]
+    },
+    "vehicle_NameMISC_Razor_EX": {
+        "id": [
+            157
+        ]
+    },
+    "vehicle_NameMISC_Razor_LX": {
+        "id": [
+            158
+        ]
+    },
+    "vehicle_NameMisc_Fury": {
+        "id": [
+            84
+        ]
+    },
+    "vehicle_NameMisc_Fury_LX": {
+        "id": [
+            85
+        ]
+    },
+    "vehicle_NameORIG_300i": {
+        "id": [
+            4
+        ]
+    },
+    "vehicle_NameORIG_315p": {
+        "id": [
+            5
+        ]
+    },
+    "vehicle_NameORIG_325a": {
+        "id": [
+            6
+        ]
+    },
+    "vehicle_NameORIG_350r": {
+        "id": [
+            7
+        ]
+    },
+    "vehicle_NameORIG_600i_Touring": {
+        "id": [
+            11
+        ]
+    },
+    "vehicle_NameORIG_100i": {
+        "id": [
+            1
+        ]
+    },
+    "vehicle_NameORIG_135c": {
+        "id": [
+            3
+        ]
+    },
+    "vehicle_NameORIG_890Jump": {
+        "id": [
+            13
+        ]
+    },
+    "vehicle_NameORIG_400i": {
+        "id": [
+            8
+        ]
+    },
+    "vehicle_NameAEGS_Hammerhead": {
+        "id": [
+            97
+        ]
+    },
+    "vehicle_NameAEGS_Avenger_Stalker": {
+        "id": [
+            26
+        ]
+    },
+    "vehicle_NameAEGS_Avenger_Titan": {
+        "id": [
+            27
+        ]
+    },
+    "vehicle_NameAEGS_Avenger_Warlock": {
+        "id": [
+            29
+        ]
+    },
+    "vehicle_NameAEGS_Eclipse": {
+        "id": [
+            69
+        ]
+    },
+    "vehicle_NameAEGS_Gladius": {
+        "id": [
+            93
+        ]
+    },
+    "vehicle_NameAEGS_Reclaimer": {
+        "id": [
+            159
+        ]
+    },
+    "vehicle_NameAEGS_Retaliator_Bomber": {
+        "id": [
+            167
+        ]
+    },
+    "vehicle_NameAEGS_Sabre": {
+        "id": [
+            170
+        ]
+    },
+    "vehicle_NameAEGS_Vanguard": {
+        "id": [
+            199
+        ]
+    },
+    "vehicle_NameAEGS_Vanguard_Hoplite": {
+        "id": [
+            197
+        ]
+    },
+    "vehicle_NameAEGS_Vanguard_Harbinger": {
+        "id": [
+            196
+        ]
+    },
+    "vehicle_NameAEGS_Vanguard_Sentinel": {
+        "id": [
+            198
+        ]
+    },
+    "vehicle_NameAEGS_Redeemer": {
+        "id": [
+            161
+        ]
+    },
+    "vehicle_NameAEGS_Sabre_Comet": {
+        "id": [
+            171
+        ]
+    },
+    "vehicle_NameAEGS_Gladius_Valiant": {
+        "id": [
+            95
+        ]
+    },
+    "vehicle_NameARGO_Mole": {
+        "id": [
+            122
+        ]
+    },
+    "vehicle_NameARGO_MPUV": {
+        "id": [
+            125
+        ]
+    },
+    "vehicle_NameARGO_MPUV_Transport": {
+        "id": [
+            126
+        ]
+    },
+    "vehicle_NameARGO_RAFT": {
+        "id": [
+            151
+        ]
+    },
+    "vehicle_NameCNOU_Mustang_Beta": {
+        "id": [
+            130
+        ]
+    },
+    "vehicle_NameCNOU_Mustang": {
+        "id": [
+            128
+        ]
+    },
+    "vehicle_NameCNOU_Nomad": {
+        "id": [
+            136
+        ]
+    },
+    "vehicle_NameDRAK_Buccaneer": {
+        "id": [
+            34
+        ]
+    },
+    "vehicle_NameDRAK_Caterpillar": {
+        "id": [
+            41
+        ]
+    },
+    "vehicle_NameDRAK_Cutlass_Black": {
+        "id": [
+            52
+        ]
+    },
+    "vehicle_NameDRAK_Cutlass_Blue": {
+        "id": [
+            54
+        ]
+    },
+    "vehicle_NameDRAK_Cutlass_Red": {
+        "id": [
+            55
+        ]
+    },
+    "vehicle_NameDRAK_Herald": {
+        "id": [
+            100
+        ]
+    },
+    "vehicle_NameDRAK_Cutlass_Steel": {
+        "id": [
+            56
+        ]
+    },
+    "vehicle_NameDRAK_Mule": {
+        "id": [
+            127
+        ]
+    },
+    "vehicle_NameDRAK_Cutter": {
+        "id": [
+            57
+        ]
+    },
+    "vehicle_NameDRAK_Corsair": {
+        "id": [
+            50
+        ]
+    },
+    "vehicle_NameMISC_Razor": {
+        "id": [
+            156
+        ]
+    },
+    "vehicle_NameMisc_Fury_Miru": {
+        "id": [
+            86
+        ]
+    },
+    "vehicle_NameMISC_Freelancer": {
+        "id": [
+            80
+        ]
+    },
+    "vehicle_NameMISC_Freelancer_DUR": {
+        "id": [
+            81
+        ]
+    },
+    "vehicle_NameMISC_Freelancer_MAX": {
+        "id": [
+            82
+        ]
+    },
+    "vehicle_NameMISC_Freelancer_MIS": {
+        "id": [
+            83
+        ]
+    },
+    "vehicle_NameMISC_Reliant": {
+        "id": [
+            162
+        ]
+    },
+    "vehicle_NameMISC_Starfarer": {
+        "id": [
+            182
+        ]
+    },
+    "vehicle_NameMISC_Starfarer_Gemini": {
+        "id": [
+            183
+        ]
+    },
+    "vehicle_NameMISC_Prospector": {
+        "id": [
+            148
+        ]
+    },
+    "vehicle_NameMISC_Reliant_Mako": {
+        "id": [
+            163
+        ]
+    },
+    "vehicle_NameMISC_Reliant_Sen": {
+        "id": [
+            164
+        ]
+    },
+    "vehicle_NameMISC_Reliant_Tana": {
+        "id": [
+            165
+        ]
+    },
+    "vehicle_NameMISC_Hull_A": {
+        "id": [
+            102
+        ]
+    },
+    "vehicle_NameMISC_Hull_C": {
+        "id": [
+            104
+        ]
+    },
+    "vehicle_NameDRAK_Vulture": {
+        "id": [
+            201
+        ]
+    },
+    "vehicle_NameORIG_125a": {
+        "id": [
+            2
+        ]
+    },
+    "vehicle_NameRSI_Aurora_ES": {
+        "id": [
+            22
+        ]
+    },
+    "vehicle_NameRSI_Aurora_MR": {
+        "id": [
+            25
+        ]
+    },
+    "vehicle_NameRSI_Ursa_Rover": {
+        "id": [
+            192
+        ]
+    },
+    "vehicle_NameRSI_Aurora_LX": {
+        "id": [
+            24
+        ]
+    },
+    "vehicle_NameRSI_Mantis": {
+        "id": [
+            119
+        ]
+    },
+    "vehicle_NameRSI_Aurora_CL": {
+        "id": [
+            21
+        ]
+    },
+    "vehicle_NameRSI_Aurora_LN": {
+        "id": [
+            23
+        ]
+    },
+    "vehicle_NameRSI_Scorpius": {
+        "id": [
+            174
+        ]
+    },
+    "vehicle_NameRSI_Scorpius_Interdiction": {
+        "id": [
+            175
+        ]
+    },
+    "vehicle_NameTMBL_Cyclone_AA": {
+        "id": [
+            61
+        ]
+    },
+    "vehicle_NameTMBL_Cyclone": {
+        "id": [
+            60
+        ]
+    },
+    "vehicle_NameTMBL_Cyclone_RC": {
+        "id": [
+            63
+        ]
+    },
+    "vehicle_NameTMBL_Cyclone_RN": {
+        "id": [
+            64
+        ]
+    },
+    "vehicle_NameTMBL_Cyclone_TR": {
+        "id": [
+            65
+        ]
+    },
+    "vehicle_NameTMBL_Cyclone_MT": {
+        "id": [
+            62
+        ]
+    },
+    "vehicle_NameCRUS_A1_Spirit": {
+        "id": [
+            178
+        ]
+    },
+    "vehicle_NameCRUS_C1_Spirit": {
+        "id": [
+            179
+        ]
+    },
+    "vehicle_NameXNAA_SantokYai": {
+        "id": [
+            173
+        ]
+    },
+    "vehicle_NameDRAK_Cutter_Scout": {
+        "id": [
+            58
+        ]
+    },
+    "vehicle_NameGAMA_Syulen": {
+        "id": [
+            188
+        ]
+    },
+    "vehicle_NameORIG_X1_Velocity": {
+        "id": [
+            204
+        ]
+    },
+    "vehicle_NameORIG_X1_Force": {
+        "id": [
+            203
+        ]
+    },
+    "vehicle_NameORIG_X1": {
+        "id": [
+            202
+        ]
+    },
+    "vehicle_NameARGO_SRV": {
+        "id": [
+            181
+        ]
+    },
+    "vehicle_NameDRAK_Cutter_Rambler": {
+        "id": [
+            59
+        ]
+    },
+    "vehicle_NameTMBL_Storm_AA": {
+        "id": [
+            186
+        ]
+    },
+    "vehicle_NameTMBL_Storm": {
+        "id": [
+            184
+        ]
+    },
+    "vehicle_NameAEGS_Sabre_Firebird": {
+        "id": [
+            228
+        ]
+    },
+    "vehicle_NameARGO_ATLS": {
+        "id": [
+            233
+        ]
+    },
+    "vehicle_NameMRAI_Pulse": {
+        "id": [
+            225
+        ]
+    },
+    "vehicle_NameRSI_URSA_Medivac": {
+        "id": [
+            229
+        ]
+    },
+    "vehicle_NameARGO_MPUV_Tractor": {
+        "id": [
+            227
+        ]
+    },
+    "vehicle_NameAEGS_Sabre_Peregrine": {
+        "id": [
+            232
+        ]
+    },
+    "vehicle_NameRSI_Zeus_ES": {
+        "id": [
+            205
+        ]
+    },
+    "vehicle_NameRSI_Zeus_CL": {
+        "id": [
+            207
+        ]
+    },
+    "vehicle_nameMISC_Starlancer_MAX": {
+        "id": [
+            242
+        ]
+    },
+    "vehicle_NameARGO_CSV_Cargo": {
+        "id": [
+            240
+        ]
+    },
+    "vehicle_NameRSI_Lynx": {
+        "id": [
+            116
+        ]
+    },
+    "vehicle_NameMRAI_Pulse_LX": {
+        "id": [
+            226
+        ]
+    },
+    "vehicle_NameCRUS_Intrepid": {
+        "id": [
+            236
+        ]
+    },
+    "vehicle_NameANVL_Terrapin_Medic": {
+        "id": [
+            248
+        ]
+    }
+}

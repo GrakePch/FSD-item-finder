@@ -57,8 +57,8 @@ const SearchResultList = ({ results }: { results: Item[] }) => {
               </div>
             )}
             <div className="names">
-              <p className="zh">{item.name_zh_Hans || item.name}</p>
-              <p className="en">{item.name}</p>
+              <p className="zh">{t(item.key, { ns: "items" })}</p>
+              <p className="en">{t(item.key, { ns: "items", lng: "en" })}</p>
             </div>
             {attrClass && attrGrade && (
               <div

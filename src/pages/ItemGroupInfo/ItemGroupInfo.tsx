@@ -81,9 +81,9 @@ const ItemGroupInfo = () => {
       <div className="ItemGroupInfo">
         <div className="item-info">
           <h1 className="zh">
-            {firstVariant?.name_zh_Hans} <span>等 {listVariants.length} 个同类物品</span>
+            {t(firstVariant?.key, { ns: "items", lng: "zh" })} <span>等 {listVariants.length} 个同类物品</span>
           </h1>
-          <h2 className="en">{firstVariant?.name} ...</h2>
+          <h2 className="en">{t(firstVariant?.key, { ns: "items", lng: "en" })} ...</h2>
           <div className="types">
             <p className="type">
               {t("FilterType." + typeCapitalizedToKey(item.type || "unknown"))}
@@ -115,8 +115,8 @@ const ItemGroupInfo = () => {
                 navigate(`/i/${vItem.key}?${searchParams.toString()}`);
               }}
             >
-              <ItemColorIcon name={vItem.name} />
-              <p className="name">{vItem.name_zh_Hans || vItem.name}</p>
+              <ItemColorIcon name={t(vItem.key, { ns: "items", lng: "en" })} />
+              <p className="name">{t(vItem.key, { ns: "items", lng: "zh" }) || vItem.name}</p>
               {vItem.price_min_max.buy_min && vItem.price_min_max.buy_min < Infinity ? (
                 <p className="price">¤ {vItem.price_min_max.buy_min} 起</p>
               ) : (

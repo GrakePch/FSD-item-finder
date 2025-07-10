@@ -57,8 +57,8 @@ const ItemInfo = () => {
         <div className="info-and-image">
           <div className="item-info">
             <div>
-              <h1 className="zh">{item.name_zh_Hans || item.name}</h1>
-              <h2 className="en">{item.name}</h2>
+              <h1 className="zh">{t(item.key, { ns: "items" })}</h1>
+              <h2 className="en">{t(item.key, { ns: "items", lng: "en" })}</h2>
             </div>
             <div className="types">
               <button className="type" onClick={() => handleTypeClick(item.type, "")}>
@@ -76,9 +76,7 @@ const ItemInfo = () => {
                 Object.entries(item.attributes).map(([aid, v]) => (
                   <div key={aid} className="attribute">
                     <p>{t("UEXAttribute." + aid)}</p>
-                    <p>
-                      {t("UEXAttributeValue." + toI18nKey(v), { defaultValue: v, })}
-                    </p>
+                    <p>{t("UEXAttributeValue." + toI18nKey(v), { defaultValue: v })}</p>
                   </div>
                 ))}
             </div>
@@ -177,9 +175,10 @@ const ItemInfo = () => {
                         }
                   }
                 >
-                  <ItemColorIcon name={vItem.name} />
+                  <ItemColorIcon name={t(vItem.key, { ns: "items", lng: "en" })} />
                   <p className="name">
-                    {vItem.name_zh_Hans || vItem.name}
+                    {t(vItem.key, { ns: "items", lng: "zh" }) ||
+                      t(vItem.key, { ns: "items", lng: "en" })}
                     {item.key === vItem.key && <TagCurrent />}
                   </p>
                   {vItem.price_min_max.buy_min &&

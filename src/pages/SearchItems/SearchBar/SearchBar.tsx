@@ -114,8 +114,8 @@ const SearchBar = ({
           _filterType ? (i.type + "." + i.sub_type).startsWith(_filterType) : true
         )) {
         if (
-          item.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase()) ||
-          item.name_zh_Hans?.toLocaleLowerCase()?.includes(searchName.toLocaleLowerCase())
+          t(item.key, { ns: "items", lng: "en" }).toLocaleLowerCase().includes(searchName.toLocaleLowerCase()) ||
+          t(item.key, { ns: "items", lng: "zh" }).toLocaleLowerCase()?.includes(searchName.toLocaleLowerCase())
         ) {
           tempList.push(item);
         }

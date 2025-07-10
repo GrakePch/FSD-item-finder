@@ -1,5 +1,6 @@
 import { fetchWithCache } from "./apiFetch";
-import itemsUexIdsAndI18n from "../data/items_uex_ids_and_i18n.json";
+import itemsUexIds from "../data/key_to_uex_id/itemkey_id.json";
+import itemsTypes from "../data/key_to_uex_id/item_type.json";
 import { getItemUexFormat, mapToUEXTypeSubType, date4_0 } from "../utils";
 
 export async function fetchAndProcessItems(): Promise<ItemDictionary> {
@@ -27,12 +28,13 @@ export async function fetchAndProcessItems(): Promise<ItemDictionary> {
 
   /* Process to get the final results */
   const dictItems: ItemDictionary = {};
-  for (const [key, uexIDsI18nTypes] of Object.entries(
-    itemsUexIdsAndI18n as KeyToUexIdI18nTypes
-  ))
+  for (const [key, uexIdsInfo] of Object.entries(itemsUexIds as KeyToUexId))
     if (!key.startsWith("vehicle_Name")) {
-      const firstId = uexIDsI18nTypes.uex_ids?.[0] as number;
+      const firstId = uexIdsInfo.id?.[0] as number;
       let itemUexFormat = getItemUexFormat(firstId);
+      let localTypesInfo = (itemsTypes as KeyWithTypesInfo).find(
+        (tInfo) => tInfo.key === key
+      );
       let type = itemUexFormat?.section;
       let subType = itemUexFormat?.category;
       if (subType == "Jump Modules") {
@@ -41,15 +43,15 @@ export async function fetchAndProcessItems(): Promise<ItemDictionary> {
         type = "Armor";
       }
       if (!type || !subType) {
-        let remapped = mapToUEXTypeSubType(uexIDsI18nTypes.type);
+        let remapped = mapToUEXTypeSubType(localTypesInfo?.Type);
         type = type || remapped[0];
         subType = subType || remapped[1];
       }
-      if (type === null && !uexIDsI18nTypes.uex_ids) continue;
+      if (type === null && !uexIdsInfo.id) continue;
       dictItems[key] = {
         key: key,
-        name: uexIDsI18nTypes.en || key,
-        name_zh_Hans: uexIDsI18nTypes.zh_Hans || key,
+        name: key, // TODO: remove this
+        name_zh_Hans: key, // TODO: remove this
         type: type,
         sub_type: subType,
         screenshot: itemUexFormat?.screenshot,
@@ -67,8 +69,8 @@ export async function fetchAndProcessItems(): Promise<ItemDictionary> {
         attributes: itemUexFormat?.attributes,
       } as Item;
       let optionDict = {};
-      if (uexIDsI18nTypes.uex_ids)
-        for (const id of uexIDsI18nTypes.uex_ids) {
+      if (uexIdsInfo.id)
+        for (const id of uexIdsInfo.id) {
           if (!dictSimpleItems[id]) continue;
           for (const option of dictSimpleItems[id].options) {
             if (!optionDict[option.id_terminal]) {
@@ -116,6 +118,6 @@ export async function fetchAndProcessItems(): Promise<ItemDictionary> {
       rent_max: Math.max(...pricesRent) || null,
     } as PriceMinMax;
   });
-  
+
   return dictItems;
 }

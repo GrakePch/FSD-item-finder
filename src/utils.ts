@@ -4,6 +4,7 @@ import typeMap from "./data/type_map_full_items.json";
 import bodies from "./data/bodies.json";
 import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
 import attributes from "./data/categories_attributes.json";
+import itemsNameI18nEn from "./i18n/items/en.json";
 
 export function isAscii(char: string): boolean {
   const code = char[0].charCodeAt(0);
@@ -68,7 +69,7 @@ export function getVariants(key: string, itemsData: ItemDictionary) {
   if (!key) return [];
   if (!itemsData[key]) return [];
 
-  let thisName = itemsData[key].name;
+  let thisName = itemsNameI18nEn[key] || itemsData[key].name;
   let thisSubType = itemsData[key].sub_type;
   if (
     [
@@ -86,7 +87,7 @@ export function getVariants(key: string, itemsData: ItemDictionary) {
   return Object.values(itemsData)
     .sort((a, b) => a.key.localeCompare(b.key))
     .filter(
-      (item) => item.sub_type === thisSubType && item.name.split(" ")[0] === initial
+      (item) => item.sub_type === thisSubType && (itemsNameI18nEn[item.key] || item.name).split(" ")[0] === initial
     );
 }
 

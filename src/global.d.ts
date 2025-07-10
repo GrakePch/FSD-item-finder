@@ -188,6 +188,10 @@ type UexIdI18nTypes = {
 
 type KeyToUexIdI18nTypes = { [key: string]: UexIdI18nTypes };
 
+type KeyToUexId = { [key: string]: { id?: number[] } };
+
+type KeyWithTypesInfo = { key: string; Type: string; SubType: string }[];
+
 // Intermediary interfaces
 
 interface SimpleItemOptions {
