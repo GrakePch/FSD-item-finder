@@ -4239,7 +4239,7 @@
             892
         ]
     },
-    "item_Name_eld_shirt_04_misc_dec": {
+    "item_Name_eld_shirt_04_fleetweek2025_misc": {
         "id": [
             893
         ]
@@ -4667,12 +4667,6 @@
     "item_Name_cbd_hat_03_crusader_dec": {
         "id": [
             1002
-        ]
-    },
-    "item_Name_cbd_hat_03_drake_dec": {
-        "id": [
-            1003,
-            3680
         ]
     },
     "item_Name_cba_pants_01_01_01": {
@@ -7987,11 +7981,6 @@
             1707
         ]
     },
-    "item_Name_cbd_hat_03_anvil_dec": {
-        "id": [
-            1708
-        ]
-    },
     "item_Name_drn_jacket_01_01_13": {
         "id": [
             1709
@@ -8468,14 +8457,9 @@
             1860
         ]
     },
-    "item_Name_eld_shirt_04_anvil_dec": {
+    "item_Name_eld_shirt_04_fleetweek2025_anvil": {
         "id": [
             1820
-        ]
-    },
-    "item_Name_eld_shirt_04_drake_dec": {
-        "id": [
-            1861
         ]
     },
     "item_Namebehr_smg_ballistic_01_green01": {
@@ -8488,7 +8472,7 @@
             1863
         ]
     },
-    "item_Name_cbd_hat_03_argo_dec": {
+    "item_Name_cbd_hat_03_fleetweek2025argo": {
         "id": [
             1815
         ]
@@ -11001,11 +10985,6 @@
             3636
         ]
     },
-    "item_Name_vgl_armor_light_helmet_01_01_20": {
-        "id": [
-            3637
-        ]
-    },
     "item_Name_nvy_shoes_01_01_15": {
         "id": [
             3638
@@ -11111,16 +11090,6 @@
             2009
         ]
     },
-    "item_Name_rsi_deckcrew_armor_light_helmet_01_01_10": {
-        "id": [
-            1839
-        ]
-    },
-    "item_Name_rsi_deckcrew_undersuit_01_01_10": {
-        "id": [
-            2223
-        ]
-    },
     "item_Name_qrt_mantis_undersuit_01_01_01": {
         "id": [
             2222
@@ -11209,16 +11178,6 @@
     "item_NameMobiGlas_paint_20": {
         "id": [
             2610
-        ]
-    },
-    "item_NameCOOL_TYDT_S02_NightFall_SCItem": {
-        "id": [
-            933
-        ]
-    },
-    "Human_Nicknames_0218": {
-        "id": [
-            937
         ]
     },
     "item_decoration_armchair_highend_name": {
@@ -11321,24 +11280,14 @@
             3861
         ]
     },
+    "item_Name_vgl_armor_light_helmet_01_01_20": {
+        "id": [
+            3637
+        ]
+    },
     "item_Name_vgl_armor_light_core_01_01_19": {
         "id": [
             3658
-        ]
-    },
-    "item_Name_cds_armor_medium_arms_01_01_9tails01": {
-        "id": [
-            2330
-        ]
-    },
-    "item_Name_outlaw_legacy_armor_light_legs_01_01_11": {
-        "id": [
-            3319
-        ]
-    },
-    "item_Namebehr_optics_tsco_x4_s2": {
-        "id": [
-            3765
         ]
     },
     "item_NameQDRV_WETK_S01_Siren": {
@@ -11391,191 +11340,6 @@
             3971
         ]
     },
-    "item_Name_outlaw_legacy_armor_light_arms_01_04_02": {
-        "id": [
-            3656
-        ]
-    },
-    "item_Name_slaver_armor_medium_arms_01_01_13": {
-        "id": [
-            3991
-        ]
-    },
-    "item_Name_cds_combat_medium_helmet_03_01_01": {
-        "id": [
-            3655
-        ]
-    },
-    "item_Name_grin_utility_medium_helmet_01_01_9tails01": {
-        "id": [
-            2738
-        ]
-    },
-    "item_Name_outlaw_legacy_armor_light_helmet_01_04_03": {
-        "id": [
-            2202
-        ]
-    },
-    "item_Name_outlaw_legacy_armor_light_helmet_01_05_19": {
-        "id": [
-            2617
-        ]
-    },
-    "item_Name_outlaw_legacy_armor_medium_helmet_01_01_05": {
-        "id": [
-            2353
-        ]
-    },
-    "item_Name_outlaw_legacy_armor_medium_helmet_01_01_9tails01": {
-        "id": [
-            2725
-        ]
-    },
-    "item_Name_cds_legacy_armor_light_legs_01_01_9tails01": {
-        "id": [
-            2291
-        ]
-    },
-    "item_Name_outlaw_legacy_armor_medium_legs_01_01_9tails01": {
-        "id": [
-            2219
-        ]
-    },
-    "item_Name_uba_prison_backpack_01": {
-        "id": [
-            2346
-        ]
-    },
-    "item_Name_qrt_specialist_medium_core_01_01_9tails01": {
-        "id": [
-            2215
-        ]
-    },
-    "item_NameAlienAA_fragment_1_medium_damaged_a": {
-        "id": [
-            2643
-        ]
-    },
-    "text_collectible_type_datapad": {
-        "id": [
-            2803
-        ]
-    },
-    "item_NameMedal_1_damaged_b": {
-        "id": [
-            2720
-        ]
-    },
-    "item_NameMedal_1_damaged_c": {
-        "id": [
-            2628
-        ]
-    },
-    "item_NameMedal_1_worn_b": {
-        "id": [
-            2639
-        ]
-    },
-    "items_commodities_amioshiplague": {
-        "id": [
-            2232
-        ]
-    },
-    "items_commodities_aphorite": {
-        "id": [
-            3768
-        ]
-    },
-    "items_commodities_compboard": {
-        "id": [
-            2233
-        ]
-    },
-    "items_commodities_decaripod": {
-        "id": [
-            2234
-        ]
-    },
-    "items_commodities_degnousroot": {
-        "id": [
-            2235
-        ]
-    },
-    "items_commodities_dolivine": {
-        "id": [
-            3769
-        ]
-    },
-    "items_commodities_hadanite": {
-        "id": [
-            3992
-        ]
-    },
-    "items_commodities_heartofthewoods": {
-        "id": [
-            2236
-        ]
-    },
-    "items_commodities_prota": {
-        "id": [
-            2237
-        ]
-    },
-    "items_commodities_rantadung": {
-        "id": [
-            2238
-        ]
-    },
-    "items_commodities_revenantpod": {
-        "id": [
-            2239
-        ]
-    },
-    "items_commodities_spiral": {
-        "id": [
-            3770
-        ]
-    },
-    "item_Namebehr_optics_tsco_x16_s3": {
-        "id": [
-            2784
-        ]
-    },
-    "item_Namegmni_optics_tsco_x8_s3": {
-        "id": [
-            3767
-        ]
-    },
-    "item_Nameklwe_optics_disp_x8_s3": {
-        "id": [
-            2229
-        ]
-    },
-    "item_Nameksar_optics_tsco_x8_s3": {
-        "id": [
-            2167
-        ]
-    },
-    "item_Namelbco_optics_tsco_x16_s3": {
-        "id": [
-            2230
-        ]
-    },
-    "item_Namenvtc_optics_holo_x3_s1": {
-        "id": [
-            2231
-        ]
-    },
-    "item_Namenvtc_optics_tsco_x4_s2": {
-        "id": [
-            2307
-        ]
-    },
-    "item_Namenvtc_optics_tsco_x8_s3": {
-        "id": [
-            2172
-        ]
-    },
     "item_NameMODU_AEGS_Front_Cargo": {
         "id": [
             3714
@@ -11594,11 +11358,6 @@
     "item_NameMODU_AEGS_Rear_Torpedo_Placeholder": {
         "id": [
             3716
-        ]
-    },
-    "item_NameQDRV_WETK_S03_Pontes": {
-        "id": [
-            977
         ]
     },
     "item_NameDrink_bottle_gg_01_renew_a": {
@@ -11764,6 +11523,11 @@
     "item_Name_gys_helmet_02_01_01": {
         "id": [
             2856
+        ]
+    },
+    "items_commodities_decaripod": {
+        "id": [
+            2234
         ]
     },
     "items_commodities_fotiascrub": {
@@ -12308,6 +12072,11 @@
             4335
         ]
     },
+    "item_Name_outlaw_legacy_armor_light_legs_01_01_11": {
+        "id": [
+            3319
+        ]
+    },
     "item_Name_alb_mask_02_01_19": {
         "id": [
             3569
@@ -12458,6 +12227,11 @@
     "item_Name_hdh_shirt_03_01_17": {
         "id": [
             4161
+        ]
+    },
+    "item_Name_rsi_deckcrew_undersuit_01_01_10": {
+        "id": [
+            2223
         ]
     },
     "item_Name_alb_pants_02_01_01": {
@@ -12840,34 +12614,9 @@
             2919
         ]
     },
-    "item_Name_cds_combat_light_core_03_02_xenothreat": {
-        "id": [
-            4266
-        ]
-    },
-    "item_Name_clda_env_heavy_helmet_01_iae2023_01": {
-        "id": [
-            2370
-        ]
-    },
-    "item_Name_clda_utility_heavy_helmet_02_01_04": {
-        "id": [
-            2756
-        ]
-    },
     "item_Name_clda_env_heavy_helmet_01": {
         "id": [
             818
-        ]
-    },
-    "item_Name_slaver_armor_heavy_arms_01_01_10": {
-        "id": [
-            2345
-        ]
-    },
-    "item_Nameklwe_sniper_energy_01": {
-        "id": [
-            2723
         ]
     },
     "item_Name_987_shirt_04_01_01": {
@@ -13158,6 +12907,191 @@
     "item_Name_cbd_hat_03_drake_03": {
         "id": [
             4558
+        ]
+    },
+    "item_Name_vgl_armor_light_helmet_01_01_03": {
+        "id": [
+            2206
+        ]
+    },
+    "item_Name_vgl_armor_light_helmet_01_01_09": {
+        "id": [
+            4559
+        ]
+    },
+    "item_Name_cbd_hat_03_fleetweek2025anvil": {
+        "id": [
+            4579
+        ]
+    },
+    "item_NameCOOL_AEGS_S01_Bracer_SCItem": {
+        "id": [
+            928
+        ]
+    },
+    "item_NamePOWR_AEGS_S01_Charger_SCItem": {
+        "id": [
+            938
+        ]
+    },
+    "item_Namevolt_shotgun_energy_01_mag": {
+        "id": [
+            4591
+        ]
+    },
+    "item_name_FLBL_ANVL_Arrow_Handling": {
+        "id": [
+            4546
+        ]
+    },
+    "item_name_FLBL_ANVL_Arrow_Speed": {
+        "id": [
+            4547
+        ]
+    },
+    "item_name_FLBL_ANVL_Pisces_C8R_Handling": {
+        "id": [
+            4592
+        ]
+    },
+    "item_name_FLBL_ANVL_Pisces_C8R_Speed": {
+        "id": [
+            4548
+        ]
+    },
+    "item_name_FLBL_ANVL_Pisces_C8X_Handling": {
+        "id": [
+            4549
+        ]
+    },
+    "item_name_FLBL_ANVL_Pisces_C8X_Speed": {
+        "id": [
+            4550
+        ]
+    },
+    "item_name_FLBL_ANVL_Pisces_Handling": {
+        "id": [
+            4551
+        ]
+    },
+    "item_name_FLBL_ANVL_Pisces_Speed": {
+        "id": [
+            4552
+        ]
+    },
+    "item_name_FLBL_RSI_Scorpius_Antares_Handling": {
+        "id": [
+            4541
+        ]
+    },
+    "item_name_FLBL_RSI_Scorpius_Antares_Speed": {
+        "id": [
+            4593
+        ]
+    },
+    "item_name_FLBL_RSI_Scorpius_Handling": {
+        "id": [
+            4540
+        ]
+    },
+    "item_name_FLBL_RSI_Scorpius_Speed": {
+        "id": [
+            4594
+        ]
+    },
+    "item_name_FLBL_AEGS_Avenger_Stalker_Handling": {
+        "id": [
+            4529
+        ]
+    },
+    "item_name_FLBL_AEGS_Avenger_Stalker_Speed": {
+        "id": [
+            4530
+        ]
+    },
+    "item_name_FLBL_AEGS_Avenger_Titan_Handling": {
+        "id": [
+            4595
+        ]
+    },
+    "item_name_FLBL_AEGS_Avenger_Titan_Speed": {
+        "id": [
+            4596
+        ]
+    },
+    "item_name_FLBL_AEGS_Avenger_Warlock_Handling": {
+        "id": [
+            4531
+        ]
+    },
+    "item_name_FLBL_AEGS_Avenger_Warlock_Speed": {
+        "id": [
+            4532
+        ]
+    },
+    "item_name_FLBL_AEGS_Gladius_Handling": {
+        "id": [
+            4525
+        ]
+    },
+    "item_name_FLBL_AEGS_Gladius_Speed": {
+        "id": [
+            4526
+        ]
+    },
+    "item_name_FLBL_AEGS_Hammerhead_Handling": {
+        "id": [
+            4534
+        ]
+    },
+    "item_name_FLBL_AEGS_Hammerhead_Speed": {
+        "id": [
+            4533
+        ]
+    },
+    "item_name_FLBL_AEGS_Redeemer_Handling": {
+        "id": [
+            4537
+        ]
+    },
+    "item_name_FLBL_AEGS_Redeemer_Speed": {
+        "id": [
+            4536
+        ]
+    },
+    "item_Name_clda_utility_heavy_helmet_04_01_01": {
+        "id": [
+            4564
+        ]
+    },
+    "item_Name_rsi_utility_heavy_backpack_02_01_01": {
+        "id": [
+            4565
+        ]
+    },
+    "item_Name_clda_utility_heavy_suit_03_01_01": {
+        "id": [
+            4563
+        ]
+    },
+    "item_NameBEHR_BombRack_S3": {
+        "id": [
+            4554
+        ]
+    },
+    "item_Name_eld_shirt_04_fleetweek2025_argo": {
+        "id": [
+            4602
+        ]
+    },
+    "item_Name_cbd_hat_03_fleetweek2025misc": {
+        "id": [
+            4601
+        ]
+    },
+    "item_Name_eld_shirt_04_drake_04": {
+        "id": [
+            4634
         ]
     }
 }
