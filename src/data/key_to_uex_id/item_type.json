@@ -435,6 +435,26 @@
         "key": "item_displayType_doorControl_ship_elevator"
     },
     {
+        "Type": "Elevator",
+        "SubType": "UNDEFINED",
+        "key": "ui_interactor_elevator"
+    },
+    {
+        "Type": "Elevator",
+        "SubType": "UNDEFINED",
+        "key": "ui_interactor_elevator"
+    },
+    {
+        "Type": "Elevator",
+        "SubType": "UNDEFINED",
+        "key": "ui_interactor_elevator"
+    },
+    {
+        "Type": "Elevator",
+        "SubType": "UNDEFINED",
+        "key": "ui_interactor_elevator"
+    },
+    {
         "Type": "Cargo",
         "SubType": "Small",
         "key": "item_NameMovable_Trolley_Hover_cargo"
@@ -458,6 +478,11 @@
         "Type": "FPS_Consumable",
         "SubType": "Hacking",
         "key": "item_name_hackingchip_003"
+    },
+    {
+        "Type": "Drink",
+        "SubType": "Glass",
+        "key": "item_NameCup"
     },
     {
         "Type": "Misc",
@@ -515,7 +540,7 @@
         "key": "item_Nameun_portable_light_1_a_pink"
     },
     {
-        "Type": "Misc",
+        "Type": "UNDEFINED",
         "SubType": "UNDEFINED",
         "key": "item_NameCommon_AdvocacyBadge"
     },
@@ -591,8 +616,8 @@
     },
     {
         "Type": "Misc",
-        "SubType": "Personal",
-        "key": "item_Nameplushy_orison_whale_1_a_1H"
+        "SubType": "Flair_Wall_Picture",
+        "key": "item_NameCarryable_1H_CY_flair_hurston_statue_1_a"
     },
     {
         "Type": "Misc",
@@ -668,6 +693,11 @@
         "Type": "Misc",
         "SubType": "Utility",
         "key": "item_NameFlair_Poster_HullC_HT_Static"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "UNDEFINED",
+        "key": "item_NameFlair_Model_Carrack_toy_a_1H"
     },
     {
         "Type": "Misc",
@@ -823,6 +853,21 @@
         "Type": "Misc",
         "SubType": "UNDEFINED",
         "key": "item_displayType_Toothbrush"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Harvestable",
+        "key": "item_name_Physical_Currency_Scrip_Council_1"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Harvestable",
+        "key": "item_name_Physical_Currency_Scrip_Merc_1"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Harvestable",
+        "key": "TheCollector_Coin_Name"
     },
     {
         "Type": "Misc",
@@ -1186,6 +1231,11 @@
     },
     {
         "Type": "Misc",
+        "SubType": "Utility",
+        "key": "item_Name_Flair_Coin_SQ42_FW25"
+    },
+    {
+        "Type": "Misc",
         "SubType": "Mission",
         "key": "item_name_HexPenetratorchip"
     },
@@ -1527,12 +1577,52 @@
     {
         "Type": "Drink",
         "SubType": "UNDEFINED",
+        "key": "item_NameCup"
+    },
+    {
+        "Type": "Drink",
+        "SubType": "UNDEFINED",
+        "key": "item_NameCup"
+    },
+    {
+        "Type": "Drink",
+        "SubType": "UNDEFINED",
         "key": "item_NameCup_Mug"
     },
     {
         "Type": "Drink",
         "SubType": "UNDEFINED",
         "key": "item_NameCup_Mug"
+    },
+    {
+        "Type": "Drink",
+        "SubType": "UNDEFINED",
+        "key": "item_NameCup"
+    },
+    {
+        "Type": "Drink",
+        "SubType": "UNDEFINED",
+        "key": "item_NameCup"
+    },
+    {
+        "Type": "Drink",
+        "SubType": "UNDEFINED",
+        "key": "item_NameCup"
+    },
+    {
+        "Type": "Drink",
+        "SubType": "UNDEFINED",
+        "key": "item_NameCup"
+    },
+    {
+        "Type": "Drink",
+        "SubType": "UNDEFINED",
+        "key": "item_NameCup"
+    },
+    {
+        "Type": "Drink",
+        "SubType": "UNDEFINED",
+        "key": "item_NameCup"
     },
     {
         "Type": "Drink",
@@ -2432,6 +2522,11 @@
     {
         "Type": "Misc",
         "SubType": "Harvestable",
+        "key": "items_commodities_kopionhorn_irradiated"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Harvestable",
         "key": "items_commodities_kopionhorn_savannah"
     },
     {
@@ -2477,7 +2572,22 @@
     {
         "Type": "Misc",
         "SubType": "Harvestable",
-        "key": "items_commodoties_valakkarfang_juvenile"
+        "key": "items_commodities_valakkarfang_adult"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Harvestable",
+        "key": "items_commodities_valakkarfang_adult_irradiated"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Harvestable",
+        "key": "items_commodities_valakkarfang_juvenile"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Harvestable",
+        "key": "items_commodities_valakkarfang_juvenile_irradiated"
     },
     {
         "Type": "Food",
@@ -2533,6 +2643,66 @@
         "Type": "FPS_Consumable",
         "SubType": "Hacking",
         "key": "item_name_hackingchip_004"
+    },
+    {
+        "Type": "UNDEFINED",
+        "SubType": "UNDEFINED",
+        "key": "item_NameLOOT_game_chess_1_bishop_a"
+    },
+    {
+        "Type": "UNDEFINED",
+        "SubType": "UNDEFINED",
+        "key": "item_NameLOOT_game_chess_1_bishop_b"
+    },
+    {
+        "Type": "UNDEFINED",
+        "SubType": "UNDEFINED",
+        "key": "item_NameLOOT_game_chess_1_king_a"
+    },
+    {
+        "Type": "UNDEFINED",
+        "SubType": "UNDEFINED",
+        "key": "item_NameLOOT_game_chess_1_king_b"
+    },
+    {
+        "Type": "UNDEFINED",
+        "SubType": "UNDEFINED",
+        "key": "item_NameLOOT_game_chess_1_knight_a"
+    },
+    {
+        "Type": "UNDEFINED",
+        "SubType": "UNDEFINED",
+        "key": "item_NameLOOT_game_chess_1_knight_b"
+    },
+    {
+        "Type": "UNDEFINED",
+        "SubType": "UNDEFINED",
+        "key": "item_NameLOOT_game_chess_1_pawn_a"
+    },
+    {
+        "Type": "UNDEFINED",
+        "SubType": "UNDEFINED",
+        "key": "item_NameLOOT_game_chess_1_pawn_b"
+    },
+    {
+        "Type": "UNDEFINED",
+        "SubType": "UNDEFINED",
+        "key": "item_NameLOOT_game_chess_1_queen_a"
+    },
+    {
+        "Type": "UNDEFINED",
+        "SubType": "UNDEFINED",
+        "key": "item_NameLOOT_game_chess_1_queen_b"
+    },
+    {
+        "Type": "UNDEFINED",
+        "SubType": "UNDEFINED",
+        "key": "item_NameLOOT_game_chess_1_rook_a"
+    },
+    {
+        "Type": "UNDEFINED",
+        "SubType": "UNDEFINED",
+        "key": "item_NameLOOT_game_chess_1_rook_b"
     },
     {
         "Type": "FPS_Consumable",
@@ -2613,6 +2783,21 @@
         "Type": "Misc",
         "SubType": "UNDEFINED",
         "key": "item_NameFlair_biscuit_jar_1_a"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Flair_Wall_Picture",
+        "key": "item_NameCarryable_2H_CY_flair_arccorp_statue_1_a"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Flair_Static",
+        "key": "item_NameCarryable_2H_CY_flair_newbabbage_statue_1_a"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Flair_Wall_Picture",
+        "key": "item_NameCarryable_2H_CY_flair_orison_statue_1_a"
     },
     {
         "Type": "Misc",
@@ -2708,6 +2893,11 @@
         "Type": "Misc",
         "SubType": "Personal",
         "key": "item_Nameflair_vanduul_dmg_skul_1_a"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Personal",
+        "key": "item_Name_vanduul_skull_holo_1_a"
     },
     {
         "Type": "Container",
@@ -3006,6 +3196,11 @@
     },
     {
         "Type": "Misc",
+        "SubType": "Mission",
+        "key": "item_TypeAmmoCrate"
+    },
+    {
+        "Type": "Misc",
         "SubType": "UNDEFINED",
         "key": "Mission_Item_0150"
     },
@@ -3013,6 +3208,16 @@
         "Type": "Cargo",
         "SubType": "Small",
         "key": "item_nameCarryable_2H_MissionItem_EvidenceBox"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "UNDEFINED",
+        "key": "mission_item_0025"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "UNDEFINED",
+        "key": "item_NameFood_pizzabox"
     },
     {
         "Type": "Misc",
@@ -3056,8 +3261,133 @@
     },
     {
         "Type": "Misc",
-        "SubType": "Utility",
+        "SubType": "UNDEFINED",
+        "key": "mission_item_0054"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "UNDEFINED",
+        "key": "mission_item_0054"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "UNDEFINED",
+        "key": "mission_item_0054"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "UNDEFINED",
+        "key": "mission_item_0054"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "UNDEFINED",
+        "key": "mission_item_0054"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "UNDEFINED",
+        "key": "mission_item_0054"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "UNDEFINED",
+        "key": "mission_item_0054"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "UNDEFINED",
+        "key": "mission_item_0054"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "UNDEFINED",
+        "key": "mission_item_0054"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "UNDEFINED",
+        "key": "mission_item_0054"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "UNDEFINED",
+        "key": "mission_item_0054"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "UNDEFINED",
+        "key": "mission_item_0054"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Flair_Wall_Picture",
         "key": "item_NameCarryable_2H_FL_Painting_Constellation_a"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_Patch_Case_1_a"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Harvestable",
+        "key": "items_commodities_valakkaregg_irradiated"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Harvestable",
+        "key": "items_commodoties_valakkarpearl_apex"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Harvestable",
+        "key": "items_commodities_valakkarpearl_apex"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Harvestable",
+        "key": "items_commodities_valakkarpearl_apex_irradiated"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Harvestable",
+        "key": "items_commodities_valakkarpearl_apex_irradiated"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Harvestable",
+        "key": "items_commodities_valakkarpearl_apex_irradiated"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Harvestable",
+        "key": "items_commodities_valakkarpearl_apex_irradiated"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Harvestable",
+        "key": "items_commodities_valakkarpearl_apex_irradiated"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Harvestable",
+        "key": "items_commodities_valakkarpearl_apex"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Harvestable",
+        "key": "items_commodities_valakkarpearl_apex"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Harvestable",
+        "key": "items_commodities_valakkarpearl_apex"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Flair_Wall_Picture",
+        "key": "item_NameCarryable_2H_SQ_gladius_model_1_stand_a"
     },
     {
         "Type": "Misc",
@@ -3077,12 +3407,17 @@
     {
         "Type": "Misc",
         "SubType": "Harvestable",
-        "key": "items_commodoties_valakkarfang_apex"
+        "key": "items_commodities_valakkarfang_apex"
     },
     {
         "Type": "Misc",
         "SubType": "Harvestable",
-        "key": "items_commodoties_valakkarpearl_apex"
+        "key": "items_commodities_valakkarfang_apex_irradiated"
+    },
+    {
+        "Type": "Misc",
+        "SubType": "Harvestable",
+        "key": "items_commodities_valakkarpearl_apex"
     },
     {
         "Type": "Cargo",
@@ -3552,6 +3887,11 @@
     {
         "Type": "Cargo",
         "SubType": "Cargo",
+        "key": "items_commodities_rantadung"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "Cargo",
         "key": "items_commodities_revenantpod"
     },
     {
@@ -3678,6 +4018,11 @@
         "Type": "Cargo",
         "SubType": "Cargo",
         "key": "items_commodities_medicalSupplies"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "Cargo",
+        "key": "items_commodities_militarySupplies"
     },
     {
         "Type": "Cargo",
@@ -4287,6 +4632,11 @@
     {
         "Type": "Cargo",
         "SubType": "Cargo",
+        "key": "items_commodities_rantadung"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "Cargo",
         "key": "items_commodities_revenantpod"
     },
     {
@@ -4303,6 +4653,11 @@
         "Type": "Cargo",
         "SubType": "Cargo",
         "key": "items_commodities_sunsetberry"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "Cargo",
+        "key": "items_commodities_type_processedGoods"
     },
     {
         "Type": "Cargo",
@@ -4433,6 +4788,11 @@
         "Type": "Cargo",
         "SubType": "Cargo",
         "key": "items_commodities_medicalSupplies"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "Cargo",
+        "key": "items_commodities_militarySupplies"
     },
     {
         "Type": "Cargo",
@@ -5062,6 +5422,11 @@
     {
         "Type": "Cargo",
         "SubType": "Cargo",
+        "key": "items_commodities_rantadung"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "Cargo",
         "key": "items_commodities_revenantpod"
     },
     {
@@ -5188,6 +5553,11 @@
         "Type": "Cargo",
         "SubType": "Cargo",
         "key": "items_commodities_medicalSupplies"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "Cargo",
+        "key": "items_commodities_militarySupplies"
     },
     {
         "Type": "Cargo",
@@ -5792,6 +6162,11 @@
     {
         "Type": "Cargo",
         "SubType": "Cargo",
+        "key": "items_commodities_rantadung"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "Cargo",
         "key": "items_commodities_revenantpod"
     },
     {
@@ -5928,6 +6303,11 @@
         "Type": "Cargo",
         "SubType": "Cargo",
         "key": "items_commodities_medicalSupplies"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "Cargo",
+        "key": "items_commodities_militarySupplies"
     },
     {
         "Type": "Cargo",
@@ -6547,6 +6927,11 @@
     {
         "Type": "Cargo",
         "SubType": "Cargo",
+        "key": "items_commodities_rantadung"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "Cargo",
         "key": "items_commodities_revenantpod"
     },
     {
@@ -6673,6 +7058,11 @@
         "Type": "Cargo",
         "SubType": "Cargo",
         "key": "items_commodities_medicalSupplies"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "Cargo",
+        "key": "items_commodities_militarySupplies"
     },
     {
         "Type": "Cargo",
@@ -7287,6 +7677,11 @@
     {
         "Type": "Cargo",
         "SubType": "Cargo",
+        "key": "items_commodities_rantadung"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "Cargo",
         "key": "items_commodities_revenantpod"
     },
     {
@@ -7423,6 +7818,11 @@
         "Type": "Cargo",
         "SubType": "Cargo",
         "key": "items_commodities_medicalSupplies"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "Cargo",
+        "key": "items_commodities_militarySupplies"
     },
     {
         "Type": "Cargo",
@@ -8042,6 +8442,11 @@
     {
         "Type": "Cargo",
         "SubType": "Cargo",
+        "key": "items_commodities_rantadung"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "Cargo",
         "key": "items_commodities_revenantpod"
     },
     {
@@ -8178,6 +8583,11 @@
         "Type": "Cargo",
         "SubType": "Cargo",
         "key": "items_commodities_medicalSupplies"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "Cargo",
+        "key": "items_commodities_militarySupplies"
     },
     {
         "Type": "Cargo",
@@ -8606,7 +9016,7 @@
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_clda_utility_heavy_backpack_01_01_01"
     },
     {
@@ -8631,17 +9041,17 @@
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rsi_utility_heavy_backpack_01_01_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rsi_utility_heavy_backpack_01_01_03"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rsi_utility_heavy_backpack_01_01_12"
     },
     {
@@ -8651,7 +9061,7 @@
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_vlg_backpack_heavy_01_01_01"
     },
     {
@@ -8698,6 +9108,61 @@
         "Type": "Char_Armor_Undersuit",
         "SubType": "Heavy",
         "key": "item_Name_clda_utility_heavy_suit_02_01_9tails01"
+    },
+    {
+        "Type": "Char_Armor_Undersuit",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_suit_03_01_01"
+    },
+    {
+        "Type": "Char_Armor_Undersuit",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_suit_03_01_02"
+    },
+    {
+        "Type": "Char_Armor_Undersuit",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_suit_03_01_03"
+    },
+    {
+        "Type": "Char_Armor_Undersuit",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_suit_03_01_04"
+    },
+    {
+        "Type": "Char_Armor_Undersuit",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_suit_03_01_13"
+    },
+    {
+        "Type": "Char_Armor_Undersuit",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_suit_03_01_15"
+    },
+    {
+        "Type": "Char_Armor_Undersuit",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_suit_03_01_18"
+    },
+    {
+        "Type": "Char_Armor_Undersuit",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_suit_04_01_01_ASD"
+    },
+    {
+        "Type": "Char_Armor_Undersuit",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_suit_04_02_01"
+    },
+    {
+        "Type": "Char_Armor_Undersuit",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_suit_04_03_01"
+    },
+    {
+        "Type": "Char_Armor_Undersuit",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_suit_05_01_01"
     },
     {
         "Type": "Char_Armor_Undersuit",
@@ -8768,6 +9233,66 @@
         "Type": "Char_Armor_Arms",
         "SubType": "Heavy",
         "key": "item_Name_cds_armor_heavy_arms_02_04_xenothreat"
+    },
+    {
+        "Type": "Char_Armor_Arms",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_arms_03_01_01"
+    },
+    {
+        "Type": "Char_Armor_Arms",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_arms_03_02_01"
+    },
+    {
+        "Type": "Char_Armor_Arms",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_arms_03_03_01"
+    },
+    {
+        "Type": "Char_Armor_Arms",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_arms_03_04_01"
+    },
+    {
+        "Type": "Char_Armor_Arms",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_arms_03_05_01"
+    },
+    {
+        "Type": "Char_Armor_Arms",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_arms_03_06_01"
+    },
+    {
+        "Type": "Char_Armor_Arms",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_arms_03_01_01"
+    },
+    {
+        "Type": "Char_Armor_Arms",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_arms_03_02_01"
+    },
+    {
+        "Type": "Char_Armor_Arms",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_arms_03_03_01"
+    },
+    {
+        "Type": "Char_Armor_Arms",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_arms_03_04_01"
+    },
+    {
+        "Type": "Char_Armor_Arms",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_arms_03_05_01"
+    },
+    {
+        "Type": "Char_Armor_Arms",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_arms_03_06_01"
     },
     {
         "Type": "Char_Armor_Arms",
@@ -8917,32 +9442,32 @@
     {
         "Type": "Char_Armor_Arms",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_arms_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_arms_01_02_01"
     },
     {
         "Type": "Char_Armor_Arms",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_arms_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_arms_01_02_04"
     },
     {
         "Type": "Char_Armor_Arms",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_arms_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_arms_01_02_11"
     },
     {
         "Type": "Char_Armor_Arms",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_arms_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_arms_01_02_12"
     },
     {
         "Type": "Char_Armor_Arms",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_arms_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_arms_01_02_18"
     },
     {
         "Type": "Char_Armor_Arms",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_arms_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_arms_01_02_20"
     },
     {
         "Type": "Char_Armor_Arms",
@@ -8958,6 +9483,11 @@
         "Type": "Char_Armor_Arms",
         "SubType": "Heavy",
         "key": "item_Name_outlaw_legacy_heavy_armor_arms_02_01_16"
+    },
+    {
+        "Type": "Char_Armor_Arms",
+        "SubType": "Heavy",
+        "key": "item_Name_qrt_combat_heavy_arms_02_01_01"
     },
     {
         "Type": "Char_Armor_Arms",
@@ -9196,12 +9726,12 @@
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_cds_combat_heavy_backpack_01_01_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_cds_combat_heavy_backpack_01_iae2022_01"
     },
     {
@@ -9221,63 +9751,118 @@
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rrs_combat_heavy_backpack_01_01_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rrs_combat_heavy_backpack_01_01_03"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rrs_combat_heavy_backpack_01_01_10"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rrs_combat_heavy_backpack_01_01_12"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rrs_combat_heavy_backpack_01_01_iae2022"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rrs_combat_heavy_backpack_01_02_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rrs_combat_heavy_backpack_01_01_9tails01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rrs_combat_heavy_backpack_01_crus01_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rrs_combat_heavy_backpack_02_01_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rrs_combat_heavy_backpack_03_01_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rrs_combat_heavy_backpack_04_01_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rrs_combat_heavy_backpack_04_02_01"
+    },
+    {
+        "Type": "Char_Armor_Backpack",
+        "SubType": "Personal",
+        "key": "item_Name_rsi_utility_heavy_backpack_02_01_01"
+    },
+    {
+        "Type": "Char_Armor_Backpack",
+        "SubType": "Personal",
+        "key": "item_Name_rsi_utility_heavy_backpack_02_01_02"
+    },
+    {
+        "Type": "Char_Armor_Backpack",
+        "SubType": "Personal",
+        "key": "item_Name_rsi_utility_heavy_backpack_02_01_03"
+    },
+    {
+        "Type": "Char_Armor_Backpack",
+        "SubType": "Personal",
+        "key": "item_Name_rsi_utility_heavy_backpack_02_01_04"
+    },
+    {
+        "Type": "Char_Armor_Backpack",
+        "SubType": "Personal",
+        "key": "item_Name_rsi_utility_heavy_backpack_02_01_13"
+    },
+    {
+        "Type": "Char_Armor_Backpack",
+        "SubType": "Personal",
+        "key": "item_Name_rsi_utility_heavy_backpack_02_01_15"
+    },
+    {
+        "Type": "Char_Armor_Backpack",
+        "SubType": "Personal",
+        "key": "item_Name_rsi_utility_heavy_backpack_02_01_18"
+    },
+    {
+        "Type": "Char_Armor_Backpack",
+        "SubType": "Personal",
+        "key": "item_Name_rsi_utility_heavy_backpack_02_02_01_ASD"
+    },
+    {
+        "Type": "Char_Armor_Backpack",
+        "SubType": "Personal",
+        "key": "item_Name_rsi_utility_heavy_backpack_02_03_01"
+    },
+    {
+        "Type": "Char_Armor_Backpack",
+        "SubType": "Personal",
+        "key": "item_Name_rsi_utility_heavy_backpack_02_04_01"
+    },
+    {
+        "Type": "Char_Armor_Backpack",
+        "SubType": "Personal",
+        "key": "item_Name_rsi_utility_heavy_backpack_02_05_01"
     },
     {
         "Type": "Char_Armor_Torso",
@@ -9313,6 +9898,66 @@
         "Type": "Char_Armor_Torso",
         "SubType": "Heavy",
         "key": "item_Name_cds_armor_heavy_core_02_04_xenothreat"
+    },
+    {
+        "Type": "Char_Armor_Torso",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_core_03_01_01"
+    },
+    {
+        "Type": "Char_Armor_Torso",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_core_03_02_01"
+    },
+    {
+        "Type": "Char_Armor_Torso",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_core_03_03_01"
+    },
+    {
+        "Type": "Char_Armor_Torso",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_core_03_04_01"
+    },
+    {
+        "Type": "Char_Armor_Torso",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_core_03_05_01"
+    },
+    {
+        "Type": "Char_Armor_Torso",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_core_03_06_01"
+    },
+    {
+        "Type": "Char_Armor_Torso",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_core_03_01_01"
+    },
+    {
+        "Type": "Char_Armor_Torso",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_core_03_02_01"
+    },
+    {
+        "Type": "Char_Armor_Torso",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_core_03_03_01"
+    },
+    {
+        "Type": "Char_Armor_Torso",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_core_03_04_01"
+    },
+    {
+        "Type": "Char_Armor_Torso",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_core_03_05_01"
+    },
+    {
+        "Type": "Char_Armor_Torso",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_core_03_06_01"
     },
     {
         "Type": "Char_Armor_Torso",
@@ -9467,32 +10112,32 @@
     {
         "Type": "Char_Armor_Torso",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_core_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_core_01_02_01"
     },
     {
         "Type": "Char_Armor_Torso",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_core_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_core_01_02_04"
     },
     {
         "Type": "Char_Armor_Torso",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_core_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_core_01_02_11"
     },
     {
         "Type": "Char_Armor_Torso",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_core_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_core_01_02_12"
     },
     {
         "Type": "Char_Armor_Torso",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_core_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_core_01_02_18"
     },
     {
         "Type": "Char_Armor_Torso",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_core_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_core_01_02_20"
     },
     {
         "Type": "Char_Armor_Torso",
@@ -9508,6 +10153,11 @@
         "Type": "Char_Armor_Torso",
         "SubType": "Heavy",
         "key": "item_Name_outlaw_legacy_heavy_armor_core_02_01_16"
+    },
+    {
+        "Type": "Char_Armor_Torso",
+        "SubType": "Heavy",
+        "key": "item_Name_qrt_combat_heavy_core_02_01_01"
     },
     {
         "Type": "Char_Armor_Torso",
@@ -9827,6 +10477,36 @@
     {
         "Type": "Char_Armor_Helmet",
         "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_helmet_03_01_01"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_helmet_03_02_01"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_helmet_03_03_01"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_helmet_03_04_01"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_helmet_03_05_01"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_helmet_03_06_01"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Heavy",
         "key": "item_Name_cds_legacy_heavy_armor_01_helmet"
     },
     {
@@ -10017,6 +10697,61 @@
     {
         "Type": "Char_Armor_Helmet",
         "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_helmet_04_01_01"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_helmet_04_01_02"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_helmet_04_01_03"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_helmet_04_01_04"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_helmet_04_01_13"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_helmet_04_01_15"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_helmet_04_01_18"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_helmet_05_01_01_ASD"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_helmet_05_02_01"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_helmet_05_03_01"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Heavy",
+        "key": "item_Name_clda_utility_heavy_helmet_06_01_01"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Heavy",
         "key": "item_Name_ksar_armor_heavy_helmet_01_01_01"
     },
     {
@@ -10037,32 +10772,32 @@
     {
         "Type": "Char_Armor_Helmet",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_helmet_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_helmet_01_02_01"
     },
     {
         "Type": "Char_Armor_Helmet",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_helmet_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_helmet_01_02_04"
     },
     {
         "Type": "Char_Armor_Helmet",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_helmet_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_helmet_01_02_11"
     },
     {
         "Type": "Char_Armor_Helmet",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_helmet_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_helmet_01_02_12"
     },
     {
         "Type": "Char_Armor_Helmet",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_helmet_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_helmet_01_02_18"
     },
     {
         "Type": "Char_Armor_Helmet",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_helmet_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_helmet_01_02_20"
     },
     {
         "Type": "Char_Armor_Helmet",
@@ -10078,6 +10813,11 @@
         "Type": "Char_Armor_Helmet",
         "SubType": "Heavy",
         "key": "item_Name_outlaw_legacy_heavy_armor_helmet_02_01_16"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Heavy",
+        "key": "item_Name_qrt_combat_heavy_helmet_02_01_01"
     },
     {
         "Type": "Char_Armor_Helmet",
@@ -10517,6 +11257,36 @@
     {
         "Type": "Char_Armor_Legs",
         "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_legs_03_01_01"
+    },
+    {
+        "Type": "Char_Armor_Legs",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_legs_03_02_01"
+    },
+    {
+        "Type": "Char_Armor_Legs",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_legs_03_03_01"
+    },
+    {
+        "Type": "Char_Armor_Legs",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_legs_03_04_01"
+    },
+    {
+        "Type": "Char_Armor_Legs",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_legs_03_05_01"
+    },
+    {
+        "Type": "Char_Armor_Legs",
+        "SubType": "Heavy",
+        "key": "item_Name_cds_armor_heavy_legs_03_06_01"
+    },
+    {
+        "Type": "Char_Armor_Legs",
+        "SubType": "Heavy",
         "key": "item_Name_cds_legacy_heavy_armor_01_legs"
     },
     {
@@ -10652,32 +11422,32 @@
     {
         "Type": "Char_Armor_Legs",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_legs_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_legs_01_02_01"
     },
     {
         "Type": "Char_Armor_Legs",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_legs_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_legs_01_02_04"
     },
     {
         "Type": "Char_Armor_Legs",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_legs_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_legs_01_02_11"
     },
     {
         "Type": "Char_Armor_Legs",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_legs_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_legs_01_02_12"
     },
     {
         "Type": "Char_Armor_Legs",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_legs_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_legs_01_02_18"
     },
     {
         "Type": "Char_Armor_Legs",
         "SubType": "Heavy",
-        "key": "item_Name_outlaw_legacy_heavy_armor_legs_02_01_01"
+        "key": "item_Name_outlaw_legacy_heavy_armor_legs_01_02_20"
     },
     {
         "Type": "Char_Armor_Legs",
@@ -10693,6 +11463,11 @@
         "Type": "Char_Armor_Legs",
         "SubType": "Heavy",
         "key": "item_Name_outlaw_legacy_heavy_armor_legs_02_01_16"
+    },
+    {
+        "Type": "Char_Armor_Legs",
+        "SubType": "Heavy",
+        "key": "item_Name_qrt_combat_heavy_legs_02_01_01"
     },
     {
         "Type": "Char_Armor_Legs",
@@ -11741,82 +12516,82 @@
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_cds_combat_light_backpack_01_01_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_cds_combat_light_backpack_02_01_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_cds_combat_light_backpack_02_02_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_cds_combat_light_backpack_02_03_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_hdtc_utility_light_backpack_01_01_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rrs_combat_light_backpack_01_01_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rrs_combat_light_backpack_01_01_iae2022"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rrs_combat_light_backpack_01_02_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rrs_combat_light_backpack_01_03_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rrs_combat_light_backpack_01_04_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rsi_light_utility_backpack_01_01_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rsi_light_utility_backpack_01_01_02"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rsi_light_utility_backpack_01_01_04"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rsi_light_utility_backpack_01_01_10"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rsi_light_utility_backpack_01_01_11"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_rsi_light_utility_backpack_01_01_13"
     },
     {
@@ -12678,6 +13453,11 @@
         "Type": "Char_Armor_Torso",
         "SubType": "Light",
         "key": "item_Name_vgl_specialist_light_core_01_01_xenothreat"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Light",
+        "key": "item_Name_basl_combat_light_helmet_02_01_01"
     },
     {
         "Type": "Char_Armor_Helmet",
@@ -14457,6 +15237,11 @@
     {
         "Type": "Char_Armor_Arms",
         "SubType": "Medium",
+        "key": "item_Name_cds_combat_medium_arms_04_01_xenothreat"
+    },
+    {
+        "Type": "Char_Armor_Arms",
+        "SubType": "Medium",
         "key": "item_Name_cds_legacy_medium_armor_01_arms"
     },
     {
@@ -14757,32 +15542,32 @@
     {
         "Type": "Char_Armor_Arms",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_arms_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_arms_01_02_01"
     },
     {
         "Type": "Char_Armor_Arms",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_arms_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_arms_01_02_04"
     },
     {
         "Type": "Char_Armor_Arms",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_arms_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_arms_01_02_11"
     },
     {
         "Type": "Char_Armor_Arms",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_arms_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_arms_01_02_12"
     },
     {
         "Type": "Char_Armor_Arms",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_arms_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_arms_01_02_18"
     },
     {
         "Type": "Char_Armor_Arms",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_arms_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_arms_01_02_20"
     },
     {
         "Type": "Char_Armor_Arms",
@@ -14866,57 +15651,62 @@
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_cds_combat_medium_backpack_01_01_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
+        "key": "item_Name_cds_combat_medium_backpack_02_01_01"
+    },
+    {
+        "Type": "Char_Armor_Backpack",
+        "SubType": "Medium",
         "key": "item_Name_doom_combat_medium_backpack_01_01_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_GRIN_utility_medium_backpack_01_01_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_GRIN_utility_medium_backpack_01_01_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_GRIN_utility_medium_backpack_01_01_02"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_GRIN_utility_medium_backpack_01_01_03"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_GRIN_utility_medium_backpack_01_01_04"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_grin_utility_medium_backpack_01_01_iae2022"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_GRIN_utility_medium_backpack_01_02_01"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_grin_utility_medium_backpack_01_01_iae2022"
     },
     {
         "Type": "Char_Armor_Backpack",
-        "SubType": "UNDEFINED",
+        "SubType": "Personal",
         "key": "item_Name_grin_utility_medium_backpack_01_01_iae2022"
     },
     {
@@ -15003,6 +15793,11 @@
         "Type": "Char_Armor_Torso",
         "SubType": "Medium",
         "key": "item_Name_cds_combat_medium_core_04_01_01"
+    },
+    {
+        "Type": "Char_Armor_Torso",
+        "SubType": "Medium",
+        "key": "item_Name_cds_combat_medium_core_04_01_xenothreat"
     },
     {
         "Type": "Char_Armor_Torso",
@@ -15322,32 +16117,32 @@
     {
         "Type": "Char_Armor_Torso",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_core_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_core_01_02_01"
     },
     {
         "Type": "Char_Armor_Torso",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_core_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_core_01_02_04"
     },
     {
         "Type": "Char_Armor_Torso",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_core_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_core_01_02_11"
     },
     {
         "Type": "Char_Armor_Torso",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_core_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_core_01_02_12"
     },
     {
         "Type": "Char_Armor_Torso",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_core_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_core_01_02_18"
     },
     {
         "Type": "Char_Armor_Torso",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_core_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_core_01_02_20"
     },
     {
         "Type": "Char_Armor_Torso",
@@ -15532,6 +16327,11 @@
     {
         "Type": "Char_Armor_Helmet",
         "SubType": "Medium",
+        "key": "item_Name_cds_combat_medium_helmet_04_01_xenothreat"
+    },
+    {
+        "Type": "Char_Armor_Helmet",
+        "SubType": "Medium",
         "key": "item_Name_cds_legacy_armor_medium_helmet_01_01_01"
     },
     {
@@ -15665,21 +16465,6 @@
         "key": "item_Name_cds_legacy_armor_medium_helmet_01_crus01_01"
     },
     {
-        "Type": "Char_Clothing_Hat",
-        "SubType": "Medium",
-        "key": "item_Name_clda_helmet_01_01_01"
-    },
-    {
-        "Type": "Char_Clothing_Hat",
-        "SubType": "Medium",
-        "key": "item_Name_clda_helmet_01_01_01"
-    },
-    {
-        "Type": "Char_Clothing_Hat",
-        "SubType": "Medium",
-        "key": "item_Name_clda_helmet_01_01_01"
-    },
-    {
         "Type": "Char_Armor_Helmet",
         "SubType": "Medium",
         "key": "item_Name_doom_medium_armor_helmet_01"
@@ -15698,11 +16483,6 @@
         "Type": "Char_Armor_Helmet",
         "SubType": "Medium",
         "key": "item_Name_doom_medium_armor_helmet_02"
-    },
-    {
-        "Type": "Char_Armor_Helmet",
-        "SubType": "Medium",
-        "key": "item_Name_fta_medium_helmet_01_01_01"
     },
     {
         "Type": "Char_Armor_Helmet",
@@ -15902,32 +16682,32 @@
     {
         "Type": "Char_Armor_Helmet",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_helmet_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_helmet_01_02_01"
     },
     {
         "Type": "Char_Armor_Helmet",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_helmet_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_helmet_01_02_04"
     },
     {
         "Type": "Char_Armor_Helmet",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_helmet_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_helmet_01_02_11"
     },
     {
         "Type": "Char_Armor_Helmet",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_helmet_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_helmet_01_02_12"
     },
     {
         "Type": "Char_Armor_Helmet",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_helmet_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_helmet_01_02_18"
     },
     {
         "Type": "Char_Armor_Helmet",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_helmet_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_helmet_01_02_20"
     },
     {
         "Type": "Char_Armor_Helmet",
@@ -16193,6 +16973,11 @@
         "Type": "Char_Armor_Legs",
         "SubType": "Medium",
         "key": "item_Name_cds_combat_medium_legs_04_01_01"
+    },
+    {
+        "Type": "Char_Armor_Legs",
+        "SubType": "Medium",
+        "key": "item_Name_cds_combat_medium_legs_04_01_xenothreat"
     },
     {
         "Type": "Char_Armor_Legs",
@@ -16517,32 +17302,32 @@
     {
         "Type": "Char_Armor_Legs",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_legs_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_legs_01_02_01"
     },
     {
         "Type": "Char_Armor_Legs",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_legs_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_legs_01_02_04"
     },
     {
         "Type": "Char_Armor_Legs",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_legs_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_legs_01_02_11"
     },
     {
         "Type": "Char_Armor_Legs",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_legs_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_legs_01_02_12"
     },
     {
         "Type": "Char_Armor_Legs",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_legs_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_legs_01_02_18"
     },
     {
         "Type": "Char_Armor_Legs",
         "SubType": "Medium",
-        "key": "item_Name_outlaw_legacy_medium_armor_legs_02_01_01"
+        "key": "item_Name_outlaw_legacy_medium_armor_legs_01_02_20"
     },
     {
         "Type": "Char_Armor_Legs",
@@ -16627,6 +17412,11 @@
     {
         "Type": "Char_Armor_Undersuit",
         "SubType": "UNDEFINED",
+        "key": "item_Name_basl_combat_light_flightsuit_02_01_01"
+    },
+    {
+        "Type": "Char_Armor_Undersuit",
+        "SubType": "UNDEFINED",
         "key": "item_Name_CDS_Undersuit_Armor_01"
     },
     {
@@ -16658,6 +17448,11 @@
         "Type": "Char_Armor_Undersuit",
         "SubType": "UNDEFINED",
         "key": "item_Name_cds_undersuit_01_01_iae2022"
+    },
+    {
+        "Type": "Char_Armor_Undersuit",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_cds_undersuit_armor_01_02_01"
     },
     {
         "Type": "Char_Armor_Undersuit",
@@ -20402,6 +21197,31 @@
     {
         "Type": "Char_Clothing_Hat",
         "SubType": "UNDEFINED",
+        "key": "item_Name_cbd_hat_03_fleetweek2025anvil"
+    },
+    {
+        "Type": "Char_Clothing_Hat",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_cbd_hat_03_fleetweek2025argo"
+    },
+    {
+        "Type": "Char_Clothing_Hat",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_cbd_hat_03_fleetweek2025_invictus_01"
+    },
+    {
+        "Type": "Char_Clothing_Hat",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_cbd_hat_03_fleetweek2025_invictus_02"
+    },
+    {
+        "Type": "Char_Clothing_Hat",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_cbd_hat_03_fleetweek2025misc"
+    },
+    {
+        "Type": "Char_Clothing_Hat",
+        "SubType": "UNDEFINED",
         "key": "item_Name_cbd_hat_03_fleetweek_01_dec"
     },
     {
@@ -21847,7 +22667,7 @@
     {
         "Type": "Char_Clothing_Legs",
         "SubType": "UNDEFINED",
-        "key": "item_Name_fio_pants_01_01_01"
+        "key": "item_Name_fio_pants_01_01_scientist"
     },
     {
         "Type": "Char_Clothing_Legs",
@@ -23277,6 +24097,31 @@
     {
         "Type": "Char_Clothing_Torso_0",
         "SubType": "UNDEFINED",
+        "key": "item_Name_eld_shirt_04_fleetweek2025_anvil"
+    },
+    {
+        "Type": "Char_Clothing_Torso_0",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_eld_shirt_04_fleetweek2025_argo"
+    },
+    {
+        "Type": "Char_Clothing_Torso_0",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_eld_shirt_04_fleetweek2025_invictus_01"
+    },
+    {
+        "Type": "Char_Clothing_Torso_0",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_eld_shirt_04_fleetweek2025_invictus_02"
+    },
+    {
+        "Type": "Char_Clothing_Torso_0",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_eld_shirt_04_fleetweek2025_misc"
+    },
+    {
+        "Type": "Char_Clothing_Torso_0",
+        "SubType": "UNDEFINED",
         "key": "item_Name_eld_shirt_04_fleetweek_01_dec"
     },
     {
@@ -23388,6 +24233,16 @@
         "Type": "Char_Clothing_Torso_0",
         "SubType": "UNDEFINED",
         "key": "item_Name_eld_shirt_07_01_01"
+    },
+    {
+        "Type": "Char_Clothing_Torso_0",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_ELD_Shirt_10_01_01"
+    },
+    {
+        "Type": "Char_Clothing_Torso_0",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_eld_shirt_10_02_01"
     },
     {
         "Type": "Char_Clothing_Torso_0",
@@ -24922,6 +25777,11 @@
     {
         "Type": "Char_Clothing_Torso_1",
         "SubType": "UNDEFINED",
+        "key": "item_Name_dmc_jacket_14_01_01"
+    },
+    {
+        "Type": "Char_Clothing_Torso_1",
+        "SubType": "UNDEFINED",
         "key": "item_Name_drn_business_jacket_01_01_01"
     },
     {
@@ -25272,7 +26132,12 @@
     {
         "Type": "Char_Clothing_Torso_1",
         "SubType": "UNDEFINED",
-        "key": "item_Name_fio_jacket_01_01_01"
+        "key": "item_Name_fio_jacket_01_01_scientist"
+    },
+    {
+        "Type": "Char_Clothing_Torso_1",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_fio_jacket_04_01_01"
     },
     {
         "Type": "Char_Clothing_Torso_1",
@@ -25558,6 +26423,11 @@
         "Type": "Char_Clothing_Torso_1",
         "SubType": "UNDEFINED",
         "key": "item_Name_nvs_jumpsuit_01_01_01"
+    },
+    {
+        "Type": "Char_Clothing_Torso_1",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_nvs_jumpsuit_01_01_03"
     },
     {
         "Type": "Char_Clothing_Torso_1",
@@ -27281,8 +28151,23 @@
     },
     {
         "Type": "FPS_Consumable",
+        "SubType": "Medical",
+        "key": "item_Namecrlf_consumable_adrenaline_01"
+    },
+    {
+        "Type": "FPS_Consumable",
         "SubType": "MedPack",
         "key": "medbed_heal"
+    },
+    {
+        "Type": "FPS_Consumable",
+        "SubType": "Medical",
+        "key": "item_Namecrlf_consumable_adrenaline_01"
+    },
+    {
+        "Type": "FPS_Consumable",
+        "SubType": "Medical",
+        "key": "item_Namecrlf_consumable_adrenaline_01"
     },
     {
         "Type": "FPS_Consumable",
@@ -27312,7 +28197,27 @@
     {
         "Type": "FPS_Consumable",
         "SubType": "Medical",
+        "key": "item_Namecrlf_consumable_radiation_01"
+    },
+    {
+        "Type": "FPS_Consumable",
+        "SubType": "Medical",
+        "key": "item_Namecrlf_consumable_radiation_02"
+    },
+    {
+        "Type": "FPS_Consumable",
+        "SubType": "Medical",
         "key": "item_Namecrlf_consumable_steroids_01"
+    },
+    {
+        "Type": "FPS_Consumable",
+        "SubType": "Medical",
+        "key": "item_Namecrlf_consumable_steroids_01"
+    },
+    {
+        "Type": "FPS_Consumable",
+        "SubType": "Medical",
+        "key": "item_Namecrlf_consumable_overdoseRevival_01"
     },
     {
         "Type": "RemovableChip",
@@ -27368,6 +28273,26 @@
         "Type": "RemovableChip",
         "SubType": "SystemAccess",
         "key": "item_Name_KeyCard_PAF_Security"
+    },
+    {
+        "Type": "RemovableChip",
+        "SubType": "SystemAccess",
+        "key": "items_mission_argos_credentials_res_name"
+    },
+    {
+        "Type": "RemovableChip",
+        "SubType": "SystemAccess",
+        "key": "items_mission_argos_credentials_maintenance_name"
+    },
+    {
+        "Type": "RemovableChip",
+        "SubType": "SystemAccess",
+        "key": "items_mission_argos_credentials_infirmary_desc"
+    },
+    {
+        "Type": "RemovableChip",
+        "SubType": "SystemAccess",
+        "key": "items_mission_argos_credentials_data_name"
     },
     {
         "Type": "FPS_Consumable",
@@ -27737,6 +28662,86 @@
     {
         "Type": "ControlPanel",
         "SubType": "DoorPart",
+        "key": "item_s42_lightswitch"
+    },
+    {
+        "Type": "ControlPanel",
+        "SubType": "DoorPart",
+        "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "ControlPanel",
+        "SubType": "DoorPart",
+        "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "ControlPanel",
+        "SubType": "DoorPart",
+        "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "ControlPanel",
+        "SubType": "DoorPart",
+        "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "ControlPanel",
+        "SubType": "DoorPart",
+        "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "ControlPanel",
+        "SubType": "DoorPart",
+        "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "ControlPanel",
+        "SubType": "DoorPart",
+        "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "ControlPanel",
+        "SubType": "DoorPart",
+        "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "ControlPanel",
+        "SubType": "DoorPart",
+        "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "ControlPanel",
+        "SubType": "DoorPart",
+        "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "ControlPanel",
+        "SubType": "DoorPart",
+        "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "ControlPanel",
+        "SubType": "DoorPart",
+        "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "ControlPanel",
+        "SubType": "DoorPart",
+        "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "ControlPanel",
+        "SubType": "DoorPart",
+        "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "ControlPanel",
+        "SubType": "DoorPart",
+        "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "ControlPanel",
+        "SubType": "DoorPart",
         "key": "item_displayType_doorControl_ship"
     },
     {
@@ -28827,6 +29832,16 @@
     {
         "Type": "Door",
         "SubType": "UNDEFINED",
+        "key": "entrance_airlock"
+    },
+    {
+        "Type": "DockingAnimator",
+        "SubType": "UNDEFINED",
+        "key": "entrance_airlock"
+    },
+    {
+        "Type": "Door",
+        "SubType": "UNDEFINED",
         "key": "item_displayType_doorControl_ship"
     },
     {
@@ -29116,6 +30131,16 @@
     },
     {
         "Type": "DockingAnimator",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "Door",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "Door",
         "SubType": "UNDEFINED",
         "key": "item_displayType_doorControl_ship"
     },
@@ -29427,7 +30452,7 @@
     {
         "Type": "TurretBase",
         "SubType": "MannedTurret",
-        "key": "item_displayType_doorControl_ship"
+        "key": "itemPort_port_hardpoint_rear_turret_tail_cap"
     },
     {
         "Type": "Door",
@@ -29516,6 +30541,11 @@
     },
     {
         "Type": "DockingAnimator",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "Door",
         "SubType": "UNDEFINED",
         "key": "item_displayType_doorControl_ship"
     },
@@ -30723,6 +31753,11 @@
         "Type": "Door",
         "SubType": "UNDEFINED",
         "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "Usable",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_doorControl_ship_ramp"
     },
     {
         "Type": "ControlPanel",
@@ -31078,6 +32113,11 @@
         "Type": "Door",
         "SubType": "UNDEFINED",
         "key": "item_displayType_doorControl_ship"
+    },
+    {
+        "Type": "FuelTank",
+        "SubType": "Fuel",
+        "key": "destroyItems_BombingRunItem"
     },
     {
         "Type": "Container",
@@ -34002,6 +35042,21 @@
     {
         "Type": "Armor",
         "SubType": "Medium",
+        "key": "item_NameARMR_AEGS_Hammerhead"
+    },
+    {
+        "Type": "Armor",
+        "SubType": "Medium",
+        "key": "item_NameARMR_AEGS_Hammerhead"
+    },
+    {
+        "Type": "Armor",
+        "SubType": "Medium",
+        "key": "item_NameARMR_AEGS_Hammerhead"
+    },
+    {
+        "Type": "Armor",
+        "SubType": "Medium",
         "key": "item_NameARMR_AEGS_Redeemer"
     },
     {
@@ -34028,6 +35083,11 @@
         "Type": "Armor",
         "SubType": "Medium",
         "key": "item_NameARMR_AEGS_SabreRaven"
+    },
+    {
+        "Type": "Armor",
+        "SubType": "Medium",
+        "key": "item_NameARMR_ANVL_Gladiator"
     },
     {
         "Type": "Armor",
@@ -34352,6 +35412,11 @@
     {
         "Type": "BombLauncher",
         "SubType": "BombRack",
+        "key": "item_NameBEHR_BombRack_S3"
+    },
+    {
+        "Type": "BombLauncher",
+        "SubType": "BombRack",
         "key": "item_NameMRCK_S03_BEHR_Single_S03"
     },
     {
@@ -34377,772 +35442,942 @@
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Avenger_Stalker_standard"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Avenger_Stalker_Handling"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Avenger_Stalker_Speed"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Avenger_Titan_standard"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Avenger_Titan_Handling"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Avenger_Titan_Speed"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Avenger_Warlock_standard"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Avenger_Warlock_Handling"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Avenger_Warlock_Speed"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Gladius_standard"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Gladius_Handling"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Gladius_Speed"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Gladius_standard"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Gladius_standard"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Hammerhead_standard"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Hammerhead_Handling"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Hammerhead_Speed"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Hammerhead_standard"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Redeemer_standard"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Redeemer_Handling"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_AEGS_Redeemer_Speed"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ANVL_Arrow_standard"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ANVL_Arrow_Handling"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ANVL_Arrow_Speed"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ANVL_Pisces_standard"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ANVL_Pisces_C8R_standard"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ANVL_Pisces_C8R_Handling"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ANVL_Pisces_C8R_Speed"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ANVL_Pisces_C8X_standard"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ANVL_Pisces_C8X_Handling"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ANVL_Pisces_C8X_Speed"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ANVL_Pisces_Handling"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ANVL_Pisces_Speed"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ARGO_MPUV_standard"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ARGO_MPUV_1T_standard"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ARGO_MPUV_1T_Handling"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ARGO_MPUV_1T_Speed"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ARGO_MPUV_Handling"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ARGO_MPUV_Speed"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ARGO_MPUV_Transport_standard"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ARGO_MPUV_Transport_Handling"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_name_FLBL_ARGO_MPUV_Transport_Speed"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "FlightController",
         "SubType": "UNDEFINED",
-        "key": "item_Name_FLGT_Controller"
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_name_FLBL_RSI_Scorpius_standard"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_name_FLBL_RSI_Scorpius_Antares_standard"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_name_FLBL_RSI_Scorpius_Antares_Handling"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_name_FLBL_RSI_Scorpius_Antares_Speed"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_name_FLBL_RSI_Scorpius_Handling"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_name_FLBL_RSI_Scorpius_Speed"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
+    },
+    {
+        "Type": "FlightController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_FLGT_BL_Controller"
     },
     {
         "Type": "MissileController",
@@ -35183,6 +36418,21 @@
         "Type": "MissileController",
         "SubType": "UNDEFINED",
         "key": "item_Name_MISL_Controller"
+    },
+    {
+        "Type": "ShieldController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SHLD_Controller"
+    },
+    {
+        "Type": "ShieldController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SHLD_Controller"
+    },
+    {
+        "Type": "ShieldController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SHLD_Controller"
     },
     {
         "Type": "ShieldController",
@@ -35758,6 +37008,21 @@
         "Type": "WeaponController",
         "SubType": "UNDEFINED",
         "key": "item_Name_WEAP_Controller"
+    },
+    {
+        "Type": "WeaponController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_WEAP_Controller"
+    },
+    {
+        "Type": "WeaponController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_WEAP_Controller"
+    },
+    {
+        "Type": "WheeledController",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_WheeledController"
     },
     {
         "Type": "WheeledController",
@@ -35943,6 +37208,11 @@
         "Type": "Cooler",
         "SubType": "UNDEFINED",
         "key": "item_Name_COOL_AEGS_S03_Tempest"
+    },
+    {
+        "Type": "Cooler",
+        "SubType": "UNDEFINED",
+        "key": "item_NameCOOL_AEGS_S04_Idirs"
     },
     {
         "Type": "Cooler",
@@ -36297,6 +37567,16 @@
     {
         "Type": "WeaponDefensive",
         "SubType": "CountermeasureLauncher",
+        "key": "item_NameAEGS_Gladius_CML_Chaff"
+    },
+    {
+        "Type": "WeaponDefensive",
+        "SubType": "CountermeasureLauncher",
+        "key": "item_NameAEGS_Gladius_CML_Flare"
+    },
+    {
+        "Type": "WeaponDefensive",
+        "SubType": "CountermeasureLauncher",
         "key": "item_NameANVL_CML_Flare"
     },
     {
@@ -36597,6 +37877,16 @@
     {
         "Type": "WeaponDefensive",
         "SubType": "CountermeasureLauncher",
+        "key": "item_NameAEGS_Gladius_CML_Flare"
+    },
+    {
+        "Type": "WeaponDefensive",
+        "SubType": "CountermeasureLauncher",
+        "key": "item_NameJOKR_Defcon_CML_Chaff"
+    },
+    {
+        "Type": "WeaponDefensive",
+        "SubType": "CountermeasureLauncher",
         "key": "item_NameJOKR_Defcon_CML_Chaff"
     },
     {
@@ -36842,7 +38132,152 @@
     {
         "Type": "SeatDashboard",
         "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "Seat",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
         "key": "vehicle_NameANVL_Gladiator"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "vehicle_room_cockpit"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "SeatDashboard",
+        "SubType": "UNDEFINED",
+        "key": "item_TypeSeatDashboard"
+    },
+    {
+        "Type": "FuelTank",
+        "SubType": "Fuel",
+        "key": "refueling_ui_General_InternalTank"
     },
     {
         "Type": "FuelTank",
@@ -37500,6 +38935,31 @@
         "key": "refueling_ui_General_InternalTank"
     },
     {
+        "Type": "FuelTank",
+        "SubType": "Fuel",
+        "key": "refueling_ui_General_InternalTank"
+    },
+    {
+        "Type": "FuelTank",
+        "SubType": "Fuel",
+        "key": "refueling_ui_General_InternalTank"
+    },
+    {
+        "Type": "FuelTank",
+        "SubType": "Fuel",
+        "key": "refueling_ui_General_InternalTank"
+    },
+    {
+        "Type": "FuelTank",
+        "SubType": "Fuel",
+        "key": "refueling_ui_General_InternalTank"
+    },
+    {
+        "Type": "QuantumFuelTank",
+        "SubType": "QuantumFuel",
+        "key": "refueling_ui_General_InternalTank"
+    },
+    {
         "Type": "QuantumFuelTank",
         "SubType": "QuantumFuel",
         "key": "refueling_ui_General_InternalTank"
@@ -38062,6 +39522,21 @@
     {
         "Type": "QuantumFuelTank",
         "SubType": "QuantumFuel",
+        "key": "refueling_ui_General_InternalTank"
+    },
+    {
+        "Type": "QuantumFuelTank",
+        "SubType": "QuantumFuel",
+        "key": "refueling_ui_General_InternalTank"
+    },
+    {
+        "Type": "QuantumFuelTank",
+        "SubType": "QuantumFuel",
+        "key": "refueling_ui_General_InternalTank"
+    },
+    {
+        "Type": "QuantumFuelTank",
+        "SubType": "QuantumFuel",
         "key": "item_NameQTNK_VNCL_Glaive"
     },
     {
@@ -38110,6 +39585,11 @@
         "key": "item_NameJUMP_TARS_S3_C"
     },
     {
+        "Type": "JumpDrive",
+        "SubType": "UNDEFINED",
+        "key": "item_NameJDRV_WETK_S04_Idris"
+    },
+    {
         "Type": "MissileLauncher",
         "SubType": "MissileRack",
         "key": "item_NameMRCK_S03_AEGS_Sabre_Firebird"
@@ -38127,17 +39607,22 @@
     {
         "Type": "MissileLauncher",
         "SubType": "MissileRack",
-        "key": "item_NameMRCK_S03_AEGS_Sabre_Firebird"
+        "key": "item_NameAEGS_MRCK_S05_Bespoke"
     },
     {
         "Type": "MissileLauncher",
         "SubType": "MissileRack",
-        "key": "item_NameMRCK_S03_AEGS_Sabre_Firebird"
+        "key": "item_NameAEGS_MRCK_S05_Bespoke"
     },
     {
         "Type": "MissileLauncher",
         "SubType": "MissileRack",
         "key": "item_NameMRCK_S05_AEGS_Vanguard"
+    },
+    {
+        "Type": "MissileLauncher",
+        "SubType": "MissileRack",
+        "key": "item_NameAEGS_MRCK_S08_Bespoke"
     },
     {
         "Type": "MissileLauncher",
@@ -38247,12 +39732,22 @@
     {
         "Type": "MissileLauncher",
         "SubType": "MissileRack",
+        "key": "item_NameMRCK_S06_BEHR_Single_S06"
+    },
+    {
+        "Type": "MissileLauncher",
+        "SubType": "MissileRack",
         "key": "item_NameMRCK_S04_BEHR_Octo_S01"
     },
     {
         "Type": "MissileLauncher",
         "SubType": "MissileRack",
         "key": "item_NameMRCK_S05_BEHR_Dual_S04"
+    },
+    {
+        "Type": "MissileLauncher",
+        "SubType": "MissileRack",
+        "key": "item_NameMRCK_S05_BEHR_Octo_S02"
     },
     {
         "Type": "MissileLauncher",
@@ -38273,6 +39768,21 @@
         "Type": "MissileLauncher",
         "SubType": "MissileRack",
         "key": "item_NameMRCK_S05_BEHR_Single_S05"
+    },
+    {
+        "Type": "MissileLauncher",
+        "SubType": "MissileRack",
+        "key": "item_NameMRCK_S05_BEHR_Octo_S02"
+    },
+    {
+        "Type": "MissileLauncher",
+        "SubType": "MissileRack",
+        "key": "item_NameMRCK_S05_BEHR_Octo_S02"
+    },
+    {
+        "Type": "MissileLauncher",
+        "SubType": "MissileRack",
+        "key": "item_NameMRCK_S05_BEHR_Octo_S02"
     },
     {
         "Type": "MissileLauncher",
@@ -38298,6 +39808,11 @@
         "Type": "MissileLauncher",
         "SubType": "MissileRack",
         "key": "item_NameMRCK_S06_BEHR_Single_S06"
+    },
+    {
+        "Type": "MissileLauncher",
+        "SubType": "MissileRack",
+        "key": "item_NameMRCK_S06_BEHR_Octo_S03"
     },
     {
         "Type": "MissileLauncher",
@@ -38377,7 +39892,7 @@
     {
         "Type": "MissileLauncher",
         "SubType": "MissileRack",
-        "key": "item_NameMISC_Fury_S02_Single_Rack"
+        "key": "item_NameMRCK_S05_BEHR_Quad_S03"
     },
     {
         "Type": "MissileLauncher",
@@ -38408,6 +39923,11 @@
         "Type": "MissileLauncher",
         "SubType": "MissileRack",
         "key": "item_NameMRCK_S06_MISC_Gemini"
+    },
+    {
+        "Type": "MissileLauncher",
+        "SubType": "MissileRack",
+        "key": "item_NameMRAI_Guardian_MX_S02_MRCK"
     },
     {
         "Type": "MissileLauncher",
@@ -38517,6 +40037,11 @@
     {
         "Type": "MissileLauncher",
         "SubType": "MissileRack",
+        "key": "item_NameBEHR_TorpedoLauncher_S10"
+    },
+    {
+        "Type": "MissileLauncher",
+        "SubType": "MissileRack",
         "key": "item_NameMRCK_S10_RSI_Polaris_Side_MissileRack"
     },
     {
@@ -38615,6 +40140,11 @@
         "key": "item_NameMRCK_S03_XNAA_SanTokYai"
     },
     {
+        "Type": "Misc",
+        "SubType": "UNDEFINED",
+        "key": "itemPort_port_hardpoint_missile_door_cap"
+    },
+    {
         "Type": "Module",
         "SubType": "UNDEFINED",
         "key": "item_NameMODU_AEGS_Front_Base"
@@ -38658,6 +40188,11 @@
         "Type": "Turret",
         "SubType": "BallTurret",
         "key": "item_NameMustang_Nose_Scoop"
+    },
+    {
+        "Type": "AttachedPart",
+        "SubType": "UNDEFINED",
+        "key": "LOC_EMPTY"
     },
     {
         "Type": "MissileLauncher",
@@ -38997,6 +40532,11 @@
     {
         "Type": "Paints",
         "SubType": "UNDEFINED",
+        "key": "item_NameArrow_Paint_FW2955_Grey_Black_Red_Camo"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
         "key": "item_NameArrow_Paint_2950Invictus_4"
     },
     {
@@ -39023,6 +40563,31 @@
         "Type": "Paints",
         "SubType": "UNDEFINED",
         "key": "item_NameArrow_Paint_Unity"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameAsgard_Paint_beige_black_red"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameAsgard_Paint_black_black_yellow"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameAsgard_Paint_blue_black_red"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameAsgard_Paint_green_black_yellow"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameAsgard_Paint_vip_copper"
     },
     {
         "Type": "Paints",
@@ -39133,6 +40698,11 @@
         "Type": "Paints",
         "SubType": "UNDEFINED",
         "key": "item_NameAvenger_Paint_Fleetweek_Grey_Beige_Tigerstripe"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameAvenger_Paint_FW2955_Grey_Black_Red_Camo"
     },
     {
         "Type": "Paints",
@@ -39288,6 +40858,11 @@
         "Type": "Paints",
         "SubType": "UNDEFINED",
         "key": "item_NameCaterpillar_Paint_Luminalia_2021_white_blue"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "Item_NameConstellation_Paint_FW2955_Grey_Black_Red_Camo"
     },
     {
         "Type": "Paints",
@@ -39767,6 +41342,11 @@
     {
         "Type": "Paints",
         "SubType": "UNDEFINED",
+        "key": "item_NameFreelancer_Paint_Black_Red"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
         "key": "item_NameFreelancer_Paint_Unity"
     },
     {
@@ -39793,6 +41373,21 @@
         "Type": "Paints",
         "SubType": "UNDEFINED",
         "key": "item_NameFreelancer_Paint_2951RedFestival_Red_Gold"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameFreelancer_Paint_Orange_Brown"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameFreelancer_Paint_Pink_Blue"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameFreelancer_Paint_White_Red"
     },
     {
         "Type": "Paints",
@@ -39867,6 +41462,16 @@
     {
         "Type": "Paints",
         "SubType": "UNDEFINED",
+        "key": "item_NameGladius_Paint_FW2955_Grey_Black_Red_Camo"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameGladius_Paint_Grey_Black_Red"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
         "key": "item_NameGladius_Paint_Luminalia_green_red"
     },
     {
@@ -39927,6 +41532,36 @@
     {
         "Type": "Paints",
         "SubType": "UNDEFINED",
+        "key": "item_NameGuardian_Paint_Black_Black_Red"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameGuardian_Paint_Black_White_Red"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameGuardian_Paint_Blue_Blue_Blue"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameGuardian_Paint_Green_Green_Red"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameGuardian_Paint_Red_Red_Red"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameGuardian_Paint_Tan_Green_Tan"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
         "key": "item_NameGuardian_Paint_Red_Grey_White"
     },
     {
@@ -39943,6 +41578,11 @@
         "Type": "Paints",
         "SubType": "UNDEFINED",
         "key": "item_NameGuardian_Paint_White_White_White"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameHammerhead_Paint_FW2955_Grey_Black_Red_Camo"
     },
     {
         "Type": "Paints",
@@ -40232,6 +41872,46 @@
     {
         "Type": "Paints",
         "SubType": "UNDEFINED",
+        "key": "item_NameIdris_Paint_Beige_Beige_Black_Shark"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameIdris_Paint_Beige_Beige_Brown"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameIdris_Paint_Black_Black_Black_Red"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameIdris_Paint_Blue_Blue_Black"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameIdris_Paint_Blue_Blue_Blue_Camo"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameIdris_Paint_Chrome_Chrome_Black"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameIdris_Paint_FW2955_Grey_Black_Red_Camo"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameIdris_Paint_Grey_Green_Tan_Camo"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
         "key": "item_NameIntrepid_Paint_Black_Blue"
     },
     {
@@ -40248,6 +41928,11 @@
         "Type": "Paints",
         "SubType": "UNDEFINED",
         "key": "item_NameIntrepid_Paint_Green_Black"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameIntrepid_Paint_Silver_Teal_White"
     },
     {
         "Type": "Paints",
@@ -40347,6 +42032,11 @@
     {
         "Type": "Paints",
         "SubType": "UNDEFINED",
+        "key": "item_NameMole_Paint_Bronze_Black_Brown"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
         "key": "item_NameMOLE_Paint_Dolivine_Green"
     },
     {
@@ -40372,6 +42062,16 @@
     {
         "Type": "Paints",
         "SubType": "UNDEFINED",
+        "key": "item_NameMole_Paint_Yellow_Black_Blue"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameMole_Paint_Yellow_Grey_Black"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
         "key": "item_NameMPUV_1T_Paint_Lightgrey_Grey"
     },
     {
@@ -40392,7 +42092,37 @@
     {
         "Type": "Paints",
         "SubType": "UNDEFINED",
+        "key": "item_NameMPUV_Paint_FW2955_Grey_Black_Red_Camo"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
         "key": "item_NameMPUV_Paint_Lovestruck_Pink_Black"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameMTC_Paint_Black_Grey_Blue_Solid"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameMTC_Paint_Black_Grey_Red_Camo"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameMTC_Paint_Grey_Black_Red_Solid"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameMTC_Paint_Grey_Black_Yellow_Solid"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameMTC_Paint_Grey_Lightgrey_Orange_Solid"
     },
     {
         "Type": "Paints",
@@ -40542,6 +42272,11 @@
     {
         "Type": "Paints",
         "SubType": "UNDEFINED",
+        "key": "item_NameNova_Paint_FW2955_Grey_Black_Red_Camo"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
         "key": "item_NameNova_Paint_Fleetweek_Level1_Military"
     },
     {
@@ -40672,6 +42407,11 @@
     {
         "Type": "Paints",
         "SubType": "UNDEFINED",
+        "key": "item_NamePolaris_Paint_FW2955_Grey_Black_Red_Camo"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
         "key": "item_NamePolaris_Paint_Green_Green_Grey"
     },
     {
@@ -40732,6 +42472,11 @@
     {
         "Type": "Paints",
         "SubType": "UNDEFINED",
+        "key": "item_NameProwler_Paint_AlienWeek_Green_Brown_Brown"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
         "key": "item_NameProwler_Paint_AlienWeek_Platinum_Silver_Purple_Mosaic"
     },
     {
@@ -40748,6 +42493,36 @@
         "Type": "Paints",
         "SubType": "UNDEFINED",
         "key": "item_NameProwler_Paint_IAE2950_Grey_White_Camo"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameProwler_Paint_IcySilver_Titanium_Titanium"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameProwler_Paint_Orange_Gray_Lightgray"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameProwler_Paint_Orange_Gray_Orange"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameProwler_Paint_Silver_Steel_Gunmetal"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameProwler_Paint_Silver_Titanium_Gold"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameProwler_Paint_Tan_Brown_Cream"
     },
     {
         "Type": "Paints",
@@ -40788,6 +42563,11 @@
         "Type": "Paints",
         "SubType": "UNDEFINED",
         "key": "item_NamePulse_Paint_Black_Gold_Silver"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NamePulse_Paint_Grey_Gold_Camo"
     },
     {
         "Type": "Paints",
@@ -40933,6 +42713,11 @@
         "Type": "Paints",
         "SubType": "UNDEFINED",
         "key": "item_NameRedeemer_Paint_Valencia"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameRedeemer_Paint_FW2955_Grey_Black_Red_Camo"
     },
     {
         "Type": "Paints",
@@ -41142,6 +42927,11 @@
     {
         "Type": "Paints",
         "SubType": "UNDEFINED",
+        "key": "item_NameScorpius_Paint_FW2955_Grey_Black_Red_Camo"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
         "key": "item_NameScorpius_Paint_Lovestruck_Pink_Black"
     },
     {
@@ -41272,6 +43062,11 @@
     {
         "Type": "Paints",
         "SubType": "UNDEFINED",
+        "key": "item_NameSpirit_Paint_Yellow_Black_Chevron"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
         "key": "item_NameSRV_Paint_Black_Yellow"
     },
     {
@@ -41382,7 +43177,27 @@
     {
         "Type": "Paints",
         "SubType": "UNDEFINED",
+        "key": "item_NameStarlancer_Paint_Blue_Blue_Yellow"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
         "key": "item_NameStarlancer_Paint_Citcon2954_Blue_Black_White"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameStarlancer_Paint_Green_Black_Orange"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameStarlancer_Paint_Grey_Red_Black"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameStarlancer_Paint_Grey_White_Grey"
     },
     {
         "Type": "Paints",
@@ -41512,6 +43327,11 @@
     {
         "Type": "Paints",
         "SubType": "UNDEFINED",
+        "key": "item_NameStorm_Paint_Grey_Gold_Camo"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
         "key": "item_NameStorm_Paint_White_Grey_TwoTone"
     },
     {
@@ -41547,6 +43367,11 @@
     {
         "Type": "Paints",
         "SubType": "UNDEFINED",
+        "key": "item_NameSyulen_Paint_AlienWeek_Green_Brown_Brown"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
         "key": "item_NameSyulen_Paint_AlienWeek_Teal_Pink"
     },
     {
@@ -41578,6 +43403,11 @@
         "Type": "Paints",
         "SubType": "UNDEFINED",
         "key": "item_NameSyulen_Paint_Chiing_WhiteGold"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameTalon_Paint_AlienWeek_Green_Green_Brown"
     },
     {
         "Type": "Paints",
@@ -41697,6 +43527,16 @@
     {
         "Type": "Paints",
         "SubType": "UNDEFINED",
+        "key": "item_NameVanguard_Paint_Blue_Blue_White_Stripe"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameVanguard_Paint_Blue_White_Yellow_Stripe"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
         "key": "item_NameVanguard_Paint_Invictus_blue_gold"
     },
     {
@@ -41708,6 +43548,11 @@
         "Type": "Paints",
         "SubType": "UNDEFINED",
         "key": "item_NameVanguard_Paint_Fleetweek_Level2_Camo"
+    },
+    {
+        "Type": "Paints",
+        "SubType": "UNDEFINED",
+        "key": "item_NameVanguard_Paint_Gold_Gold_Black_Stripe"
     },
     {
         "Type": "Paints",
@@ -41888,6 +43733,66 @@
         "Type": "Paints",
         "SubType": "UNDEFINED",
         "key": "item_NameZeus_Paint_Yellow_Black_Yellow"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "UNDEFINED",
+        "key": "ui_PersonalStorage"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "UNDEFINED",
+        "key": "ui_PersonalStorage"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "UNDEFINED",
+        "key": "ui_PersonalStorage"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "UNDEFINED",
+        "key": "ui_PersonalStorage"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "UNDEFINED",
+        "key": "ui_PersonalStorage"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "UNDEFINED",
+        "key": "ui_PersonalStorage"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "UNDEFINED",
+        "key": "ui_PersonalStorage"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "UNDEFINED",
+        "key": "ui_PersonalStorage"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "UNDEFINED",
+        "key": "ui_PersonalStorage"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "UNDEFINED",
+        "key": "ui_PersonalStorage"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "UNDEFINED",
+        "key": "ui_PersonalStorage"
+    },
+    {
+        "Type": "Cargo",
+        "SubType": "UNDEFINED",
+        "key": "ui_PersonalStorage"
     },
     {
         "Type": "Cargo",
@@ -42805,6 +44710,11 @@
         "key": "item_NameQDRV_WETK_S03_TS2"
     },
     {
+        "Type": "QuantumDrive",
+        "SubType": "UNDEFINED",
+        "key": "item_NameQDRV_WETK_S04_Idris"
+    },
+    {
         "Type": "QuantumInterdictionGenerator",
         "SubType": "UNDEFINED",
         "key": "item_NameQDMP_RSI_S03_Captor"
@@ -42963,6 +44873,11 @@
         "Type": "Seat",
         "SubType": "UNDEFINED",
         "key": "item_Name_SeatAccess_GenericBed"
+    },
+    {
+        "Type": "Seat",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_TARG_Controller"
     },
     {
         "Type": "Seat",
@@ -43737,7 +45652,52 @@
     {
         "Type": "Seat",
         "SubType": "UNDEFINED",
-        "key": "item_displayType_bed_generic"
+        "key": "item_Name_TARG_Controller"
+    },
+    {
+        "Type": "Seat",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_TARG_Controller"
+    },
+    {
+        "Type": "Seat",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_TARG_Controller"
+    },
+    {
+        "Type": "Seat",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_TARG_Controller"
+    },
+    {
+        "Type": "Seat",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_TARG_Controller"
+    },
+    {
+        "Type": "Seat",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_TARG_Controller"
+    },
+    {
+        "Type": "Seat",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_TARG_Controller"
+    },
+    {
+        "Type": "Seat",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_TARG_Controller"
+    },
+    {
+        "Type": "Seat",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_TARG_Controller"
+    },
+    {
+        "Type": "Seat",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_TARG_Controller"
     },
     {
         "Type": "Seat",
@@ -43753,6 +45713,16 @@
         "Type": "Seat",
         "SubType": "UNDEFINED",
         "key": "item_displayType_bed_generic"
+    },
+    {
+        "Type": "Seat",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_bed_generic"
+    },
+    {
+        "Type": "Seat",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_TARG_Controller"
     },
     {
         "Type": "Seat",
@@ -44097,6 +46067,81 @@
     {
         "Type": "SeatAccess",
         "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
         "key": "item_Name_SeatAccess_GenericExterior"
     },
     {
@@ -44232,247 +46277,17 @@
     {
         "Type": "SeatAccess",
         "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
         "key": "item_Name_SeatAccess_GenericExterior"
     },
     {
         "Type": "SeatAccess",
         "SubType": "UNDEFINED",
         "key": "item_Name_SeatAccess_GenericStanding"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericStanding"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericExterior"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericExterior"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericExterior"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericExterior"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericExterior"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericExterior"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericExterior"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericExterior"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericExterior"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
-    },
-    {
-        "Type": "SeatAccess",
-        "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericExterior"
     },
     {
         "Type": "SeatAccess",
@@ -44537,6 +46352,241 @@
     {
         "Type": "SeatAccess",
         "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericExterior"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericExterior"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericExterior"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericExterior"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericExterior"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericExterior"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericExterior"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericExterior"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericExterior"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericExterior"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericStanding"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
         "key": "item_Name_SeatAccess_GenericSeat"
     },
     {
@@ -44647,7 +46697,7 @@
     {
         "Type": "SeatAccess",
         "SubType": "UNDEFINED",
-        "key": "item_Name_SeatAccess_GenericSeat"
+        "key": "vehicle_NameDRAK_Golem_short"
     },
     {
         "Type": "SeatAccess",
@@ -46192,6 +48242,16 @@
     {
         "Type": "Shield",
         "SubType": "UNDEFINED",
+        "key": "item_NameSHLD_GODI_S04_Idris"
+    },
+    {
+        "Type": "Shield",
+        "SubType": "UNDEFINED",
+        "key": "item_NameSHLD_GODI_S04_Idris"
+    },
+    {
+        "Type": "Shield",
+        "SubType": "UNDEFINED",
         "key": "item_NameSHLD_ORIG_S04_890J_SCItem"
     },
     {
@@ -46288,11 +48348,6 @@
         "Type": "Misc",
         "SubType": "Fuse",
         "key": "item_NameFuse_standard"
-    },
-    {
-        "Type": "Misc",
-        "SubType": "Fuse",
-        "key": "item_TypeFuse"
     },
     {
         "Type": "ManneuverThruster",
@@ -46395,6 +48450,11 @@
         "key": "item_Name_Turret_Manned"
     },
     {
+        "Type": "TurretBase",
+        "SubType": "MannedTurret",
+        "key": "item_NameAEGS_Manned_Turret_S07_Missile_Rack_Bespoke"
+    },
+    {
         "Type": "Turret",
         "SubType": "GunTurret",
         "key": "item_Name_Turret_Remote"
@@ -46432,17 +48492,27 @@
     {
         "Type": "TurretBase",
         "SubType": "MannedTurret",
-        "key": "item_Name_Turret_Manned"
+        "key": "item_NameAEGS_Idris_SCItem_Turret_Large"
     },
     {
         "Type": "TurretBase",
         "SubType": "MannedTurret",
-        "key": "item_Name_Turret_Manned"
+        "key": "item_NameAEGS_Idris_SCItem_Turret_Large"
     },
     {
         "Type": "TurretBase",
         "SubType": "MannedTurret",
-        "key": "item_Name_Turret_Manned"
+        "key": "item_NameAEGS_Idris_SCItem_Turret_Large_P"
+    },
+    {
+        "Type": "TurretBase",
+        "SubType": "MannedTurret",
+        "key": "item_NameAEGS_Idris_SCItem_Turret_Large"
+    },
+    {
+        "Type": "TurretBase",
+        "SubType": "MannedTurret",
+        "key": "item_NameAEGS_Manned_Turret_S07_Ballistic_Cannon_Bespoke"
     },
     {
         "Type": "TurretBase",
@@ -46808,6 +48878,21 @@
         "Type": "TurretBase",
         "SubType": "MannedTurret",
         "key": "item_Name_Turret_Manned"
+    },
+    {
+        "Type": "TurretBase",
+        "SubType": "MannedTurret",
+        "key": "item_Name_Turret_Manned"
+    },
+    {
+        "Type": "Turret",
+        "SubType": "GunTurret",
+        "key": "item_Name_Turret_Remote"
+    },
+    {
+        "Type": "Turret",
+        "SubType": "GunTurret",
+        "key": "item_Name_Turret_Remote"
     },
     {
         "Type": "TurretBase",
@@ -46936,6 +49021,11 @@
     },
     {
         "Type": "Turret",
+        "SubType": "GunTurret",
+        "key": "item_Name_Turret_Remote"
+    },
+    {
+        "Type": "Turret",
         "SubType": "Utility",
         "key": "item_Name_Turret_Remote"
     },
@@ -47070,6 +49160,11 @@
         "key": "item_Name_Turret_Manned"
     },
     {
+        "Type": "Turret",
+        "SubType": "Utility",
+        "key": "item_Name_Turret_Remote"
+    },
+    {
         "Type": "UtilityTurret",
         "SubType": "MannedTurret",
         "key": "item_Name_Turret_Manned"
@@ -47160,6 +49255,26 @@
         "key": "item_Name_Turret_Remote"
     },
     {
+        "Type": "TurretBase",
+        "SubType": "MannedTurret",
+        "key": "item_Name_Turret_Manned"
+    },
+    {
+        "Type": "TurretBase",
+        "SubType": "MannedTurret",
+        "key": "item_Name_Turret_Manned"
+    },
+    {
+        "Type": "TurretBase",
+        "SubType": "MannedTurret",
+        "key": "itemPort_hardpoint_turret"
+    },
+    {
+        "Type": "TurretBase",
+        "SubType": "MannedTurret",
+        "key": "itemPort_hardpoint_turret"
+    },
+    {
         "Type": "Turret",
         "SubType": "GunTurret",
         "key": "item_Name_Turret_Remote"
@@ -47323,6 +49438,11 @@
         "Type": "Turret",
         "SubType": "GunTurret",
         "key": "item_Name_Turret_Remote"
+    },
+    {
+        "Type": "Turret",
+        "SubType": "MissileTurret",
+        "key": "item_NameRSI_Scorpius_MissileTurret"
     },
     {
         "Type": "Turret",
@@ -47347,6 +49467,11 @@
     {
         "Type": "Turret",
         "SubType": "PDCTurret",
+        "key": "item_NameBEHR_PDC_MissileLauncher"
+    },
+    {
+        "Type": "Turret",
+        "SubType": "PDCTurret",
         "key": "item_Name_Turret_Remote"
     },
     {
@@ -47395,9 +49520,9 @@
         "key": "item_displayType_kioskScreen_generic"
     },
     {
-        "Type": "ToolArm",
+        "Type": "SeatDashboard",
         "SubType": "UNDEFINED",
-        "key": "ui_Mining_ShipMiningArm"
+        "key": "item_displayType_kioskScreen_generic"
     },
     {
         "Type": "ToolArm",
@@ -47405,9 +49530,9 @@
         "key": "ui_Mining_ShipMiningArm"
     },
     {
-        "Type": "MiningModifier",
-        "SubType": "Gun",
-        "key": "ui_Mining_Consumables"
+        "Type": "ToolArm",
+        "SubType": "UNDEFINED",
+        "key": "ui_Mining_ShipMiningArm"
     },
     {
         "Type": "MiningModifier",
@@ -47448,11 +49573,6 @@
         "Type": "MiningModifier",
         "SubType": "Gun",
         "key": "item_Mining_Consumable_Torpid"
-    },
-    {
-        "Type": "MiningModifier",
-        "SubType": "Gun",
-        "key": "ui_Mining_Consumables"
     },
     {
         "Type": "MiningModifier",
@@ -47555,11 +49675,6 @@
         "key": "item_Mining_Modules_VehicleMod_ROCds_Name"
     },
     {
-        "Type": "MiningModifier",
-        "SubType": "Gun",
-        "key": "item_Mining_Consumable_Surge"
-    },
-    {
         "Type": "ToolArm",
         "SubType": "UNDEFINED",
         "key": "ui_Mining_ShipMiningArm"
@@ -47617,12 +49732,52 @@
     {
         "Type": "ExternalFuelTank",
         "SubType": "UNDEFINED",
+        "key": "item_fuelpod_MISC_Standard_Name"
+    },
+    {
+        "Type": "ExternalFuelTank",
+        "SubType": "UNDEFINED",
+        "key": "item_fuelpod_MISC_Standard_Name"
+    },
+    {
+        "Type": "ExternalFuelTank",
+        "SubType": "UNDEFINED",
+        "key": "item_fuelpod_STOR_Fast_Name"
+    },
+    {
+        "Type": "ExternalFuelTank",
+        "SubType": "UNDEFINED",
+        "key": "item_fuelpod_STOR_Fast_Name"
+    },
+    {
+        "Type": "ExternalFuelTank",
+        "SubType": "UNDEFINED",
         "key": "item_fuelpod_STOR_Fast_Name"
     },
     {
         "Type": "ExternalFuelTank",
         "SubType": "UNDEFINED",
         "key": "item_fuelpod_STOR_Safe_Name"
+    },
+    {
+        "Type": "ExternalFuelTank",
+        "SubType": "UNDEFINED",
+        "key": "item_fuelpod_STOR_Safe_Name"
+    },
+    {
+        "Type": "ExternalFuelTank",
+        "SubType": "UNDEFINED",
+        "key": "item_fuelpod_STOR_Safe_Name"
+    },
+    {
+        "Type": "ExternalFuelTank",
+        "SubType": "UNDEFINED",
+        "key": "item_fuelpod_MISC_Standard_Name"
+    },
+    {
+        "Type": "ExternalFuelTank",
+        "SubType": "UNDEFINED",
+        "key": "item_fuelpod_MISC_Standard_Name"
     },
     {
         "Type": "ExternalFuelTank",
@@ -47678,6 +49833,11 @@
         "Type": "SalvageModifier",
         "SubType": "SalvageModifier_TractorBeam",
         "key": "salvage_HUD_TractorBeam_Module"
+    },
+    {
+        "Type": "ToolArm",
+        "SubType": "UNDEFINED",
+        "key": "ui_Mining_ShipMiningArm"
     },
     {
         "Type": "ToolArm",
@@ -47812,6 +49972,11 @@
     {
         "Type": "WeaponGun",
         "SubType": "Gun",
+        "key": "item_NameKLWE_LaserRepeater_S2"
+    },
+    {
+        "Type": "WeaponGun",
+        "SubType": "Gun",
         "key": "item_NameBANU_TachyonCannon_S1"
     },
     {
@@ -47828,6 +49993,11 @@
         "Type": "WeaponGun",
         "SubType": "Gun",
         "key": "item_NameBEHR_BallisticCannon_S4"
+    },
+    {
+        "Type": "WeaponGun",
+        "SubType": "Gun",
+        "key": "item_NameHRST_BallisticCannon_S7"
     },
     {
         "Type": "WeaponGun",
@@ -48022,6 +50192,11 @@
     {
         "Type": "WeaponGun",
         "SubType": "Gun",
+        "key": "item_NameBEHR_BallisticGatling_NOVA_S5"
+    },
+    {
+        "Type": "WeaponGun",
+        "SubType": "Gun",
         "key": "item_NameGATS_BallisticCannon_S3"
     },
     {
@@ -48147,6 +50322,11 @@
     {
         "Type": "WeaponGun",
         "SubType": "Gun",
+        "key": "item_NameHRST_LaserBeam_S10_Bespoke"
+    },
+    {
+        "Type": "WeaponGun",
+        "SubType": "Gun",
         "key": "item_NameHRST_LaserRepeater_S1"
     },
     {
@@ -48238,6 +50418,11 @@
         "Type": "WeaponGun",
         "SubType": "Gun",
         "key": "item_NameKLWE_LaserRepeater_S2"
+    },
+    {
+        "Type": "WeaponGun",
+        "SubType": "Gun",
+        "key": "item_NameKLWE_LaserRepeater_S1"
     },
     {
         "Type": "WeaponGun",
@@ -48676,17 +50861,17 @@
     },
     {
         "Type": "Bomb",
-        "SubType": "UNDEFINED",
+        "SubType": "Utility",
         "key": "item_NameBOMB_S03_FSKI_Thunderball"
     },
     {
         "Type": "Bomb",
-        "SubType": "UNDEFINED",
+        "SubType": "Utility",
         "key": "item_NameBOMB_S05_FSKI_Stormburst"
     },
     {
         "Type": "Bomb",
-        "SubType": "UNDEFINED",
+        "SubType": "Utility",
         "key": "item_NameBOMB_S10_FSKI_Colossus"
     },
     {
@@ -48806,7 +50991,7 @@
     },
     {
         "Type": "Missile",
-        "SubType": "Missile",
+        "SubType": "Torpedo",
         "key": "item_NameMISL_S05_EM_TALN_Reaper"
     },
     {
@@ -48816,7 +51001,7 @@
     },
     {
         "Type": "Missile",
-        "SubType": "Missile",
+        "SubType": "Torpedo",
         "key": "item_NameMISL_S05_IR_TALN_Valkyrie"
     },
     {
@@ -48847,7 +51032,37 @@
     {
         "Type": "Missile",
         "SubType": "Torpedo",
+        "key": "item_NameMISL_S10_CS_BEHR_Executor"
+    },
+    {
+        "Type": "Missile",
+        "SubType": "Torpedo",
+        "key": "item_NameMISL_S10_CS_TALN_Vanquisher"
+    },
+    {
+        "Type": "Missile",
+        "SubType": "Torpedo",
+        "key": "item_NameMISL_S10_EM_BEHR_Executor"
+    },
+    {
+        "Type": "Missile",
+        "SubType": "Torpedo",
+        "key": "item_NameMISL_S10_EM_TALN_Vanquisher"
+    },
+    {
+        "Type": "Missile",
+        "SubType": "Torpedo",
+        "key": "item_NameMISL_S10_IR_BEHR_Executor"
+    },
+    {
+        "Type": "Missile",
+        "SubType": "Torpedo",
         "key": "item_NameMISL_S10_IR_BEHR_Torpedo"
+    },
+    {
+        "Type": "Missile",
+        "SubType": "Torpedo",
+        "key": "item_NameMISL_S10_IR_TALN_Vanquisher"
     },
     {
         "Type": "Missile",
@@ -48857,7 +51072,37 @@
     {
         "Type": "Missile",
         "SubType": "Torpedo",
+        "key": "item_NameMISL_S12_CS_BEHR_Executor"
+    },
+    {
+        "Type": "Missile",
+        "SubType": "Torpedo",
+        "key": "item_NameMISL_S12_CS_TALN_Calamity"
+    },
+    {
+        "Type": "Missile",
+        "SubType": "Torpedo",
+        "key": "item_NameMISL_S12_EM_BEHR_Executor"
+    },
+    {
+        "Type": "Missile",
+        "SubType": "Torpedo",
+        "key": "item_NameMISL_S12_IR_TALN_Calamity"
+    },
+    {
+        "Type": "Missile",
+        "SubType": "Torpedo",
+        "key": "item_NameMISL_S12_IR_BEHR_Executor"
+    },
+    {
+        "Type": "Missile",
+        "SubType": "Torpedo",
         "key": "item_NameMISL_S12_IR_BEHR_Apex"
+    },
+    {
+        "Type": "Missile",
+        "SubType": "Torpedo",
+        "key": "item_NameMISL_S12_IR_TALN_Calamity"
     },
     {
         "Type": "Missile",
@@ -48973,6 +51218,11 @@
         "Type": "Turret",
         "SubType": "BallTurret",
         "key": "item_NameANVL_Arrow_Turret"
+    },
+    {
+        "Type": "Turret",
+        "SubType": "GunTurret",
+        "key": "item_NameBEHR_PC2_Dual_S3"
     },
     {
         "Type": "Turret",
@@ -49202,6 +51452,16 @@
     {
         "Type": "Turret",
         "SubType": "GunTurret",
+        "key": "item_NameBEHR_PC2_Dual_S4"
+    },
+    {
+        "Type": "Turret",
+        "SubType": "GunTurret",
+        "key": "item_NameBEHR_PC2_Dual_S4"
+    },
+    {
+        "Type": "Turret",
+        "SubType": "GunTurret",
         "key": "item_NameBEHR_Mount_Gimbal_BallisticGatling_Hornet_Bespoke"
     },
     {
@@ -49257,17 +51517,22 @@
     {
         "Type": "Turret",
         "SubType": "GunTurret",
-        "key": "item_NameMount_Gimbal_S3"
-    },
-    {
-        "Type": "Turret",
-        "SubType": "GunTurret",
         "key": "item_NameMount_Gimbal_S4"
     },
     {
         "Type": "Turret",
         "SubType": "GunTurret",
         "key": "item_NameMount_Gimbal_S4"
+    },
+    {
+        "Type": "Turret",
+        "SubType": "GunTurret",
+        "key": "item_NameMount_Gimbal_S6"
+    },
+    {
+        "Type": "Turret",
+        "SubType": "GunTurret",
+        "key": "item_NameMount_Gimbal_S6"
     },
     {
         "Type": "Turret",
@@ -49426,6 +51691,11 @@
     },
     {
         "Type": "Door",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_WeaponRack_Generic"
+    },
+    {
+        "Type": "Usable",
         "SubType": "UNDEFINED",
         "key": "item_Name_WeaponRack_Generic"
     },
@@ -50177,6 +52447,31 @@
     {
         "Type": "Usable",
         "SubType": "UNDEFINED",
+        "key": "item_displayType_bed_medical"
+    },
+    {
+        "Type": "Usable",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_bed_medical"
+    },
+    {
+        "Type": "Usable",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_bed_medical"
+    },
+    {
+        "Type": "Usable",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_bed_medical"
+    },
+    {
+        "Type": "Usable",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_bed_medical"
+    },
+    {
+        "Type": "Usable",
+        "SubType": "UNDEFINED",
         "key": "item_displayType_bed_generic"
     },
     {
@@ -50472,6 +52767,11 @@
     {
         "Type": "UNDEFINED",
         "SubType": "UNDEFINED",
+        "key": "item_displayType_console_generic"
+    },
+    {
+        "Type": "UNDEFINED",
+        "SubType": "UNDEFINED",
         "key": "item_displayType_kioskScreen_generic"
     },
     {
@@ -50828,6 +53128,26 @@
         "Type": "UNDEFINED",
         "SubType": "UNDEFINED",
         "key": "item_displayType_console_generic"
+    },
+    {
+        "Type": "UNDEFINED",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_console_generic"
+    },
+    {
+        "Type": "UNDEFINED",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_console_generic"
+    },
+    {
+        "Type": "UNDEFINED",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_console_generic"
+    },
+    {
+        "Type": "Usable",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_kioskScreen_generic"
     },
     {
         "Type": "Usable",
@@ -50923,11 +53243,6 @@
         "Type": "Usable",
         "SubType": "UNDEFINED",
         "key": "item_displayType_seat_generic"
-    },
-    {
-        "Type": "UNDEFINED",
-        "SubType": "UNDEFINED",
-        "key": "item_displayType_console_generic"
     },
     {
         "Type": "Usable",
@@ -52890,6 +55205,66 @@
         "key": "item_displayType_seat_generic"
     },
     {
+        "Type": "Usable",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_seat_generic"
+    },
+    {
+        "Type": "Usable",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_seat_generic"
+    },
+    {
+        "Type": "Usable",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_seat_generic"
+    },
+    {
+        "Type": "Usable",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_seat_generic"
+    },
+    {
+        "Type": "Usable",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_seat_generic"
+    },
+    {
+        "Type": "Usable",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_seat_generic"
+    },
+    {
+        "Type": "Usable",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_seat_generic"
+    },
+    {
+        "Type": "Usable",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_seat_generic"
+    },
+    {
+        "Type": "Usable",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_seat_generic"
+    },
+    {
+        "Type": "Usable",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_seat_generic"
+    },
+    {
+        "Type": "Usable",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_seat_generic"
+    },
+    {
+        "Type": "Usable",
+        "SubType": "UNDEFINED",
+        "key": "item_displayType_seat_generic"
+    },
+    {
         "Type": "Cargo",
         "SubType": "UNDEFINED",
         "key": "item_displayType_drinkMaker_coffee"
@@ -53117,6 +55492,16 @@
     {
         "Type": "SeatAccess",
         "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
+        "key": "item_Name_SeatAccess_GenericSeat"
+    },
+    {
+        "Type": "SeatAccess",
+        "SubType": "UNDEFINED",
         "key": "item_Name_SeatAccess_GenericExterior"
     },
     {
@@ -53173,6 +55558,11 @@
         "Type": "SeatAccess",
         "SubType": "UNDEFINED",
         "key": "item_Name_SeatAccess_GenericExterior"
+    },
+    {
+        "Type": "Turret",
+        "SubType": "BallTurret",
+        "key": "itemPort_hardpoint_turret"
     },
     {
         "Type": "Turret",
@@ -53223,6 +55613,16 @@
         "Type": "Turret",
         "SubType": "TopTurret",
         "key": "item_NameTMBL_Storm_Turret"
+    },
+    {
+        "Type": "WeaponMount",
+        "SubType": "WeaponControl",
+        "key": "itemPort_hardpoint_turret"
+    },
+    {
+        "Type": "WeaponMount",
+        "SubType": "WeaponControl",
+        "key": "itemPort_hardpoint_turret"
     },
     {
         "Type": "Gadget",
@@ -53481,27 +55881,27 @@
     },
     {
         "Type": "WeaponPersonal",
-        "SubType": "Gadget",
+        "SubType": "Small",
         "key": "item_Namecrlf_medgun_01"
     },
     {
         "Type": "WeaponPersonal",
-        "SubType": "Gadget",
+        "SubType": "Small",
         "key": "item_Namecrlf_medgun_01_grey01"
     },
     {
         "Type": "WeaponPersonal",
-        "SubType": "Gadget",
+        "SubType": "Small",
         "key": "item_Namecrlf_medgun_01_purple01"
     },
     {
         "Type": "WeaponPersonal",
-        "SubType": "Gadget",
+        "SubType": "Small",
         "key": "item_Namecrlf_medgun_01_red01"
     },
     {
         "Type": "WeaponPersonal",
-        "SubType": "Gadget",
+        "SubType": "Small",
         "key": "item_Namecrlf_medgun_01_yellow01"
     },
     {
@@ -54432,6 +56832,116 @@
     {
         "Type": "WeaponPersonal",
         "SubType": "Medium",
+        "key": "item_Namevolt_rifle_energy_01_uee01"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_shotgun_energy_01"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_shotgun_energy_01_collector01"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_shotgun_energy_01_store01"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_shotgun_energy_01_tint01"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_shotgun_energy_01_tint02"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_shotgun_energy_01_tint03"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_smg_energy_01"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_smg_energy_01_collector01"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_smg_energy_01_collector02"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_smg_energy_01_collector03"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_smg_energy_01_store01"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_smg_energy_01_store02"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_smg_energy_01_store03"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_smg_energy_01_tint01"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_smg_energy_01_tint01"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_smg_energy_01_tint02"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_smg_energy_01_tint02"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_smg_energy_01_tint03"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_smg_energy_01_tint03"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
+        "key": "item_Namevolt_smg_energy_01_uee01"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Large",
+        "key": "item_Nameapar_special_ballistic_01"
+    },
+    {
+        "Type": "WeaponPersonal",
+        "SubType": "Medium",
         "key": "item_Nameksar_rifle_energy_01"
     },
     {
@@ -54567,6 +57077,11 @@
     {
         "Type": "WeaponAttachment",
         "SubType": "Magazine",
+        "key": "item_Namegrin_tool_01_salvage_mag"
+    },
+    {
+        "Type": "WeaponAttachment",
+        "SubType": "Magazine",
         "key": "item_Namegrin_tractor_01_mag"
     },
     {
@@ -54683,6 +57198,16 @@
         "Type": "WeaponAttachment",
         "SubType": "Magazine",
         "key": "item_Namevolt_rifle_energy_01_mag"
+    },
+    {
+        "Type": "WeaponAttachment",
+        "SubType": "Magazine",
+        "key": "item_Namevolt_shotgun_energy_01_mag"
+    },
+    {
+        "Type": "WeaponAttachment",
+        "SubType": "Magazine",
+        "key": "item_Namevolt_smg_energy_01_mag"
     },
     {
         "Type": "WeaponPersonal",
@@ -55142,6 +57667,11 @@
     {
         "Type": "WeaponAttachment",
         "SubType": "IronSight",
+        "key": "item_Namebehr_optics_holo_x3_s1_tint01"
+    },
+    {
+        "Type": "WeaponAttachment",
+        "SubType": "IronSight",
         "key": "item_Namebehr_optics_rdot_x1_s1"
     },
     {
@@ -55252,6 +57782,11 @@
     {
         "Type": "WeaponAttachment",
         "SubType": "IronSight",
+        "key": "item_Namenvtc_optics_holo_x1_s1_tint01"
+    },
+    {
+        "Type": "WeaponAttachment",
+        "SubType": "IronSight",
         "key": "item_Namenvtc_optics_holo_x2_s1"
     },
     {
@@ -55268,6 +57803,11 @@
         "Type": "WeaponAttachment",
         "SubType": "IronSight",
         "key": "Item_Namenvtc_optics_holo_x3_s1_LAMP"
+    },
+    {
+        "Type": "WeaponAttachment",
+        "SubType": "IronSight",
+        "key": "item_Namenvtc_optics_holo_x3_s1_tint01"
     },
     {
         "Type": "WeaponAttachment",
