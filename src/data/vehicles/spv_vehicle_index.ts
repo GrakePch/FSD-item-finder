@@ -195,6 +195,70 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
     }
   },
   {
+    "ClassName": "AEGS_Gladius_Dunlevy",
+    "Name": "Aegis Gladius Dunlevy",
+    "Manufacturer": "Aegis Dynamics",
+    "Career": "Combat",
+    "Role": "Light Fighter",
+    "Size": 2,
+    "Cargo": 0,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": true,
+      "IsLimitedSale": false,
+      "Buy": null
+    },
+    "PU": {
+      "Patch": "4.2.0",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "Buy": null
+    }
+  },
+  {
+    "ClassName": "AEGS_Gladius_PIR",
+    "Name": "Aegis Gladius Pirate",
+    "Manufacturer": "Aegis Dynamics",
+    "Career": "Combat",
+    "Role": "Light Fighter",
+    "Size": 2,
+    "Cargo": 0,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 110.0
+    },
+    "PU": {
+      "Patch": "3.7.1",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "Buy": null
+    }
+  },
+  {
     "ClassName": "AEGS_Gladius_Valiant",
     "Name": "Aegis Gladius Valiant",
     "Manufacturer": "Aegis Dynamics",
@@ -1529,7 +1593,8 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Date": "2024-11-20",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": null
+      "IsPTUBuyOnly": false,
+      "Buy": 5384600
     }
   },
   {
@@ -1885,7 +1950,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "IsShipOfTheMonth": true,
+      "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "June 2025",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20582-June-2025-Subscriber-Promotions",
       "Buy": 375.0
@@ -2785,9 +2850,9 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "IsShipOfTheMonth": false,
-      "ShipOfTheMonth": "February 2024",
-      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/19776-February-2024-Subscriber-Promotions",
+      "IsShipOfTheMonth": true,
+      "ShipOfTheMonth": "August 2025",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/20705-August-2025-Subscriber-Promotions",
       "Buy": 250.0
     },
     "PU": {
@@ -2821,9 +2886,9 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "IsShipOfTheMonth": false,
-      "ShipOfTheMonth": "February 2024",
-      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/19776-February-2024-Subscriber-Promotions",
+      "IsShipOfTheMonth": true,
+      "ShipOfTheMonth": "August 2025",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/20705-August-2025-Subscriber-Promotions",
       "Buy": 250.0
     },
     "PU": {
@@ -3027,6 +3092,9 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
+      "IsShipOfTheMonth": false,
+      "ShipOfTheMonth": "July 2025",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20624-July-2025-Subscriber-Promotions",
       "Buy": 330.0
     },
     "PU": {
@@ -3034,6 +3102,38 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "Buy": 12474000.0
+    }
+  },
+  {
+    "ClassName": "DRAK_Caterpillar_Pirate",
+    "Name": "Drake Caterpillar Pirate",
+    "Manufacturer": "Drake Interplanetary",
+    "Career": "Transporter",
+    "Role": "Medium Freight",
+    "Size": 5,
+    "Cargo": 576,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 330.0
+    },
+    "PU": {
+      "Patch": "2.6.0",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "Buy": null
     }
   },
   {
@@ -3194,7 +3294,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "IsShipOfTheMonth": true,
+      "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "June 2025",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20582-June-2025-Subscriber-Promotions",
       "Buy": 235.0
@@ -3416,7 +3516,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": null
+      "Buy": 1058400
     }
   },
   {
@@ -4070,6 +4170,40 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
     }
   },
   {
+    "ClassName": "KRIG_L21_Wolf",
+    "Name": "Kruger L-21 Wolf",
+    "Manufacturer": "Kruger Intergalactic",
+    "Career": "Combat",
+    "Role": "Light Fighter",
+    "Size": 2,
+    "Cargo": 0,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "Patch": "4.3.0",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 100
+    },
+    "PU": {
+      "Patch": "4.3.0",
+      "Date": "2025-08-16",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "Buy": null
+    }
+  },
+  {
     "ClassName": "KRIG_P52_Merlin",
     "Name": "Kruger P-52 Merlin",
     "Manufacturer": "Kruger Intergalactic",
@@ -4227,7 +4361,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": null
+      "Buy": 1890000
     }
   },
   {
@@ -5017,6 +5151,9 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": "https://robertsspaceindustries.com/comm-link/transmission/20214-MISC-Starlancer-MAX",
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
+      "IsShipOfTheMonth": false,
+      "ShipOfTheMonth": "July 2025",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20624-July-2025-Subscriber-Promotions",
       "Buy": 250
     },
     "PU": {
@@ -5094,7 +5231,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": null
+      "Buy": 6615000
     }
   },
   {
@@ -6355,6 +6492,40 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "Buy": 3402000.0
+    }
+  },
+  {
+    "ClassName": "RSI_Meteor",
+    "Name": "RSI Meteor",
+    "Manufacturer": "Roberts Space Industries",
+    "Career": "Combat",
+    "Role": "Medium Fighter",
+    "Size": 2,
+    "Cargo": 0,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "Patch": "4.2.1",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 260
+    },
+    "PU": {
+      "Patch": "4.2.1",
+      "Date": "2025-07-17",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "Buy": null
     }
   },
   {

@@ -9,8 +9,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 0.71
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -180,15 +179,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 2360.0,
       "TurretsBurstDPS": 0.0,
@@ -213,8 +204,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 8.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 1.01
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -384,15 +374,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 4200.0,
       "PilotBurstDPS": 2360.0,
       "TurretsBurstDPS": 0.0,
@@ -417,8 +399,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 8.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 1.01
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -588,15 +569,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 4200.0,
       "PilotBurstDPS": 1549.0,
       "TurretsBurstDPS": 0.0,
@@ -621,8 +594,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 0.71
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -792,15 +764,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 2360.0,
       "TurretsBurstDPS": 0.0,
@@ -826,8 +790,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.65
+      "Storage": 0.65
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -895,11 +858,11 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 202.0,
-      "MaxSpeed": 1050.0,
-      "Pitch": 33.0,
-      "Yaw": 33.0,
-      "Roll": 110.0,
+      "ScmSpeed": 210.0,
+      "MaxSpeed": 1100.0,
+      "Pitch": 38.0,
+      "Yaw": 31.0,
+      "Roll": 115.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 3566000.0,
@@ -919,7 +882,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "BaseSpoolTime": 1.0,
         "QuantumDriveSpoolTime": 4.0,
         "ScmMode": {
-          "BoostSpeedForward": 500.0,
+          "BoostSpeedForward": 510.0,
           "BoostSpeedBackward": 215.0
         }
       },
@@ -999,15 +962,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 656.0,
       "TurretsBurstDPS": 0.0,
@@ -1032,8 +987,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.65
+      "Storage": 0.65
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -1061,8 +1015,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Hull": {
       "StructureHealthPoints": {
         "VitalParts": {
-          "Body": 2134.0,
-          "Nose": 2000.0
+          "Body": 2350.0
         },
         "Parts": {
           "WingLeft": 600.0,
@@ -1086,6 +1039,7 @@ const spvVehicleList: SpvVehicleMain[] = [
           "RearWingLeft_Flap": 50.0,
           "Rudder_Left": 50.0,
           "Rudder_Left_Flap": 50.0,
+          "Nose": 600.0,
           "FrontWing_Right": 50.0,
           "FrontWing_Left": 50.0,
           "Canopy": 100.0
@@ -1113,25 +1067,26 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 225.0,
-      "MaxSpeed": 1230.0,
-      "Pitch": 70.0,
+      "ScmSpeed": 226.0,
+      "MaxSpeed": 1193.0,
+      "Pitch": 68.0,
       "Yaw": 52.0,
       "Roll": 200.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 4910000.0,
-        "Retro": 412000.0,
+        "Main": 4250000.0,
+        "Retro": 192000.0,
         "Vtol": 0.0,
-        "Maneuvering": 11336000.0
+        "Maneuvering": 10500000.0
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 13.7,
-        "Retro": 4.4,
-        "Strafe": 10.4,
+        "Main": 13.0,
+        "Retro": 4.2,
+        "Strafe": 10.0,
         "Up": 10.0,
-        "Down": 5.0
+        "Down": 5.0,
+        "CheckDate": "2025-08-03"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -1189,10 +1144,10 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 10.0
       },
       "FuelUsagePerSecond": {
-        "Main": 613.75,
-        "Retro": 51.5,
+        "Main": 531.25,
+        "Retro": 24.0,
         "Vtol": 0.0,
-        "Maneuvering": 1417.0
+        "Maneuvering": 1312.5
       },
       "IntakeToMainFuelRatio": 0.0,
       "TimeForIntakesToFillTank": "Infinity"
@@ -1217,15 +1172,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3460.0,
       "PilotBurstDPS": 1598.0,
       "TurretsBurstDPS": 0.0,
@@ -1241,6 +1188,420 @@ const spvVehicleList: SpvVehicleMain[] = [
     }
   },
   {
+    "ClassName": "AEGS_Gladius_Dunlevy",
+    "Name": "Aegis Gladius Dunlevy",
+    "Description": "Honor the famed Captain who shaped the course of the UEE Navy's elite fighter squadron with the Dunlevy variant for the Aegis Gladius. This special ship pays to tribute to Captain Alexandra Dunlevy and Squadron 42 with red highlights against a grey base paint and military-grade components.",
+    "Career": "Combat",
+    "Role": "Light Fighter",
+    "Size": 2,
+    "Cargo": {
+      "CargoGrid": 0.0,
+      "CargoContainers": 0.0,
+      "Storage": 0.65
+    },
+    "Crew": 1,
+    "WeaponCrew": 0,
+    "OperationsCrew": 0,
+    "Mass": 48552.06,
+    "ComponentsMass": 6005.0,
+    "Dimensions": {
+      "Length": 20.0,
+      "Width": 17.0,
+      "Height": 5.5
+    },
+    "IsSpaceship": true,
+    "Armor": {
+      "DamageMultipliers": {
+        "Physical": 0.43,
+        "Energy": 1.0,
+        "Distortion": 1.0
+      },
+      "SignalMultipliers": {
+        "Electromagnetic": 1.13,
+        "Infrared": 1.13,
+        "CrossSection": 1.13
+      }
+    },
+    "Hull": {
+      "StructureHealthPoints": {
+        "VitalParts": {
+          "Body": 2350.0
+        },
+        "Parts": {
+          "WingLeft": 600.0,
+          "WingLeft_Tip": 260.0,
+          "TipWing_Left_B": 50.0,
+          "TipWing_Left_A": 50.0,
+          "WingLeft_Mid_Flap": 50.0,
+          "WingRight": 600.0,
+          "WingRight_Tip": 260.0,
+          "TipWing_Right_A": 50.0,
+          "TipWing_Right_B": 50.0,
+          "WingRight_Mid_Flap": 50.0,
+          "Belly": 240.0,
+          "Belly_Wing_Left": 150.0,
+          "Belly_Wing_Right": 150.0,
+          "Rudder_Right": 50.0,
+          "Rudder_Right_Flap": 50.0,
+          "RearWingRight": 50.0,
+          "RearWingRight_Flap": 50.0,
+          "RearWingLeft": 50.0,
+          "RearWingLeft_Flap": 50.0,
+          "Rudder_Left": 50.0,
+          "Rudder_Left_Flap": 50.0,
+          "Nose": 600.0,
+          "FrontWing_Right": 50.0,
+          "FrontWing_Left": 50.0,
+          "Canopy": 100.0
+        }
+      },
+      "ThrustersHealthPoints": {
+        "Main": {
+          "thruster_main_left": 11500.0,
+          "thruster_main_right": 11500.0
+        },
+        "Retro": {
+          "thruster_retro_left": 10500.0,
+          "thruster_retro_right": 10500.0
+        },
+        "Maneuvering": {
+          "thruster_wing_left_top": 9500.0,
+          "thruster_wing_left_bottom": 9500.0,
+          "thruster_wing_right_top": 9500.0,
+          "thruster_wing_right_bottom": 9500.0,
+          "thruster_front_left_top": 9500.0,
+          "thruster_front_left_side": 9500.0,
+          "thruster_front_right_side": 9500.0,
+          "thruster_front_right_top": 9500.0
+        }
+      }
+    },
+    "FlightCharacteristics": {
+      "ScmSpeed": 226.0,
+      "MaxSpeed": 1193.0,
+      "Pitch": 68.0,
+      "Yaw": 52.0,
+      "Roll": 200.0,
+      "IsVtolAssisted": false,
+      "ThrustCapacity": {
+        "Main": 4250000.0,
+        "Retro": 192000.0,
+        "Vtol": 0.0,
+        "Maneuvering": 10500000.0
+      },
+      "AccelerationG": {
+        "IsValidated": true,
+        "Main": 13.0,
+        "Retro": 4.2,
+        "Strafe": 10.0,
+        "Up": 10.0,
+        "Down": 5.0,
+        "CheckDate": "2025-08-03"
+      },
+      "MasterModes": {
+        "BaseSpoolTime": 1.0,
+        "QuantumDriveSpoolTime": 4.0,
+        "ScmMode": {
+          "BoostSpeedForward": 520.0,
+          "BoostSpeedBackward": 268.0
+        }
+      },
+      "Boost": {
+        "PreDelay": 0.0,
+        "RampUp": 0.6,
+        "RampDown": 0.3,
+        "AccelerationMultiplier": {
+          "PositiveAxis": {
+            "X": 1.3,
+            "Y": 1.55,
+            "Z": 1.3
+          },
+          "NegativeAxis": {
+            "X": 1.3,
+            "Y": 1.4,
+            "Z": 1.35
+          }
+        },
+        "AngularAccelerationMultiplier": {
+          "Pitch": 1.2,
+          "Yaw": 1.2,
+          "Roll": 1.2
+        },
+        "AngularVelocityMultiplier": {
+          "Pitch": 1.2,
+          "Yaw": 1.2,
+          "Roll": 1.2
+        }
+      },
+      "Capacitors": {
+        "ThrusterCapacitorSize": 20.0,
+        "CapacitorRegenPerSec": 0.75,
+        "CapacitorIdleCost": 1.0,
+        "CapacitorLinearCost": 0.0,
+        "CapacitorUsageModifier": 1.0,
+        "CapacitorRegenDelay": 0.2,
+        "RegenerationTime": 26.7
+      }
+    },
+    "FuelManagement": {
+      "FuelCapacity": 13500000.0,
+      "FuelIntakeRate": 0.0,
+      "QuantumFuelCapacity": 1300000.0,
+      "FuelBurnRatePer10KNewton": {
+        "Main": 2.5,
+        "Retro": 2.5,
+        "Vtol": 0.0,
+        "Maneuvering": 10.0
+      },
+      "FuelUsagePerSecond": {
+        "Main": 531.25,
+        "Retro": 24.0,
+        "Vtol": 0.0,
+        "Maneuvering": 1312.5
+      },
+      "IntakeToMainFuelRatio": 0.0,
+      "TimeForIntakesToFillTank": "Infinity"
+    },
+    "Emissions": {
+      "Electromagnetic": {
+        "SCMIdle": 4835.0,
+        "SCMActive": 5733.0,
+        "NAV": 13348.0
+      },
+      "Infrared": {
+        "Start": 9234.0
+      },
+      "CrossSection": {
+        "Front": 1956.0,
+        "Side": 7823.0,
+        "Top": 9779.0
+      }
+    },
+    "ResourceNetwork": {
+      "ItemPools": {
+        "WeaponPoolSize": 4.0
+      }
+    },
+    "BaseLoadout": {
+      "TotalShieldHP": 3700.0,
+      "PilotBurstDPS": 1598.0,
+      "TurretsBurstDPS": 0.0,
+      "TotalMissilesDmg": 14568.0
+    },
+    "Insurance": {
+      "StandardClaimTime": 5.83,
+      "ExpeditedClaimTime": 1.94,
+      "ExpeditedCost": 2335.0
+    }
+  },
+  {
+    "ClassName": "AEGS_Gladius_PIR",
+    "Name": "Aegis Gladius Pirate",
+    "Description": " Aegis Gladius Pirate",
+    "Career": "Combat",
+    "Role": "Light Fighter",
+    "Size": 2,
+    "Cargo": {
+      "CargoGrid": 0.0,
+      "CargoContainers": 0.0,
+      "Storage": 0.65
+    },
+    "Crew": 1,
+    "WeaponCrew": 0,
+    "OperationsCrew": 0,
+    "Mass": 48552.06,
+    "ComponentsMass": 6215.0,
+    "Dimensions": {
+      "Length": 20.0,
+      "Width": 17.0,
+      "Height": 5.5
+    },
+    "IsSpaceship": true,
+    "Armor": {
+      "DamageMultipliers": {
+        "Physical": 0.43,
+        "Energy": 1.0,
+        "Distortion": 1.0
+      },
+      "SignalMultipliers": {
+        "Electromagnetic": 1.13,
+        "Infrared": 1.13,
+        "CrossSection": 1.13
+      }
+    },
+    "Hull": {
+      "StructureHealthPoints": {
+        "VitalParts": {
+          "Body": 2350.0
+        },
+        "Parts": {
+          "WingLeft": 600.0,
+          "WingLeft_Tip": 260.0,
+          "TipWing_Left_B": 50.0,
+          "TipWing_Left_A": 50.0,
+          "WingLeft_Mid_Flap": 50.0,
+          "WingRight": 600.0,
+          "WingRight_Tip": 260.0,
+          "TipWing_Right_A": 50.0,
+          "TipWing_Right_B": 50.0,
+          "WingRight_Mid_Flap": 50.0,
+          "Belly": 240.0,
+          "Belly_Wing_Left": 150.0,
+          "Belly_Wing_Right": 150.0,
+          "Rudder_Right": 50.0,
+          "Rudder_Right_Flap": 50.0,
+          "RearWingRight": 50.0,
+          "RearWingRight_Flap": 50.0,
+          "RearWingLeft": 50.0,
+          "RearWingLeft_Flap": 50.0,
+          "Rudder_Left": 50.0,
+          "Rudder_Left_Flap": 50.0,
+          "Nose": 600.0,
+          "FrontWing_Right": 50.0,
+          "FrontWing_Left": 50.0,
+          "Canopy": 100.0
+        }
+      },
+      "ThrustersHealthPoints": {
+        "Main": {
+          "thruster_main_left": 11500.0,
+          "thruster_main_right": 11500.0
+        },
+        "Retro": {
+          "thruster_retro_left": 10500.0,
+          "thruster_retro_right": 10500.0
+        },
+        "Maneuvering": {
+          "thruster_wing_left_top": 9500.0,
+          "thruster_wing_left_bottom": 9500.0,
+          "thruster_wing_right_top": 9500.0,
+          "thruster_wing_right_bottom": 9500.0,
+          "thruster_front_left_top": 9500.0,
+          "thruster_front_left_side": 9500.0,
+          "thruster_front_right_side": 9500.0,
+          "thruster_front_right_top": 9500.0
+        }
+      }
+    },
+    "FlightCharacteristics": {
+      "ScmSpeed": 226.0,
+      "MaxSpeed": 1193.0,
+      "Pitch": 68.0,
+      "Yaw": 52.0,
+      "Roll": 200.0,
+      "IsVtolAssisted": false,
+      "ThrustCapacity": {
+        "Main": 4250000.0,
+        "Retro": 192000.0,
+        "Vtol": 0.0,
+        "Maneuvering": 10500000.0
+      },
+      "AccelerationG": {
+        "IsValidated": true,
+        "Main": 13.0,
+        "Retro": 4.2,
+        "Strafe": 10.0,
+        "Up": 10.0,
+        "Down": 5.0,
+        "CheckDate": "2025-08-03"
+      },
+      "MasterModes": {
+        "BaseSpoolTime": 1.0,
+        "QuantumDriveSpoolTime": 4.0,
+        "ScmMode": {
+          "BoostSpeedForward": 520.0,
+          "BoostSpeedBackward": 268.0
+        }
+      },
+      "Boost": {
+        "PreDelay": 0.0,
+        "RampUp": 0.6,
+        "RampDown": 0.3,
+        "AccelerationMultiplier": {
+          "PositiveAxis": {
+            "X": 1.3,
+            "Y": 1.55,
+            "Z": 1.3
+          },
+          "NegativeAxis": {
+            "X": 1.3,
+            "Y": 1.4,
+            "Z": 1.35
+          }
+        },
+        "AngularAccelerationMultiplier": {
+          "Pitch": 1.2,
+          "Yaw": 1.2,
+          "Roll": 1.2
+        },
+        "AngularVelocityMultiplier": {
+          "Pitch": 1.2,
+          "Yaw": 1.2,
+          "Roll": 1.2
+        }
+      },
+      "Capacitors": {
+        "ThrusterCapacitorSize": 20.0,
+        "CapacitorRegenPerSec": 0.75,
+        "CapacitorIdleCost": 1.0,
+        "CapacitorLinearCost": 0.0,
+        "CapacitorUsageModifier": 1.0,
+        "CapacitorRegenDelay": 0.2,
+        "RegenerationTime": 26.7
+      }
+    },
+    "FuelManagement": {
+      "FuelCapacity": 13500000.0,
+      "FuelIntakeRate": 0.0,
+      "QuantumFuelCapacity": 1300000.0,
+      "FuelBurnRatePer10KNewton": {
+        "Main": 2.5,
+        "Retro": 2.5,
+        "Vtol": 0.0,
+        "Maneuvering": 10.0
+      },
+      "FuelUsagePerSecond": {
+        "Main": 531.25,
+        "Retro": 24.0,
+        "Vtol": 0.0,
+        "Maneuvering": 1312.5
+      },
+      "IntakeToMainFuelRatio": 0.0,
+      "TimeForIntakesToFillTank": "Infinity"
+    },
+    "Emissions": {
+      "Electromagnetic": {
+        "SCMIdle": 4835.0,
+        "SCMActive": 5733.0,
+        "NAV": 13348.0
+      },
+      "Infrared": {
+        "Start": 9234.0
+      },
+      "CrossSection": {
+        "Front": 1956.0,
+        "Side": 7823.0,
+        "Top": 9779.0
+      }
+    },
+    "ResourceNetwork": {
+      "ItemPools": {
+        "WeaponPoolSize": 4.0
+      }
+    },
+    "BaseLoadout": {
+      "TotalShieldHP": 3200.0,
+      "PilotBurstDPS": 1598.0,
+      "TurretsBurstDPS": 0.0,
+      "TotalMissilesDmg": 18636.0
+    },
+    "Insurance": {
+      "StandardClaimTime": 10.125,
+      "ExpeditedClaimTime": 1.94,
+      "ExpeditedCost": 2335.0
+    }
+  },
+  {
     "ClassName": "AEGS_Gladius_Valiant",
     "Name": "Aegis Gladius Valiant",
     "Description": "Created as part of the ‘Masters of Flight’ series in conjunction with the flight-sim Arena Commander, the Valiant pays tribute to famed defense pilot Condi Hillard for being the first Human on record to defeat a Vanduul in combat. This Gladius comes equipped with a specialized dogfighting focused loadout and a custom special edition livery honoring her iconic ship.",
@@ -1250,8 +1611,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.65
+      "Storage": 0.65
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -1279,8 +1639,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Hull": {
       "StructureHealthPoints": {
         "VitalParts": {
-          "Body": 2134.0,
-          "Nose": 2000.0
+          "Body": 2350.0
         },
         "Parts": {
           "WingLeft": 600.0,
@@ -1304,6 +1663,7 @@ const spvVehicleList: SpvVehicleMain[] = [
           "RearWingLeft_Flap": 50.0,
           "Rudder_Left": 50.0,
           "Rudder_Left_Flap": 50.0,
+          "Nose": 600.0,
           "FrontWing_Right": 50.0,
           "FrontWing_Left": 50.0,
           "Canopy": 100.0
@@ -1331,25 +1691,26 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 225.0,
-      "MaxSpeed": 1230.0,
-      "Pitch": 70.0,
+      "ScmSpeed": 226.0,
+      "MaxSpeed": 1193.0,
+      "Pitch": 68.0,
       "Yaw": 52.0,
       "Roll": 200.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 4910000.0,
-        "Retro": 412000.0,
+        "Main": 4250000.0,
+        "Retro": 192000.0,
         "Vtol": 0.0,
-        "Maneuvering": 11336000.0
+        "Maneuvering": 10500000.0
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 13.7,
-        "Retro": 4.4,
-        "Strafe": 10.4,
+        "Main": 13.0,
+        "Retro": 4.2,
+        "Strafe": 10.0,
         "Up": 10.0,
-        "Down": 5.0
+        "Down": 5.0,
+        "CheckDate": "2025-08-03"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -1407,10 +1768,10 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 10.0
       },
       "FuelUsagePerSecond": {
-        "Main": 613.75,
-        "Retro": 51.5,
+        "Main": 531.25,
+        "Retro": 24.0,
         "Vtol": 0.0,
-        "Maneuvering": 1417.0
+        "Maneuvering": 1312.5
       },
       "IntakeToMainFuelRatio": 0.0,
       "TimeForIntakesToFillTank": "Infinity"
@@ -1435,15 +1796,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3460.0,
       "PilotBurstDPS": 1639.0,
       "TurretsBurstDPS": 0.0,
@@ -1468,8 +1821,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 40.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 10.8,
-      "PersonalInventory": 10.28
+      "Storage": 10.8
     },
     "Crew": 2,
     "WeaponCrew": 6,
@@ -1648,15 +2000,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 126800.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 19629.0,
@@ -1681,8 +2025,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 1326.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 32.0
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 11,
@@ -1875,15 +2218,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.9
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2340000.0,
       "PilotBurstDPS": 9611.0,
       "TurretsBurstDPS": 35443.0,
@@ -1905,8 +2240,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 1374.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 32.0
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 12,
@@ -2099,15 +2433,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.9
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2340000.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 32384.0,
@@ -2129,8 +2455,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 420.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 6.9,
-      "PersonalInventory": 7.22
+      "Storage": 6.9
     },
     "Crew": 1,
     "WeaponCrew": 7,
@@ -2335,12 +2660,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "Emissions": {
       "Electromagnetic": {
-        "SCMIdle": 13484.0,
-        "SCMActive": 15733.0,
-        "NAV": 28931.0
+        "SCMIdle": 13486.0,
+        "SCMActive": 15734.0,
+        "NAV": 28932.0
       },
       "Infrared": {
-        "Start": 23145.0
+        "Start": 25245.0
       },
       "CrossSection": {
         "Front": 18111.0,
@@ -2358,19 +2683,19 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 187000.0,
       "PilotBurstDPS": 0.0,
-      "TurretsBurstDPS": 9002.0,
+      "TurretsBurstDPS": 11335.0,
       "TotalMissilesDmg": 0.0
+    },
+    "Buffs": {
+      "Salvage": {
+        "Buffer": 240.0,
+        "SpeedMultiplier": 10.0,
+        "RadiusMultiplier": 2.18,
+        "ExtractionEfficiency": 0.55
+      }
     },
     "Insurance": {
       "StandardClaimTime": 30.69,
@@ -2391,8 +2716,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 2.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 4.0,
-      "PersonalInventory": 4.22
+      "Storage": 4.0
     },
     "Crew": 4,
     "WeaponCrew": 4,
@@ -2470,8 +2794,8 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 202.5,
       "MaxSpeed": 1050.0,
-      "Pitch": 32.0,
-      "Yaw": 32.0,
+      "Pitch": 34.0,
+      "Yaw": 30.0,
       "Roll": 115.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
@@ -2577,15 +2901,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 28440.0,
       "PilotBurstDPS": 542.0,
       "TurretsBurstDPS": 7798.0,
@@ -2610,8 +2926,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 5.3,
-      "PersonalInventory": 8.0
+      "Storage": 5.3
     },
     "Crew": 1,
     "WeaponCrew": 5,
@@ -2708,11 +3023,11 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 200.0,
-      "MaxSpeed": 1000.0,
-      "Pitch": 30.0,
-      "Yaw": 30.0,
-      "Roll": 60.0,
+      "ScmSpeed": 205.0,
+      "MaxSpeed": 1100.0,
+      "Pitch": 25.0,
+      "Yaw": 23.0,
+      "Roll": 55.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 12440000.0,
@@ -2733,7 +3048,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "QuantumDriveSpoolTime": 6.0,
         "ScmMode": {
           "BoostSpeedForward": 400.0,
-          "BoostSpeedBackward": 205.0
+          "BoostSpeedBackward": 206.0
         }
       },
       "Boost": {
@@ -2817,15 +3132,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 28440.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 5456.0,
@@ -2855,8 +3162,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.65
+      "Storage": 0.65
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -2923,10 +3229,10 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 206.0,
+      "ScmSpeed": 223.0,
       "MaxSpeed": 1235.0,
-      "Pitch": 55.0,
-      "Yaw": 55.0,
+      "Pitch": 62.0,
+      "Yaw": 48.0,
       "Roll": 160.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
@@ -2937,11 +3243,12 @@ const spvVehicleList: SpvVehicleMain[] = [
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 12.0,
-        "Retro": 4.2,
-        "Strafe": 8.5,
-        "Up": 9.0,
-        "Down": 4.7
+        "Main": 12.2,
+        "Retro": 4.3,
+        "Strafe": 8.6,
+        "Up": 9.1,
+        "Down": 4.8,
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -3027,15 +3334,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 2182.0,
       "TurretsBurstDPS": 0.0,
@@ -3060,8 +3359,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.65
+      "Storage": 0.65
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -3128,10 +3426,10 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 206.0,
+      "ScmSpeed": 223.0,
       "MaxSpeed": 1235.0,
-      "Pitch": 55.0,
-      "Yaw": 55.0,
+      "Pitch": 62.0,
+      "Yaw": 48.0,
       "Roll": 160.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
@@ -3142,11 +3440,12 @@ const spvVehicleList: SpvVehicleMain[] = [
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 12.0,
-        "Retro": 4.2,
-        "Strafe": 8.5,
-        "Up": 9.0,
-        "Down": 4.7
+        "Main": 12.2,
+        "Retro": 4.3,
+        "Strafe": 8.6,
+        "Up": 9.1,
+        "Down": 4.8,
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -3232,15 +3531,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 2018.0,
       "TurretsBurstDPS": 0.0,
@@ -3265,8 +3556,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.65
+      "Storage": 0.65
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -3333,8 +3623,8 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 240.0,
       "MaxSpeed": 1400.0,
-      "Pitch": 50.0,
-      "Yaw": 42.0,
+      "Pitch": 49.0,
+      "Yaw": 41.0,
       "Roll": 160.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
@@ -3349,7 +3639,8 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Retro": 3.4,
         "Strafe": 4.4,
         "Up": 5.8,
-        "Down": 3.4
+        "Down": 3.4,
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -3435,15 +3726,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 1013.0,
       "TurretsBurstDPS": 0.0,
@@ -3469,8 +3752,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.65
+      "Storage": 0.65
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -3647,15 +3929,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -3678,8 +3952,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.65
+      "Storage": 0.65
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -3742,8 +4015,8 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 240.0,
       "MaxSpeed": 1400.0,
-      "Pitch": 50.0,
-      "Yaw": 42.0,
+      "Pitch": 62.0,
+      "Yaw": 43.0,
       "Roll": 160.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
@@ -3844,15 +4117,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 1094.0,
       "TurretsBurstDPS": 0.0,
@@ -3875,8 +4140,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.5,
-      "PersonalInventory": 1.85
+      "Storage": 1.5
     },
     "Crew": 1,
     "WeaponCrew": 1,
@@ -3884,9 +4148,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Mass": 238070.26,
     "ComponentsMass": 13642.0,
     "Dimensions": {
-      "Length": 48.0,
+      "Length": 38.5,
       "Width": 40.0,
-      "Height": 9.5
+      "Height": 8.5
     },
     "IsSpaceship": true,
     "Armor": {
@@ -3952,8 +4216,8 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 210.0,
       "MaxSpeed": 1075.0,
-      "Pitch": 40.0,
-      "Yaw": 35.0,
+      "Pitch": 44.0,
+      "Yaw": 38.0,
       "Roll": 124.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
@@ -3969,7 +4233,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Strafe": 6.6,
         "Up": 6.6,
         "Down": 4.0,
-        "CheckDate": "2025-03-08"
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -4055,15 +4319,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 9480.0,
       "PilotBurstDPS": 3527.0,
       "TurretsBurstDPS": 900.0,
@@ -4088,8 +4344,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.5,
-      "PersonalInventory": 1.85
+      "Storage": 1.5
     },
     "Crew": 1,
     "WeaponCrew": 1,
@@ -4097,9 +4352,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Mass": 230404.0,
     "ComponentsMass": 14711.0,
     "Dimensions": {
-      "Length": 48.0,
+      "Length": 38.5,
       "Width": 40.0,
-      "Height": 9.5
+      "Height": 8.5
     },
     "IsSpaceship": true,
     "Armor": {
@@ -4165,8 +4420,8 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 212.0,
       "MaxSpeed": 1085.0,
-      "Pitch": 38.0,
-      "Yaw": 33.0,
+      "Pitch": 41.0,
+      "Yaw": 35.0,
       "Roll": 120.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
@@ -4182,7 +4437,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Strafe": 6.6,
         "Up": 6.6,
         "Down": 4.0,
-        "CheckDate": "2025-03-08"
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -4268,15 +4523,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 8820.0,
       "PilotBurstDPS": 3327.0,
       "TurretsBurstDPS": 300.0,
@@ -4301,8 +4548,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 1.85
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 1,
@@ -4310,9 +4556,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Mass": 217870.0,
     "ComponentsMass": 23926.0,
     "Dimensions": {
-      "Length": 48.0,
+      "Length": 38.5,
       "Width": 40.0,
-      "Height": 9.5
+      "Height": 8.5
     },
     "IsSpaceship": true,
     "Armor": {
@@ -4395,7 +4641,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Strafe": 4.2,
         "Up": 4.7,
         "Down": 5.3,
-        "CheckDate": "2025-03-08"
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -4481,15 +4727,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 9480.0,
       "PilotBurstDPS": 3507.0,
       "TurretsBurstDPS": 900.0,
@@ -4514,8 +4752,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.5,
-      "PersonalInventory": 1.85
+      "Storage": 1.5
     },
     "Crew": 1,
     "WeaponCrew": 1,
@@ -4523,9 +4760,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Mass": 225970.0,
     "ComponentsMass": 15377.0,
     "Dimensions": {
-      "Length": 48.0,
+      "Length": 38.5,
       "Width": 40.0,
-      "Height": 9.5
+      "Height": 8.5
     },
     "IsSpaceship": true,
     "Armor": {
@@ -4591,8 +4828,8 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 210.0,
       "MaxSpeed": 1075.0,
-      "Pitch": 40.0,
-      "Yaw": 36.0,
+      "Pitch": 44.0,
+      "Yaw": 39.0,
       "Roll": 126.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
@@ -4608,7 +4845,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Strafe": 6.6,
         "Up": 6.6,
         "Down": 4.0,
-        "CheckDate": "2025-03-08"
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -4694,15 +4931,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 5780.0,
       "PilotBurstDPS": 2865.0,
       "TurretsBurstDPS": 405.0,
@@ -4728,8 +4957,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.43,
-      "PersonalInventory": 0.43
+      "Storage": 0.43
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -4757,8 +4985,8 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Hull": {
       "StructureHealthPoints": {
         "VitalParts": {
-          "nose": 2000.0,
-          "body": 2000.0
+          "nose": 1950.0,
+          "body": 1950.0
         },
         "Parts": {
           "canopy": 80.0,
@@ -4789,25 +5017,26 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 232.0,
-      "MaxSpeed": 1210.0,
-      "Pitch": 74.0,
-      "Yaw": 55.0,
-      "Roll": 189.0,
+      "ScmSpeed": 229.0,
+      "MaxSpeed": 1215.0,
+      "Pitch": 75.0,
+      "Yaw": 57.0,
+      "Roll": 205.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 4400000.0,
-        "Retro": 1530000.0,
+        "Main": 4560000.0,
+        "Retro": 1520000.0,
         "Vtol": 0.0,
-        "Maneuvering": 3480000.0
+        "Maneuvering": 3548000.0
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 13.3,
-        "Retro": 4.6,
-        "Strafe": 10.2,
-        "Up": 10.2,
-        "Down": 5.2
+        "Main": 13.5,
+        "Retro": 4.5,
+        "Strafe": 10.7,
+        "Up": 10.7,
+        "Down": 5.2,
+        "CheckDate": "2025-08-03"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -4865,10 +5094,10 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 10.0
       },
       "FuelUsagePerSecond": {
-        "Main": 550.0,
-        "Retro": 191.25,
+        "Main": 570.0,
+        "Retro": 190.0,
         "Vtol": 0.0,
-        "Maneuvering": 435.0
+        "Maneuvering": 443.5
       },
       "IntakeToMainFuelRatio": 0.0,
       "TimeForIntakesToFillTank": "Infinity"
@@ -4893,15 +5122,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1730.0,
       "PilotBurstDPS": 1494.0,
       "TurretsBurstDPS": 0.0,
@@ -4926,8 +5147,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 180.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.5,
-      "PersonalInventory": 8.0
+      "Storage": 1.5
     },
     "Crew": 1,
     "WeaponCrew": 3,
@@ -5118,15 +5338,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 18960.0,
       "PilotBurstDPS": 3274.0,
       "TurretsBurstDPS": 1636.0,
@@ -5153,8 +5365,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.05,
-      "PersonalInventory": 2.11
+      "Storage": 1.05
     },
     "Crew": 2,
     "WeaponCrew": 2,
@@ -5226,15 +5437,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1090.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 677.0,
@@ -5266,8 +5469,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.12,
-      "PersonalInventory": 0.71
+      "Storage": 0.12
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -5282,7 +5484,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "IsSpaceship": true,
     "Armor": {
       "DamageMultipliers": {
-        "Physical": 1.0,
+        "Physical": 0.5,
         "Energy": 1.0,
         "Distortion": 1.0
       },
@@ -5437,15 +5639,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1050.0,
       "PilotBurstDPS": 438.0,
       "TurretsBurstDPS": 0.0,
@@ -5470,8 +5664,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 4.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 0.71
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -5486,7 +5679,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "IsSpaceship": true,
     "Armor": {
       "DamageMultipliers": {
-        "Physical": 1.0,
+        "Physical": 0.5,
         "Energy": 1.0,
         "Distortion": 1.0
       },
@@ -5628,7 +5821,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "NAV": 12060.0
       },
       "Infrared": {
-        "Start": 5578.0
+        "Start": 5410.0
       },
       "CrossSection": {
         "Front": 1909.0,
@@ -5641,15 +5834,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1050.0,
       "PilotBurstDPS": 848.0,
       "TurretsBurstDPS": 0.0,
@@ -5674,8 +5859,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 4.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 0.71
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -5690,7 +5874,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "IsSpaceship": true,
     "Armor": {
       "DamageMultipliers": {
-        "Physical": 1.0,
+        "Physical": 0.5,
         "Energy": 1.0,
         "Distortion": 1.0
       },
@@ -5832,7 +6016,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "NAV": 12048.0
       },
       "Infrared": {
-        "Start": 5568.0
+        "Start": 5400.0
       },
       "CrossSection": {
         "Front": 1835.0,
@@ -5845,15 +6029,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1050.0,
       "PilotBurstDPS": 438.0,
       "TurretsBurstDPS": 0.0,
@@ -5878,13 +6054,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 456.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 9.0,
-      "PersonalInventory": 8.92
+      "Storage": 9.0
     },
     "Crew": 6,
     "WeaponCrew": 4,
     "OperationsCrew": 0,
-    "Mass": 4397858.0,
+    "Mass": 3275858.0,
     "ComponentsMass": 342400.0,
     "Dimensions": {
       "Length": 126.5,
@@ -6059,15 +6234,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 126800.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 6543.0,
@@ -6092,8 +6259,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.05,
-      "PersonalInventory": 2.11
+      "Storage": 1.05
     },
     "Crew": 2,
     "WeaponCrew": 2,
@@ -6170,15 +6336,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.05
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1524.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 4058.0,
@@ -6210,8 +6368,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.29,
-      "PersonalInventory": 1.29
+      "Storage": 1.35
     },
     "Crew": 1,
     "WeaponCrew": 1,
@@ -6407,15 +6564,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 4740.0,
       "PilotBurstDPS": 1636.0,
       "TurretsBurstDPS": 1091.0,
@@ -6440,8 +6589,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.65
+      "Storage": 0.65
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -6469,16 +6617,16 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Hull": {
       "StructureHealthPoints": {
         "VitalParts": {
-          "nose": 1500.0,
-          "body": 1500.0
+          "nose": 2000.0,
+          "body": 2000.0
         },
         "Parts": {
-          "Nacelle_left": 1000.0,
-          "rear_wing_left": 800.0,
-          "wing_left": 800.0,
-          "Nacelle_right": 1000.0,
-          "rear_wing_right": 800.0,
-          "wing_right": 800.0,
+          "Nacelle_left": 1900.0,
+          "rear_wing_left": 1900.0,
+          "wing_left": 1000.0,
+          "Nacelle_right": 1900.0,
+          "rear_wing_right": 1900.0,
+          "wing_right": 1000.0,
           "canopy": 1500.0,
           "tail": 1500.0
         }
@@ -6507,25 +6655,26 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 222.0,
-      "MaxSpeed": 1175.0,
-      "Pitch": 65.0,
-      "Yaw": 48.0,
-      "Roll": 178.0,
+      "ScmSpeed": 225.0,
+      "MaxSpeed": 1217.0,
+      "Pitch": 63.0,
+      "Yaw": 52.0,
+      "Roll": 190.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 8200000.0,
-        "Retro": 2900000.0,
+        "Main": 8634000.0,
+        "Retro": 2766000.0,
         "Vtol": 0.0,
-        "Maneuvering": 30800000.0
+        "Maneuvering": 16310000.0
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 12.1,
-        "Retro": 4.2,
-        "Strafe": 9.1,
-        "Up": 9.0,
-        "Down": 4.7
+        "Main": 12.8,
+        "Retro": 4.1,
+        "Strafe": 9.7,
+        "Up": 9.7,
+        "Down": 4.8,
+        "CheckDate": "2025-08-03"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -6583,10 +6732,10 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 12.5
       },
       "FuelUsagePerSecond": {
-        "Main": 1025.0,
-        "Retro": 362.5,
+        "Main": 1079.25,
+        "Retro": 345.75,
         "Vtol": 0.0,
-        "Maneuvering": 3850.0
+        "Maneuvering": 2038.75
       },
       "IntakeToMainFuelRatio": 0.0,
       "TimeForIntakesToFillTank": "Infinity"
@@ -6611,15 +6760,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3460.0,
       "PilotBurstDPS": 1582.0,
       "TurretsBurstDPS": 0.0,
@@ -6650,8 +6791,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.65
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -6688,10 +6828,13 @@ const spvVehicleList: SpvVehicleMain[] = [
           "thrust_vector_flap_a": 50.0,
           "Tail": 1800.0,
           "Tail_Debris": 1500.0,
+          "Tail_livery_decal_right": 200.0,
+          "Tail_livery_decal_left": 200.0,
           "Nose": 2750.0,
           "Canopy": 200.0,
           "WingLeft": 200.0,
           "WingLeft_Debris": 1500.0,
+          "WingLeft_Debris_livery_decal": 1.0,
           "WingRight": 200.0,
           "WingRight_Debris": 1500.0,
           "WingLeftRear": 700.0,
@@ -6719,9 +6862,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 220.0,
       "MaxSpeed": 1146.0,
-      "Pitch": 56.0,
-      "Yaw": 45.0,
-      "Roll": 150.0,
+      "Pitch": 53.0,
+      "Yaw": 42.0,
+      "Roll": 147.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 2814000.0,
@@ -6821,15 +6964,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3000.0,
       "PilotBurstDPS": 4279.0,
       "TurretsBurstDPS": 0.0,
@@ -6851,8 +6986,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.0
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -6927,9 +7061,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 220.0,
       "MaxSpeed": 1146.0,
-      "Pitch": 56.0,
-      "Yaw": 45.0,
-      "Roll": 150.0,
+      "Pitch": 50.0,
+      "Yaw": 40.0,
+      "Roll": 143.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 8646000.0,
@@ -7030,15 +7164,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3460.0,
       "PilotBurstDPS": 4719.0,
       "TurretsBurstDPS": 0.0,
@@ -7066,8 +7192,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 2.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.65
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -7139,9 +7264,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 220.0,
       "MaxSpeed": 1150.0,
-      "Pitch": 56.0,
-      "Yaw": 45.0,
-      "Roll": 150.0,
+      "Pitch": 55.0,
+      "Yaw": 44.0,
+      "Roll": 149.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 5581000.0,
@@ -7241,15 +7366,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3000.0,
       "PilotBurstDPS": 1091.0,
       "TurretsBurstDPS": 0.0,
@@ -7274,8 +7391,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.29,
-      "PersonalInventory": 1.29
+      "Storage": 1.29
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -7346,9 +7462,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 219.0,
       "MaxSpeed": 1142.0,
-      "Pitch": 56.0,
-      "Yaw": 45.0,
-      "Roll": 150.0,
+      "Pitch": 53.0,
+      "Yaw": 42.0,
+      "Roll": 145.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 8648000.0,
@@ -7448,15 +7564,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3460.0,
       "PilotBurstDPS": 2107.0,
       "TurretsBurstDPS": 0.0,
@@ -7481,8 +7589,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.29,
-      "PersonalInventory": 1.29
+      "Storage": 1.29
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -7553,9 +7660,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 219.0,
       "MaxSpeed": 1142.0,
-      "Pitch": 56.0,
-      "Yaw": 45.0,
-      "Roll": 150.0,
+      "Pitch": 53.0,
+      "Yaw": 42.0,
+      "Roll": 145.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 8648000.0,
@@ -7655,15 +7762,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3460.0,
       "PilotBurstDPS": 2476.0,
       "TurretsBurstDPS": 0.0,
@@ -7685,8 +7784,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.29,
-      "PersonalInventory": 0.0
+      "Storage": 1.29
     },
     "Crew": 2,
     "WeaponCrew": 0,
@@ -7762,7 +7860,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 215.0,
       "MaxSpeed": 1125.0,
-      "Pitch": 52.0,
+      "Pitch": 50.0,
       "Yaw": 40.0,
       "Roll": 140.0,
       "IsVtolAssisted": false,
@@ -7865,15 +7963,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 5190.0,
       "PilotBurstDPS": 4714.0,
       "TurretsBurstDPS": 0.0,
@@ -7900,8 +7990,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.29,
-      "PersonalInventory": 0.0
+      "Storage": 1.29
     },
     "Crew": 2,
     "WeaponCrew": 0,
@@ -7977,7 +8066,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 215.0,
       "MaxSpeed": 1125.0,
-      "Pitch": 52.0,
+      "Pitch": 50.0,
       "Yaw": 40.0,
       "Roll": 140.0,
       "IsVtolAssisted": false,
@@ -8080,15 +8169,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 5190.0,
       "PilotBurstDPS": 5468.0,
       "TurretsBurstDPS": 0.0,
@@ -8115,8 +8196,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.65
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -8290,15 +8370,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2940.0,
       "PilotBurstDPS": 1091.0,
       "TurretsBurstDPS": 0.0,
@@ -8323,8 +8395,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.0
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -8399,9 +8470,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 220.0,
       "MaxSpeed": 1150.0,
-      "Pitch": 56.0,
-      "Yaw": 45.0,
-      "Roll": 150.0,
+      "Pitch": 52.0,
+      "Yaw": 43.0,
+      "Roll": 148.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 8070928.0,
@@ -8501,15 +8572,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3460.0,
       "PilotBurstDPS": 2532.0,
       "TurretsBurstDPS": 0.0,
@@ -8537,8 +8600,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.65
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -8610,9 +8672,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 219.0,
       "MaxSpeed": 1142.0,
-      "Pitch": 56.0,
-      "Yaw": 45.0,
-      "Roll": 150.0,
+      "Pitch": 55.0,
+      "Yaw": 44.0,
+      "Roll": 149.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 5581000.0,
@@ -8712,15 +8774,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 1094.0,
       "TurretsBurstDPS": 0.0,
@@ -8745,8 +8799,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.0
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -8821,9 +8874,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 220.0,
       "MaxSpeed": 1150.0,
-      "Pitch": 56.0,
-      "Yaw": 45.0,
-      "Roll": 150.0,
+      "Pitch": 51.0,
+      "Yaw": 42.0,
+      "Roll": 147.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 8069988.0,
@@ -8923,15 +8976,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 2532.0,
       "TurretsBurstDPS": 0.0,
@@ -8947,6 +8992,9 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Length": 22.2,
       "Width": 15.0,
       "Height": 6.0
+    },
+    "Buy": {
+      "New Deal - Teasa Spaceport - Lorville": 5384600.0
     }
   },
   {
@@ -8959,8 +9007,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 2.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.0
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -9035,9 +9082,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 220.0,
       "MaxSpeed": 1150.0,
-      "Pitch": 56.0,
-      "Yaw": 45.0,
-      "Roll": 150.0,
+      "Pitch": 52.0,
+      "Yaw": 43.0,
+      "Roll": 148.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 8646000.0,
@@ -9138,15 +9185,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3460.0,
       "PilotBurstDPS": 2532.0,
       "TurretsBurstDPS": 0.0,
@@ -9177,8 +9216,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 2.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.65
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -9250,9 +9288,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 220.0,
       "MaxSpeed": 1150.0,
-      "Pitch": 56.0,
-      "Yaw": 45.0,
-      "Roll": 150.0,
+      "Pitch": 55.0,
+      "Yaw": 44.0,
+      "Roll": 149.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 5581000.0,
@@ -9352,15 +9390,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3000.0,
       "PilotBurstDPS": 2177.0,
       "TurretsBurstDPS": 0.0,
@@ -9385,8 +9415,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 2.58,
-      "PersonalInventory": 1.29
+      "Storage": 2.58
     },
     "Crew": 1,
     "WeaponCrew": 1,
@@ -9458,8 +9487,8 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 214.0,
       "MaxSpeed": 1125.0,
-      "Pitch": 45.0,
-      "Yaw": 35.0,
+      "Pitch": 46.0,
+      "Yaw": 37.0,
       "Roll": 130.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
@@ -9566,15 +9595,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 4740.0,
       "PilotBurstDPS": 1636.0,
       "TurretsBurstDPS": 2182.0,
@@ -9599,8 +9620,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.65
+      "Storage": 0.65
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -9689,9 +9709,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 207.0,
       "MaxSpeed": 1075.0,
-      "Pitch": 35.0,
-      "Yaw": 31.0,
-      "Roll": 115.0,
+      "Pitch": 38.0,
+      "Yaw": 35.0,
+      "Roll": 120.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 13530000.0,
@@ -9792,15 +9812,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 5780.0,
       "PilotBurstDPS": 3266.0,
       "TurretsBurstDPS": 0.0,
@@ -9823,8 +9835,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.05,
-      "PersonalInventory": 1.06
+      "Storage": 1.05
     },
     "Crew": 1,
     "WeaponCrew": 1,
@@ -9897,15 +9908,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1524.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 677.0,
@@ -9937,8 +9940,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.0,
-      "PersonalInventory": 1.85
+      "Storage": 1.0
     },
     "Crew": 1,
     "WeaponCrew": 1,
@@ -10124,15 +10126,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 8860.0,
       "PilotBurstDPS": 656.0,
       "TurretsBurstDPS": 0.0,
@@ -10157,8 +10151,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.0,
-      "PersonalInventory": 1.85
+      "Storage": 1.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -10344,15 +10337,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 8860.0,
       "PilotBurstDPS": 656.0,
       "TurretsBurstDPS": 0.0,
@@ -10383,8 +10368,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 90.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 4.5,
-      "PersonalInventory": 4.63
+      "Storage": 4.5
     },
     "Crew": 1,
     "WeaponCrew": 6,
@@ -10576,15 +10560,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 18960.0,
       "PilotBurstDPS": 1091.0,
       "TurretsBurstDPS": 4221.0,
@@ -10609,13 +10585,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 4.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.73,
-      "PersonalInventory": 0.73
+      "Storage": 0.73
     },
     "Crew": 1,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
-    "Mass": 3754.6,
+    "Mass": 6754.6,
     "ComponentsMass": 163.0,
     "Dimensions": {
       "Length": 5.44,
@@ -10688,15 +10663,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 545.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -10724,8 +10691,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 96.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 4.57
+      "Storage": 0.0
     },
     "Crew": 5,
     "WeaponCrew": 0,
@@ -10901,15 +10867,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 8.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 48800.0,
       "PilotBurstDPS": 656.0,
       "TurretsBurstDPS": 0.0,
@@ -10934,8 +10892,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 2.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 0.8
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -11102,15 +11059,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -11135,8 +11084,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 16.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.45,
-      "PersonalInventory": 2.0
+      "Storage": 0.45
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -11308,15 +11256,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -11342,8 +11282,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 0.71
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -11510,15 +11449,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -11543,8 +11474,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 192.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 2.4,
-      "PersonalInventory": 2.46
+      "Storage": 2.4
     },
     "Crew": 2,
     "WeaponCrew": 1,
@@ -11726,15 +11656,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 17280.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 1367.0,
@@ -11759,8 +11681,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 12.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.2,
-      "PersonalInventory": 0.93
+      "Storage": 1.2
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -11953,15 +11874,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 4430.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -11987,8 +11900,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.35,
-      "PersonalInventory": 1.42
+      "Storage": 1.35
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -12055,23 +11967,24 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 222.0,
       "MaxSpeed": 1175.0,
-      "Pitch": 60.0,
-      "Yaw": 47.0,
-      "Roll": 150.0,
+      "Pitch": 61.0,
+      "Yaw": 61.0,
+      "Roll": 170.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 13658000.0,
-        "Retro": 4964000.0,
+        "Main": 14636666.0,
+        "Retro": 5180300.0,
         "Vtol": 0.0,
-        "Maneuvering": 34548000.0
+        "Maneuvering": 38438784.0
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 11.2,
-        "Retro": 4.0,
-        "Strafe": 7.6,
-        "Up": 8.3,
-        "Down": 4.6
+        "Main": 12.0,
+        "Retro": 4.2,
+        "Strafe": 8.9,
+        "Up": 8.8,
+        "Down": 4.4,
+        "CheckDate": "2025-08-03"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -12129,10 +12042,10 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 15.0
       },
       "FuelUsagePerSecond": {
-        "Main": 1707.25,
-        "Retro": 620.5,
+        "Main": 1829.583,
+        "Retro": 647.538,
         "Vtol": 0.0,
-        "Maneuvering": 4318.5
+        "Maneuvering": 4804.848
       },
       "IntakeToMainFuelRatio": 0.0,
       "TimeForIntakesToFillTank": "Infinity"
@@ -12157,15 +12070,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 5100.0,
       "PilotBurstDPS": 1276.0,
       "TurretsBurstDPS": 0.0,
@@ -12190,8 +12095,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.6,
-      "PersonalInventory": 0.6
+      "Storage": 0.6
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -12368,15 +12272,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 0.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -12402,8 +12298,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 4.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.9,
-      "PersonalInventory": 0.95
+      "Storage": 0.9
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -12431,22 +12326,21 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Hull": {
       "StructureHealthPoints": {
         "VitalParts": {
-          "nose": 1850.0,
-          "body": 1850.0
+          "nose": 1900.0,
+          "body": 1900.0
         },
         "Parts": {
           "cockpit_glass_frame": 80.0,
-          "cockpit_glass_frame_inner": 1.0,
-          "nacelle_left": 2000.0,
-          "wing_left": 500.0,
-          "wing_left_part02": 500.0,
-          "wing_left_part03": 50.0,
-          "small_wing_left": 75.0,
+          "nacelle_left": 1200.0,
+          "wing_left": 800.0,
+          "wing_left_part02": 800.0,
+          "wing_left_part03": 150.0,
+          "small_wing_left": 150.0,
           "nacelle_right": 1200.0,
-          "wing_right": 500.0,
-          "wing_right_part02": 500.0,
-          "wing_right_part03": 50.0,
-          "small_wing_right": 75.0
+          "wing_right": 800.0,
+          "wing_right_part02": 800.0,
+          "wing_right_part03": 150.0,
+          "small_wing_right": 150.0
         }
       },
       "ThrustersHealthPoints": {
@@ -12475,25 +12369,26 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 225.0,
-      "MaxSpeed": 1200.0,
-      "Pitch": 72.3,
-      "Yaw": 53.7,
-      "Roll": 205.3,
+      "ScmSpeed": 228.0,
+      "MaxSpeed": 1218.0,
+      "Pitch": 70.0,
+      "Yaw": 53.0,
+      "Roll": 205.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 4835000.0,
-        "Retro": 1672000.0,
+        "Main": 4755306.0,
+        "Retro": 1578884.8,
         "Vtol": 0.0,
-        "Maneuvering": 11241000.0
+        "Maneuvering": 12591105.0
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 12.9,
-        "Retro": 4.4,
-        "Strafe": 10.1,
-        "Up": 10.1,
-        "Down": 5.1
+        "Main": 12.7,
+        "Retro": 4.2,
+        "Strafe": 9.8,
+        "Up": 9.8,
+        "Down": 5.0,
+        "CheckDate": "2025-08-03"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -12551,12 +12446,12 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 15.0
       },
       "FuelUsagePerSecond": {
-        "Main": 604.375,
-        "Retro": 209.0,
+        "Main": 594.413,
+        "Retro": 197.361,
         "Vtol": 0.0,
-        "Maneuvering": 1405.125
+        "Maneuvering": 1573.888
       },
-      "IntakeToMainFuelRatio": 1.32,
+      "IntakeToMainFuelRatio": 1.35,
       "TimeForIntakesToFillTank": 750000.0
     },
     "Emissions": {
@@ -12579,15 +12474,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2800.0,
       "PilotBurstDPS": 656.0,
       "TurretsBurstDPS": 0.0,
@@ -12612,8 +12499,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.9,
-      "PersonalInventory": 1.06
+      "Storage": 0.9
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -12641,22 +12527,21 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Hull": {
       "StructureHealthPoints": {
         "VitalParts": {
-          "nose": 1850.0,
-          "body": 1850.0
+          "nose": 1900.0,
+          "body": 1900.0
         },
         "Parts": {
           "cockpit_glass_frame": 80.0,
-          "cockpit_glass_frame_inner": 1.0,
-          "nacelle_left": 2000.0,
-          "wing_left": 500.0,
-          "wing_left_part02": 500.0,
-          "wing_left_part03": 50.0,
-          "small_wing_left": 75.0,
+          "nacelle_left": 1200.0,
+          "wing_left": 800.0,
+          "wing_left_part02": 800.0,
+          "wing_left_part03": 150.0,
+          "small_wing_left": 150.0,
           "nacelle_right": 1200.0,
-          "wing_right": 500.0,
-          "wing_right_part02": 500.0,
-          "wing_right_part03": 50.0,
-          "small_wing_right": 75.0
+          "wing_right": 800.0,
+          "wing_right_part02": 800.0,
+          "wing_right_part03": 150.0,
+          "small_wing_right": 150.0
         }
       },
       "ThrustersHealthPoints": {
@@ -12685,11 +12570,11 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 225.0,
-      "MaxSpeed": 1200.0,
-      "Pitch": 72.3,
-      "Yaw": 53.7,
-      "Roll": 205.3,
+      "ScmSpeed": 228.0,
+      "MaxSpeed": 1218.0,
+      "Pitch": 70.0,
+      "Yaw": 53.0,
+      "Roll": 205.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 5711318.0,
@@ -12699,11 +12584,12 @@ const spvVehicleList: SpvVehicleMain[] = [
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 12.9,
-        "Retro": 4.4,
-        "Strafe": 10.1,
-        "Up": 10.1,
-        "Down": 5.2
+        "Main": 12.8,
+        "Retro": 4.2,
+        "Strafe": 9.8,
+        "Up": 9.7,
+        "Down": 4.9,
+        "CheckDate": "2025-08-03"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -12789,15 +12675,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2800.0,
       "PilotBurstDPS": 656.0,
       "TurretsBurstDPS": 0.0,
@@ -12822,8 +12700,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.9,
-      "PersonalInventory": 0.65
+      "Storage": 0.9
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -12851,22 +12728,21 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Hull": {
       "StructureHealthPoints": {
         "VitalParts": {
-          "nose": 1850.0,
-          "body": 1850.0
+          "nose": 1900.0,
+          "body": 1900.0
         },
         "Parts": {
           "cockpit_glass_frame": 80.0,
-          "cockpit_glass_frame_inner": 1.0,
-          "nacelle_left": 2000.0,
-          "wing_left": 500.0,
-          "wing_left_part02": 500.0,
-          "wing_left_part03": 50.0,
-          "small_wing_left": 75.0,
+          "nacelle_left": 1200.0,
+          "wing_left": 800.0,
+          "wing_left_part02": 800.0,
+          "wing_left_part03": 150.0,
+          "small_wing_left": 150.0,
           "nacelle_right": 1200.0,
-          "wing_right": 500.0,
-          "wing_right_part02": 500.0,
-          "wing_right_part03": 50.0,
-          "small_wing_right": 75.0
+          "wing_right": 800.0,
+          "wing_right_part02": 800.0,
+          "wing_right_part03": 150.0,
+          "small_wing_right": 150.0
         }
       },
       "ThrustersHealthPoints": {
@@ -12895,25 +12771,26 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 225.0,
-      "MaxSpeed": 1200.0,
-      "Pitch": 72.3,
-      "Yaw": 53.7,
-      "Roll": 205.3,
+      "ScmSpeed": 226.0,
+      "MaxSpeed": 1195.0,
+      "Pitch": 69.0,
+      "Yaw": 52.0,
+      "Roll": 202.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 5534000.0,
-        "Retro": 1916000.0,
+        "Main": 5319550.0,
+        "Retro": 1743745.8,
         "Vtol": 0.0,
-        "Maneuvering": 12864000.0
+        "Maneuvering": 14012361.6
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 12.9,
-        "Retro": 4.4,
-        "Strafe": 10.1,
-        "Up": 10.1,
-        "Down": 5.1
+        "Main": 12.4,
+        "Retro": 4.0,
+        "Strafe": 9.5,
+        "Up": 9.5,
+        "Down": 4.9,
+        "CheckDate": "2025-08-03"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -12971,10 +12848,10 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 15.0
       },
       "FuelUsagePerSecond": {
-        "Main": 691.75,
-        "Retro": 239.5,
+        "Main": 664.944,
+        "Retro": 217.968,
         "Vtol": 0.0,
-        "Maneuvering": 1608.0
+        "Maneuvering": 1751.546
       },
       "IntakeToMainFuelRatio": 0.0,
       "TimeForIntakesToFillTank": "Infinity"
@@ -12999,15 +12876,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3200.0,
       "PilotBurstDPS": 1612.0,
       "TurretsBurstDPS": 0.0,
@@ -13032,8 +12901,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.9,
-      "PersonalInventory": 0.65
+      "Storage": 0.9
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -13061,22 +12929,21 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Hull": {
       "StructureHealthPoints": {
         "VitalParts": {
-          "nose": 1700.0,
-          "body": 1700.0
+          "nose": 1750.0,
+          "body": 1750.0
         },
         "Parts": {
           "cockpit_glass_frame": 80.0,
-          "cockpit_glass_frame_inner": 1.0,
-          "nacelle_left": 2000.0,
+          "nacelle_left": 1200.0,
           "wing_left": 500.0,
           "wing_left_part02": 500.0,
-          "wing_left_part03": 50.0,
-          "small_wing_left": 75.0,
+          "wing_left_part03": 150.0,
+          "small_wing_left": 150.0,
           "nacelle_right": 1200.0,
           "wing_right": 500.0,
           "wing_right_part02": 500.0,
-          "wing_right_part03": 50.0,
-          "small_wing_right": 75.0
+          "wing_right_part03": 150.0,
+          "small_wing_right": 150.0
         }
       },
       "ThrustersHealthPoints": {
@@ -13110,21 +12977,22 @@ const spvVehicleList: SpvVehicleMain[] = [
       "MaxSpeed": 1230.0,
       "Pitch": 84.0,
       "Yaw": 65.0,
-      "Roll": 234.0,
+      "Roll": 235.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 4458000.0,
-        "Retro": 1421630.8,
+        "Main": 4433340.0,
+        "Retro": 1502418.4,
         "Vtol": 0.0,
-        "Maneuvering": 10764000.0
+        "Maneuvering": 12115516.8
       },
       "AccelerationG": {
         "IsValidated": true,
         "Main": 14.0,
-        "Retro": 4.4,
-        "Strafe": 11.4,
-        "Up": 11.1,
-        "Down": 5.9
+        "Retro": 4.7,
+        "Strafe": 11.0,
+        "Up": 11.0,
+        "Down": 6.0,
+        "CheckDate": "2025-08-03"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -13182,10 +13050,10 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 15.0
       },
       "FuelUsagePerSecond": {
-        "Main": 557.25,
-        "Retro": 177.704,
+        "Main": 554.168,
+        "Retro": 187.802,
         "Vtol": 0.0,
-        "Maneuvering": 1345.5
+        "Maneuvering": 1514.44
       },
       "IntakeToMainFuelRatio": 0.0,
       "TimeForIntakesToFillTank": "Infinity"
@@ -13210,15 +13078,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2740.0,
       "PilotBurstDPS": 438.0,
       "TurretsBurstDPS": 0.0,
@@ -13243,8 +13103,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.9,
-      "PersonalInventory": 0.65
+      "Storage": 0.9
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -13272,22 +13131,21 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Hull": {
       "StructureHealthPoints": {
         "VitalParts": {
-          "nose": 1700.0,
-          "body": 1700.0
+          "nose": 1750.0,
+          "body": 1750.0
         },
         "Parts": {
           "cockpit_glass_frame": 80.0,
-          "cockpit_glass_frame_inner": 1.0,
-          "nacelle_left": 2000.0,
+          "nacelle_left": 1200.0,
           "wing_left": 500.0,
           "wing_left_part02": 500.0,
-          "wing_left_part03": 50.0,
-          "small_wing_left": 75.0,
+          "wing_left_part03": 150.0,
+          "small_wing_left": 150.0,
           "nacelle_right": 1200.0,
           "wing_right": 500.0,
           "wing_right_part02": 500.0,
-          "wing_right_part03": 50.0,
-          "small_wing_right": 75.0
+          "wing_right_part03": 150.0,
+          "small_wing_right": 150.0
         }
       },
       "ThrustersHealthPoints": {
@@ -13321,21 +13179,22 @@ const spvVehicleList: SpvVehicleMain[] = [
       "MaxSpeed": 1230.0,
       "Pitch": 84.0,
       "Yaw": 65.0,
-      "Roll": 234.0,
+      "Roll": 235.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 4458000.0,
-        "Retro": 1421630.8,
+        "Main": 4433340.0,
+        "Retro": 1502418.4,
         "Vtol": 0.0,
-        "Maneuvering": 10764000.0
+        "Maneuvering": 12115516.8
       },
       "AccelerationG": {
         "IsValidated": true,
         "Main": 14.0,
-        "Retro": 4.4,
-        "Strafe": 11.4,
-        "Up": 11.1,
-        "Down": 5.9
+        "Retro": 4.7,
+        "Strafe": 11.0,
+        "Up": 11.0,
+        "Down": 6.0,
+        "CheckDate": "2025-08-03"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -13393,10 +13252,10 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 15.0
       },
       "FuelUsagePerSecond": {
-        "Main": 557.25,
-        "Retro": 177.704,
+        "Main": 554.168,
+        "Retro": 187.802,
         "Vtol": 0.0,
-        "Maneuvering": 1345.5
+        "Maneuvering": 1514.44
       },
       "IntakeToMainFuelRatio": 0.0,
       "TimeForIntakesToFillTank": "Infinity"
@@ -13421,15 +13280,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2740.0,
       "PilotBurstDPS": 438.0,
       "TurretsBurstDPS": 0.0,
@@ -13451,8 +13302,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 24.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.2,
-      "PersonalInventory": 1.23
+      "Storage": 1.2
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -13625,15 +13475,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 4500.0,
       "PilotBurstDPS": 1637.0,
       "TurretsBurstDPS": 0.0,
@@ -13658,8 +13500,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 8.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.5,
-      "PersonalInventory": 2.0
+      "Storage": 1.5
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -13852,15 +13693,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1500.0,
       "PilotBurstDPS": 818.0,
       "TurretsBurstDPS": 0.0,
@@ -13888,8 +13721,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 2.4,
-      "PersonalInventory": 1.85
+      "Storage": 2.4
     },
     "Crew": 2,
     "WeaponCrew": 1,
@@ -13978,8 +13810,8 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 203.5,
       "MaxSpeed": 1130.0,
-      "Pitch": 36.0,
-      "Yaw": 36.0,
+      "Pitch": 38.0,
+      "Yaw": 30.0,
       "Roll": 101.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
@@ -14081,15 +13913,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 4740.0,
       "PilotBurstDPS": 2735.0,
       "TurretsBurstDPS": 656.0,
@@ -14115,8 +13939,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 64.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 2.4,
-      "PersonalInventory": 2.46
+      "Storage": 2.4
     },
     "Crew": 2,
     "WeaponCrew": 0,
@@ -14205,8 +14028,8 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 203.5,
       "MaxSpeed": 1130.0,
-      "Pitch": 36.0,
-      "Yaw": 36.0,
+      "Pitch": 38.0,
+      "Yaw": 30.0,
       "Roll": 101.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
@@ -14308,15 +14131,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 4740.0,
       "PilotBurstDPS": 2735.0,
       "TurretsBurstDPS": 0.0,
@@ -14342,8 +14157,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.86,
-      "PersonalInventory": 0.86
+      "Storage": 0.86
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -14410,7 +14224,7 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 200.0,
+      "ScmSpeed": 205.0,
       "MaxSpeed": 1050.0,
       "Pitch": 37.0,
       "Yaw": 30.0,
@@ -14429,13 +14243,13 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Strafe": 3.5,
         "Up": 4.0,
         "Down": 3.0,
-        "CheckDate": "2025-02-12"
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
         "QuantumDriveSpoolTime": 6.0,
         "ScmMode": {
-          "BoostSpeedForward": 380.0,
+          "BoostSpeedForward": 385.0,
           "BoostSpeedBackward": 210.0
         }
       },
@@ -14515,15 +14329,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 9480.0,
       "PilotBurstDPS": 4380.0,
       "TurretsBurstDPS": 0.0,
@@ -14548,8 +14354,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.86,
-      "PersonalInventory": 0.86
+      "Storage": 0.86
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -14616,7 +14421,7 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 200.0,
+      "ScmSpeed": 205.0,
       "MaxSpeed": 1050.0,
       "Pitch": 37.0,
       "Yaw": 30.0,
@@ -14635,13 +14440,13 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Strafe": 3.5,
         "Up": 4.0,
         "Down": 3.0,
-        "CheckDate": "2025-02-12"
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
         "QuantumDriveSpoolTime": 6.0,
         "ScmMode": {
-          "BoostSpeedForward": 380.0,
+          "BoostSpeedForward": 385.0,
           "BoostSpeedBackward": 210.0
         }
       },
@@ -14721,15 +14526,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 9480.0,
       "PilotBurstDPS": 4721.0,
       "TurretsBurstDPS": 0.0,
@@ -14754,8 +14551,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 216.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 18.0,
-      "PersonalInventory": 9.14
+      "Storage": 18.0
     },
     "Crew": 8,
     "WeaponCrew": 7,
@@ -14944,15 +14740,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 156600.0,
       "PilotBurstDPS": 3073.0,
       "TurretsBurstDPS": 13726.0,
@@ -14977,8 +14765,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 696.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 9.0,
-      "PersonalInventory": 2.89
+      "Storage": 9.0
     },
     "Crew": 2,
     "WeaponCrew": 2,
@@ -15167,15 +14954,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 126800.0,
       "PilotBurstDPS": 3073.0,
       "TurretsBurstDPS": 3687.0,
@@ -15201,8 +14980,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 522.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 18.0,
-      "PersonalInventory": 3.43
+      "Storage": 18.0
     },
     "Crew": 3,
     "WeaponCrew": 3,
@@ -15391,15 +15169,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 104400.0,
       "PilotBurstDPS": 3073.0,
       "TurretsBurstDPS": 5738.0,
@@ -15425,8 +15195,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 114.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 7.2,
-      "PersonalInventory": 5.93
+      "Storage": 7.2
     },
     "Crew": 1,
     "WeaponCrew": 2,
@@ -15454,10 +15223,10 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Hull": {
       "StructureHealthPoints": {
         "VitalParts": {
-          "nose": 12000.0
+          "nose": 14000.0
         },
         "Parts": {
-          "body": 12000.0,
+          "body": 14000.0,
           "wing_right": 6600.0,
           "wing_left": 6600.0,
           "body_engine": 200.0
@@ -15493,11 +15262,11 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 215.0,
-      "MaxSpeed": 1200.0,
-      "Pitch": 30.0,
-      "Yaw": 30.0,
-      "Roll": 60.0,
+      "ScmSpeed": 217.0,
+      "MaxSpeed": 1300.0,
+      "Pitch": 25.0,
+      "Yaw": 23.0,
+      "Roll": 53.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 44750000.0,
@@ -15511,14 +15280,15 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Retro": 3.1,
         "Strafe": 2.6,
         "Up": 3.1,
-        "Down": 2.6
+        "Down": 2.6,
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
         "QuantumDriveSpoolTime": 6.0,
         "ScmMode": {
-          "BoostSpeedForward": 410.0,
-          "BoostSpeedBackward": 205.0
+          "BoostSpeedForward": 510.0,
+          "BoostSpeedBackward": 218.0
         }
       },
       "Boost": {
@@ -15528,7 +15298,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "AccelerationMultiplier": {
           "PositiveAxis": {
             "X": 1.35,
-            "Y": 1.5,
+            "Y": 1.7,
             "Z": 1.3
           },
           "NegativeAxis": {
@@ -15561,7 +15331,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FuelManagement": {
       "FuelCapacity": 100000000.0,
       "FuelIntakeRate": 0.0,
-      "QuantumFuelCapacity": 2600000.0,
+      "QuantumFuelCapacity": 3200000.0,
       "FuelBurnRatePer10KNewton": {
         "Main": 5.0,
         "Retro": 2.5,
@@ -15602,15 +15372,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 63400.0,
       "PilotBurstDPS": 1091.0,
       "TurretsBurstDPS": 2182.0,
@@ -15635,8 +15397,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.25,
-      "PersonalInventory": 0.65
+      "Storage": 0.25
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -15664,8 +15425,8 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Hull": {
       "StructureHealthPoints": {
         "VitalParts": {
-          "Body": 1800.0,
-          "Nose": 1800.0
+          "Body": 1950.0,
+          "Nose": 1950.0
         },
         "Parts": {
           "Rear_Landing_Gear_Door_Left": 300.0,
@@ -15728,9 +15489,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 240.0,
       "MaxSpeed": 1400.0,
-      "Pitch": 50.0,
+      "Pitch": 49.0,
       "Yaw": 42.0,
-      "Roll": 160.0,
+      "Roll": 155.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 6240000.0,
@@ -15830,15 +15591,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1500.0,
       "PilotBurstDPS": 2760.0,
       "TurretsBurstDPS": 0.0,
@@ -15863,8 +15616,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 576.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 3.0,
-      "PersonalInventory": 12.99
+      "Storage": 3.0
     },
     "Crew": 1,
     "WeaponCrew": 2,
@@ -16060,15 +15812,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 190200.0,
       "PilotBurstDPS": 2458.0,
       "TurretsBurstDPS": 3272.0,
@@ -16084,6 +15828,224 @@ const spvVehicleList: SpvVehicleMain[] = [
     }
   },
   {
+    "ClassName": "DRAK_Caterpillar_Pirate",
+    "Name": "Drake Caterpillar Pirate",
+    "Description": "First introduced in 2871, Drake Interplanetary's Caterpillar has long proven to be a reliable, cost-effective multi-role vessel, capable of being outfitted for everything from mercantile operations to combat support. Long hailed as a hard-fought alternative to the ubiquitous Hull series, the Caterpillar is a freighter that doesn't skimp on weaponry or customization. This model features a unique livery applied by the previous owners.",
+    "Career": "Transporter",
+    "Role": "Medium Freight",
+    "Size": 5,
+    "Cargo": {
+      "CargoGrid": 576.0,
+      "CargoContainers": 0.0,
+      "Storage": 3.0
+    },
+    "Crew": 1,
+    "WeaponCrew": 2,
+    "OperationsCrew": 0,
+    "Mass": 1508063.0,
+    "ComponentsMass": 172110.0,
+    "Dimensions": {
+      "Length": 111.5,
+      "Width": 39.5,
+      "Height": 13.4
+    },
+    "IsSpaceship": true,
+    "Armor": {
+      "DamageMultipliers": {
+        "Physical": 0.42,
+        "Energy": 1.0,
+        "Distortion": 1.0
+      },
+      "SignalMultipliers": {
+        "Electromagnetic": 1.0,
+        "Infrared": 1.0,
+        "CrossSection": 1.0
+      }
+    },
+    "Hull": {
+      "StructureHealthPoints": {
+        "VitalParts": {
+          "Body": 60000.0
+        },
+        "Parts": {
+          "Engine_Center_Left": 1500.0,
+          "Engine_Center_Right": 1500.0,
+          "Engine_Right": 1500.0,
+          "Engine_Left": 1500.0,
+          "Command_Module": 1200.0,
+          "Nose": 25500.0
+        }
+      },
+      "ThrustersHealthPoints": {
+        "Main": {
+          "thruster_main_center_left": 14500.0,
+          "thruster_main_center_right": 14500.0,
+          "thruster_main_right": 14500.0,
+          "thruster_main_left": 14500.0
+        },
+        "Retro": {
+          "thruster_set2_retro_bottom": 13850.0,
+          "thruster_set1_retro_bottom": 13850.0,
+          "thruster_set1_retro_top_left": 13850.0,
+          "thruster_set1_retro_top_right": 13850.0,
+          "thruster_set2_retro_top_left": 13850.0,
+          "thruster_set2_retro_top_right": 13850.0
+        },
+        "Maneuvering": {
+          "thruster_set3_bottom_A": 13670.0,
+          "thruster_set3_bottom_B": 13670.0,
+          "thruster_set3_bottom_left": 13670.0,
+          "thruster_set3_bottom_right": 13670.0,
+          "thruster_set3_top": 13670.0,
+          "thruster_set3_top_left": 13670.0,
+          "thruster_set3_top_right": 13670.0,
+          "thruster_set4_top": 13670.0,
+          "thruster_set4_top_left": 13670.0,
+          "thruster_set4_top_right": 13670.0,
+          "thruster_set4_bottom_right": 13670.0,
+          "thruster_set4_bottom_B": 13670.0,
+          "thruster_set4_bottom_left": 13670.0,
+          "thruster_set4_bottom_A": 13670.0,
+          "thruster_set1_bottom_A": 13670.0,
+          "thruster_set1_bottom_B": 13670.0,
+          "thruster_set1_bottom_left": 13670.0,
+          "thruster_set1_bottom_right": 13670.0,
+          "thruster_set1_top": 13670.0,
+          "thruster_set1_top_left": 13670.0,
+          "thruster_set1_top_right": 13670.0,
+          "thruster_set2_bottom_A": 13670.0,
+          "thruster_set2_bottom_B": 13670.0,
+          "thruster_set2_bottom_left": 13670.0,
+          "thruster_set2_bottom_right": 13670.0,
+          "thruster_set2_top": 13670.0,
+          "thruster_set2_top_left": 13670.0,
+          "thruster_set2_top_right": 13670.0
+        }
+      }
+    },
+    "FlightCharacteristics": {
+      "ScmSpeed": 130.0,
+      "MaxSpeed": 900.0,
+      "Pitch": 16.0,
+      "Yaw": 16.0,
+      "Roll": 25.0,
+      "IsVtolAssisted": false,
+      "ThrustCapacity": {
+        "Main": 58800000.0,
+        "Retro": 25200000.0,
+        "Vtol": 0.0,
+        "Maneuvering": 109200000.0
+      },
+      "AccelerationG": {
+        "IsValidated": true,
+        "Main": 3.6,
+        "Retro": 1.5,
+        "Strafe": 1.5,
+        "Up": 2.0,
+        "Down": 1.5
+      },
+      "MasterModes": {
+        "BaseSpoolTime": 1.0,
+        "QuantumDriveSpoolTime": 7.0,
+        "ScmMode": {
+          "BoostSpeedForward": 300.0,
+          "BoostSpeedBackward": 120.0
+        }
+      },
+      "Boost": {
+        "PreDelay": 0.0,
+        "RampUp": 2.0,
+        "RampDown": 0.2,
+        "AccelerationMultiplier": {
+          "PositiveAxis": {
+            "X": 1.3,
+            "Y": 1.35,
+            "Z": 1.4
+          },
+          "NegativeAxis": {
+            "X": 1.3,
+            "Y": 1.4,
+            "Z": 1.3
+          }
+        },
+        "AngularAccelerationMultiplier": {
+          "Pitch": 1.2,
+          "Yaw": 1.2,
+          "Roll": 1.2
+        },
+        "AngularVelocityMultiplier": {
+          "Pitch": 1.2,
+          "Yaw": 1.2,
+          "Roll": 1.2
+        }
+      },
+      "Capacitors": {
+        "ThrusterCapacitorSize": 20.0,
+        "CapacitorRegenPerSec": 0.75,
+        "CapacitorIdleCost": 1.0,
+        "CapacitorLinearCost": 0.0,
+        "CapacitorUsageModifier": 1.0,
+        "CapacitorRegenDelay": 1.3,
+        "RegenerationTime": 26.7
+      }
+    },
+    "FuelManagement": {
+      "FuelCapacity": 250500000.0,
+      "FuelIntakeRate": 50.0,
+      "QuantumFuelCapacity": 8600000.0,
+      "FuelBurnRatePer10KNewton": {
+        "Main": 5.0,
+        "Retro": 7.5,
+        "Vtol": 0.0,
+        "Maneuvering": 35.0
+      },
+      "FuelUsagePerSecond": {
+        "Main": 7350.0,
+        "Retro": 3150.0,
+        "Vtol": 0.0,
+        "Maneuvering": 13650.0
+      },
+      "IntakeToMainFuelRatio": 0.68,
+      "TimeForIntakesToFillTank": 5010000.0
+    },
+    "Emissions": {
+      "Electromagnetic": {
+        "SCMIdle": 26724.0,
+        "SCMActive": 31926.0,
+        "NAV": 42171.0
+      },
+      "Infrared": {
+        "Start": 22585.0
+      },
+      "CrossSection": {
+        "Front": 5952.0,
+        "Side": 12362.0,
+        "Top": 45786.0
+      }
+    },
+    "ResourceNetwork": {
+      "ItemPools": {
+        "WeaponPoolSize": 8.0
+      },
+      "Modifiers": {
+        "PowerRatioMultiplier": 1.0,
+        "MaxAmmoLoadMultiplier": 3.0,
+        "MaxRegenPerSecMultiplier": 1.0
+      }
+    },
+    "BaseLoadout": {
+      "TotalShieldHP": 190200.0,
+      "PilotBurstDPS": 2458.0,
+      "TurretsBurstDPS": 3272.0,
+      "TotalMissilesDmg": 0.0
+    },
+    "Insurance": {
+      "StandardClaimTime": 18.63,
+      "ExpeditedClaimTime": 6.21,
+      "ExpeditedCost": 7730.0
+    }
+  },
+  {
     "ClassName": "DRAK_Corsair",
     "Name": "Drake Corsair",
     "Description": "Heed the call of uncharted space and harness the spirit of exploration with the Drake Corsair. Utilizing a unique asymmetrical hull design, this versatile explorer can go wherever the winds of adventure may steer you.",
@@ -16093,8 +16055,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 72.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 2.0,
-      "PersonalInventory": 5.6
+      "Storage": 2.0
     },
     "Crew": 4,
     "WeaponCrew": 3,
@@ -16200,31 +16161,32 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 200.0,
-      "MaxSpeed": 1000.0,
-      "Pitch": 30.0,
-      "Yaw": 30.0,
-      "Roll": 60.0,
+      "ScmSpeed": 190.0,
+      "MaxSpeed": 1025.0,
+      "Pitch": 26.0,
+      "Yaw": 20.0,
+      "Roll": 44.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 23190000.0,
-        "Retro": 11580000.0,
+        "Main": 23167662.0,
+        "Retro": 9263640.0,
         "Vtol": 0.0,
-        "Maneuvering": 48720000.0
+        "Maneuvering": 40138161.0
       },
       "AccelerationG": {
         "IsValidated": true,
         "Main": 5.1,
-        "Retro": 2.5,
-        "Strafe": 2.5,
-        "Up": 3.1,
-        "Down": 2.5
+        "Retro": 2.0,
+        "Strafe": 2.0,
+        "Up": 2.6,
+        "Down": 2.1,
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
         "QuantumDriveSpoolTime": 6.0,
         "ScmMode": {
-          "BoostSpeedForward": 400.0,
+          "BoostSpeedForward": 390.0,
           "BoostSpeedBackward": 205.0
         }
       },
@@ -16276,10 +16238,10 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 35.0
       },
       "FuelUsagePerSecond": {
-        "Main": 2898.75,
-        "Retro": 1447.5,
+        "Main": 2895.958,
+        "Retro": 1157.955,
         "Vtol": 0.0,
-        "Maneuvering": 6090.0
+        "Maneuvering": 5017.271
       },
       "IntakeToMainFuelRatio": 1.86,
       "TimeForIntakesToFillTank": 2148148.15
@@ -16309,15 +16271,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 48800.0,
       "PilotBurstDPS": 7174.0,
       "TurretsBurstDPS": 1968.0,
@@ -16347,8 +16301,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 46.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 3.0,
-      "PersonalInventory": 3.68
+      "Storage": 3.0
     },
     "Crew": 3,
     "WeaponCrew": 1,
@@ -16433,9 +16386,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 217.0,
       "MaxSpeed": 1150.0,
-      "Pitch": 47.0,
-      "Yaw": 39.0,
-      "Roll": 137.0,
+      "Pitch": 39.0,
+      "Yaw": 35.0,
+      "Roll": 110.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 18830926.0,
@@ -16450,7 +16403,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Strafe": 8.0,
         "Up": 8.2,
         "Down": 4.1,
-        "CheckDate": "2025-03-08"
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -16541,15 +16494,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 4130.0,
       "PilotBurstDPS": 2105.0,
       "TurretsBurstDPS": 1091.0,
@@ -16574,8 +16519,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 12.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 3.0,
-      "PersonalInventory": 2.78
+      "Storage": 3.0
     },
     "Crew": 3,
     "WeaponCrew": 1,
@@ -16660,9 +16604,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 220.0,
       "MaxSpeed": 1165.0,
-      "Pitch": 45.0,
-      "Yaw": 36.0,
-      "Roll": 137.0,
+      "Pitch": 38.0,
+      "Yaw": 34.0,
+      "Roll": 110.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 17000000.0,
@@ -16677,7 +16621,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Strafe": 8.0,
         "Up": 8.3,
         "Down": 4.1,
-        "CheckDate": "2025-03-08"
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -16768,17 +16712,9 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 5760.0,
-      "PilotBurstDPS": 1785.0,
+      "PilotBurstDPS": 1689.0,
       "TurretsBurstDPS": 1091.0,
       "TotalMissilesDmg": 40086.0
     },
@@ -16801,8 +16737,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 12.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 3.0,
-      "PersonalInventory": 3.43
+      "Storage": 3.0
     },
     "Crew": 2,
     "WeaponCrew": 1,
@@ -16885,9 +16820,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 212.0,
       "MaxSpeed": 1125.0,
-      "Pitch": 44.0,
-      "Yaw": 35.0,
-      "Roll": 135.0,
+      "Pitch": 37.0,
+      "Yaw": 32.0,
+      "Roll": 107.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 16660000.0,
@@ -16902,7 +16837,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Strafe": 8.0,
         "Up": 8.3,
         "Down": 4.2,
-        "CheckDate": "2025-03-08"
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -16993,15 +16928,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 5760.0,
       "PilotBurstDPS": 2105.0,
       "TurretsBurstDPS": 0.0,
@@ -17026,8 +16953,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 3.0,
-      "PersonalInventory": 2.78
+      "Storage": 3.0
     },
     "Crew": 3,
     "WeaponCrew": 7,
@@ -17129,7 +17055,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Strafe": 3.9,
         "Up": 5.5,
         "Down": 5.9,
-        "CheckDate": "2025-03-08"
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -17220,15 +17146,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 4740.0,
       "PilotBurstDPS": 2105.0,
       "TurretsBurstDPS": 1747.0,
@@ -17253,8 +17171,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 4.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.9,
-      "PersonalInventory": 0.93
+      "Storage": 0.9
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -17429,15 +17346,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1500.0,
       "PilotBurstDPS": 656.0,
       "TurretsBurstDPS": 0.0,
@@ -17462,8 +17371,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 2.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.05,
-      "PersonalInventory": 4.0
+      "Storage": 1.05
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -17638,15 +17546,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1500.0,
       "PilotBurstDPS": 656.0,
       "TurretsBurstDPS": 0.0,
@@ -17672,8 +17572,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 2.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.9,
-      "PersonalInventory": 0.93
+      "Storage": 0.9
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -17848,15 +17747,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1500.0,
       "PilotBurstDPS": 656.0,
       "TurretsBurstDPS": 0.0,
@@ -17882,8 +17773,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.39,
-      "PersonalInventory": 0.39
+      "Storage": 0.39
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -18053,15 +17943,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 0.0,
       "PilotBurstDPS": 749.0,
       "TurretsBurstDPS": 0.0,
@@ -18086,8 +17968,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.39,
-      "PersonalInventory": 0.39
+      "Storage": 0.39
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -18257,15 +18138,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 0.0,
       "PilotBurstDPS": 749.0,
       "TurretsBurstDPS": 0.0,
@@ -18290,8 +18163,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 32.0,
-      "ExternalStorage": 0.9,
-      "PersonalInventory": 0.25
+      "Storage": 0.9
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -18480,15 +18352,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 438.0,
       "TurretsBurstDPS": 0.0,
@@ -18503,6 +18367,9 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Length": 15.5,
       "Width": 7.0,
       "Height": 5.0
+    },
+    "Buy": {
+      "New Deal - Teasa Spaceport - Lorville": 1058400.0
     }
   },
   {
@@ -18515,8 +18382,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.9,
-      "PersonalInventory": 0.84
+      "Storage": 0.9
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -18589,31 +18455,32 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 240.0,
-      "MaxSpeed": 1400.0,
-      "Pitch": 50.0,
-      "Yaw": 42.0,
-      "Roll": 160.0,
+      "ScmSpeed": 245.0,
+      "MaxSpeed": 1450.0,
+      "Pitch": 47.0,
+      "Yaw": 40.0,
+      "Roll": 150.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 7565034.0,
+        "Main": 9360000.0,
         "Retro": 2892150.0,
         "Vtol": 0.0,
         "Maneuvering": 13778411.6
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 14.0,
-        "Retro": 4.4,
-        "Strafe": 4.5,
-        "Up": 6.0,
-        "Down": 3.5
+        "Main": 16.1,
+        "Retro": 4.2,
+        "Strafe": 4.3,
+        "Up": 5.7,
+        "Down": 3.3,
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
         "QuantumDriveSpoolTime": 4.0,
         "ScmMode": {
-          "BoostSpeedForward": 600.0,
+          "BoostSpeedForward": 670.0,
           "BoostSpeedBackward": 260.0
         }
       },
@@ -18624,7 +18491,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "AccelerationMultiplier": {
           "PositiveAxis": {
             "X": 1.35,
-            "Y": 1.7,
+            "Y": 1.8,
             "Z": 1.35
           },
           "NegativeAxis": {
@@ -18665,7 +18532,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 17.5
       },
       "FuelUsagePerSecond": {
-        "Main": 945.629,
+        "Main": 1170.0,
         "Retro": 361.519,
         "Vtol": 0.0,
         "Maneuvering": 1722.302
@@ -18693,15 +18560,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 1163.0,
       "TurretsBurstDPS": 0.0,
@@ -18726,13 +18585,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 1.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.75,
-      "PersonalInventory": 0.73
+      "Storage": 0.75
     },
     "Crew": 1,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
-    "Mass": 2780.0,
+    "Mass": 6053.1,
     "ComponentsMass": 264.0,
     "Dimensions": {
       "Length": 4.2,
@@ -18812,15 +18670,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 0.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -18845,8 +18695,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 12.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.2,
-      "PersonalInventory": 1.14
+      "Storage": 1.2
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -19026,19 +18875,19 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 6300.0,
       "PilotBurstDPS": 438.0,
       "TurretsBurstDPS": 0.0,
       "TotalMissilesDmg": 0.0
+    },
+    "Buffs": {
+      "Salvage": {
+        "Buffer": 13.0,
+        "SpeedMultiplier": 4.8,
+        "RadiusMultiplier": 1.05,
+        "ExtractionEfficiency": 0.86
+      }
     },
     "Insurance": {
       "StandardClaimTime": 9.0,
@@ -19059,8 +18908,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.2,
-      "PersonalInventory": 1.85
+      "Storage": 1.2
     },
     "Crew": 1,
     "WeaponCrew": 1,
@@ -19231,9 +19079,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "Emissions": {
       "Electromagnetic": {
-        "SCMIdle": 9410.0,
+        "SCMIdle": 9409.0,
         "SCMActive": 12091.0,
-        "NAV": 14828.0
+        "NAV": 14827.0
       },
       "Infrared": {
         "Start": 7508.0
@@ -19249,15 +19097,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 11560.0,
       "PilotBurstDPS": 3414.0,
       "TurretsBurstDPS": 923.0,
@@ -19282,8 +19122,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 32.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.05,
-      "PersonalInventory": 1.85
+      "Storage": 1.05
     },
     "Crew": 1,
     "WeaponCrew": 1,
@@ -19464,9 +19303,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "Emissions": {
       "Electromagnetic": {
-        "SCMIdle": 11556.0,
+        "SCMIdle": 11555.0,
         "SCMActive": 14851.0,
-        "NAV": 18212.0
+        "NAV": 18211.0
       },
       "Infrared": {
         "Start": 9418.0
@@ -19482,15 +19321,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 11560.0,
       "PilotBurstDPS": 1385.0,
       "TurretsBurstDPS": 1518.0,
@@ -19512,8 +19343,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.65
+      "Storage": 0.65
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -19541,7 +19371,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Hull": {
       "StructureHealthPoints": {
         "VitalParts": {
-          "Body": 2700.0
+          "Body": 2000.0
         },
         "Parts": {
           "eject_joint": 80.0,
@@ -19633,24 +19463,25 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "FlightCharacteristics": {
       "ScmSpeed": 225.0,
-      "MaxSpeed": 1200.0,
-      "Pitch": 70.0,
-      "Yaw": 52.0,
-      "Roll": 200.0,
+      "MaxSpeed": 1190.0,
+      "Pitch": 68.0,
+      "Yaw": 54.0,
+      "Roll": 195.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 7548000.0,
-        "Retro": 2614000.0,
+        "Main": 7336292.0,
+        "Retro": 2369236.0,
         "Vtol": 0.0,
-        "Maneuvering": 21524000.0
+        "Maneuvering": 20784000.0
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 13.0,
-        "Retro": 4.5,
-        "Strafe": 10.0,
-        "Up": 10.0,
-        "Down": 5.0
+        "Main": 13.1,
+        "Retro": 4.2,
+        "Strafe": 9.7,
+        "Up": 10.4,
+        "Down": 5.2,
+        "CheckDate": "2025-08-08"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -19708,10 +19539,10 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 15.0
       },
       "FuelUsagePerSecond": {
-        "Main": 943.5,
-        "Retro": 326.75,
+        "Main": 917.036,
+        "Retro": 296.154,
         "Vtol": 0.0,
-        "Maneuvering": 2690.5
+        "Maneuvering": 2598.0
       },
       "IntakeToMainFuelRatio": 0.0,
       "TimeForIntakesToFillTank": "Infinity"
@@ -19727,8 +19558,8 @@ const spvVehicleList: SpvVehicleMain[] = [
       },
       "CrossSection": {
         "Front": 1534.0,
-        "Side": 4167.0,
-        "Top": 4630.0
+        "Side": 2427.0,
+        "Top": 3010.0
       }
     },
     "ResourceNetwork": {
@@ -19736,15 +19567,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 1385.0,
       "TurretsBurstDPS": 0.0,
@@ -19769,8 +19592,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.65
+      "Storage": 0.65
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -19798,7 +19620,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Hull": {
       "StructureHealthPoints": {
         "VitalParts": {
-          "Body": 2700.0
+          "Body": 2000.0
         },
         "Parts": {
           "eject_joint": 80.0,
@@ -19890,24 +19712,25 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "FlightCharacteristics": {
       "ScmSpeed": 225.0,
-      "MaxSpeed": 1200.0,
-      "Pitch": 70.0,
-      "Yaw": 52.0,
-      "Roll": 200.0,
+      "MaxSpeed": 1190.0,
+      "Pitch": 68.0,
+      "Yaw": 54.0,
+      "Roll": 195.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 7548000.0,
-        "Retro": 2614000.0,
+        "Main": 7336292.0,
+        "Retro": 2369236.0,
         "Vtol": 0.0,
-        "Maneuvering": 21524000.0
+        "Maneuvering": 20784000.0
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 13.0,
-        "Retro": 4.5,
-        "Strafe": 10.0,
-        "Up": 10.0,
-        "Down": 5.0
+        "Main": 13.1,
+        "Retro": 4.2,
+        "Strafe": 9.7,
+        "Up": 10.4,
+        "Down": 5.2,
+        "CheckDate": "2025-08-08"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -19965,10 +19788,10 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 15.0
       },
       "FuelUsagePerSecond": {
-        "Main": 943.5,
-        "Retro": 326.75,
+        "Main": 917.036,
+        "Retro": 296.154,
         "Vtol": 0.0,
-        "Maneuvering": 2690.5
+        "Maneuvering": 2598.0
       },
       "IntakeToMainFuelRatio": 0.0,
       "TimeForIntakesToFillTank": "Infinity"
@@ -19983,9 +19806,9 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Start": 6345.0
       },
       "CrossSection": {
-        "Front": 1460.0,
-        "Side": 3967.0,
-        "Top": 4408.0
+        "Front": 1534.0,
+        "Side": 2427.0,
+        "Top": 3010.0
       }
     },
     "ResourceNetwork": {
@@ -19993,15 +19816,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 617.0,
       "TurretsBurstDPS": 0.0,
@@ -20026,8 +19841,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 6.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.25,
-      "PersonalInventory": 1.06
+      "Storage": 0.25
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -20185,13 +19999,6 @@ const spvVehicleList: SpvVehicleMain[] = [
         "CapacitorUsageModifier": 1.0,
         "CapacitorRegenDelay": 0.2,
         "RegenerationTime": 26.7
-      },
-      "Emissions": {
-        "CrossSection": {
-          "Front": 1304.0,
-          "Side": 2201.0,
-          "Top": 2187.0
-        }
       }
     },
     "FuelManagement": {
@@ -20233,15 +20040,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3000.0,
       "PilotBurstDPS": 1637.0,
       "TurretsBurstDPS": 0.0,
@@ -20272,13 +20071,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 3.75,
-      "PersonalInventory": 0.0
+      "Storage": 3.75
     },
     "Crew": 1,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
-    "Mass": 15700.0,
+    "Mass": 18700.0,
     "ComponentsMass": 639.2,
     "Dimensions": {
       "Length": 7.0,
@@ -20354,15 +20152,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 545.0,
       "PilotBurstDPS": 656.0,
       "TurretsBurstDPS": 0.0,
@@ -20384,8 +20174,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.39,
-      "PersonalInventory": 2.15
+      "Storage": 0.39
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -20473,15 +20262,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 0.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -20512,8 +20293,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 1.2,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 1.08
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -20586,15 +20366,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 0.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -20625,8 +20397,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 3.4,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 2.15
+      "Storage": 0.0
     },
     "Crew": 2,
     "WeaponCrew": 0,
@@ -20703,15 +20474,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 0.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -20742,8 +20505,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.125,
-      "PersonalInventory": 0.0
+      "Storage": 0.125
     },
     "Crew": 2,
     "WeaponCrew": 0,
@@ -20816,15 +20578,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 0.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -20846,6 +20600,210 @@ const spvVehicleList: SpvVehicleMain[] = [
     }
   },
   {
+    "ClassName": "KRIG_L21_Wolf",
+    "Name": "Kruger L-21 Wolf",
+    "Description": "Meet a ship almost 400 years in the making, and well worth the wait. Kruger Intergalactic is excited to present their first independently manufactured ship, the L-21 Wolf. Combining speed, style, and an impeccably precise design, the L-21 Wolf is not only a showcase for Kruger but is battle-ready to hunt alone or in packs with a powerful array of armaments, including two bespoke S4 ballistic gatlings.",
+    "Career": "Combat",
+    "Role": "Light Fighter",
+    "Size": 2,
+    "Cargo": {
+      "CargoGrid": 0.0,
+      "CargoContainers": 0.0,
+      "Storage": 0.45
+    },
+    "Crew": 1,
+    "WeaponCrew": 0,
+    "OperationsCrew": 0,
+    "Mass": 23350.0,
+    "ComponentsMass": 12008.0,
+    "Dimensions": {
+      "Length": 21.5,
+      "Width": 10.5,
+      "Height": 4.2
+    },
+    "IsSpaceship": true,
+    "Armor": {
+      "DamageMultipliers": {
+        "Physical": 0.5,
+        "Energy": 1.0,
+        "Distortion": 1.0
+      },
+      "SignalMultipliers": {
+        "Electromagnetic": 1.12,
+        "Infrared": 1.12,
+        "CrossSection": 1.12
+      }
+    },
+    "Hull": {
+      "StructureHealthPoints": {
+        "VitalParts": {
+          "body": 1750.0
+        },
+        "Parts": {
+          "fin_back_left_large": 450.0,
+          "fin_back_left_small": 150.0,
+          "fin_back_right_large": 450.0,
+          "fin_back_right_small": 150.0,
+          "nose": 1750.0,
+          "nacelle_left": 1500.0,
+          "nacelle_right": 1500.0,
+          "fin_bottom": 600.0,
+          "canopy": 200.0
+        }
+      },
+      "ThrustersHealthPoints": {
+        "Main": {
+          "thruster_main": 2000.0,
+          "thruster_main_wing_left_inner": 1250.0,
+          "thruster_main_wing_left_outer": 1250.0,
+          "thruster_main_wing_right_outer": 1250.0,
+          "thruster_main_wing_right_inner": 1250.0
+        },
+        "Retro": {
+          "thruster_retro_right": 1250.0,
+          "thruster_retro_left": 1250.0
+        },
+        "Maneuvering": {
+          "thruster_mav_FBL": 800.0,
+          "thruster_mav_FBR": 800.0,
+          "thruster_mav_FTL": 800.0,
+          "thruster_mav_FTR": 800.0,
+          "thruster_mav_RBL": 800.0,
+          "thruster_mav_RBR": 800.0,
+          "thruster_mav_RSL": 800.0,
+          "thruster_mav_RSR": 800.0,
+          "thruster_mav_RTL": 800.0,
+          "thruster_mav_RTR": 800.0,
+          "thruster_mav_FSL": 800.0,
+          "thruster_mav_FSR": 800.0,
+          "thruster_mav_MBL": 800.0,
+          "thruster_mav_MTL": 800.0,
+          "main_thruster_pipes_left": 800.0,
+          "thruster_mav_MTR": 800.0,
+          "thruster_mav_MBR": 800.0,
+          "main_thruster_pipes_right": 800.0
+        }
+      }
+    },
+    "FlightCharacteristics": {
+      "ScmSpeed": 230.0,
+      "MaxSpeed": 1225.0,
+      "Pitch": 75.0,
+      "Yaw": 52.0,
+      "Roll": 210.0,
+      "IsVtolAssisted": false,
+      "ThrustCapacity": {
+        "Main": 5126664.0,
+        "Retro": 1680000.0,
+        "Vtol": 0.0,
+        "Maneuvering": 13314390.0
+      },
+      "AccelerationG": {
+        "IsValidated": true,
+        "Main": 14.5,
+        "Retro": 4.7,
+        "Strafe": 10.5,
+        "Up": 10.5,
+        "Down": 5.4,
+        "CheckDate": "2025-08-15"
+      },
+      "MasterModes": {
+        "BaseSpoolTime": 1.0,
+        "QuantumDriveSpoolTime": 4.0,
+        "ScmMode": {
+          "BoostSpeedForward": 510.0,
+          "BoostSpeedBackward": 250.0
+        }
+      },
+      "Boost": {
+        "PreDelay": 0.0,
+        "RampUp": 0.6,
+        "RampDown": 0.2,
+        "AccelerationMultiplier": {
+          "PositiveAxis": {
+            "X": 1.35,
+            "Y": 1.4,
+            "Z": 1.3
+          },
+          "NegativeAxis": {
+            "X": 1.35,
+            "Y": 1.3,
+            "Z": 1.4
+          }
+        },
+        "AngularAccelerationMultiplier": {
+          "Pitch": 1.2,
+          "Yaw": 1.2,
+          "Roll": 1.2
+        },
+        "AngularVelocityMultiplier": {
+          "Pitch": 1.2,
+          "Yaw": 1.2,
+          "Roll": 1.2
+        }
+      },
+      "Capacitors": {
+        "ThrusterCapacitorSize": 20.0,
+        "CapacitorRegenPerSec": 0.75,
+        "CapacitorIdleCost": 1.0,
+        "CapacitorLinearCost": 0.0,
+        "CapacitorUsageModifier": 1.0,
+        "CapacitorRegenDelay": 0.2,
+        "RegenerationTime": 26.7
+      }
+    },
+    "FuelManagement": {
+      "FuelCapacity": 9000000.0,
+      "FuelIntakeRate": 0.0,
+      "QuantumFuelCapacity": 900000.0,
+      "FuelBurnRatePer10KNewton": {
+        "Main": 6.25,
+        "Retro": 2.5,
+        "Vtol": 0.0,
+        "Maneuvering": 22.5
+      },
+      "FuelUsagePerSecond": {
+        "Main": 640.833,
+        "Retro": 210.0,
+        "Vtol": 0.0,
+        "Maneuvering": 1664.299
+      },
+      "IntakeToMainFuelRatio": 0.0,
+      "TimeForIntakesToFillTank": "Infinity"
+    },
+    "Emissions": {
+      "Electromagnetic": {
+        "SCMIdle": 2555.0,
+        "SCMActive": 3021.0,
+        "NAV": 10993.0
+      },
+      "Infrared": {
+        "Start": 10972.0
+      },
+      "CrossSection": {
+        "Front": 933.0,
+        "Side": 5600.0,
+        "Top": 3584.0
+      }
+    },
+    "ResourceNetwork": {
+      "ItemPools": {
+        "WeaponPoolSize": 4.0
+      }
+    },
+    "BaseLoadout": {
+      "TotalShieldHP": 3000.0,
+      "PilotBurstDPS": 2122.0,
+      "TurretsBurstDPS": 0.0,
+      "TotalMissilesDmg": 9121.0
+    },
+    "Insurance": {
+      "StandardClaimTime": 4.0,
+      "ExpeditedClaimTime": 1.0,
+      "ExpeditedCost": 1710.0
+    }
+  },
+  {
     "ClassName": "KRIG_P52_Merlin",
     "Name": "Kruger P-52 Merlin",
     "Description": "Designed in conjunction with RSI, this elegant short-range snub fighter represents the first ship produced under the Kruger Intergalactic brand. Utilizing centuries of manufacturing expertise, the compact precision of the Kruger hull blends perfectly with the trusted RSI thrusters to grant the Merlin exceptional handling and maneuverability while ensuring that it is capable of fulfilling a variety of roles from combat to scouting to scanning. ",
@@ -20855,8 +20813,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.43,
-      "PersonalInventory": 0.43
+      "Storage": 0.43
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -21023,15 +20980,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1600.0,
       "PilotBurstDPS": 888.0,
       "TurretsBurstDPS": 0.0,
@@ -21056,8 +21005,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.43,
-      "PersonalInventory": 0.43
+      "Storage": 0.43
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -21224,15 +21172,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1470.0,
       "PilotBurstDPS": 875.0,
       "TurretsBurstDPS": 0.0,
@@ -21257,8 +21197,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 16.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.9,
-      "PersonalInventory": 0.65
+      "Storage": 0.9
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -21438,26 +21377,29 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 6300.0,
       "PilotBurstDPS": 438.0,
       "TurretsBurstDPS": 0.0,
       "TotalMissilesDmg": 0.0
+    },
+    "Buffs": {
+      "Salvage": {
+        "Buffer": 13.0,
+        "SpeedMultiplier": 9.6,
+        "RadiusMultiplier": 0.84,
+        "ExtractionEfficiency": 0.86
+      }
     },
     "Insurance": {
       "StandardClaimTime": 5.18,
       "ExpeditedClaimTime": 1.3,
       "ExpeditedCost": 3900.0
     },
-    "New Ship": "MISC Fortune"
+    "New Ship": "MISC Fortune",
+    "Buy": {
+      "New Deal - Teasa Spaceport - Lorville": 1890000.0
+    }
   },
   {
     "ClassName": "MISC_Freelancer",
@@ -21469,8 +21411,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 66.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 4.91
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 1,
@@ -21538,10 +21479,10 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "FlightCharacteristics": {
       "ScmSpeed": 197.0,
-      "MaxSpeed": 1010.0,
+      "MaxSpeed": 1050.0,
       "Pitch": 32.0,
-      "Yaw": 32.0,
-      "Roll": 105.0,
+      "Yaw": 30.0,
+      "Roll": 103.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 14500000.0,
@@ -21641,15 +21582,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 13290.0,
       "PilotBurstDPS": 2735.0,
       "TurretsBurstDPS": 1091.0,
@@ -21674,8 +21607,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 36.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 5.08
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 1,
@@ -21746,31 +21678,32 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 197.0,
-      "MaxSpeed": 1010.0,
-      "Pitch": 32.0,
-      "Yaw": 32.0,
-      "Roll": 105.0,
+      "ScmSpeed": 200.0,
+      "MaxSpeed": 1100.0,
+      "Pitch": 34.0,
+      "Yaw": 30.0,
+      "Roll": 103.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 14500000.0,
+        "Main": 15800000.0,
         "Retro": 5445000.0,
         "Vtol": 0.0,
         "Maneuvering": 18140000.0
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 6.0,
-        "Retro": 2.2,
-        "Strafe": 4.5,
-        "Up": 4.5,
-        "Down": 3.0
+        "Main": 6.6,
+        "Retro": 2.5,
+        "Strafe": 4.6,
+        "Up": 4.6,
+        "Down": 3.0,
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
         "QuantumDriveSpoolTime": 6.0,
         "ScmMode": {
-          "BoostSpeedForward": 400.0,
+          "BoostSpeedForward": 403.0,
           "BoostSpeedBackward": 205.0
         }
       },
@@ -21822,12 +21755,12 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 15.0
       },
       "FuelUsagePerSecond": {
-        "Main": 1812.5,
+        "Main": 1975.0,
         "Retro": 680.625,
         "Vtol": 0.0,
         "Maneuvering": 2267.5
       },
-      "IntakeToMainFuelRatio": 2.76,
+      "IntakeToMainFuelRatio": 2.53,
       "TimeForIntakesToFillTank": 2800000.0
     },
     "Emissions": {
@@ -21850,15 +21783,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 13290.0,
       "PilotBurstDPS": 3145.0,
       "TurretsBurstDPS": 1091.0,
@@ -21883,8 +21808,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 120.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 4.91
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 1,
@@ -21954,31 +21878,32 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 197.0,
-      "MaxSpeed": 1010.0,
-      "Pitch": 32.0,
-      "Yaw": 32.0,
-      "Roll": 105.0,
+      "ScmSpeed": 195.0,
+      "MaxSpeed": 1025.0,
+      "Pitch": 30.0,
+      "Yaw": 28.0,
+      "Roll": 95.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 29000000.0,
-        "Retro": 11200000.0,
+        "Retro": 9200000.0,
         "Vtol": 0.0,
         "Maneuvering": 18140000.0
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 8.0,
-        "Retro": 3.1,
+        "Main": 6.1,
+        "Retro": 2.5,
         "Strafe": 3.0,
         "Up": 3.0,
-        "Down": 2.0
+        "Down": 2.0,
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
         "QuantumDriveSpoolTime": 6.0,
         "ScmMode": {
-          "BoostSpeedForward": 400.0,
+          "BoostSpeedForward": 395.0,
           "BoostSpeedBackward": 205.0
         }
       },
@@ -22031,7 +21956,7 @@ const spvVehicleList: SpvVehicleMain[] = [
       },
       "FuelUsagePerSecond": {
         "Main": 3625.0,
-        "Retro": 1400.0,
+        "Retro": 1150.0,
         "Vtol": 0.0,
         "Maneuvering": 2267.5
       },
@@ -22058,15 +21983,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 13290.0,
       "PilotBurstDPS": 2187.0,
       "TurretsBurstDPS": 1091.0,
@@ -22091,8 +22008,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 36.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 3.71
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 1,
@@ -22160,11 +22076,11 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 197.0,
-      "MaxSpeed": 1010.0,
-      "Pitch": 32.0,
-      "Yaw": 32.0,
-      "Roll": 105.0,
+      "ScmSpeed": 204.0,
+      "MaxSpeed": 1000.0,
+      "Pitch": 35.0,
+      "Yaw": 31.0,
+      "Roll": 107.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 14500000.0,
@@ -22174,17 +22090,18 @@ const spvVehicleList: SpvVehicleMain[] = [
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 6.0,
+        "Main": 7.5,
         "Retro": 3.0,
-        "Strafe": 4.5,
-        "Up": 4.5,
-        "Down": 3.0
+        "Strafe": 4.6,
+        "Up": 4.6,
+        "Down": 3.0,
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
         "QuantumDriveSpoolTime": 6.0,
         "ScmMode": {
-          "BoostSpeedForward": 400.0,
+          "BoostSpeedForward": 410.0,
           "BoostSpeedBackward": 205.0
         }
       },
@@ -22264,15 +22181,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 14220.0,
       "PilotBurstDPS": 2735.0,
       "TurretsBurstDPS": 1091.0,
@@ -22297,8 +22206,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.45,
-      "PersonalInventory": 0.22
+      "Storage": 0.45
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -22472,15 +22380,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 977.0,
       "PilotBurstDPS": 1312.0,
       "TurretsBurstDPS": 0.0,
@@ -22512,8 +22412,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.45,
-      "PersonalInventory": 0.22
+      "Storage": 0.45
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -22683,15 +22582,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1370.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -22722,8 +22613,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.45,
-      "PersonalInventory": 0.22
+      "Storage": 0.45
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -22897,15 +22787,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 977.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -22936,8 +22818,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 64.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.05,
-      "PersonalInventory": 1.01
+      "Storage": 1.05
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -23156,15 +23037,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 5360.0,
       "PilotBurstDPS": 438.0,
       "TurretsBurstDPS": 0.0,
@@ -23194,8 +23067,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 4608.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 5.4,
-      "PersonalInventory": 6.79
+      "Storage": 5.4
     },
     "Crew": 1,
     "WeaponCrew": 2,
@@ -23408,15 +23280,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 8.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 253600.0,
       "PilotBurstDPS": 1091.0,
       "TurretsBurstDPS": 2182.0,
@@ -23447,8 +23311,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 32.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 0.93
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -23625,15 +23488,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 6300.0,
       "PilotBurstDPS": 438.0,
       "TurretsBurstDPS": 0.0,
@@ -23658,8 +23513,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.43,
-      "PersonalInventory": 0.43
+      "Storage": 0.43
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -23834,15 +23688,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1470.0,
       "PilotBurstDPS": 656.0,
       "TurretsBurstDPS": 0.0,
@@ -23867,8 +23713,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.43,
-      "PersonalInventory": 0.43
+      "Storage": 0.43
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -24043,15 +23888,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1050.0,
       "PilotBurstDPS": 1120.0,
       "TurretsBurstDPS": 0.0,
@@ -24077,8 +23914,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.43,
-      "PersonalInventory": 0.43
+      "Storage": 0.43
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -24253,15 +24089,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1470.0,
       "PilotBurstDPS": 656.0,
       "TurretsBurstDPS": 0.0,
@@ -24287,8 +24115,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 6.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 2.03
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -24358,11 +24185,11 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 220.0,
+      "ScmSpeed": 218.0,
       "MaxSpeed": 1150.0,
-      "Pitch": 56.0,
-      "Yaw": 45.0,
-      "Roll": 150.0,
+      "Pitch": 54.0,
+      "Yaw": 43.0,
+      "Roll": 140.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 2000000.0,
@@ -24376,7 +24203,8 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Retro": 5.3,
         "Strafe": 7.9,
         "Up": 7.9,
-        "Down": 7.9
+        "Down": 7.9,
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -24462,15 +24290,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3000.0,
       "PilotBurstDPS": 1312.0,
       "TurretsBurstDPS": 0.0,
@@ -24495,8 +24315,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 1.68
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -24568,9 +24387,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 220.0,
       "MaxSpeed": 1150.0,
-      "Pitch": 56.0,
-      "Yaw": 45.0,
-      "Roll": 150.0,
+      "Pitch": 54.0,
+      "Yaw": 43.0,
+      "Roll": 138.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 2000000.0,
@@ -24670,15 +24489,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 656.0,
       "TurretsBurstDPS": 0.0,
@@ -24703,8 +24514,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 1.85
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -24776,9 +24586,9 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 220.0,
       "MaxSpeed": 1150.0,
-      "Pitch": 56.0,
-      "Yaw": 45.0,
-      "Roll": 150.0,
+      "Pitch": 54.0,
+      "Yaw": 43.0,
+      "Roll": 138.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 2000000.0,
@@ -24878,15 +24688,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 4200.0,
       "PilotBurstDPS": 656.0,
       "TurretsBurstDPS": 0.0,
@@ -24911,8 +24713,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 1.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 1.42
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -24982,11 +24783,11 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 220.0,
+      "ScmSpeed": 222.0,
       "MaxSpeed": 1150.0,
-      "Pitch": 56.0,
+      "Pitch": 58.0,
       "Yaw": 45.0,
-      "Roll": 150.0,
+      "Roll": 155.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 2000000.0,
@@ -25086,15 +24887,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3460.0,
       "PilotBurstDPS": 1747.0,
       "TurretsBurstDPS": 0.0,
@@ -25119,8 +24912,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 291.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 9.14
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 3,
@@ -25301,15 +25093,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 190200.0,
       "PilotBurstDPS": 4102.0,
       "TurretsBurstDPS": 3818.0,
@@ -25334,8 +25118,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 291.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 9.14
+      "Storage": 0.0
     },
     "Crew": 2,
     "WeaponCrew": 3,
@@ -25516,15 +25299,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 190200.0,
       "PilotBurstDPS": 4102.0,
       "TurretsBurstDPS": 4637.0,
@@ -25549,8 +25324,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 224.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 6.0,
-      "PersonalInventory": 8.0
+      "Storage": 6.0
     },
     "Crew": 1,
     "WeaponCrew": 2,
@@ -25755,15 +25529,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 63400.0,
       "PilotBurstDPS": 4102.0,
       "TurretsBurstDPS": 3272.0,
@@ -25790,8 +25556,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 96.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 11.7,
-      "PersonalInventory": 8.0
+      "Storage": 11.7
     },
     "Crew": 1,
     "WeaponCrew": 6,
@@ -26008,15 +25773,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 126800.0,
       "PilotBurstDPS": 4102.0,
       "TurretsBurstDPS": 8181.0,
@@ -26039,8 +25796,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.1,
-      "PersonalInventory": 0.65
+      "Storage": 1.1
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -26082,9 +25838,11 @@ const spvVehicleList: SpvVehicleMain[] = [
           "geo_wing_bottom_left_middle": 4000.0,
           "geo_wing_bottom_left_back": 2500.0,
           "geo_wing_bottom_left_front": 3000.0,
+          "geo_landing_gear_housing_left_front": 100.0,
           "geo_wing_bottom_right_middle": 4000.0,
           "geo_wing_bottom_right_back": 2500.0,
           "geo_wing_bottom_right_front": 3000.0,
+          "geo_landing_gear_housing_right_front": 100.0,
           "geo_thruster_arm_left_b": 5000.0,
           "geo_thruster_arm_left_c": 5000.0,
           "geo_thruster_arm_right_b": 5000.0,
@@ -26127,8 +25885,8 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 213.0,
       "MaxSpeed": 1125.0,
-      "Pitch": 40.0,
-      "Yaw": 40.0,
+      "Pitch": 45.0,
+      "Yaw": 45.0,
       "Roll": 130.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
@@ -26144,7 +25902,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Strafe": 8.2,
         "Up": 8.2,
         "Down": 8.2,
-        "CheckDate": "2024-12-20"
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -26230,15 +25988,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 4740.0,
       "PilotBurstDPS": 3073.0,
       "TurretsBurstDPS": 0.0,
@@ -26249,7 +25999,10 @@ const spvVehicleList: SpvVehicleMain[] = [
       "ExpeditedClaimTime": 2.83,
       "ExpeditedCost": 5710.0
     },
-    "New Ship": "Mirai Guardian"
+    "New Ship": "Mirai Guardian",
+    "Buy": {
+      "New Deal - Teasa Spaceport - Lorville": 6615000.0
+    }
   },
   {
     "ClassName": "MRAI_Guardian_MX",
@@ -26261,13 +26014,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.9,
-      "PersonalInventory": 0.65
+      "Storage": 0.9
     },
     "Crew": 1,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
-    "Mass": 123500.0,
+    "Mass": 123540.37,
     "ComponentsMass": 12692.0,
     "Dimensions": {
       "Length": 25.0,
@@ -26293,15 +26045,13 @@ const spvVehicleList: SpvVehicleMain[] = [
           "geo_body": 8100.0
         },
         "Parts": {
-          "nose": 5600.0,
-          "geo_nose_cap": 1200.0,
           "geo_body_shell_back": 1200.0,
-          "geo_body_top": 1900.0,
           "geo_wing_arm_rear_bottom_left": 5000.0,
           "geo_guardian_mx_wing_bottom_left": 5000.0,
           "geo_wing_hinge_attach_left": 1000.0,
           "geo_flap_01_wing_bottom_left": 1200.0,
           "geo_flap_02_wing_bottom_left": 700.0,
+          "geo_lg_panel_b_front_left": 50.0,
           "geo_wing_arm_rear_top_a_left": 5000.0,
           "geo_guardian_mx_wing_top_left": 5000.0,
           "geo_flap_02_wing_top_left": 700.0,
@@ -26313,10 +26063,14 @@ const spvVehicleList: SpvVehicleMain[] = [
           "geo_wing_hinge_attach_right": 1000.0,
           "geo_flap_02_wing_bottom_right": 700.0,
           "geo_flap_01_wing_bottom_right": 1200.0,
+          "geo_lg_panel_b_front_right": 50.0,
           "geo_thruster_arm_b_left": 6000.0,
           "geo_thruster_arm_c_left": 6000.0,
           "geo_thruster_arm_b_right": 6000.0,
-          "geo_thruster_arm_c_right": 6000.0
+          "geo_thruster_arm_c_right": 6000.0,
+          "geo_body_top": 1900.0,
+          "nose": 5600.0,
+          "geo_nose_cap": 1200.0
         }
       },
       "ThrustersHealthPoints": {
@@ -26353,13 +26107,13 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 208.0,
       "MaxSpeed": 1100.0,
-      "Pitch": 35.0,
-      "Yaw": 35.0,
+      "Pitch": 39.0,
+      "Yaw": 39.0,
       "Roll": 120.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 10000000.0,
-        "Retro": 4760000.0,
+        "Retro": 4780000.0,
         "Vtol": 0.0,
         "Maneuvering": 14200000.0
       },
@@ -26429,7 +26183,7 @@ const spvVehicleList: SpvVehicleMain[] = [
       },
       "FuelUsagePerSecond": {
         "Main": 1270.0,
-        "Retro": 604.52,
+        "Retro": 607.06,
         "Vtol": 0.0,
         "Maneuvering": 1803.4
       },
@@ -26438,12 +26192,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "Emissions": {
       "Electromagnetic": {
-        "SCMIdle": 9039.0,
-        "SCMActive": 12261.0,
-        "NAV": 29163.0
+        "SCMIdle": 9043.0,
+        "SCMActive": 12263.0,
+        "NAV": 29167.0
       },
       "Infrared": {
-        "Start": 13690.0
+        "Start": 13697.0
       },
       "CrossSection": {
         "Front": 3333.0,
@@ -26456,15 +26210,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 9480.0,
       "PilotBurstDPS": 3272.0,
       "TurretsBurstDPS": 0.0,
@@ -26486,8 +26232,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.1,
-      "PersonalInventory": 0.65
+      "Storage": 1.1
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -26529,9 +26274,11 @@ const spvVehicleList: SpvVehicleMain[] = [
           "geo_wing_bottom_left_middle": 4000.0,
           "geo_wing_bottom_left_back": 2500.0,
           "geo_wing_bottom_left_front": 3000.0,
+          "geo_landing_gear_housing_left_front": 100.0,
           "geo_wing_bottom_right_middle": 4000.0,
           "geo_wing_bottom_right_back": 2500.0,
           "geo_wing_bottom_right_front": 3000.0,
+          "geo_landing_gear_housing_right_front": 100.0,
           "geo_thruster_arm_left_b": 5000.0,
           "geo_thruster_arm_left_c": 5000.0,
           "geo_thruster_arm_right_b": 5000.0,
@@ -26574,8 +26321,8 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 210.0,
       "MaxSpeed": 1100.0,
-      "Pitch": 37.5,
-      "Yaw": 37.5,
+      "Pitch": 42.0,
+      "Yaw": 42.0,
       "Roll": 125.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
@@ -26591,7 +26338,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Strafe": 8.2,
         "Up": 8.2,
         "Down": 8.2,
-        "CheckDate": "2024-12-20"
+        "CheckDate": "2025-06-21"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -26677,15 +26424,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 4740.0,
       "PilotBurstDPS": 3073.0,
       "TurretsBurstDPS": 0.0,
@@ -26708,8 +26447,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.6,
-      "PersonalInventory": 0.25
+      "Storage": 0.6
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -26886,15 +26624,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 0.0,
       "PilotBurstDPS": 314.0,
       "TurretsBurstDPS": 0.0,
@@ -26920,8 +26650,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.6,
-      "PersonalInventory": 0.25
+      "Storage": 0.6
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -27099,15 +26828,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 0.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -27133,8 +26854,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 2.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 0.93
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -27300,15 +27020,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1500.0,
       "PilotBurstDPS": 1091.0,
       "TurretsBurstDPS": 0.0,
@@ -27334,8 +27046,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 2.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 0.93
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -27501,15 +27212,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1730.0,
       "PilotBurstDPS": 1091.0,
       "TurretsBurstDPS": 0.0,
@@ -27534,8 +27237,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 6.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 0.93
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -27701,15 +27403,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 1091.0,
       "TurretsBurstDPS": 0.0,
@@ -27734,8 +27428,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 8.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.05,
-      "PersonalInventory": 1.01
+      "Storage": 1.05
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -27908,15 +27601,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3000.0,
       "PilotBurstDPS": 2034.0,
       "TurretsBurstDPS": 0.0,
@@ -27941,8 +27626,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 12.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.05,
-      "PersonalInventory": 0.93
+      "Storage": 1.05
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -28115,15 +27799,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2100.0,
       "PilotBurstDPS": 1350.0,
       "TurretsBurstDPS": 0.0,
@@ -28148,8 +27824,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 4.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.05,
-      "PersonalInventory": 0.71
+      "Storage": 1.05
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -28322,15 +27997,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3460.0,
       "PilotBurstDPS": 2375.0,
       "TurretsBurstDPS": 0.0,
@@ -28355,8 +28022,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 4.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.75,
-      "PersonalInventory": 0.71
+      "Storage": 0.75
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -28529,15 +28195,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2940.0,
       "PilotBurstDPS": 1775.0,
       "TurretsBurstDPS": 0.0,
@@ -28562,14 +28220,13 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 42.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 4.05,
-      "PersonalInventory": 3.81
+      "Storage": 4.05
     },
     "Crew": 3,
     "WeaponCrew": 2,
     "OperationsCrew": 0,
     "Mass": 400457.06,
-    "ComponentsMass": 37998.0,
+    "ComponentsMass": 39548.0,
     "Dimensions": {
       "Length": 56.0,
       "Width": 32.0,
@@ -28632,7 +28289,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "FlightCharacteristics": {
       "ScmSpeed": 215.0,
-      "MaxSpeed": 1150.0,
+      "MaxSpeed": 1225.0,
       "Pitch": 35.0,
       "Yaw": 35.0,
       "Roll": 70.0,
@@ -28655,8 +28312,8 @@ const spvVehicleList: SpvVehicleMain[] = [
         "BaseSpoolTime": 1.0,
         "QuantumDriveSpoolTime": 6.0,
         "ScmMode": {
-          "BoostSpeedForward": 450.0,
-          "BoostSpeedBackward": 210.0
+          "BoostSpeedForward": 500.0,
+          "BoostSpeedBackward": 216.0
         }
       },
       "Boost": {
@@ -28717,12 +28374,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     },
     "Emissions": {
       "Electromagnetic": {
-        "SCMIdle": 10175.0,
-        "SCMActive": 12250.0,
-        "NAV": 25655.0
+        "SCMIdle": 10428.0,
+        "SCMActive": 12503.0,
+        "NAV": 25908.0
       },
       "Infrared": {
-        "Start": 9326.0
+        "Start": 10876.0
       },
       "CrossSection": {
         "Front": 4153.0,
@@ -28740,15 +28397,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 45400.0,
       "PilotBurstDPS": 1636.0,
       "TurretsBurstDPS": 2182.0,
@@ -28774,8 +28423,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 44.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 4.46
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 2,
@@ -28803,14 +28451,14 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Hull": {
       "StructureHealthPoints": {
         "VitalParts": {
-          "Body": 55000.0,
-          "Nose": 18600.0,
-          "Front": 21000.0
+          "Body": 45000.0,
+          "Nose": 40000.0,
+          "Front": 45000.0
         },
         "Parts": {
           "Wing_Left": 8625.0,
           "Wing_Right": 8625.0,
-          "Tail": 40000.0
+          "Tail": 45000.0
         }
       },
       "ThrustersHealthPoints": {
@@ -28952,15 +28600,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 126800.0,
       "PilotBurstDPS": 4609.0,
       "TurretsBurstDPS": 2182.0,
@@ -28985,8 +28625,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 20.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 4.46
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 2,
@@ -29014,14 +28653,14 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Hull": {
       "StructureHealthPoints": {
         "VitalParts": {
-          "Body": 55000.0,
-          "Nose": 18600.0,
-          "Front": 21000.0
+          "Body": 45000.0,
+          "Nose": 40000.0,
+          "Front": 45000.0
         },
         "Parts": {
           "Wing_Left": 8625.0,
           "Wing_Right": 8625.0,
-          "Tail": 40000.0
+          "Tail": 45000.0
         }
       },
       "ThrustersHealthPoints": {
@@ -29163,15 +28802,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 126800.0,
       "PilotBurstDPS": 4609.0,
       "TurretsBurstDPS": 2182.0,
@@ -29196,8 +28827,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.47,
-      "PersonalInventory": 1.47
+      "Storage": 1.47
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -29362,15 +28992,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1470.0,
       "PilotBurstDPS": 1094.0,
       "TurretsBurstDPS": 0.0,
@@ -29395,8 +29017,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 388.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 7.65
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 8,
@@ -29597,15 +29218,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1026000.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 8617.0,
@@ -29631,8 +29244,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.43,
-      "PersonalInventory": 0.0
+      "Storage": 0.43
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -29804,15 +29416,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1470.0,
       "PilotBurstDPS": 656.0,
       "TurretsBurstDPS": 0.0,
@@ -29838,8 +29442,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.39,
-      "PersonalInventory": 0.25
+      "Storage": 0.39
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -30039,15 +29642,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 0.0,
       "PilotBurstDPS": 304.0,
       "TurretsBurstDPS": 0.0,
@@ -30074,8 +29669,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.39,
-      "PersonalInventory": 0.25
+      "Storage": 0.39
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -30275,15 +29869,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 545.0,
       "PilotBurstDPS": 219.0,
       "TurretsBurstDPS": 0.0,
@@ -30310,8 +29896,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.39,
-      "PersonalInventory": 0.25
+      "Storage": 0.39
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -30510,15 +30095,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 0.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -30545,8 +30122,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 6.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 0.93
+      "Storage": 0.90
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -30645,9 +30221,9 @@ const spvVehicleList: SpvVehicleMain[] = [
             "Z": 1.3
           },
           "NegativeAxis": {
-            "X": 1.3,
-            "Y": 1.4,
-            "Z": 1.35
+            "X": 1.35,
+            "Y": 1.3,
+            "Z": 1.4
           }
         },
         "AngularAccelerationMultiplier": {
@@ -30710,15 +30286,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 4200.0,
       "PilotBurstDPS": 438.0,
       "TurretsBurstDPS": 0.0,
@@ -30743,8 +30311,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 3.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 0.93
+      "Storage": 0.90
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -30843,9 +30410,9 @@ const spvVehicleList: SpvVehicleMain[] = [
             "Z": 1.3
           },
           "NegativeAxis": {
-            "X": 1.3,
-            "Y": 1.4,
-            "Z": 1.35
+            "X": 1.35,
+            "Y": 1.3,
+            "Z": 1.4
           }
         },
         "AngularAccelerationMultiplier": {
@@ -30908,15 +30475,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2800.0,
       "PilotBurstDPS": 405.0,
       "TurretsBurstDPS": 0.0,
@@ -30941,8 +30500,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 3.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 0.71
+      "Storage": 0.90
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -31041,9 +30599,9 @@ const spvVehicleList: SpvVehicleMain[] = [
             "Z": 1.3
           },
           "NegativeAxis": {
-            "X": 1.3,
-            "Y": 1.4,
-            "Z": 1.35
+            "X": 1.35,
+            "Y": 1.3,
+            "Z": 1.4
           }
         },
         "AngularAccelerationMultiplier": {
@@ -31106,15 +30664,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3200.0,
       "PilotBurstDPS": 875.0,
       "TurretsBurstDPS": 0.0,
@@ -31139,8 +30689,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 3.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 1.01
+      "Storage": 0.90
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -31239,9 +30788,9 @@ const spvVehicleList: SpvVehicleMain[] = [
             "Z": 1.3
           },
           "NegativeAxis": {
-            "X": 1.3,
-            "Y": 1.4,
-            "Z": 1.35
+            "X": 1.35,
+            "Y": 1.3,
+            "Z": 1.4
           }
         },
         "AngularAccelerationMultiplier": {
@@ -31304,15 +30853,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 2940.0,
       "PilotBurstDPS": 438.0,
       "TurretsBurstDPS": 0.0,
@@ -31337,8 +30878,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 3.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 0.71
+      "Storage": 0.90
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -31437,9 +30977,9 @@ const spvVehicleList: SpvVehicleMain[] = [
             "Z": 1.3
           },
           "NegativeAxis": {
-            "X": 1.3,
-            "Y": 1.4,
-            "Z": 1.35
+            "X": 1.35,
+            "Y": 1.3,
+            "Z": 1.4
           }
         },
         "AngularAccelerationMultiplier": {
@@ -31502,15 +31042,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 4200.0,
       "PilotBurstDPS": 438.0,
       "TurretsBurstDPS": 0.0,
@@ -31535,8 +31067,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 96.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 5.25,
-      "PersonalInventory": 5.08
+      "Storage": 5.25
     },
     "Crew": 1,
     "WeaponCrew": 2,
@@ -31662,11 +31193,11 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 200.0,
+      "ScmSpeed": 190.0,
       "MaxSpeed": 1000.0,
-      "Pitch": 30.0,
-      "Yaw": 30.0,
-      "Roll": 60.0,
+      "Pitch": 25.0,
+      "Yaw": 21.0,
+      "Roll": 45.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 22280000.0,
@@ -31680,14 +31211,15 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Retro": 2.6,
         "Strafe": 2.6,
         "Up": 3.1,
-        "Down": 2.6
+        "Down": 2.6,
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
         "QuantumDriveSpoolTime": 6.0,
         "ScmMode": {
-          "BoostSpeedForward": 400.0,
-          "BoostSpeedBackward": 205.0
+          "BoostSpeedForward": 390.0,
+          "BoostSpeedBackward": 191.0
         }
       },
       "Boost": {
@@ -31771,15 +31303,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 48800.0,
       "PilotBurstDPS": 4910.0,
       "TurretsBurstDPS": 2182.0,
@@ -31804,8 +31328,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 96.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 6,
-      "PersonalInventory": 5.6
+      "Storage": 6
     },
     "Crew": 1,
     "WeaponCrew": 2,
@@ -31931,11 +31454,11 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 200.0,
-      "MaxSpeed": 1000.0,
-      "Pitch": 30.0,
-      "Yaw": 30.0,
-      "Roll": 60.0,
+      "ScmSpeed": 180.0,
+      "MaxSpeed": 1075.0,
+      "Pitch": 25.0,
+      "Yaw": 21.0,
+      "Roll": 45.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 22280000.0,
@@ -31955,8 +31478,8 @@ const spvVehicleList: SpvVehicleMain[] = [
         "BaseSpoolTime": 1.0,
         "QuantumDriveSpoolTime": 6.0,
         "ScmMode": {
-          "BoostSpeedForward": 400.0,
-          "BoostSpeedBackward": 205.0
+          "BoostSpeedForward": 380.0,
+          "BoostSpeedBackward": 191.0
         }
       },
       "Boost": {
@@ -32040,15 +31563,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 48800.0,
       "PilotBurstDPS": 6145.0,
       "TurretsBurstDPS": 1091.0,
@@ -32073,8 +31588,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 80.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 5.25,
-      "PersonalInventory": 5.43
+      "Storage": 5.25
     },
     "Crew": 1,
     "WeaponCrew": 2,
@@ -32199,11 +31713,11 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 200.0,
-      "MaxSpeed": 1000.0,
-      "Pitch": 30.0,
-      "Yaw": 30.0,
-      "Roll": 60.0,
+      "ScmSpeed": 185.0,
+      "MaxSpeed": 995.0,
+      "Pitch": 25.0,
+      "Yaw": 21.0,
+      "Roll": 45.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 22280000.0,
@@ -32217,14 +31731,15 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Retro": 2.6,
         "Strafe": 2.6,
         "Up": 3.1,
-        "Down": 2.6
+        "Down": 2.6,
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
         "QuantumDriveSpoolTime": 6.0,
         "ScmMode": {
-          "BoostSpeedForward": 400.0,
-          "BoostSpeedBackward": 205.0
+          "BoostSpeedForward": 385.0,
+          "BoostSpeedBackward": 191.0
         }
       },
       "Boost": {
@@ -32308,15 +31823,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 48800.0,
       "PilotBurstDPS": 4922.0,
       "TurretsBurstDPS": 2515.0,
@@ -32341,8 +31848,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 174.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 5.25,
-      "PersonalInventory": 5.43
+      "Storage": 5.25
     },
     "Crew": 1,
     "WeaponCrew": 1,
@@ -32466,32 +31972,33 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 200.0,
-      "MaxSpeed": 1000.0,
-      "Pitch": 30.0,
-      "Yaw": 30.0,
-      "Roll": 60.0,
+      "ScmSpeed": 180.0,
+      "MaxSpeed": 950.0,
+      "Pitch": 25.0,
+      "Yaw": 21.0,
+      "Roll": 45.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 22280000.0,
-        "Retro": 11160000.0,
-        "Vtol": 4880000.0,
-        "Maneuvering": 13260000.0
+        "Main": 21400244.0,
+        "Retro": 10589812.0,
+        "Vtol": 7393492.8,
+        "Maneuvering": 22062108.0
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 5.2,
-        "Retro": 2.6,
+        "Main": 5.0,
+        "Retro": 2.5,
         "Strafe": 2.6,
-        "Up": 3.1,
-        "Down": 2.6
+        "Up": 3.2,
+        "Down": 2.6,
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
         "QuantumDriveSpoolTime": 6.0,
         "ScmMode": {
-          "BoostSpeedForward": 400.0,
-          "BoostSpeedBackward": 205.0
+          "BoostSpeedForward": 380.0,
+          "BoostSpeedBackward": 191.0
         }
       },
       "Boost": {
@@ -32542,12 +32049,12 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 15.0
       },
       "FuelUsagePerSecond": {
-        "Main": 2785.0,
-        "Retro": 1395.0,
-        "Vtol": 610.0,
-        "Maneuvering": 1657.5
+        "Main": 2675.03,
+        "Retro": 1323.726,
+        "Vtol": 924.186,
+        "Maneuvering": 2757.763
       },
-      "IntakeToMainFuelRatio": 3.59,
+      "IntakeToMainFuelRatio": 3.74,
       "TimeForIntakesToFillTank": 660000.0
     },
     "Emissions": {
@@ -32575,15 +32082,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 63400.0,
       "PilotBurstDPS": 4910.0,
       "TurretsBurstDPS": 1091.0,
@@ -32608,13 +32107,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 2.1,
-      "PersonalInventory": 2.46
+      "Storage": 2.1
     },
     "Crew": 2,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
-    "Mass": 11963.7,
+    "Mass": 13600.25,
     "ComponentsMass": 499.0,
     "Dimensions": {
       "Length": 7.75,
@@ -32684,15 +32182,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 545.0,
       "PilotBurstDPS": 608.0,
       "TurretsBurstDPS": 0.0,
@@ -32724,8 +32214,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.75,
-      "PersonalInventory": 0.71
+      "Storage": 0.90
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -32756,9 +32245,9 @@ const spvVehicleList: SpvVehicleMain[] = [
           "body_main": 2626.0
         },
         "Parts": {
-          "nose_wingmount_left": 650.0,
-          "bottom_hull": 2600.0,
-          "nose_wingmount_right": 150.0,
+          "nose_wingmount_left": 1050.0,
+          "bottom_hull": 2000.0,
+          "nose_wingmount_right": 1050.0,
           "rear_frame_interdiction": 200.0,
           "tail": 2500.0,
           "top_cover_mid": 50.0,
@@ -32805,18 +32294,19 @@ const spvVehicleList: SpvVehicleMain[] = [
       "Roll": 160.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 33580000.0,
+        "Main": 33800000.0,
         "Retro": 7940000.0,
         "Vtol": 0.0,
         "Maneuvering": 20320000.0
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 15.0,
+        "Main": 14.9,
         "Retro": 3.5,
-        "Strafe": 4.5,
-        "Up": 6.0,
-        "Down": 3.5
+        "Strafe": 4.4,
+        "Up": 5.8,
+        "Down": 3.4,
+        "CheckDate": "2025-06-25"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -32874,7 +32364,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 10.0
       },
       "FuelUsagePerSecond": {
-        "Main": 4197.5,
+        "Main": 4225.0,
         "Retro": 992.5,
         "Vtol": 0.0,
         "Maneuvering": 2540.0
@@ -32902,15 +32392,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3460.0,
       "PilotBurstDPS": 923.0,
       "TurretsBurstDPS": 0.0,
@@ -32926,6 +32408,222 @@ const spvVehicleList: SpvVehicleMain[] = [
     }
   },
   {
+    "ClassName": "RSI_Meteor",
+    "Name": "RSI Meteor",
+    "Description": "Packing some serious firepower, the Meteor is a sight enemies won't want to see. Taking inspiration from the iconic Mantis, this heavy fighter forgoes quantum enforcement and instead features two bespoke S5 ballistic cannons and four single-load S4 missile racks; making the Meteor a force that can light up the sky like a shooting star.",
+    "Career": "Combat",
+    "Role": "Medium Fighter",
+    "Size": 2,
+    "Cargo": {
+      "CargoGrid": 0.0,
+      "CargoContainers": 0.0,
+      "Storage": 0.90
+    },
+    "Crew": 1,
+    "WeaponCrew": 0,
+    "OperationsCrew": 0,
+    "Mass": 238832.0,
+    "ComponentsMass": 8538.0,
+    "Dimensions": {
+      "Length": 30.0,
+      "Width": 17.0,
+      "Height": 8.0
+    },
+    "IsSpaceship": true,
+    "Armor": {
+      "DamageMultipliers": {
+        "Physical": 0.5,
+        "Energy": 0.95,
+        "Distortion": 0.95
+      },
+      "SignalMultipliers": {
+        "Electromagnetic": 1.0,
+        "Infrared": 1.0,
+        "CrossSection": 1.0
+      }
+    },
+    "Hull": {
+      "StructureHealthPoints": {
+        "VitalParts": {
+          "body_main": 2750.0
+        },
+        "Parts": {
+          "nose_wingmount_right": 1050.0,
+          "body_spine_mid_housing": 200.0,
+          "wing_right": 200.0,
+          "dbr_tail_wing_right": 4000.0,
+          "tail_engine_connector_right": 1000.0,
+          "engines_base_right": 2800.0,
+          "dbr_engine_right": 2800.0,
+          "dbr_wing_topcover_inner_right": 150.0,
+          "dbr_topside_inner_fin_right": 150.0,
+          "wing_left": 200.0,
+          "dbr_tail_wing_left": 4000.0,
+          "tail_engine_connector_left": 1000.0,
+          "engines_base_left": 2800.0,
+          "dbr_engine_left": 2800.0,
+          "dbr_wing_topcover_inner_left": 150.0,
+          "dbr_topside_inner_fin_left": 150.0,
+          "glass_ext": 200.0,
+          "body_main_spine": 200.0,
+          "tail": 200.0,
+          "tail_main_exhaust_housing": 200.0,
+          "dbr_body_cap_rear_outer_left": 150.0,
+          "dbr_body_cap_rear_outer_right": 150.0,
+          "dbr_body_cap_rear_inner_right": 150.0,
+          "dbr_body_cap_rear_inner_left": 150.0,
+          "dbr_body_spine_topside_fin_right": 150.0,
+          "dbr_body_spine_topside_fin_left": 150.0,
+          "tail_main_rear_connector": 200.0,
+          "body_main_underside_torp_bay": 200.0,
+          "nose_wingmount_left": 1050.0,
+          "body_rear_diffuser": 200.0,
+          "dbr_small_fin_right": 150.0,
+          "dbr_small_fin_left": 150.0,
+          "dbr_body_underside_fin_left": 150.0,
+          "dbr_body_underside_fin_right": 150.0
+        }
+      },
+      "ThrustersHealthPoints": {
+        "Main": {
+          "thruster_main_right": 7500.0,
+          "thruster_main_left": 7500.0
+        },
+        "Retro": {
+          "thruster_retro_right": 6950.0,
+          "thruster_retro_left": 6950.0
+        },
+        "Maneuvering": {
+          "thruster_mav_right_front_top": 6500.0,
+          "thruster_mav_right_front_bot": 6500.0,
+          "thruster_mav_right_rear_bot": 6500.0,
+          "thruster_mav_right_rear_top": 6500.0,
+          "thruster_mav_left_front_bot": 6500.0,
+          "thruster_mav_left_rear_bot": 6500.0,
+          "thruster_mav_left_rear_top": 6500.0,
+          "thruster_mav_left_front_top": 6500.0
+        }
+      }
+    },
+    "FlightCharacteristics": {
+      "ScmSpeed": 229.0,
+      "MaxSpeed": 1405.0,
+      "Pitch": 46.0,
+      "Yaw": 38.0,
+      "Roll": 155.0,
+      "IsVtolAssisted": false,
+      "ThrustCapacity": {
+        "Main": 37418920.0,
+        "Retro": 7373242.0,
+        "Vtol": 0.0,
+        "Maneuvering": 21200000.0
+      },
+      "AccelerationG": {
+        "IsValidated": true,
+        "Main": 15.3,
+        "Retro": 3.0,
+        "Strafe": 4.2,
+        "Up": 5.5,
+        "Down": 3.2,
+        "CheckDate": "2025-07-17"
+      },
+      "MasterModes": {
+        "BaseSpoolTime": 1.0,
+        "QuantumDriveSpoolTime": 4.0,
+        "ScmMode": {
+          "BoostSpeedForward": 570.0,
+          "BoostSpeedBackward": 235.0
+        }
+      },
+      "Boost": {
+        "PreDelay": 0.0,
+        "RampUp": 0.4,
+        "RampDown": 0.2,
+        "AccelerationMultiplier": {
+          "PositiveAxis": {
+            "X": 1.35,
+            "Y": 1.67,
+            "Z": 1.35
+          },
+          "NegativeAxis": {
+            "X": 1.35,
+            "Y": 1.3,
+            "Z": 1.35
+          }
+        },
+        "AngularAccelerationMultiplier": {
+          "Pitch": 1.2,
+          "Yaw": 1.2,
+          "Roll": 1.2
+        },
+        "AngularVelocityMultiplier": {
+          "Pitch": 1.2,
+          "Yaw": 1.2,
+          "Roll": 1.2
+        }
+      },
+      "Capacitors": {
+        "ThrusterCapacitorSize": 20.0,
+        "CapacitorRegenPerSec": 0.75,
+        "CapacitorIdleCost": 1.0,
+        "CapacitorLinearCost": 0.0,
+        "CapacitorUsageModifier": 0.75,
+        "CapacitorRegenDelay": 0.4,
+        "RegenerationTime": 26.7
+      }
+    },
+    "FuelManagement": {
+      "FuelCapacity": 28950000.0,
+      "FuelIntakeRate": 0.0,
+      "QuantumFuelCapacity": 1150000.0,
+      "FuelBurnRatePer10KNewton": {
+        "Main": 2.5,
+        "Retro": 2.5,
+        "Vtol": 0.0,
+        "Maneuvering": 10.0
+      },
+      "FuelUsagePerSecond": {
+        "Main": 4677.365,
+        "Retro": 921.655,
+        "Vtol": 0.0,
+        "Maneuvering": 2650.0
+      },
+      "IntakeToMainFuelRatio": 0.0,
+      "TimeForIntakesToFillTank": "Infinity"
+    },
+    "Emissions": {
+      "Electromagnetic": {
+        "SCMIdle": 6257.0,
+        "SCMActive": 7402.0,
+        "NAV": 13790.0
+      },
+      "Infrared": {
+        "Start": 8165.0
+      },
+      "CrossSection": {
+        "Front": 3600.0,
+        "Side": 7800.0,
+        "Top": 14000.0
+      }
+    },
+    "ResourceNetwork": {
+      "ItemPools": {
+        "WeaponPoolSize": 4.0
+      }
+    },
+    "BaseLoadout": {
+      "TotalShieldHP": 3460.0,
+      "PilotBurstDPS": 5469.0,
+      "TurretsBurstDPS": 0.0,
+      "TotalMissilesDmg": 25406.0
+    },
+    "Insurance": {
+      "StandardClaimTime": 13.5,
+      "ExpeditedClaimTime": 4.5,
+      "ExpeditedCost": 6750.0
+    }
+  },
+  {
     "ClassName": "RSI_Polaris",
     "Name": "RSI Polaris",
     "Description": "The Polaris is a nimble corvette-class capital ship that packs a powerful punch with a full armament of turrets and torpedoes. Intended for use as both a naval patrol ship and to serve as the flagship of militia operations, Polaris has the capacity to perform search and rescue operations, light strike missions and general security patrols. The Polaris includes the facilities to repair, rearm and refuel a single fighter, light bomber or support ship.",
@@ -32935,8 +32633,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 576.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 25.6,
-      "PersonalInventory": 432.0
+      "Storage": 25.6
     },
     "Crew": 12,
     "WeaponCrew": 9,
@@ -33198,15 +32895,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1026000.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 21105.0,
@@ -33234,8 +32923,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 3.0,
-      "PersonalInventory": 1.29
+      "Storage": 3.0
     },
     "Crew": 2,
     "WeaponCrew": 1,
@@ -33314,8 +33002,8 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 230.0,
       "MaxSpeed": 1385.0,
-      "Pitch": 40.0,
-      "Yaw": 30.0,
+      "Pitch": 42.0,
+      "Yaw": 34.0,
       "Roll": 145.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
@@ -33422,15 +33110,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 4740.0,
       "PilotBurstDPS": 2182.0,
       "TurretsBurstDPS": 2182.0,
@@ -33460,8 +33140,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 3.0,
-      "PersonalInventory": 1.29
+      "Storage": 3.0
     },
     "Crew": 2,
     "WeaponCrew": 1,
@@ -33540,8 +33219,8 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 230.0,
       "MaxSpeed": 1385.0,
-      "Pitch": 40.0,
-      "Yaw": 30.0,
+      "Pitch": 42.0,
+      "Yaw": 34.0,
       "Roll": 145.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
@@ -33648,15 +33327,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "MaxRegenPerSecMultiplier": 1.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 4740.0,
       "PilotBurstDPS": 2182.0,
       "TurretsBurstDPS": 0.0,
@@ -33687,13 +33358,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 2.4,
-      "PersonalInventory": 2.46
+      "Storage": 2.4
     },
     "Crew": 2,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
-    "Mass": 14258.7,
+    "Mass": 15895.25,
     "ComponentsMass": 499.0,
     "Dimensions": {
       "Length": 7.75,
@@ -33765,15 +33435,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 545.0,
       "PilotBurstDPS": 438.0,
       "TurretsBurstDPS": 0.0,
@@ -33805,13 +33467,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.2,
-      "PersonalInventory": 2.46
+      "Storage": 1.2
     },
     "Crew": 2,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
-    "Mass": 13563.7,
+    "Mass": 15200.25,
     "ComponentsMass": 499.0,
     "Dimensions": {
       "Length": 7.75,
@@ -33883,15 +33544,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 545.0,
       "PilotBurstDPS": 438.0,
       "TurretsBurstDPS": 0.0,
@@ -33922,8 +33575,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 128.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 3.6,
-      "PersonalInventory": 3.68
+      "Storage": 3.6
     },
     "Crew": 3,
     "WeaponCrew": 1,
@@ -33998,14 +33650,14 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 200.0,
       "MaxSpeed": 1000.0,
-      "Pitch": 31.0,
-      "Yaw": 31.0,
+      "Pitch": 34.0,
+      "Yaw": 30.0,
       "Roll": 105.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 23400000.0,
         "Retro": 7800000.0,
-        "Vtol": 5400000.0,
+        "Vtol": 16200000.0,
         "Maneuvering": 30400000.0
       },
       "AccelerationG": {
@@ -34074,7 +33726,7 @@ const spvVehicleList: SpvVehicleMain[] = [
       "FuelUsagePerSecond": {
         "Main": 2925.0,
         "Retro": 975.0,
-        "Vtol": 675.0,
+        "Vtol": 2025.0,
         "Maneuvering": 3800.0
       },
       "IntakeToMainFuelRatio": 1.03,
@@ -34100,15 +33752,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 17280.0,
       "PilotBurstDPS": 1639.0,
       "TurretsBurstDPS": 1091.0,
@@ -34139,8 +33783,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 32.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 4.05,
-      "PersonalInventory": 3.81
+      "Storage": 4.05
     },
     "Crew": 3,
     "WeaponCrew": 1,
@@ -34213,8 +33856,8 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 200.0,
-      "MaxSpeed": 1050.0,
+      "ScmSpeed": 205.0,
+      "MaxSpeed": 1100.0,
       "Pitch": 32.5,
       "Yaw": 32.5,
       "Roll": 110.0,
@@ -34222,7 +33865,7 @@ const spvVehicleList: SpvVehicleMain[] = [
       "ThrustCapacity": {
         "Main": 25060000.0,
         "Retro": 7800000.0,
-        "Vtol": 3600000.0,
+        "Vtol": 10800000.0,
         "Maneuvering": 32400000.0
       },
       "AccelerationG": {
@@ -34237,7 +33880,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "BaseSpoolTime": 1.0,
         "QuantumDriveSpoolTime": 6.0,
         "ScmMode": {
-          "BoostSpeedForward": 400.0,
+          "BoostSpeedForward": 405.0,
           "BoostSpeedBackward": 210.0
         }
       },
@@ -34291,7 +33934,7 @@ const spvVehicleList: SpvVehicleMain[] = [
       "FuelUsagePerSecond": {
         "Main": 3132.5,
         "Retro": 975.0,
-        "Vtol": 450.0,
+        "Vtol": 1350.0,
         "Maneuvering": 4050.0
       },
       "IntakeToMainFuelRatio": 0.96,
@@ -34317,15 +33960,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 6.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 17720.0,
       "PilotBurstDPS": 1639.0,
       "TurretsBurstDPS": 1091.0,
@@ -34356,13 +33991,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.8,
-      "PersonalInventory": 2.33
+      "Storage": 1.8
     },
     "Crew": 1,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
-    "Mass": 3564.0,
+    "Mass": 4264.0,
     "ComponentsMass": 169.0,
     "Dimensions": {
       "Length": 6.0,
@@ -34389,6 +34023,10 @@ const spvVehicleList: SpvVehicleMain[] = [
           "body": 2000.0
         },
         "Parts": {
+          "wheelFL": 800.0,
+          "wheelFR": 800.0,
+          "wheelBR": 800.0,
+          "wheelBL": 800.0,
           "rear_armor_plating_left": 50.0,
           "mud_flap_bl": 25.0,
           "mud_flap_fl": 25.0,
@@ -34396,10 +34034,8 @@ const spvVehicleList: SpvVehicleMain[] = [
           "rear_armor_plating_right": 50.0,
           "mud_flap_br": 25.0,
           "hood": 1.0,
-          "wheelBL": 800.0,
-          "wheelBR": 800.0,
-          "wheelFL": 800.0,
-          "wheelFR": 800.0
+          "livery_decal": 1.0,
+          "body_decals": 1.0
         }
       }
     },
@@ -34431,15 +34067,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 545.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -34470,13 +34098,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.8,
-      "PersonalInventory": 1.72
+      "Storage": 1.8
     },
     "Crew": 1,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
-    "Mass": 3564.0,
+    "Mass": 4264.0,
     "ComponentsMass": 791.0,
     "Dimensions": {
       "Length": 6.0,
@@ -34503,6 +34130,10 @@ const spvVehicleList: SpvVehicleMain[] = [
           "body": 2000.0
         },
         "Parts": {
+          "wheelFL": 800.0,
+          "wheelFR": 800.0,
+          "wheelBR": 800.0,
+          "wheelBL": 800.0,
           "rear_armor_plating_left": 50.0,
           "mud_flap_bl": 25.0,
           "mud_flap_fl": 25.0,
@@ -34510,10 +34141,8 @@ const spvVehicleList: SpvVehicleMain[] = [
           "rear_armor_plating_right": 50.0,
           "mud_flap_br": 25.0,
           "hood": 1.0,
-          "wheelBL": 800.0,
-          "wheelBR": 800.0,
-          "wheelFL": 800.0,
-          "wheelFR": 800.0
+          "livery_decal": 1.0,
+          "body_decals": 1.0
         }
       }
     },
@@ -34545,15 +34174,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 545.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -34585,13 +34206,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.8,
-      "PersonalInventory": 1.72
+      "Storage": 1.8
     },
     "Crew": 1,
     "WeaponCrew": 1,
     "OperationsCrew": 0,
-    "Mass": 3564.0,
+    "Mass": 4264.0,
     "ComponentsMass": 1168.0,
     "Dimensions": {
       "Length": 6.0,
@@ -34618,6 +34238,10 @@ const spvVehicleList: SpvVehicleMain[] = [
           "body": 2000.0
         },
         "Parts": {
+          "wheelFL": 800.0,
+          "wheelFR": 800.0,
+          "wheelBR": 800.0,
+          "wheelBL": 800.0,
           "rear_armor_plating_left": 50.0,
           "mud_flap_bl": 25.0,
           "mud_flap_fl": 25.0,
@@ -34625,10 +34249,8 @@ const spvVehicleList: SpvVehicleMain[] = [
           "rear_armor_plating_right": 50.0,
           "mud_flap_br": 25.0,
           "hood": 1.0,
-          "wheelBL": 800.0,
-          "wheelBR": 800.0,
-          "wheelFL": 800.0,
-          "wheelFR": 800.0
+          "livery_decal": 1.0,
+          "body_decals": 1.0
         }
       }
     },
@@ -34647,7 +34269,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "NAV": 0.0
       },
       "Infrared": {
-        "Start": 1559.0
+        "Start": 1255.0
       },
       "CrossSection": {
         "Front": 843.0,
@@ -34660,15 +34282,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 545.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 202.0,
@@ -34699,13 +34313,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.8,
-      "PersonalInventory": 1.72
+      "Storage": 1.8
     },
     "Crew": 1,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
-    "Mass": 3564.0,
+    "Mass": 4264.0,
     "ComponentsMass": 169.0,
     "Dimensions": {
       "Length": 6.0,
@@ -34732,6 +34345,10 @@ const spvVehicleList: SpvVehicleMain[] = [
           "body": 2000.0
         },
         "Parts": {
+          "wheelFL": 800.0,
+          "wheelFR": 800.0,
+          "wheelBR": 800.0,
+          "wheelBL": 800.0,
           "rear_armor_plating_left": 50.0,
           "mud_flap_bl": 25.0,
           "mud_flap_fl": 25.0,
@@ -34739,10 +34356,8 @@ const spvVehicleList: SpvVehicleMain[] = [
           "rear_armor_plating_right": 50.0,
           "mud_flap_br": 25.0,
           "hood": 1.0,
-          "wheelBL": 800.0,
-          "wheelBR": 800.0,
-          "wheelFL": 800.0,
-          "wheelFR": 800.0
+          "livery_decal": 1.0,
+          "body_decals": 1.0
         }
       }
     },
@@ -34774,15 +34389,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 545.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -34813,13 +34420,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.8,
-      "PersonalInventory": 2.15
+      "Storage": 1.8
     },
     "Crew": 1,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
-    "Mass": 3564.0,
+    "Mass": 4264.0,
     "ComponentsMass": 169.0,
     "Dimensions": {
       "Length": 6.0,
@@ -34846,6 +34452,10 @@ const spvVehicleList: SpvVehicleMain[] = [
           "body": 2000.0
         },
         "Parts": {
+          "wheelFL": 800.0,
+          "wheelFR": 800.0,
+          "wheelBR": 800.0,
+          "wheelBL": 800.0,
           "rear_armor_plating_left": 50.0,
           "mud_flap_bl": 25.0,
           "mud_flap_fl": 25.0,
@@ -34853,10 +34463,8 @@ const spvVehicleList: SpvVehicleMain[] = [
           "rear_armor_plating_right": 50.0,
           "mud_flap_br": 25.0,
           "hood": 1.0,
-          "wheelBL": 800.0,
-          "wheelBR": 800.0,
-          "wheelFL": 800.0,
-          "wheelFR": 800.0
+          "livery_decal": 1.0,
+          "body_decals": 1.0
         }
       }
     },
@@ -34888,15 +34496,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 545.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -34927,13 +34527,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.8,
-      "PersonalInventory": 1.72
+      "Storage": 1.8
     },
     "Crew": 1,
     "WeaponCrew": 1,
     "OperationsCrew": 0,
-    "Mass": 3564.0,
+    "Mass": 4264.0,
     "ComponentsMass": 284.0,
     "Dimensions": {
       "Length": 6.0,
@@ -34960,6 +34559,10 @@ const spvVehicleList: SpvVehicleMain[] = [
           "body": 2000.0
         },
         "Parts": {
+          "wheelFL": 800.0,
+          "wheelFR": 800.0,
+          "wheelBR": 800.0,
+          "wheelBL": 800.0,
           "rear_armor_plating_left": 50.0,
           "mud_flap_bl": 25.0,
           "mud_flap_fl": 25.0,
@@ -34967,10 +34570,8 @@ const spvVehicleList: SpvVehicleMain[] = [
           "rear_armor_plating_right": 50.0,
           "mud_flap_br": 25.0,
           "hood": 1.0,
-          "wheelBL": 800.0,
-          "wheelBR": 800.0,
-          "wheelFL": 800.0,
-          "wheelFR": 800.0
+          "livery_decal": 1.0,
+          "body_decals": 1.0
         }
       }
     },
@@ -34989,7 +34590,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "NAV": 0.0
       },
       "Infrared": {
-        "Start": 1459.0
+        "Start": 1155.0
       },
       "CrossSection": {
         "Front": 956.0,
@@ -35002,15 +34603,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 545.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 202.0,
@@ -35041,8 +34634,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.0,
-      "PersonalInventory": 3.17
+      "Storage": 1.50
     },
     "Crew": 1,
     "WeaponCrew": 1,
@@ -35140,17 +34732,9 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 1635.0,
-      "PilotBurstDPS": 6400.0,
+      "PilotBurstDPS": 5333.0,
       "TurretsBurstDPS": 656.0,
       "TotalMissilesDmg": 57088.0
     },
@@ -35173,8 +34757,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.45,
-      "PersonalInventory": 0.99
+      "Storage": 0.45
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -35313,15 +34896,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 545.0,
       "PilotBurstDPS": 2042.0,
       "TurretsBurstDPS": 0.0,
@@ -35347,8 +34922,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.45,
-      "PersonalInventory": 0.99
+      "Storage": 0.45
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -35487,15 +35061,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 545.0,
       "PilotBurstDPS": 0.0,
       "TurretsBurstDPS": 0.0,
@@ -35521,14 +35087,13 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.65,
-      "PersonalInventory": 0.65
+      "Storage": 0.65
     },
     "Crew": 1,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 23219.0,
-    "ComponentsMass": 6492.0,
+    "ComponentsMass": 6742.0,
     "Dimensions": {
       "Length": 16.5,
       "Width": 20.0,
@@ -35550,8 +35115,8 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Hull": {
       "StructureHealthPoints": {
         "VitalParts": {
-          "Nose": 1800.0,
-          "Body": 1800.0
+          "Nose": 2150.0,
+          "Body": 2150.0
         },
         "Parts": {
           "Spoiler": 250.0,
@@ -35602,25 +35167,26 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 225.0,
-      "MaxSpeed": 1200.0,
-      "Pitch": 65.0,
-      "Yaw": 55.0,
-      "Roll": 200.0,
+      "ScmSpeed": 227.0,
+      "MaxSpeed": 1191.0,
+      "Pitch": 70.0,
+      "Yaw": 52.0,
+      "Roll": 195.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 3712000.0,
-        "Retro": 1285000.0,
+        "Main": 3721006.0,
+        "Retro": 1287090.0,
         "Vtol": 0.0,
-        "Maneuvering": 10174000.0
+        "Maneuvering": 10113819.2
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 12.9,
-        "Retro": 4.5,
-        "Strafe": 9.9,
+        "Main": 13.0,
+        "Retro": 4.4,
+        "Strafe": 10.0,
         "Up": 10.0,
-        "Down": 5.0
+        "Down": 4.9,
+        "CheckDate": "2025-08-03"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -35678,22 +35244,22 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 15.0
       },
       "FuelUsagePerSecond": {
-        "Main": 464.0,
-        "Retro": 160.625,
+        "Main": 465.126,
+        "Retro": 160.886,
         "Vtol": 0.0,
-        "Maneuvering": 1271.75
+        "Maneuvering": 1264.227
       },
       "IntakeToMainFuelRatio": 0.0,
       "TimeForIntakesToFillTank": "Infinity"
     },
     "Emissions": {
       "Electromagnetic": {
-        "SCMIdle": 5635.0,
-        "SCMActive": 6732.0,
-        "NAV": 13168.0
+        "SCMIdle": 5667.0,
+        "SCMActive": 6764.0,
+        "NAV": 13200.0
       },
       "Infrared": {
-        "Start": 9591.0
+        "Start": 10791.0
       },
       "CrossSection": {
         "Front": 2747.0,
@@ -35704,19 +35270,16 @@ const spvVehicleList: SpvVehicleMain[] = [
     "ResourceNetwork": {
       "ItemPools": {
         "WeaponPoolSize": 6.0
+      },
+      "Modifiers": {
+        "PowerRatioMultiplier": 1.0,
+        "MaxAmmoLoadMultiplier": 1.4,
+        "MaxRegenPerSecMultiplier": 1.1
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3460.0,
-      "PilotBurstDPS": 2794.0,
+      "PilotBurstDPS": 2665.0,
       "TurretsBurstDPS": 0.0,
       "TotalMissilesDmg": 9862.0
     },
@@ -35739,8 +35302,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.6,
-      "PersonalInventory": 0.99
+      "Storage": 0.6
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -35851,25 +35413,26 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 220.0,
+      "ScmSpeed": 218.0,
       "MaxSpeed": 1150.0,
-      "Pitch": 56.0,
-      "Yaw": 45.0,
-      "Roll": 150.0,
+      "Pitch": 60.0,
+      "Yaw": 43.0,
+      "Roll": 155.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 5949678.0,
-        "Retro": 3092728.0,
+        "Main": 5000000.0,
+        "Retro": 3237316.0,
         "Vtol": 0.0,
-        "Maneuvering": 21238728.0
+        "Maneuvering": 22467740.0
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 11.1,
+        "Main": 10.5,
         "Retro": 4.0,
-        "Strafe": 7.5,
-        "Up": 8.0,
-        "Down": 4.5
+        "Strafe": 7.7,
+        "Up": 7.7,
+        "Down": 4.5,
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -35927,10 +35490,10 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 15.0
       },
       "FuelUsagePerSecond": {
-        "Main": 743.71,
-        "Retro": 386.591,
+        "Main": 625.0,
+        "Retro": 404.665,
         "Vtol": 0.0,
-        "Maneuvering": 2654.841
+        "Maneuvering": 2808.468
       },
       "IntakeToMainFuelRatio": 0.0,
       "TimeForIntakesToFillTank": "Infinity"
@@ -35953,17 +35516,14 @@ const spvVehicleList: SpvVehicleMain[] = [
     "ResourceNetwork": {
       "ItemPools": {
         "WeaponPoolSize": 6.0
+      },
+      "Modifiers": {
+        "PowerRatioMultiplier": 1.0,
+        "MaxAmmoLoadMultiplier": 2.2,
+        "MaxRegenPerSecMultiplier": 1.5
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3460.0,
       "PilotBurstDPS": 2470.0,
       "TurretsBurstDPS": 0.0,
@@ -35985,8 +35545,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.6,
-      "PersonalInventory": 0.0
+      "Storage": 0.6
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -36074,25 +35633,26 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 220.0,
+      "ScmSpeed": 222.0,
       "MaxSpeed": 1150.0,
       "Pitch": 56.0,
-      "Yaw": 45.0,
-      "Roll": 150.0,
+      "Yaw": 52.0,
+      "Roll": 147.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 2600000.0,
+        "Main": 3520000.0,
         "Retro": 2904083.0,
         "Vtol": 0.0,
-        "Maneuvering": 19947190.0
+        "Maneuvering": 17980000.0
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 10.9,
+        "Main": 11.5,
         "Retro": 4.0,
-        "Strafe": 7.4,
-        "Up": 7.9,
-        "Down": 4.5
+        "Strafe": 7.0,
+        "Up": 7.0,
+        "Down": 4.0,
+        "CheckDate": "2025-07-02"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -36150,10 +35710,10 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 15.0
       },
       "FuelUsagePerSecond": {
-        "Main": 325.0,
+        "Main": 440.0,
         "Retro": 363.01,
         "Vtol": 0.0,
-        "Maneuvering": 2493.399
+        "Maneuvering": 2247.5
       },
       "IntakeToMainFuelRatio": 0.0,
       "TimeForIntakesToFillTank": "Infinity"
@@ -36176,19 +35736,16 @@ const spvVehicleList: SpvVehicleMain[] = [
     "ResourceNetwork": {
       "ItemPools": {
         "WeaponPoolSize": 6.0
+      },
+      "Modifiers": {
+        "PowerRatioMultiplier": 1.0,
+        "MaxAmmoLoadMultiplier": 2.2,
+        "MaxRegenPerSecMultiplier": 1.5
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3460.0,
-      "PilotBurstDPS": 3550.0,
+      "PilotBurstDPS": 2606.0,
       "TurretsBurstDPS": 0.0,
       "TotalMissilesDmg": 9862.0
     },
@@ -36208,8 +35765,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.3,
-      "PersonalInventory": 0.39
+      "Storage": 0.0
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -36245,7 +35801,10 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Parts": {
           "rear_nacelle_l": 320.0,
           "rear_nacelle_r": 320.0,
-          "front_cowling": 225.0
+          "front_cowling": 225.0,
+          "DMG_nose": 1.0,
+          "DMG_body_front": 1.0,
+          "DMG_body_back": 200.0
         }
       },
       "ThrustersHealthPoints": {
@@ -36382,15 +35941,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 2.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 0.0,
       "PilotBurstDPS": 438.0,
       "TurretsBurstDPS": 0.0,
@@ -36415,13 +35966,12 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 1.05,
-      "PersonalInventory": 1.08
+      "Storage": 1.05
     },
     "Crew": 1,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
-    "Mass": 68311.0,
+    "Mass": 68351.0,
     "ComponentsMass": 6870.0,
     "Dimensions": {
       "Length": 15.0,
@@ -36444,10 +35994,10 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Hull": {
       "StructureHealthPoints": {
         "VitalParts": {
-          "body": 2100.5
+          "body": 2150.0
         },
         "Parts": {
-          "body_nose": 2250.0,
+          "body_nose": 2150.0,
           "cockpit_rim": 1600.0,
           "sub_frame": 2000.0,
           "small_wing_left": 300.0,
@@ -36490,32 +36040,33 @@ const spvVehicleList: SpvVehicleMain[] = [
       }
     },
     "FlightCharacteristics": {
-      "ScmSpeed": 226.0,
-      "MaxSpeed": 1206.0,
-      "Pitch": 75.0,
-      "Yaw": 55.0,
-      "Roll": 211.0,
+      "ScmSpeed": 224.0,
+      "MaxSpeed": 1183.0,
+      "Pitch": 67.0,
+      "Yaw": 67.0,
+      "Roll": 210.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 6304000.0,
+        "Main": 2952000.0,
         "Retro": 0.0,
         "Vtol": 0.0,
-        "Maneuvering": 3264000.0
+        "Maneuvering": 3998073.6
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 13.2,
-        "Retro": 4.5,
-        "Strafe": 10.5,
-        "Up": 10.3,
-        "Down": 5.3
+        "Main": 12.0,
+        "Retro": 4.4,
+        "Strafe": 12.0,
+        "Up": 12.0,
+        "Down": 12.0,
+        "CheckDate": "2025-08-03"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
         "QuantumDriveSpoolTime": 4.0,
         "ScmMode": {
-          "BoostSpeedForward": 506.0,
-          "BoostSpeedBackward": 263.0
+          "BoostSpeedForward": 504.0,
+          "BoostSpeedBackward": 254.0
         }
       },
       "Boost": {
@@ -36524,14 +36075,14 @@ const spvVehicleList: SpvVehicleMain[] = [
         "RampDown": 0.3,
         "AccelerationMultiplier": {
           "PositiveAxis": {
-            "X": 1.3,
-            "Y": 1.6,
-            "Z": 1.3
+            "X": 1.4,
+            "Y": 1.4,
+            "Z": 1.4
           },
           "NegativeAxis": {
-            "X": 1.3,
-            "Y": 1.38,
-            "Z": 1.35
+            "X": 1.4,
+            "Y": 1.35,
+            "Z": 1.4
           }
         },
         "AngularAccelerationMultiplier": {
@@ -36566,12 +36117,12 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 10.0
       },
       "FuelUsagePerSecond": {
-        "Main": 788.0,
+        "Main": 369.0,
         "Retro": 0.0,
         "Vtol": 0.0,
-        "Maneuvering": 408.0
+        "Maneuvering": 499.759
       },
-      "IntakeToMainFuelRatio": 3.68,
+      "IntakeToMainFuelRatio": 7.86,
       "TimeForIntakesToFillTank": 896551.72
     },
     "Emissions": {
@@ -36594,15 +36145,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 3460.0,
       "PilotBurstDPS": 1636.0,
       "TurretsBurstDPS": 0.0,
@@ -36627,8 +36170,7 @@ const spvVehicleList: SpvVehicleMain[] = [
     "Cargo": {
       "CargoGrid": 0.0,
       "CargoContainers": 0.0,
-      "ExternalStorage": 0.45,
-      "PersonalInventory": 0.0
+      "Storage": 0.45
     },
     "Crew": 1,
     "WeaponCrew": 0,
@@ -36706,23 +36248,24 @@ const spvVehicleList: SpvVehicleMain[] = [
     "FlightCharacteristics": {
       "ScmSpeed": 227.0,
       "MaxSpeed": 1161.0,
-      "Pitch": 51.0,
-      "Yaw": 51.0,
-      "Roll": 150.0,
+      "Pitch": 58.0,
+      "Yaw": 58.0,
+      "Roll": 160.0,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 8400000.0,
-        "Retro": 524000.0,
+        "Main": 7600000.0,
+        "Retro": 1050000.0,
         "Vtol": 0.0,
-        "Maneuvering": 15836000.0
+        "Maneuvering": 22558362.0
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 11.5,
+        "Main": 12.1,
         "Retro": 8.0,
-        "Strafe": 11.3,
-        "Up": 8.3,
-        "Down": 5.0
+        "Strafe": 10.0,
+        "Up": 10.0,
+        "Down": 10.0,
+        "CheckDate": "2025-08-03"
       },
       "MasterModes": {
         "BaseSpoolTime": 1.0,
@@ -36780,12 +36323,12 @@ const spvVehicleList: SpvVehicleMain[] = [
         "Maneuvering": 17.5
       },
       "FuelUsagePerSecond": {
-        "Main": 1050.0,
-        "Retro": 65.5,
+        "Main": 950.0,
+        "Retro": 131.25,
         "Vtol": 0.0,
-        "Maneuvering": 1979.5
+        "Maneuvering": 2819.795
       },
-      "IntakeToMainFuelRatio": 2.76,
+      "IntakeToMainFuelRatio": 3.05,
       "TimeForIntakesToFillTank": 506896.55
     },
     "Emissions": {
@@ -36808,15 +36351,7 @@ const spvVehicleList: SpvVehicleMain[] = [
         "WeaponPoolSize": 4.0
       }
     },
-    "Weapons": {
-      "PilotWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
-      "TurretsWeaponRegenPool": {
-        "RegenFillRate": 0.0,
-        "AmmoLoad": 0
-      },
+    "BaseLoadout": {
       "TotalShieldHP": 4740.0,
       "PilotBurstDPS": 1823.0,
       "TurretsBurstDPS": 0.0,

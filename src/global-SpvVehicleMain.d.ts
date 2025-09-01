@@ -10,8 +10,7 @@ interface SpvVehicleMain {
   Cargo: {
     CargoGrid: number;
     CargoContainers: number;
-    ExternalStorage: number;
-    PersonalInventory: number;
+    Storage: number;
   };
   Crew: number;
   WeaponCrew: number;
@@ -106,14 +105,20 @@ interface SpvVehicleMain {
       MaxRegenPerSecMultiplier: number;
     };
   };
-  Weapons: {
-    PilotWeaponRegenPool: { RegenFillRate: number; AmmoLoad: number };
-    TurretsWeaponRegenPool: { RegenFillRate: number; AmmoLoad: number };
+  BaseLoadout: {
     TotalShieldHP: number;
     PilotBurstDPS: number;
     TurretsBurstDPS: number;
     TotalEMPDmg?: number;
     TotalMissilesDmg: number;
+  };
+  Buffs?: {
+    Salvage: {
+      Buffer: number;
+      SpeedMultiplier: number;
+      RadiusMultiplier: number;
+      ExtractionEfficiency: number;
+    };
   };
   Insurance: {
     StandardClaimTime: number;
