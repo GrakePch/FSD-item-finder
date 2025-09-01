@@ -247,6 +247,7 @@ export function formatVehicleImageSrc(
     ANVL_Hornet_F7CM: "f7c-m-super-hornet",
     ANVL_Hornet_F7CM_Heartseeker: "f7c-m-super-hornet-heartseeker",
     AEGS_Retaliator: "retaliator-bomber",
+    AEGS_Gladius_PIR: "pirate-gladius",
     RSI_Zeus_CL: "zeus-mkii-cl",
     RSI_Zeus_ES: "zeus-mkii-es",
     RSI_Zeus_MR: "zeus-mkii-mr",
