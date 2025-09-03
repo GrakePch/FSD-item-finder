@@ -8,7 +8,6 @@ import { fetchAndProcessItems } from "./api/items";
 import { fetchAndProcessVehicles } from "./api/vehicles";
 import SearchItems from "./pages/SearchItems/SearchItems";
 import SearchVehicles from "./pages/SearchVehicles/SearchVehicles";
-import SearchLocations from "./pages/SearchLocations/SearchLocations";
 import ItemInfo from "./pages/ItemInfo/ItemInfo";
 import TerminalInfo from "./pages/TerminalInfo/TerminalInfo";
 import ItemGroupInfo from "./pages/ItemGroupInfo/ItemGroupInfo";
@@ -18,14 +17,11 @@ import VehicleInfo from "./pages/VehicleInfo/VehicleInfo";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import LanguageToggle from "./components/LanguageToggle/LanguageToggle";
-import CelestialBodyInfo from "./pages/CelestialBodyInfo/CelestialBodyInfo";
-import LocationInfo from "./pages/LocationInfo/LocationInfo";
 import {
   KEY_CURRENT_LOCATION,
   WindowSelectCurrentLocation,
 } from "./components/CurrentLocation/CurrentLocation";
 import NavBarBottom from "./components/NavBarBottom/NavBarBottom";
-import CelestialBody3D from "./components/CelestialBody3D/CelestialBody3D";
 import EyesOnStarCitizen from "./pages/EyesOnStarCitizen/EyesOnStarCitizen";
 
 function App() {
@@ -133,33 +129,9 @@ function App() {
           <Route path="/i/:itemKey" element={<ItemInfo />} />
           <Route path="/iv/:itemKey" element={<ItemGroupInfo />} />
           <Route path="/v/:vehicleClassName" element={<VehicleInfo />} />
-          <Route
-            path="/l"
-            element={
-              <>
-                <EyesOnStarCitizen routing="_" />
-                {/* <SearchLocations /> */}
-              </>
-            }
-          />
-          <Route
-            path="/b/:celestialBodyKey"
-            element={
-              <>
-                <EyesOnStarCitizen routing="b" />
-                {/* <CelestialBodyInfo /> */}
-              </>
-            }
-          />
-          <Route
-            path="/l/:locationKey"
-            element={
-              <>
-                <EyesOnStarCitizen routing="l" />
-                {/* <LocationInfo /> */}
-              </>
-            }
-          />
+          <Route path="/l"                   element={<EyesOnStarCitizen routing="_" />} />
+          <Route path="/b/:celestialBodyKey" element={<EyesOnStarCitizen routing="b" />} />
+          <Route path="/l/:locationKey"      element={<EyesOnStarCitizen routing="l" />} />
           <Route path="/t/:terminalId" element={<TerminalInfo />} />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>

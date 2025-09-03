@@ -180,10 +180,10 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
           />
         )}
       </div>
-      <p className="annotation">
+      {/* <p className="annotation">
         <Icon path={mdiAlertCircleOutline} size={"1rem"} />
         标记的价格最后更新于4.0-Preview上线之前，可能会有较大误差。
-      </p>
+      </p> */}
     </div>
   );
 };
