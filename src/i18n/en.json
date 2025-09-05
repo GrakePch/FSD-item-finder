@@ -97,6 +97,24 @@
       "Pitch": "Pitch",
       "Yaw": "Yaw",
       "Roll": "Roll"
+    },
+    "FlightAccelerations": {
+      "Main": "Main",
+      "Retro": "Retro",
+      "Left": "Left",
+      "Right": "Right",
+      "Up": "Up",
+      "Down": "Down"
+    },
+    "FlightBoost": {
+      "RampUp": "Boost Ramp Up Time",
+      "RampDown": "Boost Ramp Down Time",
+      "CapacitorDeplete": "Boost Max Duration",
+      "CapacitorRegen": "Boost Regen Time"
+    },
+    "FlightCharacteristics": {
+      "Time0ToMaxSpeed": "Time from 0 to Max Speed",
+      "BrakeDistanceAtMax": "Brake Distance at Max Speed"
     }
   },
   "SPVProgressTrackerStatus": {

@@ -1,0 +1,163 @@
+.LinearAccelerations {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    min-height: 20px;
+    height: 100%;
+    flex-shrink: 0;
+    container-type: size;
+    /* For child to use unit cqh */
+    --color-primary: var(--color-text);
+    --color-primary-dim: var(--color-text-1);
+    --color-boost: hsla(0, 83%, 60%);
+    --color-accent: hsla(200, 60%, 60%);
+}
+
+.LinearAccelerations::after {
+    content: "";
+    position: absolute;
+    width: 7%;
+    aspect-ratio: 1;
+    background-color: var(--color-primary);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.AccelerationBar {
+    position: absolute;
+    transform-origin: center;
+    height: 100%;
+    width: 3%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.AccelerationBar .boostPos, .AccelerationBar .valuePos, .AccelerationBar .boostNeg, .AccelerationBar .valueNeg {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+}
+
+.AccelerationBar .boostPos {
+    bottom: 53%;
+    background-color: var(--color-boost);
+    opacity: .7;
+}
+
+.AccelerationBar .valuePos {
+    bottom: 53%;
+    background-color: var(--color-primary-dim);
+}
+
+.AccelerationBar .boostNeg {
+    top: 53%;
+    background-color: var(--color-boost);
+    opacity: .7;
+}
+
+.AccelerationBar .valueNeg {
+    top: 53%;
+    background-color: var(--color-primary-dim);
+}
+
+.AccelerationBar .axis {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 100%;
+    border: 1px dashed var(--color-primary);
+}
+
+.LinearAccelerations .text {
+    position: absolute;
+    transform-origin: center;
+    line-height: 1;
+    font-size: 4.5cqh;
+    font-family: var(--font-slim);
+    font-variant-numeric: tabular-nums;
+}
+
+.LinearAccelerations .text>span {
+    color: var(--color-boost)
+}
+
+.LinearAccelerations .value-F, .LinearAccelerations .value-B,
+.LinearAccelerations .value-R, .LinearAccelerations .value-L,
+.LinearAccelerations .value-U, .LinearAccelerations .value-D {
+    font-weight: 600;
+}
+
+.LinearAccelerations .title-L {
+    top: 52%;
+    left: 0;
+}
+
+.LinearAccelerations .value-L {
+    bottom: 52%;
+    left: 0;
+}
+
+.LinearAccelerations .title-R {
+    top: 52%;
+    right: 0;
+}
+
+.LinearAccelerations .value-R {
+    bottom: 52%;
+    right: 0;
+}
+
+.LinearAccelerations .title-U {
+    top: 0;
+    right: 52%;
+}
+
+.LinearAccelerations .value-U {
+    top: 0;
+    left: 52%;
+}
+
+.LinearAccelerations .title-D {
+    bottom: 0;
+    right: 52%;
+}
+
+.LinearAccelerations .value-D {
+    bottom: 0;
+    left: 52%;
+}
+
+.LinearAccelerations .title-F, .LinearAccelerations .value-F,
+.LinearAccelerations .title-B, .LinearAccelerations .value-B {
+    font-size: 6cqh;
+}
+
+.LinearAccelerations .title-F {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(30deg) translate(-50cqh) translate(50%, 50%) translateY(2cqh);
+}
+
+.LinearAccelerations .value-F {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(30deg) translate(-50cqh) translate(50%, -50%) translateY(-2cqh);
+}
+
+.LinearAccelerations .title-B {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(30deg) translate(50cqh) translate(-50%, 50%) translateY(2cqh);
+}
+
+.LinearAccelerations .value-B {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(30deg) translate(50cqh) translate(-50%, -50%) translateY(-2cqh);
+}

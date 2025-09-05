@@ -1,0 +1,48 @@
+.FlightAccelerations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--color-bg-1);    
+    border-radius: .5rem;
+    --color-boost: #ee4444;
+}
+
+.FlightAccelerations .textInfo {
+    container-type: size; /* For child to use unit cqh */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.FlightAccelerations .titleValue {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 6cqh;
+}
+
+.FlightAccelerations .titleValue>* {
+    flex-shrink: 0;
+}
+
+.FlightAccelerations .titleValue>*:last-child {
+    text-align: right;
+    flex-grow: 1;
+    font-weight: 600;
+    font-family: var(--font-slim);
+    font-variant-numeric: tabular-nums;
+}
+
+.FlightAccelerations .titleValueHero {
+    margin-top: 10cqh;
+    font-size: 7cqh;
+    font-weight: 600;
+}
+.FlightAccelerations .titleValueHero>*:last-child {
+    color: var(--color-boost);
+    text-align: right;
+    font-size: 12cqh;
+    font-weight: 600;
+    font-family: var(--font-slim);
+    font-variant-numeric: tabular-nums;
+}
