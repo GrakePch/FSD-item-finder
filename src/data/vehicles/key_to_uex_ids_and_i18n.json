@@ -1,0 +1,975 @@
+{
+    "vehicle_NameAEGS_Avenger_Stalker": {
+        "uex_ids": [
+            "v-26"
+        ],
+        "en": "Aegis Avenger Stalker",
+        "zh_Hans": "圣盾 复仇者 追猎"
+    },
+    "vehicle_NameAEGS_Avenger_Titan": {
+        "uex_ids": [
+            "v-27"
+        ],
+        "en": "Aegis Avenger Titan",
+        "zh_Hans": "圣盾 复仇者 泰坦"
+    },
+    "vehicle_NameAEGS_Avenger_Warlock": {
+        "uex_ids": [
+            "v-29"
+        ],
+        "en": "Aegis Avenger Warlock",
+        "zh_Hans": "圣盾 复仇者 术士"
+    },
+    "vehicle_NameAEGS_Eclipse": {
+        "uex_ids": [
+            "v-69"
+        ],
+        "en": "Aegis Eclipse",
+        "zh_Hans": "圣盾 日蚀"
+    },
+    "vehicle_NameAEGS_Gladius": {
+        "uex_ids": [
+            "v-93"
+        ],
+        "en": "Aegis Gladius",
+        "zh_Hans": "圣盾 短剑"
+    },
+    "vehicle_NameAEGS_Gladius_Valiant": {
+        "uex_ids": [
+            "v-95"
+        ],
+        "en": "Aegis Gladius Valiant",
+        "zh_Hans": "圣盾 短剑 勇士"
+    },
+    "vehicle_NameAEGS_Hammerhead": {
+        "uex_ids": [
+            "v-97"
+        ],
+        "en": "Aegis Hammerhead",
+        "zh_Hans": "圣盾 锤头鲨"
+    },
+    "vehicle_NameAEGS_Reclaimer": {
+        "uex_ids": [
+            "v-159"
+        ],
+        "en": "Aegis Reclaimer",
+        "zh_Hans": "圣盾 回收者"
+    },
+    "vehicle_NameAEGS_Redeemer": {
+        "uex_ids": [
+            "v-161"
+        ],
+        "en": "Aegis Redeemer",
+        "zh_Hans": "圣盾 救赎者"
+    },
+    "vehicle_NameAEGS_Retaliator_Bomber": {
+        "uex_ids": [
+            "v-167"
+        ],
+        "en": "Aegis Retaliator Bomber",
+        "zh_Hans": "圣盾 报复者 轰炸"
+    },
+    "vehicle_NameAEGS_Sabre": {
+        "uex_ids": [
+            "v-170"
+        ],
+        "en": "Aegis Sabre",
+        "zh_Hans": "圣盾 军刀"
+    },
+    "vehicle_NameAEGS_Sabre_Comet": {
+        "uex_ids": [
+            "v-171"
+        ],
+        "en": "Aegis Sabre Comet",
+        "zh_Hans": "圣盾 军刀 彗星"
+    },
+    "vehicle_NameAEGS_Sabre_Firebird": {
+        "uex_ids": [
+            "v-228"
+        ],
+        "en": "Aegis Sabre Firebird",
+        "zh_Hans": "圣盾 军刀 火鸟"
+    },
+    "vehicle_NameAEGS_Sabre_Peregrine": {
+        "uex_ids": [
+            "v-232"
+        ],
+        "en": "Aegis Sabre Peregrine",
+        "zh_Hans": "圣盾 军刀 游隼"
+    },
+    "vehicle_NameAEGS_Vanguard": {
+        "uex_ids": [
+            "v-199"
+        ],
+        "en": "Aegis Vanguard Warden",
+        "zh_Hans": "圣盾 先锋 典狱长"
+    },
+    "vehicle_NameAEGS_Vanguard_Harbinger": {
+        "uex_ids": [
+            "v-196"
+        ],
+        "en": "Aegis Vanguard Harbinger",
+        "zh_Hans": "圣盾 先锋 先驱"
+    },
+    "vehicle_NameAEGS_Vanguard_Hoplite": {
+        "uex_ids": [
+            "v-197"
+        ],
+        "en": "Aegis Vanguard Hoplite",
+        "zh_Hans": "圣盾 先锋 重装兵"
+    },
+    "vehicle_NameAEGS_Vanguard_Sentinel": {
+        "uex_ids": [
+            "v-198"
+        ],
+        "en": "Aegis Vanguard Sentinel",
+        "zh_Hans": "圣盾 先锋 哨兵"
+    },
+    "vehicle_NameANVL_Arrow": {
+        "uex_ids": [
+            "v-20"
+        ],
+        "en": "Anvil Arrow",
+        "zh_Hans": "铁砧 箭矢"
+    },
+    "vehicle_NameANVL_Asgard": {
+        "uex_ids": [
+            "v-255"
+        ],
+        "en": "vehicle_NameANVL_Asgard",
+        "zh_Hans": "vehicle_NameANVL_Asgard"
+    },
+    "vehicle_NameANVL_Ballista": {
+        "uex_ids": [
+            "v-30"
+        ],
+        "en": "Anvil Ballista",
+        "zh_Hans": "铁砧 弩炮"
+    },
+    "vehicle_NameANVL_C8_Pisces": {
+        "uex_ids": [
+            "v-36"
+        ],
+        "en": "Anvil C8 Pisces",
+        "zh_Hans": "铁砧 C8 双鱼座"
+    },
+    "vehicle_NameANVL_C8R_Pisces_Rescue": {
+        "uex_ids": [
+            "v-37"
+        ],
+        "en": "Anvil C8R Pisces Rescue",
+        "zh_Hans": "铁砧 C8R 双鱼座 救护"
+    },
+    "vehicle_nameANVL_Carrack": {
+        "uex_ids": [
+            "v-39"
+        ],
+        "en": "vehicle_nameANVL_Carrack",
+        "zh_Hans": "vehicle_nameANVL_Carrack"
+    },
+    "vehicle_NameANVL_Centurion": {
+        "uex_ids": [
+            "v-44"
+        ],
+        "en": "Anvil Centurion",
+        "zh_Hans": "铁砧 百夫长"
+    },
+    "vehicle_NameANVL_Gladiator": {
+        "uex_ids": [
+            "v-92"
+        ],
+        "en": "Anvil Gladiator",
+        "zh_Hans": "铁砧 角斗士"
+    },
+    "vehicle_NameANVL_Hawk": {
+        "uex_ids": [
+            "v-99"
+        ],
+        "en": "Anvil Hawk",
+        "zh_Hans": "铁砧 猎鹰"
+    },
+    "vehicle_NameANVL_Hurricane": {
+        "uex_ids": [
+            "v-107"
+        ],
+        "en": "Anvil Hurricane",
+        "zh_Hans": "铁砧 飓风"
+    },
+    "vehicle_nameANVL_Paladin": {
+        "uex_ids": [
+            "v-249"
+        ],
+        "en": "vehicle_nameANVL_Paladin",
+        "zh_Hans": "vehicle_nameANVL_Paladin"
+    },
+    "vehicle_NameANVL_Spartan": {
+        "uex_ids": [
+            "v-177"
+        ],
+        "en": "Anvil Spartan",
+        "zh_Hans": "铁砧 斯巴达"
+    },
+    "vehicle_NameANVL_Terrapin": {
+        "uex_ids": [
+            "v-191"
+        ],
+        "en": "Anvil Terrapin",
+        "zh_Hans": "铁砧 水龟"
+    },
+    "vehicle_NameANVL_Terrapin_Medic": {
+        "uex_ids": [
+            "v-248"
+        ],
+        "en": "Anvil Terrapin Medic",
+        "zh_Hans": "铁砧 水龟 医疗"
+    },
+    "vehicle_NameANVL_Valkyrie": {
+        "uex_ids": [
+            "v-194"
+        ],
+        "en": "Anvil Valkyrie",
+        "zh_Hans": "铁砧 女武神"
+    },
+    "vehicle_NameARGO_ATLS": {
+        "uex_ids": [
+            "v-233"
+        ],
+        "en": "Argo ATLS",
+        "zh_Hans": "南船座 ATLS"
+    },
+    "vehicle_NameARGO_ATLSGeo": {
+        "uex_ids": [
+            "v-252"
+        ],
+        "en": "vehicle_NameARGO_ATLSGeo",
+        "zh_Hans": "vehicle_NameARGO_ATLSGeo"
+    },
+    "vehicle_NameARGO_CSV_Cargo": {
+        "uex_ids": [
+            "v-240"
+        ],
+        "en": "Argo CSV-SM",
+        "zh_Hans": "南船座 CSV-SM"
+    },
+    "vehicle_NameARGO_Mole": {
+        "uex_ids": [
+            "v-122"
+        ],
+        "en": "Argo MOLE",
+        "zh_Hans": "南船座 鼹鼠"
+    },
+    "vehicle_NameARGO_MPUV": {
+        "uex_ids": [
+            "v-125"
+        ],
+        "en": "Argo MPUV Cargo",
+        "zh_Hans": "南船座 MPUV 货运"
+    },
+    "vehicle_NameARGO_MPUV_Tractor": {
+        "uex_ids": [
+            "v-227"
+        ],
+        "en": "Argo MPUV Tractor",
+        "zh_Hans": "南船座 MPUV 牵引"
+    },
+    "vehicle_NameARGO_MPUV_Transport": {
+        "uex_ids": [
+            "v-126"
+        ],
+        "en": "Argo MPUV Personnel",
+        "zh_Hans": "南船座 MPUV 载人"
+    },
+    "vehicle_NameARGO_RAFT": {
+        "uex_ids": [
+            "v-151"
+        ],
+        "en": "Argo RAFT",
+        "zh_Hans": "南船座 木筏"
+    },
+    "vehicle_NameARGO_SRV": {
+        "uex_ids": [
+            "v-181"
+        ],
+        "en": "Argo SRV",
+        "zh_Hans": "南船座 SRV"
+    },
+    "vehicle_NameBanu_Defender": {
+        "uex_ids": [
+            "v-66"
+        ],
+        "en": "Banu Defender",
+        "zh_Hans": "巴努 防卫者"
+    },
+    "vehicle_NameCNOU_HoverQuad": {
+        "uex_ids": [
+            "v-101"
+        ],
+        "en": "C.O. HoverQuad",
+        "zh_Hans": "联合外域 悬浮驷"
+    },
+    "vehicle_NameCNOU_Mustang": {
+        "uex_ids": [
+            "v-128"
+        ],
+        "en": "Mustang Alpha",
+        "zh_Hans": "野马 阿尔法"
+    },
+    "vehicle_NameCNOU_Mustang_Beta": {
+        "uex_ids": [
+            "v-130"
+        ],
+        "en": "C.O. Mustang Beta",
+        "zh_Hans": "联合外域 野马 贝塔"
+    },
+    "vehicle_NameCNOU_Mustang_Delta": {
+        "uex_ids": [
+            "v-131"
+        ],
+        "en": "C.O. Mustang Delta",
+        "zh_Hans": "联合外域 野马 德尔塔"
+    },
+    "vehicle_NameCNOU_Mustang_Gamma": {
+        "uex_ids": [
+            "v-132"
+        ],
+        "en": "C.O. Mustang Gamma",
+        "zh_Hans": "联合外域 野马 伽马"
+    },
+    "vehicle_NameCNOU_Nomad": {
+        "uex_ids": [
+            "v-136"
+        ],
+        "en": "C.O. Nomad",
+        "zh_Hans": "联合外域 游牧者"
+    },
+    "vehicle_NameCRUS_A1_Spirit": {
+        "uex_ids": [
+            "v-178"
+        ],
+        "en": "Crusader A1 Spirit",
+        "zh_Hans": "十字军 星灵 A1"
+    },
+    "vehicle_NameCRUS_C1_Spirit": {
+        "uex_ids": [
+            "v-179"
+        ],
+        "en": "Crusader C1 Spirit",
+        "zh_Hans": "十字军 星灵 C1"
+    },
+    "vehicle_NameCRUS_Intrepid": {
+        "uex_ids": [
+            "v-236"
+        ],
+        "en": "Crusader Intrepid",
+        "zh_Hans": "十字军 无畏"
+    },
+    "vehicle_NameDRAK_Buccaneer": {
+        "uex_ids": [
+            "v-34"
+        ],
+        "en": "Drake Buccaneer",
+        "zh_Hans": "德雷克 掠夺者"
+    },
+    "vehicle_NameDRAK_Caterpillar": {
+        "uex_ids": [
+            "v-41"
+        ],
+        "en": "Drake Caterpillar",
+        "zh_Hans": "德雷克 毛虫"
+    },
+    "vehicle_NameDRAK_Corsair": {
+        "uex_ids": [
+            "v-50"
+        ],
+        "en": "Drake Corsair",
+        "zh_Hans": "德雷克 海盗船"
+    },
+    "vehicle_NameDRAK_Cutlass_Black": {
+        "uex_ids": [
+            "v-52"
+        ],
+        "en": "Drake Cutlass Black",
+        "zh_Hans": "德雷克 黑弯刀"
+    },
+    "vehicle_NameDRAK_Cutlass_Blue": {
+        "uex_ids": [
+            "v-54"
+        ],
+        "en": "Drake Cutlass Blue",
+        "zh_Hans": "德雷克 蓝弯刀"
+    },
+    "vehicle_NameDRAK_Cutlass_Red": {
+        "uex_ids": [
+            "v-55"
+        ],
+        "en": "Drake Cutlass Red",
+        "zh_Hans": "德雷克 红弯刀"
+    },
+    "vehicle_NameDRAK_Cutlass_Steel": {
+        "uex_ids": [
+            "v-56"
+        ],
+        "en": "Drake Cutlass Steel",
+        "zh_Hans": "德雷克 钢弯刀"
+    },
+    "vehicle_NameDRAK_Cutter": {
+        "uex_ids": [
+            "v-57"
+        ],
+        "en": "Drake Cutter",
+        "zh_Hans": "德雷克 小刀"
+    },
+    "vehicle_NameDRAK_Cutter_Rambler": {
+        "uex_ids": [
+            "v-59"
+        ],
+        "en": "Drake Cutter Rambler",
+        "zh_Hans": "德雷克 小刀 漫步者"
+    },
+    "vehicle_NameDRAK_Cutter_Scout": {
+        "uex_ids": [
+            "v-58"
+        ],
+        "en": "Drake Cutter Scout",
+        "zh_Hans": "德雷克 小刀 侦察兵"
+    },
+    "vehicle_NameDRAK_Golem": {
+        "uex_ids": [
+            "v-251"
+        ],
+        "en": "vehicle_NameDRAK_Golem",
+        "zh_Hans": "vehicle_NameDRAK_Golem"
+    },
+    "vehicle_NameDRAK_Herald": {
+        "uex_ids": [
+            "v-100"
+        ],
+        "en": "Drake Herald",
+        "zh_Hans": "德雷克 信使"
+    },
+    "vehicle_NameDRAK_Mule": {
+        "uex_ids": [
+            "v-127"
+        ],
+        "en": "Drake Mule",
+        "zh_Hans": "德雷克 骡"
+    },
+    "vehicle_NameDRAK_Vulture": {
+        "uex_ids": [
+            "v-201"
+        ],
+        "en": "Drake Vulture",
+        "zh_Hans": "德雷克 秃鹫"
+    },
+    "vehicle_NameESPR_Prowler": {
+        "uex_ids": [
+            "v-149"
+        ],
+        "en": "Esperia Prowler",
+        "zh_Hans": "埃斯佩里亚 徘徊者"
+    },
+    "vehicle_NameESPR_Prowler_Utility": {
+        "uex_ids": [
+            "v-262"
+        ],
+        "en": "vehicle_NameESPR_Prowler_Utility",
+        "zh_Hans": "vehicle_NameESPR_Prowler_Utility"
+    },
+    "vehicle_NameESPR_Stinger": {
+        "uex_ids": [
+            "v-265"
+        ],
+        "en": "vehicle_NameESPR_Stinger",
+        "zh_Hans": "vehicle_NameESPR_Stinger"
+    },
+    "vehicle_NameESPR_Talon": {
+        "uex_ids": [
+            "v-189"
+        ],
+        "en": "Esperia Talon",
+        "zh_Hans": "埃斯佩里亚 利爪"
+    },
+    "vehicle_NameESPR_Talon_Shrike": {
+        "uex_ids": [
+            "v-190"
+        ],
+        "en": "Esperia Talon Shrike",
+        "zh_Hans": "埃斯佩里亚 利爪 伯劳"
+    },
+    "vehicle_NameGAMA_Syulen": {
+        "uex_ids": [
+            "v-188"
+        ],
+        "en": "Gatac Syulen",
+        "zh_Hans": "盖塔克 速伦"
+    },
+    "vehicle_NameGLSN_Shiv": {
+        "uex_ids": [
+            "v-266"
+        ],
+        "en": "vehicle_NameGLSN_Shiv",
+        "zh_Hans": "vehicle_NameGLSN_Shiv"
+    },
+    "vehicle_NameGRIN_MTC": {
+        "uex_ids": [
+            "v-256"
+        ],
+        "en": "vehicle_NameGRIN_MTC",
+        "zh_Hans": "vehicle_NameGRIN_MTC"
+    },
+    "vehicle_NameMISC_Fortune": {
+        "uex_ids": [
+            "v-234"
+        ],
+        "en": "vehicle_NameMISC_Fortune",
+        "zh_Hans": "vehicle_NameMISC_Fortune"
+    },
+    "vehicle_NameMISC_Freelancer": {
+        "uex_ids": [
+            "v-80"
+        ],
+        "en": "MISC Freelancer",
+        "zh_Hans": "武藏 自由枪骑兵"
+    },
+    "vehicle_NameMISC_Freelancer_DUR": {
+        "uex_ids": [
+            "v-81"
+        ],
+        "en": "MISC Freelancer DUR",
+        "zh_Hans": "武藏 自由枪骑兵 DUR"
+    },
+    "vehicle_NameMISC_Freelancer_MAX": {
+        "uex_ids": [
+            "v-82"
+        ],
+        "en": "MISC Freelancer MAX",
+        "zh_Hans": "武藏 自由枪骑兵 MAX"
+    },
+    "vehicle_NameMISC_Freelancer_MIS": {
+        "uex_ids": [
+            "v-83"
+        ],
+        "en": "MISC Freelancer MIS",
+        "zh_Hans": "武藏 自由枪骑兵 MIS"
+    },
+    "vehicle_NameMisc_Fury": {
+        "uex_ids": [
+            "v-84"
+        ],
+        "en": "Mirai Fury",
+        "zh_Hans": "未来 狂怒"
+    },
+    "vehicle_NameMisc_Fury_LX": {
+        "uex_ids": [
+            "v-85"
+        ],
+        "en": "Mirai Fury LX",
+        "zh_Hans": "未来 狂怒 LX"
+    },
+    "vehicle_NameMisc_Fury_Miru": {
+        "uex_ids": [
+            "v-86"
+        ],
+        "en": "Mirai Fury MX",
+        "zh_Hans": "未来 狂怒 MX"
+    },
+    "vehicle_NameMISC_Hull_A": {
+        "uex_ids": [
+            "v-102"
+        ],
+        "en": "MISC Hull A",
+        "zh_Hans": "武藏 货轮 A"
+    },
+    "vehicle_NameMISC_Hull_C": {
+        "uex_ids": [
+            "v-104"
+        ],
+        "en": "MISC Hull C",
+        "zh_Hans": "武藏 货轮 C"
+    },
+    "vehicle_NameMISC_Prospector": {
+        "uex_ids": [
+            "v-148"
+        ],
+        "en": "MISC Prospector",
+        "zh_Hans": "武藏 勘探者"
+    },
+    "vehicle_NameMISC_Razor": {
+        "uex_ids": [
+            "v-156"
+        ],
+        "en": "Mirai Razor",
+        "zh_Hans": "未来 剃刀"
+    },
+    "vehicle_NameMISC_Razor_EX": {
+        "uex_ids": [
+            "v-157"
+        ],
+        "en": "Mirai Razor EX",
+        "zh_Hans": "未来 剃刀 EX"
+    },
+    "vehicle_NameMISC_Razor_LX": {
+        "uex_ids": [
+            "v-158"
+        ],
+        "en": "Mirai Razor LX",
+        "zh_Hans": "未来 剃刀 LX"
+    },
+    "vehicle_NameMISC_Reliant": {
+        "uex_ids": [
+            "v-162"
+        ],
+        "en": "MISC Reliant Kore",
+        "zh_Hans": "武藏 信赖 基础"
+    },
+    "vehicle_NameMISC_Reliant_Mako": {
+        "uex_ids": [
+            "v-163"
+        ],
+        "en": "MISC Reliant Mako",
+        "zh_Hans": "武藏 信赖 新闻"
+    },
+    "vehicle_NameMISC_Reliant_Sen": {
+        "uex_ids": [
+            "v-164"
+        ],
+        "en": "MISC Reliant Sen",
+        "zh_Hans": "武藏 信赖 科考"
+    },
+    "vehicle_NameMISC_Reliant_Tana": {
+        "uex_ids": [
+            "v-165"
+        ],
+        "en": "MISC Reliant Tana",
+        "zh_Hans": "武藏 信赖 武装"
+    },
+    "vehicle_NameMISC_Starfarer": {
+        "uex_ids": [
+            "v-182"
+        ],
+        "en": "MISC Starfarer",
+        "zh_Hans": "武藏 星际远航者"
+    },
+    "vehicle_NameMISC_Starfarer_Gemini": {
+        "uex_ids": [
+            "v-183"
+        ],
+        "en": "MISC Starfarer Gemini",
+        "zh_Hans": "武藏 星际远航者 双子座"
+    },
+    "vehicle_nameMISC_Starlancer_MAX": {
+        "uex_ids": [
+            "v-242"
+        ],
+        "en": "vehicle_nameMISC_Starlancer_MAX",
+        "zh_Hans": "vehicle_nameMISC_Starlancer_MAX"
+    },
+    "vehicle_nameMISC_Starlancer_TAC": {
+        "uex_ids": [
+            "v-241"
+        ],
+        "en": "vehicle_nameMISC_Starlancer_TAC",
+        "zh_Hans": "vehicle_nameMISC_Starlancer_TAC"
+    },
+    "vehicle_NameMRAI_Guardian": {
+        "uex_ids": [
+            "v-238"
+        ],
+        "en": "Mirai Guardian",
+        "zh_Hans": "未来 守护者"
+    },
+    "vehicle_NameMRAI_Guardian_MX": {
+        "uex_ids": [
+            "v-257"
+        ],
+        "en": "vehicle_NameMRAI_Guardian_MX",
+        "zh_Hans": "vehicle_NameMRAI_Guardian_MX"
+    },
+    "vehicle_NameMRAI_Pulse": {
+        "uex_ids": [
+            "v-225"
+        ],
+        "en": "Mirai Pulse",
+        "zh_Hans": "未来 脉冲"
+    },
+    "vehicle_NameMRAI_Pulse_LX": {
+        "uex_ids": [
+            "v-226"
+        ],
+        "en": "Mirai Pulse LX",
+        "zh_Hans": "未来 脉冲 LX"
+    },
+    "vehicle_NameORIG_100i": {
+        "uex_ids": [
+            "v-1"
+        ],
+        "en": "Origin 100i",
+        "zh_Hans": "起源 100i"
+    },
+    "vehicle_NameORIG_125a": {
+        "uex_ids": [
+            "v-2"
+        ],
+        "en": "Origin 125a",
+        "zh_Hans": "起源 125a"
+    },
+    "vehicle_NameORIG_135c": {
+        "uex_ids": [
+            "v-3"
+        ],
+        "en": "Origin 135c",
+        "zh_Hans": "起源 135c"
+    },
+    "vehicle_NameORIG_300i": {
+        "uex_ids": [
+            "v-4"
+        ],
+        "en": "Origin 300i",
+        "zh_Hans": "起源 300i"
+    },
+    "vehicle_NameORIG_315p": {
+        "uex_ids": [
+            "v-5"
+        ],
+        "en": "Origin 315p",
+        "zh_Hans": "起源 315p"
+    },
+    "vehicle_NameORIG_325a": {
+        "uex_ids": [
+            "v-6"
+        ],
+        "en": "Origin 325a",
+        "zh_Hans": "起源 325a"
+    },
+    "vehicle_NameORIG_350r": {
+        "uex_ids": [
+            "v-7"
+        ],
+        "en": "Origin 350r",
+        "zh_Hans": "起源 350r"
+    },
+    "vehicle_NameORIG_400i": {
+        "uex_ids": [
+            "v-8"
+        ],
+        "en": "Origin 400i",
+        "zh_Hans": "起源 400i"
+    },
+    "vehicle_NameORIG_600i_Touring": {
+        "uex_ids": [
+            "v-11"
+        ],
+        "en": "Origin 600i Touring",
+        "zh_Hans": "起源 600i 旅行版"
+    },
+    "vehicle_NameORIG_890Jump": {
+        "uex_ids": [
+            "v-13"
+        ],
+        "en": "Origin 890 Jump",
+        "zh_Hans": "起源 890 跃动"
+    },
+    "vehicle_NameORIG_X1": {
+        "uex_ids": [
+            "v-202"
+        ],
+        "en": "Origin X1",
+        "zh_Hans": "起源 X1"
+    },
+    "vehicle_NameORIG_X1_Force": {
+        "uex_ids": [
+            "v-203"
+        ],
+        "en": "Origin X1 Force",
+        "zh_Hans": "起源 X1 武装"
+    },
+    "vehicle_NameORIG_X1_Velocity": {
+        "uex_ids": [
+            "v-204"
+        ],
+        "en": "Origin X1 Velocity",
+        "zh_Hans": "起源 X1 竞速"
+    },
+    "vehicle_NameRSI_Apollo_Medivac": {
+        "uex_ids": [
+            "v-15"
+        ],
+        "en": "RSI Apollo Medivac",
+        "zh_Hans": "RSI 阿波罗 医疗"
+    },
+    "vehicle_NameRSI_Apollo_Triage": {
+        "uex_ids": [
+            "v-16"
+        ],
+        "en": "RSI Apollo Triage",
+        "zh_Hans": "RSI 阿波罗 分诊"
+    },
+    "vehicle_NameRSI_Aurora_CL": {
+        "uex_ids": [
+            "v-21"
+        ],
+        "en": "RSI Aurora CL",
+        "zh_Hans": "RSI 极光 CL"
+    },
+    "vehicle_NameRSI_Aurora_ES": {
+        "uex_ids": [
+            "v-22"
+        ],
+        "en": "RSI Aurora ES",
+        "zh_Hans": "RSI 极光 ES"
+    },
+    "vehicle_NameRSI_Aurora_LN": {
+        "uex_ids": [
+            "v-23"
+        ],
+        "en": "RSI Aurora LN",
+        "zh_Hans": "RSI 极光 LN"
+    },
+    "vehicle_NameRSI_Aurora_LX": {
+        "uex_ids": [
+            "v-24"
+        ],
+        "en": "RSI Aurora LX",
+        "zh_Hans": "RSI 极光 LX"
+    },
+    "vehicle_NameRSI_Lynx": {
+        "uex_ids": [
+            "v-116"
+        ],
+        "en": "RSI Lynx",
+        "zh_Hans": "RSI 天猫座"
+    },
+    "vehicle_NameRSI_Mantis": {
+        "uex_ids": [
+            "v-119"
+        ],
+        "en": "RSI Mantis",
+        "zh_Hans": "RSI 螳螂"
+    },
+    "vehicle_NameRSI_Scorpius": {
+        "uex_ids": [
+            "v-174"
+        ],
+        "en": "RSI Scorpius",
+        "zh_Hans": "RSI 天蝎座"
+    },
+    "vehicle_NameRSI_Scorpius_Interdiction": {
+        "uex_ids": [
+            "v-175"
+        ],
+        "en": "RSI Scorpius Antares",
+        "zh_Hans": "RSI 天蝎座 蝎心"
+    },
+    "vehicle_NameRSI_URSA_Medivac": {
+        "uex_ids": [
+            "v-229"
+        ],
+        "en": "RSI Ursa Medivac",
+        "zh_Hans": "RSI 大熊座 医疗"
+    },
+    "vehicle_NameRSI_Ursa_Rover": {
+        "uex_ids": [
+            "v-192"
+        ],
+        "en": "RSI Ursa",
+        "zh_Hans": "RSI 大熊座"
+    },
+    "vehicle_NameRSI_Zeus_CL": {
+        "uex_ids": [
+            "v-207"
+        ],
+        "en": "RSI Zeus Mk II CL",
+        "zh_Hans": "RSI 宙斯 MK II CL"
+    },
+    "vehicle_NameRSI_Zeus_ES": {
+        "uex_ids": [
+            "v-205"
+        ],
+        "en": "RSI Zeus Mk II ES",
+        "zh_Hans": "RSI 宙斯 MK II ES"
+    },
+    "vehicle_NameTMBL_Cyclone": {
+        "uex_ids": [
+            "v-60"
+        ],
+        "en": "Tumbril Cyclone",
+        "zh_Hans": "盾博尔 旋风"
+    },
+    "vehicle_NameTMBL_Cyclone_AA": {
+        "uex_ids": [
+            "v-61"
+        ],
+        "en": "Tumbril Cyclone AA",
+        "zh_Hans": "盾博尔 旋风 AA"
+    },
+    "vehicle_NameTMBL_Cyclone_MT": {
+        "uex_ids": [
+            "v-62"
+        ],
+        "en": "Tumbril Cyclone MT",
+        "zh_Hans": "盾博尔 旋风MT"
+    },
+    "vehicle_NameTMBL_Cyclone_RC": {
+        "uex_ids": [
+            "v-63"
+        ],
+        "en": "Tumbril Cyclone RC",
+        "zh_Hans": "盾博尔 旋风 RC"
+    },
+    "vehicle_NameTMBL_Cyclone_RN": {
+        "uex_ids": [
+            "v-64"
+        ],
+        "en": "Tumbril Cyclone RN",
+        "zh_Hans": "盾博尔 旋风 RN"
+    },
+    "vehicle_NameTMBL_Cyclone_TR": {
+        "uex_ids": [
+            "v-65"
+        ],
+        "en": "Tumbril Cyclone TR",
+        "zh_Hans": "盾博尔 旋风 TR"
+    },
+    "vehicle_NameTMBL_Storm": {
+        "uex_ids": [
+            "v-184"
+        ],
+        "en": "Tumbril Storm",
+        "zh_Hans": "盾博尔 风暴"
+    },
+    "vehicle_NameTMBL_Storm_AA": {
+        "uex_ids": [
+            "v-186"
+        ],
+        "en": "Tumbril Storm AA",
+        "zh_Hans": "盾博尔 风暴 AA"
+    },
+    "vehicle_NameVNCL_Blade": {
+        "uex_ids": [
+            "v-33"
+        ],
+        "en": "Esperia Blade",
+        "zh_Hans": "埃斯佩里亚 刀锋"
+    },
+    "vehicle_NameXIAN_Nox": {
+        "uex_ids": [
+            "v-138"
+        ],
+        "en": "Aopoa Nox",
+        "zh_Hans": "奥波亚 Nox"
+    },
+    "vehicle_NameXIAN_Scout": {
+        "uex_ids": [
+            "v-111"
+        ],
+        "en": "Aopoa Khartu-al",
+        "zh_Hans": "奥波亚 卡图"
+    },
+    "vehicle_NameXNAA_SantokYai": {
+        "uex_ids": [
+            "v-173"
+        ],
+        "en": "Aopoa San'tok.yāi",
+        "zh_Hans": "奥波亚 桑托起亚"
+    }
+}

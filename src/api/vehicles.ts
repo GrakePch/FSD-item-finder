@@ -1,5 +1,5 @@
 import { fetchWithCache } from "./apiFetch";
-import itemsUexIdsAndI18n from "../data/items_uex_ids_and_i18n.json";
+import vehicleKeyToUexIdsAndI18n from "../data/vehicles/key_to_uex_ids_and_i18n.json";
 import { date4_0 } from "../utils";
 
 export async function fetchAndProcessVehicles(): Promise<VehicleDictionary> {
@@ -50,9 +50,9 @@ export async function fetchAndProcessVehicles(): Promise<VehicleDictionary> {
   /* Process to get the final results */
   const dictVehicles: VehicleDictionary = {};
   for (const [key, uexIDsI18nTypes] of Object.entries(
-    itemsUexIdsAndI18n as KeyToUexIdI18nTypes
+    vehicleKeyToUexIdsAndI18n as KeyToUexIdI18nTypes
   ))
-    if (key.startsWith("vehicle_Name")) {
+    if (key.toLowerCase().startsWith("vehicle_name")) {
       let firstIdString = uexIDsI18nTypes.uex_ids?.[0] as string;
       const firstId = firstIdString ? parseInt(firstIdString.slice(2), 10) : null;
       let simpleVehicleData = dictSimpleVehicles[firstId] || null;

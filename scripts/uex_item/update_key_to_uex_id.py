@@ -15,7 +15,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parents[1]
 DEFAULT_RULES_PATH = SCRIPT_DIR / "key_match_rules.json"
 DEFAULT_ITEM_OUTPUT_PATH = REPO_ROOT / "src" / "data" / "key_to_uex_id" / "itemkey_id.json"
-DEFAULT_VEHICLE_OUTPUT_PATH = REPO_ROOT / "src" / "data" / "key_to_uex_id" / "vehiclekey_id.json"
+DEFAULT_VEHICLE_OUTPUT_PATH = REPO_ROOT / ".tmp" / "uex_item" / "vehiclekey_id.json"
 
 ITEM_KEY_PREFIXES = (
     "id_item",

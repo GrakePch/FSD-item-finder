@@ -53,7 +53,7 @@ export function getAttributeValueByName(
   return null;
 }
 
-/* Map the type in items_uex_ids_and_i18n.json to UEX's type & sub-type */
+/* Map legacy item type names to UEX's type & sub-type */
 export function mapToUEXTypeSubType(
   rawType: string | undefined
 ): [string, string] | [null, null] {
