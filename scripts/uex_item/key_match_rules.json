@@ -1,0 +1,458 @@
+{
+    "items": [
+        {
+            "key": "Castra_Star_Desc",
+            "names": [
+                "Castra"
+            ]
+        },
+        {
+            "key": "Human_First_Names_M_1682",
+            "names": [
+                "Ranger"
+            ]
+        },
+        {
+            "key": "Human_First_Names_M_1769",
+            "names": [
+                "Rush"
+            ]
+        },
+        {
+            "key": "Human_First_Names_M_1905",
+            "names": [
+                "Taiga"
+            ]
+        },
+        {
+            "key": "Human_Nicknames_0060",
+            "names": [
+                "Drifter"
+            ]
+        },
+        {
+            "key": "Human_Nicknames_0076",
+            "names": [
+                "Fissure"
+            ]
+        },
+        {
+            "key": "Human_Surnames_2131",
+            "names": [
+                "Endo"
+            ]
+        },
+        {
+            "key": "Human_Surnames_3793",
+            "names": [
+                "Okunis"
+            ]
+        },
+        {
+            "key": "Human_Surnames_4213",
+            "names": [
+                "Sabir"
+            ]
+        },
+        {
+            "key": "Human_Surnames_4914",
+            "names": [
+                "Ward"
+            ]
+        },
+        {
+            "key": "Stanton1_DerelictSettlement_Zephyr",
+            "names": [
+                "Zephyr"
+            ]
+        },
+        {
+            "key": "item_NameAurora_Paint_2950Invictus_1",
+            "names": [
+                "Aurora Green and Gold Livery"
+            ]
+        },
+        {
+            "key": "item_NameAurora_Paint_2950Invictus_3",
+            "names": [
+                "Aurora Light and Dark Grey Livery"
+            ]
+        },
+        {
+            "key": "item_NameBEHR_DistortionRepeater_VNG_S2",
+            "names": [
+                "ATVS Cannon"
+            ]
+        },
+        {
+            "key": "item_NameCOOL_TYDT_S02_HeatSink_SCItem",
+            "names": [
+                "HeatSink"
+            ]
+        },
+        {
+            "key": "item_NameFood_bar_karoby_01_cranberry_a",
+            "names": [
+                "Karoby Engergy Bar (Cranberry, Green Tea & Carob)"
+            ]
+        },
+        {
+            "key": "item_NameFuse_standard",
+            "names": [
+                "Fuse"
+            ]
+        },
+        {
+            "key": "item_NameGMNI_smg_ballistic_01_mag",
+            "names": [
+                "C54 SMG Magazine (50 cap)"
+            ]
+        },
+        {
+            "key": "item_NameMISL_S10_IR_BEHR_Torpedo",
+            "names": [
+                "Polaris Torpedo",
+                "@ITEM_NAMEMISL_S10_IR_BEHR_TORPEDO"
+            ]
+        },
+        {
+            "key": "item_NameMODU_AEGS_Front_Cargo",
+            "names": [
+                "Retaliator Cargo Module - Front"
+            ]
+        },
+        {
+            "key": "item_NameMODU_AEGS_Front_Torpedo_Placeholder",
+            "names": [
+                "Retaliator Torpedo Module - Front"
+            ]
+        },
+        {
+            "key": "item_NameMODU_AEGS_Rear_Cargo",
+            "names": [
+                "Retaliator Cargo Module - Rear"
+            ]
+        },
+        {
+            "key": "item_NameMODU_AEGS_Rear_Torpedo_Placeholder",
+            "names": [
+                "Retaliator Torpedo Module - Rear"
+            ]
+        },
+        {
+            "key": "item_NamePOWR_JUST_S01_Endurance_SCItem",
+            "names": [
+                "Endurance"
+            ]
+        },
+        {
+            "key": "item_NameSTOR_opencontainer_1_8_SCU",
+            "names": [
+                "Stor*All 1/8 SCU Storage"
+            ]
+        },
+        {
+            "key": "item_Name_987_pants_01_01_03",
+            "names": [
+                "Toretto Pants Orange"
+            ]
+        },
+        {
+            "key": "item_Name_987_shirt_03_01_18",
+            "names": [
+                "Adrft Shirt Dark Blue"
+            ]
+        },
+        {
+            "key": "item_Name_CBD_Shirt_02_01_01",
+            "names": [
+                "Trasher T-Shirt"
+            ]
+        },
+        {
+            "key": "item_Name_alb_jacket_05_01_16",
+            "names": [
+                "Marshal Sleeveless Vest Hunter Green"
+            ]
+        },
+        {
+            "key": "item_Name_alb_mask_01_01_11",
+            "names": [
+                "Taos Balaclava and Goggle Ash"
+            ]
+        },
+        {
+            "key": "item_Name_alb_mask_01_01_12",
+            "names": [
+                "Taos Balaclava and Goggles Tactical",
+                "Taos Balaclava and Goggle Tactical"
+            ]
+        },
+        {
+            "key": "item_Name_alb_mask_01_01_13",
+            "names": [
+                "Taos Balaclava and Goggle Crimson"
+            ]
+        },
+        {
+            "key": "item_Name_alb_mask_01_01_15",
+            "names": [
+                "Taos Balaclava and Goggle Arctic"
+            ]
+        },
+        {
+            "key": "item_Name_cbd_hat_03_drake_dec",
+            "names": [
+                "Drake Interplanetary Hat"
+            ]
+        },
+        {
+            "key": "item_Name_cds_armor_medium_arms_02_01_03",
+            "names": [
+                "ORC-mkV Arms Nightfire"
+            ]
+        },
+        {
+            "key": "item_Name_cds_combat_medium_arms_03_01_01",
+            "names": [
+                "ORC-mkX Arms (Modified XenoThreat)"
+            ]
+        },
+        {
+            "key": "item_Name_cds_combat_medium_core_03_01_01",
+            "names": [
+                "ORC-mkX Core (Modified XenoThreat)"
+            ]
+        },
+        {
+            "key": "item_Name_cds_combat_medium_helmet_03_01_01",
+            "names": [
+                "Orc-mkX Helmet (XenoThreat)"
+            ]
+        },
+        {
+            "key": "item_Name_dmc_frontier_gloves_01_01_17",
+            "names": [
+                "Androit Gloves Indigo"
+            ]
+        },
+        {
+            "key": "item_Name_eld_shirt_04_drake_dec",
+            "names": [
+                "Drake Interplanetary T-Shirt"
+            ]
+        },
+        {
+            "key": "item_Name_fta_medium_helmet_01_01_13",
+            "names": [
+                "Ambrose Helmet Onyx"
+            ]
+        },
+        {
+            "key": "item_Name_fta_medium_helmet_01_01_15",
+            "names": [
+                "Ambrose Helmet Calico"
+            ]
+        },
+        {
+            "key": "item_Name_fta_medium_helmet_01_01_18",
+            "names": [
+                "Ambrose Helmet Piston"
+            ]
+        },
+        {
+            "key": "item_Name_hdtc_undersuit_01_01_03",
+            "names": [
+                "Lamont Covus Undersuit"
+            ]
+        },
+        {
+            "key": "item_Name_ksar_undersuit_01_01_16",
+            "names": [
+                "Scaleweave Undersuit Barrents"
+            ]
+        },
+        {
+            "key": "item_Name_ops_pants_02_01_08",
+            "names": [
+                "Mivaldi Pants Puple"
+            ]
+        },
+        {
+            "key": "item_Name_outlaw_legacy_armor_light_core_01_02_11",
+            "names": [
+                "Lynx Core Firenrick"
+            ]
+        },
+        {
+            "key": "item_Name_outlaw_legacy_armor_light_helmet_01_01_01",
+            "names": [
+                "Oracle Helmet Base"
+            ]
+        },
+        {
+            "key": "item_Name_outlaw_legacy_armor_light_helmet_01_01_11",
+            "names": [
+                "Orcale Helmet Cold Steel"
+            ]
+        },
+        {
+            "key": "item_Name_outlaw_legacy_armor_light_helmet_01_03_01",
+            "names": [
+                "Orcale Helmet Sandstorm"
+            ]
+        },
+        {
+            "key": "item_Name_outlaw_legacy_light_armor_arms",
+            "names": [
+                "Lynx Arms Base"
+            ]
+        },
+        {
+            "key": "item_Name_outlaw_legacy_light_armor_core",
+            "names": [
+                "Lynx Core Base"
+            ]
+        },
+        {
+            "key": "item_Name_rrs_specialist_heavy_helmet_02_01_01",
+            "names": [
+                "Morozov-SH Helmet Brushdrift"
+            ]
+        },
+        {
+            "key": "item_Name_vgl_armor_light_arms_01_01_10",
+            "names": [
+                "TrueDef-Pro Arms White/Silver/Gray"
+            ]
+        },
+        {
+            "key": "item_Name_vgl_armor_light_core_01_01_10",
+            "names": [
+                "TrueDef-Pro Core White/Silver/Gray"
+            ]
+        },
+        {
+            "key": "item_Name_vgl_armor_light_helmet_01_01_07",
+            "names": [
+                "Argus Helmet Gold/Gray/Black"
+            ]
+        },
+        {
+            "key": "item_Namebehr_optics_tsco_x4_s2",
+            "names": [
+                "EE04 (4x Telescopic)"
+            ]
+        },
+        {
+            "key": "item_Namebehr_optics_tsco_x8_s3",
+            "names": [
+                "EE08 (8x Telescopic)"
+            ]
+        },
+        {
+            "key": "item_Namebehr_pistol_ballistic_01_mag",
+            "names": [
+                "S-38 Magazine (20 cap)"
+            ]
+        },
+        {
+            "key": "item_Namebehr_rifle_ballistic_01_mag",
+            "names": [
+                "P4-AR Magazine (40 cap)"
+            ]
+        },
+        {
+            "key": "item_Namebehr_rifle_ballistic_02_civilian",
+            "names": [
+                "P8-AR Assault Rifle"
+            ]
+        },
+        {
+            "key": "item_Namegmni_pistol_ballistic_01_mag",
+            "names": [
+                "LH86 Pistol Magazine (13 cap)"
+            ]
+        },
+        {
+            "key": "item_Nameksar_rifle_energy_01_mag",
+            "names": [
+                "Karna Rifle Battery (35 cap)"
+            ]
+        },
+        {
+            "key": "item_Nameksar_smg_energy_01_gold01",
+            "names": [
+                "Custodian 'Executive Edition'"
+            ]
+        },
+        {
+            "key": "item_Namelbco_pistol_energy_01_mag",
+            "names": [
+                "Yubarev Pistol Magazine (10 cap)"
+            ]
+        },
+        {
+            "key": "item_Namenone_melee_01",
+            "names": [
+                "Prison Shiv"
+            ]
+        },
+        {
+            "key": "item_Namevolt_smg_energy_01_mag",
+            "names": [
+                "Quartz Energy SMG Battery (50 cap)"
+            ]
+        },
+        {
+            "key": "item_decoration_armchair_AEGS_name",
+            "names": [
+                "Aegis Ship Arm Chair"
+            ]
+        },
+        {
+            "key": "item_fuelnozzle_GRIN_Fast_Name",
+            "names": [
+                "Norfield Green"
+            ]
+        },
+        {
+            "key": "items_commodities_fotiascrub",
+            "names": [
+                "Fotia Seepod"
+            ]
+        },
+        {
+            "key": "items_commodities_spiral",
+            "names": [
+                "Lunes"
+            ]
+        }
+    ],
+    "vehicles": [
+        {
+            "key": "vehicle_NameRSI_Aurora_CL",
+            "names": [
+                "Aurora CL"
+            ]
+        },
+        {
+            "key": "vehicle_NameRSI_Aurora_ES",
+            "names": [
+                "Aurora ES"
+            ]
+        },
+        {
+            "key": "vehicle_NameRSI_Aurora_LN",
+            "names": [
+                "Aurora LN"
+            ]
+        },
+        {
+            "key": "vehicle_NameRSI_Aurora_LX",
+            "names": [
+                "Aurora LX"
+            ]
+        }
+    ]
+}

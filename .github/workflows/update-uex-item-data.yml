@@ -21,6 +21,9 @@ jobs:
         with:
           python-version: "3.x"
 
+      - name: Generate UEX key maps
+        run: python scripts/uex_item/update_key_to_uex_id.py
+
       - name: Generate UEX item data
         run: python scripts/uex_item/update_items_uex.json.py
 
@@ -37,13 +40,13 @@ jobs:
 
       - name: Commit updated data
         run: |
-          if git diff --quiet -- public/data/items_uex.json; then
+          if git diff --quiet -- src/data/key_to_uex_id/itemkey_id.json src/data/key_to_uex_id/vehiclekey_id.json public/data/items_uex.json; then
             echo "No UEX item data changes to commit."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data/items_uex.json
+          git add src/data/key_to_uex_id/itemkey_id.json src/data/key_to_uex_id/vehiclekey_id.json public/data/items_uex.json
           git commit -m "update UEX item data"
           git push

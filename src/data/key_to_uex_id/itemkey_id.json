@@ -56,8 +56,16 @@
     "Item_NameAEGS_Idris_Retro_MIL": {},
     "Item_NameAEGS_Idris_Retro_PIR": {},
     "Item_NameConstellation_Paint_FW2955_Grey_Black_Red_Camo": {},
-    "Item_NameFlair_mug_stella_fortuna_1_a": {},
-    "Item_NameFlair_mug_stella_fortuna_1_b": {},
+    "Item_NameFlair_mug_stella_fortuna_1_a": {
+        "id": [
+            2799
+        ]
+    },
+    "Item_NameFlair_mug_stella_fortuna_1_b": {
+        "id": [
+            5207
+        ]
+    },
     "Item_NameGRIN_CraftingStation_001": {},
     "Item_NameGRIN_SalvageField_001": {},
     "Item_NameHornet_F7CR_Mk2_Paint_Green_Orange": {},
@@ -637,10 +645,22 @@
     "item_NameANVL_Hornet_Ejection_Seat_F7A": {},
     "item_NameANVL_Hornet_F7A_Mk1_Ball_Turret": {},
     "item_NameANVL_Hornet_F7A_Mk1_Nose_Turret": {},
-    "item_NameANVL_Hornet_F7A_Mk2_Ball_Turret": {},
+    "item_NameANVL_Hornet_F7A_Mk2_Ball_Turret": {
+        "id": [
+            4023
+        ]
+    },
     "item_NameANVL_Hornet_F7A_Mk2_Nose_Turret": {},
-    "item_NameANVL_Hornet_F7CM_Mk2_Ball_Turret": {},
-    "item_NameANVL_Hornet_F7CM_Mk2_Ball_Turret_Bespoke": {},
+    "item_NameANVL_Hornet_F7CM_Mk2_Ball_Turret": {
+        "id": [
+            5500
+        ]
+    },
+    "item_NameANVL_Hornet_F7CM_Mk2_Ball_Turret_Bespoke": {
+        "id": [
+            4332
+        ]
+    },
     "item_NameANVL_Hornet_F7CM_Mk2_Ball_Turret_Single": {},
     "item_NameANVL_Hornet_F7CM_Mk2_Nose_Turret": {
         "id": [
@@ -980,7 +1000,11 @@
         ]
     },
     "item_NameBEHR_BallisticGatling_Hornet_Bespoke": {},
-    "item_NameBEHR_BallisticGatling_NOVA_S5": {},
+    "item_NameBEHR_BallisticGatling_NOVA_S5": {
+        "id": [
+            4501
+        ]
+    },
     "item_NameBEHR_BallisticGatling_S4": {
         "id": [
             12
@@ -1080,8 +1104,16 @@
     "item_NameBEHR_PC2_Dual_S3": {},
     "item_NameBEHR_PC2_Dual_S4": {},
     "item_NameBEHR_PC2_Dual_S4_Fixed": {},
-    "item_NameBEHR_PDC_MissileLauncher": {},
-    "item_NameBEHR_PDC_Turret": {},
+    "item_NameBEHR_PDC_MissileLauncher": {
+        "id": [
+            5138
+        ]
+    },
+    "item_NameBEHR_PDC_Turret": {
+        "id": [
+            5139
+        ]
+    },
     "item_NameBEHR_TorpedoLauncher_S10": {},
     "item_NameBEHR_groundturret_AA_S4": {},
     "item_NameBEHR_grounturret_MP": {},
@@ -1160,23 +1192,11 @@
         ]
     },
     "item_NameCOOL_AEGS_S01_Bracer": {},
-    "item_NameCOOL_AEGS_S01_Bracer_SCItem": {
-        "id": [
-            928
-        ]
-    },
+    "item_NameCOOL_AEGS_S01_Bracer_SCItem": {},
     "item_NameCOOL_AEGS_S01_Glacier_SCItem": {},
-    "item_NameCOOL_AEGS_S01_Polar": {
-        "id": [
-            1766
-        ]
-    },
+    "item_NameCOOL_AEGS_S01_Polar": {},
     "item_NameCOOL_AEGS_S01_Tundra": {},
-    "item_NameCOOL_AEGS_S02_Arctic": {
-        "id": [
-            958
-        ]
-    },
+    "item_NameCOOL_AEGS_S02_Arctic": {},
     "item_NameCOOL_AEGS_S02_Boreal": {},
     "item_NameCOOL_AEGS_S03_Blizzard_SCItem": {},
     "item_NameCOOL_AEGS_S03_Galinstan_SCItem": {},
@@ -1911,12 +1931,20 @@
     "item_NameF_webster_shr_hair_01": {},
     "item_NameFlair_Actn_Figure_Outpost_Worker_Cen": {},
     "item_NameFlair_Actn_Figure_Outpost_Worker_Imp": {},
-    "item_NameFlair_Actn_Figure_SM_B_Team_Tank_Cen": {},
+    "item_NameFlair_Actn_Figure_SM_B_Team_Tank_Cen": {
+        "id": [
+            5395
+        ]
+    },
     "item_NameFlair_Actn_Figure_SM_B_Team_Tank_Imp": {},
     "item_NameFlair_Actn_Figure_UEE_Recon_Marine_Cen": {},
     "item_NameFlair_Actn_Figure_UEE_Recon_Marine_Imp": {},
     "item_NameFlair_Actn_Figure_Vncl_Shipkiller_Cen": {},
-    "item_NameFlair_Actn_Figure_Vncl_Shipkiller_Imp": {},
+    "item_NameFlair_Actn_Figure_Vncl_Shipkiller_Imp": {
+        "id": [
+            5396
+        ]
+    },
     "item_NameFlair_Badge_Squadronbadge-214": {},
     "item_NameFlair_Badge_Squadronbadge-35": {},
     "item_NameFlair_Badge_Squadronbadge-36": {},
@@ -1944,7 +1972,11 @@
     "item_NameFlair_Discount_Cot": {},
     "item_NameFlair_Donation_Plaque": {},
     "item_NameFlair_Double_Bed_Basebuilding_Citcon_1": {},
-    "item_NameFlair_Drink_Screwtop_Tumbler_1_a": {},
+    "item_NameFlair_Drink_Screwtop_Tumbler_1_a": {
+        "id": [
+            2790
+        ]
+    },
     "item_NameFlair_Drink_Screwtop_Tumbler_1_b": {},
     "item_NameFlair_FishTank_001": {},
     "item_NameFlair_FishTank_Gold": {},
@@ -2123,10 +2155,22 @@
     "item_NameFlair_banu_tholo_1_b": {},
     "item_NameFlair_biscuit_jar_1_a": {},
     "item_NameFlair_dice_1_a": {},
-    "item_NameFlair_dice_1_b": {},
-    "item_NameFlair_dice_1_c": {},
+    "item_NameFlair_dice_1_b": {
+        "id": [
+            2528
+        ]
+    },
+    "item_NameFlair_dice_1_c": {
+        "id": [
+            2529
+        ]
+    },
     "item_NameFlair_dice_1_chance_a": {},
-    "item_NameFlair_dice_1_d20_a": {},
+    "item_NameFlair_dice_1_d20_a": {
+        "id": [
+            3479
+        ]
+    },
     "item_NameFlair_dice_1_d20_b": {},
     "item_NameFlair_dice_1_d20_c": {},
     "item_NameFlair_dice_2_a": {},
@@ -2134,11 +2178,27 @@
     "item_NameFlair_dice_2_c": {},
     "item_NameFlair_medal_200m_1_a": {},
     "item_NameFlair_mug_frontier_ornate_1_a": {},
-    "item_NameFlair_mug_frontier_stoneware_1_a": {},
+    "item_NameFlair_mug_frontier_stoneware_1_a": {
+        "id": [
+            3869
+        ]
+    },
     "item_NameFlair_mug_luminalia_1_a": {},
-    "item_NameFlair_plant_pot_1_a": {},
-    "item_NameFlair_plant_pot_1_b": {},
-    "item_NameFlair_plant_pot_1_c": {},
+    "item_NameFlair_plant_pot_1_a": {
+        "id": [
+            2816
+        ]
+    },
+    "item_NameFlair_plant_pot_1_b": {
+        "id": [
+            2815
+        ]
+    },
+    "item_NameFlair_plant_pot_1_c": {
+        "id": [
+            2938
+        ]
+    },
     "item_NameFlair_plushy_corsair_1_a": {},
     "item_NameFlair_poster_DOV_1_a": {},
     "item_NameFlair_poster_DOV_1_b": {},
@@ -2433,7 +2493,11 @@
     "item_NameFood_pizza_slice_01_pepperoni_a": {},
     "item_NameFood_pizza_slice_01_pepperoni_b": {},
     "item_NameFood_pizzabox": {},
-    "item_NameFood_sachet_mre_01_a": {},
+    "item_NameFood_sachet_mre_01_a": {
+        "id": [
+            5157
+        ]
+    },
     "item_NameFood_sachet_mre_01_chicken_a": {
         "id": [
             2302
@@ -2447,8 +2511,16 @@
             563
         ]
     },
-    "item_NameFood_sachet_readymeal_01_burrito_a": {},
-    "item_NameFood_sachet_readymeal_01_meatball_a": {},
+    "item_NameFood_sachet_readymeal_01_burrito_a": {
+        "id": [
+            5158
+        ]
+    },
+    "item_NameFood_sachet_readymeal_01_meatball_a": {
+        "id": [
+            4746
+        ]
+    },
     "item_NameFood_sachet_readymeal_01_noodles_a": {},
     "item_NameFood_sachet_readymeal_01_vegetarian_a": {
         "id": [
@@ -2600,11 +2672,72 @@
             33
         ]
     },
-    "item_NameGMNI_rifle_ballistic_01": {
+    "item_NameGMISL_S01_CS_FSKI_Spark": {
         "id": [
-            2321
+            5424
         ]
     },
+    "item_NameGMISL_S01_EM_BEHR_Pioneer": {
+        "id": [
+            5425
+        ]
+    },
+    "item_NameGMISL_S01_EM_THCN_TaskForce": {
+        "id": [
+            5426
+        ]
+    },
+    "item_NameGMISL_S01_IR_BEHR_Marksman": {
+        "id": [
+            5427
+        ]
+    },
+    "item_NameGMISL_S02_CS_FSKI_Tempest": {
+        "id": [
+            5428
+        ]
+    },
+    "item_NameGMISL_S02_CS_THCN_StrikeForce": {
+        "id": [
+            5429
+        ]
+    },
+    "item_NameGMISL_S02_EM_TALN_Dominator": {
+        "id": [
+            5430
+        ]
+    },
+    "item_NameGMISL_S02_IR_FSKI_Ignite": {
+        "id": [
+            5431
+        ]
+    },
+    "item_NameGMISL_S05_CS_TALN_Stalker": {
+        "id": [
+            5432
+        ]
+    },
+    "item_NameGMISL_S05_EM_TALN_Reaper": {
+        "id": [
+            5433
+        ]
+    },
+    "item_NameGMISL_S05_EM_TALN_Scimitar": {
+        "id": [
+            92
+        ]
+    },
+    "item_NameGMISL_S05_IR_TALN_Valkyrie": {
+        "id": [
+            5434
+        ]
+    },
+    "item_NameGMISL_S07_IR_TALN_Hellion": {
+        "id": [
+            94
+        ]
+    },
+    "item_NameGMNI_rifle_ballistic_01": {},
     "item_NameGMNI_rifle_ballistic_01_grey_red01": {},
     "item_NameGMNI_rifle_ballistic_01_yellow_blue01": {},
     "item_NameGMNI_smg_ballistic_01": {
@@ -3289,21 +3422,13 @@
             1746
         ]
     },
-    "item_NameMISL_S05_EM_TALN_Scimitar": {
-        "id": [
-            92
-        ]
-    },
+    "item_NameMISL_S05_EM_TALN_Scimitar": {},
     "item_NameMISL_S05_IR_TALN_Valkyrie": {
         "id": [
             93
         ]
     },
-    "item_NameMISL_S07_IR_TALN_Hellion": {
-        "id": [
-            94
-        ]
-    },
+    "item_NameMISL_S07_IR_TALN_Hellion": {},
     "item_NameMISL_S09_CS_TALN_Argos": {
         "id": [
             1618
@@ -3405,6 +3530,36 @@
     "item_NameMODU_AEGS_Rear_Torpedo_Placeholder": {
         "id": [
             3716
+        ]
+    },
+    "item_NameMODU_RSI_Apollo_Left_Tier_1": {
+        "id": [
+            4913
+        ]
+    },
+    "item_NameMODU_RSI_Apollo_Left_Tier_2": {
+        "id": [
+            4914
+        ]
+    },
+    "item_NameMODU_RSI_Apollo_Left_Tier_3": {
+        "id": [
+            4915
+        ]
+    },
+    "item_NameMODU_RSI_Apollo_Right_Tier_1": {
+        "id": [
+            4917
+        ]
+    },
+    "item_NameMODU_RSI_Apollo_Right_Tier_2": {
+        "id": [
+            4918
+        ]
+    },
+    "item_NameMODU_RSI_Apollo_Right_Tier_3": {
+        "id": [
+            4916
         ]
     },
     "item_NameMOLE_Paint_Aphorite_Purple": {},
@@ -3547,8 +3702,21 @@
     "item_NameMTC_Paint_Grey_Lightgrey_Orange_Solid": {},
     "item_NameMT_PersonalMobiGlas": {},
     "item_NameMXOX_EMP_Device": {},
-    "item_NameMXOX_NeutronCannon_S1": {},
-    "item_NameMXOX_NeutronCannon_S2": {},
+    "item_NameMXOX_NeutronCannon_S1": {
+        "id": [
+            1613
+        ]
+    },
+    "item_NameMXOX_NeutronCannon_S2": {
+        "id": [
+            1614
+        ]
+    },
+    "item_NameMXOX_NeutronCannon_S3": {
+        "id": [
+            5602
+        ]
+    },
     "item_NameMXOX_NeutronRepeater_S1": {},
     "item_NameMXOX_NeutronRepeater_S2": {},
     "item_NameMXOX_NeutronRepeater_S3": {},
@@ -3705,7 +3873,11 @@
             3709
         ]
     },
-    "item_NameMobiGlas_paint_07": {},
+    "item_NameMobiGlas_paint_07": {
+        "id": [
+            3710
+        ]
+    },
     "item_NameMobiGlas_paint_08": {
         "id": [
             3711
@@ -3908,11 +4080,7 @@
         ]
     },
     "item_NamePOWR_AEGS_S01_Charger": {},
-    "item_NamePOWR_AEGS_S01_Charger_SCItem": {
-        "id": [
-            938
-        ]
-    },
+    "item_NamePOWR_AEGS_S01_Charger_SCItem": {},
     "item_NamePOWR_AEGS_S01_FierellCascade_SCItem": {},
     "item_NamePOWR_AEGS_S01_Regulus": {},
     "item_NamePOWR_AEGS_S01_Regulus_SCItem": {},
@@ -4282,11 +4450,7 @@
     "item_NameQDRV_TARS_S03_Ranger": {},
     "item_NameQDRV_TARS_S03_Wanderer": {},
     "item_NameQDRV_WETK_S01_Beacon": {},
-    "item_NameQDRV_WETK_S01_Siren": {
-        "id": [
-            974
-        ]
-    },
+    "item_NameQDRV_WETK_S01_Siren": {},
     "item_NameQDRV_WETK_S02_Crossfield": {},
     "item_NameQDRV_WETK_S03_Balandin": {},
     "item_NameQDRV_WETK_S03_Pontes": {},
@@ -4404,7 +4568,11 @@
     "item_NameRSI_Light_Helmet_Yellow": {},
     "item_NameRSI_MissileBay": {},
     "item_NameRSI_Purple_Armor": {},
-    "item_NameRSI_Scorpius_MissileTurret": {},
+    "item_NameRSI_Scorpius_MissileTurret": {
+        "id": [
+            4496
+        ]
+    },
     "item_NameRSI_SelfDestruct": {},
     "item_NameRSI_SelfDestruct_Long": {},
     "item_NameRSI_VP_ESI_S1": {},
@@ -4535,17 +4703,9 @@
     "item_NameSHLD_GODI_S01_AllStop": {},
     "item_NameSHLD_GODI_S01_AllStop_SCItem": {},
     "item_NameSHLD_GODI_S01_FR66": {},
-    "item_NameSHLD_GODI_S01_ForceWall": {
-        "id": [
-            2115
-        ]
-    },
+    "item_NameSHLD_GODI_S01_ForceWall": {},
     "item_NameSHLD_GODI_S01_SecureHyde": {},
-    "item_NameSHLD_GODI_S02_FullStop": {
-        "id": [
-            1935
-        ]
-    },
+    "item_NameSHLD_GODI_S02_FullStop": {},
     "item_NameSHLD_GODI_S04_Idris": {},
     "item_NameSHLD_ORIG_S04_890J_SCItem": {},
     "item_NameSHLD_S01_CIV_SECO_Ink": {},
@@ -5072,11 +5232,7 @@
         ]
     },
     "item_Name_987_pants_03_01_06": {},
-    "item_Name_987_pants_03_01_10": {
-        "id": [
-            2917
-        ]
-    },
+    "item_Name_987_pants_03_01_10": {},
     "item_Name_987_pants_03_01_12": {
         "id": [
             3860
@@ -5115,13 +5271,21 @@
             4277
         ]
     },
-    "item_Name_987_shirt_04_01_13": {},
+    "item_Name_987_shirt_04_01_13": {
+        "id": [
+            5141
+        ]
+    },
     "item_Name_987_shirt_04_01_15": {
         "id": [
             3960
         ]
     },
-    "item_Name_987_shirt_04_01_16": {},
+    "item_Name_987_shirt_04_01_16": {
+        "id": [
+            5401
+        ]
+    },
     "item_Name_987_shirt_04_01_17": {
         "id": [
             4140
@@ -5269,7 +5433,6 @@
     },
     "item_Name_CBD_Shirt_02_01_01": {
         "id": [
-            1457,
             1511
         ]
     },
@@ -5377,11 +5540,7 @@
     },
     "item_Name_COOL_AEGS_S01_Glacier": {},
     "item_Name_COOL_AEGS_S01_Tundra": {},
-    "item_Name_COOL_AEGS_S02_Avalanche": {
-        "id": [
-            1759
-        ]
-    },
+    "item_Name_COOL_AEGS_S02_Avalanche": {},
     "item_Name_COOL_AEGS_S02_Boreal": {},
     "item_Name_COOL_AEGS_S02_Permafrost": {},
     "item_Name_COOL_AEGS_S03_Tempest": {},
@@ -5706,11 +5865,27 @@
     "item_Name_FLGT_Controller": {},
     "item_Name_FLGT_Controller,P": {},
     "item_Name_Flair_Coin_SQ42_FW25": {},
-    "item_Name_GRIN_refinery_apron_01_01_01": {},
+    "item_Name_GRIN_refinery_apron_01_01_01": {
+        "id": [
+            5165
+        ]
+    },
     "item_Name_GRIN_refinery_backpack_01_01_01": {},
-    "item_Name_GRIN_refinery_gloves_01_01_01": {},
-    "item_Name_GRIN_refinery_helmet_01_01_01": {},
-    "item_Name_GRIN_refinery_pants_01_01_01": {},
+    "item_Name_GRIN_refinery_gloves_01_01_01": {
+        "id": [
+            5163
+        ]
+    },
+    "item_Name_GRIN_refinery_helmet_01_01_01": {
+        "id": [
+            5164
+        ]
+    },
+    "item_Name_GRIN_refinery_pants_01_01_01": {
+        "id": [
+            5166
+        ]
+    },
     "item_Name_GRIN_utility_medium_arms_01_01_01": {
         "id": [
             2137
@@ -5725,7 +5900,11 @@
     },
     "item_Name_GRIN_utility_medium_arms_01_02_01": {},
     "item_Name_GRIN_utility_medium_arms_01_04_01": {},
-    "item_Name_GRIN_utility_medium_arms_02_01_01": {},
+    "item_Name_GRIN_utility_medium_arms_02_01_01": {
+        "id": [
+            5409
+        ]
+    },
     "item_Name_GRIN_utility_medium_arms_02_01_03": {},
     "item_Name_GRIN_utility_medium_arms_02_01_07": {},
     "item_Name_GRIN_utility_medium_arms_02_01_12": {},
@@ -5755,7 +5934,11 @@
         ]
     },
     "item_Name_GRIN_utility_medium_backpack_01_02_01": {},
-    "item_Name_GRIN_utility_medium_backpack_02_01_01": {},
+    "item_Name_GRIN_utility_medium_backpack_02_01_01": {
+        "id": [
+            5410
+        ]
+    },
     "item_Name_GRIN_utility_medium_backpack_02_01_03": {},
     "item_Name_GRIN_utility_medium_backpack_02_01_07": {},
     "item_Name_GRIN_utility_medium_backpack_02_01_12": {},
@@ -5785,7 +5968,11 @@
         ]
     },
     "item_Name_GRIN_utility_medium_core_01_02_01": {},
-    "item_Name_GRIN_utility_medium_core_02_01_01": {},
+    "item_Name_GRIN_utility_medium_core_02_01_01": {
+        "id": [
+            5412
+        ]
+    },
     "item_Name_GRIN_utility_medium_core_02_01_03": {},
     "item_Name_GRIN_utility_medium_core_02_01_07": {},
     "item_Name_GRIN_utility_medium_core_02_01_12": {},
@@ -5829,7 +6016,11 @@
         ]
     },
     "item_Name_GRIN_utility_medium_legs_01_02_01": {},
-    "item_Name_GRIN_utility_medium_legs_02_01_01": {},
+    "item_Name_GRIN_utility_medium_legs_02_01_01": {
+        "id": [
+            5411
+        ]
+    },
     "item_Name_GRIN_utility_medium_legs_02_01_03": {},
     "item_Name_GRIN_utility_medium_legs_02_01_07": {},
     "item_Name_GRIN_utility_medium_legs_02_01_12": {},
@@ -5999,19 +6190,11 @@
     "item_Name_POWR_AEGS_S02_Bolide": {},
     "item_Name_POWR_AEGS_S02_Vortex": {},
     "item_Name_POWR_AEGS_S03_Centurion": {},
-    "item_Name_POWR_AEGS_S03_Fulgur": {
-        "id": [
-            935
-        ]
-    },
+    "item_Name_POWR_AEGS_S03_Fulgur": {},
     "item_Name_POWR_AMRS_S01_DynaFlux": {},
     "item_Name_POWR_AMRS_S02_ExoGen": {},
     "item_Name_POWR_AMRS_S02_TurboDrive": {},
-    "item_Name_POWR_AMRS_S03_MegaFlux": {
-        "id": [
-            1755
-        ]
-    },
+    "item_Name_POWR_AMRS_S03_MegaFlux": {},
     "item_Name_POWR_AMRS_S03_SmartGen": {},
     "item_Name_POWR_Controller": {},
     "item_Name_POWR_Default": {},
@@ -6071,11 +6254,7 @@
             136
         ]
     },
-    "item_Name_POWR_SASU_S02_Radiance": {
-        "id": [
-            965
-        ]
-    },
+    "item_Name_POWR_SASU_S02_Radiance": {},
     "item_Name_POWR_SASU_S03_Celestial": {
         "id": [
             1756
@@ -6136,11 +6315,7 @@
     },
     "item_Name_QDRV_WETK_S01_Beacon": {},
     "item_Name_QDRV_WETK_S01_VK00": {},
-    "item_Name_QDRV_WETK_S02_Yeager": {
-        "id": [
-            971
-        ]
-    },
+    "item_Name_QDRV_WETK_S02_Yeager": {},
     "item_Name_QRDV_ACAS_S01_Foxfire": {
         "id": [
             586
@@ -6162,34 +6337,254 @@
             3530
         ]
     },
-    "item_Name_RADR_BLTR_S01_Hunter": {},
-    "item_Name_RADR_BLTR_S01_Pelerous": {},
-    "item_Name_RADR_BLTR_S01_Prophet": {},
+    "item_Name_RADR_BLTR_S01_Hunter": {
+        "id": [
+            5547
+        ]
+    },
+    "item_Name_RADR_BLTR_S01_Pelerous": {
+        "id": [
+            5522
+        ]
+    },
+    "item_Name_RADR_BLTR_S01_Prophet": {
+        "id": [
+            5552
+        ]
+    },
+    "item_Name_RADR_BLTR_S02_Cassandra": {
+        "id": [
+            5538
+        ]
+    },
+    "item_Name_RADR_BLTR_S02_Predator": {
+        "id": [
+            5551
+        ]
+    },
+    "item_Name_RADR_BLTR_S02_Spyglass": {
+        "id": [
+            5561
+        ]
+    },
+    "item_Name_RADR_CHCO_S00_BroadSpecGo": {
+        "id": [
+            5536
+        ]
+    },
+    "item_Name_RADR_CHCO_S00_FullSpecGo": {
+        "id": [
+            5545
+        ]
+    },
     "item_Name_RADR_CHCO_S00_SurveyorGo": {},
     "item_Name_RADR_CHCO_S01_BroadspecLite": {},
-    "item_Name_RADR_CHCO_S01_ObserverLite": {},
+    "item_Name_RADR_CHCO_S01_ObserverGo": {
+        "id": [
+            5549
+        ]
+    },
+    "item_Name_RADR_CHCO_S01_ObserverLite": {
+        "id": [
+            5519
+        ]
+    },
     "item_Name_RADR_CHCO_S01_SurveyorLite": {},
-    "item_Name_RADR_CHCO_S02_BroadSpec": {},
-    "item_Name_RADR_CHCO_S02_FullSpec": {},
-    "item_Name_RADR_CHCO_S02_Surveyor": {},
+    "item_Name_RADR_CHCO_S02_BroadSpec": {
+        "id": [
+            5535
+        ]
+    },
+    "item_Name_RADR_CHCO_S02_FullSpec": {
+        "id": [
+            5544
+        ]
+    },
+    "item_Name_RADR_CHCO_S02_Observer": {
+        "id": [
+            5548
+        ]
+    },
+    "item_Name_RADR_CHCO_S02_Surveyor": {
+        "id": [
+            5521
+        ]
+    },
+    "item_Name_RADR_CHCO_S03_FullSpecMax": {
+        "id": [
+            5546
+        ]
+    },
+    "item_Name_RADR_CHCO_S03_ObserverMax": {
+        "id": [
+            5550
+        ]
+    },
+    "item_Name_RADR_CHCO_S04_BroadSpecMax": {
+        "id": [
+            5537
+        ]
+    },
     "item_Name_RADR_Default": {},
-    "item_Name_RADR_GRNP_S00_Prevenir": {},
-    "item_Name_RADR_GRNP_S00_Sens": {},
-    "item_Name_RADR_GRNP_S01_Ecouter": {},
+    "item_Name_RADR_GRNP_S00_Agure": {
+        "id": [
+            5531
+        ]
+    },
+    "item_Name_RADR_GRNP_S00_Prevenir": {
+        "id": [
+            5527
+        ]
+    },
+    "item_Name_RADR_GRNP_S00_Sens": {
+        "id": [
+            5554
+        ]
+    },
+    "item_Name_RADR_GRNP_S01_Ecouter": {
+        "id": [
+            5520
+        ]
+    },
     "item_Name_RADR_GRNP_S01_Tige": {},
+    "item_Name_RADR_GRNP_S01_V80111": {
+        "id": [
+            5600
+        ]
+    },
     "item_Name_RADR_GRNP_S01_Voir": {},
-    "item_Name_RADR_GRNP_S02_Epier": {},
-    "item_Name_RADR_GRNP_S02_V80112": {},
+    "item_Name_RADR_GRNP_S02_Epier": {
+        "id": [
+            5526
+        ]
+    },
+    "item_Name_RADR_GRNP_S02_Savoir": {
+        "id": [
+            5553
+        ]
+    },
+    "item_Name_RADR_GRNP_S02_V80112": {
+        "id": [
+            5601
+        ]
+    },
     "item_Name_RADR_GRNP_S02_Vigilance": {},
-    "item_Name_RADR_NAVE_S01_SNSR6": {},
-    "item_Name_RADR_WLOP_S00_Denning": {},
+    "item_Name_RADR_GRNP_S03_Devoue": {
+        "id": [
+            5540
+        ]
+    },
+    "item_Name_RADR_GRNP_S03_Fidele": {
+        "id": [
+            5543
+        ]
+    },
+    "item_Name_RADR_GRNP_S03_Resolu": {
+        "id": [
+            5563
+        ]
+    },
+    "item_Name_RADR_GRNP_S03_V880": {
+        "id": [
+            5599
+        ]
+    },
+    "item_Name_RADR_NAVE_S01_SNSR5": {
+        "id": [
+            5559
+        ]
+    },
+    "item_Name_RADR_NAVE_S01_SNSR6": {
+        "id": [
+            5556
+        ]
+    },
+    "item_Name_RADR_NAVE_S01_SNSR7": {
+        "id": [
+            5567
+        ]
+    },
+    "item_Name_RADR_NAVE_S02_SNSR5x": {
+        "id": [
+            5555
+        ]
+    },
+    "item_Name_RADR_NAVE_S02_SNSR6x": {
+        "id": [
+            5557
+        ]
+    },
+    "item_Name_RADR_NAVE_S02_SNSR7x": {
+        "id": [
+            5566
+        ]
+    },
+    "item_Name_RADR_WLOP_S00_Denning": {
+        "id": [
+            5539
+        ]
+    },
+    "item_Name_RADR_WLOP_S00_Fabian": {
+        "id": [
+            5541
+        ]
+    },
     "item_Name_RADR_WLOP_S00_Vogel": {},
-    "item_Name_RADR_WLOP_S01_Backlund": {},
-    "item_Name_RADR_WLOP_S01_Capston": {},
-    "item_Name_RADR_WLOP_S01_Fleming": {},
-    "item_Name_RADR_WLOP_S02_Battani": {},
-    "item_Name_RADR_WLOP_S02_Chernykh": {},
-    "item_Name_RADR_WLOP_S02_Fawad": {},
+    "item_Name_RADR_WLOP_S01_Abetti": {
+        "id": [
+            5529
+        ]
+    },
+    "item_Name_RADR_WLOP_S01_Backlund": {
+        "id": [
+            5533
+        ]
+    },
+    "item_Name_RADR_WLOP_S01_Capston": {
+        "id": [
+            5518
+        ]
+    },
+    "item_Name_RADR_WLOP_S01_Fleming": {
+        "id": [
+            4557
+        ]
+    },
+    "item_Name_RADR_WLOP_S02_Agrippa": {
+        "id": [
+            5530
+        ]
+    },
+    "item_Name_RADR_WLOP_S02_Battani": {
+        "id": [
+            5534
+        ]
+    },
+    "item_Name_RADR_WLOP_S02_Chernykh": {
+        "id": [
+            5106
+        ]
+    },
+    "item_Name_RADR_WLOP_S02_Fawad": {
+        "id": [
+            5542
+        ]
+    },
+    "item_Name_RADR_WLOP_S03_Anysta": {
+        "id": [
+            5532
+        ]
+    },
+    "item_Name_RADR_WLOP_S03_Capsulo": {
+        "id": [
+            5525
+        ]
+    },
+    "item_Name_RADR_WLOP_S03_Socoria": {
+        "id": [
+            5560
+        ]
+    },
     "item_Name_RMB_goggles_01": {},
     "item_Name_RMB_goggles_02": {},
     "item_Name_SCU_Hat_02_01_01": {
@@ -6336,27 +6731,11 @@
     "item_Name_SHLD_Controller": {},
     "item_Name_SHLD_Default": {},
     "item_Name_SHLD_GODI_S01_FR66": {},
-    "item_Name_SHLD_GODI_S02_CoverAll": {
-        "id": [
-            1749
-        ]
-    },
-    "item_Name_SHLD_GODI_S02_FR76": {
-        "id": [
-            1750
-        ]
-    },
+    "item_Name_SHLD_GODI_S02_CoverAll": {},
+    "item_Name_SHLD_GODI_S02_FR76": {},
     "item_Name_SHLD_GODI_S02_SecureShield": {},
-    "item_Name_SHLD_GODI_S03_FR86": {
-        "id": [
-            158
-        ]
-    },
-    "item_Name_SHLD_GODI_S03_FullBlock": {
-        "id": [
-            159
-        ]
-    },
+    "item_Name_SHLD_GODI_S03_FR86": {},
+    "item_Name_SHLD_GODI_S03_FullBlock": {},
     "item_Name_SHLD_GODI_S03_SecureScreen": {},
     "item_Name_SHLD_GODI_S03_SureStop": {},
     "item_Name_SHLD_SECO_S00_LOC": {},
@@ -6392,13 +6771,21 @@
         ]
     },
     "item_Name_SHLD_VNCL_S01_Hide": {},
-    "item_Name_SHLD_YORM_S01_Jaghte": {},
+    "item_Name_SHLD_YORM_S01_Jaghte": {
+        "id": [
+            602
+        ]
+    },
     "item_Name_SHLD_YORM_S02_Bamoty": {
         "id": [
             978
         ]
     },
-    "item_Name_SHLD_YORM_S02_Haltur": {},
+    "item_Name_SHLD_YORM_S02_Haltur": {
+        "id": [
+            603
+        ]
+    },
     "item_Name_SHLD_YORM_S02_Trenta": {
         "id": [
             2158
@@ -6465,7 +6852,11 @@
             2702
         ]
     },
-    "item_Name_alb_gloves_01_01_01": {},
+    "item_Name_alb_gloves_01_01_01": {
+        "id": [
+            3972
+        ]
+    },
     "item_Name_alb_gloves_01_01_11": {
         "id": [
             4095
@@ -6504,7 +6895,11 @@
     },
     "item_Name_alb_hat_01_01_04": {},
     "item_Name_alb_hat_01_01_05": {},
-    "item_Name_alb_hat_01_01_06": {},
+    "item_Name_alb_hat_01_01_06": {
+        "id": [
+            2883
+        ]
+    },
     "item_Name_alb_hat_01_01_07": {},
     "item_Name_alb_hat_01_01_08": {},
     "item_Name_alb_hat_01_01_09": {},
@@ -6521,7 +6916,11 @@
     "item_Name_alb_hat_01_01_20": {},
     "item_Name_alb_hat_02_foundation01_06": {},
     "item_Name_alb_hat_02_foundation01_12": {},
-    "item_Name_alb_jacket_03_01_01": {},
+    "item_Name_alb_jacket_03_01_01": {
+        "id": [
+            3973
+        ]
+    },
     "item_Name_alb_jacket_03_01_11": {
         "id": [
             4148
@@ -6585,7 +6984,11 @@
     "item_Name_alb_jumpsuit_01_01_07": {},
     "item_Name_alb_jumpsuit_01_01_10": {},
     "item_Name_alb_jumpsuit_01_01_11": {},
-    "item_Name_alb_mask_01_01_01": {},
+    "item_Name_alb_mask_01_01_01": {
+        "id": [
+            5001
+        ]
+    },
     "item_Name_alb_mask_01_01_11": {
         "id": [
             4102
@@ -6890,7 +7293,11 @@
             4133
         ]
     },
-    "item_Name_alb_shirt_06_01_15": {},
+    "item_Name_alb_shirt_06_01_15": {
+        "id": [
+            5360
+        ]
+    },
     "item_Name_alb_shirt_06_01_16": {
         "id": [
             4134
@@ -6901,7 +7308,11 @@
             4135
         ]
     },
-    "item_Name_alb_shoes_01_01_01": {},
+    "item_Name_alb_shoes_01_01_01": {
+        "id": [
+            4009
+        ]
+    },
     "item_Name_alb_shoes_01_01_11": {
         "id": [
             4201
@@ -7207,11 +7618,7 @@
     "item_Name_cbd_hat_03_iae2024_19": {},
     "item_Name_cbd_hat_03_itg_01": {},
     "item_Name_cbd_hat_03_ling_01": {},
-    "item_Name_cbd_hat_03_misc_dec": {
-        "id": [
-            888
-        ]
-    },
+    "item_Name_cbd_hat_03_misc_dec": {},
     "item_Name_cbd_hat_03_origin_dec": {
         "id": [
             889
@@ -7239,7 +7646,11 @@
             4278
         ]
     },
-    "item_Name_cbd_pants_05_01_12": {},
+    "item_Name_cbd_pants_05_01_12": {
+        "id": [
+            5399
+        ]
+    },
     "item_Name_cbd_pants_05_01_13": {
         "id": [
             3961
@@ -7250,7 +7661,11 @@
             4071
         ]
     },
-    "item_Name_cbd_pants_05_01_17": {},
+    "item_Name_cbd_pants_05_01_17": {
+        "id": [
+            5400
+        ]
+    },
     "item_Name_ccc_bear_helmet_01_01_01": {},
     "item_Name_ccc_bear_helmet_01_01_03": {},
     "item_Name_ccc_bear_helmet_01_01_05": {},
@@ -7259,7 +7674,11 @@
     "item_Name_ccc_bear_helmet_01_01_09": {},
     "item_Name_ccc_combat_heavy_helmet_01_01_01": {},
     "item_Name_ccc_combat_heavy_helmet_01_01_01,P": {},
-    "item_Name_ccc_heavy_armor_helmet_01_01_01": {},
+    "item_Name_ccc_heavy_armor_helmet_01_01_01": {
+        "id": [
+            2585
+        ]
+    },
     "item_Name_ccc_heavy_armor_helmet_01_01_10": {},
     "item_Name_ccc_heavy_armor_helmet_01_01_16": {},
     "item_Name_ccc_medium_armor_arms_01_01_01": {},
@@ -7413,8 +7832,7 @@
     },
     "item_Name_cds_armor_medium_arms_02_01_03": {
         "id": [
-            1988,
-            1869
+            1988
         ]
     },
     "item_Name_cds_armor_medium_arms_02_01_11": {
@@ -7942,7 +8360,11 @@
             373
         ]
     },
-    "item_Name_cds_legacy_armor_heavy_legs_01_01_05": {},
+    "item_Name_cds_legacy_armor_heavy_legs_01_01_05": {
+        "id": [
+            5154
+        ]
+    },
     "item_Name_cds_legacy_armor_heavy_legs_01_01_06": {
         "id": [
             374
@@ -8185,7 +8607,11 @@
             339
         ]
     },
-    "item_Name_cds_legacy_armor_light_core_01_01_14": {},
+    "item_Name_cds_legacy_armor_light_core_01_01_14": {
+        "id": [
+            5140
+        ]
+    },
     "item_Name_cds_legacy_armor_light_core_01_01_15": {
         "id": [
             340
@@ -9034,7 +9460,11 @@
         ]
     },
     "item_Name_clda_undersuit_02_01_11": {},
-    "item_Name_clda_undersuit_02_01_13": {},
+    "item_Name_clda_undersuit_02_01_13": {
+        "id": [
+            3976
+        ]
+    },
     "item_Name_clda_undersuit_02_01_15": {
         "id": [
             4234
@@ -9071,7 +9501,11 @@
         ]
     },
     "item_Name_clda_utility_heavy_helmet_03_01_07": {},
-    "item_Name_clda_utility_heavy_helmet_03_01_11": {},
+    "item_Name_clda_utility_heavy_helmet_03_01_11": {
+        "id": [
+            3978
+        ]
+    },
     "item_Name_clda_utility_heavy_helmet_03_01_15": {
         "id": [
             2873
@@ -9162,8 +9596,16 @@
             1180
         ]
     },
-    "item_Name_dmc_frontier_gloves_01_01_01": {},
-    "item_Name_dmc_frontier_gloves_01_01_15": {},
+    "item_Name_dmc_frontier_gloves_01_01_01": {
+        "id": [
+            4999
+        ]
+    },
+    "item_Name_dmc_frontier_gloves_01_01_15": {
+        "id": [
+            5000
+        ]
+    },
     "item_Name_dmc_frontier_gloves_01_01_16": {
         "id": [
             4099
@@ -9171,7 +9613,6 @@
     },
     "item_Name_dmc_frontier_gloves_01_01_17": {
         "id": [
-            4145,
             4199
         ]
     },
@@ -9180,8 +9621,16 @@
             4100
         ]
     },
-    "item_Name_dmc_frontier_jacket_01_01_01": {},
-    "item_Name_dmc_frontier_jacket_01_01_15": {},
+    "item_Name_dmc_frontier_jacket_01_01_01": {
+        "id": [
+            4004
+        ]
+    },
+    "item_Name_dmc_frontier_jacket_01_01_15": {
+        "id": [
+            5002
+        ]
+    },
     "item_Name_dmc_frontier_jacket_01_01_16": {},
     "item_Name_dmc_frontier_jacket_01_01_17": {},
     "item_Name_dmc_frontier_jacket_01_01_20": {
@@ -9189,8 +9638,16 @@
             4108
         ]
     },
-    "item_Name_dmc_frontier_pants_01_01_01": {},
-    "item_Name_dmc_frontier_pants_01_01_15": {},
+    "item_Name_dmc_frontier_pants_01_01_01": {
+        "id": [
+            5003
+        ]
+    },
+    "item_Name_dmc_frontier_pants_01_01_15": {
+        "id": [
+            5004
+        ]
+    },
     "item_Name_dmc_frontier_pants_01_01_16": {},
     "item_Name_dmc_frontier_pants_01_01_17": {
         "id": [
@@ -9499,7 +9956,11 @@
         ]
     },
     "item_Name_dmc_pants_06_01_9tails01": {},
-    "item_Name_dmc_pants_07_01_01": {},
+    "item_Name_dmc_pants_07_01_01": {
+        "id": [
+            5005
+        ]
+    },
     "item_Name_dmc_pants_07_01_13": {},
     "item_Name_dmc_pants_07_01_16": {},
     "item_Name_dmc_pants_07_01_17": {},
@@ -9923,18 +10384,34 @@
         ]
     },
     "item_Name_eld_shirt_04_anvil_dec": {},
-    "item_Name_eld_shirt_04_argo_dec": {
+    "item_Name_eld_shirt_04_argo_dec": {},
+    "item_Name_eld_shirt_04_banu01_01": {
         "id": [
-            891
+            5168
         ]
     },
-    "item_Name_eld_shirt_04_banu01_01": {},
-    "item_Name_eld_shirt_04_banu02_01": {},
+    "item_Name_eld_shirt_04_banu02_01": {
+        "id": [
+            5169
+        ]
+    },
     "item_Name_eld_shirt_04_banu03_01": {},
     "item_Name_eld_shirt_04_banu04_01": {},
-    "item_Name_eld_shirt_04_banu05_01": {},
-    "item_Name_eld_shirt_04_banu06_01": {},
-    "item_Name_eld_shirt_04_banu07_01": {},
+    "item_Name_eld_shirt_04_banu05_01": {
+        "id": [
+            5170
+        ]
+    },
+    "item_Name_eld_shirt_04_banu06_01": {
+        "id": [
+            3407
+        ]
+    },
+    "item_Name_eld_shirt_04_banu07_01": {
+        "id": [
+            5171
+        ]
+    },
     "item_Name_eld_shirt_04_banu08_01": {},
     "item_Name_eld_shirt_04_banu09_01": {},
     "item_Name_eld_shirt_04_consolidated_dec": {
@@ -10053,6 +10530,11 @@
     "item_Name_eld_shirt_04_iae2023_19": {},
     "item_Name_eld_shirt_04_iae2024_10": {},
     "item_Name_eld_shirt_04_iae2024_19": {},
+    "item_Name_eld_shirt_04_levski01_01": {
+        "id": [
+            5172
+        ]
+    },
     "item_Name_eld_shirt_04_microtech_gift": {
         "id": [
             3881
@@ -10821,7 +11303,11 @@
     "item_Name_fta_medium_helmet_01_01_01,P": {},
     "item_Name_fta_medium_helmet_01_01_03": {},
     "item_Name_fta_medium_helmet_01_01_03,P": {},
-    "item_Name_fta_medium_helmet_01_01_05": {},
+    "item_Name_fta_medium_helmet_01_01_05": {
+        "id": [
+            5397
+        ]
+    },
     "item_Name_fta_medium_helmet_01_01_05,P": {},
     "item_Name_fta_medium_helmet_01_01_07": {},
     "item_Name_fta_medium_helmet_01_01_07,P": {},
@@ -10835,7 +11321,7 @@
     "item_Name_fta_medium_helmet_01_01_13,P": {},
     "item_Name_fta_medium_helmet_01_01_15": {
         "id": [
-            4080
+            5029
         ]
     },
     "item_Name_fta_medium_helmet_01_01_15,P": {},
@@ -11194,7 +11680,11 @@
             4092
         ]
     },
-    "item_Name_gsb_boots_09_01_10": {},
+    "item_Name_gsb_boots_09_01_10": {
+        "id": [
+            5358
+        ]
+    },
     "item_Name_gsb_boots_09_01_11": {
         "id": [
             4225
@@ -11205,9 +11695,17 @@
             4226
         ]
     },
-    "item_Name_gsb_boots_09_01_18": {},
+    "item_Name_gsb_boots_09_01_18": {
+        "id": [
+            5359
+        ]
+    },
     "item_Name_gsb_boots_10_01_01": {},
-    "item_Name_gsb_frontier_boots_01_01_01": {},
+    "item_Name_gsb_frontier_boots_01_01_01": {
+        "id": [
+            4997
+        ]
+    },
     "item_Name_gsb_pants_01_01_01": {},
     "item_Name_gsb_pants_01_01_03": {},
     "item_Name_gsb_pants_01_01_07": {},
@@ -11354,7 +11852,11 @@
     "item_Name_gys_undersuit_01_01_11": {},
     "item_Name_gys_undersuit_01_01_11,P": {},
     "item_Name_gys_undersuit_01_01_16": {},
-    "item_Name_hdh_boots_01_01_01": {},
+    "item_Name_hdh_boots_01_01_01": {
+        "id": [
+            4998
+        ]
+    },
     "item_Name_hdh_boots_01_01_13,P": {},
     "item_Name_hdh_boots_01_01_16,P": {},
     "item_Name_hdh_boots_01_01_17,P": {},
@@ -12732,7 +13234,11 @@
     "item_Name_outlaw_legacy_armor_heavy_legs_01_01_01": {},
     "item_Name_outlaw_legacy_armor_heavy_legs_01_01_13": {},
     "item_Name_outlaw_legacy_armor_light_arms_01_01_01": {},
-    "item_Name_outlaw_legacy_armor_light_arms_01_01_11": {},
+    "item_Name_outlaw_legacy_armor_light_arms_01_01_11": {
+        "id": [
+            3304
+        ]
+    },
     "item_Name_outlaw_legacy_armor_light_arms_01_02_01": {},
     "item_Name_outlaw_legacy_armor_light_arms_01_02_11": {
         "id": [
@@ -12761,16 +13267,23 @@
     "item_Name_outlaw_legacy_armor_light_arms_01_05_11,P": {},
     "item_Name_outlaw_legacy_armor_light_arms_01_05_15": {},
     "item_Name_outlaw_legacy_armor_light_arms_01_05_16": {},
-    "item_Name_outlaw_legacy_armor_light_arms_01_05_17": {},
+    "item_Name_outlaw_legacy_armor_light_arms_01_05_17": {
+        "id": [
+            2211
+        ]
+    },
     "item_Name_outlaw_legacy_armor_light_arms_01_05_18": {},
     "item_Name_outlaw_legacy_armor_light_arms_01_05_19": {},
     "item_Name_outlaw_legacy_armor_light_arms_01_05_20": {},
     "item_Name_outlaw_legacy_armor_light_core_01_01_01": {},
-    "item_Name_outlaw_legacy_armor_light_core_01_01_11": {},
+    "item_Name_outlaw_legacy_armor_light_core_01_01_11": {
+        "id": [
+            3303
+        ]
+    },
     "item_Name_outlaw_legacy_armor_light_core_01_02_01": {},
     "item_Name_outlaw_legacy_armor_light_core_01_02_11": {
         "id": [
-            4089,
             4195
         ]
     },
@@ -12795,7 +13308,11 @@
     "item_Name_outlaw_legacy_armor_light_core_01_05_11,P": {},
     "item_Name_outlaw_legacy_armor_light_core_01_05_15": {},
     "item_Name_outlaw_legacy_armor_light_core_01_05_16": {},
-    "item_Name_outlaw_legacy_armor_light_core_01_05_17": {},
+    "item_Name_outlaw_legacy_armor_light_core_01_05_17": {
+        "id": [
+            5153
+        ]
+    },
     "item_Name_outlaw_legacy_armor_light_core_01_05_18": {},
     "item_Name_outlaw_legacy_armor_light_core_01_05_19": {},
     "item_Name_outlaw_legacy_armor_light_core_01_05_20": {},
@@ -12803,12 +13320,11 @@
     "item_Name_outlaw_legacy_armor_light_core_01_08_01,P": {},
     "item_Name_outlaw_legacy_armor_light_helmet_01_01_01": {
         "id": [
-            1552
+            4958
         ]
     },
     "item_Name_outlaw_legacy_armor_light_helmet_01_01_11": {
         "id": [
-            4072,
             4335
         ]
     },
@@ -12820,8 +13336,7 @@
     },
     "item_Name_outlaw_legacy_armor_light_helmet_01_03_01": {
         "id": [
-            3306,
-            4194
+            3306
         ]
     },
     "item_Name_outlaw_legacy_armor_light_helmet_01_03_11": {},
@@ -12847,11 +13362,7 @@
     "item_Name_outlaw_legacy_armor_light_helmet_01_05_20": {},
     "item_Name_outlaw_legacy_armor_light_helmet_01_08_01": {},
     "item_Name_outlaw_legacy_armor_light_helmet_01_08_01,P": {},
-    "item_Name_outlaw_legacy_armor_light_legs_01_01_01": {
-        "id": [
-            1566
-        ]
-    },
+    "item_Name_outlaw_legacy_armor_light_legs_01_01_01": {},
     "item_Name_outlaw_legacy_armor_light_legs_01_01_11": {
         "id": [
             3319
@@ -12884,7 +13395,11 @@
     "item_Name_outlaw_legacy_armor_light_legs_01_05_11,P": {},
     "item_Name_outlaw_legacy_armor_light_legs_01_05_15": {},
     "item_Name_outlaw_legacy_armor_light_legs_01_05_16": {},
-    "item_Name_outlaw_legacy_armor_light_legs_01_05_17": {},
+    "item_Name_outlaw_legacy_armor_light_legs_01_05_17": {
+        "id": [
+            5155
+        ]
+    },
     "item_Name_outlaw_legacy_armor_light_legs_01_05_18": {},
     "item_Name_outlaw_legacy_armor_light_legs_01_05_19": {},
     "item_Name_outlaw_legacy_armor_light_legs_01_05_20": {},
@@ -13029,7 +13544,8 @@
     "item_Name_outlaw_legacy_heavy_armor_legs_02_01_16": {},
     "item_Name_outlaw_legacy_light_armor_arms": {
         "id": [
-            1532
+            1532,
+            4956
         ]
     },
     "item_Name_outlaw_legacy_light_armor_core": {
@@ -13038,7 +13554,11 @@
         ]
     },
     "item_Name_outlaw_legacy_light_armor_helmet": {},
-    "item_Name_outlaw_legacy_light_armor_legs": {},
+    "item_Name_outlaw_legacy_light_armor_legs": {
+        "id": [
+            1566
+        ]
+    },
     "item_Name_outlaw_legacy_medium_armor_arms_01_02_01": {},
     "item_Name_outlaw_legacy_medium_armor_arms_01_02_04": {},
     "item_Name_outlaw_legacy_medium_armor_arms_01_02_11": {},
@@ -13127,11 +13647,7 @@
     "item_Name_qrt_combat_heavy_legs_02_01_01": {},
     "item_Name_qrt_combat_heavy_legs_02_02_01": {},
     "item_Name_qrt_combat_heavy_legs_02_03_01": {},
-    "item_Name_qrt_mantis_undersuit_01_01_01": {
-        "id": [
-            2222
-        ]
-    },
+    "item_Name_qrt_mantis_undersuit_01_01_01": {},
     "item_Name_qrt_mantis_undersuit_01_01_crus,P": {},
     "item_Name_qrt_mantis_undersuit_01_01_iae2024": {},
     "item_Name_qrt_mantis_undersuit_helmet_01_01_01": {},
@@ -13197,11 +13713,7 @@
     "item_Name_qrt_specialist_medium_arms_01_01_12": {},
     "item_Name_qrt_specialist_medium_arms_01_01_15": {},
     "item_Name_qrt_specialist_medium_arms_01_01_16": {},
-    "item_Name_qrt_specialist_medium_arms_01_01_9tails01": {
-        "id": [
-            2212
-        ]
-    },
+    "item_Name_qrt_specialist_medium_arms_01_01_9tails01": {},
     "item_Name_qrt_specialist_medium_arms_01_01_iae2022": {},
     "item_Name_qrt_specialist_medium_arms_01_01_iae2024": {},
     "item_Name_qrt_specialist_medium_arms_02_01_01": {},
@@ -13366,7 +13878,11 @@
             2895
         ]
     },
-    "item_Name_r6p_boots_05_01_17": {},
+    "item_Name_r6p_boots_05_01_17": {
+        "id": [
+            5398
+        ]
+    },
     "item_Name_r6p_gloves_01_01_01": {},
     "item_Name_r6p_gloves_01_01_04": {},
     "item_Name_r6p_gloves_01_01_13": {},
@@ -13665,7 +14181,8 @@
     "item_Name_rrs_specialist_heavy_helmet_01_05": {},
     "item_Name_rrs_specialist_heavy_helmet_02_01_01": {
         "id": [
-            1886
+            1886,
+            5145
         ]
     },
     "item_Name_rrs_specialist_heavy_helmet_03_01_01": {
@@ -15103,7 +15620,11 @@
     "item_Name_sasu_light_armor_helmet_01_01_01": {},
     "item_Name_sasu_light_armor_helmet_01_01_02": {},
     "item_Name_sasu_light_armor_helmet_01_01_03": {},
-    "item_Name_sasu_medium_armor_helmet_01_01_01": {},
+    "item_Name_sasu_medium_armor_helmet_01_01_01": {
+        "id": [
+            2591
+        ]
+    },
     "item_Name_sasu_medium_armor_helmet_01_01_10": {},
     "item_Name_sasu_medium_armor_helmet_01_01_19": {},
     "item_Name_scu_apron_01_01_01": {},
@@ -15746,8 +16267,16 @@
     "item_Name_scu_service_apron_02_kelto01_01": {},
     "item_Name_scu_service_apron_02_whammers01_01": {},
     "item_Name_scu_service_hat_01_01_01": {},
-    "item_Name_scu_service_hat_01_kelto01_01": {},
-    "item_Name_scu_service_hat_01_whammers01_01": {},
+    "item_Name_scu_service_hat_01_kelto01_01": {
+        "id": [
+            5244
+        ]
+    },
+    "item_Name_scu_service_hat_01_whammers01_01": {
+        "id": [
+            5245
+        ]
+    },
     "item_Name_scu_service_hat_02_01_01": {},
     "item_Name_scu_service_hat_02_ellroys01_01": {},
     "item_Name_scu_service_hat_03_ellroys01_01": {},
@@ -15909,11 +16438,7 @@
     },
     "item_Name_slaver_armor_heavy_core_01_01_9tails01": {},
     "item_Name_slaver_armor_heavy_core_01_01_crus,P": {},
-    "item_Name_slaver_armor_heavy_helmet_01_01_01": {
-        "id": [
-            1486
-        ]
-    },
+    "item_Name_slaver_armor_heavy_helmet_01_01_01": {},
     "item_Name_slaver_armor_heavy_helmet_01_01_03": {},
     "item_Name_slaver_armor_heavy_helmet_01_01_10": {},
     "item_Name_slaver_armor_heavy_helmet_01_01_11": {},
@@ -16086,6 +16611,16 @@
     "item_Name_srvl_armor_heavy_arms_02_01_01": {},
     "item_Name_srvl_armor_heavy_core_02_01_01": {},
     "item_Name_srvl_armor_heavy_legs_02_01_01": {},
+    "item_Name_srvl_combat_heavy_legs_03_03_01": {
+        "id": [
+            5156
+        ]
+    },
+    "item_Name_srvl_combat_medium_arms_01_03_01": {
+        "id": [
+            5152
+        ]
+    },
     "item_Name_srvl_heavy_arms_01": {},
     "item_Name_srvl_heavy_arms_01_01_03,P": {},
     "item_Name_srvl_heavy_arms_01_01_04": {},
@@ -16166,7 +16701,11 @@
     "item_Name_srvl_pants_01_01_18": {},
     "item_Name_srvl_shirt_01_01_01": {},
     "item_Name_srvl_shirt_01_01_01,P": {},
-    "item_Name_srvl_shirt_01_01_04": {},
+    "item_Name_srvl_shirt_01_01_04": {
+        "id": [
+            3289
+        ]
+    },
     "item_Name_srvl_shirt_01_01_18": {},
     "item_Name_srvl_undersuit_01": {
         "id": [
@@ -16208,7 +16747,11 @@
     "item_Name_thp_light_core_01_01_01": {},
     "item_Name_thp_light_core_01_01_03": {},
     "item_Name_thp_light_core_01_01_12": {},
-    "item_Name_thp_light_helmet_01_01_01": {},
+    "item_Name_thp_light_helmet_01_01_01": {
+        "id": [
+            3413
+        ]
+    },
     "item_Name_thp_light_helmet_01_01_03": {},
     "item_Name_thp_light_helmet_01_01_12": {},
     "item_Name_thp_light_legs_01_01_01": {},
@@ -16282,8 +16825,7 @@
     },
     "item_Name_vgl_armor_light_arms_01_01_10": {
         "id": [
-            1968,
-            2213
+            1968
         ]
     },
     "item_Name_vgl_armor_light_arms_01_01_11": {},
@@ -16471,7 +17013,11 @@
             4559
         ]
     },
-    "item_Name_vgl_armor_light_helmet_01_01_10": {},
+    "item_Name_vgl_armor_light_helmet_01_01_10": {
+        "id": [
+            2270
+        ]
+    },
     "item_Name_vgl_armor_light_helmet_01_01_11": {},
     "item_Name_vgl_armor_light_helmet_01_01_12": {
         "id": [
@@ -16818,14 +17364,32 @@
         ]
     },
     "item_Namebanu_melee_01": {},
-    "item_Namebanu_melee_01_blue01": {},
-    "item_Namebanu_melee_01_green01": {},
+    "item_Namebanu_melee_01_blue01": {
+        "id": [
+            2542
+        ]
+    },
+    "item_Namebanu_melee_01_green01": {
+        "id": [
+            2540
+        ]
+    },
     "item_Namebanu_melee_01_red01": {},
     "item_Namebanu_melee_02": {},
     "item_Namebanu_melee_03": {},
     "item_Namebathfloat_crusader_01": {},
     "item_Namebehr_areadenialsystem_01": {},
     "item_Namebehr_areadenialsystem_01_ammo": {},
+    "item_Namebehr_binoculars_01": {
+        "id": [
+            5065
+        ]
+    },
+    "item_Namebehr_binoculars_01_tint03": {
+        "id": [
+            5464
+        ]
+    },
     "item_Namebehr_conc_grenade_01": {},
     "item_Namebehr_conc_grenade_01_ammo": {},
     "item_Namebehr_emp_grenade_01": {},
@@ -16836,11 +17400,7 @@
         ]
     },
     "item_Namebehr_frag_grenade_01_ammo": {},
-    "item_Namebehr_glauncher_ballistic_01": {
-        "id": [
-            2320
-        ]
-    },
+    "item_Namebehr_glauncher_ballistic_01": {},
     "item_Namebehr_glauncher_ballistic_01_black01": {},
     "item_Namebehr_glauncher_ballistic_01_cen01": {},
     "item_Namebehr_glauncher_ballistic_01_imp01": {},
@@ -16989,7 +17549,11 @@
             1591
         ]
     },
-    "item_Namebehr_sniper_ballistic_01": {},
+    "item_Namebehr_sniper_ballistic_01": {
+        "id": [
+            2625
+        ]
+    },
     "item_Namebehr_sniper_ballistic_01_arctic01": {},
     "item_Namebehr_sniper_ballistic_01_black01": {},
     "item_Namebehr_sniper_ballistic_01_mag": {
@@ -17061,7 +17625,11 @@
     "item_Namedrak_cutlass_s1_q2": {},
     "item_Nameflair_InventoryContainer_CitizenCon2954": {},
     "item_Nameflair_Pot_Col_Medium_1_Flair_a": {},
-    "item_Nameflair_Vase_Col_Large_1_Flair_a": {},
+    "item_Nameflair_Vase_Col_Large_1_Flair_a": {
+        "id": [
+            4283
+        ]
+    },
     "item_Nameflair_blackbox_1_a": {},
     "item_Nameflair_blackbox_CitizenCon2954": {},
     "item_Nameflair_poster_HT_BIS_2_a": {},
@@ -17071,11 +17639,7 @@
     "item_Nameflair_toy_plushy_sandworm_1_a": {},
     "item_Nameflair_trophy_citizencon2954_1_a": {},
     "item_Nameflair_vanduul_dmg_skul_1_a": {},
-    "item_Namegmni_lmg_ballistic_01": {
-        "id": [
-            3348
-        ]
-    },
+    "item_Namegmni_lmg_ballistic_01": {},
     "item_Namegmni_lmg_ballistic_01_blue_gold_01": {},
     "item_Namegmni_lmg_ballistic_01_firerats01": {},
     "item_Namegmni_lmg_ballistic_01_green_red01": {},
@@ -17112,12 +17676,15 @@
     "item_Namegmni_pistol_ballistic_01_imp01": {},
     "item_Namegmni_pistol_ballistic_01_mag": {
         "id": [
-            216,
             4048
         ]
     },
     "item_Namegmni_pistol_ballistic_01_pink_cian01": {},
-    "item_Namegmni_pistol_ballistic_01_red_black01": {},
+    "item_Namegmni_pistol_ballistic_01_red_black01": {
+        "id": [
+            4858
+        ]
+    },
     "item_Namegmni_pistol_ballistic_01_tan01": {
         "id": [
             72
@@ -17135,11 +17702,7 @@
     },
     "item_Namegmni_pistol_ballistic_02": {},
     "item_Namegmni_rifle_ballistic_01_IAE2023": {},
-    "item_Namegmni_rifle_ballistic_01_firerats01": {
-        "id": [
-            2322
-        ]
-    },
+    "item_Namegmni_rifle_ballistic_01_firerats01": {},
     "item_Namegmni_rifle_ballistic_01_firerats02": {},
     "item_Namegmni_rifle_ballistic_01_mag": {
         "id": [
@@ -17159,11 +17722,7 @@
     },
     "item_Namegmni_shotgun_ballistic_01_pink_red01": {},
     "item_Namegmni_shotgun_ballistic_01_red_black01": {},
-    "item_Namegmni_smg_ballistic_01_Luminalia": {
-        "id": [
-            2323
-        ]
-    },
+    "item_Namegmni_smg_ballistic_01_Luminalia": {},
     "item_Namegmni_smg_ballistic_01_blue_white01": {},
     "item_Namegmni_smg_ballistic_01_firerats01": {},
     "item_Namegmni_smg_ballistic_01_green_grey01": {},
@@ -17229,16 +17788,8 @@
             953
         ]
     },
-    "item_Namegrin_multitool_01_salvage_mag_empty": {
-        "id": [
-            4484
-        ]
-    },
-    "item_Namegrin_multitool_01_silver01": {
-        "id": [
-            2280
-        ]
-    },
+    "item_Namegrin_multitool_01_salvage_mag_empty": {},
+    "item_Namegrin_multitool_01_silver01": {},
     "item_Namegrin_multitool_01_tractorbeam": {
         "id": [
             219
@@ -17286,14 +17837,14 @@
     "item_Namejokr_decoy_grenade_01": {},
     "item_Namejokr_decoy_grenade_01_ammo": {},
     "item_Namejokr_hologram_01": {},
-    "item_Namekegr_fire_extinguisher_01": {},
-    "item_Namekegr_fire_extinguisher_01_mag": {},
-    "item_Nameklwe_grapplebeam_01": {},
-    "item_Nameklwe_lmg_energy_01": {
+    "item_Namekegr_fire_extinguisher_01": {
         "id": [
-            3660
+            4285
         ]
     },
+    "item_Namekegr_fire_extinguisher_01_mag": {},
+    "item_Nameklwe_grapplebeam_01": {},
+    "item_Nameklwe_lmg_energy_01": {},
     "item_Nameklwe_lmg_energy_01_IAE2022": {},
     "item_Nameklwe_lmg_energy_01_mag": {
         "id": [
@@ -17400,19 +17951,15 @@
             529
         ]
     },
-    "item_Nameklwe_sniper_energy_01": {},
+    "item_Nameklwe_sniper_energy_01": {
+        "id": [
+            2723
+        ]
+    },
     "item_Nameklwe_sniper_energy_01_5x": {},
     "item_Nameklwe_sniper_energy_01_Luminalia_red01": {},
-    "item_Nameklwe_sniper_energy_01_black01": {
-        "id": [
-            2273
-        ]
-    },
-    "item_Nameklwe_sniper_energy_01_black02": {
-        "id": [
-            2703
-        ]
-    },
+    "item_Nameklwe_sniper_energy_01_black01": {},
+    "item_Nameklwe_sniper_energy_01_black02": {},
     "item_Nameklwe_sniper_energy_01_cen01": {},
     "item_Nameklwe_sniper_energy_01_gold01": {},
     "item_Nameklwe_sniper_energy_01_green01": {},
@@ -17428,11 +17975,7 @@
     "item_Nameklwe_ubarrel_flsh_s1": {},
     "item_Nameklwe_ubarrel_lasr_s1": {},
     "item_Nameklwe_ubarrel_lasr_s1_02": {},
-    "item_Nameksar_melee_01": {
-        "id": [
-            2759
-        ]
-    },
+    "item_Nameksar_melee_01": {},
     "item_Nameksar_melee_01_blue01": {},
     "item_Nameksar_melee_01_brown01": {},
     "item_Nameksar_melee_01_orange01": {},
@@ -17474,11 +18017,7 @@
     "item_Nameksar_shotgun_ballistic_01_IAE2022": {},
     "item_Nameksar_shotgun_ballistic_01_firerats01": {},
     "item_Nameksar_shotgun_ballistic_01_green01": {},
-    "item_Nameksar_shotgun_ballistic_01_luminalia_blue01": {
-        "id": [
-            2324
-        ]
-    },
+    "item_Nameksar_shotgun_ballistic_01_luminalia_blue01": {},
     "item_Nameksar_shotgun_ballistic_01_mag": {
         "id": [
             533
@@ -17586,11 +18125,7 @@
             2304
         ]
     },
-    "item_Namelbco_pistol_energy_01_acid01": {
-        "id": [
-            2552
-        ]
-    },
+    "item_Namelbco_pistol_energy_01_acid01": {},
     "item_Namelbco_pistol_energy_01_chromic01": {},
     "item_Namelbco_pistol_energy_01_mag": {
         "id": [
@@ -17617,23 +18152,75 @@
     "item_Namem_slaver_undersuit_armor_02_star_marine_heavy": {},
     "item_Namemug_big_bennys_1_a": {},
     "item_Namemug_orison_2_a": {},
-    "item_Namemug_star_kitten_1_a": {},
-    "item_Namenone_melee_01": {
+    "item_Namemug_star_kitten_1_a": {
+        "id": [
+            3184
+        ]
+    },
+    "item_Namenone_lmg_ballistic_01": {
+        "id": [
+            5160
+        ]
+    },
+    "item_Namenone_lmg_ballistic_01_mag": {
+        "id": [
+            5052
+        ]
+    },
+    "item_Namenone_melee_01": {},
+    "item_Namenone_melee_01_short,P": {
         "id": [
             2868
         ]
     },
-    "item_Namenone_shotgun_ballistic_01": {},
-    "item_Namenone_shotgun_ballistic_01_green01": {},
+    "item_Namenone_pistol_ballistic_01": {
+        "id": [
+            5174
+        ]
+    },
+    "item_Namenone_pistol_ballistic_01_mag": {
+        "id": [
+            5144
+        ]
+    },
+    "item_Namenone_rifle_multi_01": {
+        "id": [
+            5161
+        ]
+    },
+    "item_Namenone_rifle_multi_01_mag": {
+        "id": [
+            5053
+        ]
+    },
+    "item_Namenone_shotgun_ballistic_01": {
+        "id": [
+            2800
+        ]
+    },
+    "item_Namenone_shotgun_ballistic_01_green01": {
+        "id": [
+            5162
+        ]
+    },
     "item_Namenone_shotgun_ballistic_01_mag": {
         "id": [
             546
         ]
     },
-    "item_Namenone_smg_energy_01": {},
+    "item_Namenone_smg_energy_01": {
+        "id": [
+            5413
+        ]
+    },
     "item_Namenone_smg_energy_01_mag": {
         "id": [
             4315
+        ]
+    },
+    "item_Namenone_special_ballistic_01_rocket": {
+        "id": [
+            5143
         ]
     },
     "item_Namenvtc_optics_holo_x1_s1": {
@@ -17728,22 +18315,14 @@
             2305
         ]
     },
-    "item_Namesasu_pistol_toy_01_teal": {
-        "id": [
-            2558
-        ]
-    },
+    "item_Namesasu_pistol_toy_01_teal": {},
     "item_Nametank125": {},
     "item_Nametemp_optics_x1_s1": {},
     "item_Nametemp_optics_x2_s1": {},
     "item_Nametemp_optics_x3_s1": {},
     "item_Nametemp_optics_x4_s2": {},
     "item_Nametemp_optics_x8_s3": {},
-    "item_Nameun_portable_light_1_a_cyan": {
-        "id": [
-            2168
-        ]
-    },
+    "item_Nameun_portable_light_1_a_cyan": {},
     "item_Nameun_portable_light_1_a_green": {},
     "item_Nameun_portable_light_1_a_orange": {},
     "item_Nameun_portable_light_1_a_pink": {
@@ -17751,16 +18330,8 @@
             414
         ]
     },
-    "item_Nameun_portable_light_1_a_red": {
-        "id": [
-            2170
-        ]
-    },
-    "item_Nameun_portable_light_1_a_yellow": {
-        "id": [
-            2171
-        ]
-    },
+    "item_Nameun_portable_light_1_a_red": {},
+    "item_Nameun_portable_light_1_a_yellow": {},
     "item_Nameutfl_melee_01": {
         "id": [
             556
@@ -17779,20 +18350,45 @@
     "item_Namevncl_lights_engine": {},
     "item_Namevncl_lights_port_wing": {},
     "item_Namevncl_lights_starboard_wing": {},
+    "item_Namevolt_lmg_energy_01_mag": {
+        "id": [
+            4898
+        ]
+    },
+    "item_Namevolt_optics_tsco_x8_s3_base": {
+        "id": [
+            4883
+        ]
+    },
+    "item_Namevolt_optics_tsco_x8_s3_tint01": {
+        "id": [
+            4884
+        ]
+    },
+    "item_Namevolt_optics_tsco_x8_s3_tint02": {
+        "id": [
+            4885
+        ]
+    },
+    "item_Namevolt_optics_tsco_x8_s3_tint03": {
+        "id": [
+            4810
+        ]
+    },
     "item_Namevolt_pistol_energy_01": {},
     "item_Namevolt_pistol_energy_01_black01": {},
     "item_Namevolt_pistol_energy_01_blue01": {},
     "item_Namevolt_pistol_energy_01_grey01": {},
-    "item_Namevolt_pistol_energy_01_mag": {},
+    "item_Namevolt_pistol_energy_01_mag": {
+        "id": [
+            4770
+        ]
+    },
     "item_Namevolt_pistol_energy_01_red01": {},
     "item_Namevolt_pistol_energy_01_red_orange01": {},
     "item_Namevolt_pistol_energy_01_white01": {},
     "item_Namevolt_pistol_energy_01_yellow01": {},
-    "item_Namevolt_rifle_energy_01": {
-        "id": [
-            4384
-        ]
-    },
+    "item_Namevolt_rifle_energy_01": {},
     "item_Namevolt_rifle_energy_01_black01": {},
     "item_Namevolt_rifle_energy_01_black_gold01": {},
     "item_Namevolt_rifle_energy_01_blue01": {},
@@ -17846,6 +18442,11 @@
     "item_Namevolt_smg_energy_01_tint03": {},
     "item_Namevolt_smg_energy_01_uee01": {},
     "item_Namevolt_smg_energy_01_white01": {},
+    "item_Namevolt_sniper_energy_01_mag": {
+        "id": [
+            4809
+        ]
+    },
     "item_Namexian_special_launcher_01": {},
     "item_decoration_armchair_AEGS_name": {
         "id": [
@@ -18012,17 +18613,9 @@
             1908
         ]
     },
-    "item_nameQDRV_WETK_S02_XL1_SCItem": {
-        "id": [
-            976
-        ]
-    },
+    "item_nameQDRV_WETK_S02_XL1_SCItem": {},
     "item_nameQDRV_WETK_S03_Balandin_SCItem": {},
-    "item_nameQDRV_WETK_S03_TS2_SCItem": {
-        "id": [
-            1909
-        ]
-    },
+    "item_nameQDRV_WETK_S03_TS2_SCItem": {},
     "item_nameReliant_Paint_Mako": {},
     "item_nameReliant_Paint_Sen": {},
     "item_nameReliant_Paint_Tana": {},
