@@ -6,6 +6,7 @@ import { buildDataBodiesAndLocations } from "./api/bodiesAndLocations";
 import { fetchAndProcessTerminals } from "./api/terminals";
 import { fetchAndProcessItems } from "./api/items";
 import { fetchAndProcessVehicles } from "./api/vehicles";
+import { fetchCategoriesAttributes } from "./api/categoriesAttributes";
 import SearchItems from "./pages/SearchItems/SearchItems";
 import SearchVehicles from "./pages/SearchVehicles/SearchVehicles";
 import ItemInfo from "./pages/ItemInfo/ItemInfo";
@@ -23,6 +24,7 @@ import {
 } from "./components/CurrentLocation/CurrentLocation";
 import NavBarBottom from "./components/NavBarBottom/NavBarBottom";
 import EyesOnStarCitizen from "./pages/EyesOnStarCitizen/EyesOnStarCitizen";
+import { setUEXAttributes } from "./utils";
 
 function App() {
   const [currentLocation, setCurrentLocation] = useState<string>(
@@ -50,6 +52,12 @@ function App() {
     const [dictSystems, dictBodies, dictLocations] = buildDataBodiesAndLocations();
 
     try {
+      try {
+        const categoriesAttributes = await fetchCategoriesAttributes();
+        setUEXAttributes(categoriesAttributes);
+      } catch (err) {
+        console.error("Failed to load UEX categories attributes", err);
+      }
       const dictTerminals = await fetchAndProcessTerminals(dictLocations);
       const dictVehicles = await fetchAndProcessVehicles();
       const dictItems = await fetchAndProcessItems();

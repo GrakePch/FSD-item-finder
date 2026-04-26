@@ -3,8 +3,13 @@ import location_name_to_i18n_key from "./data/location_name_to_i18n_key.json";
 import typeMap from "./data/type_map_full_items.json";
 import bodies from "./data/bodies.json";
 import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
-import attributes from "./data/categories_attributes.json";
 import itemsNameI18nEn from "./i18n/items/en.json";
+
+let uexAttributes: UexCategoryAttribute[] = [];
+
+export function setUEXAttributes(attributes: UexCategoryAttribute[]) {
+  uexAttributes = attributes;
+}
 
 export function isAscii(char: string): boolean {
   const code = char[0].charCodeAt(0);
@@ -31,7 +36,7 @@ export function getItemUexFormat(id: number) {
 }
 
 export function getUEXAttribute(id) {
-  for (const attr of attributes) {
+  for (const attr of uexAttributes) {
     if (attr.id == id) {
       return attr;
     }

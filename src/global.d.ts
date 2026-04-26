@@ -161,6 +161,17 @@ type PriceMinMax = {
 
 type AttributeDictionary = { [id_attribute: number]: string };
 
+interface UexCategoryAttribute {
+  id: number;
+  id_category: number;
+  name: string;
+  category_name: string;
+  description?: string | null;
+  is_lower_better?: number;
+  date_added: number;
+  date_modified: number;
+}
+
 type ArmorSet = {
   undersuit?: Item | null;
   helmet?: Item | null;
