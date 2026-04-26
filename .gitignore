@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 src/data/en.json
 src/data/zh.json
+src/data/en.ini
+src/data/zh-Hans.ini

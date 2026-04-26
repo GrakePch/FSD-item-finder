@@ -31,7 +31,7 @@ export const CurrentLocationButton = () => {
     <>
       <button className="CurrentLocationButton" onClick={openPopup}>
         <Icon path={mdiCrosshairsGps} size="1rem" />
-        <span>{t(`Location.${locationNameToI18nKey(nameCurrentLocation)}`)}</span>
+        <span>{t(locationNameToI18nKey(nameCurrentLocation), { ns: "locations" })}</span>
       </button>
     </>
   );
@@ -83,7 +83,7 @@ export const WindowSelectCurrentLocation = () => {
         <div className="current-location-info">
           <h4>
             {t(`Navbar.currentLocation`)}{" "}
-            {t(`Location.${locationNameToI18nKey(nameCurrentLocation)}`)}
+            {t(locationNameToI18nKey(nameCurrentLocation), { ns: "locations" })}
           </h4>
           <button className="close" onClick={closePopup}>
             <Icon path={mdiClose} />

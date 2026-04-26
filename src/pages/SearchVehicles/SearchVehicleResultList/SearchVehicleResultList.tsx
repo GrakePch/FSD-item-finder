@@ -17,7 +17,10 @@ const SearchVehicleResultList = ({ searchName }: { searchName: string }) => {
   // Filter vehicles based on searchName (case-insensitive)
   const vehicles = spvVehicleIndex.filter((vehicle) => {
     const nameMatch = vehicle.Name.toLowerCase().includes(searchName.toLowerCase());
-    const i18nName = t(`Vehicle.vehicle_Name${vehicle.ClassName}`, { defaultValue: "" });
+    const i18nName = t(`vehicle_Name${vehicle.ClassName}`, {
+      ns: "vehicles",
+      defaultValue: "",
+    });
     const i18nMatch = i18nName.toLowerCase().includes(searchName.toLowerCase());
     return nameMatch || i18nMatch;
   });

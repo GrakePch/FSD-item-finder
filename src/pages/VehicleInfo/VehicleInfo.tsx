@@ -44,19 +44,22 @@ const VehicleInfo = () => {
           ></div>
           <div className="vehicle-main-info">
             <h1>
-              {t("Vehicle.vehicle_Name" + spvVehicle.ClassName, {
+              {t("vehicle_Name" + spvVehicle.ClassName, {
+                ns: "vehicles",
                 defaultValue: spvVehicle.Name,
               })}
             </h1>
             <h2>
-              {t("Vehicle.vehicle_Name" + spvVehicle.ClassName, {
+              {t("vehicle_Name" + spvVehicle.ClassName, {
+                ns: "vehicles",
                 defaultValue: spvVehicle.Name,
                 lng: "en",
               })}
             </h2>
             <p>
               <span className="vehicle-role">
-                {t("VehicleClass.vehicle_class_" + spvRoleToKey(spvVehicle.Role), {
+                {t("vehicle_class_" + spvRoleToKey(spvVehicle.Role), {
+                  ns: "vehicle_classes",
                   defaultValue: t(
                     "VehicleFocus.vehicle_focus_" + spvRoleToKey(spvVehicle.Role),
                     {

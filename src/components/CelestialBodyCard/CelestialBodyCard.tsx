@@ -16,7 +16,7 @@ const CelestialBodyCard = ({ celestialBody, onClick }: CelestialBodyCardProps) =
   const description = celestialBody.parentBody
     ? t("LocationInfo.typeOfParent", {
         type: t(`LocationType.${celestialBody.type}`),
-        parent: t(`Location.${locationNameToI18nKey(celestialBody.parentBody.name)}`),
+        parent: t(locationNameToI18nKey(celestialBody.parentBody.name), { ns: "locations" }),
       })
     : t(`LocationType.${celestialBody.type}`);
 
@@ -58,7 +58,7 @@ const CelestialBodyCard = ({ celestialBody, onClick }: CelestialBodyCardProps) =
       </div>
       <div className="info">
         <p className="name">
-          {t(`Location.${locationNameToI18nKey(celestialBody.name)}`)}
+          {t(locationNameToI18nKey(celestialBody.name), { ns: "locations" })}
         </p>
         <p className="descrip">{description}</p>
       </div>

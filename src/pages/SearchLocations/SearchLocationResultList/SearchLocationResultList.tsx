@@ -37,7 +37,7 @@ const SearchLocationResultList = ({
     isNameOrI18nMatch(
       searchName,
       cb.name,
-      t(`Location.${locationNameToI18nKey(cb.name)}`, { defaultValue: cb.name })
+      t(locationNameToI18nKey(cb.name), { ns: "locations", defaultValue: cb.name })
     )
   );
 
@@ -46,7 +46,7 @@ const SearchLocationResultList = ({
         isNameOrI18nMatch(
           searchName,
           loc.name,
-          t(`Location.${locationNameToI18nKey(loc.name)}`, { defaultValue: loc.name })
+          t(locationNameToI18nKey(loc.name), { ns: "locations", defaultValue: loc.name })
         )
       )
     : [];
@@ -57,14 +57,14 @@ const SearchLocationResultList = ({
           ? term.location_path
               .slice(3)
               .map((n) =>
-                t(`Location.${locationNameToI18nKey(n)}`, { defaultValue: n, lng: "en" })
+                t(locationNameToI18nKey(n), { ns: "locations", defaultValue: n, lng: "en" })
               )
               .join(" - ")
           : "";
         const terminalNameI18n = Array.isArray(term.location_path)
           ? term.location_path
               .slice(3)
-              .map((n) => t(`Location.${locationNameToI18nKey(n)}`, { defaultValue: n }))
+              .map((n) => t(locationNameToI18nKey(n), { ns: "locations", defaultValue: n }))
               .join(" - ")
           : "";
         return isNameOrI18nMatch(searchName, terminalNameEn, terminalNameI18n);

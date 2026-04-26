@@ -16,7 +16,7 @@ const TerminalCard = ({ terminal, onClick }: TerminalCardProps) => {
   const description = terminal.parentLocation
     ? t("LocationInfo.typeOfParent", {
         type: t(`UEXTerminalType.${terminal.type}`),
-        parent: t(`Location.${locationNameToI18nKey(terminal.parentLocation.name)}`),
+        parent: t(locationNameToI18nKey(terminal.parentLocation.name), { ns: "locations" }),
       })
     : t(`UEXTerminalType.${terminal.type}`);
   const handleClick = (e: React.MouseEvent) => {
@@ -45,7 +45,7 @@ const TerminalCard = ({ terminal, onClick }: TerminalCardProps) => {
         <p className="name">
           {terminal.location_path
             .slice(3)
-            .map((n) => t(`Location.${locationNameToI18nKey(n)}`, { defaultValue: n }))
+            .map((n) => t(locationNameToI18nKey(n), { ns: "locations", defaultValue: n }))
             .join(" - ")}
         </p>
         <p className="descrip">{description}</p>

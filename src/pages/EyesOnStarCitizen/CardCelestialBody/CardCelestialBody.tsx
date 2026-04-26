@@ -10,7 +10,7 @@ const CardCelestialBody = ({ celestialBody }: { celestialBody: CelestialBody }) 
   const typeInfo = celestialBody.parentBody
     ? t("LocationInfo.typeOfParent", {
         type: t(`LocationType.${celestialBody.type}`),
-        parent: t(`Location.${locationNameToI18nKey(celestialBody.parentBody.name)}`),
+        parent: t(locationNameToI18nKey(celestialBody.parentBody.name), { ns: "locations" }),
       })
     : t(`LocationType.${celestialBody.type}`);
 
@@ -48,9 +48,9 @@ const CardCelestialBody = ({ celestialBody }: { celestialBody: CelestialBody }) 
     <div className="CardCelestialBody">
       <div className="basic-info">
         <div className="name">
-          <h1>{t(`Location.${locationNameToI18nKey(celestialBody.name)}`)}</h1>
+          <h1>{t(locationNameToI18nKey(celestialBody.name), { ns: "locations" })}</h1>
           <h2>
-            {t(`Location.${locationNameToI18nKey(celestialBody.name)}`, { lng: "en" })}
+            {t(locationNameToI18nKey(celestialBody.name), { ns: "locations", lng: "en" })}
           </h2>
         </div>
         <h3 className="type">{typeInfo}</h3>

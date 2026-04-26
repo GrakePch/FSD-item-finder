@@ -31,7 +31,7 @@ const LocationPathChips = ({ path, startDepth, onClick }: LocationPathChipsProps
           {dictLocations[loc]?.type?.toLowerCase() === "space station" && (
             <Icon path={icon["Space Station"]} size="1rem" color="hsl(170deg 80% 50%)" />
           )}
-          {t(`Location.${locationNameToI18nKey(loc)}`)}
+          {t(locationNameToI18nKey(loc), { ns: "locations" })}
         </span>
       ))}
     </p>

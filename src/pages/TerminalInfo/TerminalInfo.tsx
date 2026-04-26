@@ -107,7 +107,7 @@ const TerminalInfo = () => {
               <h1>
                 {terminalInfo.location_path
                   .slice(3)
-                  .map((n) => t(`Location.${locationNameToI18nKey(n)}`))
+                  .map((n) => t(locationNameToI18nKey(n), { ns: "locations" }))
                   .join(" - ")}
               </h1>
               <h2>{terminalInfo.name}</h2>

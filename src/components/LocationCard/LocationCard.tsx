@@ -18,7 +18,7 @@ const LocationCard = ({ location, onClick }: LocationCardProps) => {
   const description = location.parentBody
     ? t("LocationInfo.typeOfParent", {
         type: t(`LocationType.${location.type}`),
-        parent: t(`Location.${locationNameToI18nKey(location.parentBody.name)}`),
+        parent: t(locationNameToI18nKey(location.parentBody.name), { ns: "locations" }),
       })
     : t(`LocationType.${location.type}`);
   const handleClick = (e: React.MouseEvent) => {
@@ -52,7 +52,7 @@ const LocationCard = ({ location, onClick }: LocationCardProps) => {
         <Icon path={locationIcon[location.type] || locationIcon.Outpost} />
       </div>
       <div className="info">
-        <p className="name">{t(`Location.${locationNameToI18nKey(location.name)}`)}</p>
+        <p className="name">{t(locationNameToI18nKey(location.name), { ns: "locations" })}</p>
         <p className="descrip">
           {description}
           {location.quantum === 0 && (

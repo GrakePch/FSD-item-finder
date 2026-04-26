@@ -1,0 +1,65 @@
+name: Update I18n Data
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-i18n-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download INI data
+        run: |
+          mkdir -p "$RUNNER_TEMP/i18n"
+          curl --fail --location --retry 3 --output "$RUNNER_TEMP/i18n/zh-Hans.ini" "https://sczh.42kit.com/full/global.ini"
+          curl --fail --location --retry 3 --output "$RUNNER_TEMP/i18n/en.ini" "https://sczh.42kit.com/orginal/global.ini"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Generate i18n data
+        run: |
+          python scripts/i18n/process_ini_items.py \
+            --en "$RUNNER_TEMP/i18n/en.ini" \
+            --zh "$RUNNER_TEMP/i18n/zh-Hans.ini"
+          python scripts/i18n/process_ini_locations.py \
+            --en "$RUNNER_TEMP/i18n/en.ini" \
+            --zh "$RUNNER_TEMP/i18n/zh-Hans.ini"
+          python scripts/i18n/process_ini_vehicles.py \
+            --en "$RUNNER_TEMP/i18n/en.ini" \
+            --zh "$RUNNER_TEMP/i18n/zh-Hans.ini"
+          python scripts/i18n/process_ini_vehicles_class.py \
+            --en "$RUNNER_TEMP/i18n/en.ini" \
+            --zh "$RUNNER_TEMP/i18n/zh-Hans.ini"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Validate build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Commit updated data
+        run: |
+          if git diff --quiet -- src/i18n/items/en.json src/i18n/items/zh.json src/i18n/locations/en.json src/i18n/locations/zh.json src/i18n/vehicles/en.json src/i18n/vehicles/zh.json src/i18n/vehicle_classes/en.json src/i18n/vehicle_classes/zh.json; then
+            echo "No i18n data changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/i18n/items/en.json src/i18n/items/zh.json src/i18n/locations/en.json src/i18n/locations/zh.json src/i18n/vehicles/en.json src/i18n/vehicles/zh.json src/i18n/vehicle_classes/en.json src/i18n/vehicle_classes/zh.json
+          git commit -m "update i18n data"
+          git push

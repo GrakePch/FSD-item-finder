@@ -19,14 +19,18 @@ const VehicleCard = ({ vehicle }: VehicleCardProps) => {
     <div className={`VehicleCard ${vehicle.Size > 4 ? "big" : ""}`} onClick={handleClick}>
       <div className="vehicle-info">
         <p className="vehicle-role">
-          {t("VehicleClass.vehicle_class_" + spvRoleToKey(vehicle.Role), {
+          {t("vehicle_class_" + spvRoleToKey(vehicle.Role), {
+            ns: "vehicle_classes",
             defaultValue: t("VehicleFocus.vehicle_focus_" + spvRoleToKey(vehicle.Role), {
               defaultValue: vehicle.Role,
             }),
           })}
         </p>
         <p className="vehicle-name-big">
-          {t("Vehicle.vehicle_Name" + vehicle.ClassName, { defaultValue: vehicle.Name })}
+          {t("vehicle_Name" + vehicle.ClassName, {
+            ns: "vehicles",
+            defaultValue: vehicle.Name,
+          })}
         </p>
         <div className="vehicle-price-container">
           {vehicle.Store.Buy ? (

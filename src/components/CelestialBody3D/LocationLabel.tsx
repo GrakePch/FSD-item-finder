@@ -77,7 +77,7 @@ export default function LocationLabel({
           <Icon path={locationIcon[loc.type] || locationIcon.Outpost} />
         </div>
         <p className="name">
-          {t(`Location.${locationNameToI18nKey(loc.name)}`, { defaultValue: loc.name })}
+          {t(locationNameToI18nKey(loc.name), { ns: "locations", defaultValue: loc.name })}
         </p>
       </div>
     </Html>

@@ -132,7 +132,7 @@ const CardLocation = ({ location }: { location: SCLocation }) => {
   const typeInfo = location.parentBody
     ? t("LocationInfo.typeOfParent", {
         type: t(`LocationType.${location.type}`),
-        parent: t(`Location.${locationNameToI18nKey(location.parentBody.name)}`),
+        parent: t(locationNameToI18nKey(location.parentBody.name), { ns: "locations" }),
       })
     : t(`LocationType.${location.type}`);
 
@@ -140,8 +140,8 @@ const CardLocation = ({ location }: { location: SCLocation }) => {
     <div className="CardLocation">
       <div className="basic-info">
         <div className="name">
-          <h1>{t(`Location.${locationNameToI18nKey(location.name)}`)}</h1>
-          <h2>{t(`Location.${locationNameToI18nKey(location.name)}`, { lng: "en" })}</h2>
+          <h1>{t(locationNameToI18nKey(location.name), { ns: "locations" })}</h1>
+          <h2>{t(locationNameToI18nKey(location.name), { ns: "locations", lng: "en" })}</h2>
         </div>
         <h3 className="type">
           {typeInfo}
