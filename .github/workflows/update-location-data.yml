@@ -1,0 +1,47 @@
+name: Update Location Data
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-location-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Generate JSON data
+        run: python scripts/location/update_location_data.py
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Validate build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Commit updated data
+        run: |
+          if git diff --quiet -- src/data/bodies.json src/data/locations.json; then
+            echo "No location data changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/bodies.json src/data/locations.json
+          git commit -m "update location data"
+          git push
