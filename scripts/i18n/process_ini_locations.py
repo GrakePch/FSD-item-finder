@@ -44,6 +44,12 @@ parser.add_argument(
     type=Path,
     help="Path to write the generated Simplified Chinese location i18n JSON.",
 )
+parser.add_argument(
+    "--output-name-key-map",
+    default=repo_root / "src" / "data" / "location_name_to_i18n_key.json",
+    type=Path,
+    help="Path to write the generated location name to i18n key map.",
+)
 args = parser.parse_args()
 
 # Only include keys that start with any of these
@@ -70,16 +76,55 @@ def merge_manual_and_generated(manual, generated):
     result.update(generated)
     return result
 
+def is_location_name_key(key):
+    return "desc" not in key.lower()
+
+def build_location_name_key_map(en_dict, existing_map_path):
+    if existing_map_path.exists():
+        with open(existing_map_path, "r", encoding="utf-8") as f:
+            location_name_key_map = json.load(f)
+    else:
+        location_name_key_map = {}
+
+    value_counts = {}
+    for key, value in en_dict.items():
+        if is_location_name_key(key):
+            value_counts[value] = value_counts.get(value, 0) + 1
+
+    additions = {
+        value: key
+        for key, value in en_dict.items()
+        if is_location_name_key(key)
+        and value_counts.get(value) == 1
+        and value not in location_name_key_map
+    }
+
+    for value in sorted(additions):
+        location_name_key_map[value] = additions[value]
+
+    return location_name_key_map
+
 en_dict = merge_manual_and_generated(manual_en, ini_to_dict(args.en, initials))
 zh_dict = merge_manual_and_generated(manual_zh, ini_to_dict(args.zh, initials))
+location_name_key_map = build_location_name_key_map(en_dict, args.output_name_key_map)
 
 args.output_en.parent.mkdir(parents=True, exist_ok=True)
 args.output_zh.parent.mkdir(parents=True, exist_ok=True)
+args.output_name_key_map.parent.mkdir(parents=True, exist_ok=True)
 
 with open(args.output_en, "w", encoding="utf-8") as f:
     json.dump(en_dict, f, indent=4, ensure_ascii=False)
+    f.write("\n")
 
 with open(args.output_zh, "w", encoding="utf-8") as f:
     json.dump(zh_dict, f, indent=4, ensure_ascii=False)
+    f.write("\n")
 
-print(f"Results have been saved to '{args.output_en}' and '{args.output_zh}'.")
+with open(args.output_name_key_map, "w", encoding="utf-8") as f:
+    json.dump(location_name_key_map, f, indent=2, ensure_ascii=False)
+    f.write("\n")
+
+print(
+    f"Results have been saved to '{args.output_en}', '{args.output_zh}', "
+    f"and '{args.output_name_key_map}'."
+)
