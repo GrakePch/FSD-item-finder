@@ -129,15 +129,23 @@ interface Vehicle {
 
 interface Item {
   key: string;
-  name: string;
-  name_zh_Hans: string;
-  type: string;
-  sub_type: string;
+  type: string | null;
+  sub_type: string | null;
   screenshot?: string;
   slug?: string;
-  id_item: number;
+  ids: number[];
   price_min_max: PriceMinMax;
   options: TradeOption[];
+  attributes?: AttributeDictionary;
+}
+
+interface ItemCatalogEntry {
+  key: string;
+  ids: number[];
+  type: string | null;
+  sub_type: string | null;
+  slug?: string;
+  screenshot?: string;
   attributes?: AttributeDictionary;
 }
 
@@ -199,14 +207,9 @@ type UexIdI18nTypes = {
 
 type KeyToUexIdI18nTypes = { [key: string]: UexIdI18nTypes };
 
-type KeyToUexId = { [key: string]: { id?: number[] } };
-
-type KeyWithTypesInfo = { key: string; Type: string; SubType: string }[];
-
 // Intermediary interfaces
 
 interface SimpleItemOptions {
-  id_item: number;
   options: TradeOption[];
 }
 
@@ -320,13 +323,4 @@ interface TerminalApiResponse {
   faction_name: string | null;
   company_name: string | null;
   max_container_size: number;
-}
-
-interface ItemUEXApiResponse {
-  id: number;
-  section: string;
-  category: string;
-  slug: string;
-  screenshot: string | null;
-  attributes: AttributeDictionary;
 }

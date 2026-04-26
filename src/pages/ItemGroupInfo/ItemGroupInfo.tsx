@@ -116,7 +116,7 @@ const ItemGroupInfo = () => {
               }}
             >
               <ItemColorIcon name={t(vItem.key, { ns: "items", lng: "en" })} />
-              <p className="name">{t(vItem.key, { ns: "items", lng: "zh" }) || vItem.name}</p>
+              <p className="name">{t(vItem.key, { ns: "items", lng: "zh" }) || vItem.key}</p>
               {vItem.price_min_max.buy_min && vItem.price_min_max.buy_min < Infinity ? (
                 <p className="price">¤ {vItem.price_min_max.buy_min} 起</p>
               ) : (

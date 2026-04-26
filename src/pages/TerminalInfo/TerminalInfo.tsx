@@ -33,6 +33,13 @@ const TerminalInfo = () => {
   const [filterSubType, setFilterSubType] = useState("");
   const [listTerminalsNearby, setListTerminalsNearby] = useState<Terminal[]>([]);
 
+  function getTerminalItemPrice(item: Item) {
+    return (item.ids || [])
+      .map((id) => rawDictItemsPrices[id])
+      .filter((price) => price?.price_buy > 0)
+      .sort((a, b) => a.price_buy - b.price_buy)[0];
+  }
+
   useEffect(() => {
     if (searchParams.get("key")) {
       searchParams.delete("key");
@@ -75,21 +82,23 @@ const TerminalInfo = () => {
   /* Process API raw data */
   useEffect(() => {
     const _tempList = Object.values(dictItems)
-      .filter(
-        (item) =>
-          rawDictItemsPrices[item.id_item] &&
-          rawDictItemsPrices[item.id_item].price_buy > 0
-      )
-      .sort((a, b) => a.name.localeCompare(b.name));
+      .filter((item) => getTerminalItemPrice(item))
+      .sort((a, b) =>
+        t(a.key, { ns: "items", lng: "en" }).localeCompare(
+          t(b.key, { ns: "items", lng: "en" })
+        )
+      );
     // .sort((a, b) => a.sub_type.localeCompare(b.sub_type))
     // .sort((a, b) => a.type.localeCompare(b.type));
 
     setListItemsOfTerminal(_tempList);
 
     const _tempSet = new Set<string>();
-    _tempList.forEach((item) => _tempSet.add(item.sub_type));
+    _tempList.forEach((item) => {
+      if (item.sub_type) _tempSet.add(item.sub_type);
+    });
     setHashSetSubTypes(_tempSet);
-  }, [dictItems, rawDictItemsPrices]);
+  }, [dictItems, rawDictItemsPrices, t]);
 
   const handleResultClick = (key) => {
     searchParams.delete("searchFocus");
@@ -187,6 +196,7 @@ const TerminalInfo = () => {
                         ?.includes(searchString.toLocaleLowerCase())
                   )
                   .map((item) => {
+                    const terminalItemPrice = getTerminalItemPrice(item);
                     let attrsize, attrClass, attrGrade, attrTrackSignal;
                     if (item.type === "Systems") {
                       attrsize = getAttributeValueByName("Size", item.attributes);
@@ -226,7 +236,7 @@ const TerminalInfo = () => {
                         )}
                         <div className="names">
                           <p className="zh">
-                            {t(item.key, { ns: "items", lng: "zh" }) || item.name}
+                            {t(item.key, { ns: "items", lng: "zh" }) || item.key}
                           </p>
                           <p className="en">{t(item.key, { ns: "items", lng: "en" })}</p>
                         </div>
@@ -266,7 +276,7 @@ const TerminalInfo = () => {
                           </div>
                         )}
                         <p className="price">
-                          ¤ {rawDictItemsPrices[item.id_item]?.price_buy}
+                          ¤ {terminalItemPrice?.price_buy}
                         </p>
                       </button>
                     );

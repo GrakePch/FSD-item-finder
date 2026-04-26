@@ -1,3 +1,4 @@
+import argparse
 import asyncio
 import json
 import time
@@ -12,9 +13,10 @@ CONCURRENCY = 6
 RETRIES = 3
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parents[1]
-OUTPUT_PATH = REPO_ROOT / "public" / "data" / "items_uex.json"
-LEGACY_OUTPUT_PATH = REPO_ROOT / "src" / "data" / "items_uex.json"
-ITEM_KEY_PATH = REPO_ROOT / "src" / "data" / "key_to_uex_id" / "itemkey_id.json"
+OUTPUT_PATH = REPO_ROOT / "public" / "data" / "items.json"
+DEFAULT_ITEM_KEY_PATH = REPO_ROOT / ".tmp" / "uex_item" / "itemkey_id.json"
+DEFAULT_ITEM_TYPE_PATH = SCRIPT_DIR / "item_type.json"
+DEFAULT_TYPE_MAP_PATH = SCRIPT_DIR / "type_map_full_items.json"
 
 
 def fetch_json_sync(url):
@@ -77,85 +79,47 @@ def build_attribute_lookup(attributes):
     return lookup
 
 
-def load_existing_screenshots():
-    screenshots = {}
-    for path in [LEGACY_OUTPUT_PATH, OUTPUT_PATH]:
-        if not path.exists():
-            continue
-        try:
-            items = json.loads(path.read_text(encoding="utf-8"))
-        except json.JSONDecodeError:
-            continue
-        for item in items:
-            item_id = item.get("id")
-            screenshot = item.get("screenshot")
-            if item_id is not None and screenshot:
-                screenshots[item_id] = screenshot
-    return screenshots
-
-
-def normalize_item(item, attributes_by_item, existing_screenshots):
+def normalize_uex_item(item, attributes_by_item=None, existing_screenshots=None):
     item_id = item.get("id")
+    existing_screenshots = existing_screenshots or {}
+    attributes_by_item = attributes_by_item or {}
     return {
         "id": item_id,
         "section": item.get("section"),
         "category": item.get("category"),
         "slug": item.get("slug"),
         "screenshot": item.get("screenshot") or existing_screenshots.get(item_id) or None,
-        "attributes": attributes_by_item.get(item_id, {}),
+        "attributes": item.get("attributes") or attributes_by_item.get(item_id, {}),
     }
 
 
-def validate_items(items):
-    if not items:
-        raise RuntimeError("No items were generated")
-
-    required_fields = ["id", "section", "category", "slug"]
-    invalid_items = [
-        item.get("id")
-        for item in items
-        if any(item.get(field) is None for field in required_fields)
-    ]
-    if invalid_items:
-        preview = ", ".join(str(item_id) for item_id in invalid_items[:10])
-        raise RuntimeError(
-            f"{len(invalid_items)} generated items are missing required fields: {preview}"
-        )
+def load_json(path, default):
+    if not path or not path.exists():
+        return default
+    return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
-def load_referenced_item_ids():
-    if not ITEM_KEY_PATH.exists():
-        return set()
-
-    item_keys = json.loads(ITEM_KEY_PATH.read_text(encoding="utf-8"))
-    ids = set()
-    for value in item_keys.values():
-        for item_id in value.get("id") or []:
-            try:
-                ids.add(int(item_id))
-            except (TypeError, ValueError):
-                continue
-    return ids
+def load_existing_catalog(path):
+    catalog = load_json(path, [])
+    if isinstance(catalog, dict):
+        catalog = list(catalog.values())
+    return catalog if isinstance(catalog, list) else []
 
 
-def print_quality_report(items):
-    item_ids = {item["id"] for item in items}
-    referenced_ids = load_referenced_item_ids()
-    missing_referenced_ids = sorted(referenced_ids - item_ids)
-    empty_screenshots = sum(1 for item in items if not item["screenshot"])
-    empty_attributes = sum(1 for item in items if not item["attributes"])
-
-    print("Quality report:")
-    print(f"  Referenced UEX item ids: {len(referenced_ids)}")
-    print(f"  Referenced ids missing from generated metadata: {len(missing_referenced_ids)}")
-    if missing_referenced_ids:
-        preview = ", ".join(str(item_id) for item_id in missing_referenced_ids[:25])
-        print(f"  Missing id preview: {preview}")
-    print(f"  Items without screenshot: {empty_screenshots}")
-    print(f"  Items without attributes: {empty_attributes}")
+def load_existing_screenshots(existing_catalog):
+    screenshots = {}
+    for item in existing_catalog:
+        screenshot = item.get("screenshot")
+        if not screenshot:
+            continue
+        ids = item.get("ids") or [item.get("id") or item.get("id_item")]
+        for item_id in ids:
+            if item_id is not None:
+                screenshots[item_id] = screenshot
+    return screenshots
 
 
-async def main():
+async def fetch_item_metadata(existing_screenshots):
     categories = await fetch_categories()
     game_categories = [
         category
@@ -163,7 +127,6 @@ async def main():
         if category.get("type") == "item" and category.get("is_game_related")
     ]
     semaphore = asyncio.Semaphore(CONCURRENCY)
-    existing_screenshots = load_existing_screenshots()
     items_all = []
 
     async def process_category(category):
@@ -176,7 +139,7 @@ async def main():
             )
             attributes_by_item = build_attribute_lookup(attributes)
             return [
-                normalize_item(item, attributes_by_item, existing_screenshots)
+                normalize_uex_item(item, attributes_by_item, existing_screenshots)
                 for item in items
             ]
 
@@ -186,16 +149,152 @@ async def main():
         items_all.extend(category_items)
 
     items_all.sort(key=lambda item: item.get("id") or 0)
-    validate_items(items_all)
-
     print(f"Categories: {len(game_categories)}")
-    print(f"Total items: {len(items_all)}")
-    print(f"Items with attributes: {sum(1 for item in items_all if item['attributes'])}")
-    print_quality_report(items_all)
+    print(f"Total UEX metadata items: {len(items_all)}")
+    return items_all
 
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_PATH.write_text(
-        json.dumps(items_all, ensure_ascii=False, separators=(",", ":")) + "\n",
+
+def normalize_ids(value):
+    ids = []
+    for item_id in value.get("id") or value.get("ids") or []:
+        try:
+            normalized = int(item_id)
+        except (TypeError, ValueError):
+            continue
+        if normalized not in ids:
+            ids.append(normalized)
+    return ids
+
+
+def resolve_type(key, uex_metadata, item_type_by_key, type_map):
+    item_type = uex_metadata.get("section") if uex_metadata else None
+    item_sub_type = uex_metadata.get("category") if uex_metadata else None
+
+    if item_sub_type == "Jump Modules":
+        item_type = "Systems"
+    elif item_sub_type == "Undersuits":
+        item_type = "Armor"
+
+    if not item_type or not item_sub_type:
+        legacy_type = item_type_by_key.get(key, {}).get("Type")
+        mapped_type, mapped_sub_type = type_map.get(legacy_type, [None, None])
+        item_type = item_type or mapped_type
+        item_sub_type = item_sub_type or mapped_sub_type
+
+    return item_type, item_sub_type
+
+
+def build_catalog(item_keys, metadata_items, item_types, type_map, existing_catalog):
+    metadata_by_id = {item["id"]: item for item in metadata_items if item.get("id") is not None}
+    existing_by_key = {item.get("key"): item for item in existing_catalog if item.get("key")}
+    item_type_by_key = {item.get("key"): item for item in item_types if item.get("key")}
+    catalog = []
+
+    for key, uex_ids_info in sorted(item_keys.items(), key=lambda entry: entry[0]):
+        if key.startswith("vehicle_Name"):
+            continue
+
+        ids = normalize_ids(uex_ids_info)
+        first_id = ids[0] if ids else None
+        uex_metadata = metadata_by_id.get(first_id) or {}
+        existing_item = existing_by_key.get(key) or {}
+        item_type, item_sub_type = resolve_type(key, uex_metadata, item_type_by_key, type_map)
+
+        catalog.append(
+            {
+                "key": key,
+                "ids": ids,
+                "type": item_type,
+                "sub_type": item_sub_type,
+                "slug": uex_metadata.get("slug") or existing_item.get("slug"),
+                "screenshot": uex_metadata.get("screenshot") or existing_item.get("screenshot"),
+                "attributes": uex_metadata.get("attributes") or existing_item.get("attributes") or {},
+            }
+        )
+
+    return catalog
+
+
+def validate_catalog(catalog):
+    if not catalog:
+        raise RuntimeError("No item catalog entries were generated")
+
+    forbidden_fields = {"name", "name_zh_Hans", "sortName"}
+    invalid_entries = [
+        item["key"]
+        for item in catalog
+        if any(field in item for field in forbidden_fields)
+    ]
+    if invalid_entries:
+        preview = ", ".join(invalid_entries[:10])
+        raise RuntimeError(f"Generated catalog contains i18n/display fields: {preview}")
+
+    invalid_id_entries = [item["key"] for item in catalog if "id_item" in item]
+    if invalid_id_entries:
+        preview = ", ".join(invalid_id_entries[:10])
+        raise RuntimeError(f"Generated catalog contains deprecated id_item field: {preview}")
+
+
+def print_quality_report(catalog, metadata_items):
+    catalog_ids = {
+        item_id
+        for item in catalog
+        for item_id in item.get("ids") or []
+    }
+    metadata_ids = {item["id"] for item in metadata_items if item.get("id") is not None}
+    missing_metadata_ids = sorted(catalog_ids - metadata_ids)
+    no_id = sum(1 for item in catalog if not item.get("ids"))
+    no_type = sum(1 for item in catalog if not item.get("type") or not item.get("sub_type"))
+    no_screenshot = sum(1 for item in catalog if not item.get("screenshot"))
+    no_attributes = sum(1 for item in catalog if not item.get("attributes"))
+
+    print("Quality report:")
+    print(f"  Catalog items: {len(catalog)}")
+    print(f"  Catalog UEX ids: {len(catalog_ids)}")
+    print(f"  Catalog ids missing from UEX metadata: {len(missing_metadata_ids)}")
+    if missing_metadata_ids:
+        preview = ", ".join(str(item_id) for item_id in missing_metadata_ids[:25])
+        print(f"  Missing metadata id preview: {preview}")
+    print(f"  Items without UEX ids: {no_id}")
+    print(f"  Items without type/sub_type: {no_type}")
+    print(f"  Items without screenshot: {no_screenshot}")
+    print(f"  Items without attributes: {no_attributes}")
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Generate runtime item catalog JSON.")
+    parser.add_argument("--item-keys", default=DEFAULT_ITEM_KEY_PATH, type=Path, help="Path to key-to-UEX-id JSON.")
+    parser.add_argument("--item-types", default=DEFAULT_ITEM_TYPE_PATH, type=Path, help="Path to legacy item type JSON.")
+    parser.add_argument("--type-map", default=DEFAULT_TYPE_MAP_PATH, type=Path, help="Path to legacy type remap JSON.")
+    parser.add_argument("--metadata-source", type=Path, help="Path to a pre-fetched UEX item metadata JSON.")
+    parser.add_argument("--existing-catalog", default=OUTPUT_PATH, type=Path, help="Path to the existing item catalog.")
+    parser.add_argument("--output", default=OUTPUT_PATH, type=Path, help="Path to write the runtime item catalog.")
+    return parser.parse_args()
+
+
+async def main():
+    args = parse_args()
+    item_keys = load_json(args.item_keys, {})
+    item_types = load_json(args.item_types, [])
+    type_map = load_json(args.type_map, {})
+    existing_catalog = load_existing_catalog(args.existing_catalog)
+    existing_screenshots = load_existing_screenshots(existing_catalog)
+
+    if args.metadata_source:
+        metadata_items = [
+            normalize_uex_item(item, existing_screenshots=existing_screenshots)
+            for item in load_existing_catalog(args.metadata_source)
+        ]
+    else:
+        metadata_items = await fetch_item_metadata(existing_screenshots)
+
+    catalog = build_catalog(item_keys, metadata_items, item_types, type_map, existing_catalog)
+    validate_catalog(catalog)
+    print_quality_report(catalog, metadata_items)
+
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(
+        json.dumps(catalog, ensure_ascii=False, separators=(",", ":")) + "\n",
         encoding="utf-8",
     )
 
@@ -203,4 +302,4 @@ async def main():
 if __name__ == "__main__":
     started_at = time.time()
     asyncio.run(main())
-    print(f"Wrote {OUTPUT_PATH} in {time.time() - started_at:.1f}s")
+    print(f"Wrote item catalog in {time.time() - started_at:.1f}s")

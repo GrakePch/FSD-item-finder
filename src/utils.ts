@@ -1,18 +1,12 @@
 import location_name_to_i18n_key from "./data/location_name_to_i18n_key.json";
-import typeMap from "./data/type_map_full_items.json";
 import bodies from "./data/bodies.json";
 import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
 import itemsNameI18nEn from "./i18n/items/en.json";
 
 let uexAttributes: UexCategoryAttribute[] = [];
-let itemUexFormatsById = new Map<number, ItemUEXApiResponse>();
 
 export function setUEXAttributes(attributes: UexCategoryAttribute[]) {
   uexAttributes = attributes;
-}
-
-export function setItemUexFormats(items: ItemUEXApiResponse[]) {
-  itemUexFormatsById = new Map(items.map((item) => [item.id, item]));
 }
 
 export function isAscii(char: string): boolean {
@@ -27,10 +21,6 @@ export function toUrlKey(str: string): string {
 
 export function locationNameToI18nKey(name: string): string {
   return (location_name_to_i18n_key[name] as string) || name;
-}
-
-export function getItemUexFormat(id: number) {
-  return itemUexFormatsById.get(id) || null;
 }
 
 export function getUEXAttribute(id) {
@@ -53,13 +43,6 @@ export function getAttributeValueByName(
   return null;
 }
 
-/* Map legacy item type names to UEX's type & sub-type */
-export function mapToUEXTypeSubType(
-  rawType: string | undefined
-): [string, string] | [null, null] {
-  return typeMap[rawType] || [null, null];
-}
-
 export function getLocPath(option, tdata) {
   try {
     return tdata[option.id_terminal].location_path;
@@ -72,7 +55,7 @@ export function getVariants(key: string, itemsData: ItemDictionary) {
   if (!key) return [];
   if (!itemsData[key]) return [];
 
-  let thisName = itemsNameI18nEn[key] || itemsData[key].name;
+  let thisName = itemsNameI18nEn[key] || key;
   let thisSubType = itemsData[key].sub_type;
   if (
     [
@@ -90,7 +73,7 @@ export function getVariants(key: string, itemsData: ItemDictionary) {
   return Object.values(itemsData)
     .sort((a, b) => a.key.localeCompare(b.key))
     .filter(
-      (item) => item.sub_type === thisSubType && (itemsNameI18nEn[item.key] || item.name).split(" ")[0] === initial
+      (item) => item.sub_type === thisSubType && (itemsNameI18nEn[item.key] || item.key).split(" ")[0] === initial
     );
 }
 

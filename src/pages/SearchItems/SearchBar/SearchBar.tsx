@@ -58,7 +58,7 @@ const SearchBar = ({
   resultList: Item[];
   setResultList: React.Dispatch<React.SetStateAction<Item[]>>;
 }) => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
   const { dictItems } = useContext(ContextAllData);
   const [isSearching, setIsSearching] = useState(false);
@@ -79,6 +79,9 @@ const SearchBar = ({
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchName(e.target.value);
   };
+
+  const getItemName = (item: Item, lng?: string) =>
+    t(item.key, { ns: "items", lng, defaultValue: item.key });
 
   useEffect(() => {
     let _filterType = searchParams.get("type");
@@ -114,15 +117,15 @@ const SearchBar = ({
           _filterType ? (i.type + "." + i.sub_type).startsWith(_filterType) : true
         )) {
         if (
-          t(item.key, { ns: "items", lng: "en" }).toLocaleLowerCase().includes(searchName.toLocaleLowerCase()) ||
-          t(item.key, { ns: "items", lng: "zh" }).toLocaleLowerCase()?.includes(searchName.toLocaleLowerCase())
+          getItemName(item, "en").toLocaleLowerCase().includes(searchName.toLocaleLowerCase()) ||
+          getItemName(item, "zh").toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
         ) {
           tempList.push(item);
         }
       }
 
       if (tempList.length <= 300) {
-        tempList.sort((a, b) => a.name.localeCompare(b.name));
+        tempList.sort((a, b) => getItemName(a, "en").localeCompare(getItemName(b, "en")));
       }
     } else {
       tempList = getLocalStorageRecent()
@@ -170,7 +173,7 @@ const SearchBar = ({
 
     // console.log(tempList);
     setResultList(tempList);
-  }, [dictItems, searchName, searchParams]);
+  }, [dictItems, searchName, searchParams, t]);
 
   return (
     <div className="SearchBar">

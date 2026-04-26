@@ -14,8 +14,9 @@ RETRIES = 3
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parents[1]
 DEFAULT_RULES_PATH = SCRIPT_DIR / "key_match_rules.json"
-DEFAULT_ITEM_OUTPUT_PATH = REPO_ROOT / "src" / "data" / "key_to_uex_id" / "itemkey_id.json"
+DEFAULT_ITEM_OUTPUT_PATH = REPO_ROOT / ".tmp" / "uex_item" / "itemkey_id.json"
 DEFAULT_VEHICLE_OUTPUT_PATH = REPO_ROOT / ".tmp" / "uex_item" / "vehiclekey_id.json"
+DEFAULT_EXISTING_ITEM_CATALOG_PATH = REPO_ROOT / "public" / "data" / "items.json"
 
 ITEM_KEY_PREFIXES = (
     "id_item",
@@ -200,8 +201,26 @@ def generate_vehicle_key_map(vehicles_payload, lookup, normalized_lookup):
     return dict(sorted(result.items(), key=lambda entry: entry[0])), unmatched_names
 
 
-def load_existing_item_map(path):
-    if not path.exists():
+def load_existing_item_keys(path):
+    if path and path.exists():
+        data = json.loads(path.read_text(encoding="utf-8"))
+        if isinstance(data, dict):
+            return set(data.keys())
+        if isinstance(data, list):
+            return {item.get("key") for item in data if item.get("key")}
+    return set()
+
+
+def load_existing_item_map(path, fallback_catalog_path):
+    existing_keys = load_existing_item_keys(path)
+    if existing_keys:
+        return {key: {} for key in existing_keys}
+
+    existing_keys = load_existing_item_keys(fallback_catalog_path)
+    if existing_keys:
+        return {key: {} for key in existing_keys}
+
+    if not path or not path.exists():
         return {}
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -257,6 +276,7 @@ def parse_args():
     parser.add_argument("--rules", default=DEFAULT_RULES_PATH, type=Path, help="Manual key match rules JSON.")
     parser.add_argument("--output-item", default=DEFAULT_ITEM_OUTPUT_PATH, type=Path, help="Item key map output path.")
     parser.add_argument("--output-vehicle", default=DEFAULT_VEHICLE_OUTPUT_PATH, type=Path, help="Vehicle key map output path.")
+    parser.add_argument("--existing-item-catalog", default=DEFAULT_EXISTING_ITEM_CATALOG_PATH, type=Path, help="Existing runtime item catalog used to preserve historical keys when output-item does not exist.")
     parser.add_argument("--unmatched-preview", default=25, type=int, help="Maximum unmatched names to print per report.")
     return parser.parse_args()
 
@@ -268,7 +288,7 @@ def main():
     vehicles_payload = load_json_payload(args.vehicles_source, "vehicles_purchases_prices_all")
     english_entries = parse_ini(load_english_ini(args.en))
     item_rules, vehicle_rules = load_rules(args.rules)
-    existing_items = load_existing_item_map(args.output_item)
+    existing_items = load_existing_item_map(args.output_item, args.existing_item_catalog)
 
     item_lookup, normalized_item_lookup = build_item_lookup(
         english_entries,

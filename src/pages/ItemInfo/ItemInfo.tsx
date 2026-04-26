@@ -60,17 +60,23 @@ const ItemInfo = () => {
               <h1 className="zh">{t(item.key, { ns: "items" })}</h1>
               <h2 className="en">{t(item.key, { ns: "items", lng: "en" })}</h2>
             </div>
-            <div className="types">
-              <button className="type" onClick={() => handleTypeClick(item.type, "")}>
-                {t("FilterType." + typeCapitalizedToKey(item.type))}
-              </button>
-              <button
-                className="subtype"
-                onClick={() => handleTypeClick(item.type, item.sub_type)}
-              >
-                {t("FilterType." + typeCapitalizedToKey(item.sub_type))}
-              </button>
-            </div>
+            {(item.type || item.sub_type) && (
+              <div className="types">
+                {item.type && (
+                  <button className="type" onClick={() => handleTypeClick(item.type, "")}>
+                    {t("FilterType." + typeCapitalizedToKey(item.type))}
+                  </button>
+                )}
+                {item.type && item.sub_type && (
+                  <button
+                    className="subtype"
+                    onClick={() => handleTypeClick(item.type, item.sub_type)}
+                  >
+                    {t("FilterType." + typeCapitalizedToKey(item.sub_type))}
+                  </button>
+                )}
+              </div>
+            )}
             <div className="attributes">
               {item.attributes &&
                 Object.entries(item.attributes).map(([aid, v]) => (
@@ -80,16 +86,18 @@ const ItemInfo = () => {
                   </div>
                 ))}
             </div>
-            <button
-              className="button-visit-uex"
-              onClick={
-                item.sub_type === "Vehicle"
-                  ? () => window.open(uexLinkVehicle, "_blank")
-                  : () => window.open(uexLinkItem + item.slug, "_blank")
-              }
-            >
-              访问 UEX
-            </button>
+            {(item.sub_type === "Vehicle" || item.slug) && (
+              <button
+                className="button-visit-uex"
+                onClick={
+                  item.sub_type === "Vehicle"
+                    ? () => window.open(uexLinkVehicle, "_blank")
+                    : () => window.open(uexLinkItem + item.slug, "_blank")
+                }
+              >
+                访问 UEX
+              </button>
+            )}
           </div>
           {item.screenshot && (
             <div
