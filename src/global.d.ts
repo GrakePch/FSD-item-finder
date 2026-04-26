@@ -324,20 +324,9 @@ interface TerminalApiResponse {
 
 interface ItemUEXApiResponse {
   id: number;
-  id_parent: number;
-  id_category: number;
-  id_vehicle: number;
-  name: string;
-  date_added: number;
-  date_modified: number;
   section: string;
   category: string;
   slug: string;
-  url_store: string;
-  is_exclusive_pledge: number;
-  is_exclusive_subscriber: number;
-  is_exclusive_concierge: number;
-  screenshot: string;
+  screenshot: string | null;
   attributes: AttributeDictionary;
-  notification: any;
 }

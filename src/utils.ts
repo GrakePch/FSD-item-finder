@@ -1,4 +1,3 @@
-import itemsUex from "./data/items_uex.json";
 import location_name_to_i18n_key from "./data/location_name_to_i18n_key.json";
 import typeMap from "./data/type_map_full_items.json";
 import bodies from "./data/bodies.json";
@@ -6,9 +5,14 @@ import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
 import itemsNameI18nEn from "./i18n/items/en.json";
 
 let uexAttributes: UexCategoryAttribute[] = [];
+let itemUexFormatsById = new Map<number, ItemUEXApiResponse>();
 
 export function setUEXAttributes(attributes: UexCategoryAttribute[]) {
   uexAttributes = attributes;
+}
+
+export function setItemUexFormats(items: ItemUEXApiResponse[]) {
+  itemUexFormatsById = new Map(items.map((item) => [item.id, item]));
 }
 
 export function isAscii(char: string): boolean {
@@ -26,13 +30,7 @@ export function locationNameToI18nKey(name: string): string {
 }
 
 export function getItemUexFormat(id: number) {
-  for (const item of itemsUex as ItemUEXApiResponse[]) {
-    if (item.id == id) {
-      return item;
-    }
-  }
-  // console.log("No item found for id: " + id);
-  return null;
+  return itemUexFormatsById.get(id) || null;
 }
 
 export function getUEXAttribute(id) {

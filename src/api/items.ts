@@ -1,14 +1,38 @@
 import { fetchWithCache } from "./apiFetch";
 import itemsUexIds from "../data/key_to_uex_id/itemkey_id.json";
 import itemsTypes from "../data/key_to_uex_id/item_type.json";
-import { getItemUexFormat, mapToUEXTypeSubType, date4_0 } from "../utils";
+import { getItemUexFormat, mapToUEXTypeSubType, setItemUexFormats, date4_0 } from "../utils";
+
+let itemUexFormatsPromise: Promise<ItemUEXApiResponse[]> | null = null;
+
+async function fetchItemUexFormats(): Promise<ItemUEXApiResponse[]> {
+  if (!itemUexFormatsPromise) {
+    itemUexFormatsPromise = fetch("/data/items_uex.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to load UEX item metadata: ${response.status}`);
+        }
+        return response.json();
+      })
+      .catch((error) => {
+        itemUexFormatsPromise = null;
+        throw error;
+      });
+  }
+  return itemUexFormatsPromise;
+}
 
 export async function fetchAndProcessItems(): Promise<ItemDictionary> {
   const dictSimpleItems: SimpleItemOptionsDictionary = {};
-  const res = await fetchWithCache(
-    "items_prices_all",
-    "https://api.uexcorp.space/2.0/items_prices_all"
-  );
+  const [itemUexFormats, res] = await Promise.all([
+    fetchItemUexFormats(),
+    fetchWithCache(
+      "items_prices_all",
+      "https://api.uexcorp.space/2.0/items_prices_all"
+    ),
+  ]);
+  setItemUexFormats(itemUexFormats);
+
   for (const item of res.data) {
     let id = item.id_item;
     if (!dictSimpleItems[id]) {
