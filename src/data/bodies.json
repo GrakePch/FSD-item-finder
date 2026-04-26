@@ -32,14 +32,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 800.0,
-    "omRadius": 1151.456,
     "rotationRate": 3.11,
-    "rotationCorrection": 88.257,
+    "rotationCorrection": 88.721,
     "orbitAngle": 310.0,
     "orbitRadius": 28917272.576,
     "themeColorR": 172.0,
     "themeColorG": 102.0,
-    "themeColorB": 90.0
+    "themeColorB": 90.0,
+    "omRadius": 1151.456
   },
   {
     "name": "Crusader",
@@ -55,14 +55,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 7450.01,
-    "omRadius": 10673.17,
     "rotationRate": 5.1,
-    "rotationCorrection": 169.934,
+    "rotationCorrection": 152.323,
     "orbitAngle": 188.0,
     "orbitRadius": 19148527.616,
     "themeColorR": 231.0,
     "themeColorG": 152.0,
-    "themeColorB": 147.0
+    "themeColorB": 147.0,
+    "omRadius": 10673.17
   },
   {
     "name": "Hurston",
@@ -78,14 +78,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 1000.0,
-    "omRadius": 1436.814,
     "rotationRate": 2.48,
-    "rotationCorrection": 62.618,
+    "rotationCorrection": 27.503,
     "orbitAngle": 0.0,
     "orbitRadius": 12850457.6,
     "themeColorR": 138.0,
     "themeColorG": 101.0,
-    "themeColorB": 71.0
+    "themeColorB": 71.0,
+    "omRadius": 1436.814
   },
   {
     "name": "microTech",
@@ -101,14 +101,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 1000.0,
-    "omRadius": 1439.593,
     "rotationRate": 4.12,
-    "rotationCorrection": 157.891,
+    "rotationCorrection": 311.518,
     "orbitAngle": 58.866,
     "orbitRadius": 43443216.384,
     "themeColorR": 167.0,
     "themeColorG": 184.0,
-    "themeColorB": 193.0
+    "themeColorB": 193.0,
+    "omRadius": 1439.593
   },
   {
     "name": "Aberdeen",
@@ -124,14 +124,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 274.0,
-    "omRadius": 403.154,
     "rotationRate": 2.6,
-    "rotationCorrection": 234.395,
+    "rotationCorrection": 199.01,
     "orbitAngle": 36.524,
     "orbitRadius": 68815.024,
     "themeColorR": 219.0,
     "themeColorG": 180.0,
-    "themeColorB": 88.0
+    "themeColorB": 88.0,
+    "omRadius": 403.154
   },
   {
     "name": "Arial",
@@ -147,14 +147,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 344.5,
-    "omRadius": 502.855,
     "rotationRate": 5.51,
-    "rotationCorrection": 311.376,
+    "rotationCorrection": 293.749,
     "orbitAngle": 323.292,
     "orbitRadius": 52658.856,
     "themeColorR": 214.0,
     "themeColorG": 142.0,
-    "themeColorB": 34.0
+    "themeColorB": 34.0,
+    "omRadius": 502.855
   },
   {
     "name": "Calliope",
@@ -170,14 +170,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 240.0,
-    "omRadius": 355.069,
     "rotationRate": 4.59,
-    "rotationCorrection": 114.108,
+    "rotationCorrection": 114.338,
     "orbitAngle": 194.774,
     "orbitRadius": 65823.064,
     "themeColorR": 124.0,
     "themeColorG": 132.0,
-    "themeColorB": 148.0
+    "themeColorB": 148.0,
+    "omRadius": 355.069
   },
   {
     "name": "Cellin",
@@ -193,14 +193,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 260.0,
-    "omRadius": 383.353,
     "rotationRate": 4.45,
-    "rotationCorrection": 300.18,
+    "rotationCorrection": 300.525,
     "orbitAngle": 240.0,
     "orbitRadius": 50863.26,
     "themeColorR": 113.0,
     "themeColorG": 127.0,
-    "themeColorB": 144.0
+    "themeColorB": 144.0,
+    "omRadius": 383.353
   },
   {
     "name": "Clio",
@@ -216,14 +216,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 337.17,
-    "omRadius": 492.488,
     "rotationRate": 3.25,
-    "rotationCorrection": 320.67,
+    "rotationCorrection": 285.438,
     "orbitAngle": 278.839,
     "orbitRadius": 95742.64,
     "themeColorR": 130.0,
     "themeColorG": 141.0,
-    "themeColorB": 137.0
+    "themeColorB": 137.0,
+    "omRadius": 492.488
   },
   {
     "name": "Daymar",
@@ -239,14 +239,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 295.0,
-    "omRadius": 432.851,
     "rotationRate": 2.48,
-    "rotationCorrection": 97.795,
+    "rotationCorrection": 27.503,
     "orbitAngle": 60.0,
     "orbitRadius": 63279.908,
     "themeColorR": 211.0,
     "themeColorG": 170.0,
-    "themeColorB": 150.0
+    "themeColorB": 150.0,
+    "omRadius": 432.851
   },
   {
     "name": "Euterpe",
@@ -262,14 +262,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 213.0,
-    "omRadius": 316.884,
     "rotationRate": 4.28,
-    "rotationCorrection": 98.986,
+    "rotationCorrection": 72.567,
     "orbitAngle": 284.02,
     "orbitRadius": 107710.472,
     "themeColorR": 130.0,
     "themeColorG": 141.0,
-    "themeColorB": 159.0
+    "themeColorB": 159.0,
+    "omRadius": 316.884
   },
   {
     "name": "Ita",
@@ -285,14 +285,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 325.0,
-    "omRadius": 475.277,
     "rotationRate": 4.85,
-    "rotationCorrection": 143.516,
+    "rotationCorrection": 143.817,
     "orbitAngle": 100.0,
     "orbitRadius": 116686.336,
     "themeColorR": 121.0,
     "themeColorG": 135.0,
-    "themeColorB": 122.0
+    "themeColorB": 122.0,
+    "omRadius": 475.277
   },
   {
     "name": "Lyria",
@@ -308,14 +308,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 223.0,
-    "omRadius": 331.027,
     "rotationRate": 6.43,
-    "rotationCorrection": 102.955,
+    "rotationCorrection": 85.392,
     "orbitAngle": 14.631,
     "orbitRadius": 119827.896,
     "themeColorR": 112.0,
     "themeColorG": 142.0,
-    "themeColorB": 178.0
+    "themeColorB": 178.0,
+    "omRadius": 331.027
   },
   {
     "name": "Magda",
@@ -331,14 +331,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 340.83,
-    "omRadius": 497.663,
     "rotationRate": 1.94,
-    "rotationCorrection": 116.652,
+    "rotationCorrection": 117.223,
     "orbitAngle": 232.195,
     "orbitRadius": 94246.656,
     "themeColorR": 207.0,
     "themeColorG": 165.0,
-    "themeColorB": 159.0
+    "themeColorB": 159.0,
+    "omRadius": 497.663
   },
   {
     "name": "Wala",
@@ -354,14 +354,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 283.0,
-    "omRadius": 415.88,
     "rotationRate": 6.32,
-    "rotationCorrection": 294.596,
+    "rotationCorrection": 294.842,
     "orbitAngle": 143.943,
     "orbitRadius": 257308.32,
     "themeColorR": 124.0,
     "themeColorG": 150.0,
-    "themeColorB": 158.0
+    "themeColorB": 158.0,
+    "omRadius": 415.88
   },
   {
     "name": "Yela",
@@ -377,16 +377,16 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 313.0,
-    "omRadius": 458.306,
     "rotationRate": 1.82,
-    "rotationCorrection": 268.612,
+    "rotationCorrection": 269.146,
     "orbitAngle": 140.0,
     "orbitRadius": 79286.88,
     "ringRadiusInner": 500.0,
     "ringRadiusOuter": 750.0,
     "themeColorR": 128.0,
     "themeColorG": 128.0,
-    "themeColorB": 150.0
+    "themeColorB": 150.0,
+    "omRadius": 458.306
   },
   {
     "name": "ARC-L1",
@@ -743,14 +743,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 411.7,
-    "omRadius": 603.546,
     "rotationRate": 2.42,
-    "rotationCorrection": 17.643,
+    "rotationCorrection": 342.024,
     "orbitAngle": 0.0,
     "orbitRadius": 8272765.129,
     "themeColorR": 54.0,
     "themeColorG": 80.0,
-    "themeColorB": 106.0
+    "themeColorB": 106.0,
+    "omRadius": 603.546
   },
   {
     "name": "Monox",
@@ -766,14 +766,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 529.5,
-    "omRadius": 770.14,
     "rotationRate": 3.11,
-    "rotationCorrection": 173.79,
+    "rotationCorrection": 173.951,
     "orbitAngle": 0.0,
     "orbitRadius": 0.0,
     "themeColorR": 157.0,
     "themeColorG": 77.0,
-    "themeColorB": 72.0
+    "themeColorB": 72.0,
+    "omRadius": 770.14
   },
   {
     "name": "Bloom",
@@ -789,14 +789,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 413.9,
-    "omRadius": 606.657,
     "rotationRate": 5.03,
-    "rotationCorrection": 194.759,
+    "rotationCorrection": 194.822,
     "orbitAngle": 0.0,
     "orbitRadius": 0.0,
     "themeColorR": 149.0,
     "themeColorG": 103.0,
-    "themeColorB": 29.0
+    "themeColorB": 29.0,
+    "omRadius": 606.657
   },
   {
     "name": "Pyro V",
@@ -812,14 +812,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 7812.3,
-    "omRadius": 11069.575,
     "rotationRate": 5.1,
-    "rotationCorrection": 0.0,
+    "rotationCorrection": 255.394,
     "orbitAngle": 0.0,
     "orbitRadius": 0.0,
     "themeColorR": 161.0,
     "themeColorG": 186.0,
-    "themeColorB": 116.0
+    "themeColorB": 116.0,
+    "omRadius": 11069.575
   },
   {
     "name": "Pyro IV",
@@ -835,16 +835,16 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 321.4,
-    "omRadius": 475.842,
     "rotationRate": 4.09,
-    "rotationCorrection": 225.197,
+    "rotationCorrection": 198.548,
     "orbitAngle": 0.0,
     "orbitRadius": 0.0,
     "ringRadiusInner": 420.0,
     "ringRadiusOuter": 710.0,
     "themeColorR": 172.0,
     "themeColorG": 111.0,
-    "themeColorB": 81.0
+    "themeColorB": 81.0,
+    "omRadius": 475.842
   },
   {
     "name": "Terminus",
@@ -860,16 +860,16 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 285.0,
-    "omRadius": 424.365,
     "rotationRate": 2.87,
     "rotationCorrection": 121.41,
     "orbitAngle": 0.0,
     "orbitRadius": 0.0,
     "ringRadiusInner": 410.0,
     "ringRadiusOuter": 670.0,
-    "themeColorR": 94.0,
-    "themeColorG": 96.0,
-    "themeColorB": 100.0
+    "themeColorR": 47.0,
+    "themeColorG": 48.0,
+    "themeColorB": 50.0,
+    "omRadius": 424.365
   },
   {
     "name": "Ignis",
@@ -885,14 +885,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 393.17,
-    "omRadius": 568.855,
     "rotationRate": 3.44,
-    "rotationCorrection": 11.264,
+    "rotationCorrection": 335.794,
     "orbitAngle": 0.0,
     "orbitRadius": 0.0,
     "themeColorR": 205.0,
     "themeColorG": 161.0,
-    "themeColorB": 147.0
+    "themeColorB": 147.0,
+    "omRadius": 568.855
   },
   {
     "name": "Vatra",
@@ -908,14 +908,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 365.81,
-    "omRadius": 530.162,
     "rotationRate": 3.42,
-    "rotationCorrection": 351.369,
+    "rotationCorrection": 315.865,
     "orbitAngle": 0.0,
     "orbitRadius": 0.0,
     "themeColorR": 154.0,
     "themeColorG": 162.0,
-    "themeColorB": 140.0
+    "themeColorB": 140.0,
+    "omRadius": 530.162
   },
   {
     "name": "Adir",
@@ -931,14 +931,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 431.0,
-    "omRadius": 622.355,
     "rotationRate": 2.37,
     "rotationCorrection": 312.525,
     "orbitAngle": 0.0,
     "orbitRadius": 0.0,
     "themeColorR": 126.0,
     "themeColorG": 125.0,
-    "themeColorB": 139.0
+    "themeColorB": 139.0,
+    "omRadius": 622.355
   },
   {
     "name": "Fairo",
@@ -954,14 +954,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 392.24,
-    "omRadius": 570.368,
     "rotationRate": 5.08,
     "rotationCorrection": 349.722,
     "orbitAngle": 0.0,
     "orbitRadius": 0.0,
     "themeColorR": 165.0,
     "themeColorG": 76.0,
-    "themeColorB": 69.0
+    "themeColorB": 69.0,
+    "omRadius": 570.368
   },
   {
     "name": "Fuego",
@@ -977,14 +977,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 465.67,
-    "omRadius": 671.385,
     "rotationRate": 0.0,
     "rotationCorrection": 0.0,
     "orbitAngle": 0.0,
     "orbitRadius": 0.0,
     "themeColorR": 225.0,
     "themeColorG": 175.0,
-    "themeColorB": 112.0
+    "themeColorB": 112.0,
+    "omRadius": 671.385
   },
   {
     "name": "Vuur",
@@ -1000,14 +1000,14 @@
     "quaternionY": 0.0,
     "quaternionZ": 0.0,
     "bodyRadius": 452.83,
-    "omRadius": 653.227,
     "rotationRate": 5.16,
     "rotationCorrection": 125.782,
     "orbitAngle": 0.0,
     "orbitRadius": 0.0,
     "themeColorR": 163.0,
     "themeColorG": 178.0,
-    "themeColorB": 167.0
+    "themeColorB": 167.0,
+    "omRadius": 653.227
   },
   {
     "name": "PYR1 L1",
