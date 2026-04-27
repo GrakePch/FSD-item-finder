@@ -2,49 +2,68 @@ import { fetchWithCache } from "./apiFetch";
 import vehicleKeyToUexIdsAndI18n from "../data/vehicles/key_to_uex_ids_and_i18n.json";
 import { date4_0 } from "../utils";
 
+const emptyPriceMinMax = (): PriceMinMax => ({
+  buy_min: null,
+  buy_max: null,
+  sell_min: null,
+  sell_max: null,
+  rent_min: null,
+  rent_max: null,
+});
+
 export async function fetchAndProcessVehicles(): Promise<VehicleDictionary> {
   const dictSimpleVehicles: SimpleVehicleOptionsDictionary = {};
-  const res = await fetchWithCache(
-    "vehicles_purchases_prices_all",
-    "https://api.uexcorp.space/2.0/vehicles_purchases_prices_all"
-  );
-  for (const v of res.data) {
-    let id = v.id_vehicle;
-    if (!dictSimpleVehicles[id]) {
-      dictSimpleVehicles[id] = {
-        id_vehicle: v.id_vehicle,
-        options: [],
-        options_rent: [],
-      };
+
+  try {
+    const res = await fetchWithCache(
+      "vehicles_purchases_prices_all",
+      "https://api.uexcorp.space/2.0/vehicles_purchases_prices_all"
+    );
+    for (const v of res.data) {
+      let id = v.id_vehicle;
+      if (!dictSimpleVehicles[id]) {
+        dictSimpleVehicles[id] = {
+          id_vehicle: v.id_vehicle,
+          options: [],
+          options_rent: [],
+        };
+      }
+      dictSimpleVehicles[id].options.push({
+        id_terminal: v.id_terminal,
+        price_buy: v.price_buy || Infinity,
+        price_sell: null,
+        price_rent: null,
+        date_modified: v.date_modified,
+      });
     }
-    dictSimpleVehicles[id].options.push({
-      id_terminal: v.id_terminal,
-      price_buy: v.price_buy || Infinity,
-      price_sell: null,
-      price_rent: null,
-      date_modified: v.date_modified,
-    });
+  } catch (err) {
+    console.error("Failed to load vehicle purchase prices", err);
   }
-  const res2 = await fetchWithCache(
-    "vehicles_rentals_prices_all",
-    "https://api.uexcorp.space/2.0/vehicles_rentals_prices_all"
-  );
-  for (const v of res2.data) {
-    let id = v.id_vehicle;
-    if (!dictSimpleVehicles[id]) {
-      dictSimpleVehicles[id] = {
-        id_vehicle: v.id_vehicle,
-        options: [],
-        options_rent: [],
-      };
+
+  try {
+    const res2 = await fetchWithCache(
+      "vehicles_rentals_prices_all",
+      "https://api.uexcorp.space/2.0/vehicles_rentals_prices_all"
+    );
+    for (const v of res2.data) {
+      let id = v.id_vehicle;
+      if (!dictSimpleVehicles[id]) {
+        dictSimpleVehicles[id] = {
+          id_vehicle: v.id_vehicle,
+          options: [],
+          options_rent: [],
+        };
+      }
+      dictSimpleVehicles[id].options_rent.push({
+        id_terminal: v.id_terminal,
+        price_buy: null,
+        price_sell: null,
+        price_rent: v.price_rent || Infinity,
+        date_modified: v.date_modified,
+      });
     }
-    dictSimpleVehicles[id].options_rent.push({
-      id_terminal: v.id_terminal,
-      price_buy: null,
-      price_sell: null,
-      price_rent: v.price_rent || Infinity,
-      date_modified: v.date_modified,
-    });
+  } catch (err) {
+    console.error("Failed to load vehicle rental prices", err);
   }
 
   /* Process to get the final results */
@@ -63,14 +82,7 @@ export async function fetchAndProcessVehicles(): Promise<VehicleDictionary> {
         type: "Vehicle",
         sub_type: "Vehicle",
         id_vehicle: firstId,
-        price_min_max: {
-          buy_min: null,
-          buy_max: null,
-          sell_min: null,
-          sell_max: null,
-          rent_min: null,
-          rent_max: null,
-        },
+        price_min_max: emptyPriceMinMax(),
         options: simpleVehicleData?.options || [],
         options_rent: simpleVehicleData?.options_rent || [],
       };

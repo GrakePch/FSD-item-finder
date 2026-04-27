@@ -20,15 +20,42 @@ async function fetchItemCatalog(): Promise<ItemCatalogEntry[]> {
   return itemCatalogPromise;
 }
 
-export async function fetchAndProcessItems(): Promise<ItemDictionary> {
+const emptyPriceMinMax = (): PriceMinMax => ({
+  buy_min: null,
+  buy_max: null,
+  sell_min: null,
+  sell_max: null,
+  rent_min: null,
+  rent_max: null,
+});
+
+export async function fetchItemCatalogDictionary(): Promise<ItemDictionary> {
+  const itemCatalog = await fetchItemCatalog();
+  const dictItems: ItemDictionary = {};
+
+  for (const catalogItem of itemCatalog) {
+    dictItems[catalogItem.key] = {
+      key: catalogItem.key,
+      type: catalogItem.type,
+      sub_type: catalogItem.sub_type,
+      screenshot: catalogItem.screenshot,
+      slug: catalogItem.slug,
+      ids: catalogItem.ids || [],
+      price_min_max: emptyPriceMinMax(),
+      options: [],
+      attributes: catalogItem.attributes,
+    } as Item;
+  }
+
+  return dictItems;
+}
+
+async function fetchItemPriceOptions(): Promise<SimpleItemOptionsDictionary> {
   const dictSimpleItems: SimpleItemOptionsDictionary = {};
-  const [itemCatalog, res] = await Promise.all([
-    fetchItemCatalog(),
-    fetchWithCache(
-      "items_prices_all",
-      "https://api.uexcorp.space/2.0/items_prices_all"
-    ),
-  ]);
+  const res = await fetchWithCache(
+    "items_prices_all",
+    "https://api.uexcorp.space/2.0/items_prices_all"
+  );
 
   for (const item of res.data) {
     let id = item.id_item;
@@ -46,26 +73,23 @@ export async function fetchAndProcessItems(): Promise<ItemDictionary> {
     });
   }
 
+  return dictSimpleItems;
+}
+
+export async function fetchAndProcessItems(
+  catalogItems?: ItemDictionary
+): Promise<ItemDictionary> {
+  const dictSimpleItems = await fetchItemPriceOptions();
   const dictItems: ItemDictionary = {};
-  for (const catalogItem of itemCatalog) {
+
+  for (const catalogItem of Object.values(
+    catalogItems || (await fetchItemCatalogDictionary())
+  )) {
     dictItems[catalogItem.key] = {
-      key: catalogItem.key,
-      type: catalogItem.type,
-      sub_type: catalogItem.sub_type,
-      screenshot: catalogItem.screenshot,
-      slug: catalogItem.slug,
-      ids: catalogItem.ids || [],
-      price_min_max: {
-        buy_min: null,
-        buy_max: null,
-        sell_min: null,
-        sell_max: null,
-        rent_min: null,
-        rent_max: null,
-      },
+      ...catalogItem,
+      price_min_max: emptyPriceMinMax(),
       options: [],
-      attributes: catalogItem.attributes,
-    } as Item;
+    };
 
     const optionDict: Record<number, TradeOption> = {};
     for (const id of catalogItem.ids || []) {

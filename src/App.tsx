@@ -4,7 +4,7 @@ import { Route, Routes, useLocation } from "react-router";
 import { ContextAllData, AllData } from "./contexts";
 import { buildDataBodiesAndLocations } from "./api/bodiesAndLocations";
 import { fetchAndProcessTerminals } from "./api/terminals";
-import { fetchAndProcessItems } from "./api/items";
+import { fetchAndProcessItems, fetchItemCatalogDictionary } from "./api/items";
 import { fetchAndProcessVehicles } from "./api/vehicles";
 import { fetchCategoriesAttributes } from "./api/categoriesAttributes";
 import NavBar from "./components/NavBar/NavBar";
@@ -58,33 +58,62 @@ function App() {
   const initializeAppData = async () => {
     const [dictSystems, dictBodies, dictLocations] = buildDataBodiesAndLocations();
 
-    try {
-      try {
-        const categoriesAttributes = await fetchCategoriesAttributes();
-        setUEXAttributes(categoriesAttributes);
-      } catch (err) {
-        console.error("Failed to load UEX categories attributes", err);
-      }
-      const dictTerminals = await fetchAndProcessTerminals(dictLocations);
-      const dictVehicles = await fetchAndProcessVehicles();
-      const dictItems = await fetchAndProcessItems();
-
-      setAllData((prev) => ({
-        ...prev,
-        dictTerminals: dictTerminals,
-        dictVehicles: dictVehicles,
-        dictItems: dictItems,
-      }));
-    } catch (err) {
-      console.error("Failed to initialize remote app data", err);
-    }
-
     setAllData((prev) => ({
       ...prev,
       dictSystems: dictSystems,
       dictCelestialBodies: dictBodies,
       dictLocations: dictLocations,
     }));
+
+    fetchCategoriesAttributes()
+      .then((categoriesAttributes) => {
+        setUEXAttributes(categoriesAttributes);
+        setAllData((prev) => ({ ...prev }));
+      })
+      .catch((err) => {
+        console.error("Failed to load UEX categories attributes", err);
+      });
+
+    fetchItemCatalogDictionary()
+      .then((dictItems) => {
+        setAllData((prev) => ({
+          ...prev,
+          dictItems: dictItems,
+        }));
+
+        return fetchAndProcessItems(dictItems);
+      })
+      .then((dictItems) => {
+        setAllData((prev) => ({
+          ...prev,
+          dictItems: dictItems,
+        }));
+      })
+      .catch((err) => {
+        console.error("Failed to load item data", err);
+      });
+
+    fetchAndProcessTerminals(dictLocations)
+      .then((dictTerminals) => {
+        setAllData((prev) => ({
+          ...prev,
+          dictTerminals: dictTerminals,
+        }));
+      })
+      .catch((err) => {
+        console.error("Failed to load terminal data", err);
+      });
+
+    fetchAndProcessVehicles()
+      .then((dictVehicles) => {
+        setAllData((prev) => ({
+          ...prev,
+          dictVehicles: dictVehicles,
+        }));
+      })
+      .catch((err) => {
+        console.error("Failed to load vehicle data", err);
+      });
   };
 
   useEffect(() => {

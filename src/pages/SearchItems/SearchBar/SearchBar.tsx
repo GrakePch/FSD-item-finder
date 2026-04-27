@@ -70,6 +70,12 @@ const SearchBar = ({
   const [searchName, setSearchName] = useState(
     () => sessionStorage.getItem(SEARCH_NAME_KEY) || ""
   );
+  const hasLoadedItemPrices = Object.values(dictItems).some(
+    (item) =>
+      item.price_min_max.buy_min ||
+      item.price_min_max.sell_min ||
+      item.price_min_max.rent_min
+  );
 
   // Save searchName to sessionStorage whenever it changes
   useEffect(() => {
@@ -106,10 +112,12 @@ const SearchBar = ({
     setIsSearching(tempIsSearching);
 
     let tempList = [];
+    const shouldFilterBuyable =
+      !parseInt(searchParams.get("show_unbuyable")) && hasLoadedItemPrices;
     if (tempIsSearching) {
       for (const item of Object.values(dictItems)
         .filter((i) =>
-          !parseInt(searchParams.get("show_unbuyable"))
+          shouldFilterBuyable
             ? i.price_min_max.buy_min && i.price_min_max.buy_min < Infinity
             : true
         )
@@ -173,7 +181,7 @@ const SearchBar = ({
 
     // console.log(tempList);
     setResultList(tempList);
-  }, [dictItems, searchName, searchParams, t]);
+  }, [dictItems, hasLoadedItemPrices, searchName, searchParams, t]);
 
   return (
     <div className="SearchBar">

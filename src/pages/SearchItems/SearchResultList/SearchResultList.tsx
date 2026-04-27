@@ -1,5 +1,6 @@
 import "./SearchResultList.css";
 import { useNavigate, useSearchParams } from "react-router";
+import { useContext } from "react";
 import {
   getAttributeValueByName,
   sizeToColor,
@@ -11,11 +12,19 @@ import {
 import { icon } from "../../../assets/icon";
 import Icon from "@mdi/react";
 import { useTranslation } from "react-i18next";
+import { ContextAllData } from "../../../contexts";
 
 const SearchResultList = ({ results }: { results: Item[] }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
+  const { dictItems } = useContext(ContextAllData);
+  const hasLoadedItemPrices = Object.values(dictItems).some(
+    (item) =>
+      item.price_min_max.buy_min ||
+      item.price_min_max.sell_min ||
+      item.price_min_max.rent_min
+  );
 
   const handleResultClick = (key: string) => {
     navigate(`/i/${key}?${searchParams.toString()}`);
@@ -96,7 +105,11 @@ const SearchResultList = ({ results }: { results: Item[] }) => {
               <p className="price">¤ {item.price_min_max.buy_min} +</p>
             ) : (
               <p className="price" style={{ color: "hsl(0deg 0% 60%)" }}>
-                {t("SearchItemResultList.notBuyable")}
+                {hasLoadedItemPrices
+                  ? t("SearchItemResultList.notBuyable")
+                  : t("SearchItemResultList.priceUnavailable", {
+                      defaultValue: "Price unavailable",
+                    })}
               </p>
             )}
           </button>
