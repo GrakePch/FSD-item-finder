@@ -49,7 +49,6 @@ const TerminalInfo = () => {
 
   useEffect(() => {
     const _tInfo = dictTerminals[terminalId];
-    // console.log(_tInfo);
     setTerminalInfo(_tInfo);
 
     let _tempListTerminalsNearby = [];
@@ -70,12 +69,11 @@ const TerminalInfo = () => {
         const _temp = Object.fromEntries(
           res.data.data.map((item) => [item.id_item, item])
         );
-        console.log(_temp);
         setRawDictItemsPrices(_temp);
       })
       .catch((err) => {
         setRawDictItemsPrices({});
-        console.log(err);
+        console.error("Failed to load terminal item prices", err);
       });
   }, [terminalId]);
 

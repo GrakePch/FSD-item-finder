@@ -44,11 +44,7 @@ export function getAttributeValueByName(
 }
 
 export function getLocPath(option, tdata) {
-  try {
-    return tdata[option.id_terminal].location_path;
-  } catch (err) {
-    console.log(option.id_terminal);
-  }
+  return tdata?.[option.id_terminal]?.location_path;
 }
 
 export function getVariants(key: string, itemsData: ItemDictionary) {

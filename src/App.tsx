@@ -76,7 +76,7 @@ function App() {
         dictItems: dictItems,
       }));
     } catch (err) {
-      console.log(err);
+      console.error("Failed to initialize remote app data", err);
     }
 
     setAllData((prev) => ({
@@ -90,8 +90,6 @@ function App() {
   useEffect(() => {
     initializeAppData();
   }, []);
-
-  useEffect(() => console.log(allData), [allData]);
 
   useEffect(() => {
     const path = location.pathname;
