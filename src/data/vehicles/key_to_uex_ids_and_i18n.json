@@ -136,8 +136,8 @@
         "uex_ids": [
             "v-255"
         ],
-        "en": "vehicle_NameANVL_Asgard",
-        "zh_Hans": "vehicle_NameANVL_Asgard"
+        "en": "Anvil Asgard",
+        "zh_Hans": "铁砧 阿斯加德"
     },
     "vehicle_NameANVL_Ballista": {
         "uex_ids": [
@@ -241,15 +241,15 @@
         "uex_ids": [
             "v-252"
         ],
-        "en": "vehicle_NameARGO_ATLSGeo",
-        "zh_Hans": "vehicle_NameARGO_ATLSGeo"
+        "en": "ATLS GEO",
+        "zh_Hans": "ATLS GEO"
     },
     "vehicle_NameARGO_CSV_Cargo": {
         "uex_ids": [
             "v-240"
         ],
-        "en": "Argo CSV-SM",
-        "zh_Hans": "南船座 CSV-SM"
+        "en": "Argo CSV-SM\\n",
+        "zh_Hans": "南船座 CSV-SM\\n"
     },
     "vehicle_NameARGO_Mole": {
         "uex_ids": [
@@ -437,8 +437,8 @@
         "uex_ids": [
             "v-251"
         ],
-        "en": "vehicle_NameDRAK_Golem",
-        "zh_Hans": "vehicle_NameDRAK_Golem"
+        "en": "Drake Golem",
+        "zh_Hans": "德雷克 魔像"
     },
     "vehicle_NameDRAK_Herald": {
         "uex_ids": [
@@ -472,15 +472,15 @@
         "uex_ids": [
             "v-262"
         ],
-        "en": "vehicle_NameESPR_Prowler_Utility",
-        "zh_Hans": "vehicle_NameESPR_Prowler_Utility"
+        "en": "Esperia Prowler Utility",
+        "zh_Hans": "埃斯佩里亚 徘徊者 多功能"
     },
     "vehicle_NameESPR_Stinger": {
         "uex_ids": [
             "v-265"
         ],
-        "en": "vehicle_NameESPR_Stinger",
-        "zh_Hans": "vehicle_NameESPR_Stinger"
+        "en": "Esperia Stinger",
+        "zh_Hans": "埃斯佩里亚 毒刺"
     },
     "vehicle_NameESPR_Talon": {
         "uex_ids": [
@@ -507,22 +507,22 @@
         "uex_ids": [
             "v-266"
         ],
-        "en": "vehicle_NameGLSN_Shiv",
-        "zh_Hans": "vehicle_NameGLSN_Shiv"
+        "en": "Grey's Shiv",
+        "zh_Hans": "格雷 锈刃"
     },
     "vehicle_NameGRIN_MTC": {
         "uex_ids": [
             "v-256"
         ],
-        "en": "vehicle_NameGRIN_MTC",
-        "zh_Hans": "vehicle_NameGRIN_MTC"
+        "en": "Greycat MTC",
+        "zh_Hans": "灰猫 MTC"
     },
     "vehicle_NameMISC_Fortune": {
         "uex_ids": [
             "v-234"
         ],
-        "en": "vehicle_NameMISC_Fortune",
-        "zh_Hans": "vehicle_NameMISC_Fortune"
+        "en": "MISC Fortune",
+        "zh_Hans": "武藏 财运"
     },
     "vehicle_NameMISC_Freelancer": {
         "uex_ids": [
@@ -682,8 +682,8 @@
         "uex_ids": [
             "v-257"
         ],
-        "en": "vehicle_NameMRAI_Guardian_MX",
-        "zh_Hans": "vehicle_NameMRAI_Guardian_MX"
+        "en": "Mirai Guardian MX",
+        "zh_Hans": "未来 守护者 MX"
     },
     "vehicle_NameMRAI_Pulse": {
         "uex_ids": [
@@ -808,29 +808,29 @@
         "uex_ids": [
             "v-21"
         ],
-        "en": "RSI Aurora CL",
-        "zh_Hans": "RSI 极光 CL"
+        "en": "RSI Aurora Mk I CL",
+        "zh_Hans": "RSI 极光 Mk I CL"
     },
     "vehicle_NameRSI_Aurora_ES": {
         "uex_ids": [
             "v-22"
         ],
-        "en": "RSI Aurora ES",
-        "zh_Hans": "RSI 极光 ES"
+        "en": "RSI Aurora Mk I ES",
+        "zh_Hans": "RSI 极光 Mk I ES"
     },
     "vehicle_NameRSI_Aurora_LN": {
         "uex_ids": [
             "v-23"
         ],
-        "en": "RSI Aurora LN",
-        "zh_Hans": "RSI 极光 LN"
+        "en": "RSI Aurora Mk I LN",
+        "zh_Hans": "RSI 极光 Mk I LN"
     },
     "vehicle_NameRSI_Aurora_LX": {
         "uex_ids": [
             "v-24"
         ],
-        "en": "RSI Aurora LX",
-        "zh_Hans": "RSI 极光 LX"
+        "en": "RSI Aurora Mk I  LX",
+        "zh_Hans": "RSI 极光 Mk I LX"
     },
     "vehicle_NameRSI_Lynx": {
         "uex_ids": [
@@ -907,7 +907,7 @@
             "v-62"
         ],
         "en": "Tumbril Cyclone MT",
-        "zh_Hans": "盾博尔 旋风MT"
+        "zh_Hans": "盾博尔 旋风 MT"
     },
     "vehicle_NameTMBL_Cyclone_RC": {
         "uex_ids": [
@@ -948,8 +948,8 @@
         "uex_ids": [
             "v-33"
         ],
-        "en": "Esperia Blade",
-        "zh_Hans": "埃斯佩里亚 刀锋"
+        "en": "Blade",
+        "zh_Hans": "刀锋"
     },
     "vehicle_NameXIAN_Nox": {
         "uex_ids": [
