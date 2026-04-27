@@ -51,5 +51,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/data/vehicles/key_to_uex_ids_and_i18n.json public/data/items.json
-          git commit -m "update UEX item data"
+          git commit -m "chore(data): update UEX item data"
           git push
