@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { lazy, Suspense, type ReactNode, useEffect, useState } from "react";
 import "./App.css";
 import { Route, Routes, useLocation } from "react-router";
 import { ContextAllData, AllData } from "./contexts";
@@ -7,14 +7,8 @@ import { fetchAndProcessTerminals } from "./api/terminals";
 import { fetchAndProcessItems } from "./api/items";
 import { fetchAndProcessVehicles } from "./api/vehicles";
 import { fetchCategoriesAttributes } from "./api/categoriesAttributes";
-import SearchItems from "./pages/SearchItems/SearchItems";
-import SearchVehicles from "./pages/SearchVehicles/SearchVehicles";
-import ItemInfo from "./pages/ItemInfo/ItemInfo";
-import TerminalInfo from "./pages/TerminalInfo/TerminalInfo";
-import ItemGroupInfo from "./pages/ItemGroupInfo/ItemGroupInfo";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-import VehicleInfo from "./pages/VehicleInfo/VehicleInfo";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import LanguageToggle from "./components/LanguageToggle/LanguageToggle";
@@ -23,8 +17,21 @@ import {
   WindowSelectCurrentLocation,
 } from "./components/CurrentLocation/CurrentLocation";
 import NavBarBottom from "./components/NavBarBottom/NavBarBottom";
-import EyesOnStarCitizen from "./pages/EyesOnStarCitizen/EyesOnStarCitizen";
 import { setUEXAttributes } from "./utils";
+
+const SearchItems = lazy(() => import("./pages/SearchItems/SearchItems"));
+const SearchVehicles = lazy(() => import("./pages/SearchVehicles/SearchVehicles"));
+const ItemInfo = lazy(() => import("./pages/ItemInfo/ItemInfo"));
+const ItemGroupInfo = lazy(() => import("./pages/ItemGroupInfo/ItemGroupInfo"));
+const TerminalInfo = lazy(() => import("./pages/TerminalInfo/TerminalInfo"));
+const VehicleInfo = lazy(() => import("./pages/VehicleInfo/VehicleInfo"));
+const EyesOnStarCitizen = lazy(
+  () => import("./pages/EyesOnStarCitizen/EyesOnStarCitizen")
+);
+
+function route(element: ReactNode) {
+  return <Suspense fallback={null}>{element}</Suspense>;
+}
 
 function App() {
   const [currentLocation, setCurrentLocation] = useState<string>(
@@ -132,15 +139,24 @@ function App() {
         <NavBar />
         <NavBarBottom />
         <Routes>
-          <Route path="/" element={<SearchItems />} />
-          <Route path="/v" element={<SearchVehicles />} />
-          <Route path="/i/:itemKey" element={<ItemInfo />} />
-          <Route path="/iv/:itemKey" element={<ItemGroupInfo />} />
-          <Route path="/v/:vehicleClassName" element={<VehicleInfo />} />
-          <Route path="/l"                   element={<EyesOnStarCitizen routing="_" />} />
-          <Route path="/b/:celestialBodyKey" element={<EyesOnStarCitizen routing="b" />} />
-          <Route path="/l/:locationKey"      element={<EyesOnStarCitizen routing="l" />} />
-          <Route path="/t/:terminalId" element={<TerminalInfo />} />
+          <Route path="/" element={route(<SearchItems />)} />
+          <Route path="/v" element={route(<SearchVehicles />)} />
+          <Route path="/i/:itemKey" element={route(<ItemInfo />)} />
+          <Route path="/iv/:itemKey" element={route(<ItemGroupInfo />)} />
+          <Route path="/v/:vehicleClassName" element={route(<VehicleInfo />)} />
+          <Route
+            path="/l"
+            element={route(<EyesOnStarCitizen routing="_" />)}
+          />
+          <Route
+            path="/b/:celestialBodyKey"
+            element={route(<EyesOnStarCitizen routing="b" />)}
+          />
+          <Route
+            path="/l/:locationKey"
+            element={route(<EyesOnStarCitizen routing="l" />)}
+          />
+          <Route path="/t/:terminalId" element={route(<TerminalInfo />)} />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
         <Footer />
