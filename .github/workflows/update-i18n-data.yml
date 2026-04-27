@@ -2,17 +2,23 @@ name: Update I18n Data
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Update Location Data"]
+    types: [completed]
 
 permissions:
   contents: write
 
 jobs:
   update-i18n-data:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_branch || github.ref_name }}
 
       - name: Download INI data
         run: |

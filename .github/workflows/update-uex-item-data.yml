@@ -2,19 +2,23 @@ name: Update UEX Item Data
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "30 18 * * 0"
+  workflow_run:
+    workflows: ["Update I18n Data"]
+    types: [completed]
 
 permissions:
   contents: write
 
 jobs:
   update-uex-item-data:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_branch || github.ref_name }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
