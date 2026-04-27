@@ -241,8 +241,8 @@
         "uex_ids": [
             "v-252"
         ],
-        "en": "ATLS GEO",
-        "zh_Hans": "ATLS GEO"
+        "en": "vehicle_NameARGO_ATLSGeo",
+        "zh_Hans": "vehicle_NameARGO_ATLSGeo"
     },
     "vehicle_NameARGO_CSV_Cargo": {
         "uex_ids": [
@@ -311,8 +311,8 @@
         "uex_ids": [
             "v-128"
         ],
-        "en": "Mustang Alpha",
-        "zh_Hans": "野马 阿尔法"
+        "en": "vehicle_NameCNOU_Mustang",
+        "zh_Hans": "vehicle_NameCNOU_Mustang"
     },
     "vehicle_NameCNOU_Mustang_Beta": {
         "uex_ids": [
@@ -948,8 +948,8 @@
         "uex_ids": [
             "v-33"
         ],
-        "en": "Blade",
-        "zh_Hans": "刀锋"
+        "en": "vehicle_NameVNCL_Blade",
+        "zh_Hans": "vehicle_NameVNCL_Blade"
     },
     "vehicle_NameXIAN_Nox": {
         "uex_ids": [
