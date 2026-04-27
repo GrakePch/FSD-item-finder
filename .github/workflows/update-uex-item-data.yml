@@ -40,9 +40,11 @@ jobs:
           node-version: 22
           cache: npm
 
-      - name: Validate build
+      - name: Validate generated data
         run: |
           npm ci
+          npm run lint
+          npm run typecheck
           npm run build
 
       - name: Commit updated data
