@@ -26,10 +26,6 @@ def lookup_translation(key, translations):
     if key in translations:
         return translations[key]
 
-    short_key = f"{key}_short"
-    if short_key in translations:
-        return translations[short_key]
-
     return key
 
 

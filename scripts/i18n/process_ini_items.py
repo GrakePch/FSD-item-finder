@@ -25,6 +25,7 @@ args = parser.parse_args()
 # Only include keys that start with any of these
 initials = ["item_Name", "item_decoration", "item_Mining"]
 initials.reverse()
+excluded_suffixes = ("_Desc", "_desc")
 
 def ini_to_dict(filepath, initials):
     result = {}
@@ -37,7 +38,7 @@ def ini_to_dict(filepath, initials):
                 key, value = line.split("=", 1)
                 key = key.strip()
                 # Only include keys that start with any initial
-                if any(key.startswith(initial) for initial in initials):
+                if any(key.startswith(initial) for initial in initials) and not key.endswith(excluded_suffixes):
                     result[key] = value.strip()
     return result
 

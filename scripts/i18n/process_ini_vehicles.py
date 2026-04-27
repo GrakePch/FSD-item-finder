@@ -24,6 +24,7 @@ args = parser.parse_args()
 
 # Only include keys that start with any of these
 initials = ["vehicle_Name"]
+excluded_suffixes = ("_short",)
 
 def ini_to_dict(filepath, initials):
     result = {}
@@ -36,7 +37,7 @@ def ini_to_dict(filepath, initials):
                 key, value = line.split("=", 1)
                 key = key.strip()
                 # Only include keys that start with any initial
-                if any(key.startswith(initial) for initial in initials):
+                if any(key.startswith(initial) for initial in initials) and not key.lower().endswith(excluded_suffixes):
                     result[key] = value.strip()
     return result
 

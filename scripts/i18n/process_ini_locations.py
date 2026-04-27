@@ -56,6 +56,12 @@ args = parser.parse_args()
 initials = ["Stanton", "Pyro", "RR", "shop_name", "area", "ui_dest", "Orison_Destination"]
 initials.reverse()
 
+def is_excluded_key(key):
+    key_lower = key.lower()
+    if key_lower.endswith("_desc"):
+        return True
+    return key.endswith("_entrance")
+
 def ini_to_dict(filepath, initials):
     result = {}
     with open(filepath, "r", encoding="utf-8") as file:
@@ -67,12 +73,12 @@ def ini_to_dict(filepath, initials):
                 key, value = line.split("=", 1)
                 key = key.strip()
                 # Only include keys that start with any initial
-                if any(key.startswith(initial) for initial in initials):
+                if any(key.startswith(initial) for initial in initials) and not is_excluded_key(key):
                     result[key] = value.strip()
     return result
 
 def merge_manual_and_generated(manual, generated):
-    result = dict(manual)
+    result = {key: value for key, value in manual.items() if not is_excluded_key(key)}
     result.update(generated)
     return result
 

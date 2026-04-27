@@ -77,9 +77,9 @@
 `.github/workflows/update-i18n-data.yml` 仍然负责 i18n：
 
 1. 下载英文和中文 `global.ini`。
-2. `scripts/i18n/process_ini_items.py` 过滤 `item_Name`、`item_decoration`、`item_Mining`。
+2. `scripts/i18n/process_ini_items.py` 过滤 `item_Name`、`item_decoration`、`item_Mining`，并排除物品描述键。
 3. 写入 `src/i18n/items/en.json` 和 `src/i18n/items/zh.json`。
-4. 其他脚本继续生成 locations、vehicles、vehicle_classes 翻译。
+4. 其他脚本继续生成 locations、vehicles、vehicle_classes 翻译；vehicles 会排除未在运行时使用的 `_short` 名称键，locations 会排除描述键并保留入口地点名键。
 
 这条链路只生成翻译，不生成物品 catalog。物品 catalog 只保存语言无关数据。
 
