@@ -2,7 +2,10 @@ import { useNavigate, useParams, useSearchParams } from "react-router";
 import "./TerminalInfo.css";
 import { useContext, useEffect, useState } from "react";
 import { ContextAllData } from "../../contexts";
-import axios from "axios";
+import {
+  fetchTerminalItemPrices,
+  type TerminalItemPriceDictionary,
+} from "../../api/terminalItemPrices";
 import {
   classToColor,
   getAttributeValueByName,
@@ -26,7 +29,10 @@ const TerminalInfo = () => {
   const { dictTerminals, dictItems } = useContext(ContextAllData);
   const terminalId = useParams().terminalId;
   const [terminalInfo, setTerminalInfo] = useState<Terminal>(null);
-  const [rawDictItemsPrices, setRawDictItemsPrices] = useState({});
+  const [rawDictItemsPrices, setRawDictItemsPrices] =
+    useState<TerminalItemPriceDictionary>({});
+  const [isLoadingTerminalPrices, setIsLoadingTerminalPrices] = useState(false);
+  const [terminalPricesError, setTerminalPricesError] = useState(false);
   const [listItemsOfTerminal, setListItemsOfTerminal] = useState([]);
   const [hashSetSubTypes, setHashSetSubTypes] = useState<Set<string>>(new Set<string>());
   const [searchString, setSearchString] = useState("");
@@ -63,18 +69,32 @@ const TerminalInfo = () => {
 
   /* API Fetch: Get items prices at this terminal */
   useEffect(() => {
-    axios
-      .get("https://api.uexcorp.space/2.0/items_prices?id_terminal=" + terminalId)
-      .then((res) => {
-        const _temp = Object.fromEntries(
-          res.data.data.map((item) => [item.id_item, item])
-        );
-        setRawDictItemsPrices(_temp);
+    if (!terminalId) return;
+
+    let isCurrent = true;
+    setIsLoadingTerminalPrices(true);
+    setTerminalPricesError(false);
+    setRawDictItemsPrices({});
+
+    fetchTerminalItemPrices(terminalId)
+      .then((prices) => {
+        if (!isCurrent) return;
+        setRawDictItemsPrices(prices);
       })
       .catch((err) => {
+        if (!isCurrent) return;
         setRawDictItemsPrices({});
+        setTerminalPricesError(true);
         console.error("Failed to load terminal item prices", err);
+      })
+      .finally(() => {
+        if (!isCurrent) return;
+        setIsLoadingTerminalPrices(false);
       });
+
+    return () => {
+      isCurrent = false;
+    };
   }, [terminalId]);
 
   /* Process API raw data */
@@ -181,7 +201,20 @@ const TerminalInfo = () => {
                 ))}
               </div>
               <div className="list-sell">
-                {listItemsOfTerminal
+                {isLoadingTerminalPrices ? (
+                  <p className="terminal-items-status">
+                    {t("TerminalInfo.loadingItems")}
+                  </p>
+                ) : terminalPricesError ? (
+                  <p className="terminal-items-status">
+                    {t("TerminalInfo.pricesUnavailable")}
+                  </p>
+                ) : listItemsOfTerminal.length === 0 ? (
+                  <p className="terminal-items-status">
+                    {t("TerminalInfo.noItems")}
+                  </p>
+                ) : (
+                  listItemsOfTerminal
                   .filter((item) => !filterSubType || item.sub_type === filterSubType)
                   .filter(
                     (item) =>
@@ -278,7 +311,8 @@ const TerminalInfo = () => {
                         </p>
                       </button>
                     );
-                  })}
+                  })
+                )}
               </div>
             </div>
           ) : (

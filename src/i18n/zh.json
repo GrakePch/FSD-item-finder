@@ -70,7 +70,10 @@
   "TerminalInfo": {
     "nearby": "附近",
     "notFound": "终端不存在",
-    "typeNotSupported": "暂不支持此类终端的交易查询"
+    "typeNotSupported": "暂不支持此类终端的交易查询",
+    "loadingItems": "正在加载终端商品……",
+    "pricesUnavailable": "终端价格暂不可用",
+    "noItems": "该终端暂无可售商品"
   },
   "TerminalInfoSearchBar": {
     "placeholder": "搜索本终端商品……"

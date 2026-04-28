@@ -266,3 +266,9 @@
     font-weight: 600;
     font-variant-numeric: tabular-nums;
 }
+
+.TerminalInfo .terminal-items-status {
+    padding: 1rem;
+    color: var(--color-text-1);
+    text-align: center;
+}
