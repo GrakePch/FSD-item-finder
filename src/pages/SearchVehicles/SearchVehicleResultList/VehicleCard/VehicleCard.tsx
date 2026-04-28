@@ -1,6 +1,7 @@
 import "./VehicleCard.css";
 import { useNavigate } from "react-router";
-import { formatVehicleImageSrc, spvRoleToKey } from "../../../../utils";
+import VehicleImage from "../../../../components/VehicleImage";
+import { spvRoleToKey } from "../../../../utils";
 import { useTranslation } from "react-i18next";
 
 interface VehicleCardProps {
@@ -45,13 +46,20 @@ const VehicleCard = ({ vehicle }: VehicleCardProps) => {
           )}
         </div>
       </div>
-      <div
+      <VehicleImage
         className="vehicle-thumbnail"
+        vehicleClassName={vehicle.ClassName}
+        angle="top"
+        size="xs"
+        loading="lazy"
+        alt=""
+        onError={(e) => {
+          e.currentTarget.style.display = "none";
+        }}
         style={{
-          backgroundImage: `url(${formatVehicleImageSrc(vehicle)})`,
           width: vehicle.Type === "Ship" ? (vehicle.Size > 4 ? "45%" : "33%") : "25%",
         }}
-      ></div>
+      />
     </div>
   );
 };

@@ -85,9 +85,7 @@
     position: absolute;
     right: 1rem;
     height: calc(100% - 1rem);
+    object-fit: contain;
+    object-position: right center;
     filter: drop-shadow(0 .25rem .5rem #00000080);
-
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: contain;
 }
