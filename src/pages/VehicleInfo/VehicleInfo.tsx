@@ -7,7 +7,8 @@ import spvVehicleList from "../../data/vehicles/spv_vehicle_list";
 import spvClassNameToUexId from "../../data/vehicles/spv_classname_to_uex_id.json";
 import TradeOptionsSortingControl from "../../components/TradeOptionsSortingControl/TradeOptionsSortingControl";
 import TradeOptions from "../../components/TradeOptions/TradeOptions";
-import { formatVehicleImageSrc, spvRoleToKey } from "../../utils";
+import VehicleImage from "../../components/VehicleImage";
+import { spvRoleToKey } from "../../utils";
 import { useTranslation } from "react-i18next";
 import FlightVelocities from "./FlightVelocities/FlightVelocities";
 import FlightAccelerations from "./FlightAccelerations/FlightAccelerations";
@@ -36,12 +37,13 @@ const VehicleInfo = () => {
     spvVehicle && (
       <div className="VehicleInfo">
         <div className="highlight-info">
-          <div
-            style={{
-              backgroundImage: `url(${formatVehicleImageSrc(spvVehicle, "iso")})`,
-            }}
+          <VehicleImage
             className="vehicle-image"
-          ></div>
+            vehicleClassName={spvVehicle.ClassName}
+            angle="iso"
+            size="l"
+            alt=""
+          />
           <div className="vehicle-main-info">
             <h1>
               {t("vehicle_Name" + spvVehicle.ClassName, {

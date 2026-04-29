@@ -97,9 +97,8 @@
     height: 16rem;
     width: 32rem;
     max-width: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right center;
+    object-fit: contain;
+    object-position: right center;
     align-self: center;
     filter: drop-shadow(0 1.5rem 1rem #00000080);
     margin-bottom: 1rem;
@@ -107,7 +106,7 @@
 
 @media (max-width: 719px) {
     .VehicleInfo .vehicle-image {
-    background-position: center;
+        object-position: center;
     }
 }
 
