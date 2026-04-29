@@ -6,9 +6,10 @@ import { useTranslation } from "react-i18next";
 
 interface VehicleCardProps {
   vehicle: SpvVehicleIndex;
+  uexBuyPrice?: number | null;
 }
 
-const VehicleCard = ({ vehicle }: VehicleCardProps) => {
+const VehicleCard = ({ vehicle, uexBuyPrice }: VehicleCardProps) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -39,11 +40,11 @@ const VehicleCard = ({ vehicle }: VehicleCardProps) => {
           ) : (
             <p className="vehicle-price-USD inactive">{t("VehicleInfo.notBuyableUSD")}</p>
           )}
-          {vehicle.PU.Buy ? (
-            <p className="vehicle-price-UEC">{`¤ ${vehicle.PU.Buy.toLocaleString()}`}</p>
-          ) : (
+          {uexBuyPrice ? (
+            <p className="vehicle-price-UEC">{`¤ ${uexBuyPrice.toLocaleString()}`}</p>
+          ) : uexBuyPrice === null ? (
             <p className="vehicle-price-UEC inactive">{t("VehicleInfo.notBuyableUEC")}</p>
-          )}
+          ) : null}
         </div>
       </div>
       <VehicleImage

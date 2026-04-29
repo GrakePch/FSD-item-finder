@@ -1,8 +1,11 @@
 import "./SearchVehicleResultList.css";
 import spvVehicleIndex from "../../../data/vehicles/spv_vehicle_index";
 import vehicleClassNameToSeries from "../../../data/vehicles/manual_vehicle_classname_to_series";
+import spvClassNameToUexId from "../../../data/vehicles/spv_classname_to_uex_id.json";
 import VehicleCard from "./VehicleCard/VehicleCard";
 import { useTranslation } from "react-i18next";
+import { useContext, useMemo } from "react";
+import { ContextAllData } from "../../../contexts";
 
 type seriesInfo = {
   isSeries: boolean;
@@ -14,6 +17,24 @@ type seriesInfo = {
 
 const SearchVehicleResultList = ({ searchName }: { searchName: string }) => {
   const { t } = useTranslation();
+  const { dictVehicles } = useContext(ContextAllData);
+
+  const uexVehicleById = useMemo(() => {
+    return Object.fromEntries(
+      Object.values(dictVehicles).map((vehicle) => [vehicle.id_vehicle, vehicle])
+    );
+  }, [dictVehicles]);
+
+  const getUexBuyPrice = (vehicle: SpvVehicleIndex) => {
+    if (Object.keys(uexVehicleById).length === 0) return undefined;
+
+    const uexId =
+      (spvClassNameToUexId as Record<string, number | null | undefined>)[
+        vehicle.ClassName
+      ];
+    const buyPrice = uexId ? uexVehicleById[uexId]?.price_min_max.buy_min : null;
+    return buyPrice && buyPrice < Infinity ? buyPrice : null;
+  };
   // Filter vehicles based on searchName (case-insensitive)
   const vehicles = spvVehicleIndex.filter((vehicle) => {
     const nameMatch = vehicle.Name.toLowerCase().includes(searchName.toLowerCase());
@@ -80,13 +101,20 @@ const SearchVehicleResultList = ({ searchName }: { searchName: string }) => {
                   {group.vehicles
                     .sort((a, b) => (a.Store.Buy || Infinity) - (b.Store.Buy || Infinity))
                     .map((vehicle) => (
-                      <VehicleCard key={vehicle.ClassName} vehicle={vehicle} />
+                      <VehicleCard
+                        key={vehicle.ClassName}
+                        vehicle={vehicle}
+                        uexBuyPrice={getUexBuyPrice(vehicle)}
+                      />
                     ))}
                 </ul>
               </li>
             ) : (
               <li key={group.vehicles[0].ClassName} className="single-vehicle-item">
-                <VehicleCard vehicle={group.vehicles[0]} />
+                <VehicleCard
+                  vehicle={group.vehicles[0]}
+                  uexBuyPrice={getUexBuyPrice(group.vehicles[0])}
+                />
               </li>
             )
           )}
