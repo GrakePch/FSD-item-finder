@@ -7,10 +7,9 @@ import LocationCard from "../../../components/LocationCard/LocationCard";
 import { locationNameToI18nKey } from "../../../utils";
 import TerminalCard from "../../../components/TerminalCard/TerminalCard";
 
-const isNameOrI18nMatch = (searchName: string, nameEn: string, nameI18n: string) => {
-  const trimmedSearch = searchName.trim().toLowerCase();
-  const nameMatch = nameEn.toLowerCase().includes(trimmedSearch);
-  const i18nMatch = nameI18n.toLowerCase().includes(trimmedSearch);
+const isNameOrI18nMatch = (normalizedSearchName: string, nameEn: string, nameI18n: string) => {
+  const nameMatch = nameEn.toLowerCase().includes(normalizedSearchName);
+  const i18nMatch = nameI18n.toLowerCase().includes(normalizedSearchName);
   return nameMatch || i18nMatch;
 };
 
@@ -32,26 +31,27 @@ const SearchLocationResultList = ({
   const { t } = useTranslation();
   const { dictCelestialBodies, dictLocations, dictTerminals } =
     useContext(ContextAllData);
+  const normalizedSearchName = searchName.trim().toLowerCase();
 
   const celestialBody = Object.values(dictCelestialBodies).filter((cb) =>
     isNameOrI18nMatch(
-      searchName,
+      normalizedSearchName,
       cb.name,
       t(locationNameToI18nKey(cb.name), { ns: "locations", defaultValue: cb.name })
     )
   );
 
-  const locations = searchName
+  const locations = normalizedSearchName
     ? Object.values(dictLocations).filter((loc) =>
         isNameOrI18nMatch(
-          searchName,
+          normalizedSearchName,
           loc.name,
           t(locationNameToI18nKey(loc.name), { ns: "locations", defaultValue: loc.name })
         )
       )
     : [];
 
-  const terminals = includeTerminal && searchName
+  const terminals = includeTerminal && normalizedSearchName
     ? Object.values(dictTerminals).filter((term) => {
         const terminalNameEn = Array.isArray(term.location_path)
           ? term.location_path
@@ -67,7 +67,11 @@ const SearchLocationResultList = ({
               .map((n) => t(locationNameToI18nKey(n), { ns: "locations", defaultValue: n }))
               .join(" - ")
           : "";
-        return isNameOrI18nMatch(searchName, terminalNameEn, terminalNameI18n);
+        return isNameOrI18nMatch(
+          normalizedSearchName,
+          terminalNameEn,
+          terminalNameI18n
+        );
       })
     : [];
 

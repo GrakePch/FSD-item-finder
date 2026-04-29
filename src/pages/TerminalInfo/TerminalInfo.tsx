@@ -21,6 +21,7 @@ import { mdiClose, mdiMagnify } from "@mdi/js";
 import { useTranslation } from "react-i18next";
 import TerminalCard from "../../components/TerminalCard/TerminalCard";
 import LocationCard from "../../components/LocationCard/LocationCard";
+import useDebouncedValue from "../../hooks/useDebouncedValue";
 
 const TerminalInfo = () => {
   const { t } = useTranslation();
@@ -36,6 +37,7 @@ const TerminalInfo = () => {
   const [listItemsOfTerminal, setListItemsOfTerminal] = useState([]);
   const [hashSetSubTypes, setHashSetSubTypes] = useState<Set<string>>(new Set<string>());
   const [searchString, setSearchString] = useState("");
+  const debouncedSearchString = useDebouncedValue(searchString);
   const [filterSubType, setFilterSubType] = useState("");
   const [listTerminalsNearby, setListTerminalsNearby] = useState<Terminal[]>([]);
 
@@ -124,6 +126,7 @@ const TerminalInfo = () => {
   };
 
   const handleSearchChange = (e) => setSearchString(e.target.value);
+  const normalizedSearchString = debouncedSearchString.trim().toLocaleLowerCase();
 
   return (
     <div className="TerminalInfo">
@@ -218,13 +221,13 @@ const TerminalInfo = () => {
                   .filter((item) => !filterSubType || item.sub_type === filterSubType)
                   .filter(
                     (item) =>
-                      !searchString ||
+                      !normalizedSearchString ||
                       t(item.key, { ns: "items", lng: "en" })
                         .toLocaleLowerCase()
-                        .includes(searchString.toLocaleLowerCase()) ||
+                        .includes(normalizedSearchString) ||
                       t(item.key, { ns: "items", lng: "zh" })
                         ?.toLocaleLowerCase()
-                        ?.includes(searchString.toLocaleLowerCase())
+                        ?.includes(normalizedSearchString)
                   )
                   .map((item) => {
                     const terminalItemPrice = getTerminalItemPrice(item);

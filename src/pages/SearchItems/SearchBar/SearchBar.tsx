@@ -7,11 +7,11 @@ import {
   clearLocalStorageRecent,
   getAttributeValueByName,
   getLocalStorageRecent,
-  isAscii,
   typeKeyToCapitalized,
 } from "../../../utils";
 import { useSearchParams } from "react-router";
 import { useTranslation } from "react-i18next";
+import useDebouncedValue from "../../../hooks/useDebouncedValue";
 
 const filterTypes = [
   ["systems", "Systems."],
@@ -70,6 +70,7 @@ const SearchBar = ({
   const [searchName, setSearchName] = useState(
     () => sessionStorage.getItem(SEARCH_NAME_KEY) || ""
   );
+  const debouncedSearchName = useDebouncedValue(searchName);
   const hasLoadedItemPrices = Object.values(dictItems).some(
     (item) =>
       item.price_min_max.buy_min ||
@@ -104,11 +105,8 @@ const SearchBar = ({
       setFilterSubType("");
     }
 
-    let tempIsSearching = Boolean(
-      (searchName.length > 0 &&
-        ((isAscii(searchName) && searchName.length > 1) || !isAscii(searchName))) ||
-        _filterType
-    );
+    const normalizedSearchName = debouncedSearchName.trim().toLocaleLowerCase();
+    let tempIsSearching = Boolean(normalizedSearchName || _filterType);
     setIsSearching(tempIsSearching);
 
     let tempList = [];
@@ -125,8 +123,8 @@ const SearchBar = ({
           _filterType ? (i.type + "." + i.sub_type).startsWith(_filterType) : true
         )) {
         if (
-          getItemName(item, "en").toLocaleLowerCase().includes(searchName.toLocaleLowerCase()) ||
-          getItemName(item, "zh").toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
+          getItemName(item, "en").toLocaleLowerCase().includes(normalizedSearchName) ||
+          getItemName(item, "zh").toLocaleLowerCase().includes(normalizedSearchName)
         ) {
           tempList.push(item);
         }
@@ -181,7 +179,7 @@ const SearchBar = ({
 
     // console.log(tempList);
     setResultList(tempList);
-  }, [dictItems, hasLoadedItemPrices, searchName, searchParams, t]);
+  }, [debouncedSearchName, dictItems, hasLoadedItemPrices, searchParams, t]);
 
   return (
     <div className="SearchBar">

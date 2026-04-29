@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./SearchVehicles.css";
 import SearchVehicleResultList from "./SearchVehicleResultList/SearchVehicleResultList";
 import SearchVehicleBar from "./SearchVehicleBar/SearchVehicleBar";
+import useDebouncedValue from "../../hooks/useDebouncedValue";
 
 const SEARCH_VEHICLE_NAME_KEY = "fsd_searchVehicles_searchName";
 const SearchVehicles = () => {
@@ -9,6 +10,7 @@ const SearchVehicles = () => {
   const [searchName, setSearchName] = useState(
     () => sessionStorage.getItem(SEARCH_VEHICLE_NAME_KEY) || ""
   );
+  const debouncedSearchName = useDebouncedValue(searchName);
 
   // Save searchName to sessionStorage whenever it changes
   useEffect(() => {
@@ -20,7 +22,7 @@ const SearchVehicles = () => {
       <div className="fixed-search-bar">
         <SearchVehicleBar searchName={searchName} setSearchName={setSearchName} />
       </div>
-      <SearchVehicleResultList searchName={searchName} />
+      <SearchVehicleResultList searchName={debouncedSearchName} />
     </div>
   );
 };

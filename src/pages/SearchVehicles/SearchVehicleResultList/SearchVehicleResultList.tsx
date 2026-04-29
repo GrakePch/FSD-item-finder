@@ -35,14 +35,17 @@ const SearchVehicleResultList = ({ searchName }: { searchName: string }) => {
     const buyPrice = uexId ? uexVehicleById[uexId]?.price_min_max.buy_min : null;
     return buyPrice && buyPrice < Infinity ? buyPrice : null;
   };
+
+  const normalizedSearchName = searchName.trim().toLowerCase();
+
   // Filter vehicles based on searchName (case-insensitive)
   const vehicles = spvVehicleIndex.filter((vehicle) => {
-    const nameMatch = vehicle.Name.toLowerCase().includes(searchName.toLowerCase());
+    const nameMatch = vehicle.Name.toLowerCase().includes(normalizedSearchName);
     const i18nName = t(`vehicle_Name${vehicle.ClassName}`, {
       ns: "vehicles",
       defaultValue: "",
     });
-    const i18nMatch = i18nName.toLowerCase().includes(searchName.toLowerCase());
+    const i18nMatch = i18nName.toLowerCase().includes(normalizedSearchName);
     return nameMatch || i18nMatch;
   });
   // Group vehicles into listSeries: seriesInfo[]

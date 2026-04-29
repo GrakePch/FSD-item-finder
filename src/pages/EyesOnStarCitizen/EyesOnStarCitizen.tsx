@@ -20,6 +20,7 @@ import {
 } from "@mdi/js";
 import { icon } from "../../assets/icon";
 import { useTranslation } from "react-i18next";
+import useDebouncedValue from "../../hooks/useDebouncedValue";
 
 const SEARCH_LOCATIONS_NAME_KEY = "fsd_searchLocations_searchName";
 
@@ -95,6 +96,7 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
   const [searchName, setSearchName] = useState(
     () => sessionStorage.getItem(SEARCH_LOCATIONS_NAME_KEY) || ""
   );
+  const debouncedSearchName = useDebouncedValue(searchName);
 
   useEffect(() => {
     sessionStorage.setItem(SEARCH_LOCATIONS_NAME_KEY, searchName);
@@ -165,7 +167,7 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
         />
       </div>
       <div className={`search-card ${isSearchCardOpen ? "open" : ""}`}>
-        <SearchLocationResultList searchName={searchName} includeTerminal />
+        <SearchLocationResultList searchName={debouncedSearchName} includeTerminal />
       </div>
       <div className={`info-card ${isInfoCardOpen ? "open" : ""}`}>
         <button

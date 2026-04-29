@@ -8,6 +8,7 @@ import SearchLocationBar from "../../pages/SearchLocations/SearchLocationBar/Sea
 import SearchLocationResultList from "../../pages/SearchLocations/SearchLocationResultList/SearchLocationResultList";
 import { locationNameToI18nKey } from "../../utils";
 import { ContextAllData } from "../../contexts";
+import useDebouncedValue from "../../hooks/useDebouncedValue";
 
 export const KEY_CURRENT_LOCATION = "fsd_current_location";
 
@@ -43,6 +44,7 @@ export const WindowSelectCurrentLocation = () => {
   const location = useLocation();
   const { currentLocation, setCurrentLocation } = useContext(ContextAllData);
   const [searchName, setSearchName] = useState("");
+  const debouncedSearchName = useDebouncedValue(searchName);
 
   // Use search param for popup state
   const params = new URLSearchParams(location.search);
@@ -92,7 +94,7 @@ export const WindowSelectCurrentLocation = () => {
         <SearchLocationBar searchName={searchName} setSearchName={setSearchName} />
         <div className="result-list-scrollable">
           <SearchLocationResultList
-            searchName={searchName}
+            searchName={debouncedSearchName}
             onCelestialBodyClick={handleCelestialBodyClick}
             onLocationClick={handleLocationClick}
           />
