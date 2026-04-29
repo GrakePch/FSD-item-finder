@@ -22,13 +22,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 60.0
+      "Buy": 60
     },
     "PU": {
       "Patch": "2.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1587600.0
+      "Buy": 1587600
     }
   },
   {
@@ -54,13 +54,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 60.0
+      "Buy": 60
     },
     "PU": {
       "Patch": "2.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1358280.0
+      "Buy": 1358280
     }
   },
   {
@@ -86,13 +86,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 75.0
+      "Buy": 75
     },
     "PU": {
       "Patch": "2.6.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1852200.0
+      "Buy": 1852200
     }
   },
   {
@@ -118,13 +118,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 85.0
+      "Buy": 85
     },
     "PU": {
       "Patch": "2.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 2249100.0
+      "Buy": 2249100
     }
   },
   {
@@ -153,13 +153,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "June 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/19984-June-2024-Subscriber-Promotions",
-      "Buy": 300.0
+      "Buy": 300
     },
     "PU": {
       "Patch": "3.2.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 7938000.0
+      "Buy": 7938000
     }
   },
   {
@@ -185,13 +185,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 90.0
+      "Buy": 90
     },
     "PU": {
       "Patch": "1.1.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 2381400.0
+      "Buy": 2381400
     }
   },
   {
@@ -249,7 +249,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 110.0
+      "Buy": 110
     },
     "PU": {
       "Patch": "3.7.1",
@@ -281,13 +281,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 110.0
+      "Buy": 110
     },
     "PU": {
       "Patch": "2.6.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 2910600.0
+      "Buy": 2910600
     }
   },
   {
@@ -313,13 +313,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 725.0
+      "Buy": 725
     },
     "PU": {
       "Patch": "3.3.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 47958752.0
+      "Buy": 47958752
     }
   },
   {
@@ -378,7 +378,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": "https://robertsspaceindustries.com/pledge/ships/aegis-idris/Idris-P",
       "IsPromotionOnly": false,
       "IsLimitedSale": true,
-      "Buy": 1900.0
+      "Buy": 1900
     },
     "PU": {
       "Patch": "4.1.1",
@@ -411,7 +411,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": true,
-      "Buy": 3000.0
+      "Buy": 3000
     },
     "PU": {
       "HasPerf": false,
@@ -443,7 +443,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 725.0
+      "Buy": 725
     },
     "PU": {
       "HasPerf": false,
@@ -474,7 +474,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 400.0
+      "Buy": 400
     },
     "PU": {
       "Patch": "3.1.0",
@@ -506,13 +506,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 330.0
+      "Buy": 330
     },
     "PU": {
       "Patch": "3.15.1",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 17199000.0
+      "Buy": 17199000
     }
   },
   {
@@ -538,14 +538,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": "https://robertsspaceindustries.com/pledge/ships/aegis-retaliator/Retaliator",
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 175.0
+      "Buy": 175
     },
     "PU": {
       "Patch": "3.23.1",
       "Date": "2024-05-17",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 7938000.0
+      "Buy": 7938000
     }
   },
   {
@@ -571,13 +571,16 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 175.0
+      "IsShipOfTheMonth": false,
+      "ShipOfTheMonth": "January 2026",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20913-January-2026-Subscriber-Promotions",
+      "Buy": 175
     },
     "PU": {
       "Patch": "2.2.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 4498200.0
+      "Buy": 4498200
     }
   },
   {
@@ -603,13 +606,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 185.0
+      "Buy": 185
     },
     "PU": {
       "Patch": "2.6.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 4895100.0
+      "Buy": 4895100
     }
   },
   {
@@ -636,6 +639,9 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
+      "IsShipOfTheMonth": false,
+      "ShipOfTheMonth": "January 2026",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20913-January-2026-Subscriber-Promotions",
       "Buy": 185
     },
     "PU": {
@@ -643,7 +649,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Date": "2024-05-17",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 5874120.0
+      "Buy": 5874120
     }
   },
   {
@@ -670,6 +676,9 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
+      "IsShipOfTheMonth": false,
+      "ShipOfTheMonth": "January 2026",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20913-January-2026-Subscriber-Promotions",
       "Buy": 185
     },
     "PU": {
@@ -735,13 +744,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 260.0
+      "Buy": 260
     },
     "PU": {
       "Patch": "2.1.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 10319400.0
+      "Buy": 10319400
     }
   },
   {
@@ -767,13 +776,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 290.0
+      "Buy": 290
     },
     "PU": {
       "Patch": "3.7.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 11510100.0
+      "Buy": 11510100
     }
   },
   {
@@ -799,13 +808,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 240.0
+      "Buy": 240
     },
     "PU": {
       "Patch": "2.6.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 9327150.0
+      "Buy": 9327150
     }
   },
   {
@@ -831,13 +840,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 275.0
+      "Buy": 275
     },
     "PU": {
       "Patch": "3.7.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 10914750.0
+      "Buy": 10914750
     }
   },
   {
@@ -863,7 +872,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 200.0
+      "Buy": 200
     },
     "PU": {
       "HasPerf": false,
@@ -897,13 +906,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "February 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/19776-February-2024-Subscriber-Promotions",
-      "Buy": 75.0
+      "Buy": 75
     },
     "PU": {
       "Patch": "3.3.5",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1984500.0
+      "Buy": 1984500
     }
   },
   {
@@ -930,6 +939,9 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
+      "IsShipOfTheMonth": false,
+      "ShipOfTheMonth": "December 2025",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20877-December-2025-Subscriber-Promotions",
       "Buy": 350
     },
     "PU": {
@@ -963,13 +975,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 140.0
+      "Buy": 140
     },
     "PU": {
       "Patch": "3.6.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1481760.0
+      "Buy": 1481760
     }
   },
   {
@@ -995,14 +1007,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 65.0
+      "Buy": 65
     },
     "PU": {
       "Patch": "3.17.4",
       "Date": "2022-11-17",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 555660.0
+      "Buy": 555660
     }
   },
   {
@@ -1028,13 +1040,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 45.0
+      "Buy": 45
     },
     "PU": {
       "Patch": "3.7.2",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 515970.0
+      "Buy": 515970
     }
   },
   {
@@ -1066,7 +1078,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Patch": "3.7.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 745290.0
+      "Buy": 745290
     }
   },
   {
@@ -1092,13 +1104,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 600.0
+      "Buy": 600
     },
     "PU": {
       "Patch": "3.8.2",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 34398000.0
+      "Buy": 34398000
     }
   },
   {
@@ -1124,14 +1136,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 110.0
+      "Buy": 110
     },
     "PU": {
       "Patch": "3.17.2",
       "Date": "2022-07-28",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1164240.0
+      "Buy": 1164240
     }
   },
   {
@@ -1157,7 +1169,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 350.0
+      "Buy": 350
     },
     "PU": {
       "HasPerf": false,
@@ -1191,13 +1203,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "June 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/19984-June-2024-Subscriber-Promotions",
-      "Buy": 165.0
+      "Buy": 165
     },
     "PU": {
       "Patch": "1.1.1",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 4365900.0
+      "Buy": 4365900
     }
   },
   {
@@ -1223,13 +1235,16 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 100.0
+      "IsShipOfTheMonth": true,
+      "ShipOfTheMonth": "April 2026",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20977-April-2026-Subscriber-Promotions",
+      "Buy": 100
     },
     "PU": {
       "Patch": "3.4.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 2646000.0
+      "Buy": 2646000
     }
   },
   {
@@ -1321,13 +1336,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 125.0
+      "Buy": 125
     },
     "PU": {
       "Patch": "0.8.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 2910600.0
+      "Buy": 2910600
     }
   },
   {
@@ -1353,13 +1368,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 185.0
+      "Buy": 185
     },
     "PU": {
       "Patch": "1.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 4762800.0
+      "Buy": 4762800
     }
   },
   {
@@ -1385,7 +1400,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 200.0
+      "Buy": 200
     },
     "PU": {
       "Patch": "3.5.0",
@@ -1418,7 +1433,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 240.0
+      "Buy": 240
     },
     "PU": {
       "Patch": "4.0.1",
@@ -1453,7 +1468,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 265.0
+      "Buy": 265
     },
     "PU": {
       "Patch": "4.0.1",
@@ -1487,13 +1502,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 150.0
+      "Buy": 150
     },
     "PU": {
       "Patch": "1.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 3210480.0
+      "Buy": 3210480
     }
   },
   {
@@ -1553,13 +1568,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 140.0
+      "Buy": 140
     },
     "PU": {
       "Patch": "1.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 3307500.0
+      "Buy": 3307500
     }
   },
   {
@@ -1627,7 +1642,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Date": "2024-03-15",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 4895100.0
+      "Buy": 4895100
     }
   },
   {
@@ -1653,13 +1668,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 175.0
+      "Buy": 175
     },
     "PU": {
       "Patch": "2.6.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 4630500.0
+      "Buy": 4630500
     }
   },
   {
@@ -1685,7 +1700,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 300.0
+      "Buy": 300
     },
     "PU": {
       "Patch": "3.20.0",
@@ -1718,13 +1733,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 210.0
+      "Buy": 210
     },
     "PU": {
       "Patch": "3.2.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 5556600.0
+      "Buy": 5556600
     }
   },
   {
@@ -1750,7 +1765,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 120.0
+      "Buy": 120
     },
     "PU": {
       "HasPerf": false,
@@ -1781,7 +1796,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 570.0
+      "Buy": 575
     },
     "PU": {
       "HasPerf": false,
@@ -1796,7 +1811,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
     "Career": "Combat",
     "Role": "Gunship",
     "Size": 4,
-    "Cargo": 0,
+    "Cargo": 4,
     "Type": "Ship",
     "CommLink": {
       "HasCommLink": true,
@@ -1804,21 +1819,21 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": "https://robertsspaceindustries.com/comm-link/transmission/20292-Anvil-Paladin"
     },
     "ProgressTracker": {
-      "Status": "InProd",
-      "Patch": null,
+      "Status": "Released",
+      "Patch": "4.3.2",
       "IsOnPT": false,
       "ID": null
     },
     "Store": {
-      "Url": "https://robertsspaceindustries.com/comm-link/transmission/20292-Anvil-Paladin#skus",
+      "Url": "https://robertsspaceindustries.com/comm-link/transmission/20292-Anvil-Paladin",
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 300
+      "Buy": 350
     },
     "PU": {
-      "Patch": null,
-      "Date": null,
-      "HasPerf": false,
+      "Patch": "4.3.2",
+      "Date": "2025-10-16",
+      "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
       "Buy": null
@@ -1850,14 +1865,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "January 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/19721-January-2024-Subscriber-Promotions",
-      "Buy": 80.0
+      "Buy": 80
     },
     "PU": {
       "Patch": "3.15.1",
       "Date": "2021-11-18",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 846720.0
+      "Buy": 846720
     }
   },
   {
@@ -1883,13 +1898,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 220.0
+      "Buy": 220
     },
     "PU": {
       "Patch": "3.1.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 5433120.0
+      "Buy": 5433120
     }
   },
   {
@@ -1924,7 +1939,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 5704770.0
+      "Buy": 5704770
     }
   },
   {
@@ -1953,13 +1968,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "June 2025",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20582-June-2025-Subscriber-Promotions",
-      "Buy": 375.0
+      "Buy": 375
     },
     "PU": {
       "Patch": "3.3.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 19845000.0
+      "Buy": 19845000
     }
   },
   {
@@ -1985,13 +2000,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 175.0
+      "Buy": 175
     },
     "PU": {
       "Patch": "2.3.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 7229250.0
+      "Buy": 7229250
     }
   },
   {
@@ -2017,13 +2032,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 45.0
+      "Buy": 45
     },
     "PU": {
       "Patch": "3.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 722925.0
+      "Buy": 722925
     }
   },
   {
@@ -2050,7 +2065,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 240.0
+      "Buy": 240
     },
     "PU": {
       "Patch": "3.22.0",
@@ -2058,7 +2073,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 9355500.0
+      "Buy": 9355500
     }
   },
   {
@@ -2093,7 +2108,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 378000.0
+      "Buy": 378000
     }
   },
   {
@@ -2153,13 +2168,48 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 315.0
+      "Buy": 315
     },
     "PU": {
       "Patch": "3.8.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 8930250.0
+      "Buy": 8930250
+    }
+  },
+  {
+    "ClassName": "ARGO_MOTH",
+    "Name": "Argo MOTH",
+    "Manufacturer": "Argo Astronautics",
+    "Career": "Industrial",
+    "Role": "Medium Salvage",
+    "Size": 3,
+    "Cargo": 224,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "Patch": "4.6.0",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 315
+    },
+    "PU": {
+      "Patch": "4.6.0",
+      "Date": "2026-02-11",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "IsPTUBuyOnly": false,
+      "Buy": null
     }
   },
   {
@@ -2185,13 +2235,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 35.0
+      "Buy": 35
     },
     "PU": {
       "Patch": "2.5.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 330750.0
+      "Buy": 330750
     }
   },
   {
@@ -2225,7 +2275,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Date": "2024-05-17",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 415800.0
+      "Buy": 415800
     }
   },
   {
@@ -2251,13 +2301,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 40.0
+      "Buy": 40
     },
     "PU": {
       "Patch": "2.5.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 378000.0
+      "Buy": 378000
     }
   },
   {
@@ -2286,14 +2336,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "August 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/20078-August-2024-Subscriber-Promotions",
-      "Buy": 125.0
+      "Buy": 190
     },
     "PU": {
       "Patch": "3.15.1",
       "Date": "2021-11-18",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 3543750.0
+      "Buy": 3543750
     }
   },
   {
@@ -2323,7 +2373,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "August 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/20078-August-2024-Subscriber-Promotions",
-      "Buy": 165.0
+      "Buy": 165
     },
     "PU": {
       "Patch": "3.21.1",
@@ -2331,7 +2381,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 3969000.0
+      "Buy": 3969000
     }
   },
   {
@@ -2357,13 +2407,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 220.0
+      "Buy": 220
     },
     "PU": {
       "Patch": "3.7.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 6237000.0
+      "Buy": 6237000
     }
   },
   {
@@ -2389,7 +2439,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 650.0
+      "Buy": 650
     },
     "PU": {
       "HasPerf": false,
@@ -2420,14 +2470,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 30.0
+      "Buy": 30
     },
     "PU": {
       "Patch": "3.16.1",
       "Date": "2022-01-27",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 56700.0
+      "Buy": 56700
     }
   },
   {
@@ -2453,13 +2503,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 30.0
+      "Buy": 30
     },
     "PU": {
       "Patch": "1.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 655200.0
+      "Buy": 655200
     }
   },
   {
@@ -2485,13 +2535,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 40.0
+      "Buy": 40
     },
     "PU": {
       "Patch": "1.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 642600.0
+      "Buy": 642600
     }
   },
   {
@@ -2517,13 +2567,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 65.0
+      "Buy": 65
     },
     "PU": {
       "Patch": "1.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1228500.0
+      "Buy": 1228500
     }
   },
   {
@@ -2549,13 +2599,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 55.0
+      "Buy": 55
     },
     "PU": {
       "Patch": "1.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1178100.0
+      "Buy": 1178100
     }
   },
   {
@@ -2613,14 +2663,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 80.0
+      "Buy": 80
     },
     "PU": {
       "Patch": "3.11.1",
       "Date": "2020-11-19",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1512000.0
+      "Buy": 1512000
     }
   },
   {
@@ -2646,7 +2696,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": true,
-      "Buy": 925.0
+      "Buy": 925
     },
     "PU": {
       "HasPerf": false,
@@ -2677,7 +2727,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 400.0
+      "Buy": 400
     },
     "PU": {
       "HasPerf": false,
@@ -2717,7 +2767,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 705600.0
+      "Buy": 705600
     }
   },
   {
@@ -2747,7 +2797,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "November 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/20236-November-2024-Subscriber-Promotions",
-      "Buy": 200.0
+      "Buy": 200
     },
     "PU": {
       "Patch": "3.21.0",
@@ -2755,7 +2805,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 4961250.0
+      "Buy": 4961250
     }
   },
   {
@@ -2785,7 +2835,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "November 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/20236-November-2024-Subscriber-Promotions",
-      "Buy": 125.0
+      "Buy": 125
     },
     "PU": {
       "Patch": "3.21.1",
@@ -2793,7 +2843,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 3118500.0
+      "Buy": 3118500
     }
   },
   {
@@ -2819,7 +2869,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 150.0
+      "Buy": 150
     },
     "PU": {
       "HasPerf": false,
@@ -2850,17 +2900,17 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "IsShipOfTheMonth": true,
+      "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "August 2025",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/20705-August-2025-Subscriber-Promotions",
-      "Buy": 250.0
+      "Buy": 250
     },
     "PU": {
       "Patch": "3.15.1",
       "Date": "2021-11-18",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 4725000.0
+      "Buy": 4725000
     }
   },
   {
@@ -2886,17 +2936,17 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "IsShipOfTheMonth": true,
+      "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "August 2025",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/20705-August-2025-Subscriber-Promotions",
-      "Buy": 250.0
+      "Buy": 250
     },
     "PU": {
       "Patch": "3.15.1",
       "Date": "2021-11-18",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 4725000.0
+      "Buy": 4725000
     }
   },
   {
@@ -2922,14 +2972,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 700.0
+      "Buy": 750
     },
     "PU": {
       "Patch": "3.15.0",
       "Date": "2021-11-10",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 44296876.0
+      "Buy": 44296876
     }
   },
   {
@@ -2955,14 +3005,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 400.0
+      "Buy": 400
     },
     "PU": {
       "Patch": "3.13.1",
       "Date": "2021-05-20",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 18900000.0
+      "Buy": 18900000
     }
   },
   {
@@ -2988,14 +3038,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 520.0
+      "Buy": 520
     },
     "PU": {
       "Patch": "3.13.1",
       "Date": "2021-05-20",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 29484000.0
+      "Buy": 29484000
     }
   },
   {
@@ -3024,14 +3074,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "March 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/19781-March-2024-Subscriber-Promotions",
-      "Buy": 260.0
+      "Buy": 260
     },
     "PU": {
       "Patch": "3.11.1",
       "Date": "2020-11-19",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 12285000.0
+      "Buy": 12285000
     }
   },
   {
@@ -3060,13 +3110,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "April 2025",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20519-April-2025-Subscriber-Promotions",
-      "Buy": 110.0
+      "Buy": 110
     },
     "PU": {
       "Patch": "2.6.2",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1663200.0
+      "Buy": 1663200
     }
   },
   {
@@ -3095,13 +3145,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "July 2025",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20624-July-2025-Subscriber-Promotions",
-      "Buy": 330.0
+      "Buy": 330
     },
     "PU": {
       "Patch": "2.6.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 12474000.0
+      "Buy": 12474000
     }
   },
   {
@@ -3127,10 +3177,43 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 330.0
+      "Buy": 330
     },
     "PU": {
       "Patch": "2.6.0",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "Buy": null
+    }
+  },
+  {
+    "ClassName": "DRAK_Clipper",
+    "Name": "Drake Clipper",
+    "Manufacturer": "Drake Interplanetary",
+    "Career": "Exploration",
+    "Role": "Generalist",
+    "Size": 1,
+    "Cargo": 12,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 150
+    },
+    "PU": {
+      "Patch": "4.4.0",
+      "Date": "2025-11-19",
       "HasPerf": true,
       "IsPTUOnly": false,
       "Buy": null
@@ -3162,14 +3245,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "April 2025",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20519-April-2025-Subscriber-Promotions",
-      "Buy": 250.0
+      "Buy": 250
     },
     "PU": {
       "Patch": "3.17.4",
       "Date": "2022-11-17",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 6552000.0
+      "Buy": 6552000
     }
   },
   {
@@ -3198,13 +3281,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "December 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/20318-December-2024-Subscriber-Promotions",
-      "Buy": 110.0
+      "Buy": 110
     },
     "PU": {
       "Patch": "1.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 2116800.0
+      "Buy": 2116800
     }
   },
   {
@@ -3230,13 +3313,16 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 175.0
+      "IsShipOfTheMonth": true,
+      "ShipOfTheMonth": "April 2026",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20977-April-2026-Subscriber-Promotions",
+      "Buy": 175
     },
     "PU": {
       "Patch": "3.9.1",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 3704400.0
+      "Buy": 3704400
     }
   },
   {
@@ -3262,13 +3348,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 135.0
+      "Buy": 135
     },
     "PU": {
       "Patch": "3.8.1",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 2857680.0
+      "Buy": 2857680
     }
   },
   {
@@ -3297,14 +3383,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "June 2025",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20582-June-2025-Subscriber-Promotions",
-      "Buy": 235.0
+      "Buy": 235
     },
     "PU": {
       "Patch": "3.16.0",
       "Date": "2021-12-22",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 3997350.0
+      "Buy": 3997350
     }
   },
   {
@@ -3333,14 +3419,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "October 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/20126-October-2024-Subscriber-Promotions",
-      "Buy": 45.0
+      "Buy": 45
     },
     "PU": {
       "Patch": "3.17.4",
       "Date": "2022-11-17",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 625040.0
+      "Buy": 625040
     }
   },
   {
@@ -3370,7 +3456,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "October 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/20126-October-2024-Subscriber-Promotions",
-      "Buy": 50.0
+      "Buy": 50
     },
     "PU": {
       "Patch": "3.22.0",
@@ -3378,7 +3464,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 740880.0
+      "Buy": 740880
     }
   },
   {
@@ -3416,7 +3502,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 705600.0
+      "Buy": 705600
     }
   },
   {
@@ -3442,13 +3528,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 40.0
+      "Buy": 40
     },
     "PU": {
       "Patch": "3.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 342720.0
+      "Buy": 342720
     }
   },
   {
@@ -3481,7 +3567,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 342720.0
+      "Buy": null
     }
   },
   {
@@ -3520,6 +3606,39 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
     }
   },
   {
+    "ClassName": "DRAK_Golem_OX",
+    "Name": "Drake Golem OX",
+    "Manufacturer": "Drake Interplanetary",
+    "Career": "Industrial",
+    "Role": "Light Freight",
+    "Size": 2,
+    "Cargo": 64,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 90
+    },
+    "PU": {
+      "Patch": "4.4.0",
+      "Date": "2025-11-19",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "Buy": null
+    }
+  },
+  {
     "ClassName": "DRAK_Herald",
     "Name": "Drake Herald",
     "Manufacturer": "Drake Interplanetary",
@@ -3542,13 +3661,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 85.0
+      "Buy": 85
     },
     "PU": {
       "Patch": "2.6.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1285200.0
+      "Buy": 1285200
     }
   },
   {
@@ -3558,7 +3677,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
     "Career": "Transporter",
     "Role": "Armored Cargo",
     "Size": 5,
-    "Cargo": 1536,
+    "Cargo": 2204,
     "Type": "Ship",
     "CommLink": {
       "HasCommLink": true,
@@ -3574,7 +3693,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 450.0
+      "Buy": 450
     },
     "PU": {
       "HasPerf": false,
@@ -3589,7 +3708,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
     "Career": "Transporter",
     "Role": "Heavy Dropship",
     "Size": 5,
-    "Cargo": 1152,
+    "Cargo": 1140,
     "Type": "Ship",
     "CommLink": {
       "HasCommLink": true,
@@ -3605,7 +3724,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 535.0
+      "Buy": 535
     },
     "PU": {
       "HasPerf": false,
@@ -3628,7 +3747,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": "https://robertsspaceindustries.com/comm-link/transmission/16772-Release-The-Kraken"
     },
     "ProgressTracker": {
-      "Status": "Concept",
+      "Status": "InProd",
       "IsOnPT": false,
       "ID": null
     },
@@ -3636,7 +3755,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": true,
-      "Buy": 1650.0
+      "Buy": 1650
     },
     "PU": {
       "HasPerf": false,
@@ -3659,7 +3778,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": "https://robertsspaceindustries.com/comm-link/transmission/16890-Kraken-Privateer"
     },
     "ProgressTracker": {
-      "Status": "Concept",
+      "Status": "InProd",
       "IsOnPT": false,
       "ID": null
     },
@@ -3667,7 +3786,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": true,
-      "Buy": 2000.0
+      "Buy": 2000
     },
     "PU": {
       "HasPerf": false,
@@ -3698,14 +3817,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 45.0
+      "Buy": 45
     },
     "PU": {
       "Patch": "3.17.1",
       "Date": "2022-05-19",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 68040.0
+      "Buy": 68040
     }
   },
   {
@@ -3734,14 +3853,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "July 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/20029-July-2024-Subscriber-Promotions",
-      "Buy": 175.0
+      "Buy": 175
     },
     "PU": {
       "Patch": "3.18.0",
       "Date": "2023-03-10",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 2646000.0
+      "Buy": 2646000
     }
   },
   {
@@ -3767,13 +3886,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 275.0
+      "Buy": 275
     },
     "PU": {
       "Patch": "3.2.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 7796250.0
+      "Buy": 7796250
     }
   },
   {
@@ -3799,7 +3918,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 350.0
+      "Buy": 350
     },
     "PU": {
       "Patch": "0.8.5",
@@ -3831,13 +3950,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 440.0
+      "Buy": 440
     },
     "PU": {
       "Patch": "3.9.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 18711000.0
+      "Buy": 18711000
     }
   },
   {
@@ -3896,14 +4015,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 115.0
+      "Buy": 115
     },
     "PU": {
       "Patch": "3.12.0",
       "Date": "2020-12-17",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 3260250.0
+      "Buy": 3260250
     }
   },
   {
@@ -3929,14 +4048,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 115.0
+      "Buy": 115
     },
     "PU": {
       "Patch": "3.12.0",
       "Date": "2020-12-17",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 3260250.0
+      "Buy": 3260250
     }
   },
   {
@@ -3946,7 +4065,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
     "Career": "Transport",
     "Role": "Medium Freight",
     "Size": 4,
-    "Cargo": 320,
+    "Cargo": 640,
     "Type": "Ship",
     "CommLink": {
       "HasCommLink": true,
@@ -3962,7 +4081,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 225.0
+      "Buy": 225
     },
     "PU": {
       "HasPerf": false,
@@ -4002,7 +4121,76 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 2778300.0
+      "Buy": 2778300
+    }
+  },
+  {
+    "ClassName": "GLSN_Shiv",
+    "Name": "Grey's Shiv",
+    "Manufacturer": "Grey's",
+    "Career": "Combat",
+    "Role": "Heavy Fighter",
+    "Size": 3,
+    "Cargo": 32,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "Patch": "4.3.2",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 150
+    },
+    "PU": {
+      "Patch": "4.3.2",
+      "Date": "2025-10-16",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "IsPTUBuyOnly": false,
+      "Buy": null
+    }
+  },
+  {
+    "ClassName": "GRIN_MDC",
+    "Name": "Greycat MDC",
+    "Manufacturer": "Greycat Industrial",
+    "Career": "Combat",
+    "Role": "Anti-Air",
+    "Size": 1,
+    "Cargo": 0,
+    "Type": "Vehicle",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "Patch": "4.4.0",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 50
+    },
+    "PU": {
+      "Patch": "4.4.0",
+      "Date": "2025-11-19",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "Buy": null
     }
   },
   {
@@ -4062,13 +4250,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 15.0
+      "Buy": 15
     },
     "PU": {
       "Patch": "0.1.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 29170.0
+      "Buy": 29170
     }
   },
   {
@@ -4094,13 +4282,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 55.0
+      "Buy": 55
     },
     "PU": {
       "Patch": "3.10.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 103950.0
+      "Buy": 103950
     }
   },
   {
@@ -4126,14 +4314,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 75.0
+      "Buy": 75
     },
     "PU": {
       "Patch": "3.13.0",
       "Date": "2021-04-22",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 141750.0
+      "Buy": 141750
     }
   },
   {
@@ -4159,14 +4347,47 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 40.0
+      "Buy": 40
     },
     "PU": {
       "Patch": "3.17.3",
       "Date": "2022-10-06",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 75600.0
+      "Buy": 75600
+    }
+  },
+  {
+    "ClassName": "GRIN_UTV",
+    "Name": "Greycat UTV",
+    "Manufacturer": "Greycat Industrial",
+    "Career": "Ground",
+    "Role": "Ground",
+    "Size": 1,
+    "Cargo": 0,
+    "Type": "Vehicle",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 40
+    },
+    "PU": {
+      "Patch": "4.7.1",
+      "Date": "2026-04-08",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "Buy": null
     }
   },
   {
@@ -4204,6 +4425,40 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
     }
   },
   {
+    "ClassName": "KRIG_L22_AlphaWolf",
+    "Name": "Kruger L-22 Alpha Wolf",
+    "Manufacturer": "Kruger Intergalactic",
+    "Career": "Combat",
+    "Role": "Light Fighter",
+    "Size": 2,
+    "Cargo": 0,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "Patch": "4.4.0",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 120
+    },
+    "PU": {
+      "Patch": "4.4.0",
+      "Date": "2025-11-19",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "Buy": null
+    }
+  },
+  {
     "ClassName": "KRIG_P52_Merlin",
     "Name": "Kruger P-52 Merlin",
     "Manufacturer": "Kruger Intergalactic",
@@ -4226,13 +4481,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 25.0
+      "Buy": 25
     },
     "PU": {
       "Patch": "1.1.5",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 283500.0
+      "Buy": 283500
     }
   },
   {
@@ -4258,13 +4513,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 35.0
+      "Buy": 35
     },
     "PU": {
       "Patch": "3.6.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 449820.0
+      "Buy": 449820
     }
   },
   {
@@ -4290,7 +4545,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 350.0
+      "Buy": 350
     },
     "PU": {
       "HasPerf": false,
@@ -4305,7 +4560,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
     "Career": "Industrial",
     "Role": "Mobile Refinery",
     "Size": 3,
-    "Cargo": 128,
+    "Cargo": 64,
     "Type": "Ship",
     "CommLink": {
       "HasCommLink": true,
@@ -4321,7 +4576,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 150.0
+      "Buy": 150
     },
     "PU": {
       "HasPerf": false,
@@ -4387,13 +4642,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 110.0
+      "Buy": 110
     },
     "PU": {
       "Patch": "2.1.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 3118500.0
+      "Buy": 3118500
     }
   },
   {
@@ -4419,13 +4674,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 135.0
+      "Buy": 135
     },
     "PU": {
       "Patch": "3.4.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 3316950.0
+      "Buy": 3316950
     }
   },
   {
@@ -4451,13 +4706,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 150.0
+      "Buy": 150
     },
     "PU": {
       "Patch": "3.4.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 4252500.0
+      "Buy": 4252500
     }
   },
   {
@@ -4483,13 +4738,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 175.0
+      "Buy": 175
     },
     "PU": {
       "Patch": "3.4.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 4961250.0
+      "Buy": 4961250
     }
   },
   {
@@ -4519,7 +4774,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "September 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/20084-September-2024-Subscriber-Promotions",
-      "Buy": 55.0
+      "Buy": 55
     },
     "PU": {
       "Patch": "3.19.0",
@@ -4557,7 +4812,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "September 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/20084-September-2024-Subscriber-Promotions",
-      "Buy": 55.0
+      "Buy": 55
     },
     "PU": {
       "Patch": "3.20.0",
@@ -4595,7 +4850,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "September 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/20084-September-2024-Subscriber-Promotions",
-      "Buy": 55.0
+      "Buy": 55
     },
     "PU": {
       "Patch": "3.19.0",
@@ -4632,24 +4887,24 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "April 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/19853-April-2024-Subscriber-Promotions",
-      "Buy": 90.0
+      "Buy": 100
     },
     "PU": {
       "Patch": "3.17.0",
       "Date": "2022-04-29",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1701000.0
+      "Buy": 1701000
     }
   },
   {
     "ClassName": "MISC_Hull_B",
     "Name": "MISC Hull B",
     "Manufacturer": "Musashi Industrial and Starflight Concern",
-    "Career": "Transporter",
-    "Role": "Heavy Freight",
-    "Size": 3,
-    "Cargo": 384,
+    "Career": "Industrial",
+    "Role": "Medium Freight",
+    "Size": 4,
+    "Cargo": 512,
     "Type": "Ship",
     "CommLink": {
       "HasCommLink": true,
@@ -4657,7 +4912,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": "https://robertsspaceindustries.com/comm-link/transmission/18751-Roadmap-Roundup-June-22-2022"
     },
     "ProgressTracker": {
-      "Status": "OnHold",
+      "Status": "Released",
       "IsOnPT": false,
       "ID": null
     },
@@ -4665,10 +4920,12 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 140.0
+      "Buy": 280
     },
     "PU": {
-      "HasPerf": false,
+      "Patch": "4.7.1",
+      "Date": "2026-04-08",
+      "HasPerf": true,
       "IsPTUOnly": false,
       "Buy": null
     }
@@ -4700,7 +4957,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "April 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/19853-April-2024-Subscriber-Promotions",
-      "Buy": 500.0
+      "Buy": 500
     },
     "PU": {
       "Patch": "3.20.0",
@@ -4718,7 +4975,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
     "Career": "Transporter",
     "Role": "Heavy Freight",
     "Size": 6,
-    "Cargo": 20736,
+    "Cargo": 6912,
     "Type": "Ship",
     "CommLink": {
       "HasCommLink": true,
@@ -4734,7 +4991,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 550.0
+      "Buy": 550
     },
     "PU": {
       "HasPerf": false,
@@ -4749,7 +5006,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
     "Career": "Transporter",
     "Role": "Heavy Freight",
     "Size": 6,
-    "Cargo": 98304,
+    "Cargo": 12288,
     "Type": "Ship",
     "CommLink": {
       "HasCommLink": true,
@@ -4765,7 +5022,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": true,
-      "Buy": 750.0
+      "Buy": 750
     },
     "PU": {
       "HasPerf": false,
@@ -4796,7 +5053,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 700.0
+      "Buy": 700
     },
     "PU": {
       "HasPerf": false,
@@ -4827,13 +5084,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 155.0
+      "Buy": 155
     },
     "PU": {
       "Patch": "3.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 2929500.0
+      "Buy": 2929500
     }
   },
   {
@@ -4859,13 +5116,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 145.0
+      "Buy": 145
     },
     "PU": {
       "Patch": "3.1.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1863540.0
+      "Buy": 1863540
     }
   },
   {
@@ -4891,13 +5148,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 155.0
+      "Buy": 155
     },
     "PU": {
       "Patch": "3.1.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1757700.0
+      "Buy": 1757700
     }
   },
   {
@@ -4923,13 +5180,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 150.0
+      "Buy": 150
     },
     "PU": {
       "Patch": "3.1.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1927800.0
+      "Buy": 1927800
     }
   },
   {
@@ -4955,13 +5212,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 65.0
+      "Buy": 65
     },
     "PU": {
       "Patch": "2.5.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1719900.0
+      "Buy": 1719900
     }
   },
   {
@@ -4987,13 +5244,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 95.0
+      "Buy": 95
     },
     "PU": {
       "Patch": "3.5.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 2513700.0
+      "Buy": 2513700
     }
   },
   {
@@ -5019,13 +5276,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 85.0
+      "Buy": 85
     },
     "PU": {
       "Patch": "3.5.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 2249100.0
+      "Buy": 2249100
     }
   },
   {
@@ -5051,13 +5308,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 75.0
+      "Buy": 75
     },
     "PU": {
       "Patch": "3.5.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1984500.0
+      "Buy": 1984500
     }
   },
   {
@@ -5086,13 +5343,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "December 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/20318-December-2024-Subscriber-Promotions",
-      "Buy": 300.0
+      "Buy": 300
     },
     "PU": {
       "Patch": "2.4.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 13230000.0
+      "Buy": 13230000
     }
   },
   {
@@ -5118,13 +5375,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 340.0
+      "Buy": 340
     },
     "PU": {
       "Patch": "2.4.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 14994000.0
+      "Buy": 14994000
     }
   },
   {
@@ -5152,8 +5409,8 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
       "IsShipOfTheMonth": false,
-      "ShipOfTheMonth": "July 2025",
-      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20624-July-2025-Subscriber-Promotions",
+      "ShipOfTheMonth": "February 2026",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20961-February-2026-Subscriber-Promotions",
       "Buy": 250
     },
     "PU": {
@@ -5162,7 +5419,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 8820000.0
+      "Buy": 8820000
     }
   },
   {
@@ -5189,6 +5446,9 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": "https://robertsspaceindustries.com/comm-link/transmission/20213-MISC-Starlancer-TAC",
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
+      "IsShipOfTheMonth": false,
+      "ShipOfTheMonth": "February 2026",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20961-February-2026-Subscriber-Promotions",
       "Buy": 375
     },
     "PU": {
@@ -5223,6 +5483,9 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
+      "IsShipOfTheMonth": false,
+      "ShipOfTheMonth": "November 2025",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20853-November-2025-Subscriber-Promotions",
       "Buy": 250
     },
     "PU": {
@@ -5258,6 +5521,9 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
+      "IsShipOfTheMonth": false,
+      "ShipOfTheMonth": "November 2025",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20853-November-2025-Subscriber-Promotions",
       "Buy": 290
     },
     "PU": {
@@ -5292,6 +5558,9 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
+      "IsShipOfTheMonth": false,
+      "ShipOfTheMonth": "November 2025",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20853-November-2025-Subscriber-Promotions",
       "Buy": 260
     },
     "PU": {
@@ -5336,7 +5605,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 185220.0
+      "Buy": 185220
     }
   },
   {
@@ -5372,7 +5641,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 211680.0
+      "Buy": 211680
     }
   },
   {
@@ -5398,14 +5667,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 50.0
+      "Buy": 50
     },
     "PU": {
       "Patch": "3.11.0",
       "Date": "2020-10-08",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1146600.0
+      "Buy": 1146600
     }
   },
   {
@@ -5431,14 +5700,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 60.0
+      "Buy": 60
     },
     "PU": {
       "Patch": "3.11.0",
       "Date": "2020-10-08",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1587600.0
+      "Buy": 1587600
     }
   },
   {
@@ -5464,14 +5733,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 65.0
+      "Buy": 65
     },
     "PU": {
       "Patch": "3.11.0",
       "Date": "2020-10-08",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1149580.0
+      "Buy": 1149580
     }
   },
   {
@@ -5497,13 +5766,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 60.0
+      "Buy": 60
     },
     "PU": {
       "Patch": "0.8.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1375920.0
+      "Buy": 1375920
     }
   },
   {
@@ -5529,13 +5798,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 65.0
+      "Buy": 65
     },
     "PU": {
       "Patch": "0.9.2",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1490580.0
+      "Buy": 1490580
     }
   },
   {
@@ -5561,13 +5830,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 70.0
+      "Buy": 70
     },
     "PU": {
       "Patch": "0.9.1",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1852200.0
+      "Buy": 1852200
     }
   },
   {
@@ -5593,13 +5862,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 125.0
+      "Buy": 125
     },
     "PU": {
       "Patch": "0.9.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 3748500.0
+      "Buy": 3748500
     }
   },
   {
@@ -5628,14 +5897,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "May 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/19931-May-2024-Subscriber-Promotions",
-      "Buy": 250.0
+      "Buy": 250
     },
     "PU": {
       "Patch": "3.15.0",
       "Date": "2021-11-10",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 11466000.0
+      "Buy": 11466000
     }
   },
   {
@@ -5664,13 +5933,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "May 2025",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20568-May-2025-Subscriber-Promotions",
-      "Buy": 475.0
+      "Buy": 475
     },
     "PU": {
       "Patch": "3.2.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 27231750.0
+      "Buy": 27231750
     }
   },
   {
@@ -5699,13 +5968,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "May 2025",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20568-May-2025-Subscriber-Promotions",
-      "Buy": 435.0
+      "Buy": 435
     },
     "PU": {
       "Patch": "3.4.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 24938550.0
+      "Buy": 24938550
     }
   },
   {
@@ -5731,13 +6000,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 50.0
+      "Buy": 50
     },
     "PU": {
       "Patch": "2.6.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 573300.0
+      "Buy": 573300
     }
   },
   {
@@ -5763,13 +6032,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": true,
-      "Buy": 950.0
+      "Buy": 950
     },
     "PU": {
       "Patch": "3.6.2",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 65356200.0
+      "Buy": 65356200
     }
   },
   {
@@ -5795,7 +6064,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 60.0
+      "Buy": 60
     },
     "PU": {
       "HasPerf": false,
@@ -5826,7 +6095,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 65.0
+      "Buy": 65
     },
     "PU": {
       "HasPerf": false,
@@ -5857,7 +6126,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 60.0
+      "Buy": 60
     },
     "PU": {
       "HasPerf": false,
@@ -5888,13 +6157,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 100.0
+      "Buy": 100
     },
     "PU": {
       "Patch": "0.9.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1499400.0
+      "Buy": 1499400
     }
   },
   {
@@ -5924,7 +6193,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "May 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/19931-May-2024-Subscriber-Promotions",
-      "Buy": 45.0
+      "Buy": 45
     },
     "PU": {
       "Patch": "3.22.0",
@@ -5932,7 +6201,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 105840.0
+      "Buy": 105840
     }
   },
   {
@@ -5959,7 +6228,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 55.0
+      "Buy": 55
     },
     "PU": {
       "Patch": "3.22.0",
@@ -5967,7 +6236,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 132300.0
+      "Buy": 132300
     }
   },
   {
@@ -5994,7 +6263,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 50.0
+      "Buy": 50
     },
     "PU": {
       "Patch": "3.22.0",
@@ -6002,7 +6271,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 119070.0
+      "Buy": 119070
     }
   },
   {
@@ -6011,8 +6280,8 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
     "Manufacturer": "Roberts Space Industries",
     "Career": "Support",
     "Role": "Medical",
-    "Size": 3,
-    "Cargo": 28,
+    "Size": 5,
+    "Cargo": 32,
     "Type": "Ship",
     "CommLink": {
       "HasCommLink": false,
@@ -6020,7 +6289,8 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null
     },
     "ProgressTracker": {
-      "Status": "InProd",
+      "Status": "Released",
+      "Patch": "4.3.1",
       "IsOnPT": true,
       "ID": "zwtuu7anoftpl"
     },
@@ -6028,10 +6298,15 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 275.0
+      "IsShipOfTheMonth": false,
+      "ShipOfTheMonth": "March 2026",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20962-March-2026-Subscriber-Promotions",
+      "Buy": 290
     },
     "PU": {
-      "HasPerf": false,
+      "Patch": "4.3.1",
+      "Date": "2025-09-18",
+      "HasPerf": true,
       "IsPTUOnly": false,
       "Buy": null
     }
@@ -6042,8 +6317,8 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
     "Manufacturer": "Roberts Space Industries",
     "Career": "Support",
     "Role": "Medical",
-    "Size": 3,
-    "Cargo": 28,
+    "Size": 5,
+    "Cargo": 32,
     "Type": "Ship",
     "CommLink": {
       "HasCommLink": false,
@@ -6051,7 +6326,8 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null
     },
     "ProgressTracker": {
-      "Status": "InProd",
+      "Status": "Released",
+      "Patch": "4.3.1",
       "IsOnPT": true,
       "ID": "zwtuu7anoftpl"
     },
@@ -6059,10 +6335,12 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 250.0
+      "Buy": 260
     },
     "PU": {
-      "HasPerf": false,
+      "Patch": "4.3.1",
+      "Date": "2025-09-18",
+      "HasPerf": true,
       "IsPTUOnly": false,
       "Buy": null
     }
@@ -6090,7 +6368,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 575.0
+      "Buy": 575
     },
     "PU": {
       "HasPerf": false,
@@ -6121,13 +6399,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 45.0
+      "Buy": 45
     },
     "PU": {
       "Patch": "1.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 1020600.0
+      "Buy": 1020600
     }
   },
   {
@@ -6153,13 +6431,46 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 20.0
+      "Buy": 20
     },
     "PU": {
       "Patch": "1.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 423360.0
+      "Buy": 423360
+    }
+  },
+  {
+    "ClassName": "RSI_Aurora_GS_SE",
+    "Name": "RSI Aurora Mk I SE",
+    "Manufacturer": "Roberts Space Industries",
+    "Career": "Combat",
+    "Role": "Light Fighter",
+    "Size": 2,
+    "Cargo": 6,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 50
+    },
+    "PU": {
+      "Patch": "4.7.0",
+      "Date": "2026-03-25",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "Buy": null
     }
   },
   {
@@ -6185,13 +6496,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 35.0
+      "Buy": 35
     },
     "PU": {
       "Patch": "1.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 907200.0
+      "Buy": 907200
     }
   },
   {
@@ -6217,13 +6528,46 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 30.0
+      "Buy": 30
     },
     "PU": {
       "Patch": "1.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 687960.0
+      "Buy": 687960
+    }
+  },
+  {
+    "ClassName": "RSI_Aurora_MK2",
+    "Name": "RSI Aurora MK2",
+    "Manufacturer": "Roberts Space Industries",
+    "Career": "Multi-Role",
+    "Role": "Starter / Light Fighter",
+    "Size": 2,
+    "Cargo": 2,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 45
+    },
+    "PU": {
+      "Patch": "4.7.0",
+      "Date": "2026-03-25",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "Buy": null
     }
   },
   {
@@ -6249,13 +6593,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 25.0
+      "Buy": 25
     },
     "PU": {
       "Patch": "0.8.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 680400.0
+      "Buy": 680400
     }
   },
   {
@@ -6284,13 +6628,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "January 2025",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/20370-January-2025-Subscriber-Promotions",
-      "Buy": 240.0
+      "Buy": 240
     },
     "PU": {
       "Patch": "2.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 10160640.0
+      "Buy": 10160640
     }
   },
   {
@@ -6319,13 +6663,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "January 2025",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/20370-January-2025-Subscriber-Promotions",
-      "Buy": 315.0
+      "Buy": 315
     },
     "PU": {
       "Patch": "3.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 12186720.0
+      "Buy": 12186720
     }
   },
   {
@@ -6351,13 +6695,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": true,
-      "Buy": 350.0
+      "Buy": 350
     },
     "PU": {
       "Patch": "3.3.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 14817600.0
+      "Buy": 14817600
     }
   },
   {
@@ -6386,14 +6730,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "January 2025",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/20370-January-2025-Subscriber-Promotions",
-      "Buy": 200.0
+      "Buy": 200
     },
     "PU": {
       "Patch": "3.14.0",
       "Date": "2021-08-06",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 8043840.0
+      "Buy": 8043840
     }
   },
   {
@@ -6419,10 +6763,43 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 380.0
+      "Buy": 380
     },
     "PU": {
       "HasPerf": false,
+      "IsPTUOnly": false,
+      "Buy": null
+    }
+  },
+  {
+    "ClassName": "RSI_Hermes",
+    "Name": "RSI Hermes",
+    "Manufacturer": "Roberts Space Industries",
+    "Career": "Transporter",
+    "Role": "Medium Freight",
+    "Size": 5,
+    "Cargo": 288,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 220
+    },
+    "PU": {
+      "Patch": "4.6.0",
+      "Date": "2026-01-28",
+      "HasPerf": true,
       "IsPTUOnly": false,
       "Buy": null
     }
@@ -6451,7 +6828,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 60.0
+      "Buy": 60
     },
     "PU": {
       "Patch": "3.19.0",
@@ -6459,7 +6836,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 136080.0
+      "Buy": 136080
     }
   },
   {
@@ -6485,13 +6862,16 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 150.0
+      "IsShipOfTheMonth": false,
+      "ShipOfTheMonth": "October 2025",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20758-October-2025-Subscriber-Promotions",
+      "Buy": 150
     },
     "PU": {
       "Patch": "3.7.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 3402000.0
+      "Buy": 3402000
     }
   },
   {
@@ -6518,6 +6898,9 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
+      "IsShipOfTheMonth": false,
+      "ShipOfTheMonth": "October 2025",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20758-October-2025-Subscriber-Promotions",
       "Buy": 260
     },
     "PU": {
@@ -6551,7 +6934,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 650.0
+      "Buy": 650
     },
     "PU": {
       "HasPerf": false,
@@ -6564,9 +6947,9 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
     "Name": "RSI Perseus",
     "Manufacturer": "Roberts Space Industries",
     "Career": "Combat",
-    "Role": "Gunship",
+    "Role": "Heavy Gunship",
     "Size": 5,
-    "Cargo": 50,
+    "Cargo": 96,
     "Type": "Ship",
     "CommLink": {
       "HasCommLink": true,
@@ -6574,7 +6957,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": "https://robertsspaceindustries.com/comm-link/transmission/17881-RSI-Perseus"
     },
     "ProgressTracker": {
-      "Status": "InProd",
+      "Status": "Released",
       "IsOnPT": false,
       "ID": null
     },
@@ -6582,10 +6965,12 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 675.0
+      "Buy": 800
     },
     "PU": {
-      "HasPerf": false,
+      "Patch": "4.4.0",
+      "Date": "2025-11-19",
+      "HasPerf": true,
       "IsPTUOnly": false,
       "Buy": null
     }
@@ -6614,11 +6999,44 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 975.0
+      "Buy": 975
     },
     "PU": {
       "Patch": "3.24.3",
       "Date": "2024-11-20",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "Buy": null
+    }
+  },
+  {
+    "ClassName": "RSI_Salvation",
+    "Name": "RSI Salvation",
+    "Manufacturer": "Roberts Space Industries",
+    "Career": "Industrial",
+    "Role": "Starter / Light Salvage",
+    "Size": 2,
+    "Cargo": 6,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 60
+    },
+    "PU": {
+      "Patch": "4.4.0",
+      "Date": "2025-11-19",
       "HasPerf": true,
       "IsPTUOnly": false,
       "Buy": null
@@ -6650,14 +7068,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "December 2023",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/19618-December-2023-Subscriber-Promotions",
-      "Buy": 240.0
+      "Buy": 240
     },
     "PU": {
       "Patch": "3.17.1",
       "Date": "2022-05-19",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 5443200.0
+      "Buy": 5443200
     }
   },
   {
@@ -6686,14 +7104,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "December 2023",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/19618-December-2023-Subscriber-Promotions",
-      "Buy": 230.0
+      "Buy": 230
     },
     "PU": {
       "Patch": "3.18.0",
       "Date": "2023-03-10",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 5528517.0
+      "Buy": 5528517
     }
   },
   {
@@ -6720,6 +7138,9 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
+      "IsShipOfTheMonth": false,
+      "ShipOfTheMonth": "March 2026",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20962-March-2026-Subscriber-Promotions",
       "Buy": 60
     },
     "PU": {
@@ -6727,7 +7148,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Date": "2024-05-17",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 137200.0
+      "Buy": 137200
     }
   },
   {
@@ -6753,13 +7174,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 50.0
+      "Buy": 50
     },
     "PU": {
       "Patch": "3.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 120186.0
+      "Buy": 120186
     }
   },
   {
@@ -6789,7 +7210,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "February 2025",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20380-February-2025-Subscriber-Promotions",
-      "Buy": 175.0
+      "Buy": 175
     },
     "PU": {
       "Patch": "3.24.2",
@@ -6797,7 +7218,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 6804000.0
+      "Buy": 6804000
     }
   },
   {
@@ -6827,7 +7248,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "February 2025",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20380-February-2025-Subscriber-Promotions",
-      "Buy": 175.0
+      "Buy": 175
     },
     "PU": {
       "Patch": "3.24.2",
@@ -6835,7 +7256,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 4422600.0
+      "Buy": 4422600
     }
   },
   {
@@ -6861,7 +7282,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 190.0
+      "Buy": 190
     },
     "PU": {
       "HasPerf": false,
@@ -6892,13 +7313,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 55.0
+      "Buy": 55
     },
     "PU": {
       "Patch": "3.1.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 110170.0
+      "Buy": 110170
     }
   },
   {
@@ -6924,13 +7345,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 80.0
+      "Buy": 80
     },
     "PU": {
       "Patch": "3.3.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 160247.0
+      "Buy": 160247
     }
   },
   {
@@ -6959,14 +7380,14 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "March 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/19781-March-2024-Subscriber-Promotions",
-      "Buy": 75.0
+      "Buy": 75
     },
     "PU": {
       "Patch": "3.13.0",
       "Date": "2021-04-22",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 150232.0
+      "Buy": 150232
     }
   },
   {
@@ -6995,13 +7416,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "January 2024",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/comm-link/transmission/19721-January-2024-Subscriber-Promotions",
-      "Buy": 65.0
+      "Buy": 65
     },
     "PU": {
       "Patch": "3.3.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 130201.0
+      "Buy": 130201
     }
   },
   {
@@ -7027,13 +7448,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 65.0
+      "Buy": 65
     },
     "PU": {
       "Patch": "3.3.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 130201.0
+      "Buy": 130201
     }
   },
   {
@@ -7059,13 +7480,13 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 65.0
+      "Buy": 65
     },
     "PU": {
       "Patch": "3.3.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 130201.0
+      "Buy": 130201
     }
   },
   {
@@ -7091,14 +7512,17 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 120.0
+      "IsShipOfTheMonth": false,
+      "ShipOfTheMonth": "December 2025",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20877-December-2025-Subscriber-Promotions",
+      "Buy": 120
     },
     "PU": {
       "Patch": "3.13.1",
       "Date": "2021-05-20",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 961482.0
+      "Buy": 961482
     }
   },
   {
@@ -7124,7 +7548,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 35.0
+      "Buy": 35
     },
     "PU": {
       "HasPerf": false,
@@ -7155,7 +7579,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 35.0
+      "Buy": 35
     },
     "PU": {
       "HasPerf": false,
@@ -7186,7 +7610,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 40.0
+      "Buy": 40
     },
     "PU": {
       "HasPerf": false,
@@ -7221,7 +7645,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "March 2025",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/20428-March-2025-Subscriber-Promotions",
-      "Buy": 90.0
+      "Buy": 90
     },
     "PU": {
       "Patch": "3.21.1",
@@ -7229,7 +7653,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 453600.0
+      "Buy": 453600
     }
   },
   {
@@ -7267,7 +7691,7 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "HasPerf": true,
       "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
-      "Buy": 476280.0
+      "Buy": 476280
     }
   },
   {
@@ -7299,6 +7723,41 @@ const spvVehicleIndex: SpvVehicleIndex[] = [
       "Patch": "1.1.5",
       "HasPerf": true,
       "IsPTUOnly": false,
+      "Buy": null
+    }
+  },
+  {
+    "ClassName": "VNCL_Stinger",
+    "Name": "Esperia Stinger",
+    "Manufacturer": "Esperia",
+    "Career": "Combat",
+    "Role": "Heavy Fighter",
+    "Size": 3,
+    "Cargo": 0,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "Patch": "4.3.2",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 315
+    },
+    "PU": {
+      "Patch": "4.3.2",
+      "Date": "2025-10-16",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "IsPTUBuyOnly": false,
       "Buy": null
     }
   }

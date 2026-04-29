@@ -23,6 +23,22 @@ interface SpvVehicleMain {
   IsVehicle?: boolean;
   IsGravlev?: true;
   Armor: {
+    Durability?: {
+      Health: number;
+      DamageMultipliers: Partial<{
+        Physical: number;
+        Energy: number;
+        Distortion: number;
+        Thermal: number;
+        Biochemical: number;
+        Stun: number;
+      }>;
+    };
+    DamageDeflection?: {
+      Physical: number;
+      Energy: number;
+      Distortion: number;
+    };
     DamageMultipliers: {
       Physical: number;
       Energy: number;
@@ -35,10 +51,15 @@ interface SpvVehicleMain {
     };
   };
   Hull: {
+    PenetrationDamageMultiplier?: {
+      Fuse: number;
+      Component: number;
+    };
     StructureHealthPoints: {
       VitalParts: { [key: string]: number };
       Parts: { [key: string]: number };
     };
+    DoorsHealthPoints?: { [key: string]: number };
     ThrustersHealthPoints?: {
       Main: { [key: string]: number };
       Retro?: { [key: string]: number };
@@ -109,6 +130,7 @@ interface SpvVehicleMain {
     TotalShieldHP: number;
     PilotBurstDPS: number;
     TurretsBurstDPS: number;
+    PDCBurstDPS?: number;
     TotalEMPDmg?: number;
     TotalMissilesDmg: number;
   };

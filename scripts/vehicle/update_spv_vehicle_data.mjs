@@ -1,0 +1,273 @@
+import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { get } from "node:https";
+import { basename, dirname, resolve } from "node:path";
+
+const SOURCE_BASE_URL =
+  "https://raw.githubusercontent.com/GrakePch/Fancy-SC-Ship-Info-2/main/src/data";
+const RETRIES = 3;
+
+const DATASETS = [
+  {
+    sourceName: "vehicle-main-list.json",
+    outputPath: "src/data/vehicles/spv_vehicle_list.ts",
+    variableName: "spvVehicleList",
+    typeName: "SpvVehicleMain",
+    compact: false,
+  },
+  {
+    sourceName: "vehicle-basic-list.json",
+    outputPath: "src/data/vehicles/spv_vehicle_index.ts",
+    variableName: "spvVehicleIndex",
+    typeName: "SpvVehicleIndex",
+    compact: false,
+  },
+  {
+    sourceName: "vehicle-hardpoints-list.json",
+    outputPath: "src/data/vehicles/spv_vehicle_hardpoints.ts",
+    variableName: "spvVehicleHardpoints",
+    typeName: "SpvVehicleHardpoints",
+    compact: true,
+  },
+];
+const MANUAL_SERIES_FILE_NAME = "manual_vehicle_classname_to_series.ts";
+
+function parseArgs(argv) {
+  const options = {
+    sourceBaseUrl: SOURCE_BASE_URL,
+    outputDir: resolve("src/data/vehicles"),
+    localSourceDir: null,
+    manualSeriesInput: null,
+    manualSeriesOutput: null,
+  };
+
+  for (let index = 0; index < argv.length; index += 1) {
+    const arg = argv[index];
+    const next = argv[index + 1];
+
+    if (arg === "--source-base-url" && next) {
+      options.sourceBaseUrl = next.replace(/\/$/, "");
+      index += 1;
+      continue;
+    }
+
+    if (arg === "--output-dir" && next) {
+      options.outputDir = resolve(next);
+      index += 1;
+      continue;
+    }
+
+    if (arg === "--local-source-dir" && next) {
+      options.localSourceDir = resolve(next);
+      index += 1;
+      continue;
+    }
+
+    if (arg === "--manual-series-output" && next) {
+      options.manualSeriesOutput = resolve(next);
+      index += 1;
+      continue;
+    }
+
+    if (arg === "--manual-series-input" && next) {
+      options.manualSeriesInput = resolve(next);
+      index += 1;
+      continue;
+    }
+
+    if (arg === "--help") {
+      console.log(
+        [
+          "Usage: node scripts/vehicle/update_spv_vehicle_data.mjs [options]",
+          "",
+          "Options:",
+          "  --source-base-url <url>   Base raw URL for SPV JSON files.",
+          "  --output-dir <path>       Output directory. Defaults to src/data/vehicles",
+          "  --local-source-dir <path> Read source JSON files from a local directory instead of GitHub.",
+          "  --manual-series-input <path> Existing manual ClassName-to-series table to preserve values from.",
+          "  --manual-series-output <path> Output path for the manual ClassName-to-series table.",
+        ].join("\n"),
+      );
+      process.exit(0);
+    }
+  }
+
+  return options;
+}
+
+function sleep(ms) {
+  return new Promise((resolveSleep) => {
+    setTimeout(resolveSleep, ms);
+  });
+}
+
+function fetchTextOnce(url) {
+  return new Promise((resolveFetch, rejectFetch) => {
+    const request = get(
+      url,
+      {
+        headers: {
+          Accept: "application/json,text/plain,*/*",
+          "User-Agent": "fsd-item-finder-spv-data-updater/1.0",
+        },
+        timeout: 60000,
+      },
+      (response) => {
+        const chunks = [];
+
+        response.on("data", (chunk) => {
+          chunks.push(chunk);
+        });
+
+        response.on("end", () => {
+          const text = Buffer.concat(chunks).toString("utf8");
+          if (response.statusCode < 200 || response.statusCode >= 300) {
+            rejectFetch(
+              new Error(`HTTP ${response.statusCode} ${response.statusMessage}: ${text.slice(0, 200)}`),
+            );
+            return;
+          }
+
+          resolveFetch(text);
+        });
+      },
+    );
+
+    request.on("timeout", () => {
+      request.destroy(new Error(`Timed out fetching ${url}`));
+    });
+
+    request.on("error", rejectFetch);
+  });
+}
+
+async function fetchJson(url) {
+  let lastError = null;
+
+  for (let attempt = 1; attempt <= RETRIES; attempt += 1) {
+    try {
+      return JSON.parse(await fetchTextOnce(url));
+    } catch (error) {
+      lastError = error;
+      if (attempt < RETRIES) {
+        await sleep(2 ** (attempt - 1) * 1000);
+      }
+    }
+  }
+
+  throw new Error(`Failed to fetch ${url}: ${lastError?.message ?? lastError}`);
+}
+
+async function loadSourceJson(dataset, options) {
+  if (options.localSourceDir) {
+    const sourcePath = resolve(options.localSourceDir, dataset.sourceName);
+    return JSON.parse(await readFile(sourcePath, "utf8"));
+  }
+
+  return fetchJson(`${options.sourceBaseUrl}/${dataset.sourceName}`);
+}
+
+function validateVehicleArray(dataset, data) {
+  if (!Array.isArray(data)) {
+    throw new Error(`${dataset.sourceName} must contain a JSON array.`);
+  }
+
+  const invalidEntry = data.find(
+    (entry) => !entry || typeof entry !== "object" || typeof entry.ClassName !== "string",
+  );
+  if (invalidEntry) {
+    throw new Error(`${dataset.sourceName} contains an entry without a string ClassName.`);
+  }
+}
+
+function buildTypescriptModule(dataset, data) {
+  const indent = dataset.compact ? 0 : 2;
+  const payload = JSON.stringify(data, null, indent);
+  return `const ${dataset.variableName}: ${dataset.typeName}[] = ${payload};\n\nexport default ${dataset.variableName};\n`;
+}
+
+async function loadExistingManualSeries(path) {
+  try {
+    const source = await readFile(path, "utf8");
+    const entries = new Map();
+    const entriesByLowerClassName = new Map();
+    const entryPattern = /^\s*([A-Za-z0-9_]+):\s*"([^"]*)",/gm;
+
+    for (const match of source.matchAll(entryPattern)) {
+      entries.set(match[1], match[2]);
+      entriesByLowerClassName.set(match[1].toLowerCase(), match[2]);
+    }
+
+    return { entries, entriesByLowerClassName };
+  } catch (error) {
+    if (error?.code === "ENOENT") {
+      return { entries: new Map(), entriesByLowerClassName: new Map() };
+    }
+
+    throw error;
+  }
+}
+
+function buildManualSeriesModule(spvVehicleData, existingSeries) {
+  const lines = [
+    "const vehicleClassNameToSeries: Record<string, string> = {",
+    ...spvVehicleData.map((vehicle) => {
+      const series =
+        existingSeries.entries.get(vehicle.ClassName) ??
+        existingSeries.entriesByLowerClassName.get(vehicle.ClassName.toLowerCase()) ??
+        "";
+      return `  ${vehicle.ClassName}: ${JSON.stringify(series)},`;
+    }),
+    "};",
+    "",
+    "export default vehicleClassNameToSeries;",
+    "",
+  ];
+
+  return lines.join("\n");
+}
+
+async function writeText(path, text) {
+  await mkdir(dirname(path), { recursive: true });
+  await writeFile(path, text, "utf8");
+}
+
+async function main() {
+  const options = parseArgs(process.argv.slice(2));
+  let spvVehicleData = null;
+  let spvVehicleIndexData = null;
+
+  for (const dataset of DATASETS) {
+    const data = await loadSourceJson(dataset, options);
+    validateVehicleArray(dataset, data);
+
+    const outputPath = resolve(options.outputDir, basename(dataset.outputPath));
+    await writeText(outputPath, buildTypescriptModule(dataset, data));
+    console.log(`Updated ${basename(outputPath)} with ${data.length} entries`);
+
+    if (dataset.sourceName === "vehicle-main-list.json") {
+      spvVehicleData = data;
+    }
+
+    if (dataset.sourceName === "vehicle-basic-list.json") {
+      spvVehicleIndexData = data;
+    }
+  }
+
+  const manualSeriesOutput =
+    options.manualSeriesOutput ?? resolve(options.outputDir, MANUAL_SERIES_FILE_NAME);
+  const existingSeries = await loadExistingManualSeries(
+    options.manualSeriesInput ?? manualSeriesOutput,
+  );
+  await writeText(
+    manualSeriesOutput,
+    buildManualSeriesModule(spvVehicleIndexData, existingSeries),
+  );
+  console.log(
+    `Updated ${basename(manualSeriesOutput)} with ${spvVehicleIndexData.length} entries`,
+  );
+}
+
+main().catch((error) => {
+  console.error(error instanceof Error ? error.message : String(error));
+  process.exit(1);
+});
