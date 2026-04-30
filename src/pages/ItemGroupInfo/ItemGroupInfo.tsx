@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 const ItemGroupInfo = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const { dictItems } = useContext(ContextAllData);
   const itemKey = useParams().itemKey;
   const [item, setItem] = useState<Item | null>(null);
@@ -76,6 +76,11 @@ const ItemGroupInfo = () => {
     setTotalPriceMinMax(tempTotalPriceMinMax);
   }, [item, listVariants]);
 
+  const handleTypeClick = (type: string, subType: string) => {
+    searchParams.set("type", type + "." + subType);
+    navigate(`/?${searchParams.toString()}`);
+  };
+
   return (
     item && (
       <div className="ItemGroupInfo">
@@ -84,14 +89,23 @@ const ItemGroupInfo = () => {
             {t(firstVariant?.key, { ns: "items", lng: "zh" })} <span>等 {listVariants.length} 个同类物品</span>
           </h1>
           <h2 className="en">{t(firstVariant?.key, { ns: "items", lng: "en" })} ...</h2>
-          <div className="types">
-            <p className="type">
-              {t("FilterType." + typeCapitalizedToKey(item.type || "unknown"))}
-            </p>
-            <p className="subtype">
-              {t("FilterType." + typeCapitalizedToKey(item.sub_type || "unknown"))}
-            </p>
-          </div>
+          {(item.type || item.sub_type) && (
+            <div className="types">
+              {item.type && (
+                <button className="type" onClick={() => handleTypeClick(item.type, "")}>
+                  {t("FilterType." + typeCapitalizedToKey(item.type))}
+                </button>
+              )}
+              {item.type && item.sub_type && (
+                <button
+                  className="subtype"
+                  onClick={() => handleTypeClick(item.type, item.sub_type)}
+                >
+                  {t("FilterType." + typeCapitalizedToKey(item.sub_type))}
+                </button>
+              )}
+            </div>
+          )}
         </div>
         {totalPriceData && totalPriceData.length > 0 && (
           <>
