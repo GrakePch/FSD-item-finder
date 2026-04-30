@@ -6,6 +6,7 @@ import VehicleCard from "./VehicleCard/VehicleCard";
 import { useTranslation } from "react-i18next";
 import { useContext, useMemo } from "react";
 import { ContextAllData } from "../../../contexts";
+import { getTranslatedVehicleName } from "../../../utils/vehicleI18n";
 
 type seriesInfo = {
   isSeries: boolean;
@@ -41,10 +42,7 @@ const SearchVehicleResultList = ({ searchName }: { searchName: string }) => {
   // Filter vehicles based on searchName (case-insensitive)
   const vehicles = spvVehicleIndex.filter((vehicle) => {
     const nameMatch = vehicle.Name.toLowerCase().includes(normalizedSearchName);
-    const i18nName = t(`vehicle_Name${vehicle.ClassName}`, {
-      ns: "vehicles",
-      defaultValue: "",
-    });
+    const i18nName = getTranslatedVehicleName(t, vehicle);
     const i18nMatch = i18nName.toLowerCase().includes(normalizedSearchName);
     return nameMatch || i18nMatch;
   });

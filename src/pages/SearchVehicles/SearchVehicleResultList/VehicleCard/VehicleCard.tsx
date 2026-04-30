@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import VehicleImage from "../../../../components/VehicleImage";
 import { spvRoleToKey } from "../../../../utils";
 import { useTranslation } from "react-i18next";
+import { getTranslatedVehicleName } from "../../../../utils/vehicleI18n";
 
 interface VehicleCardProps {
   vehicle: SpvVehicleIndex;
@@ -29,10 +30,7 @@ const VehicleCard = ({ vehicle, uexBuyPrice }: VehicleCardProps) => {
           })}
         </p>
         <p className="vehicle-name-big">
-          {t("vehicle_Name" + vehicle.ClassName, {
-            ns: "vehicles",
-            defaultValue: vehicle.Name,
-          })}
+          {getTranslatedVehicleName(t, vehicle)}
         </p>
         <div className="vehicle-price-container">
           {vehicle.Store.Buy ? (
