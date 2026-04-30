@@ -88,6 +88,7 @@
     "fuel": "燃料补给服务"
   },
   "VehicleInfo": {
+    "notDelivered": "未交付",
     "isLimitedSale": "限量发售",
     "isPromotionOnly": "活动专属",
     "notBuyableUSD": "无法官网购买",

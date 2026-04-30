@@ -90,6 +90,7 @@
   "VehicleInfo": {
     "isLimitedSale": "Limited Sale",
     "isPromotionOnly": "Promotion Only",
+    "notDelivered": "Not Delivered",
     "notBuyableUSD": "Not Sell in Store",
     "notBuyableUEC": "Not Sell in Game",
     "Dimensions": "{{L}} L × {{W}} W × {{H}} H m",

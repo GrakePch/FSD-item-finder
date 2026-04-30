@@ -81,6 +81,10 @@
     font-size: .75rem;
 }
 
+.VehicleCard .vehicle-price-UEC.not-delivered {
+    color: #d14949;
+}
+
 .VehicleCard .vehicle-thumbnail {
     position: absolute;
     right: 1rem;

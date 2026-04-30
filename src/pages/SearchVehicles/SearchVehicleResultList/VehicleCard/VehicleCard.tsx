@@ -13,6 +13,7 @@ interface VehicleCardProps {
 const VehicleCard = ({ vehicle, uexBuyPrice }: VehicleCardProps) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const isReleased = vehicle.ProgressTracker.Status === "Released";
 
   const handleClick = () => {
     navigate(`/v/${vehicle.ClassName}`);
@@ -38,7 +39,11 @@ const VehicleCard = ({ vehicle, uexBuyPrice }: VehicleCardProps) => {
           ) : (
             <p className="vehicle-price-USD inactive">{t("VehicleInfo.notBuyableUSD")}</p>
           )}
-          {uexBuyPrice ? (
+          {!isReleased ? (
+            <p className="vehicle-price-UEC inactive not-delivered">
+              {t("VehicleInfo.notDelivered")}
+            </p>
+          ) : typeof uexBuyPrice === "number" ? (
             <p className="vehicle-price-UEC">{`¤ ${uexBuyPrice.toLocaleString()}`}</p>
           ) : uexBuyPrice === null ? (
             <p className="vehicle-price-UEC inactive">{t("VehicleInfo.notBuyableUEC")}</p>
