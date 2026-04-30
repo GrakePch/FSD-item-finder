@@ -1,6 +1,17 @@
 {
   "Navbar": {
-    "currentLocation": "Current Location: "
+    "currentLocation": "Current Location: ",
+    "searchItems": "Items",
+    "searchVehicles": "Vehicles",
+    "searchLocations": "Places"
+  },
+  "Common": {
+    "current": "Current",
+    "none": "None",
+    "nearby": "Nearby",
+    "outsideSystem": "Very Far",
+    "price": "¤ {{price}}",
+    "priceFrom": "From ¤ {{price}}"
   },
   "SearchItemBar": {
     "placeholder": "Search Items...",
@@ -11,7 +22,18 @@
     "clear": "Clear"
   },
   "SearchItemResultList": {
-    "notBuyable": "No Buyable"
+    "notBuyable": "Not buyable",
+    "priceUnavailable": "Price unavailable"
+  },
+  "ItemInfo": {
+    "visitUEX": "Visit UEX",
+    "setTitle": "Set",
+    "variantsTitle": "Appearance Variants",
+    "ignoreAppearanceDiff": "Ignore appearance differences"
+  },
+  "ItemGroupInfo": {
+    "sameKindItems": "and {{count}} similar items",
+    "includedItems": "This query includes the following items"
   },
   "SearchVehicleBar": {
     "placeholder": "Search Vehicles..."
@@ -24,7 +46,25 @@
   },
   "TradeOptions": {
     "sortByDistance": "Nearest Shop",
-    "sortByPrice": "Lowest Price"
+    "sortByPrice": "Lowest Price",
+    "locationTitle": "{{tradeType}} Locations",
+    "tradeType": {
+      "buy": "Purchase",
+      "sell": "Sell",
+      "rent": "Rental"
+    },
+    "priceTitle": {
+      "buy": "Purchase Price",
+      "sell": "Sell Price",
+      "rent": "Daily Rental Price"
+    }
+  },
+  "Footer": {
+    "dataSupport": "Data provided by",
+    "feedback": "Feedback",
+    "sourceCode": "Source Code",
+    "designAndDevelopment": "Design and development: {{name}}",
+    "technicalSupport": "Technical support: {{name}}"
   },
   "EOSC": {
     "setToRealTime": "Real Time",

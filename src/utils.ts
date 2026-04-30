@@ -140,9 +140,12 @@ export function getTerminalDistance(op, body, tdata) {
   return getBodiesDistance(locPath[1], body);
 }
 
-export function readableDistance(dist) {
-  if (dist === 0) return "附近";
-  if (dist === Infinity) return "星系外";
+export function readableDistance(
+  dist,
+  t: (key: string, options?: Record<string, unknown>) => string = (key) => key
+) {
+  if (dist === 0) return t("Common.nearby");
+  if (dist === Infinity) return t("Common.outsideSystem");
   if (dist < 1000) return Math.round(dist * 10) / 10 + " km";
   dist /= 1000;
   if (dist < 1000) return Math.round(dist * 10) / 10 + " Mm";

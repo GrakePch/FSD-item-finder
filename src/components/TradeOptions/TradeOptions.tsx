@@ -13,6 +13,7 @@ import { useNavigate, useSearchParams } from "react-router";
 import Icon from "@mdi/react";
 import { mdiAlertCircleOutline } from "@mdi/js";
 import LocationPathChips from "../LocationPathChips/LocationPathChips";
+import { useTranslation } from "react-i18next";
 
 type LocationTree = { name: string; subs: LocationForest; option?: TradeOption };
 
@@ -33,6 +34,7 @@ const percent = (v: number, zero: number, hundred: number) => {
 const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
+  const { t } = useTranslation();
   const { dictLocations, dictTerminals, currentLocation } = useContext(ContextAllData);
   const [options, setOptions] = useState([]);
 
@@ -105,14 +107,12 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
     <div className="TradeOptions">
       <div className="titles">
         <h3 className="location">
-          {tradeType === "buy" ? "购买" : tradeType === "sell" ? "出售" : "租赁"}地点
+          {t("TradeOptions.locationTitle", {
+            tradeType: t(`TradeOptions.tradeType.${tradeType}`),
+          })}
         </h3>
         <h4 className="price">
-          {tradeType === "buy"
-            ? "购买价格"
-            : tradeType === "sell"
-            ? "出售价格"
-            : "单日租赁价格"}
+          {t(`TradeOptions.priceTitle.${tradeType}`)}
         </h4>
       </div>
       <div className="options-container">
@@ -161,11 +161,11 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
                         ),
                       }}
                     >
-                      ¤ {option["price_" + tradeType]}
+                      {t("Common.price", { price: option["price_" + tradeType] })}
                     </p>
                   ) : (
                     <p className="price" style={{ color: `hsl(0deg 0% 50%)` }}>
-                      无法购买
+                      {t("SearchItemResultList.notBuyable")}
                     </p>
                   )}
                 </div>
@@ -253,6 +253,7 @@ const LocationForest = ({
 }: LocationForestProps) => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
+  const { t } = useTranslation();
   const { dictTerminals } = useContext(ContextAllData);
   return forest.map((tree) =>
     tree.option ? (
@@ -272,7 +273,7 @@ const LocationForest = ({
           getLocPath(tree.option, dictTerminals)[0] !== "Pyro" && (
             <Icon path={mdiAlertCircleOutline} size="1rem" color="#a06060" />
           )}
-        <p className="distance-info">{readableDistance(tree.option.distance)}</p>
+        <p className="distance-info">{readableDistance(tree.option.distance, t)}</p>
         {tree.option["price_" + tradeType] > 0 ? (
           <p
             className="price"
@@ -282,11 +283,11 @@ const LocationForest = ({
               ),
             }}
           >
-            ¤ {tree.option["price_" + tradeType]}
+            {t("Common.price", { price: tree.option["price_" + tradeType] })}
           </p>
         ) : (
           <p className="price" style={{ color: `hsl(0deg 0% 50%)` }}>
-            无法购买
+            {t("SearchItemResultList.notBuyable")}
           </p>
         )}
       </div>

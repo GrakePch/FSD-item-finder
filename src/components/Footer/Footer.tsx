@@ -1,14 +1,17 @@
 import "./Footer.css";
 import uexBadge from "../../assets/uex-api-badge-powered.png";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div style={{ flexGrow: 1 }}></div>
       <div className="Footer">
         <div className="uex">
           <a href="https://uexcorp.space/" target="_blank">
-            <p>数据支持</p>
+            <p>{t("Footer.dataSupport")}</p>
           </a>
           <a href="https://uexcorp.space/" target="_blank">
             <img src={uexBadge} width="140" />
@@ -16,15 +19,15 @@ const Footer = () => {
         </div>
         <p>
           <a href="https://support.citizenwiki.cn/t/StarFinder" target="_blank">
-            反馈平台
+            {t("Footer.feedback")}
           </a>
           {" | "}
           <a href="https://github.com/GrakePch/FSD-item-finder" target="_blank">
-            开源仓库
+            {t("Footer.sourceCode")}
           </a>
         </p>
-        <p>设计与开发：GrakePCH</p>
-        <p>技术支持：CxJuice</p>
+        <p>{t("Footer.designAndDevelopment", { name: "GrakePCH" })}</p>
+        <p>{t("Footer.technicalSupport", { name: "CxJuice" })}</p>
       </div>
     </>
   );

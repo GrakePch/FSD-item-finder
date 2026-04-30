@@ -1,6 +1,17 @@
 {
   "Navbar": {
-    "currentLocation": "当前地点："
+    "currentLocation": "当前地点：",
+    "searchItems": "寻物",
+    "searchVehicles": "寻船",
+    "searchLocations": "寻址"
+  },
+  "Common": {
+    "current": "当前",
+    "none": "无",
+    "nearby": "附近",
+    "outsideSystem": "星系外",
+    "price": "¤ {{price}}",
+    "priceFrom": "¤ {{price}} 起"
   },
   "SearchItemBar": {
     "placeholder": "搜索物品……",
@@ -11,7 +22,18 @@
     "clear": "清除"
   },
   "SearchItemResultList": {
-    "notBuyable": "无法购买"
+    "notBuyable": "无法购买",
+    "priceUnavailable": "价格暂不可用"
+  },
+  "ItemInfo": {
+    "visitUEX": "访问 UEX",
+    "setTitle": "套装",
+    "variantsTitle": "外观变体",
+    "ignoreAppearanceDiff": "忽略外观差异"
+  },
+  "ItemGroupInfo": {
+    "sameKindItems": "等 {{count}} 个同类物品",
+    "includedItems": "本次查询包含以下物品"
   },
   "SearchVehicleBar": {
     "placeholder": "搜索载具……"
@@ -24,7 +46,25 @@
   },
   "TradeOptions": {
     "sortByDistance": "距离近",
-    "sortByPrice": "价格低"
+    "sortByPrice": "价格低",
+    "locationTitle": "{{tradeType}}地点",
+    "tradeType": {
+      "buy": "购买",
+      "sell": "出售",
+      "rent": "租赁"
+    },
+    "priceTitle": {
+      "buy": "购买价格",
+      "sell": "出售价格",
+      "rent": "单日租赁价格"
+    }
+  },
+  "Footer": {
+    "dataSupport": "数据支持",
+    "feedback": "反馈平台",
+    "sourceCode": "开源仓库",
+    "designAndDevelopment": "设计与开发：{{name}}",
+    "technicalSupport": "技术支持：{{name}}"
   },
   "EOSC": {
     "setToRealTime": "实时",

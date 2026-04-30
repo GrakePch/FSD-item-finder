@@ -29,21 +29,23 @@ const SetButton = ({ subType, item, selfKey }) => {
     >
       <p>{tIcon[subType]}</p>
       <p className="zh">
-        {t(item.key, { ns: "items", lng: "zh" })}
+        {t(item.key, { ns: "items" })}
         {item.key === selfKey && <TagCurrent />}
       </p>
       {item.price_min_max.buy_min && item.price_min_max.buy_min < Infinity ? (
-        <p className="price">¤ {item.price_min_max.buy_min} 起</p>
+        <p className="price">
+          {t("Common.priceFrom", { price: item.price_min_max.buy_min })}
+        </p>
       ) : (
         <p className="price" style={{ color: "hsl(0deg 0% 60%)" }}>
-          无法购买
+          {t("SearchItemResultList.notBuyable")}
         </p>
       )}
     </button>
   ) : (
     <button className="SetButton" disabled>
       <p>{tIcon[subType]}</p>
-      <p className="zh">无</p>
+      <p className="zh">{t("Common.none")}</p>
     </button>
   );
 };

@@ -95,7 +95,7 @@ const ItemInfo = () => {
                     : () => window.open(uexLinkItem + item.slug, "_blank")
                 }
               >
-                访问 UEX
+                {t("ItemInfo.visitUEX")}
               </button>
             )}
           </div>
@@ -111,7 +111,7 @@ const ItemInfo = () => {
           <>
             <hr />
             <div className="title-and-button">
-              <h3>套装</h3>
+              <h3>{t("ItemInfo.setTitle")}</h3>
             </div>
             <div className="set-container">
               <SetButton subType="undersuit" item={set?.undersuit} selfKey={item.key} />
@@ -159,7 +159,7 @@ const ItemInfo = () => {
           <>
             <hr />
             <div className="title-and-button">
-              <h3 className="variants-title">外观变体</h3>
+              <h3 className="variants-title">{t("ItemInfo.variantsTitle")}</h3>
               <button
                 className="button-check-group"
                 onClick={() => {
@@ -167,7 +167,7 @@ const ItemInfo = () => {
                 }}
               >
                 <Icon path={mdiTagMultipleOutline} size="1.5rem" />
-                忽略外观差异
+                {t("ItemInfo.ignoreAppearanceDiff")}
               </button>
             </div>
             <div className="list-variants">
@@ -185,16 +185,17 @@ const ItemInfo = () => {
                 >
                   <ItemColorIcon name={t(vItem.key, { ns: "items", lng: "en" })} />
                   <p className="name">
-                    {t(vItem.key, { ns: "items", lng: "zh" }) ||
-                      t(vItem.key, { ns: "items", lng: "en" })}
+                    {t(vItem.key, { ns: "items" })}
                     {item.key === vItem.key && <TagCurrent />}
                   </p>
                   {vItem.price_min_max.buy_min &&
                   vItem.price_min_max.buy_min < Infinity ? (
-                    <p className="price">¤ {vItem.price_min_max.buy_min} 起</p>
+                    <p className="price">
+                      {t("Common.priceFrom", { price: vItem.price_min_max.buy_min })}
+                    </p>
                   ) : (
                     <p className="price" style={{ color: "hsl(0deg 0% 60%)" }}>
-                      无法购买
+                      {t("SearchItemResultList.notBuyable")}
                     </p>
                   )}
                 </button>

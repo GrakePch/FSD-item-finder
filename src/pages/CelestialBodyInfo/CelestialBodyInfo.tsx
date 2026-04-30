@@ -18,8 +18,8 @@ const CelestialBodyInfo = () => {
       <div className="CelestialBodyInfo">
         <div className="basic-info">
           <div className="name">
-            <h1>{t("LocationInfo.notFoundCelestialBody")}</h1>
-            <h2>{t("LocationInfo.notFoundCelestialBody", { lng: "en" })}</h2>
+            <h1>{t("LocationInfo.notFoundCelestial")}</h1>
+            <h2>{t("LocationInfo.notFoundCelestial", { lng: "en" })}</h2>
           </div>
         </div>
       </div>

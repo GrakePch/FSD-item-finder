@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 const TagCurrent = () => {
+  const { t } = useTranslation();
+
   return (
     <span
       style={{
@@ -12,7 +16,7 @@ const TagCurrent = () => {
         verticalAlign: "text-top",
       }}
     >
-      当前
+      {t("Common.current")}
     </span>
   );
 };

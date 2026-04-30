@@ -4,9 +4,11 @@ import Icon from "@mdi/react";
 import { icon } from "../../assets/icon";
 import { mdiMapMarker, mdiWidgetsOutline } from "@mdi/js";
 import "./NavBarBottom.css";
+import { useTranslation } from "react-i18next";
 
 const NavBarBottom = () => {
   const location = useLocation();
+  const { t } = useTranslation();
 
   const tabSearch = useMemo<"items" | "vehicles" | "locations">(() => {
     if (location.pathname.startsWith("/v")) {
@@ -26,15 +28,15 @@ const NavBarBottom = () => {
     <nav className="NavBarBottom">
       <Link to="/" className={tabSearch === "items" ? "active" : ""}>
         <Icon path={mdiWidgetsOutline} />
-        <span>寻物</span>
+        <span>{t("Navbar.searchItems")}</span>
       </Link>
       <Link to="/v" className={tabSearch === "vehicles" ? "active" : ""}>
         <Icon path={icon.Vehicle} />
-        <span>寻船</span>
+        <span>{t("Navbar.searchVehicles")}</span>
       </Link>
       <Link to="/l" className={tabSearch === "locations" ? "active" : ""}>
         <Icon path={mdiMapMarker} />
-        <span>寻址</span>
+        <span>{t("Navbar.searchLocations")}</span>
       </Link>
     </nav>
   );

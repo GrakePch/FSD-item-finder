@@ -102,7 +102,9 @@ const SearchResultList = ({ results }: { results: Item[] }) => {
               </div>
             )}
             {item.price_min_max.buy_min && item.price_min_max.buy_min < Infinity ? (
-              <p className="price">¤ {item.price_min_max.buy_min} +</p>
+              <p className="price">
+                {t("Common.priceFrom", { price: item.price_min_max.buy_min })}
+              </p>
             ) : (
               <p className="price" style={{ color: "hsl(0deg 0% 60%)" }}>
                 {hasLoadedItemPrices

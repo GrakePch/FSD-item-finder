@@ -310,7 +310,7 @@ const TerminalInfo = () => {
                           </div>
                         )}
                         <p className="price">
-                          ¤ {terminalItemPrice?.price_buy}
+                          {t("Common.price", { price: terminalItemPrice?.price_buy })}
                         </p>
                       </button>
                     );

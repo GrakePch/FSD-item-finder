@@ -86,7 +86,8 @@ const ItemGroupInfo = () => {
       <div className="ItemGroupInfo">
         <div className="item-info">
           <h1 className="zh">
-            {t(firstVariant?.key, { ns: "items", lng: "zh" })} <span>等 {listVariants.length} 个同类物品</span>
+            {t(firstVariant?.key, { ns: "items", lng: "zh" })}{" "}
+            <span>{t("ItemGroupInfo.sameKindItems", { count: listVariants.length })}</span>
           </h1>
           <h2 className="en">{t(firstVariant?.key, { ns: "items", lng: "en" })} ...</h2>
           {(item.type || item.sub_type) && (
@@ -110,7 +111,7 @@ const ItemGroupInfo = () => {
         {totalPriceData && totalPriceData.length > 0 && (
           <>
             <hr />
-            <h3 className="trade-options-title">购买</h3>
+            <h3 className="trade-options-title">{t("TradeOptions.tradeType.buy")}</h3>
             <TradeOptions
               pricesData={totalPriceData}
               priceMinMax={totalPriceMinMax}
@@ -119,7 +120,7 @@ const ItemGroupInfo = () => {
           </>
         )}
         <hr />
-        <h3 className="variants-title">本次查询包含以下物品</h3>
+        <h3 className="variants-title">{t("ItemGroupInfo.includedItems")}</h3>
         <div className="list-variants">
           {listVariants.map((vItem) => (
             <button
@@ -130,12 +131,14 @@ const ItemGroupInfo = () => {
               }}
             >
               <ItemColorIcon name={t(vItem.key, { ns: "items", lng: "en" })} />
-              <p className="name">{t(vItem.key, { ns: "items", lng: "zh" }) || vItem.key}</p>
+              <p className="name">{t(vItem.key, { ns: "items" })}</p>
               {vItem.price_min_max.buy_min && vItem.price_min_max.buy_min < Infinity ? (
-                <p className="price">¤ {vItem.price_min_max.buy_min} 起</p>
+                <p className="price">
+                  {t("Common.priceFrom", { price: vItem.price_min_max.buy_min })}
+                </p>
               ) : (
                 <p className="price" style={{ color: "hsl(0deg 0% 60%)" }}>
-                  无法购买
+                  {t("SearchItemResultList.notBuyable")}
                 </p>
               )}
             </button>
