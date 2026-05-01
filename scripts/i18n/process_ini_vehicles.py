@@ -26,6 +26,9 @@ args = parser.parse_args()
 initials = ["vehicle_Name"]
 excluded_suffixes = ("_short",)
 
+def normalize_vehicle_name(value):
+    return value.strip().removesuffix("\\n").strip()
+
 def ini_to_dict(filepath, initials):
     result = {}
     with open(filepath, "r", encoding="utf-8") as file:
@@ -38,7 +41,7 @@ def ini_to_dict(filepath, initials):
                 key = key.strip()
                 # Only include keys that start with any initial
                 if any(key.startswith(initial) for initial in initials) and not key.lower().endswith(excluded_suffixes):
-                    result[key] = value.strip()
+                    result[key] = normalize_vehicle_name(value)
     return result
 
 en_dict = ini_to_dict(args.en, initials)
