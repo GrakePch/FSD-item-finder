@@ -23,7 +23,7 @@ parser.add_argument(
 args = parser.parse_args()
 
 # Only include keys that start with any of these
-initials = ["item_Name", "item_decoration", "item_Mining"]
+initials = ["item_Name", "item_name", "item_decoration", "item_Mining"]
 initials.reverse()
 excluded_suffixes = ("_Desc", "_desc")
 

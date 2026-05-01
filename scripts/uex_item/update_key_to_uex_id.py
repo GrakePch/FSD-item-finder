@@ -86,6 +86,10 @@ def normalize_text(text):
     return re.sub(r"[^a-zA-Z0-9]", "", text or "").lower()
 
 
+def canonical_category_name(name):
+    return normalize_text(name)
+
+
 def is_short_key(key):
     return key.lower().endswith("_short")
 
@@ -103,11 +107,12 @@ def canonical_vehicle_key(key):
     return key
 
 
-def add_lookup(lookup, normalized_lookup, name, key):
+def add_lookup(lookup, normalized_lookup, name, key, source="auto"):
     if not name:
         return
-    lookup[name] = key
-    normalized_lookup[normalize_text(name)] = key
+    candidate = {"key": key, "source": source}
+    lookup.setdefault(name, []).append(candidate)
+    normalized_lookup.setdefault(normalize_text(name), []).append(candidate)
 
 
 def build_item_lookup(english_entries, manual_rules, existing_keys):
@@ -121,7 +126,7 @@ def build_item_lookup(english_entries, manual_rules, existing_keys):
     for rule in manual_rules:
         key = rule["key"]
         for name in rule.get("names") or []:
-            add_lookup(lookup, normalized_lookup, name, key)
+            add_lookup(lookup, normalized_lookup, name, key, source="manual")
 
     return lookup, normalized_lookup
 
@@ -152,16 +157,92 @@ def build_vehicle_lookup(english_entries, manual_rules):
     return lookup, normalized_lookup
 
 
-def find_match(name, lookup, normalized_lookup):
-    if name in lookup:
-        return lookup[name]
-    return normalized_lookup.get(normalize_text(name))
+def key_category_score(key, category):
+    key_lower = key.lower()
+    category_key = canonical_category_name(category)
+
+    if category_key == "quantumdrives":
+        if "qdrv" not in key_lower:
+            return -200
+        score = 100
+        if key_lower.startswith("item_name_qdrv") or key_lower.startswith("item_nameqdrv"):
+            score += 20
+        if key_lower.endswith("_scitem"):
+            score -= 1
+        return score
+
+    return 0
+
+
+def match_score(candidate, item):
+    key = candidate["key"]
+    item_name = item.get("item_name") or item.get("name")
+    category = item.get("category") or item.get("category_name")
+    score = 0
+
+    if candidate["source"] == "auto":
+        score += 50
+    elif candidate["source"] == "manual":
+        score += 10
+
+    key_lower = key.lower()
+    if key_lower.startswith("item_name"):
+        score += 25
+
+    score += key_category_score(key, category)
+
+    if normalize_text(item_name) and normalize_text(item_name) in normalize_text(key):
+        score += 5
+
+    return score
+
+
+def dedupe_candidates(candidates):
+    deduped = []
+    seen = set()
+    for candidate in candidates:
+        key = candidate["key"]
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(candidate)
+    return deduped
+
+
+def find_match(item, lookup, normalized_lookup):
+    name = item.get("item_name") or item.get("name")
+    if not name:
+        return None
+
+    candidates = lookup.get(name)
+    if not candidates:
+        candidates = normalized_lookup.get(normalize_text(name))
+    if not candidates:
+        return None
+
+    scored = [
+        (match_score(candidate, item), candidate["key"])
+        for candidate in dedupe_candidates(candidates)
+    ]
+    scored.sort(key=lambda entry: (-entry[0], entry[1]))
+
+    best_score, best_key = scored[0]
+    if best_score < 0:
+        return None
+    return best_key
 
 
 def append_unique_id(result, key, item_id):
     entry = result.setdefault(key, {"id": []})
     if item_id not in entry["id"]:
         entry["id"].append(item_id)
+
+
+def enrich_item_price_payload(items_payload, category_lookup):
+    for item in items_payload.get("data") or []:
+        category = category_lookup.get(item.get("id_category")) or {}
+        item["section"] = item.get("section") or category.get("section")
+        item["category"] = item.get("category") or category.get("name")
 
 
 def generate_item_key_map(items_payload, lookup, normalized_lookup, existing_items):
@@ -172,7 +253,7 @@ def generate_item_key_map(items_payload, lookup, normalized_lookup, existing_ite
         item_id = item.get("id_item")
         if not name or item_id is None:
             continue
-        key = find_match(name, lookup, normalized_lookup)
+        key = find_match(item, lookup, normalized_lookup)
         if key:
             append_unique_id(result, key, item_id)
         else:
@@ -192,7 +273,7 @@ def generate_vehicle_key_map(vehicles_payload, lookup, normalized_lookup):
         vehicle_id = vehicle.get("id_vehicle")
         if not name or vehicle_id is None:
             continue
-        key = find_match(name, lookup, normalized_lookup)
+        key = find_match({"item_name": name}, lookup, normalized_lookup)
         if key:
             append_unique_id(result, key, vehicle_id)
         else:
@@ -286,9 +367,16 @@ def main():
 
     items_payload = load_json_payload(args.items_source, "items_prices_all")
     vehicles_payload = load_json_payload(args.vehicles_source, "vehicles_purchases_prices_all")
+    categories_payload = fetch_json("categories?type=item")
     english_entries = parse_ini(load_english_ini(args.en))
     item_rules, vehicle_rules = load_rules(args.rules)
     existing_items = load_existing_item_map(args.output_item, args.existing_item_catalog)
+    category_lookup = {
+        category.get("id"): category
+        for category in categories_payload.get("data") or []
+        if category.get("id") is not None
+    }
+    enrich_item_price_payload(items_payload, category_lookup)
 
     item_lookup, normalized_item_lookup = build_item_lookup(
         english_entries,
