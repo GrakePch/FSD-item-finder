@@ -25,9 +25,7 @@ const VehicleCard = ({ vehicle, uexBuyPrice }: VehicleCardProps) => {
         <p className="vehicle-role">
           {t("vehicle_class_" + spvRoleToKey(vehicle.Role), {
             ns: "vehicle_classes",
-            defaultValue: t("VehicleFocus.vehicle_focus_" + spvRoleToKey(vehicle.Role), {
-              defaultValue: vehicle.Role,
-            }),
+            defaultValue: vehicle.Role,
           })}
         </p>
         <p className="vehicle-name-big">

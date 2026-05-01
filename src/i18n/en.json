@@ -442,18 +442,6 @@
     "TMBL_Ranger": "Tumbril Ranger Series",
     "TMBL_Storm": "Tumbril Storm Series"
   },
-  "VehicleFocus": {
-    "vehicle_focus_all": "All",
-    "vehicle_focus_combat": "Combat",
-    "vehicle_focus_competition": "Competition",
-    "vehicle_focus_exploration": "Exploration",
-    "vehicle_focus_ground": "Ground",
-    "vehicle_focus_groundcombat": "Ground Combat",
-    "vehicle_focus_multirole": "Multi-Role",
-    "vehicle_focus_resources": "Industrial",
-    "vehicle_focus_support": "Support",
-    "vehicle_focus_transporter": "Transporter"
-  },
   "LocationType": {
     "Star": "Star",
     "Planet": "Planet",

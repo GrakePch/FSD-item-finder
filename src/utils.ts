@@ -267,7 +267,7 @@ export const typeCapitalizedToKey = (capitalized: string | null) =>
     : "";
 
 export const spvRoleToKey = (role: string) =>
-  role.toLowerCase().replaceAll(" ", "").replaceAll("/", "");
+  role.toLowerCase().replaceAll(/[^a-z0-9]/g, "");
 
 export const toI18nKey = (str: string) =>
   str

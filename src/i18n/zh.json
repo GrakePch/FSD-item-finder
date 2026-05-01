@@ -442,18 +442,6 @@
     "TMBL_Ranger": "盾博尔 游侠 系列",
     "TMBL_Storm": "盾博尔 风暴 系列"
   },
-  "VehicleFocus": {
-    "vehicle_focus_all": "全部",
-    "vehicle_focus_combat": "战斗",
-    "vehicle_focus_competition": "竞速",
-    "vehicle_focus_exploration": "探索",
-    "vehicle_focus_ground": "地面",
-    "vehicle_focus_groundcombat": "地面战斗",
-    "vehicle_focus_multirole": "多功能",
-    "vehicle_focus_resources": "工业",
-    "vehicle_focus_support": "后勤",
-    "vehicle_focus_transporter": "运输"
-  },
   "LocationType": {
     "Star": "恒星",
     "Planet": "行星",

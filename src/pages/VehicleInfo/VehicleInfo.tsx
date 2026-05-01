@@ -62,12 +62,7 @@ const VehicleInfo = () => {
               <span className="vehicle-role">
                 {t("vehicle_class_" + spvRoleToKey(spvVehicle.Role), {
                   ns: "vehicle_classes",
-                  defaultValue: t(
-                    "VehicleFocus.vehicle_focus_" + spvRoleToKey(spvVehicle.Role),
-                    {
-                      defaultValue: spvVehicle.Role,
-                    }
-                  ),
+                  defaultValue: spvVehicle.Role,
                 })}
               </span>
               <span className={`vehicle-status ${spvVehicle.ProgressTracker.Status}`}>
