@@ -13,7 +13,7 @@ import { OrbitalMarkers } from "./OrbitalMarkers";
 import CameraUpdater from "./CameraUpdater";
 import { useOrbitInertia } from "./hooks/useOrbitInertia";
 import SubsolarDirectionLine from "./SubsolarDirectionLine";
-import { EffectComposer } from "@react-three/postprocessing";
+import { Bloom, EffectComposer } from "@react-three/postprocessing";
 import { useParentStarRotation } from "./useParentStarRotation";
 import { scToThree } from "./utils";
 import { Vector3 } from "three";
@@ -148,7 +148,7 @@ export default function CelestialBody3D({
       <CameraUpdater location={location} radius={radius} />
       <ambientLight intensity={applyRealisticAtmosphere ? 0.05 : 0.3} />
       <RotatingDirectionalLight intensity={5} celestialBody={celestialBody} />
-      <Starfield rotateYDeg={parentStarRotateDeg}/>
+      <Starfield rotateYDeg={parentStarRotateDeg} />
 
       <group>
         <CelestialBodySphere
@@ -224,29 +224,37 @@ export default function CelestialBody3D({
         dampingFactor={0.2}
       />
       {/* Post-processing composer with custom effect */}
-      <EffectComposer enabled={applyRealisticAtmosphere}>
-        <Atmosphere
-          cameraRef={cameraRef}
-          fovy={cameraFOVY}
-          radiusBody={radius}
-          radiusAtmos={atmosphereRadius}
-          dirToSun={dirToSunCameraAdjusted}
-          atmosColor={atmosphereColor}
-          atmosColorNight={atmosphereColorNight}
-          atmosColorOverrideCoefficient={celestialBody.atmosphereColorOverrideCoefficient}
-          waveLengths={
-            celestialBody.atmosphereWaveLengthR &&
-            celestialBody.atmosphereWaveLengthG &&
-            celestialBody.atmosphereWaveLengthB
-              ? new Vector3(
-                  celestialBody.atmosphereWaveLengthR,
-                  celestialBody.atmosphereWaveLengthG,
-                  celestialBody.atmosphereWaveLengthB
-                )
-              : undefined
-          }
-          scatteringStrength={celestialBody.atmosphereScatteringStrength}
+      <EffectComposer>
+        <Bloom
+          intensity={0.45}
+          luminanceThreshold={0.78}
+          luminanceSmoothing={0.2}
+          mipmapBlur
         />
+        {applyRealisticAtmosphere && (
+          <Atmosphere
+            cameraRef={cameraRef}
+            fovy={cameraFOVY}
+            radiusBody={radius}
+            radiusAtmos={atmosphereRadius}
+            dirToSun={dirToSunCameraAdjusted}
+            atmosColor={atmosphereColor}
+            atmosColorNight={atmosphereColorNight}
+            atmosColorOverrideCoefficient={celestialBody.atmosphereColorOverrideCoefficient}
+            waveLengths={
+              celestialBody.atmosphereWaveLengthR &&
+              celestialBody.atmosphereWaveLengthG &&
+              celestialBody.atmosphereWaveLengthB
+                ? new Vector3(
+                    celestialBody.atmosphereWaveLengthR,
+                    celestialBody.atmosphereWaveLengthG,
+                    celestialBody.atmosphereWaveLengthB
+                  )
+                : undefined
+            }
+            scatteringStrength={celestialBody.atmosphereScatteringStrength}
+          />
+        )}
       </EffectComposer>
     </Canvas>
   );
