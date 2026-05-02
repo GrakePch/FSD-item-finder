@@ -284,5 +284,6 @@ const CustomPostProcessing = forwardRef<any, CustomPostProcessingProps>(
     return <primitive ref={ref} object={customShader} dispose={null} />;
   }
 );
+CustomPostProcessing.displayName = "CustomPostProcessing";
 
 export default CustomPostProcessing;

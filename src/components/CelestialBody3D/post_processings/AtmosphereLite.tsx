@@ -156,5 +156,6 @@ const AtmosphereLite = forwardRef<any, AtmosphereLiteProps>(
     return <primitive ref={ref} object={customShader} dispose={null} />;
   }
 );
+AtmosphereLite.displayName = "AtmosphereLite";
 
 export default AtmosphereLite;

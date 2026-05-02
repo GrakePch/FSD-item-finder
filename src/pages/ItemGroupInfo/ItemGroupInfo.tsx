@@ -36,13 +36,13 @@ const ItemGroupInfo = () => {
   useEffect(() => {
     setFirstVariant(listVariants[0] || null);
 
-    let optionDict: Record<number, TradeOption> = {};
+    const optionDict: Record<number, TradeOption> = {};
     for (const item of listVariants) {
       for (const option of item.options) {
         if (!optionDict[option.id_terminal]) {
           optionDict[option.id_terminal] = option;
         } else {
-          let o = optionDict[option.id_terminal];
+          const o = optionDict[option.id_terminal];
           if (
             option.price_buy !== null &&
             (!o.price_buy || option.price_buy < o.price_buy)
@@ -56,21 +56,21 @@ const ItemGroupInfo = () => {
         }
       }
     }
-    let tempTotalPriceData = Object.values(optionDict);
+    const tempTotalPriceData = Object.values(optionDict);
     setTotalPriceData(tempTotalPriceData);
 
     /* Update price_min_max for each item */
-    let pricesBuy = tempTotalPriceData
+    const pricesBuy = tempTotalPriceData
       .filter((a): a is TradeOption & { price_buy: number } => a.price_buy !== null)
       .map((a) => a.price_buy);
-    let pricesSell = tempTotalPriceData
+    const pricesSell = tempTotalPriceData
       .filter((a): a is TradeOption & { price_sell: number } => a.price_sell !== null)
       .map((a) => a.price_sell);
-    let pricesRent =
+    const pricesRent =
       tempTotalPriceData
         ?.filter((a): a is TradeOption & { price_rent: number } => a.price_rent !== null)
         ?.map((a) => a.price_rent) || [];
-    let tempTotalPriceMinMax = {
+    const tempTotalPriceMinMax = {
       buy_min: Math.min(...pricesBuy) || null,
       buy_max: Math.max(...pricesBuy) || null,
       sell_min: Math.min(...pricesSell) || null,

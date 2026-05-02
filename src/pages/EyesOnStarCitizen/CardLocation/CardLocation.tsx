@@ -22,7 +22,6 @@ import {
   getLengthOfNightInMinutes,
   getMinutesToNextSunrise,
   getMinutesToNextSunset,
-  getRotateDegreesPerMinute,
   getSunriseSunsetHourAngleDeg,
 } from "../../../components/CelestialBody3D/utilsSunriseSunSetCalc";
 
@@ -63,7 +62,6 @@ const CardLocation = ({ location }: { location: SCLocation }) => {
 
   // Time related values
   const lengthOfDayInHour = location.parentBody?.hoursPerCycle ?? 0;
-  const rotationDegPerMinute = getRotateDegreesPerMinute(location);
   const lengthOfDaylightInHour = getLengthOfDaylightInMinutes(location) / 60;
   const lengthOfNightInHour = getLengthOfNightInMinutes(location) / 60;
 

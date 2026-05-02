@@ -91,9 +91,9 @@ const SearchBar = ({
     t(item.key, { ns: "items", lng, defaultValue: item.key });
 
   useEffect(() => {
-    let _filterType = searchParams.get("type");
+    const _filterType = searchParams.get("type");
     if (_filterType) {
-      let _split = _filterType.split(".");
+      const _split = _filterType.split(".");
       setFilterType(_split[0]);
       if (_split.length > 1) {
         setFilterSubType(_split[1]);
@@ -106,7 +106,7 @@ const SearchBar = ({
     }
 
     const normalizedSearchName = debouncedSearchName.trim().toLocaleLowerCase();
-    let tempIsSearching = Boolean(normalizedSearchName || _filterType);
+    const tempIsSearching = Boolean(normalizedSearchName || _filterType);
     setIsSearching(tempIsSearching);
 
     let tempList: Item[] = [];

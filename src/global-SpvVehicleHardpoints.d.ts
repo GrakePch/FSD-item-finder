@@ -54,16 +54,16 @@ interface SpvVehicleHardpoints {
                   Usage: string;
                   AngVelocity: { x: number; y: number }[6];
                 }
-              | {};
+              | object;
             ShieldEmitter:
               | {
                   Regen: string;
                   RegenNavMode: string;
                   Resistance: string;
                 }
-              | {};
-            PilotWeapon: {};
-            TurretsWeapon: {};
+              | object;
+            PilotWeapon: object;
+            TurretsWeapon: object;
           };
           Ifcs: {
             InstalledItems?: [
@@ -106,7 +106,7 @@ interface SpvVehicleHardpoints {
               MaxRegenPerSecMultiplier: number;
             };
           };
-          Wheeled: {};
+          Wheeled: object;
         };
         Shields: SpvHardpoints & { FaceType?: "Bubble" | "Quadrant" };
         Coolers: SpvHardpoints;
@@ -260,7 +260,7 @@ type SpvHardpoints =
       InstalledItems?: SpvPort[];
       Hardpoints: number;
     }
-  | {};
+  | object;
 
 interface SpvPort {
   PortName: string;

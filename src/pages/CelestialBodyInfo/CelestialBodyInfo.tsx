@@ -1,5 +1,5 @@
 import "./CelestialBodyInfo.css";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext } from "react";
 import { useParams } from "react-router";
 import { ContextAllData } from "../../contexts";
 import { useTranslation } from "react-i18next";

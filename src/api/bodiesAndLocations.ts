@@ -17,7 +17,7 @@ export function buildDataBodiesAndLocations(): [
   const dictLocations: LocationDictionary = {};
 
   for (const body of bodies) {
-    let cbody: CelestialBody = {
+    const cbody: CelestialBody = {
       name: body.name,
       type: body.type,
       ordinal: body.ordinal,
@@ -45,7 +45,7 @@ export function buildDataBodiesAndLocations(): [
       children: [],
     };
 
-    let cbodyInfo = getBodyInfo(body.name);
+    const cbodyInfo = getBodyInfo(body.name);
     if (cbodyInfo) {
       cbody.surfacePressureAtm = cbodyInfo.surfacePressureAtm;
       cbody.atmosphereHeightM = cbodyInfo.atmosphereHeightM;
@@ -76,7 +76,7 @@ export function buildDataBodiesAndLocations(): [
   }
 
   for (const location of locations) {
-    let cloc: SCLocation = {
+    const cloc: SCLocation = {
       name: location.name,
       type: location.type,
       parentBody: null,

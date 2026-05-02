@@ -25,7 +25,7 @@ const uexLinkVehicle = "https://uexcorp.space/vehicles/home/list/in_game_sell/";
 const ItemInfo = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const [item, setItem] = useState<Item | null>(null);
   const [listVariants, setListVariants] = useState<Item[]>([]);
   const [set, setSet] = useState<ArmorSet | null>(null);

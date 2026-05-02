@@ -6,7 +6,7 @@ import LocationPathChips from "../../components/LocationPathChips/LocationPathCh
 
 const TerminalIndex = () => {
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const { dictTerminals } = useContext(ContextAllData);
   return (
     <div className="TerminalIndex">

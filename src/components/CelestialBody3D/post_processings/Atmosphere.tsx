@@ -198,9 +198,9 @@ class ShaderProgramAtmosphere extends Effect {
       .clone()
       .divideScalar(_uRadiusBody);
     this.cameraRef.current?.getWorldDirection(this.uniforms.get("uCameraDir")!.value);
-    let scatterR = Math.pow(400 / this.waveLengths.x, 4) * this.scatteringStrength;
-    let scatterG = Math.pow(400 / this.waveLengths.y, 4) * this.scatteringStrength;
-    let scatterB = Math.pow(400 / this.waveLengths.z, 4) * this.scatteringStrength;
+    const scatterR = Math.pow(400 / this.waveLengths.x, 4) * this.scatteringStrength;
+    const scatterG = Math.pow(400 / this.waveLengths.y, 4) * this.scatteringStrength;
+    const scatterB = Math.pow(400 / this.waveLengths.z, 4) * this.scatteringStrength;
     this.uniforms.get("uScatteringCoefficients")!.value = new Vector3(
       scatterR,
       scatterG,
@@ -268,5 +268,6 @@ const Atmosphere = forwardRef<any, AtmosphereProps>(
     return <primitive ref={ref} object={customShader} dispose={null} />;
   }
 );
+Atmosphere.displayName = "Atmosphere";
 
 export default Atmosphere;

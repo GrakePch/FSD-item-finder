@@ -27,7 +27,7 @@ const colorWordAtEnd: Record<string, string[]> = {
 const ItemColorIcon = ({ name }: { name?: string | null }) => {
   let colors: string[] = [];
   if (name) {
-    let nameLower = name.toLowerCase();
+    const nameLower = name.toLowerCase();
     for (const [suffix, cssColors] of Object.entries(colorWordAtEnd)) {
       if (nameLower.endsWith(" " + suffix)) {
         colors = cssColors;
@@ -43,7 +43,7 @@ const ItemColorIcon = ({ name }: { name?: string | null }) => {
   if (colors?.length > 0) {
     angle = 360 / colors.length;
     colors.forEach((color, idx) => {
-      let cssColor = colorWordAtEnd[color.toLowerCase()]?.[0] || color;
+      const cssColor = colorWordAtEnd[color.toLowerCase()]?.[0] || color;
       if (idx < colors.length - 1)
         css += `${cssColor} ${idx * angle}deg ${(idx + 1) * angle}deg, `;
       else css += `${cssColor} ${idx * angle}deg 360deg)`;

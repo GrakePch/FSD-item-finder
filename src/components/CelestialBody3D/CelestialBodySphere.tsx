@@ -1,4 +1,5 @@
 import { useTexture } from "@react-three/drei";
+import type { ThreeElements } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useCallback } from "react";
 
 const shaderFuncCustomLighting = `
@@ -38,7 +39,7 @@ void RE_Direct_Physical_CUSTOM( const in IncidentLight directLight, const in vec
 #undef RE_Direct
 #define RE_Direct				RE_Direct_Physical_CUSTOM`;
 
-function CustomStandardMaterial(props: any) {
+function CustomStandardMaterial(props: ThreeElements["meshStandardMaterial"]) {
   // Use a ref to persist the callback
   const handleBeforeCompile = useCallback((shader: { fragmentShader: string }) => {
     // Modify the lighting falloff in the fragment shader
@@ -61,22 +62,27 @@ function SurfaceMaterial({
   mapEmission,
   mapNormal,
 }: {
-  map?: string;
+  map: string;
   mapRoughness?: string;
   mapEmission?: string;
   mapNormal?: string;
 }) {
-  const diffuseMap = map ? useTexture(map) : undefined;
-  const roughnessMap = mapRoughness ? useTexture(mapRoughness) : undefined;
-  const emissionMap = mapEmission ? useTexture(mapEmission) : undefined;
-  const normalMap = mapNormal ? useTexture(mapNormal) : undefined;
+  const [diffuseMap, roughnessMapRaw, emissionMapRaw, normalMapRaw] = useTexture([
+    map,
+    mapRoughness || map,
+    mapEmission || map,
+    mapNormal || map,
+  ]);
+  const roughnessMap = mapRoughness ? roughnessMapRaw : undefined;
+  const emissionMap = mapEmission ? emissionMapRaw : undefined;
+  const normalMap = mapNormal ? normalMapRaw : undefined;
   return (
     <CustomStandardMaterial
       map={diffuseMap}
       roughnessMap={roughnessMap}
       emissiveMap={emissionMap}
       emissiveIntensity={emissionMap ? 0.3 : 0}
-      emissive={emissionMap ? 0xffffdd : null}
+      emissive={emissionMap ? 0xffffdd : undefined}
       normalMap={normalMap}
       normalScale={[.3, .3]}
     />

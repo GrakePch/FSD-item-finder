@@ -16,7 +16,7 @@ const SetButton = ({
 }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const tIcon: Record<ArmorSetKey, string> = {
     undersuit: "🩲",
     helmet: "🤿",

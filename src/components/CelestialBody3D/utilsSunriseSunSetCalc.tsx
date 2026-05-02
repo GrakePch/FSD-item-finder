@@ -98,7 +98,7 @@ export function getParentStarLongitudeDeg(cb: CelestialBody): number {
   );
   const meridian = getMeridianDeg(cb);
   const meridianMod = modulo(0 - meridian, 360);
-  let solarLongitude = currentRotation - meridianMod;
+  const solarLongitude = currentRotation - meridianMod;
   if (solarLongitude > 180) {
     return solarLongitude - 360;
   }
@@ -134,7 +134,7 @@ export function getLongitude360(location: SCLocation): number {
 }
 
 export function getLongitude(location: SCLocation): number {
-  let degLon = getLongitude360(location);
+  const degLon = getLongitude360(location);
   if (degLon > 180) {
     return degLon - 360;
   } else {
@@ -182,7 +182,7 @@ export function getSunriseSunsetHourAngleDeg(location: SCLocation): number {
   const latRad = (locationLatitude * Math.PI) / 180;
   const declRad = (solarDeclination * Math.PI) / 180;
   // Calculate the core hour angle in radians
-  let core = -Math.tan(latRad) * Math.tan(declRad);
+  const core = -Math.tan(latRad) * Math.tan(declRad);
   if (core < -1) return Infinity; /* Polar day */
   if (core > 1) return -Infinity; /* Polar night */
   let hourAngleDeg = (Math.acos(core) * 180) / Math.PI;

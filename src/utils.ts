@@ -40,7 +40,7 @@ export function getAttributeValueByName(
 ): string | null {
   if (!attrDict) return null;
   for (const [k, v] of Object.entries(attrDict)) {
-    let attr = getUEXAttribute(k);
+    const attr = getUEXAttribute(k);
     if (attr && attr.name === name) return v;
   }
   return null;
@@ -54,8 +54,8 @@ export function getVariants(key: string, itemsData: ItemDictionary) {
   if (!key) return [];
   if (!itemsData[key]) return [];
 
-  let thisName = itemsNameI18nEnMap[key] || key;
-  let thisSubType = itemsData[key].sub_type;
+  const thisName = itemsNameI18nEnMap[key] || key;
+  const thisSubType = itemsData[key].sub_type;
   if (
     !thisSubType ||
     [
@@ -69,7 +69,7 @@ export function getVariants(key: string, itemsData: ItemDictionary) {
     ].includes(thisSubType) === false
   )
     return [];
-  let initial = thisName.split(" ")[0];
+  const initial = thisName.split(" ")[0];
   return Object.values(itemsData)
     .sort((a, b) => a.key.localeCompare(b.key))
     .filter(
@@ -81,7 +81,7 @@ export function getSet(key: string, itemsData: ItemDictionary) {
   if (!key) return null;
   if (!itemsData[key]) return null;
 
-  let set: ArmorSet = {};
+  const set: ArmorSet = {};
   for (const str of ["suit", "helmet", "core", "arms", "legs", "backpack"]) {
     if (key.includes(str)) {
       set.undersuit = (itemsData[key.replace(str, "suit")] as Item) || null;
@@ -103,7 +103,7 @@ function getDistance(v1: [number, number, number], v2: [number, number, number])
 export function getBody(name: string | null | undefined): CelestialBody | null {
   if (!name) return null;
   /* Manually fix the name difference between UEX and bodies.json */
-  let manualFixIfPossible = uexBodiesFixMap[name];
+  const manualFixIfPossible = uexBodiesFixMap[name];
   const bodiesData = bodies as unknown as CelestialBody[];
   return (
     bodiesData.find((e) => e.name === name) ||
@@ -123,14 +123,14 @@ export function getPathTo(loc: SCLocation | CelestialBody): string[] {
 }
 
 export function getPathToTerminal(t: Terminal): string[] {
-  let terminalSplit = t.name.split(" - ").reverse();
+  const terminalSplit = t.name.split(" - ").reverse();
   if (terminalSplit.length > 1) terminalSplit.shift();
   return t.parentLocation ? getPathTo(t.parentLocation).concat(terminalSplit) : terminalSplit;
 }
 
 export function getBodiesDistance(b1: string | null | undefined, b2: string | null | undefined): number {
-  let info1 = getBody(b1);
-  let info2 = getBody(b2);
+  const info1 = getBody(b1);
+  const info2 = getBody(b2);
   if (!info1 || !info2) return Infinity;
   if ((info1.parentStar || info1.name) !== (info2.parentStar || info2.name))
     return Infinity; //TODO: Better calculation for interstellar distance
@@ -141,7 +141,7 @@ export function getBodiesDistance(b1: string | null | undefined, b2: string | nu
 }
 
 export function getTerminalDistance(op: TradeOption, body: string, tdata: TerminalDictionary): number {
-  let locPath = getLocPath(op, tdata);
+  const locPath = getLocPath(op, tdata);
   if (!locPath) return Infinity;
   return getBodiesDistance(locPath[1], body);
 }
@@ -201,7 +201,7 @@ export const signalToColor: Record<string, string> = {
 };
 
 export function getLocalStorageRecent(): string[] {
-  let r = localStorage.getItem("recent");
+  const r = localStorage.getItem("recent");
   if (!r) return [];
   return r.split(",").filter((a) => a);
 }

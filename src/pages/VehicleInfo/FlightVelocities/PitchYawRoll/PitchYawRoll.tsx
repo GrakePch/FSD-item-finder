@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+ 
 // import icons from "../../../assets/icons";
 import { useTranslation } from "react-i18next";
 import "./PitchYawRoll.css";

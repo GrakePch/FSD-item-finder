@@ -5,13 +5,13 @@ import { getPathToTerminal, toUrlKey } from "../utils";
 export async function fetchAndProcessTerminals(dictLocations: LocationDictionary): Promise<TerminalDictionary> {
   const res = await fetchWithCache("terminals", "https://api.uexcorp.space/2.0/terminals");
 
-  let temp: Terminal[] = res.data.map((t: TerminalApiResponse): Terminal => {
+  const temp: Terminal[] = res.data.map((t: TerminalApiResponse): Terminal => {
     let orbit_name_fix = t.orbit_name
       ? (uexBodiesFixM as Record<string, string>)[t.orbit_name] || t.orbit_name
       : t.orbit_name;
     if (t.star_system_name === "Pyro" && t.orbit_name === "Pyro Jump Point")
       orbit_name_fix = "Stanton Jump Point";
-    let locPath3rd = t.name.split(" - ").reverse();
+    const locPath3rd = t.name.split(" - ").reverse();
     if (locPath3rd[0] === "Stanton Gateway Station")
       locPath3rd[0] = "Stanton Gateway";
     if (locPath3rd[0] === "Terra Gateway Station") locPath3rd[0] = "Terra Gateway";
@@ -58,7 +58,7 @@ export async function fetchAndProcessTerminals(dictLocations: LocationDictionary
       has_freight_elevator: !!t.has_freight_elevator,
     };
   });
-  let tempDict: TerminalDictionary = {};
+  const tempDict: TerminalDictionary = {};
   for (const t of temp) {
     /* Insert Terminal into the dictionary */
     tempDict[t.id] = t;
@@ -94,7 +94,7 @@ export async function fetchAndProcessTerminals(dictLocations: LocationDictionary
     }
 
     /* Set parentLocation and location_path. Push Terminal into the parent location */
-    let _parentLocation = dictLocations[toUrlKey(terminalAt)];
+    const _parentLocation = dictLocations[toUrlKey(terminalAt)];
     if (_parentLocation) {
       t.parentLocation = _parentLocation;
       t.location_path = getPathToTerminal(t);

@@ -58,7 +58,7 @@ async function fetchItemPriceOptions(): Promise<SimpleItemOptionsDictionary> {
   );
 
   for (const item of res.data) {
-    let id = item.id_item;
+    const id = item.id_item;
     if (!dictSimpleItems[id]) {
       dictSimpleItems[id] = {
         options: [],
@@ -118,10 +118,10 @@ export async function fetchAndProcessItems(
   }
 
   Object.values(dictItems).forEach((item) => {
-    let pricesBuy = item.options
+    const pricesBuy = item.options
       .filter((a): a is TradeOption & { price_buy: number } => a.price_buy !== null && a.date_modified >= date4_0)
       .map((a) => a.price_buy);
-    let pricesSell = item.options
+    const pricesSell = item.options
       .filter((a): a is TradeOption & { price_sell: number } => a.price_sell !== null && a.date_modified >= date4_0)
       .map((a) => a.price_sell);
     let pricesRent: number[] = [];

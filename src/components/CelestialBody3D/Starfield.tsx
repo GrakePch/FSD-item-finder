@@ -19,10 +19,10 @@ export default function Starfield({
     const vertices: number[] = [];
     const random = Math.random; // TODO: use a seedable random number generator
     for (let i = 0; i < amount; i++) {
-      let theta = random() * 2.0 * Math.PI;
-      let phi = Math.acos(2.0 * random() - 1.0);
-      let r = 1000;
-      let pos = sphericalToCartesian(r, theta, phi);
+      const theta = random() * 2.0 * Math.PI;
+      const phi = Math.acos(2.0 * random() - 1.0);
+      const r = 1000;
+      const pos = sphericalToCartesian(r, theta, phi);
       vertices.push(...pos);
     }
     return new Float32Array(vertices);
