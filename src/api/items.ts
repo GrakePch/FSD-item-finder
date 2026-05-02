@@ -99,12 +99,12 @@ export async function fetchAndProcessItems(
           optionDict[option.id_terminal] = { ...option };
         } else {
           optionDict[option.id_terminal].price_buy = Math.min(
-            optionDict[option.id_terminal].price_buy,
-            option.price_buy
+            optionDict[option.id_terminal].price_buy ?? Infinity,
+            option.price_buy ?? Infinity
           );
           optionDict[option.id_terminal].price_sell = Math.max(
-            optionDict[option.id_terminal].price_sell,
-            option.price_sell
+            optionDict[option.id_terminal].price_sell ?? 0,
+            option.price_sell ?? 0
           );
         }
       }
@@ -119,16 +119,16 @@ export async function fetchAndProcessItems(
 
   Object.values(dictItems).forEach((item) => {
     let pricesBuy = item.options
-      .filter((a) => a.price_buy !== null && a.date_modified >= date4_0)
+      .filter((a): a is TradeOption & { price_buy: number } => a.price_buy !== null && a.date_modified >= date4_0)
       .map((a) => a.price_buy);
     let pricesSell = item.options
-      .filter((a) => a.price_sell !== null && a.date_modified >= date4_0)
+      .filter((a): a is TradeOption & { price_sell: number } => a.price_sell !== null && a.date_modified >= date4_0)
       .map((a) => a.price_sell);
     let pricesRent: number[] = [];
     if ("options_rent" in item && Array.isArray(item.options_rent)) {
       pricesRent =
         item.options_rent
-          .filter((a) => a.price_rent !== null && a.date_modified >= date4_0)
+          .filter((a): a is TradeOption & { price_rent: number } => a.price_rent !== null && a.date_modified >= date4_0)
           .map((a) => a.price_rent) || [];
     }
     item.price_min_max = {

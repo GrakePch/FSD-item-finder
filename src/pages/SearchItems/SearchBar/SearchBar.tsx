@@ -109,7 +109,7 @@ const SearchBar = ({
     let tempIsSearching = Boolean(normalizedSearchName || _filterType);
     setIsSearching(tempIsSearching);
 
-    let tempList = [];
+    let tempList: Item[] = [];
     const shouldFilterBuyable =
       !parseInt(searchParams.get("show_unbuyable")) && hasLoadedItemPrices;
     if (tempIsSearching) {
@@ -143,13 +143,13 @@ const SearchBar = ({
       if (_filterType.startsWith("Systems.")) {
         tempList
           .sort((a, b) =>
-            getAttributeValueByName("Grade", a.attributes)?.localeCompare(
-              getAttributeValueByName("Grade", b.attributes)
+            (getAttributeValueByName("Grade", a.attributes) || "").localeCompare(
+              getAttributeValueByName("Grade", b.attributes) || ""
             )
           )
           .sort((a, b) =>
-            getAttributeValueByName("Class", a.attributes)?.localeCompare(
-              getAttributeValueByName("Class", b.attributes)
+            (getAttributeValueByName("Class", a.attributes) || "").localeCompare(
+              getAttributeValueByName("Class", b.attributes) || ""
             )
           )
           .sort(
@@ -160,8 +160,8 @@ const SearchBar = ({
       } else if (_filterType.startsWith("Vehicle Weapons.")) {
         tempList
           .sort((a, b) =>
-            getAttributeValueByName("Tracking Signal", a.attributes)?.localeCompare(
-              getAttributeValueByName("Tracking Signal", b.attributes)
+            (getAttributeValueByName("Tracking Signal", a.attributes) || "").localeCompare(
+              getAttributeValueByName("Tracking Signal", b.attributes) || ""
             )
           )
           .sort(
@@ -224,7 +224,7 @@ const SearchBar = ({
               }
               setSearchParams(searchParams);
             }}
-            className={searchParams.get("type")?.startsWith(type) ? "active" : null}
+            className={searchParams.get("type")?.startsWith(type) ? "active" : undefined}
           >
             {t("FilterType." + key)}
           </button>
@@ -252,7 +252,7 @@ const SearchBar = ({
                 }
                 setSearchParams(searchParams);
               }}
-              className={typeKeyToCapitalized(subt) === filterSubType ? "active" : null}
+              className={typeKeyToCapitalized(subt) === filterSubType ? "active" : undefined}
             >
               {t("FilterType." + subt)}
             </button>

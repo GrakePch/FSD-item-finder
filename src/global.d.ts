@@ -46,7 +46,7 @@ interface SCLocation {
   coordinateX: number;
   coordinateY: number;
   coordinateZ: number;
-  wikiLink: string;
+  wikiLink: string | null;
   private: number;
   quantum: number;
   terminals: Terminal[];
@@ -121,7 +121,7 @@ interface Vehicle {
   name_zh_Hans: string;
   type: "Vehicle";
   sub_type: "Vehicle";
-  id_vehicle: number;
+  id_vehicle: number | null;
   price_min_max: PriceMinMax;
   options: TradeOption[];
   options_rent: TradeOption[];
@@ -224,8 +224,8 @@ type SimpleVehicleOptionsDictionary = { [id: number]: SimpleVehicleOptions };
 
 // Ships Performances Viewer interfaces
 interface SpvVehicleIndex {
-  "New Ship"?: string;
-  "New Vehicle"?: string;
+  "New Ship"?: string | null;
+  "New Vehicle"?: string | null;
   ClassName: string;
   Name: string;
   Manufacturer: string;
@@ -236,17 +236,17 @@ interface SpvVehicleIndex {
   Type: "Ship" | "Vehicle" | "Gravlev";
   CommLink: {
     HasCommLink: boolean;
-    Date: string;
-    Url: string;
+    Date: string | null;
+    Url: string | null;
   };
   ProgressTracker: {
     Status: "Concept" | "InProd" | "Released" | "OnHold" | "NextPatch";
-    Patch?: string;
+    Patch?: string | null;
     IsOnPT: boolean;
-    ID: string;
+    ID: string | null;
   };
   Store: {
-    Url: string;
+    Url: string | null;
     IsPromotionOnly: boolean;
     IsLimitedSale: boolean;
     IsShipOfTheMonth?: boolean;

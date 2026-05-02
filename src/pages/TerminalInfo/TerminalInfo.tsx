@@ -29,12 +29,12 @@ const TerminalInfo = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { dictTerminals, dictItems } = useContext(ContextAllData);
   const terminalId = useParams().terminalId;
-  const [terminalInfo, setTerminalInfo] = useState<Terminal>(null);
+  const [terminalInfo, setTerminalInfo] = useState<Terminal | null>(null);
   const [rawDictItemsPrices, setRawDictItemsPrices] =
     useState<TerminalItemPriceDictionary>({});
   const [isLoadingTerminalPrices, setIsLoadingTerminalPrices] = useState(false);
   const [terminalPricesError, setTerminalPricesError] = useState(false);
-  const [listItemsOfTerminal, setListItemsOfTerminal] = useState([]);
+  const [listItemsOfTerminal, setListItemsOfTerminal] = useState<Item[]>([]);
   const [hashSetSubTypes, setHashSetSubTypes] = useState<Set<string>>(new Set<string>());
   const [searchString, setSearchString] = useState("");
   const debouncedSearchString = useDebouncedValue(searchString);
@@ -56,14 +56,14 @@ const TerminalInfo = () => {
   }, [searchParams]);
 
   useEffect(() => {
-    const _tInfo = dictTerminals[terminalId];
+    const _tInfo = terminalId ? dictTerminals[terminalId] || null : null;
     setTerminalInfo(_tInfo);
 
-    let _tempListTerminalsNearby = [];
+    let _tempListTerminalsNearby: Terminal[] = [];
     if (_tInfo && _tInfo.parentLocation) {
       /* Get Nearby Terminal */
       _tempListTerminalsNearby = _tInfo.parentLocation.terminals.filter(
-        (t) => t.id != terminalId
+        (t: Terminal) => t.id.toString() != terminalId
       );
     }
     setListTerminalsNearby(_tempListTerminalsNearby);
@@ -120,12 +120,12 @@ const TerminalInfo = () => {
     setHashSetSubTypes(_tempSet);
   }, [dictItems, rawDictItemsPrices, t]);
 
-  const handleResultClick = (key) => {
+  const handleResultClick = (key: string) => {
     searchParams.delete("searchFocus");
     navigate(`/i/${key}?${searchParams.toString()}`);
   };
 
-  const handleSearchChange = (e) => setSearchString(e.target.value);
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => setSearchString(e.target.value);
   const normalizedSearchString = debouncedSearchString.trim().toLocaleLowerCase();
 
   return (
@@ -231,7 +231,10 @@ const TerminalInfo = () => {
                   )
                   .map((item) => {
                     const terminalItemPrice = getTerminalItemPrice(item);
-                    let attrsize, attrClass, attrGrade, attrTrackSignal;
+                    let attrsize: string | null = null;
+                    let attrClass: string | null = null;
+                    let attrGrade: string | null = null;
+                    let attrTrackSignal: string | undefined;
                     if (item.type === "Systems") {
                       attrsize = getAttributeValueByName("Size", item.attributes);
                       attrClass = getAttributeValueByName("Class", item.attributes);
@@ -250,7 +253,7 @@ const TerminalInfo = () => {
                         key={item.key}
                         onClick={() => handleResultClick(item.key)}
                       >
-                        {icon[item.sub_type] ? (
+                        {item.sub_type && icon[item.sub_type] ? (
                           <Icon path={icon[item.sub_type]} size="2rem" />
                         ) : (
                           <div className="type">
@@ -304,7 +307,7 @@ const TerminalInfo = () => {
                         {attrsize != null && (
                           <div
                             className="size"
-                            style={{ backgroundColor: sizeToColor[attrsize] }}
+                            style={{ backgroundColor: sizeToColor[Number(attrsize)] }}
                           >
                             S{attrsize}
                           </div>

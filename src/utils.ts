@@ -4,6 +4,9 @@ import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
 import itemsNameI18nEn from "./i18n/items/en.json";
 
 let uexAttributes: UexCategoryAttribute[] = [];
+const locationNameToI18nKeyMap = location_name_to_i18n_key as Record<string, string>;
+const itemsNameI18nEnMap = itemsNameI18nEn as Record<string, string>;
+const uexBodiesFixMap = uexBodiesFixM as Record<string, string>;
 
 export function setUEXAttributes(attributes: UexCategoryAttribute[]) {
   uexAttributes = attributes;
@@ -16,11 +19,11 @@ export function isAscii(char: string): boolean {
 
 // Utility to sanitize body/location names to keys for URL usage
 export function toUrlKey(str: string): string {
-  return str?.replace(/[^a-zA-Z0-9-]+/g, "_") || null;
+  return str.replace(/[^a-zA-Z0-9-]+/g, "_");
 }
 
 export function locationNameToI18nKey(name: string): string {
-  return (location_name_to_i18n_key[name] as string) || name;
+  return locationNameToI18nKeyMap[name] || name;
 }
 
 export function getUEXAttribute(id: number | string) {
@@ -33,7 +36,7 @@ export function getUEXAttribute(id: number | string) {
 
 export function getAttributeValueByName(
   name: string,
-  attrDict: AttributeDictionary
+  attrDict?: AttributeDictionary
 ): string | null {
   if (!attrDict) return null;
   for (const [k, v] of Object.entries(attrDict)) {
@@ -43,7 +46,7 @@ export function getAttributeValueByName(
   return null;
 }
 
-export function getLocPath(option, tdata) {
+export function getLocPath(option: TradeOption, tdata: TerminalDictionary): string[] | undefined {
   return tdata?.[option.id_terminal]?.location_path;
 }
 
@@ -51,7 +54,7 @@ export function getVariants(key: string, itemsData: ItemDictionary) {
   if (!key) return [];
   if (!itemsData[key]) return [];
 
-  let thisName = itemsNameI18nEn[key] || key;
+  let thisName = itemsNameI18nEnMap[key] || key;
   let thisSubType = itemsData[key].sub_type;
   if (
     [
@@ -69,7 +72,7 @@ export function getVariants(key: string, itemsData: ItemDictionary) {
   return Object.values(itemsData)
     .sort((a, b) => a.key.localeCompare(b.key))
     .filter(
-      (item) => item.sub_type === thisSubType && (itemsNameI18nEn[item.key] || item.key).split(" ")[0] === initial
+      (item) => item.sub_type === thisSubType && (itemsNameI18nEnMap[item.key] || item.key).split(" ")[0] === initial
     );
 }
 
@@ -92,13 +95,14 @@ export function getSet(key: string, itemsData: ItemDictionary) {
   return null;
 }
 
-function getDistance(v1, v2) {
+function getDistance(v1: [number, number, number], v2: [number, number, number]) {
   return Math.sqrt((v1[0] - v2[0]) ** 2 + (v1[1] - v2[1]) ** 2 + (v1[2] - v2[2]) ** 2);
 }
 
-export function getBody(name) {
+export function getBody(name: string | null | undefined): CelestialBody | null {
+  if (!name) return null;
   /* Manually fix the name difference between UEX and bodies.json */
-  let manualFixIfPossible = uexBodiesFixM[name];
+  let manualFixIfPossible = uexBodiesFixMap[name];
   return (
     bodies.find((e) => e.name === name) ||
     bodies.find((e) => e.name === manualFixIfPossible) ||
@@ -106,23 +110,23 @@ export function getBody(name) {
   );
 }
 
-export function getPathTo(loc) {
+export function getPathTo(loc: SCLocation): string[] {
   const path = [loc.name];
   while (loc.parentBody) {
-    if (loc.type === "Lagrange Point") loc = loc.parentBody.parentBody;
+    if (loc.type === "Lagrange Point" && loc.parentBody.parentBody) loc = loc.parentBody.parentBody;
     else loc = loc.parentBody;
     if (loc) path.unshift(loc.name);
   }
   return path;
 }
 
-export function getPathToTerminal(t) {
+export function getPathToTerminal(t: Terminal): string[] {
   let terminalSplit = t.name.split(" - ").reverse();
   if (terminalSplit.length > 1) terminalSplit.shift();
-  return getPathTo(t.parentLocation).concat(terminalSplit);
+  return t.parentLocation ? getPathTo(t.parentLocation).concat(terminalSplit) : terminalSplit;
 }
 
-export function getBodiesDistance(b1, b2) {
+export function getBodiesDistance(b1: string | null | undefined, b2: string | null | undefined): number {
   let info1 = getBody(b1);
   let info2 = getBody(b2);
   if (!info1 || !info2) return Infinity;
@@ -134,14 +138,14 @@ export function getBodiesDistance(b1, b2) {
   );
 }
 
-export function getTerminalDistance(op, body, tdata) {
+export function getTerminalDistance(op: TradeOption, body: string, tdata: TerminalDictionary): number {
   let locPath = getLocPath(op, tdata);
   if (!locPath) return Infinity;
   return getBodiesDistance(locPath[1], body);
 }
 
 export function readableDistance(
-  dist,
+  dist: number,
   t: (key: string, options?: Record<string, unknown>) => string = (key) => key
 ) {
   if (dist === 0) return t("Common.nearby");
@@ -153,11 +157,11 @@ export function readableDistance(
   return Math.round(dist * 10) / 10 + " Gm";
 }
 
-export function colorPrice(percent100) {
+export function colorPrice(percent100: number) {
   return `color-mix(in hsl longer hue, hsl(200deg 60% 50%), hsl(0deg 60% 50%) ${percent100}%`;
 }
 
-export function colorLocationDepth(depth) {
+export function colorLocationDepth(depth: number) {
   if (depth == 0) return `#a5a5a5`;
   return `color-mix(in hsl, #ffffff50, #ffffff0d ${((depth - 1) / 3) * 100}%)`;
 }

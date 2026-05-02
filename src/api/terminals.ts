@@ -6,7 +6,9 @@ export async function fetchAndProcessTerminals(dictLocations: LocationDictionary
   const res = await fetchWithCache("terminals", "https://api.uexcorp.space/2.0/terminals");
 
   let temp: Terminal[] = res.data.map((t: TerminalApiResponse): Terminal => {
-    let orbit_name_fix = uexBodiesFixM[t.orbit_name] || t.orbit_name;
+    let orbit_name_fix = t.orbit_name
+      ? (uexBodiesFixM as Record<string, string>)[t.orbit_name] || t.orbit_name
+      : t.orbit_name;
     if (t.star_system_name === "Pyro" && t.orbit_name === "Pyro Jump Point")
       orbit_name_fix = "Stanton Jump Point";
     let locPath3rd = t.name.split(" - ").reverse();
@@ -14,7 +16,9 @@ export async function fetchAndProcessTerminals(dictLocations: LocationDictionary
       locPath3rd[0] = "Stanton Gateway";
     if (locPath3rd[0] === "Terra Gateway Station") locPath3rd[0] = "Terra Gateway";
     if (locPath3rd[0] === "Orbituary Station") locPath3rd[0] = "Orbituary";
-    let locationPath = [t.star_system_name, orbit_name_fix, ...locPath3rd];
+    let locationPath = [t.star_system_name, orbit_name_fix, ...locPath3rd].filter(
+      (loc): loc is string => Boolean(loc)
+    );
     locationPath = locationPath.filter((loc, idx) =>
       idx > 0 ? loc !== locationPath[idx - 1] : true
     );

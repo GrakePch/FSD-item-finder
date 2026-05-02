@@ -87,7 +87,7 @@ const texture: {
   ring: Record<string, string>;
   roughness: Record<string, string>;
   emission: Record<string, string>;
-  normal: Record<string, string>;
+  normal: Record<string, string | undefined>;
 } = {
   body: {
     Aberdeen: bodyAberdeen,

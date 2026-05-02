@@ -74,7 +74,7 @@ export async function fetchAndProcessVehicles(): Promise<VehicleDictionary> {
     if (key.toLowerCase().startsWith("vehicle_name")) {
       let firstIdString = uexIDsI18nTypes.uex_ids?.[0] as string;
       const firstId = firstIdString ? parseInt(firstIdString.slice(2), 10) : null;
-      let simpleVehicleData = dictSimpleVehicles[firstId] || null;
+      const simpleVehicleData = firstId !== null ? dictSimpleVehicles[firstId] || null : null;
       dictVehicles[key] = {
         key: key,
         name: uexIDsI18nTypes.en || key,
@@ -91,16 +91,16 @@ export async function fetchAndProcessVehicles(): Promise<VehicleDictionary> {
   /* Compute min/max prices */
   Object.values(dictVehicles).forEach((item) => {
     let pricesBuy = item.options
-      .filter((a) => a.price_buy !== null && a.date_modified >= date4_0)
+      .filter((a): a is TradeOption & { price_buy: number } => a.price_buy !== null && a.date_modified >= date4_0)
       .map((a) => a.price_buy);
     let pricesSell = item.options
-      .filter((a) => a.price_sell !== null && a.date_modified >= date4_0)
+      .filter((a): a is TradeOption & { price_sell: number } => a.price_sell !== null && a.date_modified >= date4_0)
       .map((a) => a.price_sell);
     let pricesRent: number[] = [];
     if ("options_rent" in item && Array.isArray(item.options_rent)) {
       pricesRent =
         item.options_rent
-          .filter((a) => a.price_rent !== null && a.date_modified >= date4_0)
+          .filter((a): a is TradeOption & { price_rent: number } => a.price_rent !== null && a.date_modified >= date4_0)
           .map((a) => a.price_rent) || [];
     }
     item.price_min_max = {

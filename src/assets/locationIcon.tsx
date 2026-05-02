@@ -22,7 +22,7 @@ import {
   mdiFlare,
 } from "@mdi/js";
 
-const locationIcon: Record<string, string> = {
+const locationIcon: Record<string, string | undefined> = {
   Star: mdiWhiteBalanceSunny,
   "Lagrange Point":
     "M12,3.515L20.485,12L12,20.485L3.515,12L12,3.515ZM12,6.343L6.343,12L12,17.657L17.657,12L12,6.343Z",

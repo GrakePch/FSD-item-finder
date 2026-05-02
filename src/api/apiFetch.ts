@@ -38,11 +38,11 @@ interface FetchWithCacheOptions {
 // Track in-flight requests to deduplicate concurrent calls for the same key
 const pendingRequests = new Map<string, Promise<unknown>>();
 
-export async function fetchWithCache(
+export async function fetchWithCache<T = any>(
   key: string,
   url: string,
   { oneDay = 86400000, oneMonth = 2592000000 }: FetchWithCacheOptions = {}
-): Promise<unknown> {
+): Promise<T> {
   const now = Date.now();
 
   // Try serving from cache
@@ -52,7 +52,7 @@ export async function fetchWithCache(
       const { timestamp, data } = cached as { timestamp: number; data: unknown };
       const age = now - timestamp;
       if (age < oneDay) {
-        return data;
+        return data as T;
       }
       if (age < oneMonth) {
         // Stale-while-revalidate: return cached data, refresh in background
@@ -70,7 +70,7 @@ export async function fetchWithCache(
             .finally(() => pendingRequests.delete(bgKey));
           pendingRequests.set(bgKey, bgPromise);
         }
-        return data;
+        return data as T;
       }
     }
   } catch (e) {
@@ -79,7 +79,7 @@ export async function fetchWithCache(
 
   // Deduplicate in-flight requests
   if (pendingRequests.has(key)) {
-    return pendingRequests.get(key);
+    return pendingRequests.get(key) as Promise<T>;
   }
 
   const requestPromise = axios
@@ -89,7 +89,7 @@ export async function fetchWithCache(
       writeCache(key, { timestamp: Date.now(), data }).catch((e) =>
         console.error("Failed to write cache", e)
       );
-      return data;
+      return data as T;
     })
     .catch((err) => {
       pendingRequests.delete(key);
@@ -98,5 +98,5 @@ export async function fetchWithCache(
     .finally(() => pendingRequests.delete(key));
 
   pendingRequests.set(key, requestPromise);
-  return requestPromise;
+  return requestPromise as Promise<T>;
 }

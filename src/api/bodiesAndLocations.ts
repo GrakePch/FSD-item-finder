@@ -71,8 +71,8 @@ export function buildDataBodiesAndLocations(): [
     }
 
     /* Link parent body & star */
-    cbody.parentBody = flattened[toUrlKey(body.parentBody)] || null;
-    cbody.parentStar = flattened[toUrlKey(body.parentStar)] || null;
+    cbody.parentBody = body.parentBody ? flattened[toUrlKey(body.parentBody)] || null : null;
+    cbody.parentStar = body.parentStar ? flattened[toUrlKey(body.parentStar)] || null : null;
   }
 
   for (const location of locations) {

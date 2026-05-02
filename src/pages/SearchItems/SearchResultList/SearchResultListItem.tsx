@@ -24,10 +24,10 @@ const SearchResultListItem = ({
   top,
 }: SearchResultListItemProps) => {
   const { t } = useTranslation();
-  let attrsize: string,
-    attrClass: string,
-    attrGrade: string,
-    attrTrackSignal: string;
+  let attrsize: string | null = null;
+  let attrClass: string | null = null;
+  let attrGrade: string | null = null;
+  let attrTrackSignal: string | undefined;
 
   if (item.type === "Systems") {
     attrsize = getAttributeValueByName("Size", item.attributes);
@@ -48,7 +48,7 @@ const SearchResultListItem = ({
       style={{ transform: `translateY(${top}px)` }}
       onClick={() => onClick(item.key)}
     >
-      {icon[item.sub_type] ? (
+      {item.sub_type && icon[item.sub_type] ? (
         <Icon path={icon[item.sub_type]} size="2rem" />
       ) : (
         <div className="type">
@@ -88,7 +88,7 @@ const SearchResultListItem = ({
         </div>
       )}
       {attrsize != null && (
-        <div className="size" style={{ backgroundColor: sizeToColor[attrsize] }}>
+        <div className="size" style={{ backgroundColor: sizeToColor[Number(attrsize)] }}>
           S{attrsize}
         </div>
       )}
