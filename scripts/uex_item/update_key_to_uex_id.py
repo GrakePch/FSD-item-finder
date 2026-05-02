@@ -14,9 +14,9 @@ RETRIES = 3
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parents[1]
 DEFAULT_RULES_PATH = SCRIPT_DIR / "key_match_rules.json"
+DEFAULT_PRESERVED_ITEM_KEYS_PATH = SCRIPT_DIR / "preserved_item_keys.json"
 DEFAULT_ITEM_OUTPUT_PATH = REPO_ROOT / ".tmp" / "uex_item" / "itemkey_id.json"
 DEFAULT_VEHICLE_OUTPUT_PATH = REPO_ROOT / ".tmp" / "uex_item" / "vehiclekey_id.json"
-DEFAULT_EXISTING_ITEM_CATALOG_PATH = REPO_ROOT / "public" / "data" / "items.json"
 
 ITEM_KEY_PREFIXES = (
     "id_item",
@@ -245,7 +245,7 @@ def enrich_item_price_payload(items_payload, category_lookup):
         item["category"] = item.get("category") or category.get("name")
 
 
-def generate_item_key_map(items_payload, lookup, normalized_lookup, existing_items):
+def generate_item_key_map(items_payload, lookup, normalized_lookup, preserved_item_keys):
     result = {}
     unmatched_names = set()
     for item in items_payload.get("data") or []:
@@ -259,7 +259,7 @@ def generate_item_key_map(items_payload, lookup, normalized_lookup, existing_ite
         else:
             unmatched_names.add(name)
 
-    for key in existing_items:
+    for key in preserved_item_keys:
         result.setdefault(key, {})
 
     return dict(sorted(result.items(), key=lambda entry: entry[0])), unmatched_names
@@ -282,28 +282,19 @@ def generate_vehicle_key_map(vehicles_payload, lookup, normalized_lookup):
     return dict(sorted(result.items(), key=lambda entry: entry[0])), unmatched_names
 
 
-def load_existing_item_keys(path):
-    if path and path.exists():
-        data = json.loads(path.read_text(encoding="utf-8"))
-        if isinstance(data, dict):
-            return set(data.keys())
-        if isinstance(data, list):
-            return {item.get("key") for item in data if item.get("key")}
-    return set()
-
-
-def load_existing_item_map(path, fallback_catalog_path):
-    existing_keys = load_existing_item_keys(path)
-    if existing_keys:
-        return {key: {} for key in existing_keys}
-
-    existing_keys = load_existing_item_keys(fallback_catalog_path)
-    if existing_keys:
-        return {key: {} for key in existing_keys}
-
+def load_preserved_item_keys(path):
     if not path or not path.exists():
-        return {}
-    return json.loads(path.read_text(encoding="utf-8"))
+        return set()
+
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if isinstance(data, dict):
+        data = data.get("items") or data.get("keys") or []
+    if not isinstance(data, list):
+        raise RuntimeError(
+            f"Preserved item key file must be a list or object with an items list: {path}"
+        )
+
+    return {key for key in data if isinstance(key, str) and key}
 
 
 def load_rules(path):
@@ -355,9 +346,14 @@ def parse_args():
     parser.add_argument("--items-source", type=Path, help="Path to an items_prices_all JSON payload.")
     parser.add_argument("--vehicles-source", type=Path, help="Path to a vehicles_purchases_prices_all JSON payload.")
     parser.add_argument("--rules", default=DEFAULT_RULES_PATH, type=Path, help="Manual key match rules JSON.")
+    parser.add_argument(
+        "--preserved-item-keys",
+        default=DEFAULT_PRESERVED_ITEM_KEYS_PATH,
+        type=Path,
+        help="Explicit allowlist of item keys to keep without current UEX ids.",
+    )
     parser.add_argument("--output-item", default=DEFAULT_ITEM_OUTPUT_PATH, type=Path, help="Item key map output path.")
     parser.add_argument("--output-vehicle", default=DEFAULT_VEHICLE_OUTPUT_PATH, type=Path, help="Vehicle key map output path.")
-    parser.add_argument("--existing-item-catalog", default=DEFAULT_EXISTING_ITEM_CATALOG_PATH, type=Path, help="Existing runtime item catalog used to preserve historical keys when output-item does not exist.")
     parser.add_argument("--unmatched-preview", default=25, type=int, help="Maximum unmatched names to print per report.")
     return parser.parse_args()
 
@@ -370,7 +366,7 @@ def main():
     categories_payload = fetch_json("categories?type=item")
     english_entries = parse_ini(load_english_ini(args.en))
     item_rules, vehicle_rules = load_rules(args.rules)
-    existing_items = load_existing_item_map(args.output_item, args.existing_item_catalog)
+    preserved_item_keys = load_preserved_item_keys(args.preserved_item_keys)
     category_lookup = {
         category.get("id"): category
         for category in categories_payload.get("data") or []
@@ -381,7 +377,7 @@ def main():
     item_lookup, normalized_item_lookup = build_item_lookup(
         english_entries,
         item_rules,
-        set(existing_items),
+        preserved_item_keys,
     )
     vehicle_lookup, normalized_vehicle_lookup = build_vehicle_lookup(english_entries, vehicle_rules)
 
@@ -389,7 +385,7 @@ def main():
         items_payload,
         item_lookup,
         normalized_item_lookup,
-        existing_items,
+        preserved_item_keys,
     )
     vehicle_result, unmatched_vehicles = generate_vehicle_key_map(
         vehicles_payload,
