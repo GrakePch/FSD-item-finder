@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import { locationNameToI18nKey, toUrlKey } from "../../utils";
 import "./LocationCard.css";
 import { useTranslation } from "react-i18next";
@@ -49,7 +49,7 @@ const LocationCard = ({ location, onClick }: LocationCardProps) => {
               : LocationIconColor[location.type] || "#78909c",
         }}
       >
-        <Icon path={locationIcon[location.type] || locationIcon.Outpost} />
+        <Icon path={locationIcon[location.type] || locationIcon.Outpost!} />
       </div>
       <div className="info">
         <p className="name">{t(locationNameToI18nKey(location.name), { ns: "locations" })}</p>

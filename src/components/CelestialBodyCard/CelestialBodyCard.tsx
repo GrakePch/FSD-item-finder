@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import "./CelestialBodyCard.css";
 import { locationNameToI18nKey, toUrlKey } from "../../utils";
 import { useTranslation } from "react-i18next";
@@ -51,7 +51,7 @@ const CelestialBodyCard = ({ celestialBody, onClick }: CelestialBodyCardProps) =
           backgroundColor:
             celestialBody.type === "Planet" || celestialBody.type === "Moon"
               ? themeColor
-              : null,
+              : undefined,
         }}
       >
         <Icon path={locationIcon[celestialBody.type] || ""} />

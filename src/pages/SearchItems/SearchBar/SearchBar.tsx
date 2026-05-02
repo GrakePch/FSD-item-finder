@@ -111,7 +111,7 @@ const SearchBar = ({
 
     let tempList: Item[] = [];
     const shouldFilterBuyable =
-      !parseInt(searchParams.get("show_unbuyable")) && hasLoadedItemPrices;
+      !parseInt(searchParams.get("show_unbuyable") || "0") && hasLoadedItemPrices;
     if (tempIsSearching) {
       for (const item of Object.values(dictItems)
         .filter((i) =>
@@ -154,8 +154,8 @@ const SearchBar = ({
           )
           .sort(
             (a, b) =>
-              (parseInt(getAttributeValueByName("Size", a.attributes)) || Infinity) -
-              (parseInt(getAttributeValueByName("Size", b.attributes)) || Infinity)
+              (parseInt(getAttributeValueByName("Size", a.attributes) || "") || Infinity) -
+              (parseInt(getAttributeValueByName("Size", b.attributes) || "") || Infinity)
           );
       } else if (_filterType.startsWith("Vehicle Weapons.")) {
         tempList
@@ -166,14 +166,14 @@ const SearchBar = ({
           )
           .sort(
             (a, b) =>
-              (parseInt(getAttributeValueByName("Size", a.attributes)) || Infinity) -
-              (parseInt(getAttributeValueByName("Size", b.attributes)) || Infinity)
+              (parseInt(getAttributeValueByName("Size", a.attributes) || "") || Infinity) -
+              (parseInt(getAttributeValueByName("Size", b.attributes) || "") || Infinity)
           );
       } else if (_filterType.startsWith("Personal Weapons.Atta")) {
         tempList.sort(
           (a, b) =>
-            (parseInt(getAttributeValueByName("Size", a.attributes)) || Infinity) -
-            (parseInt(getAttributeValueByName("Size", b.attributes)) || Infinity)
+            (parseInt(getAttributeValueByName("Size", a.attributes) || "") || Infinity) -
+            (parseInt(getAttributeValueByName("Size", b.attributes) || "") || Infinity)
         );
       }
 
@@ -270,7 +270,7 @@ const SearchBar = ({
             <input
               type="checkbox"
               id="buyable-only"
-              checked={!parseInt(searchParams.get("show_unbuyable"))}
+              checked={!parseInt(searchParams.get("show_unbuyable") || "0")}
               onChange={(e) => {
                 searchParams.set("show_unbuyable", e.target.checked ? "0" : "1");
                 setSearchParams(searchParams);

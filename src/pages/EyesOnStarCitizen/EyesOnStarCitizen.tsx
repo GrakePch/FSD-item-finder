@@ -107,6 +107,8 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
     if (routing === "b") return <CelestialBodyInfo />;
     if (routing === "l") return <LocationInfo />;
   }
+  if (!seeCelestialBody) return null;
+
   return (
     <div className="EyesOnStarCitizen">
       <div

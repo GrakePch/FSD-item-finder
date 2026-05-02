@@ -52,7 +52,7 @@ const LocationTreeListRow = ({
           {isStale && (
             <Icon path={mdiAlertCircleOutline} size="1rem" color="#a06060" />
           )}
-          <p className="distance-info">{readableDistance(rowOption.distance, t)}</p>
+          <p className="distance-info">{readableDistance(rowOption.distance ?? Infinity, t)}</p>
           {getOptionPrice(rowOption, tradeType) > 0 ? (
             <p
               className="price"

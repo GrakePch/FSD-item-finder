@@ -33,6 +33,7 @@ const PriceSortedOptionsList = ({
     .map((option: TradeOption) => {
       const date = new Date(option.date_modified * 1000);
       const locPath = getLocPath(option, dictTerminals);
+      if (!locPath) return null;
       const isStale = option.date_modified < date4_0 && locPath[0] !== "Pyro";
 
       return (
@@ -47,7 +48,7 @@ const PriceSortedOptionsList = ({
           />
           <p
             className="date-modified"
-            style={{ color: isStale && "#a06060" }}
+            style={{ color: isStale ? "#a06060" : undefined }}
           >
             {isStale && <Icon path={mdiAlertCircleOutline} size="1rem" />}
             {date.getMonth() + 1}/{date.getDate()}

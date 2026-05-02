@@ -3,11 +3,21 @@ import "./SetButton.css";
 import TagCurrent from "../TagCurrent/TagCurrent";
 import { useTranslation } from "react-i18next";
 
-const SetButton = ({ subType, item, selfKey }) => {
+type ArmorSetKey = keyof ArmorSet;
+
+const SetButton = ({
+  subType,
+  item,
+  selfKey,
+}: {
+  subType: ArmorSetKey;
+  item?: Item | null;
+  selfKey: string;
+}) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
-  const tIcon = {
+  const tIcon: Record<ArmorSetKey, string> = {
     undersuit: "🩲",
     helmet: "🤿",
     torso: "👕",
@@ -21,7 +31,7 @@ const SetButton = ({ subType, item, selfKey }) => {
       className="SetButton"
       onClick={
         item.key === selfKey
-          ? null
+          ? undefined
           : () => {
               navigate(`/i/${item.key}?${searchParams.toString()}`);
             }

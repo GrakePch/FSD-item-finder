@@ -13,7 +13,7 @@ type LocationPathChipsProps = {
 };
 
 const LocationPathChips = ({ path, startDepth, onClick }: LocationPathChipsProps) => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const { dictLocations } = useContext(ContextAllData);
 
   return (
@@ -24,7 +24,7 @@ const LocationPathChips = ({ path, startDepth, onClick }: LocationPathChipsProps
           className="location-chip"
           style={{
             backgroundColor: colorLocationDepth(startDepth + idx),
-            color: startDepth + idx <= 0 && `#000`,
+            color: startDepth + idx <= 0 ? `#000` : undefined,
           }}
           onClick={onClick}
         >

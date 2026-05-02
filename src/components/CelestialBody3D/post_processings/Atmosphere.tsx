@@ -189,19 +189,19 @@ class ShaderProgramAtmosphere extends Effect {
     inputBuffer: WebGLRenderTarget,
     deltaTime: number
   ): void {
-    this.uniforms.get("uTime").value += deltaTime;
-    this.uniforms.get("uFovy").value = _uFovy;
-    this.uniforms.get("uRadiusBody").value = _uRadiusBody / _uRadiusBody;
-    this.uniforms.get("uRadiusAtmos").value = _uRadiusAtmos / _uRadiusBody;
-    this.uniforms.get("uDirToSun").value = _uDirToSun;
-    this.uniforms.get("uCameraPos").value = _uCameraPos
+    this.uniforms.get("uTime")!.value += deltaTime;
+    this.uniforms.get("uFovy")!.value = _uFovy;
+    this.uniforms.get("uRadiusBody")!.value = _uRadiusBody / _uRadiusBody;
+    this.uniforms.get("uRadiusAtmos")!.value = _uRadiusAtmos / _uRadiusBody;
+    this.uniforms.get("uDirToSun")!.value = _uDirToSun;
+    this.uniforms.get("uCameraPos")!.value = _uCameraPos
       .clone()
       .divideScalar(_uRadiusBody);
-    this.cameraRef.current?.getWorldDirection(this.uniforms.get("uCameraDir").value);
+    this.cameraRef.current?.getWorldDirection(this.uniforms.get("uCameraDir")!.value);
     let scatterR = Math.pow(400 / this.waveLengths.x, 4) * this.scatteringStrength;
     let scatterG = Math.pow(400 / this.waveLengths.y, 4) * this.scatteringStrength;
     let scatterB = Math.pow(400 / this.waveLengths.z, 4) * this.scatteringStrength;
-    this.uniforms.get("uScatteringCoefficients").value = new Vector3(
+    this.uniforms.get("uScatteringCoefficients")!.value = new Vector3(
       scatterR,
       scatterG,
       scatterB

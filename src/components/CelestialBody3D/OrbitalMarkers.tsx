@@ -71,11 +71,7 @@ export function OrbitalMarkers({
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
-            count={2}
-            array={
-              new Float32Array([...scale(omCoordinates[0]), ...scale(omCoordinates[1])])
-            }
-            itemSize={3}
+            args={[new Float32Array([...scale(omCoordinates[0]), ...scale(omCoordinates[1])]), 3]}
           />
         </bufferGeometry>
         <lineBasicMaterial color={color} linewidth={1} />
@@ -85,11 +81,7 @@ export function OrbitalMarkers({
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
-            count={2}
-            array={
-              new Float32Array([...scale(omCoordinates[2]), ...scale(omCoordinates[3])])
-            }
-            itemSize={3}
+            args={[new Float32Array([...scale(omCoordinates[2]), ...scale(omCoordinates[3])]), 3]}
           />
         </bufferGeometry>
         <lineBasicMaterial color={color} linewidth={1} />
@@ -99,11 +91,7 @@ export function OrbitalMarkers({
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
-            count={2}
-            array={
-              new Float32Array([...scale(omCoordinates[4]), ...scale(omCoordinates[5])])
-            }
-            itemSize={3}
+            args={[new Float32Array([...scale(omCoordinates[4]), ...scale(omCoordinates[5])]), 3]}
           />
         </bufferGeometry>
         <lineBasicMaterial color={color} linewidth={1} />

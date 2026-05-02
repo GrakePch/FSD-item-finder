@@ -1,4 +1,4 @@
-const colorWordAtEnd = {
+const colorWordAtEnd: Record<string, string[]> = {
   alpha: ["dimgray"],
   black: ["#242424"],
   "dark red": ["darkred"],
@@ -24,8 +24,8 @@ const colorWordAtEnd = {
   iceborn: ["#242424", "#ffffff"],
 };
 
-const ItemColorIcon = ({ name }) => {
-  let colors = [];
+const ItemColorIcon = ({ name }: { name?: string | null }) => {
+  let colors: string[] = [];
   if (name) {
     let nameLower = name.toLowerCase();
     for (const [suffix, cssColors] of Object.entries(colorWordAtEnd)) {
@@ -41,7 +41,7 @@ const ItemColorIcon = ({ name }) => {
 
   /* Build CSS gradient */
   if (colors?.length > 0) {
-    let angle = 360 / colors.length;
+    angle = 360 / colors.length;
     colors.forEach((color, idx) => {
       let cssColor = colorWordAtEnd[color.toLowerCase()]?.[0] || color;
       if (idx < colors.length - 1)

@@ -258,12 +258,12 @@ class CustomShader extends Effect {
     inputBuffer: WebGLRenderTarget,
     deltaTime: number
   ): void {
-    this.uniforms.get("uTime").value += deltaTime;
-    this.uniforms.get("uFovy").value = _uFovy;
-    this.uniforms.get("uCurrentDistance").value = _uCurrentDistance;
-    this.uniforms.get("uRadiusBody").value = _uRadiusBody;
-    this.uniforms.get("uRadiusAtmos").value = _uRadiusAtmos;
-    this.uniforms.get("uDirToSun").value = _uDirToSun;
+    this.uniforms.get("uTime")!.value += deltaTime;
+    this.uniforms.get("uFovy")!.value = _uFovy;
+    this.uniforms.get("uCurrentDistance")!.value = _uCurrentDistance;
+    this.uniforms.get("uRadiusBody")!.value = _uRadiusBody;
+    this.uniforms.get("uRadiusAtmos")!.value = _uRadiusAtmos;
+    this.uniforms.get("uDirToSun")!.value = _uDirToSun;
   }
 }
 

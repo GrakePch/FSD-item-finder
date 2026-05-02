@@ -13,7 +13,7 @@ const TradeOptionsSortingControl = () => {
   useEffect(() => {
     /* Update Search Params to Default values */
     let paramSort = searchParams.get("sort");
-    if (["price", "location"].includes(paramSort) === false) {
+    if (!paramSort || ["price", "location"].includes(paramSort) === false) {
       searchParams.set("sort", "location");
       setSearchParams(searchParams, { replace: true });
     }

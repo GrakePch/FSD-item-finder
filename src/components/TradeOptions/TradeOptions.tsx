@@ -28,9 +28,9 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }: TradeOptionsProps)
     const tempOptions = pricesData
       .filter((option: TradeOption) => option.id_terminal in dictTerminals)
       .toSorted((a: TradeOption, b: TradeOption) =>
-        getLocPath(a, dictTerminals)
+        (getLocPath(a, dictTerminals) || [])
           .join("  ")
-          .localeCompare(getLocPath(b, dictTerminals).join("  "))
+          .localeCompare((getLocPath(b, dictTerminals) || []).join("  "))
       );
 
     const fromBodyName = getCurrentBodyName(
@@ -73,7 +73,8 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }: TradeOptionsProps)
     options
       .filter((option: TradeOption) => getOptionPrice(option, tradeType) > 0)
       .forEach((option: TradeOption) => {
-        addToTree(tempLocationForest, getLocPath(option, dictTerminals), option);
+        const locPath = getLocPath(option, dictTerminals);
+        if (locPath) addToTree(tempLocationForest, locPath, option);
       });
 
     const tempLocationForestShallow: LocationTreeShallow[] = [];
@@ -120,7 +121,7 @@ const getCurrentBodyName = (
 
   const storedLocationName = currentLocation.slice(5);
   const location = dictLocations[toUrlKey(storedLocationName)];
-  return location?.parentBody.name || fallbackBodyName;
+  return location?.parentBody?.name || fallbackBodyName;
 };
 
 const getOptionPrice = (option: TradeOption, tradeType: TradeType) =>

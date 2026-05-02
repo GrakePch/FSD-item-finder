@@ -29,12 +29,12 @@ const ItemGroupInfo = () => {
     }
   }, [itemKey, dictItems]);
 
-  const [firstVariant, setFirstVariant] = useState(null);
-  const [totalPriceData, setTotalPriceData] = useState([]);
-  const [totalPriceMinMax, setTotalPriceMinMax] = useState({});
+  const [firstVariant, setFirstVariant] = useState<Item | null>(null);
+  const [totalPriceData, setTotalPriceData] = useState<TradeOption[]>([]);
+  const [totalPriceMinMax, setTotalPriceMinMax] = useState<Partial<PriceMinMax>>({});
 
   useEffect(() => {
-    setFirstVariant(listVariants[0]);
+    setFirstVariant(listVariants[0] || null);
 
     let optionDict: Record<number, TradeOption> = {};
     for (const item of listVariants) {
@@ -43,9 +43,15 @@ const ItemGroupInfo = () => {
           optionDict[option.id_terminal] = option;
         } else {
           let o = optionDict[option.id_terminal];
-          if (!o.price_buy || option.price_buy < o.price_buy)
+          if (
+            option.price_buy !== null &&
+            (!o.price_buy || option.price_buy < o.price_buy)
+          )
             o.price_buy = option.price_buy;
-          if (!o.price_sell || option.price_sell > o.price_sell)
+          if (
+            option.price_sell !== null &&
+            (!o.price_sell || option.price_sell > o.price_sell)
+          )
             o.price_sell = option.price_sell;
         }
       }
@@ -55,14 +61,14 @@ const ItemGroupInfo = () => {
 
     /* Update price_min_max for each item */
     let pricesBuy = tempTotalPriceData
-      .filter((a) => a.price_buy !== null)
+      .filter((a): a is TradeOption & { price_buy: number } => a.price_buy !== null)
       .map((a) => a.price_buy);
     let pricesSell = tempTotalPriceData
-      .filter((a) => a.price_sell !== null)
+      .filter((a): a is TradeOption & { price_sell: number } => a.price_sell !== null)
       .map((a) => a.price_sell);
     let pricesRent =
       tempTotalPriceData
-        ?.filter((a) => a.price_rent !== null)
+        ?.filter((a): a is TradeOption & { price_rent: number } => a.price_rent !== null)
         ?.map((a) => a.price_rent) || [];
     let tempTotalPriceMinMax = {
       buy_min: Math.min(...pricesBuy) || null,
@@ -76,7 +82,8 @@ const ItemGroupInfo = () => {
     setTotalPriceMinMax(tempTotalPriceMinMax);
   }, [item, listVariants]);
 
-  const handleTypeClick = (type: string, subType: string) => {
+  const handleTypeClick = (type: string | null, subType: string | null) => {
+    if (!type) return;
     searchParams.set("type", type + "." + subType);
     navigate(`/?${searchParams.toString()}`);
   };
@@ -86,10 +93,10 @@ const ItemGroupInfo = () => {
       <div className="ItemGroupInfo">
         <div className="item-info">
           <h1 className="zh">
-            {t(firstVariant?.key, { ns: "items", lng: "zh" })}{" "}
+            {t(firstVariant?.key || item.key, { ns: "items", lng: "zh" })}{" "}
             <span>{t("ItemGroupInfo.sameKindItems", { count: listVariants.length })}</span>
           </h1>
-          <h2 className="en">{t(firstVariant?.key, { ns: "items", lng: "en" })} ...</h2>
+          <h2 className="en">{t(firstVariant?.key || item.key, { ns: "items", lng: "en" })} ...</h2>
           {(item.type || item.sub_type) && (
             <div className="types">
               {item.type && (

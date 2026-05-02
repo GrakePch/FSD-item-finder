@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import "./TerminalCard.css";
 import { useTranslation } from "react-i18next";
 import { locationNameToI18nKey } from "../../utils";
@@ -39,7 +39,7 @@ const TerminalCard = ({ terminal, onClick }: TerminalCardProps) => {
       onClick={handleClick}
     >
       <div className="icon">
-        <Icon path={locationIcon[`Terminal_${terminal.type}`]} />
+        <Icon path={locationIcon[`Terminal_${terminal.type}`] || locationIcon.Outpost!} />
       </div>
       <div className="info">
         <p className="name">

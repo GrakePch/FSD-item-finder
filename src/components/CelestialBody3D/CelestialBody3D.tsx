@@ -78,10 +78,10 @@ export default function CelestialBody3D({
     : 1.05 * radius;
   const atmosphereColor = celestialBody.colorSkyNoon
     ? new Vector3(...hexColorToVector3(celestialBody.colorSkyNoon))
-    : undefined;
+    : new Vector3(1, 1, 1);
   const atmosphereColorNight = celestialBody.colorSkyNight
     ? new Vector3(...hexColorToVector3(celestialBody.colorSkyNight))
-    : undefined;
+    : new Vector3(0, 0, 0);
 
   const bodyPositionAbs: [number, number, number] = scToThree([
     celestialBody.coordinateX,
@@ -113,7 +113,9 @@ export default function CelestialBody3D({
   });
 
   const cameraRef = useRef<any>(null);
-  const dirToSunCameraAdjusted = new Vector3(...parentStarPositionRelRotated).normalize();
+  const dirToSunCameraAdjusted = celestialBody.parentStar
+    ? new Vector3(...parentStarPositionRelRotated).normalize()
+    : new Vector3(1, 0, 0);
 
   const needOrbitCircle = (loc: SCLocation) =>
     loc.type === "Space station" ||
@@ -161,14 +163,16 @@ export default function CelestialBody3D({
           setApiRef={(api) => (sphereApiRef.current = api)}
         />
         {/* Render parent star at rotated position */}
-        <mesh
-          position={new Vector3(...parentStarPositionRelRotated)
-            .normalize()
-            .multiplyScalar(distanceToParentStar)}
-        >
-          <sphereGeometry args={[celestialBody.parentStar.bodyRadius, 32, 32]} />
-          <meshBasicMaterial color={"#fff"} />
-        </mesh>
+        {celestialBody.parentStar && (
+          <mesh
+            position={new Vector3(...parentStarPositionRelRotated)
+              .normalize()
+              .multiplyScalar(distanceToParentStar)}
+          >
+            <sphereGeometry args={[celestialBody.parentStar.bodyRadius, 32, 32]} />
+            <meshBasicMaterial color={"#fff"} />
+          </mesh>
+        )}
         {showLongitudeLatitudeLines && (
           <LatLongLines radius={radius + 1} color={themeColor} />
         )}
@@ -231,7 +235,7 @@ export default function CelestialBody3D({
           luminanceSmoothing={0.2}
           mipmapBlur
         />
-        {applyRealisticAtmosphere && (
+        {applyRealisticAtmosphere ? (
           <Atmosphere
             cameraRef={cameraRef}
             fovy={cameraFOVY}
@@ -254,6 +258,8 @@ export default function CelestialBody3D({
             }
             scatteringStrength={celestialBody.atmosphereScatteringStrength}
           />
+        ) : (
+          <></>
         )}
       </EffectComposer>
     </Canvas>

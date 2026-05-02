@@ -119,14 +119,14 @@ class ShaderProgramAtmosphereLite extends Effect {
     inputBuffer: WebGLRenderTarget,
     deltaTime: number
   ): void {
-    this.uniforms.get("uTime").value += deltaTime;
-    this.uniforms.get("uFovy").value = _uFovy;
-    this.uniforms.get("uRadiusBody").value = _uRadiusBody;
-    this.uniforms.get("uRadiusAtmos").value = _uRadiusAtmos;
-    this.uniforms.get("uDirToSun").value = _uDirToSun;
-    this.uniforms.get("uCameraPos").value = _uCameraPos;
-    this.uniforms.get("uAtmosColor").value = this.uniforms.get("uAtmosColor").value;
-    this.cameraRef.current?.getWorldDirection(this.uniforms.get("uCameraDir").value);
+    this.uniforms.get("uTime")!.value += deltaTime;
+    this.uniforms.get("uFovy")!.value = _uFovy;
+    this.uniforms.get("uRadiusBody")!.value = _uRadiusBody;
+    this.uniforms.get("uRadiusAtmos")!.value = _uRadiusAtmos;
+    this.uniforms.get("uDirToSun")!.value = _uDirToSun;
+    this.uniforms.get("uCameraPos")!.value = _uCameraPos;
+    this.uniforms.get("uAtmosColor")!.value = this.uniforms.get("uAtmosColor")!.value;
+    this.cameraRef.current?.getWorldDirection(this.uniforms.get("uCameraDir")!.value);
   }
 }
 

@@ -57,6 +57,7 @@ export function getVariants(key: string, itemsData: ItemDictionary) {
   let thisName = itemsNameI18nEnMap[key] || key;
   let thisSubType = itemsData[key].sub_type;
   if (
+    !thisSubType ||
     [
       "Personal Weapons",
       "Undersuits",
@@ -103,14 +104,15 @@ export function getBody(name: string | null | undefined): CelestialBody | null {
   if (!name) return null;
   /* Manually fix the name difference between UEX and bodies.json */
   let manualFixIfPossible = uexBodiesFixMap[name];
+  const bodiesData = bodies as unknown as CelestialBody[];
   return (
-    bodies.find((e) => e.name === name) ||
-    bodies.find((e) => e.name === manualFixIfPossible) ||
+    bodiesData.find((e) => e.name === name) ||
+    bodiesData.find((e) => e.name === manualFixIfPossible) ||
     null
   );
 }
 
-export function getPathTo(loc: SCLocation): string[] {
+export function getPathTo(loc: SCLocation | CelestialBody): string[] {
   const path = [loc.name];
   while (loc.parentBody) {
     if (loc.type === "Lagrange Point" && loc.parentBody.parentBody) loc = loc.parentBody.parentBody;

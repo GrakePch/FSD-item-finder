@@ -72,6 +72,7 @@ const optimizeTree = (
   depth: number
 ) => {
   const onlySubTree = Object.values(oldTree.subs)[0];
+  if (!onlySubTree) return;
   newTree.locs.push(onlySubTree.name);
   newTree.option = onlySubTree.option;
 

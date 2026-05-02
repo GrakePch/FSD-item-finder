@@ -13,6 +13,8 @@ import { useTranslation } from "react-i18next";
 import FlightVelocities from "./FlightVelocities/FlightVelocities";
 import FlightAccelerations from "./FlightAccelerations/FlightAccelerations";
 
+const spvClassNameToUexIdMap = spvClassNameToUexId as Record<string, number>;
+
 const VehicleInfo = () => {
   const { t } = useTranslation();
   const vehicleClassName = useParams().vehicleClassName;
@@ -29,7 +31,7 @@ const VehicleInfo = () => {
   );
 
   const uexVehicle = useMemo(() => {
-    const uexId = spvClassNameToUexId[vehicleClassName];
+    const uexId = vehicleClassName ? spvClassNameToUexIdMap[vehicleClassName] : undefined;
     return Object.values(dictVehicles).find((v) => v.id_vehicle === uexId);
   }, [dictVehicles, spvClassNameToUexId, vehicleClassName]);
 

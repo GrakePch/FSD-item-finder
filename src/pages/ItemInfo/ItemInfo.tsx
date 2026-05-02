@@ -46,7 +46,8 @@ const ItemInfo = () => {
     }
   }, [itemKey, dictItems]);
 
-  const handleTypeClick = (type: string, subType: string) => {
+  const handleTypeClick = (type: string | null, subType: string | null) => {
+    if (!type) return;
     searchParams.set("type", type + "." + subType);
     navigate(`/?${searchParams.toString()}`);
   };
@@ -177,7 +178,7 @@ const ItemInfo = () => {
                   key={vItem.key}
                   onClick={
                     item.key === vItem.key
-                      ? null
+                      ? undefined
                       : () => {
                           navigate(`/i/${vItem.key}?${searchParams.toString()}`);
                         }

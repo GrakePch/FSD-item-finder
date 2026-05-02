@@ -56,7 +56,7 @@ const TerminalInfo = () => {
   }, [searchParams]);
 
   useEffect(() => {
-    const _tInfo = terminalId ? dictTerminals[terminalId] || null : null;
+    const _tInfo = terminalId ? dictTerminals[Number(terminalId)] || null : null;
     setTerminalInfo(_tInfo);
 
     let _tempListTerminalsNearby: Terminal[] = [];
