@@ -16,7 +16,7 @@
     min-height: 1.5rem;
 }
 
-.LocationPathChips>.location-chip:not(.TradeOptions .location-tree>.LocationPathChips>.location-chip) {
+.LocationPathChips.clickable>.location-chip {
     cursor: pointer;
 }
 

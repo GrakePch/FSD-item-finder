@@ -62,41 +62,37 @@
 
 
 /* Location Tree */
-.TradeOptions .location-tree {
+.TradeOptions .location-tree-list {
     position: relative;
 }
 
-.TradeOptions .location-tree>.location {
-    padding: .25rem .5rem;
-}
-
-.TradeOptions .location-tree.not-root::before,
-.TradeOptions .option-in-tree.not-root::before {
-    content: "";
-    display: block;
+.TradeOptions .location-tree-lines {
     position: absolute;
-    top: 1rem;
-    left: -.5rem;
-    width: 1rem;
-    border-bottom: 2px solid var(--color-bg-2);
+    inset: 0;
+    z-index: 0;
+    overflow: visible;
+    pointer-events: none;
 }
 
-.TradeOptions .location-tree::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 1.75rem;
-    left: 1rem;
-    bottom: 1rem;
-    border-right: 2px solid var(--color-bg-2);
+.TradeOptions .location-tree-lines line {
+    stroke: var(--color-bg-2);
+    stroke-width: 2;
+    vector-effect: non-scaling-stroke;
 }
 
-.TradeOptions .option-in-tree {
+.TradeOptions .location-tree-row {
     position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     gap: .5rem;
-    padding: .25rem .5rem;
+    min-height: 2rem;
+    padding-top: .25rem;
+    padding-right: .5rem;
+    padding-bottom: .25rem;
+}
+
+.TradeOptions .option-in-tree {
     border-radius: .5rem;
     outline: transparent solid 2px;
 }

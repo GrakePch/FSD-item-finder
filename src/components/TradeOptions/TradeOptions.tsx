@@ -1,85 +1,67 @@
 import { useContext, useEffect, useState } from "react";
-import "./TradeOptions.css";
-import {
-  colorPrice,
-  date4_0,
-  getLocPath,
-  getTerminalDistance,
-  readableDistance,
-  toUrlKey,
-} from "../../utils";
-import { ContextAllData } from "../../contexts";
-import { useNavigate, useSearchParams } from "react-router";
-import Icon from "@mdi/react";
-import { mdiAlertCircleOutline } from "@mdi/js";
-import LocationPathChips from "../LocationPathChips/LocationPathChips";
 import { useTranslation } from "react-i18next";
+import { useSearchParams } from "react-router";
+import { ContextAllData } from "../../contexts";
+import { getLocPath, getTerminalDistance, toUrlKey } from "../../utils";
+import LocationTreeList from "./LocationTreeList";
+import PriceSortedOptionsList from "./PriceSortedOptionsList";
+import "./TradeOptions.css";
+import { addToTree, optimizeForest } from "./locationTree";
+import type { LocationForestMap, LocationTreeShallow, TradeType } from "./types";
 
-type LocationTree = { name: string; subs: LocationForest; option?: TradeOption };
-
-type LocationForest = Record<string, LocationTree>;
-
-type LocationTreeShallow = {
-  locs: string[];
-  depth: number;
-  subs: LocationTreeShallow[];
-  option?: TradeOption;
+type TradeOptionsProps = {
+  pricesData: TradeOption[];
+  priceMinMax: Partial<PriceMinMax>;
+  tradeType: TradeType;
 };
 
-const percent = (v: number, zero: number, hundred: number) => {
-  if (zero === hundred) return 0;
-  return Math.max(Math.min(((v - zero) / (hundred - zero)) * 100, 100), 0);
-};
-
-const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
-  const navigate = useNavigate();
+const TradeOptions = ({ pricesData, priceMinMax, tradeType }: TradeOptionsProps) => {
   const [searchParams] = useSearchParams();
   const { t } = useTranslation();
   const { dictLocations, dictTerminals, currentLocation } = useContext(ContextAllData);
-  const [options, setOptions] = useState([]);
-
+  const [options, setOptions] = useState<TradeOption[]>([]);
   const [locationForestShallow, setLocationForestShallow] = useState<
     LocationTreeShallow[]
   >([]);
 
   useEffect(() => {
-    /* Sort by location name first, no matter sort options */
-    let tempOptions = pricesData
-      .filter((o) => o.id_terminal in dictTerminals)
-      .toSorted((a, b) =>
+    const tempOptions = pricesData
+      .filter((option: TradeOption) => option.id_terminal in dictTerminals)
+      .toSorted((a: TradeOption, b: TradeOption) =>
         getLocPath(a, dictTerminals)
           .join("  ")
           .localeCompare(getLocPath(b, dictTerminals).join("  "))
       );
 
-    /* Compute Distances from the context value, and sort by distance */
-    let fromBodyName = currentLocation;
-    if (fromBodyName.startsWith("_loc_")) {
-      let storedLocationName = fromBodyName.slice(5);
-      let location = dictLocations[toUrlKey(storedLocationName)];
-      if (location) {
-        fromBodyName = location.parentBody.name;
-      } else {
-        fromBodyName = "Crusader";
-      }
-    }
-    tempOptions.forEach((e) => {
-      e.distance = getTerminalDistance(e, fromBodyName, dictTerminals);
+    const fromBodyName = getCurrentBodyName(
+      currentLocation,
+      dictLocations,
+      "Crusader"
+    );
+    tempOptions.forEach((option: TradeOption) => {
+      option.distance = getTerminalDistance(option, fromBodyName, dictTerminals);
     });
-    tempOptions.sort((a, b) => a.distance - b.distance);
+    tempOptions.sort(
+      (a: TradeOption, b: TradeOption) => (a.distance || 0) - (b.distance || 0)
+    );
 
-    /* Sort by sorting options */
     if (searchParams.get("sort") === "price") {
-      if (tradeType === "sell") {
-        tempOptions.sort((a, b) => b["price_" + tradeType] - a["price_" + tradeType]);
-      } else {
-        tempOptions.sort((a, b) => a["price_" + tradeType] - b["price_" + tradeType]);
-      }
+      tempOptions.sort((a: TradeOption, b: TradeOption) =>
+        tradeType === "sell"
+          ? getOptionPrice(b, tradeType) - getOptionPrice(a, tradeType)
+          : getOptionPrice(a, tradeType) - getOptionPrice(b, tradeType)
+      );
     }
 
-    // console.log(tempOptions);
     setOptions(tempOptions);
-  }, [pricesData, searchParams]);
+  }, [
+    currentLocation,
+    dictLocations,
+    dictTerminals,
+    pricesData,
+    searchParams,
+    tradeType,
+  ]);
 
   useEffect(() => {
     if (options.length <= 0) {
@@ -87,21 +69,17 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
       return;
     }
 
-    const tempLocationForest = {};
+    const tempLocationForest: LocationForestMap = {};
     options
-      .filter((option) => option["price_" + tradeType] > 0)
-      .forEach((option) => {
+      .filter((option: TradeOption) => getOptionPrice(option, tradeType) > 0)
+      .forEach((option: TradeOption) => {
         addToTree(tempLocationForest, getLocPath(option, dictTerminals), option);
       });
 
-    // console.log(tempLocationForest);
-
-    const tempLocationForestShallow = [];
+    const tempLocationForestShallow: LocationTreeShallow[] = [];
     optimizeForest(tempLocationForestShallow, tempLocationForest, 0);
-    // console.log(tempLocationForestShallow);
-
     setLocationForestShallow(tempLocationForestShallow);
-  }, [options]);
+  }, [dictTerminals, options, tradeType]);
 
   return (
     <div className="TradeOptions">
@@ -111,203 +89,44 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }) => {
             tradeType: t(`TradeOptions.tradeType.${tradeType}`),
           })}
         </h3>
-        <h4 className="price">
-          {t(`TradeOptions.priceTitle.${tradeType}`)}
-        </h4>
+        <h4 className="price">{t(`TradeOptions.priceTitle.${tradeType}`)}</h4>
       </div>
       <div className="options-container">
         {searchParams.get("sort") === "price" ? (
-          options
-            .filter((option) => option["price_" + tradeType] > 0)
-            .map((option) => {
-              let date = new Date(option.date_modified * 1000);
-              let locPath = getLocPath(option, dictTerminals);
-              return (
-                <div className="option" key={option.id_terminal}>
-                  <LocationPathChips
-                    path={locPath}
-                    startDepth={0}
-                    onClick={() => {
-                      searchParams.delete("key");
-                      navigate(
-                        "/t/" + option.id_terminal + "?" + searchParams.toString()
-                      );
-                    }}
-                  />
-                  <p
-                    className="date-modified"
-                    style={{
-                      color:
-                        option.date_modified < date4_0 &&
-                        locPath[0] !== "Pyro" &&
-                        "#a06060",
-                    }}
-                  >
-                    {option.date_modified < date4_0 && locPath[0] !== "Pyro" && (
-                      <Icon path={mdiAlertCircleOutline} size="1rem" />
-                    )}
-                    {date.getMonth() + 1}/{date.getDate()}
-                  </p>
-                  {option["price_" + tradeType] > 0 ? (
-                    <p
-                      className="price"
-                      style={{
-                        color: colorPrice(
-                          percent(
-                            option["price_" + tradeType],
-                            priceMinMax[tradeType + "_min"],
-                            priceMinMax[tradeType + "_min"] * 2
-                          )
-                        ),
-                      }}
-                    >
-                      {t("Common.price", { price: option["price_" + tradeType] })}
-                    </p>
-                  ) : (
-                    <p className="price" style={{ color: `hsl(0deg 0% 50%)` }}>
-                      {t("SearchItemResultList.notBuyable")}
-                    </p>
-                  )}
-                </div>
-              );
-            })
+          <PriceSortedOptionsList
+            dictTerminals={dictTerminals}
+            options={options}
+            priceMin={getMinPrice(priceMinMax, tradeType)}
+            tradeType={tradeType}
+          />
         ) : (
-          <LocationForest
+          <LocationTreeList
             forest={locationForestShallow}
-            priceMin={priceMinMax[tradeType + "_min"]}
-            priceMax={priceMinMax[tradeType + "_max"]}
+            priceMin={getMinPrice(priceMinMax, tradeType)}
             tradeType={tradeType}
           />
         )}
       </div>
-      {/* <p className="annotation">
-        <Icon path={mdiAlertCircleOutline} size={"1rem"} />
-        标记的价格最后更新于4.0-Preview上线之前，可能会有较大误差。
-      </p> */}
     </div>
   );
 };
 
-const addToTree = (tree, path, option) => {
-  let current = tree;
-  path.forEach((node, index) => {
-    if (!current[node]) {
-      current[node] = {
-        name: node,
-        subs: {},
-      };
-    }
-    if (index == path.length - 1) current[node].option = option;
-    current = current[node].subs;
-  });
-};
-
-const optimizeForest = (
-  newForest: LocationTreeShallow[],
-  oldForest: LocationForest,
-  depth: number
+const getCurrentBodyName = (
+  currentLocation: string,
+  dictLocations: LocationDictionary,
+  fallbackBodyName: string
 ) => {
-  for (const oldTree of Object.values(oldForest)) {
-    let newTree: LocationTreeShallow = {
-      depth: depth,
-      locs: [oldTree.name],
-      subs: [],
-      option: oldTree.option,
-    };
-    if (Object.keys(oldTree.subs).length > 1)
-      optimizeForest(newTree.subs, oldTree.subs, depth + 1);
-    else if (Object.keys(oldTree.subs).length == 1) {
-      optimizeTree(newTree, oldTree, depth + 1);
-    }
-    newForest.push(newTree);
-  }
+  if (!currentLocation.startsWith("_loc_")) return currentLocation;
+
+  const storedLocationName = currentLocation.slice(5);
+  const location = dictLocations[toUrlKey(storedLocationName)];
+  return location?.parentBody.name || fallbackBodyName;
 };
 
-const optimizeTree = (
-  newTree: LocationTreeShallow,
-  oldTree: LocationTree,
-  depth: number
-) => {
-  let onlySubTree = Object.values(oldTree.subs)[0];
-  newTree.locs.push(onlySubTree.name);
-  newTree.option = onlySubTree.option;
-  if (Object.keys(onlySubTree.subs).length == 1) {
-    optimizeTree(newTree, onlySubTree, depth + 1);
-  } else if (Object.keys(onlySubTree.subs).length > 1) {
-    optimizeForest(newTree.subs, onlySubTree.subs, depth + 1);
-  }
-};
+const getOptionPrice = (option: TradeOption, tradeType: TradeType) =>
+  option[`price_${tradeType}`] || 0;
 
-type LocationForestProps = {
-  forest: LocationTreeShallow[];
-  priceMin: number;
-  priceMax: number;
-  tradeType: string;
-};
-
-const LocationForest = ({
-  forest,
-  priceMin,
-  priceMax,
-  tradeType,
-}: LocationForestProps) => {
-  const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-  const { t } = useTranslation();
-  const { dictTerminals } = useContext(ContextAllData);
-  return forest.map((tree) =>
-    tree.option ? (
-      <div
-        className={"option-in-tree" + (tree.depth > 0 ? " not-root" : "")}
-        key={tree.locs[0]}
-      >
-        <LocationPathChips
-          path={tree.locs}
-          startDepth={tree.depth}
-          onClick={() => {
-            searchParams.delete("key");
-            navigate("/t/" + tree.option.id_terminal + "?" + searchParams.toString());
-          }}
-        />
-        {tree.option.date_modified < date4_0 &&
-          getLocPath(tree.option, dictTerminals)[0] !== "Pyro" && (
-            <Icon path={mdiAlertCircleOutline} size="1rem" color="#a06060" />
-          )}
-        <p className="distance-info">{readableDistance(tree.option.distance, t)}</p>
-        {tree.option["price_" + tradeType] > 0 ? (
-          <p
-            className="price"
-            style={{
-              color: colorPrice(
-                percent(tree.option["price_" + tradeType], priceMin, priceMin * 2)
-              ),
-            }}
-          >
-            {t("Common.price", { price: tree.option["price_" + tradeType] })}
-          </p>
-        ) : (
-          <p className="price" style={{ color: `hsl(0deg 0% 50%)` }}>
-            {t("SearchItemResultList.notBuyable")}
-          </p>
-        )}
-      </div>
-    ) : (
-      <div
-        className={"location-tree" + (tree.depth > 0 ? " not-root" : "")}
-        key={tree.locs[0]}
-      >
-        <LocationPathChips path={tree.locs} startDepth={tree.depth} />
-        <div style={{ marginLeft: "1.5rem" }}>
-          <LocationForest
-            forest={tree.subs}
-            priceMin={priceMin}
-            priceMax={priceMax}
-            tradeType={tradeType}
-          />
-        </div>
-      </div>
-    )
-  );
-};
+const getMinPrice = (priceMinMax: Partial<PriceMinMax>, tradeType: TradeType) =>
+  priceMinMax[`${tradeType}_min`] || 0;
 
 export default TradeOptions;

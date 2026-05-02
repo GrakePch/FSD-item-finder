@@ -17,7 +17,7 @@ const LocationPathChips = ({ path, startDepth, onClick }: LocationPathChipsProps
   const { dictLocations } = useContext(ContextAllData);
 
   return (
-    <p className="LocationPathChips">
+    <p className={"LocationPathChips" + (onClick ? " clickable" : "")}>
       {path.map((loc, idx) => (
         <span
           key={loc + idx}
