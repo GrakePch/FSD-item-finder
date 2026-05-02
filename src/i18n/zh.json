@@ -16,8 +16,11 @@
   "SearchItemBar": {
     "placeholder": "搜索物品……",
     "loadingData": "加载数据……",
+    "homeTitle": "星际寻物",
+    "homeSubtitle": "东市买飞船，西市买铳械",
     "buyableOnly": "仅显示可购买",
     "searchResultsTotal": "搜索结果共 {{count}} 个",
+    "noSearchResults": "未找到搜索结果",
     "recentSearches": "最近查询",
     "clear": "清除"
   },

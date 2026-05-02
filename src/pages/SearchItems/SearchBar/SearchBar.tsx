@@ -289,6 +289,17 @@ const SearchBar = ({
             </button>
           </p>
         ))}
+      {!isSearching && resultList.length === 0 && (
+        <div className="home-empty">
+          <div className="home-empty-title">{t("SearchItemBar.homeTitle")}</div>
+          <div className="home-empty-subtitle">
+            {t("SearchItemBar.homeSubtitle")}
+          </div>
+        </div>
+      )}
+      {isSearching && resultList.length === 0 && (
+        <p className="total">{t("SearchItemBar.noSearchResults")}</p>
+      )}
     </div>
   );
 };

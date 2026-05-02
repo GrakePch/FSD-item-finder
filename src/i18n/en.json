@@ -16,8 +16,11 @@
   "SearchItemBar": {
     "placeholder": "Search Items...",
     "loadingData": "Loading data...",
+    "homeTitle": "Star Finder",
+    "homeSubtitle": "Ships from the east, arms from the west.",
     "buyableOnly": "Buyable Only",
     "searchResultsTotal": "Showing {{count}} results",
+    "noSearchResults": "No search results found",
     "recentSearches": "Recent Searches",
     "clear": "Clear"
   },

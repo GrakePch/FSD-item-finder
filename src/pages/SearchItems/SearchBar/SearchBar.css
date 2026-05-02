@@ -156,3 +156,31 @@
 .SearchBar .btn-clear-recent>svg {
     vertical-align: -0.125rem;
 }
+
+.SearchBar .home-empty {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5rem;
+    pointer-events: none;
+    text-align: center;
+    padding: 33vh 1.5rem 0;
+}
+
+.SearchBar .home-empty-title {
+    color: var(--color-text-1);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.SearchBar .home-empty-subtitle {
+    color: var(--color-text-2);
+    font-size: .95rem;
+    font-weight: 400;
+    letter-spacing: 0;
+}
