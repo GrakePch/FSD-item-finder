@@ -45,6 +45,50 @@
     "noResult": "No search results",
     "favoriteVehicles": "Favorite Vehicles"
   },
+  "VehicleManufacturer": {
+    "short": {
+      "AEGS": "Aegis",
+      "ANVL": "Anvil",
+      "XNAA": "Aopoa",
+      "ARGO": "Argo",
+      "BANU": "Banu",
+      "CNOU": "Outland",
+      "CRUS": "Crusader",
+      "DRAK": "Drake",
+      "ESPR": "Esperia",
+      "GAMA": "Gatac",
+      "GREY": "Grey's",
+      "GRIN": "Greycat",
+      "KRIG": "Kruger",
+      "MRAI": "Mirai",
+      "MISC": "MISC",
+      "Origin": "Origin",
+      "RSI": "RSI",
+      "TMBL": "Tumbril",
+      "VNCL": "Vanduul"
+    },
+    "full": {
+      "AEGS": "Aegis Dynamics",
+      "ANVL": "Anvil Aerospace",
+      "XNAA": "Aopoa",
+      "ARGO": "Argo Astronautics",
+      "BANU": "Banu Suli",
+      "CNOU": "Consolidated Outland",
+      "CRUS": "Crusader Industries",
+      "DRAK": "Drake Interplanetary",
+      "ESPR": "Esperia",
+      "GAMA": "Gatac Manufacture",
+      "GREY": "Grey's",
+      "GRIN": "Greycat Industrial",
+      "KRIG": "Kruger Intergalactic",
+      "MRAI": "Mirai",
+      "MISC": "Musashi Industrial and Starflight Concern",
+      "Origin": "Origin Jumpworks",
+      "RSI": "Roberts Space Industries",
+      "TMBL": "Tumbril Land Systems",
+      "VNCL": "Vanduul"
+    }
+  },
   "SearchLocationBar": {
     "placeholder": "Search Locations..."
   },

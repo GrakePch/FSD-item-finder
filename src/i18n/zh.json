@@ -45,6 +45,50 @@
     "noResult": "暂无搜索结果",
     "favoriteVehicles": "收藏的载具"
   },
+  "VehicleManufacturer": {
+    "short": {
+      "AEGS": "圣盾",
+      "ANVL": "铁砧",
+      "XNAA": "奥波亚",
+      "ARGO": "南船",
+      "BANU": "巴努",
+      "CNOU": "外域",
+      "CRUS": "十字军",
+      "DRAK": "德雷克",
+      "ESPR": "埃斯佩里亚",
+      "GAMA": "盖塔克",
+      "GREY": "格雷",
+      "GRIN": "灰猫",
+      "KRIG": "克鲁格",
+      "MRAI": "未来",
+      "MISC": "MISC",
+      "Origin": "起源",
+      "RSI": "RSI",
+      "TMBL": "盾博尔",
+      "VNCL": "剜度"
+    },
+    "full": {
+      "AEGS": "圣盾动力",
+      "ANVL": "铁砧航天",
+      "XNAA": "奥波亚",
+      "ARGO": "南船座宇航",
+      "BANU": "巴努",
+      "CNOU": "联合外域",
+      "CRUS": "十字军工业",
+      "DRAK": "德雷克行星际",
+      "ESPR": "埃斯佩里亚",
+      "GAMA": "盖塔克制造",
+      "GREY": "格雷黑市",
+      "GRIN": "灰猫工业",
+      "KRIG": "克鲁格星际",
+      "MRAI": "未来",
+      "MISC": "武藏工业与星航株式会社",
+      "Origin": "起源跃动",
+      "RSI": "罗伯茨太空工业",
+      "TMBL": "盾博尔地面系统",
+      "VNCL": "剜度"
+    }
+  },
   "SearchLocationBar": {
     "placeholder": "搜索地点……"
   },

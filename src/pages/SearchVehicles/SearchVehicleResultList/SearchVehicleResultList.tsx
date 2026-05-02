@@ -5,6 +5,7 @@ import spvClassNameToUexId from "../../../data/vehicles/spv_classname_to_uex_id.
 import VehicleCard from "./VehicleCard/VehicleCard";
 import { useTranslation } from "react-i18next";
 import { useContext, useMemo } from "react";
+import { useSearchParams } from "react-router";
 import { ContextAllData } from "../../../contexts";
 import { getTranslatedVehicleName } from "../../../utils/vehicleI18n";
 import useFavoriteVehicles from "../../../hooks/useFavoriteVehicles";
@@ -17,16 +18,48 @@ type seriesInfo = {
   priceMax: number;
 };
 
+const manufacturerI18nKeys: Record<string, string> = {
+  "Aegis Dynamics": "AEGS",
+  "Anvil Aerospace": "ANVL",
+  Aopoa: "XNAA",
+  "Argo Astronautics": "ARGO",
+  "Banu Suli": "BANU",
+  "Consolidated Outland": "CNOU",
+  "Crusader Industries": "CRUS",
+  "Drake Interplanetary": "DRAK",
+  Esperia: "ESPR",
+  "Gatac Manufacture": "GAMA",
+  "Grey's": "GREY",
+  "Greycat Industrial": "GRIN",
+  "Kruger Intergalactic": "KRIG",
+  Mirai: "MRAI",
+  "Musashi Industrial and Starflight Concern": "MISC",
+  "Origin Jumpworks": "Origin",
+  "Roberts Space Industries": "RSI",
+  "Tumbril Land Systems": "TMBL",
+  Vanduul: "VNCL",
+};
+
 const SearchVehicleResultList = ({ searchName }: { searchName: string }) => {
   const { t } = useTranslation();
+  const [searchParams, setSearchParams] = useSearchParams();
   const { dictVehicles } = useContext(ContextAllData);
   const { favoriteVehicles } = useFavoriteVehicles();
+  const selectedManufacturer = searchParams.get("manufacturer") || "";
 
   const uexVehicleById = useMemo(() => {
     return Object.fromEntries(
       Object.values(dictVehicles).map((vehicle) => [vehicle.id_vehicle, vehicle])
     );
   }, [dictVehicles]);
+
+  const manufacturers = useMemo(
+    () =>
+      Array.from(new Set(spvVehicleIndex.map((vehicle) => vehicle.Manufacturer)))
+        .filter(Boolean)
+        .sort((a, b) => a.localeCompare(b)),
+    []
+  );
 
   const getUexBuyPrice = (vehicle: SpvVehicleIndex) => {
     if (Object.keys(uexVehicleById).length === 0) return undefined;
@@ -41,16 +74,17 @@ const SearchVehicleResultList = ({ searchName }: { searchName: string }) => {
 
   const normalizedSearchName = searchName.trim().toLowerCase();
 
-  // Filter vehicles based on searchName (case-insensitive)
   const vehicles = spvVehicleIndex.filter((vehicle) => {
     const nameMatch = vehicle.Name.toLowerCase().includes(normalizedSearchName);
     const i18nName = getTranslatedVehicleName(t, vehicle);
     const i18nMatch = i18nName.toLowerCase().includes(normalizedSearchName);
-    return nameMatch || i18nMatch;
+    const manufacturerMatch =
+      !selectedManufacturer || vehicle.Manufacturer === selectedManufacturer;
+    return (nameMatch || i18nMatch) && manufacturerMatch;
   });
 
   const vehicleByClassName = Object.fromEntries(
-    vehicles.map((vehicle) => [vehicle.ClassName, vehicle])
+    spvVehicleIndex.map((vehicle) => [vehicle.ClassName, vehicle])
   );
   const favoriteVehicleList = favoriteVehicles
     .map((vehicleClassName) => vehicleByClassName[vehicleClassName])
@@ -63,7 +97,6 @@ const SearchVehicleResultList = ({ searchName }: { searchName: string }) => {
   const shouldShowFavoriteVehicles =
     normalizedSearchName.length === 0 && favoriteVehicleList.length > 0;
 
-  // Group vehicles into listSeries: seriesInfo[]
   const seriesMap: { [seriesKey: string]: SpvVehicleIndex[] } = {};
   vehicles.forEach((vehicle) => {
     const series = vehicleClassNameToSeries[vehicle.ClassName] || "";
@@ -95,18 +128,55 @@ const SearchVehicleResultList = ({ searchName }: { searchName: string }) => {
     }
   );
 
-  // Sort: series first by name, then singles by vehicle name
   listSeries.sort((a, b) => {
     if (a.isSeries && b.isSeries) return a.seriesKey.localeCompare(b.seriesKey);
     if (a.isSeries) return -1;
     if (b.isSeries) return 1;
-    // both single, sort by vehicle name
     return a.vehicles[0].Name.localeCompare(b.vehicles[0].Name);
   });
 
-  return !vehicles.length ? (
-    <div className="SearchVehicleResultList">{t("SearchVehicleResultList.noResult")}</div>
-  ) : (
+  const manufacturerFilters = (
+    <div className="filters vehicle-manufacturer-filters">
+      <button
+        onClick={() => {
+          searchParams.delete("manufacturer");
+          setSearchParams(searchParams);
+        }}
+        className={selectedManufacturer ? undefined : "active"}
+      >
+        {t("FilterType.all")}
+      </button>
+      {manufacturers.map((manufacturer) => {
+        const manufacturerKey = manufacturerI18nKeys[manufacturer];
+        const displayName = manufacturerKey
+          ? t(`VehicleManufacturer.short.${manufacturerKey}`)
+          : manufacturer;
+        const fullName = manufacturerKey
+          ? t(`VehicleManufacturer.full.${manufacturerKey}`, { defaultValue: manufacturer })
+          : manufacturer;
+
+        return (
+          <button
+            key={manufacturer}
+            onClick={() => {
+              if (selectedManufacturer === manufacturer) {
+                searchParams.delete("manufacturer");
+              } else {
+                searchParams.set("manufacturer", manufacturer);
+              }
+              setSearchParams(searchParams);
+            }}
+            className={selectedManufacturer === manufacturer ? "active" : undefined}
+            title={fullName}
+          >
+            {displayName}
+          </button>
+        );
+      })}
+    </div>
+  );
+
+  return (
     <div className="SearchVehicleResultList">
       {shouldShowFavoriteVehicles && (
         <>
@@ -127,35 +197,42 @@ const SearchVehicleResultList = ({ searchName }: { searchName: string }) => {
           <div className="vehicle-list-divider" />
         </>
       )}
-      <ul className="vehicle-group-list">
-        {listSeries
-          .sort((a, b) => a.priceMin - b.priceMin)
-          .map((group) =>
-            group.isSeries ? (
-              <li key={group.seriesKey} className="vehicle-group">
-                <div className="vehicle-series-title">{t("VehicleSeries."+group.seriesKey)}</div>
-                <ul className="vehicle-list">
-                  {group.vehicles
-                    .sort((a, b) => (a.Store.Buy || Infinity) - (b.Store.Buy || Infinity))
-                    .map((vehicle) => (
-                      <VehicleCard
-                        key={vehicle.ClassName}
-                        vehicle={vehicle}
-                        uexBuyPrice={getUexBuyPrice(vehicle)}
-                      />
-                    ))}
-                </ul>
-              </li>
-            ) : (
-              <li key={group.vehicles[0].ClassName} className="single-vehicle-item">
-                <VehicleCard
-                  vehicle={group.vehicles[0]}
-                  uexBuyPrice={getUexBuyPrice(group.vehicles[0])}
-                />
-              </li>
-            )
-          )}
-      </ul>
+      {manufacturerFilters}
+      {!vehicles.length ? (
+        <div className="vehicle-no-result">{t("SearchVehicleResultList.noResult")}</div>
+      ) : (
+        <ul className="vehicle-group-list">
+          {listSeries
+            .sort((a, b) => a.priceMin - b.priceMin)
+            .map((group) =>
+              group.isSeries ? (
+                <li key={group.seriesKey} className="vehicle-group">
+                  <div className="vehicle-series-title">
+                    {t("VehicleSeries." + group.seriesKey)}
+                  </div>
+                  <ul className="vehicle-list">
+                    {group.vehicles
+                      .sort((a, b) => (a.Store.Buy || Infinity) - (b.Store.Buy || Infinity))
+                      .map((vehicle) => (
+                        <VehicleCard
+                          key={vehicle.ClassName}
+                          vehicle={vehicle}
+                          uexBuyPrice={getUexBuyPrice(vehicle)}
+                        />
+                      ))}
+                  </ul>
+                </li>
+              ) : (
+                <li key={group.vehicles[0].ClassName} className="single-vehicle-item">
+                  <VehicleCard
+                    vehicle={group.vehicles[0]}
+                    uexBuyPrice={getUexBuyPrice(group.vehicles[0])}
+                  />
+                </li>
+              )
+            )}
+        </ul>
+      )}
     </div>
   );
 };
