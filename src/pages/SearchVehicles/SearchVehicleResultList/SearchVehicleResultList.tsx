@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { useContext, useMemo } from "react";
 import { ContextAllData } from "../../../contexts";
 import { getTranslatedVehicleName } from "../../../utils/vehicleI18n";
+import useFavoriteVehicles from "../../../hooks/useFavoriteVehicles";
 
 type seriesInfo = {
   isSeries: boolean;
@@ -19,6 +20,7 @@ type seriesInfo = {
 const SearchVehicleResultList = ({ searchName }: { searchName: string }) => {
   const { t } = useTranslation();
   const { dictVehicles } = useContext(ContextAllData);
+  const { favoriteVehicles } = useFavoriteVehicles();
 
   const uexVehicleById = useMemo(() => {
     return Object.fromEntries(
@@ -46,6 +48,21 @@ const SearchVehicleResultList = ({ searchName }: { searchName: string }) => {
     const i18nMatch = i18nName.toLowerCase().includes(normalizedSearchName);
     return nameMatch || i18nMatch;
   });
+
+  const vehicleByClassName = Object.fromEntries(
+    vehicles.map((vehicle) => [vehicle.ClassName, vehicle])
+  );
+  const favoriteVehicleList = favoriteVehicles
+    .map((vehicleClassName) => vehicleByClassName[vehicleClassName])
+    .filter((vehicle): vehicle is SpvVehicleIndex => !!vehicle)
+    .sort((a, b) => {
+      const priceA = typeof a.Store.Buy === "number" ? a.Store.Buy : Infinity;
+      const priceB = typeof b.Store.Buy === "number" ? b.Store.Buy : Infinity;
+      return priceA - priceB || a.Name.localeCompare(b.Name);
+    });
+  const shouldShowFavoriteVehicles =
+    normalizedSearchName.length === 0 && favoriteVehicleList.length > 0;
+
   // Group vehicles into listSeries: seriesInfo[]
   const seriesMap: { [seriesKey: string]: SpvVehicleIndex[] } = {};
   vehicles.forEach((vehicle) => {
@@ -91,6 +108,25 @@ const SearchVehicleResultList = ({ searchName }: { searchName: string }) => {
     <div className="SearchVehicleResultList">{t("SearchVehicleResultList.noResult")}</div>
   ) : (
     <div className="SearchVehicleResultList">
+      {shouldShowFavoriteVehicles && (
+        <>
+          <section className="favorite-vehicle-section">
+            <h2 className="favorite-vehicle-title">
+              {t("SearchVehicleResultList.favoriteVehicles", {
+                defaultValue: "收藏的载具",
+              })}
+            </h2>
+            <ul className="favorite-vehicle-list">
+              {favoriteVehicleList.map((vehicle) => (
+                <li key={vehicle.ClassName} className="single-vehicle-item">
+                  <VehicleCard vehicle={vehicle} uexBuyPrice={getUexBuyPrice(vehicle)} />
+                </li>
+              ))}
+            </ul>
+          </section>
+          <div className="vehicle-list-divider" />
+        </>
+      )}
       <ul className="vehicle-group-list">
         {listSeries
           .sort((a, b) => a.priceMin - b.priceMin)

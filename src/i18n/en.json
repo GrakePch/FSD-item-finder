@@ -42,7 +42,8 @@
     "placeholder": "Search Vehicles..."
   },
   "SearchVehicleResultList": {
-    "noResult": "No search results"
+    "noResult": "No search results",
+    "favoriteVehicles": "Favorite Vehicles"
   },
   "SearchLocationBar": {
     "placeholder": "Search Locations..."
@@ -133,6 +134,8 @@
   "VehicleInfo": {
     "isLimitedSale": "Limited Sale",
     "isPromotionOnly": "Promotion Only",
+    "favorite": "Favorite",
+    "favorited": "Favorited",
     "notDelivered": "Not Delivered",
     "notBuyableUSD": "Not Sell in Store",
     "notBuyableUEC": "Not Sell in Game",

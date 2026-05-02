@@ -42,7 +42,8 @@
     "placeholder": "搜索载具……"
   },
   "SearchVehicleResultList": {
-    "noResult": "暂无搜索结果"
+    "noResult": "暂无搜索结果",
+    "favoriteVehicles": "收藏的载具"
   },
   "SearchLocationBar": {
     "placeholder": "搜索地点……"
@@ -134,6 +135,8 @@
     "notDelivered": "未交付",
     "isLimitedSale": "限量发售",
     "isPromotionOnly": "活动专属",
+    "favorite": "收藏",
+    "favorited": "已收藏",
     "notBuyableUSD": "无法官网购买",
     "notBuyableUEC": "无法游戏内购买",
     "Dimensions": "长 {{L}} × 宽 {{W}} × 高 {{H}} m",

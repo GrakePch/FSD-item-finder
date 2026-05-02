@@ -17,6 +17,13 @@
     flex-direction: column;
 }
 
+.VehicleInfo .vehicle-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem;
+}
+
 .VehicleInfo .vehicle-role {
     font-size: 1rem;
     color: var(--color-bg);
@@ -30,7 +37,6 @@
 }
 
 .VehicleInfo .vehicle-status {
-    margin-left: .5rem;
     font-size: 1rem;
     color: var(--color-bg);
     font-family: var(--font-slim);
@@ -40,6 +46,25 @@
     width: max-content;
     padding: 1px 5px;
     border-radius: 2px;
+}
+
+.VehicleInfo .favorite-vehicle-button {
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+    padding: 1px 5px;
+    border-radius: 2px;
+    color: var(--color-text-2);
+    background: transparent;
+    font-size: 1rem;
+    font-family: var(--font-slim);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.VehicleInfo .favorite-vehicle-button.active {
+    color: var(--color-bg);
+    background-color: var(--color-text-2);
 }
 
 .VehicleInfo .vehicle-status.Concept {

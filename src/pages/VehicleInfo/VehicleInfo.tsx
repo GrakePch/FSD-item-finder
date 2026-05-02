@@ -2,6 +2,8 @@ import "./VehicleInfo.css";
 import { useParams } from "react-router";
 import { ContextAllData } from "../../contexts";
 import { useContext, useMemo } from "react";
+import Icon from "@mdi/react";
+import { mdiHeart, mdiHeartOutline } from "@mdi/js";
 import spvVehicleIndex from "../../data/vehicles/spv_vehicle_index";
 import spvVehicleList from "../../data/vehicles/spv_vehicle_list";
 import spvClassNameToUexId from "../../data/vehicles/spv_classname_to_uex_id.json";
@@ -12,6 +14,7 @@ import { spvRoleToKey } from "../../utils";
 import { useTranslation } from "react-i18next";
 import FlightVelocities from "./FlightVelocities/FlightVelocities";
 import FlightAccelerations from "./FlightAccelerations/FlightAccelerations";
+import useFavoriteVehicles from "../../hooks/useFavoriteVehicles";
 
 const spvClassNameToUexIdMap = spvClassNameToUexId as Record<string, number>;
 
@@ -19,6 +22,7 @@ const VehicleInfo = () => {
   const { t } = useTranslation();
   const vehicleClassName = useParams().vehicleClassName;
   const { dictVehicles } = useContext(ContextAllData);
+  const { isFavoriteVehicle, toggleFavoriteVehicle } = useFavoriteVehicles();
 
   const spvVehicle = useMemo(
     () => spvVehicleIndex.find((v) => v.ClassName === vehicleClassName),
@@ -34,6 +38,8 @@ const VehicleInfo = () => {
     const uexId = vehicleClassName ? spvClassNameToUexIdMap[vehicleClassName] : undefined;
     return Object.values(dictVehicles).find((v) => v.id_vehicle === uexId);
   }, [dictVehicles, spvClassNameToUexId, vehicleClassName]);
+
+  const isFavorite = vehicleClassName ? isFavoriteVehicle(vehicleClassName) : false;
 
   return (
     spvVehicle && (
@@ -60,7 +66,7 @@ const VehicleInfo = () => {
                 lng: "en",
               })}
             </h2>
-            <p>
+            <p className="vehicle-tags">
               <span className="vehicle-role">
                 {t("vehicle_class_" + spvRoleToKey(spvVehicle.Role), {
                   ns: "vehicle_classes",
@@ -71,6 +77,18 @@ const VehicleInfo = () => {
                 {t("SPVProgressTrackerStatus." + spvVehicle.ProgressTracker.Status)}{" "}
                 {spvVehicle.ProgressTracker.Patch}
               </span>
+              <button
+                className={`favorite-vehicle-button ${isFavorite ? "active" : ""}`}
+                type="button"
+                onClick={() => toggleFavoriteVehicle(spvVehicle.ClassName)}
+              >
+                <Icon path={isFavorite ? mdiHeart : mdiHeartOutline} size="1rem" />
+                <span>
+                  {isFavorite
+                    ? t("VehicleInfo.favorited", { defaultValue: "已收藏" })
+                    : t("VehicleInfo.favorite", { defaultValue: "收藏" })}
+                </span>
+              </button>
             </p>
             {/* {spvVehicleMain &&
             <p className="dimensions">{t("VehicleInfo.Dimensions", {
