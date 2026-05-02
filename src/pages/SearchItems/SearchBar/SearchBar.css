@@ -139,10 +139,31 @@
     background-color: var(--color-text-1);
 }
 
+.SearchBar .buyable-only-filter {
+    display: inline-flex;
+    align-items: center;
+    gap: .375rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
 .SearchBar .total {
     padding: .5rem 1.5rem;
     padding-top: .5rem;
     font-family: var(--font-slim);
+}
+
+.SearchBar .search-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.SearchBar .search-total .buyable-only-filter {
+    margin-left: auto;
 }
 
 .SearchBar .btn-clear-recent {

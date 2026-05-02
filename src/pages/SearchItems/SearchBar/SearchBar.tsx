@@ -229,17 +229,6 @@ const SearchBar = ({
             {t("FilterType." + key)}
           </button>
         ))}
-        <hr />
-        <input
-          type="checkbox"
-          id="buyable-only"
-          checked={!parseInt(searchParams.get("show_unbuyable"))}
-          onChange={(e) => {
-            searchParams.set("show_unbuyable", e.target.checked ? "0" : "1");
-            setSearchParams(searchParams);
-          }}
-        />
-        <label htmlFor="buyable-only">{t("SearchItemBar.buyableOnly")}</label>
       </div>
       {subFilterTypes[filterType] && (
         <div className="filters sub">
@@ -270,12 +259,29 @@ const SearchBar = ({
           ))}
         </div>
       )}
+      {isSearching && (
+        <p className="total search-total">
+          <span>
+            {resultList.length > 0
+              ? t("SearchItemBar.searchResultsTotal", { count: resultList.length })
+              : t("SearchItemBar.noSearchResults")}
+          </span>
+          <label className="buyable-only-filter" htmlFor="buyable-only">
+            <input
+              type="checkbox"
+              id="buyable-only"
+              checked={!parseInt(searchParams.get("show_unbuyable"))}
+              onChange={(e) => {
+                searchParams.set("show_unbuyable", e.target.checked ? "0" : "1");
+                setSearchParams(searchParams);
+              }}
+            />
+            <span>{t("SearchItemBar.buyableOnly")}</span>
+          </label>
+        </p>
+      )}
       {resultList.length > 0 &&
-        (isSearching ? (
-            <p className="total">
-            {t("SearchItemBar.searchResultsTotal", { count: resultList.length })}
-            </p>
-        ) : (
+        !isSearching && (
           <p className="total">
             {t("SearchItemBar.recentSearches")}{" "}
             <button
@@ -288,7 +294,7 @@ const SearchBar = ({
               <Icon path={mdiTrashCanOutline} size="1rem" /> {t("SearchItemBar.clear")}
             </button>
           </p>
-        ))}
+        )}
       {!isSearching && resultList.length === 0 && (
         <div className="home-empty">
           <div className="home-empty-title">{t("SearchItemBar.homeTitle")}</div>
@@ -296,9 +302,6 @@ const SearchBar = ({
             {t("SearchItemBar.homeSubtitle")}
           </div>
         </div>
-      )}
-      {isSearching && resultList.length === 0 && (
-        <p className="total">{t("SearchItemBar.noSearchResults")}</p>
       )}
     </div>
   );
