@@ -1,4 +1,4 @@
-import { lazy, Suspense, type ReactNode, useEffect, useState } from "react";
+import { lazy, Suspense, type ReactNode, useEffect, useRef, useState } from "react";
 import "./App.css";
 import { Route, Routes, useLocation } from "react-router";
 import { ContextAllData, AllData } from "./contexts";
@@ -29,8 +29,29 @@ const EyesOnStarCitizen = lazy(
   () => import("./pages/EyesOnStarCitizen/EyesOnStarCitizen")
 );
 
+type LoadState = "loading" | "ready" | "error";
+
 function route(element: ReactNode) {
   return <Suspense fallback={null}>{element}</Suspense>;
+}
+
+function LoadingScreen() {
+  return (
+    <div className="app-loading">
+      <div className="app-loading-spinner" />
+      <p>正在加载数据…</p>
+    </div>
+  );
+}
+
+function ErrorScreen({ message }: { message: string }) {
+  return (
+    <div className="app-error">
+      <h2>数据加载失败</h2>
+      <p>{message}</p>
+      <button onClick={() => window.location.reload()}>重试</button>
+    </div>
+  );
 }
 
 function App() {
@@ -53,70 +74,74 @@ function App() {
     setCurrentLocation: setCurrentLocationWithLocalStorage,
   });
 
+  const [loadState, setLoadState] = useState<LoadState>("loading");
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const initializedRef = useRef(false);
+
   const location = useLocation();
 
-  const initializeAppData = async () => {
-    const [dictSystems, dictBodies, dictLocations] = buildDataBodiesAndLocations();
-
-    setAllData((prev) => ({
-      ...prev,
-      dictSystems: dictSystems,
-      dictCelestialBodies: dictBodies,
-      dictLocations: dictLocations,
-    }));
-
-    fetchCategoriesAttributes()
-      .then((categoriesAttributes) => {
-        setUEXAttributes(categoriesAttributes);
-        setAllData((prev) => ({ ...prev }));
-      })
-      .catch((err) => {
-        console.error("Failed to load UEX categories attributes", err);
-      });
-
-    fetchItemCatalogDictionary()
-      .then((dictItems) => {
-        setAllData((prev) => ({
-          ...prev,
-          dictItems: dictItems,
-        }));
-
-        return fetchAndProcessItems(dictItems);
-      })
-      .then((dictItems) => {
-        setAllData((prev) => ({
-          ...prev,
-          dictItems: dictItems,
-        }));
-      })
-      .catch((err) => {
-        console.error("Failed to load item data", err);
-      });
-
-    fetchAndProcessTerminals(dictLocations)
-      .then((dictTerminals) => {
-        setAllData((prev) => ({
-          ...prev,
-          dictTerminals: dictTerminals,
-        }));
-      })
-      .catch((err) => {
-        console.error("Failed to load terminal data", err);
-      });
-
-    fetchAndProcessVehicles()
-      .then((dictVehicles) => {
-        setAllData((prev) => ({
-          ...prev,
-          dictVehicles: dictVehicles,
-        }));
-      })
-      .catch((err) => {
-        console.error("Failed to load vehicle data", err);
-      });
-  };
-
   useEffect(() => {
+    if (initializedRef.current) return;
+    initializedRef.current = true;
+
+    const initializeAppData = async () => {
+      // Synchronous data build
+      const [dictSystems, dictBodies, dictLocations] = buildDataBodiesAndLocations();
+      setAllData((prev) => ({
+        ...prev,
+        dictSystems,
+        dictCelestialBodies: dictBodies,
+        dictLocations,
+      }));
+
+      // Fire all async fetches in parallel, track results
+      const results = await Promise.allSettled([
+        fetchCategoriesAttributes().then((attrs) => {
+          setUEXAttributes(attrs);
+          setAllData((prev) => ({ ...prev }));
+          return "categories";
+        }),
+        fetchItemCatalogDictionary()
+          .then((dictItems) => {
+            setAllData((prev) => ({ ...prev, dictItems }));
+            return fetchAndProcessItems(dictItems);
+          })
+          .then((dictItems) => {
+            setAllData((prev) => ({ ...prev, dictItems }));
+            return "items";
+          }),
+        fetchAndProcessTerminals(dictLocations).then((dictTerminals) => {
+          setAllData((prev) => ({ ...prev, dictTerminals }));
+          return "terminals";
+        }),
+        fetchAndProcessVehicles().then((dictVehicles) => {
+          setAllData((prev) => ({ ...prev, dictVehicles }));
+          return "vehicles";
+        }),
+      ]);
+
+      const failures = results.filter((r) => r.status === "rejected");
+      if (failures.length === results.length) {
+        // All fetches failed
+        const messages = failures.map(
+          (f) => (f as PromiseRejectedResult).reason?.message || "未知错误"
+        );
+        setLoadError(messages.join("；"));
+        setLoadState("error");
+      } else if (failures.length > 0) {
+        // Partial failure — app is still usable
+        console.warn(
+          `${failures.length}/${results.length} data sources failed to load`
+        );
+        failures.forEach((f) =>
+          console.error("Data load failure:", (f as PromiseRejectedResult).reason)
+        );
+        setLoadState("ready");
+      } else {
+        setLoadState("ready");
+      }
+    };
+
     initializeAppData();
   }, []);
 
@@ -137,28 +162,40 @@ function App() {
   }, [location]);
 
   useEffect(() => {
-    // Check for 'from' in search params
     const params = new URLSearchParams(location.search);
     const fromParam = params.get("from");
-    let stored = localStorage.getItem(KEY_CURRENT_LOCATION);
+    const stored = localStorage.getItem(KEY_CURRENT_LOCATION);
     if (fromParam) {
       setCurrentLocationWithLocalStorage(fromParam);
     } else {
-      // If 'from' is not present, check if current location is stored
       if (!stored) {
-        // If not, set default location
         localStorage.setItem(KEY_CURRENT_LOCATION, "Crusader");
       }
     }
   }, [location.search]);
 
-  // Update allData.currentLocation when currentLocation changes
   useEffect(() => {
     setAllData((prev) => ({
       ...prev,
       currentLocation: currentLocation,
     }));
   }, [currentLocation]);
+
+  if (loadState === "loading") {
+    return (
+      <I18nextProvider i18n={i18n}>
+        <LoadingScreen />
+      </I18nextProvider>
+    );
+  }
+
+  if (loadState === "error") {
+    return (
+      <I18nextProvider i18n={i18n}>
+        <ErrorScreen message={loadError || "无法加载应用数据"} />
+      </I18nextProvider>
+    );
+  }
 
   return (
     <I18nextProvider i18n={i18n}>
@@ -184,7 +221,6 @@ function App() {
             element={route(<EyesOnStarCitizen routing="l" />)}
           />
           <Route path="/t/:terminalId" element={route(<TerminalInfo />)} />
-          {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
         <Footer />
         <LanguageToggle />

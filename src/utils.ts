@@ -23,7 +23,7 @@ export function locationNameToI18nKey(name: string): string {
   return (location_name_to_i18n_key[name] as string) || name;
 }
 
-export function getUEXAttribute(id) {
+export function getUEXAttribute(id: number | string) {
   for (const attr of uexAttributes) {
     if (attr.id == id) {
       return attr;
