@@ -1,122 +1,91 @@
 import "./SearchResultList.css";
 import { useNavigate, useSearchParams } from "react-router";
-import { useContext } from "react";
-import {
-  getAttributeValueByName,
-  sizeToColor,
-  classToColor,
-  signalToColor,
-  typeCapitalizedToKey,
-  toI18nKey,
-} from "../../../utils";
-import { icon } from "../../../assets/icon";
-import Icon from "@mdi/react";
-import { useTranslation } from "react-i18next";
+import { useContext, useEffect, useMemo, useRef, useState } from "react";
 import { ContextAllData } from "../../../contexts";
+import SearchResultListItem from "./SearchResultListItem";
+
+const RESULT_ROW_HEIGHT = 56;
+const RESULT_OVERSCAN = 8;
 
 const SearchResultList = ({ results }: { results: Item[] }) => {
-  const { t } = useTranslation();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const { dictItems } = useContext(ContextAllData);
-  const hasLoadedItemPrices = Object.values(dictItems).some(
-    (item) =>
-      item.price_min_max.buy_min ||
-      item.price_min_max.sell_min ||
-      item.price_min_max.rent_min
+  const listRef = useRef<HTMLDivElement>(null);
+  const [visibleRange, setVisibleRange] = useState({ start: 0, end: 0 });
+  const hasLoadedItemPrices = useMemo(
+    () =>
+      Object.values(dictItems).some(
+        (item) =>
+          item.price_min_max.buy_min ||
+          item.price_min_max.sell_min ||
+          item.price_min_max.rent_min
+      ),
+    [dictItems]
   );
+
+  useEffect(() => {
+    const updateVisibleRange = () => {
+      const listElement = listRef.current;
+      if (!listElement || results.length === 0) {
+        setVisibleRange({ start: 0, end: 0 });
+        return;
+      }
+
+      const rect = listElement.getBoundingClientRect();
+      const start = Math.max(
+        0,
+        Math.floor(-rect.top / RESULT_ROW_HEIGHT) - RESULT_OVERSCAN
+      );
+      const end = Math.max(
+        0,
+        Math.min(
+          results.length,
+          Math.ceil((window.innerHeight - rect.top) / RESULT_ROW_HEIGHT) +
+            RESULT_OVERSCAN
+        )
+      );
+
+      setVisibleRange((currentRange) =>
+        currentRange.start === start && currentRange.end === end
+          ? currentRange
+          : { start, end }
+      );
+    };
+
+    updateVisibleRange();
+
+    window.addEventListener("scroll", updateVisibleRange, { passive: true });
+    window.addEventListener("resize", updateVisibleRange);
+
+    return () => {
+      window.removeEventListener("scroll", updateVisibleRange);
+      window.removeEventListener("resize", updateVisibleRange);
+    };
+  }, [results.length]);
 
   const handleResultClick = (key: string) => {
     navigate(`/i/${key}?${searchParams.toString()}`);
   };
 
+  const visibleResults = results.slice(visibleRange.start, visibleRange.end);
+
   return (
-    <div className="SearchResultList">
-      {results.map((item) => {
-        let attrsize: string,
-          attrClass: string,
-          attrGrade: string,
-          attrTrackSignal: string;
-        if (item.type === "Systems") {
-          attrsize = getAttributeValueByName("Size", item.attributes);
-          attrClass = getAttributeValueByName("Class", item.attributes);
-          attrGrade = getAttributeValueByName("Grade", item.attributes);
-        }
-        if (item.type === "Vehicle Weapons") {
-          attrsize = getAttributeValueByName("Size", item.attributes);
-          attrTrackSignal = item.attributes?.[112];
-        }
-        if (item.sub_type === "Attachments") {
-          attrsize = getAttributeValueByName("Size", item.attributes);
-        }
-        return (
-          <button
-            className="result-list-item"
+    <div className="SearchResultList" ref={listRef}>
+      <div
+        className="virtual-result-spacer"
+        style={{ height: results.length * RESULT_ROW_HEIGHT }}
+      >
+        {visibleResults.map((item, index) => (
+          <SearchResultListItem
+            hasLoadedItemPrices={hasLoadedItemPrices}
+            item={item}
             key={item.key}
-            onClick={() => handleResultClick(item.key)}
-          >
-            {icon[item.sub_type] ? (
-              <Icon path={icon[item.sub_type]} size="2rem" />
-            ) : (
-              <div className="type">
-                <p>{t("FilterType." + typeCapitalizedToKey(item.type || "unknown"))}</p>
-                <p>
-                  {t("FilterType." + typeCapitalizedToKey(item.sub_type || "unknown"))}
-                </p>
-              </div>
-            )}
-            <div className="names">
-              <p className="zh">{t(item.key, { ns: "items" })}</p>
-              <p className="en">{t(item.key, { ns: "items", lng: "en" })}</p>
-            </div>
-            {attrClass && attrGrade && (
-              <div
-                className="class-grade"
-                style={{
-                  color: classToColor[attrClass],
-                  backgroundColor: classToColor[attrClass] + "18",
-                }}
-              >
-                {t("UEXAttributeValue." + toI18nKey(attrClass), {
-                  defaultValue: attrClass,
-                })}
-                -{attrGrade}
-              </div>
-            )}
-            {attrTrackSignal && (
-              <div
-                className="tracking-signal"
-                style={{
-                  color: signalToColor[attrTrackSignal],
-                  backgroundColor: signalToColor[attrTrackSignal] + "18",
-                }}
-              >
-                {t("UEXAttributeValue." + toI18nKey(attrTrackSignal), {
-                  defaultValue: attrTrackSignal,
-                })}
-              </div>
-            )}
-            {attrsize != null && (
-              <div className="size" style={{ backgroundColor: sizeToColor[attrsize] }}>
-                S{attrsize}
-              </div>
-            )}
-            {item.price_min_max.buy_min && item.price_min_max.buy_min < Infinity ? (
-              <p className="price">
-                {t("Common.priceFrom", { price: item.price_min_max.buy_min })}
-              </p>
-            ) : (
-              <p className="price" style={{ color: "hsl(0deg 0% 60%)" }}>
-                {hasLoadedItemPrices
-                  ? t("SearchItemResultList.notBuyable")
-                  : t("SearchItemResultList.priceUnavailable", {
-                      defaultValue: "Price unavailable",
-                    })}
-              </p>
-            )}
-          </button>
-        );
-      })}
+            onClick={handleResultClick}
+            top={(visibleRange.start + index) * RESULT_ROW_HEIGHT}
+          />
+        ))}
+      </div>
     </div>
   );
 };
