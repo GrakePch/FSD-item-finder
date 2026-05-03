@@ -111,7 +111,7 @@
     "dataSupport": "Data provided by",
     "feedback": "Feedback",
     "sourceCode": "Source Code",
-    "designAndDevelopment": "Design and development: {{name}}",
+    "designAndDevelopment": "Design & dev: {{name}}",
     "technicalSupport": "Technical support: {{name}}"
   },
   "EOSC": {
