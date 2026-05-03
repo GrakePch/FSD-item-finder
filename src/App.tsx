@@ -1,5 +1,5 @@
 import { lazy, Suspense, type ReactNode, useEffect, useRef, useState } from "react";
-import "./App.css";
+import styles from "./App.module.css";
 import { Navigate, Route, Routes, useLocation } from "react-router";
 import { ContextAllData, AllData } from "./contexts";
 import { buildDataBodiesAndLocations } from "./api/bodiesAndLocations";
@@ -36,8 +36,8 @@ function route(element: ReactNode) {
 
 function LoadingScreen() {
   return (
-    <div className="app-loading">
-      <div className="app-loading-spinner" />
+    <div className={styles.appLoading}>
+      <div className={styles.appLoadingSpinner} />
       <p>正在加载数据…</p>
     </div>
   );
@@ -45,7 +45,7 @@ function LoadingScreen() {
 
 function ErrorScreen({ message }: { message: string }) {
   return (
-    <div className="app-error">
+    <div className={styles.appError}>
       <h2>数据加载失败</h2>
       <p>{message}</p>
       <button onClick={() => window.location.reload()}>重试</button>
@@ -128,7 +128,7 @@ function App() {
         setLoadError(messages.join("；"));
         setLoadState("error");
       } else if (failures.length > 0) {
-        // Partial failure — app is still usable
+        // Partial failure - app is still usable
         console.warn(
           `${failures.length}/${results.length} data sources failed to load`
         );

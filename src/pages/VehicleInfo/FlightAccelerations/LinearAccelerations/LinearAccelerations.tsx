@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import "./LinearAccelerations.css";
+import styles from "./LinearAccelerations.module.css";
 
 interface LinearAccelerationsProps {
   F: number;  B: number;
@@ -22,25 +22,25 @@ const LinearAccelerations = ({
 }: LinearAccelerationsProps) => {
   const { t } = useTranslation();
   return (
-    <div className="LinearAccelerations">
+    <div className={styles.LinearAccelerations}>
       <AccelerationBar valuePos={F} boostPos={FB} valueNeg={B} boostNeg={BB} max={max} 
                        style={{ transform: "translateX(-50%) rotate(-60deg)" }} />
       <AccelerationBar valuePos={L} boostPos={LB} valueNeg={R} boostNeg={RB} max={max} 
                        style={{ transform: "translateX(-50%) rotate(90deg)" }} />
       <AccelerationBar valuePos={U} boostPos={UB} valueNeg={D} boostNeg={DB} max={max} />
       
-      <div className="text value-F">{F} <span>/ {(FB).toFixed(1)}</span> G</div>
-      <div className="text value-B">{B} <span>/ {(BB).toFixed(1)}</span> G</div>
-      <div className="text value-L">{L} <span>/ {(LB).toFixed(1)}</span> G</div>
-      <div className="text value-R">{R} <span>/ {(RB).toFixed(1)}</span> G</div>
-      <div className="text value-U">{U} <span>/ {(UB).toFixed(1)}</span> G</div>
-      <div className="text value-D">{D} <span>/ {(DB).toFixed(1)}</span> G</div>
-      <div className="text title-F">{t("VehicleInfo.FlightAccelerations.Main")}</div>
-      <div className="text title-B">{t("VehicleInfo.FlightAccelerations.Retro")}</div>
-      <div className="text title-L">{t("VehicleInfo.FlightAccelerations.Left")}</div>
-      <div className="text title-R">{t("VehicleInfo.FlightAccelerations.Right")}</div>
-      <div className="text title-U">{t("VehicleInfo.FlightAccelerations.Up")}</div>
-      <div className="text title-D">{t("VehicleInfo.FlightAccelerations.Down")}</div>
+      <div className={`${styles.text} ${styles.valueF}`}>{F} <span>/ {(FB).toFixed(1)}</span> G</div>
+      <div className={`${styles.text} ${styles.valueB}`}>{B} <span>/ {(BB).toFixed(1)}</span> G</div>
+      <div className={`${styles.text} ${styles.valueL}`}>{L} <span>/ {(LB).toFixed(1)}</span> G</div>
+      <div className={`${styles.text} ${styles.valueR}`}>{R} <span>/ {(RB).toFixed(1)}</span> G</div>
+      <div className={`${styles.text} ${styles.valueU}`}>{U} <span>/ {(UB).toFixed(1)}</span> G</div>
+      <div className={`${styles.text} ${styles.valueD}`}>{D} <span>/ {(DB).toFixed(1)}</span> G</div>
+      <div className={`${styles.text} ${styles.titleF}`}>{t("VehicleInfo.FlightAccelerations.Main")}</div>
+      <div className={`${styles.text} ${styles.titleB}`}>{t("VehicleInfo.FlightAccelerations.Retro")}</div>
+      <div className={`${styles.text} ${styles.titleL}`}>{t("VehicleInfo.FlightAccelerations.Left")}</div>
+      <div className={`${styles.text} ${styles.titleR}`}>{t("VehicleInfo.FlightAccelerations.Right")}</div>
+      <div className={`${styles.text} ${styles.titleU}`}>{t("VehicleInfo.FlightAccelerations.Up")}</div>
+      <div className={`${styles.text} ${styles.titleD}`}>{t("VehicleInfo.FlightAccelerations.Down")}</div>
     </div>
   );
 };
@@ -57,12 +57,12 @@ const AccelerationBar = ({
   style?: React.CSSProperties;
 }) => {
   return (
-    <div className="AccelerationBar" style={style}>
-      <div className="axis"></div>
-      <div className="boostPos" style={{ height: (boostPos / max) * 50 + "%" }}></div>
-      <div className="valuePos" style={{ height: (valuePos / max) * 50 + "%" }}></div>
-      <div className="boostNeg" style={{ height: (boostNeg / max) * 50 + "%" }}></div>
-      <div className="valueNeg" style={{ height: (valueNeg / max) * 50 + "%" }}></div>
+    <div className={styles.AccelerationBar} style={style}>
+      <div className={styles.axis}></div>
+      <div className={styles.boostPos} style={{ height: (boostPos / max) * 50 + "%" }}></div>
+      <div className={styles.valuePos} style={{ height: (valuePos / max) * 50 + "%" }}></div>
+      <div className={styles.boostNeg} style={{ height: (boostNeg / max) * 50 + "%" }}></div>
+      <div className={styles.valueNeg} style={{ height: (valueNeg / max) * 50 + "%" }}></div>
     </div>
   );
 };

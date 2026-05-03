@@ -1,4 +1,4 @@
-import "./LocationPathChips.css";
+import styles from "./LocationPathChips.module.css";
 import Icon from "@mdi/react";
 import { colorLocationDepth, locationNameToI18nKey } from "../../utils";
 import { icon } from "../../assets/icon";
@@ -17,11 +17,18 @@ const LocationPathChips = ({ path, startDepth, onClick }: LocationPathChipsProps
   const { dictLocations } = useContext(ContextAllData);
 
   return (
-    <p className={"LocationPathChips" + (onClick ? " clickable" : "")}>
+    <p
+      className={[
+        styles.LocationPathChips,
+        onClick ? styles.clickable : undefined,
+      ]
+        .filter(Boolean)
+        .join(" ")}
+    >
       {path.map((loc, idx) => (
         <span
           key={loc + idx}
-          className="location-chip"
+          className={styles.locationChip}
           style={{
             backgroundColor: colorLocationDepth(startDepth + idx),
             color: startDepth + idx <= 0 ? `#000` : undefined,

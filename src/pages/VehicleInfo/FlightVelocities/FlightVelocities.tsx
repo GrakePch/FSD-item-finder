@@ -1,11 +1,11 @@
-import "./FlightVelocities.css";
+import styles from "./FlightVelocities.module.css";
 import PitchYawRoll from "./PitchYawRoll/PitchYawRoll";
 import VelocitiesScmNav from "./VelocitiesScmNav/VelocitiesScmNav";
 
 const FlightVelocities = ({ spvFC }: { spvFC: SpvFlightCharacteristics }) => {
   const spvFCBAngular = spvFC.Boost.AngularVelocityMultiplier;
   return (
-    <div className="FlightVelocities">
+    <div className={styles.FlightVelocities}>
       <VelocitiesScmNav
         scm={spvFC.ScmSpeed}
         scmBoostF={spvFC.MasterModes.ScmMode.BoostSpeedForward}

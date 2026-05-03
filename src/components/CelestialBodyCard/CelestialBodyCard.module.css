@@ -16,7 +16,7 @@
     background-color: var(--color-bg-1);
 }
 
-.CelestialBodyCard .iconOrThumbnail {
+.iconOrThumbnail {
     width: 2rem;
     height: 2rem;
     /* background-color: #fff; */
@@ -27,7 +27,7 @@
     flex-shrink: 0;
 }
 
-.CelestialBodyCard .descrip {
+.descrip {
     color: var(--color-text-1);
     font-size: .8rem;
 }

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import "./TerminalCard.css";
+import styles from "./TerminalCard.module.css";
 import { useTranslation } from "react-i18next";
 import { locationNameToI18nKey } from "../../utils";
 import Icon from "@mdi/react";
@@ -32,23 +32,23 @@ const TerminalCard = ({ terminal, onClick }: TerminalCardProps) => {
 
   return (
     <a
-      className="TerminalCard"
+      className={styles.TerminalCard}
       href={`/t/${terminal.id}${
         typeof window !== "undefined" ? window.location.search : ""
       }`}
       onClick={handleClick}
     >
-      <div className="icon">
+      <div className={styles.icon}>
         <Icon path={locationIcon[`Terminal_${terminal.type}`] || locationIcon.Outpost!} />
       </div>
-      <div className="info">
-        <p className="name">
+      <div className={styles.info}>
+        <p className={styles.name}>
           {terminal.location_path
             .slice(3)
             .map((n) => t(locationNameToI18nKey(n), { ns: "locations", defaultValue: n }))
             .join(" - ")}
         </p>
-        <p className="descrip">{description}</p>
+        <p className={styles.descrip}>{description}</p>
       </div>
     </a>
   );

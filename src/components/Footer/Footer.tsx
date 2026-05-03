@@ -1,4 +1,4 @@
-import "./Footer.css";
+import styles from "./Footer.module.css";
 import uexBadge from "../../assets/uex-api-badge-powered.png";
 import { useTranslation } from "react-i18next";
 
@@ -8,8 +8,8 @@ const Footer = () => {
   return (
     <>
       <div style={{ flexGrow: 1 }}></div>
-      <div className="Footer">
-        <div className="uex">
+      <div className={styles.Footer}>
+        <div className={styles.uex}>
           <a href="https://uexcorp.space/" target="_blank">
             <p>{t("Footer.dataSupport")}</p>
           </a>

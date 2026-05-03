@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import "./VelocitiesScmNav.css";
+import styles from "./VelocitiesScmNav.module.css";
 
 interface VelocitiesScmNavProps {
   scm: number;
@@ -18,40 +18,40 @@ const VelocitiesScmNav = ({
 }: VelocitiesScmNavProps) => {
   const { t } = useTranslation();
   return (
-    <div className="VelocitiesScmNav">
-      <div className="nav" style={{ width: (nav / max) * 100 + "%" }}></div>
+    <div className={styles.VelocitiesScmNav}>
+      <div className={styles.nav} style={{ width: (nav / max) * 100 + "%" }}></div>
       <div
-        className="scm-boost-forward-left"
+        className={styles.scmBoostForwardLeft}
         style={{
           height: (scmBoostF / max) * 50 + "%",
           width: (scmBoostB / max) * 50 + "%",
         }}
       ></div>
       <div
-        className="scm-boost-forward-right"
+        className={styles.scmBoostForwardRight}
         style={{
           height: (scmBoostF / max) * 50 + "%",
           width: (scmBoostB / max) * 50 + "%",
         }}
       ></div>
       <div
-        className="scm-boost-backward"
+        className={styles.scmBoostBackward}
         style={{
           height: (scmBoostB / max) * 50 + "%",
           width: (scmBoostB / max) * 100 + "%",
         }}
       ></div>
-      <div className="scm" style={{ width: (scm / max) * 100 + "%" }}></div>
-      <div className="axis-fb"></div>
-      <div className="axis-lr"></div>
-      <div className="text value-nav">{Math.round(nav)} m/s</div>
-      <div className="text value-scm-boost-forward">{Math.round(scmBoostF)} m/s</div>
-      <div className="text value-scm">{Math.round(scm)} m/s</div>
-      <div className="text title-nav">{t("VehicleInfo.FlightVelocities.NAV")}</div>
-      <div className="text title-scm-boost-forward">
+      <div className={styles.scm} style={{ width: (scm / max) * 100 + "%" }}></div>
+      <div className={styles.axisFb}></div>
+      <div className={styles.axisLr}></div>
+      <div className={`${styles.text} ${styles.valueNav}`}>{Math.round(nav)} m/s</div>
+      <div className={`${styles.text} ${styles.valueScmBoostForward}`}>{Math.round(scmBoostF)} m/s</div>
+      <div className={`${styles.text} ${styles.valueScm}`}>{Math.round(scm)} m/s</div>
+      <div className={`${styles.text} ${styles.titleNav}`}>{t("VehicleInfo.FlightVelocities.NAV")}</div>
+      <div className={`${styles.text} ${styles.titleScmBoostForward}`}>
         {t("VehicleInfo.FlightVelocities.Boost")}
       </div>
-      <div className="text title-scm">{t("VehicleInfo.FlightVelocities.SCM")}</div>
+      <div className={`${styles.text} ${styles.titleScm}`}>{t("VehicleInfo.FlightVelocities.SCM")}</div>
     </div>
   );
 };

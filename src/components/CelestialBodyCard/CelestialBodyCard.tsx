@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import "./CelestialBodyCard.css";
+import styles from "./CelestialBodyCard.module.css";
 import { locationNameToI18nKey, toUrlKey } from "../../utils";
 import { useTranslation } from "react-i18next";
 import Icon from "@mdi/react";
@@ -38,14 +38,14 @@ const CelestialBodyCard = ({ celestialBody, onClick }: CelestialBodyCardProps) =
 
   return (
     <a
-      className="CelestialBodyCard"
+      className={styles.CelestialBodyCard}
       href={`/b/${toUrlKey(celestialBody.name)}${
         typeof window !== "undefined" ? window.location.search : ""
       }`}
       onClick={handleClick}
     >
       <div
-        className="iconOrThumbnail"
+        className={styles.iconOrThumbnail}
         style={{
           backgroundImage: `url(/body_thumbnails/${celestialBody.name}.png)`,
           backgroundColor:
@@ -56,11 +56,11 @@ const CelestialBodyCard = ({ celestialBody, onClick }: CelestialBodyCardProps) =
       >
         <Icon path={locationIcon[celestialBody.type] || ""} />
       </div>
-      <div className="info">
-        <p className="name">
+      <div className={styles.info}>
+        <p className={styles.name}>
           {t(locationNameToI18nKey(celestialBody.name), { ns: "locations" })}
         </p>
-        <p className="descrip">{description}</p>
+        <p className={styles.descrip}>{description}</p>
       </div>
     </a>
   );

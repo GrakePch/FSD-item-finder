@@ -81,10 +81,6 @@
     gap: 1rem;
 }
 
-.CardLocation .section-local-time .ClockFace {
-    flex-shrink: 0;
-}
-
 .CardLocation .section-local-time .section-wrapper {
     flex-grow: 1;
     overflow: wrap;

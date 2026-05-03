@@ -1,4 +1,4 @@
-import "./SearchResultList.css";
+import styles from "./SearchResultList.module.css";
 import { useNavigate, useSearchParams } from "react-router";
 import { useContext, useEffect, useMemo, useRef, useState } from "react";
 import { ContextAllData } from "../../../contexts";
@@ -8,10 +8,12 @@ const RESULT_ROW_HEIGHT = 56;
 const RESULT_OVERSCAN = 8;
 
 const SearchResultList = ({
+  className,
   results,
   onResultClick,
   scrollMode = "window",
 }: {
+  className?: string;
   results: Item[];
   onResultClick?: () => void;
   scrollMode?: "window" | "container";
@@ -101,9 +103,14 @@ const SearchResultList = ({
   const visibleResults = results.slice(visibleRange.start, visibleRange.end);
 
   return (
-    <div className="SearchResultList" ref={listRef}>
+    <div
+      className={[styles.SearchResultList, className]
+        .filter(Boolean)
+        .join(" ")}
+      ref={listRef}
+    >
       <div
-        className="virtual-result-spacer"
+        className={styles.virtualResultSpacer}
         style={{ height: results.length * RESULT_ROW_HEIGHT }}
       >
         {visibleResults.map((item, index) => (
@@ -112,6 +119,7 @@ const SearchResultList = ({
             item={item}
             key={item.key}
             onClick={handleResultClick}
+            styles={styles}
             top={(visibleRange.start + index) * RESULT_ROW_HEIGHT}
           />
         ))}

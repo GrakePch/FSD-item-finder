@@ -1,4 +1,4 @@
-import "./CurrentLocation.css";
+import styles from "./CurrentLocation.module.css";
 import { useState, useContext } from "react";
 import Icon from "@mdi/react";
 import { mdiCrosshairsGps, mdiClose } from "@mdi/js";
@@ -30,7 +30,7 @@ export const CurrentLocationButton = () => {
 
   return (
     <>
-      <button className="CurrentLocationButton" onClick={openPopup}>
+      <button className={styles.CurrentLocationButton} onClick={openPopup}>
         <Icon path={mdiCrosshairsGps} size="1rem" />
         <span>{t(locationNameToI18nKey(nameCurrentLocation), { ns: "locations" })}</span>
       </button>
@@ -79,20 +79,31 @@ export const WindowSelectCurrentLocation = () => {
   const nameCurrentLocation = parseCurrentLocationName(currentLocation);
 
   return (
-    <div className={`WindowSelectCurrentLocation ${isPopupShowing ? "on" : ""}`}>
-      <div className="bg" onClick={closePopup}></div>
-      <div className="window-container">
-        <div className="current-location-info">
+    <div
+      className={[
+        styles.WindowSelectCurrentLocation,
+        isPopupShowing ? styles.on : undefined,
+      ]
+        .filter(Boolean)
+        .join(" ")}
+    >
+      <div className={styles.bg} onClick={closePopup}></div>
+      <div className={styles.windowContainer}>
+        <div className={styles.currentLocationInfo}>
           <h4>
             {t(`Navbar.currentLocation`)}{" "}
             {t(locationNameToI18nKey(nameCurrentLocation), { ns: "locations" })}
           </h4>
-          <button className="close" onClick={closePopup}>
+          <button className={styles.close} onClick={closePopup}>
             <Icon path={mdiClose} />
           </button>
         </div>
-        <SearchLocationBar searchName={searchName} setSearchName={setSearchName} />
-        <div className="result-list-scrollable">
+        <SearchLocationBar
+          className={styles.searchLocationBar}
+          searchName={searchName}
+          setSearchName={setSearchName}
+        />
+        <div className={styles.resultListScrollable}>
           <SearchLocationResultList
             searchName={debouncedSearchName}
             onCelestialBodyClick={handleCelestialBodyClick}

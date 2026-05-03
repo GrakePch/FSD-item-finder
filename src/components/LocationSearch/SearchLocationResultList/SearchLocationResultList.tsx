@@ -1,10 +1,12 @@
-import "./SearchLocationResultList.css";
+import styles from "./SearchLocationResultList.module.css";
 import CelestialBodyCard from "../../CelestialBodyCard/CelestialBodyCard";
 import LocationCard from "../../LocationCard/LocationCard";
 import TerminalCard from "../../TerminalCard/TerminalCard";
 import { useLocationSearch } from "../useLocationSearch";
 
 interface SearchLocationResultListProps {
+  className?: string;
+  listClassName?: string;
   searchName: string;
   includeTerminal?: boolean;
   onCelestialBodyClick?: (body: CelestialBody) => void;
@@ -13,6 +15,8 @@ interface SearchLocationResultListProps {
 }
 
 const SearchLocationResultList = ({
+  className,
+  listClassName,
   searchName,
   includeTerminal = false,
   onCelestialBodyClick,
@@ -25,8 +29,12 @@ const SearchLocationResultList = ({
   );
 
   return (
-    <div className="SearchLocationResultList">
-      <ul className="location-list">
+    <div
+      className={[styles.SearchLocationResultList, className]
+        .filter(Boolean)
+        .join(" ")}
+    >
+      <ul className={[styles.locationList, listClassName].filter(Boolean).join(" ")}>
         {celestialBody.map((body) => (
           <CelestialBodyCard key={body.name} celestialBody={body} onClick={onCelestialBodyClick} />
         ))}

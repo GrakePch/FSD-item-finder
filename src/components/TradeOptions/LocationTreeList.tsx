@@ -10,10 +10,11 @@ import { useLocationTreeLines } from "./useLocationTreeLines";
 type LocationTreeListProps = {
   forest: LocationTreeShallow[];
   priceMin: number;
+  styles: Record<string, string>;
   tradeType: TradeType;
 };
 
-const LocationTreeList = ({ forest, priceMin, tradeType }: LocationTreeListProps) => {
+const LocationTreeList = ({ forest, priceMin, styles, tradeType }: LocationTreeListProps) => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const { t } = useTranslation();
@@ -23,9 +24,9 @@ const LocationTreeList = ({ forest, priceMin, tradeType }: LocationTreeListProps
     useLocationTreeLines(rows);
 
   return (
-    <div className="location-tree-list" ref={treeListRef}>
+    <div className={styles.locationTreeList} ref={treeListRef}>
       <svg
-        className="location-tree-lines"
+        className={styles.locationTreeLines}
         width={treeSvgSize.width}
         height={treeSvgSize.height}
         viewBox={`0 0 ${treeSvgSize.width} ${treeSvgSize.height}`}
@@ -47,6 +48,7 @@ const LocationTreeList = ({ forest, priceMin, tradeType }: LocationTreeListProps
           row={row}
           tradeType={tradeType}
           priceMin={priceMin}
+          styles={styles}
           setRowRef={setRowRef}
           onOptionClick={(option) => {
             searchParams.delete("key");

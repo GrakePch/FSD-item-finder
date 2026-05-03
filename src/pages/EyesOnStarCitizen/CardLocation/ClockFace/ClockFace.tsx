@@ -1,4 +1,4 @@
-import "./ClockFace.css";
+import styles from "./ClockFace.module.css";
 
 interface ClockFaceProps {
   hourAngleDeg: number;
@@ -17,7 +17,7 @@ const ClockFace = ({
 }: ClockFaceProps) => {
   return (
     <div
-      className="ClockFace"
+      className={styles.ClockFace}
       style={
         {
           "--color-day": colorDay,
@@ -35,8 +35,8 @@ const ClockFace = ({
         } as React.CSSProperties
       }
     >
-      <div className="face"></div>
-      <div className="hand"></div>
+      <div className={styles.face}></div>
+      <div className={styles.hand}></div>
     </div>
   );
 };

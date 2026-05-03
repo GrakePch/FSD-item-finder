@@ -16,13 +16,13 @@
     background-color: var(--color-bg-1);
 }
 
-.TerminalCard .icon {
+.icon {
     width: 2rem;
     height: 2rem;
     flex-shrink: 0;
 }
 
-.TerminalCard .descrip {
+.descrip {
     color: var(--color-text-1);
     font-size: .8rem;
 }

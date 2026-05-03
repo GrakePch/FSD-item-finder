@@ -3,20 +3,20 @@
   padding: 0 1.5rem 3rem;
 }
 
-.SearchItems.empty-home {
+.emptyHome {
   padding-bottom: 0;
 }
 
-.SearchItems .home-content {
+.homeContent {
   width: 100%;
   margin: 0 auto;
 }
 
-.SearchItems .home-section + .home-section {
+.homeSection + .homeSection {
   margin-top: 2rem;
 }
 
-.SearchItems .home-section h2 {
+.homeSection h2 {
   margin: 0 0 .75rem;
   color: var(--color-text-1);
   font-size: 1rem;
@@ -24,7 +24,7 @@
   line-height: 1;
 }
 
-.SearchItems .home-section-title-row {
+.homeSectionTitleRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,11 +32,11 @@
   margin-bottom: .75rem;
 }
 
-.SearchItems .home-section-title-row h2 {
+.homeSectionTitleRow h2 {
   margin: 0;
 }
 
-.SearchItems .home-clear-recent {
+.homeClearRecent {
   display: inline-flex;
   align-items: center;
   gap: .25rem;
@@ -48,28 +48,28 @@
   font-weight: 400;
 }
 
-.SearchItems .home-clear-recent:hover {
+.homeClearRecent:hover {
   color: var(--color-text);
   background: var(--color-bg-2);
 }
 
-.SearchItems .home-favorite-vehicle-list {
+.homeFavoriteVehicleList {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   padding-left: 0;
 }
 
-.SearchItems .home-vehicle-item {
+.homeVehicleItem {
   width: 100%;
   list-style: none;
 }
 
-.SearchItems .SearchResultList {
+.searchResultList {
   padding: 0;
 }
 
-.SearchItems .home-empty {
+.homeEmpty {
   display: flex;
   min-height: clamp(12rem, 32vh, 18rem);
   flex-direction: column;
@@ -79,7 +79,7 @@
   text-align: center;
 }
 
-.SearchItems .home-empty-title {
+.homeEmptyTitle {
   color: var(--color-text-1);
   text-transform: uppercase;
   font-size: 2rem;
@@ -87,7 +87,7 @@
   letter-spacing: 0;
 }
 
-.SearchItems .home-empty-subtitle {
+.homeEmptySubtitle {
   color: var(--color-text-2);
   font-size: .95rem;
   font-weight: 400;
@@ -99,11 +99,11 @@
     padding: 1rem 1rem 6rem;
   }
 
-  .SearchItems.empty-home {
+  .emptyHome {
     padding-bottom: 0;
   }
 
-  .SearchItems .home-favorite-vehicle-list {
+  .homeFavoriteVehicleList {
     grid-template-columns: 1fr;
   }
 }

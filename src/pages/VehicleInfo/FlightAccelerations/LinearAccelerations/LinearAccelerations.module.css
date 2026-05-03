@@ -74,7 +74,7 @@
     border: 1px dashed var(--color-primary);
 }
 
-.LinearAccelerations .text {
+.text {
     position: absolute;
     transform-origin: center;
     line-height: 1;
@@ -83,80 +83,80 @@
     font-variant-numeric: tabular-nums;
 }
 
-.LinearAccelerations .text>span {
+.text>span {
     color: var(--color-boost)
 }
 
-.LinearAccelerations .value-F, .LinearAccelerations .value-B,
-.LinearAccelerations .value-R, .LinearAccelerations .value-L,
-.LinearAccelerations .value-U, .LinearAccelerations .value-D {
+.valueF, .valueB,
+.valueR, .valueL,
+.valueU, .valueD {
     font-weight: 600;
 }
 
-.LinearAccelerations .title-L {
+.titleL {
     top: 52%;
     left: 0;
 }
 
-.LinearAccelerations .value-L {
+.valueL {
     bottom: 52%;
     left: 0;
 }
 
-.LinearAccelerations .title-R {
+.titleR {
     top: 52%;
     right: 0;
 }
 
-.LinearAccelerations .value-R {
+.valueR {
     bottom: 52%;
     right: 0;
 }
 
-.LinearAccelerations .title-U {
+.titleU {
     top: 0;
     right: 52%;
 }
 
-.LinearAccelerations .value-U {
+.valueU {
     top: 0;
     left: 52%;
 }
 
-.LinearAccelerations .title-D {
+.titleD {
     bottom: 0;
     right: 52%;
 }
 
-.LinearAccelerations .value-D {
+.valueD {
     bottom: 0;
     left: 52%;
 }
 
-.LinearAccelerations .title-F, .LinearAccelerations .value-F,
-.LinearAccelerations .title-B, .LinearAccelerations .value-B {
+.titleF, .valueF,
+.titleB, .valueB {
     font-size: 6cqh;
 }
 
-.LinearAccelerations .title-F {
+.titleF {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(30deg) translate(-50cqh) translate(50%, 50%) translateY(2cqh);
 }
 
-.LinearAccelerations .value-F {
+.valueF {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(30deg) translate(-50cqh) translate(50%, -50%) translateY(-2cqh);
 }
 
-.LinearAccelerations .title-B {
+.titleB {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(30deg) translate(50cqh) translate(-50%, 50%) translateY(2cqh);
 }
 
-.LinearAccelerations .value-B {
+.valueB {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(30deg) translate(50cqh) translate(-50%, -50%) translateY(-2cqh);

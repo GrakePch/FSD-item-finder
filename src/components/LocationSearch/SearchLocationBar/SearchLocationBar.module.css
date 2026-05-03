@@ -1,12 +1,14 @@
 .SearchLocationBar {
     width: 100%;
+    min-width: 0;
     margin-bottom: 2rem;
 }
 
-.SearchLocationBar .search-container {
+.searchContainer {
     position: relative;
     display: flex;
     flex-direction: column;
+    min-width: 0;
     background-color: var(--color-bg-1);
     border-radius: .5rem;
     max-height: calc(100vh - var(--margin) * 4);
@@ -14,7 +16,10 @@
     /* box-shadow: var(--shadow-1); */
 }
 
-.SearchLocationBar #searchlocationbar {
+.searchInput {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
     flex-shrink: 0;
     /* border-radius: 2rem; */
     height: 3rem;
@@ -27,15 +32,15 @@
     transition: background .2s;
 }
 
-.SearchLocationBar #searchlocationbar:hover {
+.searchInput:hover {
     background-color: var(--color-bg-2);
 }
 
-.SearchLocationBar #searchlocationbar:focus {
+.searchInput:focus {
     outline: none;
 }
 
-.SearchLocationBar .btnSearch, .SearchLocationBar .btnClear, .SearchLocationBar .btnBack {
+.btnSearch, .btnClear, .btnBack {
     position: absolute;
     top: 0;
     width: 2rem;
@@ -46,18 +51,18 @@
     background-color: transparent;
 }
 
-.SearchLocationBar .btnClear:hover, .SearchLocationBar .btnBack:hover {
+.btnClear:hover, .btnBack:hover {
     background-color: var(--color-bg-2);
 }
 
-.SearchLocationBar .btnSearch {
+.btnSearch {
     left: 0;
 }
 
-.SearchLocationBar .btnBack {
+.btnBack {
     left: 0;
 }
 
-.SearchLocationBar .btnClear {
+.btnClear {
     right: 0;
 }

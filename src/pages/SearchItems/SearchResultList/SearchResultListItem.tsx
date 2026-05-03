@@ -14,6 +14,7 @@ type SearchResultListItemProps = {
   hasLoadedItemPrices: boolean;
   item: Item;
   onClick: (key: string) => void;
+  styles: Record<string, string>;
   top: number;
 };
 
@@ -21,6 +22,7 @@ const SearchResultListItem = ({
   hasLoadedItemPrices,
   item,
   onClick,
+  styles,
   top,
 }: SearchResultListItemProps) => {
   const { t } = useTranslation();
@@ -44,25 +46,25 @@ const SearchResultListItem = ({
 
   return (
     <button
-      className="result-list-item"
+      className={styles.resultListItem}
       style={{ transform: `translateY(${top}px)` }}
       onClick={() => onClick(item.key)}
     >
       {item.sub_type && icon[item.sub_type] ? (
         <Icon path={icon[item.sub_type]} size="2rem" />
       ) : (
-        <div className="type">
+        <div className={styles.type}>
           <p>{t("FilterType." + typeCapitalizedToKey(item.type || "unknown"))}</p>
           <p>{t("FilterType." + typeCapitalizedToKey(item.sub_type || "unknown"))}</p>
         </div>
       )}
-      <div className="names">
-        <p className="zh">{t(item.key, { ns: "items" })}</p>
-        <p className="en">{t(item.key, { ns: "items", lng: "en" })}</p>
+      <div className={styles.names}>
+        <p className={styles.zh}>{t(item.key, { ns: "items" })}</p>
+        <p className={styles.en}>{t(item.key, { ns: "items", lng: "en" })}</p>
       </div>
       {attrClass && attrGrade && (
         <div
-          className="class-grade"
+          className={styles.classGrade}
           style={{
             color: classToColor[attrClass],
             backgroundColor: classToColor[attrClass] + "18",
@@ -76,7 +78,7 @@ const SearchResultListItem = ({
       )}
       {attrTrackSignal && (
         <div
-          className="tracking-signal"
+          className={styles.trackingSignal}
           style={{
             color: signalToColor[attrTrackSignal],
             backgroundColor: signalToColor[attrTrackSignal] + "18",
@@ -88,16 +90,16 @@ const SearchResultListItem = ({
         </div>
       )}
       {attrsize != null && (
-        <div className="size" style={{ backgroundColor: sizeToColor[Number(attrsize)] }}>
+        <div className={styles.size} style={{ backgroundColor: sizeToColor[Number(attrsize)] }}>
           S{attrsize}
         </div>
       )}
       {item.price_min_max.buy_min && item.price_min_max.buy_min < Infinity ? (
-        <p className="price">
+        <p className={styles.price}>
           {t("Common.priceFrom", { price: item.price_min_max.buy_min })}
         </p>
       ) : (
-        <p className="price" style={{ color: "hsl(0deg 0% 60%)" }}>
+        <p className={styles.price} style={{ color: "hsl(0deg 0% 60%)" }}>
           {hasLoadedItemPrices
             ? t("SearchItemResultList.notBuyable")
             : t("SearchItemResultList.priceUnavailable", {

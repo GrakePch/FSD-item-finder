@@ -16,7 +16,7 @@
     background-color: var(--color-bg-1);
 }
 
-.LocationCard .icon {
+.icon {
     width: 2rem;
     height: 2rem;
     flex-shrink: 0;
@@ -26,27 +26,27 @@
     border: 2px solid #fff;
 }
 
-.LocationCard .descrip {
+.descrip {
     color: var(--color-text-1);
     font-size: .8rem;
 }
 
-.LocationCard .descrip span {
+.descrip span {
     padding: 1px;
     margin-left: .25rem;
     border-radius: 100rem;
 }
 
-.LocationCard .descrip svg {
+.descrip svg {
     vertical-align: text-top;
 }
 
-.LocationCard .quantum-not-available {
+.quantumNotAvailable {
     color: hsl(25, 100%, 60%);
     background-color: hsla(25, 100%, 60%, .3);
 }
 
-.LocationCard .private-property {
+.privateProperty {
     color: hsl(0, 100%, 65%);
     background-color: hsla(0, 100%, 65%, .3);
 }

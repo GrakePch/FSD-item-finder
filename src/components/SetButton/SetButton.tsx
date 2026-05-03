@@ -1,5 +1,5 @@
 import { useNavigate, useSearchParams } from "react-router";
-import "./SetButton.css";
+import styles from "./SetButton.module.css";
 import TagCurrent from "../TagCurrent/TagCurrent";
 import { useTranslation } from "react-i18next";
 
@@ -28,7 +28,7 @@ const SetButton = ({
 
   return item ? (
     <button
-      className="SetButton"
+      className={styles.SetButton}
       onClick={
         item.key === selfKey
           ? undefined
@@ -38,24 +38,24 @@ const SetButton = ({
       }
     >
       <p>{tIcon[subType]}</p>
-      <p className="zh">
+      <p className={styles.zh}>
         {t(item.key, { ns: "items" })}
         {item.key === selfKey && <TagCurrent />}
       </p>
       {item.price_min_max.buy_min && item.price_min_max.buy_min < Infinity ? (
-        <p className="price">
+        <p className={styles.price}>
           {t("Common.priceFrom", { price: item.price_min_max.buy_min })}
         </p>
       ) : (
-        <p className="price" style={{ color: "hsl(0deg 0% 60%)" }}>
+        <p className={styles.price} style={{ color: "hsl(0deg 0% 60%)" }}>
           {t("SearchItemResultList.notBuyable")}
         </p>
       )}
     </button>
   ) : (
-    <button className="SetButton" disabled>
+    <button className={styles.SetButton} disabled>
       <p>{tIcon[subType]}</p>
-      <p className="zh">{t("Common.none")}</p>
+      <p className={styles.zh}>{t("Common.none")}</p>
     </button>
   );
 };

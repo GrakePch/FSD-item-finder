@@ -10,6 +10,7 @@ type PriceSortedOptionsListProps = {
   dictTerminals: TerminalDictionary;
   options: TradeOption[];
   priceMin: number;
+  styles: Record<string, string>;
   tradeType: TradeType;
 };
 
@@ -22,6 +23,7 @@ const PriceSortedOptionsList = ({
   dictTerminals,
   options,
   priceMin,
+  styles,
   tradeType,
 }: PriceSortedOptionsListProps) => {
   const navigate = useNavigate();
@@ -37,7 +39,7 @@ const PriceSortedOptionsList = ({
       const isStale = option.date_modified < date4_0 && locPath[0] !== "Pyro";
 
       return (
-        <div className="option" key={option.id_terminal}>
+        <div className={styles.option} key={option.id_terminal}>
           <LocationPathChips
             path={locPath}
             startDepth={0}
@@ -47,7 +49,7 @@ const PriceSortedOptionsList = ({
             }}
           />
           <p
-            className="date-modified"
+            className={styles.dateModified}
             style={{ color: isStale ? "#a06060" : undefined }}
           >
             {isStale && <Icon path={mdiAlertCircleOutline} size="1rem" />}
@@ -55,7 +57,7 @@ const PriceSortedOptionsList = ({
           </p>
           {getOptionPrice(option, tradeType) > 0 ? (
             <p
-              className="price"
+              className={styles.price}
               style={{
                 color: colorPrice(
                   percent(getOptionPrice(option, tradeType), priceMin, priceMin * 2)
@@ -65,7 +67,7 @@ const PriceSortedOptionsList = ({
               {t("Common.price", { price: getOptionPrice(option, tradeType) })}
             </p>
           ) : (
-            <p className="price" style={{ color: `hsl(0deg 0% 50%)` }}>
+            <p className={styles.price} style={{ color: `hsl(0deg 0% 50%)` }}>
               {t("SearchItemResultList.notBuyable")}
             </p>
           )}

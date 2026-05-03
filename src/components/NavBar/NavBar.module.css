@@ -1,4 +1,4 @@
-.TopFiller-when-navbar-present {
+.TopFillerWhenNavbarPresent {
   height: 5rem;
   width: 100%;
 }
@@ -16,7 +16,7 @@
   backdrop-filter: blur(1rem) saturate(1.5);
 }
 
-.NavBar .nav-container {
+.navContainer {
   width: 100%;
   max-width: 1280px;
   display: flex;
@@ -26,20 +26,20 @@
   border-bottom: 1px solid var(--color-bg-2);
 }
 
-.NavBar .title {
+.title {
   font-size: 2rem;
   line-height: 1;
   margin-right: 1rem;
   flex-shrink: 0;
 }
 
-.NavBar .links-container {
+.linksContainer {
   display: flex;
   align-items: center;
   gap: .25rem;
 }
 
-.NavBar .links-container a {
+.linksContainer a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,16 +51,16 @@
   transition: color .2s, background-color .2s;
 }
 
-.NavBar .links-container a:hover {
+.linksContainer a:hover {
   color: var(--color-text);
 }
 
-.NavBar .links-container a.active {
+.linksContainer a.active {
   color: var(--color-bg);
   background-color: var(--color-text);
 }
 
-.NavBar .navbar-search-trigger {
+.navbarSearchTrigger {
   display: flex;
   flex: 1;
   align-items: center;
@@ -75,19 +75,19 @@
   transition: background .2s, color .2s;
 }
 
-.NavBar .navbar-search-trigger:hover {
+.navbarSearchTrigger:hover {
   color: var(--color-text);
   background: var(--color-bg-2);
 }
 
-.NavBar .navbar-search-trigger span {
+.navbarSearchTrigger span {
   color: var(--color-text-2);
   font-family: var(--font-slim);
   font-size: .875rem;
   text-transform: uppercase;
 }
 
-.NavBar .grow {
+.grow {
   flex-grow: 1;
 }
 
@@ -95,7 +95,7 @@
   .NavBar {
     display: none;
   }
-  .TopFiller-when-navbar-present {
+  .TopFillerWhenNavbarPresent {
     display: none;
   }
 }

@@ -6,6 +6,7 @@
 
 .ClockFace {
     aspect-ratio: 1 / 1;
+    flex-shrink: 0;
     height: 10rem;
     position: relative;
     margin: 0 auto;
@@ -21,11 +22,12 @@
     --hand-width-half: calc(var(--hand-width) / 2);
 }
 
-.ClockFace>* {
+.face,
+.hand {
     position: absolute;
 }
 
-.ClockFace>.face {
+.face {
     top: calc(calc(100% - var(--width)) / 2);
     left: calc(calc(100% - var(--width)) / 2);
     width: var(--width);
@@ -44,7 +46,7 @@
     transition: --sunrise-hour-angle .2s ease-out;
 }
 
-.ClockFace>.hand {
+.hand {
     bottom: calc(50% - var(--hand-width-half));
     left: calc(50% - var(--hand-width-half));
     width: var(--hand-width);

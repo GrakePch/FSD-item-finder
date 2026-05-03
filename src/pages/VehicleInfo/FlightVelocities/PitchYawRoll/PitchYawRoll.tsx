@@ -1,7 +1,7 @@
  
 // import icons from "../../../assets/icons";
 import { useTranslation } from "react-i18next";
-import "./PitchYawRoll.css";
+import styles from "./PitchYawRoll.module.css";
 
 interface PitchYawRollProps {
   P: number;
@@ -18,9 +18,9 @@ interface PitchYawRollProps {
 function PitchYawRoll({ P, Y, R, PB, YB, RB, PM, YM, RM }: PitchYawRollProps) {
   const { t } = useTranslation();
   return (
-    <div className="PitchYawRoll">
+    <div className={styles.PitchYawRoll}>
       <div
-        className="roll-pie-tl"
+        className={styles.rollPieTl}
         style={{
           background: `conic-gradient(
             var(--color-primary-dim) ${(R / RM) * 90}deg, 
@@ -30,7 +30,7 @@ function PitchYawRoll({ P, Y, R, PB, YB, RB, PM, YM, RM }: PitchYawRollProps) {
         }}
       ></div>
       <div
-        className="roll-pie-tr"
+        className={styles.rollPieTr}
         style={{
           background: `conic-gradient(
             var(--color-primary-dim) ${(R / RM) * 90}deg, 
@@ -40,7 +40,7 @@ function PitchYawRoll({ P, Y, R, PB, YB, RB, PM, YM, RM }: PitchYawRollProps) {
         }}
       ></div>
       <div
-        className="roll-pie-bl"
+        className={styles.rollPieBl}
         style={{
           background: `conic-gradient(
             var(--color-primary-dim) ${(R / RM) * 90}deg, 
@@ -50,7 +50,7 @@ function PitchYawRoll({ P, Y, R, PB, YB, RB, PM, YM, RM }: PitchYawRollProps) {
         }}
       ></div>
       <div
-        className="roll-pie-br"
+        className={styles.rollPieBr}
         style={{
           background: `conic-gradient(
             var(--color-primary-dim) ${(R / RM) * 90}deg, 
@@ -70,31 +70,31 @@ function PitchYawRoll({ P, Y, R, PB, YB, RB, PM, YM, RM }: PitchYawRollProps) {
         }}
       >
         <div
-          className="py-rect boost"
+          className={`${styles.pyRect} ${styles.boost}`}
           style={{
             height: (PB / PM) * 100 + "%",
             width: (YB / YM) * 100 + "%",
           }}
         ></div>
         <div
-          className="py-rect"
+          className={styles.pyRect}
           style={{ height: (P / PM) * 100 + "%", width: (Y / YM) * 100 + "%" }}
         ></div>
       </div>
-      <div className="axis-yaw"></div>
-      <div className="axis-pit"></div>
-      <div className="text value-pitch">
+      <div className={styles.axisYaw}></div>
+      <div className={styles.axisPit}></div>
+      <div className={`${styles.text} ${styles.valuePitch}`}>
         {P} <span>/ {Math.round(PB)}</span> °/s
       </div>
-      <div className="text value-yaw">
+      <div className={`${styles.text} ${styles.valueYaw}`}>
         {Y} <span>/ {Math.round(YB)}</span> °/s
       </div>
-      <div className="text value-roll">
+      <div className={`${styles.text} ${styles.valueRoll}`}>
         {R} <span>/ {Math.round(RB)}</span> °/s
       </div>
-      <div className="text title-pitch">{t("VehicleInfo.FlightVelocities.Pitch")}</div>
-      <div className="text title-yaw">{t("VehicleInfo.FlightVelocities.Yaw")}</div>
-      <div className="text title-roll">{t("VehicleInfo.FlightVelocities.Roll")}</div>
+      <div className={`${styles.text} ${styles.titlePitch}`}>{t("VehicleInfo.FlightVelocities.Pitch")}</div>
+      <div className={`${styles.text} ${styles.titleYaw}`}>{t("VehicleInfo.FlightVelocities.Yaw")}</div>
+      <div className={`${styles.text} ${styles.titleRoll}`}>{t("VehicleInfo.FlightVelocities.Roll")}</div>
     </div>
   );
 }

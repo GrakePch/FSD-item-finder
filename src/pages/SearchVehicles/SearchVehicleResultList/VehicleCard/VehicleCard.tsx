@@ -1,4 +1,4 @@
-import "./VehicleCard.css";
+import styles from "./VehicleCard.module.css";
 import { useNavigate } from "react-router";
 import VehicleImage from "../../../../components/VehicleImage";
 import { spvRoleToKey } from "../../../../utils";
@@ -6,12 +6,18 @@ import { useTranslation } from "react-i18next";
 import { getTranslatedVehicleName } from "../../../../utils/vehicleI18n";
 
 interface VehicleCardProps {
+  compactLarge?: boolean;
   vehicle: SpvVehicleIndex;
   uexBuyPrice?: number | null;
   onResultClick?: () => void;
 }
 
-const VehicleCard = ({ vehicle, uexBuyPrice, onResultClick }: VehicleCardProps) => {
+const VehicleCard = ({
+  compactLarge = false,
+  vehicle,
+  uexBuyPrice,
+  onResultClick,
+}: VehicleCardProps) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const isReleased = vehicle.ProgressTracker.Status === "Released";
@@ -22,36 +28,45 @@ const VehicleCard = ({ vehicle, uexBuyPrice, onResultClick }: VehicleCardProps) 
   };
 
   return (
-    <div className={`VehicleCard ${vehicle.Size > 4 ? "big" : ""}`} onClick={handleClick}>
-      <div className="vehicle-info">
-        <p className="vehicle-role">
+    <div
+      className={[
+        styles.VehicleCard,
+        vehicle.Size > 4 ? styles.big : undefined,
+        vehicle.Size > 4 && compactLarge ? styles.compactLarge : undefined,
+      ]
+        .filter(Boolean)
+        .join(" ")}
+      onClick={handleClick}
+    >
+      <div className={styles.vehicleInfo}>
+        <p className={styles.vehicleRole}>
           {t("vehicle_class_" + spvRoleToKey(vehicle.Role), {
             ns: "vehicle_classes",
             defaultValue: vehicle.Role,
           })}
         </p>
-        <p className="vehicle-name-big">
+        <p className={styles.vehicleNameBig}>
           {getTranslatedVehicleName(t, vehicle)}
         </p>
-        <div className="vehicle-price-container">
+        <div className={styles.vehiclePriceContainer}>
           {vehicle.Store.Buy ? (
-            <p className="vehicle-price-USD">{`$ ${vehicle.Store.Buy.toLocaleString()}`}</p>
+            <p className={styles.vehiclePriceUSD}>{`$ ${vehicle.Store.Buy.toLocaleString()}`}</p>
           ) : (
-            <p className="vehicle-price-USD inactive">{t("VehicleInfo.notBuyableUSD")}</p>
+            <p className={`${styles.vehiclePriceUSD} ${styles.inactive}`}>{t("VehicleInfo.notBuyableUSD")}</p>
           )}
           {!isReleased ? (
-            <p className="vehicle-price-UEC inactive not-delivered">
+            <p className={`${styles.vehiclePriceUEC} ${styles.inactive} ${styles.notDelivered}`}>
               {t("VehicleInfo.notDelivered")}
             </p>
           ) : typeof uexBuyPrice === "number" ? (
-            <p className="vehicle-price-UEC">{`¤ ${uexBuyPrice.toLocaleString()}`}</p>
+            <p className={styles.vehiclePriceUEC}>{`陇 ${uexBuyPrice.toLocaleString()}`}</p>
           ) : uexBuyPrice === null ? (
-            <p className="vehicle-price-UEC inactive">{t("VehicleInfo.notBuyableUEC")}</p>
+            <p className={`${styles.vehiclePriceUEC} ${styles.inactive}`}>{t("VehicleInfo.notBuyableUEC")}</p>
           ) : null}
         </div>
       </div>
       <VehicleImage
-        className="vehicle-thumbnail"
+        className={styles.vehicleThumbnail}
         vehicleClassName={vehicle.ClassName}
         angle="top"
         size="xs"

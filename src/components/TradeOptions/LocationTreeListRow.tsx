@@ -8,6 +8,7 @@ type LocationTreeListRowProps = {
   row: LocationTreeRow;
   tradeType: TradeType;
   priceMin: number;
+  styles: Record<string, string>;
   setRowRef: (rowId: string, element: HTMLDivElement | null) => void;
   onOptionClick: (option: TradeOption) => void;
   dictTerminals: TerminalDictionary;
@@ -23,6 +24,7 @@ const LocationTreeListRow = ({
   row,
   tradeType,
   priceMin,
+  styles,
   setRowRef,
   onOptionClick,
   dictTerminals,
@@ -36,7 +38,7 @@ const LocationTreeListRow = ({
   return (
     <div
       className={
-        "location-tree-row" + (rowOption ? " option-in-tree" : " location-tree")
+        [styles.locationTreeRow, rowOption ? styles.optionInTree : undefined].filter(Boolean).join(" ")
       }
       data-depth={row.depth}
       ref={(element) => setRowRef(row.id, element)}
@@ -52,10 +54,10 @@ const LocationTreeListRow = ({
           {isStale && (
             <Icon path={mdiAlertCircleOutline} size="1rem" color="#a06060" />
           )}
-          <p className="distance-info">{readableDistance(rowOption.distance ?? Infinity, t)}</p>
+          <p className={styles.distanceInfo}>{readableDistance(rowOption.distance ?? Infinity, t)}</p>
           {getOptionPrice(rowOption, tradeType) > 0 ? (
             <p
-              className="price"
+              className={styles.price}
               style={{
                 color: colorPrice(
                   percent(getOptionPrice(rowOption, tradeType), priceMin, priceMin * 2)
@@ -65,7 +67,7 @@ const LocationTreeListRow = ({
               {t("Common.price", { price: getOptionPrice(rowOption, tradeType) })}
             </p>
           ) : (
-            <p className="price" style={{ color: `hsl(0deg 0% 50%)` }}>
+            <p className={styles.price} style={{ color: `hsl(0deg 0% 50%)` }}>
               {t("SearchItemResultList.notBuyable")}
             </p>
           )}

@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useEffect } from "react";
 import { useSearchParams } from "react-router";
-import "./LanguageToggle.css";
+import styles from "./LanguageToggle.module.css";
 
 const supportedLanguages = new Set(["en", "zh"]);
 
@@ -26,7 +26,7 @@ export default function LanguageToggle() {
   };
 
   return (
-    <button onClick={toggleLang} className="LanguageToggle">
+    <button onClick={toggleLang} className={styles.LanguageToggle}>
       {i18n.language === 'en' ? '中' : 'EN'}
     </button>
   );

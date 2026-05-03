@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 import { locationNameToI18nKey, toUrlKey } from "../../utils";
-import "./LocationCard.css";
+import styles from "./LocationCard.module.css";
 import { useTranslation } from "react-i18next";
 import Icon from "@mdi/react";
 import locationIcon from "../../assets/locationIcon";
@@ -34,14 +34,14 @@ const LocationCard = ({ location, onClick }: LocationCardProps) => {
 
   return (
     <a
-      className="LocationCard"
+      className={styles.LocationCard}
       href={`/l/${toUrlKey(location.name)}${
         typeof window !== "undefined" ? window.location.search : ""
       }`}
       onClick={handleClick}
     >
       <div
-        className="icon"
+        className={styles.icon}
         style={{
           backgroundColor:
             location.private === 1
@@ -51,17 +51,17 @@ const LocationCard = ({ location, onClick }: LocationCardProps) => {
       >
         <Icon path={locationIcon[location.type] || locationIcon.Outpost!} />
       </div>
-      <div className="info">
-        <p className="name">{t(locationNameToI18nKey(location.name), { ns: "locations" })}</p>
-        <p className="descrip">
+      <div className={styles.info}>
+        <p className={styles.name}>{t(locationNameToI18nKey(location.name), { ns: "locations" })}</p>
+        <p className={styles.descrip}>
           {description}
           {location.quantum === 0 && (
-            <span className="quantum-not-available">
+            <span className={styles.quantumNotAvailable}>
               <Icon path={icon.quantum_off} size="1rem" />
             </span>
           )}
           {location.private === 1 && (
-            <span className="private-property">
+            <span className={styles.privateProperty}>
               <Icon path={icon.private_property} size="1rem" />
             </span>
           )}

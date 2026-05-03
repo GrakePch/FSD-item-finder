@@ -1,4 +1,4 @@
-#root {
+:global(#root) {
   width: 100%;
   max-width: 1280px;
   display: flex;
@@ -7,19 +7,19 @@
   flex-grow: 1;
 }
 
-.TopFiller-when-narrow-and-searchbar {
+.TopFillerWhenNarrowAndSearchbar {
     width: 100%;
     height: 3.5rem;
     display: none;
 }
 
 @media (max-width: 719px) {
-  .TopFiller-when-narrow-and-searchbar {
+  .TopFillerWhenNarrowAndSearchbar {
     display: block;
   }
 }
 
-.app-loading {
+.appLoading {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,7 +29,7 @@
   gap: 1rem;
 }
 
-.app-loading-spinner {
+.appLoadingSpinner {
   width: 2.5rem;
   height: 2.5rem;
   border: 3px solid var(--border-color, #333);
@@ -42,7 +42,7 @@
   to { transform: rotate(360deg); }
 }
 
-.app-error {
+.appError {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,18 +53,18 @@
   padding: 2rem;
 }
 
-.app-error h2 {
+.appError h2 {
   color: var(--error, #f66);
   margin: 0;
 }
 
-.app-error p {
+.appError p {
   color: var(--text-secondary, #888);
   max-width: 30rem;
   margin: 0;
 }
 
-.app-error button {
+.appError button {
   margin-top: 0.5rem;
   padding: 0.5rem 1.5rem;
   border: 1px solid var(--border-color, #444);
@@ -75,6 +75,6 @@
   font-size: 1rem;
 }
 
-.app-error button:hover {
+.appError button:hover {
   background: var(--surface-hover, #333);
 }

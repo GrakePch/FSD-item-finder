@@ -1,11 +1,11 @@
 .SearchVehicleResultList {}
 
-.SearchVehicleResultList .favorite-vehicle-section {
+.favoriteVehicleSection {
     width: 100%;
     margin-bottom: 1rem;
 }
 
-.SearchVehicleResultList .favorite-vehicle-title {
+.favoriteVehicleTitle {
     margin: 0 0 .75rem;
     color: var(--color-text-1);
     font-size: 1rem;
@@ -13,7 +13,7 @@
     line-height: 1;
 }
 
-.SearchVehicleResultList .favorite-vehicle-list {
+.favoriteVehicleList {
     padding-left: 0;
     display: grid;
     justify-items: center;
@@ -21,14 +21,14 @@
     gap: 1rem;
 }
 
-.SearchVehicleResultList .vehicle-list-divider {
+.vehicleListDivider {
     width: 100%;
     height: 1px;
     margin: 2rem 0 2rem;
     background-color: var(--color-bg-2);
 }
 
-.SearchVehicleResultList .filters {
+.filters {
     padding: 0 0 1rem;
     display: flex;
     align-items: center;
@@ -36,11 +36,11 @@
     flex-wrap: wrap;
 }
 
-.SearchVehicleResultList .filters>* {
+.filters>* {
     flex-shrink: 0;
 }
 
-.SearchVehicleResultList .filters>button {
+.filters>button {
     display: inline-flex;
     align-items: center;
     min-height: 1.5rem;
@@ -51,17 +51,17 @@
     line-height: 1.25rem;
 }
 
-.SearchVehicleResultList .filters>button.active {
+.filters>button.active {
     color: #000;
     background-color: var(--color-text);
     box-shadow: 0 0 1rem 0 var(--color-text-1);
 }
 
-.SearchVehicleResultList .vehicle-no-result {
+.vehicleNoResult {
     color: var(--color-text-1);
 }
 
-.SearchVehicleResultList .vehicle-group-list {
+.vehicleGroupList {
     padding-left: 0;
     display: grid;
     justify-items: center;
@@ -69,17 +69,26 @@
     gap: 1rem;
 }
 
-.SearchVehicleResultList .single-vehicle-item {
+.singleVehicleItem {
     list-style: none;
     width: 100%;
 }
 
+.compact .favoriteVehicleList,
+.compact .vehicleGroupList {
+    grid-template-columns: 1fr;
+}
+
+.compact .filters {
+    display: none;
+}
+
 @media (max-width: 719px) {
-    .SearchVehicleResultList .vehicle-group-list {
+    .vehicleGroupList {
         grid-template-columns: 1fr;
     }
 
-    .SearchVehicleResultList .favorite-vehicle-list {
+    .favoriteVehicleList {
         grid-template-columns: 1fr;
     }
 

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "./TradeOptionsSortingControl.css";
+import styles from "./TradeOptionsSortingControl.module.css";
 import { useSearchParams } from "react-router";
 import Icon from "@mdi/react";
 import { mdiCurrencySign, mdiMapMarker } from "@mdi/js";
@@ -29,9 +29,14 @@ const TradeOptionsSortingControl = () => {
         gap: ".5rem",
       }}
     >
-      <div className="TradeOptionsSortingControl">
+      <div className={styles.TradeOptionsSortingControl}>
         <button
-          className={searchParams.get("sort") === "location" ? "active" : undefined}
+          className={[
+            styles.sortButton,
+            searchParams.get("sort") === "location" ? styles.active : undefined,
+          ]
+            .filter(Boolean)
+            .join(" ")}
           onClick={() => {
             searchParams.set("sort", "location");
             setSearchParams(searchParams);
@@ -41,7 +46,12 @@ const TradeOptionsSortingControl = () => {
           <p>{t("TradeOptions.sortByDistance")}</p>
         </button>
         <button
-          className={searchParams.get("sort") === "price" ? "active" : undefined}
+          className={[
+            styles.sortButton,
+            searchParams.get("sort") === "price" ? styles.active : undefined,
+          ]
+            .filter(Boolean)
+            .join(" ")}
           onClick={() => {
             searchParams.set("sort", "price");
             setSearchParams(searchParams);

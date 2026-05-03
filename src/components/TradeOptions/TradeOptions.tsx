@@ -5,7 +5,7 @@ import { ContextAllData } from "../../contexts";
 import { getLocPath, getTerminalDistance, toUrlKey } from "../../utils";
 import LocationTreeList from "./LocationTreeList";
 import PriceSortedOptionsList from "./PriceSortedOptionsList";
-import "./TradeOptions.css";
+import styles from "./TradeOptions.module.css";
 import { addToTree, optimizeForest } from "./locationTree";
 import type { LocationForestMap, LocationTreeShallow, TradeType } from "./types";
 
@@ -83,27 +83,29 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }: TradeOptionsProps)
   }, [dictTerminals, options, tradeType]);
 
   return (
-    <div className="TradeOptions">
-      <div className="titles">
-        <h3 className="location">
+    <div className={styles.TradeOptions}>
+      <div className={styles.titles}>
+        <h3 className={styles.location}>
           {t("TradeOptions.locationTitle", {
             tradeType: t(`TradeOptions.tradeType.${tradeType}`),
           })}
         </h3>
-        <h4 className="price">{t(`TradeOptions.priceTitle.${tradeType}`)}</h4>
+        <h4 className={styles.price}>{t(`TradeOptions.priceTitle.${tradeType}`)}</h4>
       </div>
-      <div className="options-container">
+      <div className={styles.optionsContainer}>
         {searchParams.get("sort") === "price" ? (
           <PriceSortedOptionsList
             dictTerminals={dictTerminals}
             options={options}
             priceMin={getMinPrice(priceMinMax, tradeType)}
+            styles={styles}
             tradeType={tradeType}
           />
         ) : (
           <LocationTreeList
             forest={locationForestShallow}
             priceMin={getMinPrice(priceMinMax, tradeType)}
+            styles={styles}
             tradeType={tradeType}
           />
         )}

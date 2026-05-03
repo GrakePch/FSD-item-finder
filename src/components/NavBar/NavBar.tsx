@@ -1,7 +1,7 @@
 import { Link, useLocation, useSearchParams } from "react-router";
 import Icon from "@mdi/react";
 import { mdiHomeVariantOutline, mdiMagnify } from "@mdi/js";
-import "./NavBar.css";
+import styles from "./NavBar.module.css";
 import { getSearchModeFromPath, type SearchMode } from "../../utils/searchMode";
 
 const searchModeToQuery: Record<SearchMode, string> = {
@@ -23,16 +23,16 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="NavBar">
-        <div className="nav-container">
-          <nav className="links-container">
-            <Link to="/" className="home-link" aria-label="Home">
+      <div className={styles.NavBar}>
+        <div className={styles.navContainer}>
+          <nav className={styles.linksContainer}>
+            <Link to="/" aria-label="Home">
               <Icon path={mdiHomeVariantOutline} size="1.5rem" />
             </Link>
           </nav>
           <button
             type="button"
-            className="navbar-search-trigger"
+            className={styles.navbarSearchTrigger}
             onClick={openSearch}
             aria-label="Open search"
           >
@@ -41,7 +41,7 @@ const NavBar = () => {
           </button>
         </div>
       </div>
-      <div className="TopFiller-when-navbar-present"></div>
+      <div className={styles.TopFillerWhenNavbarPresent}></div>
     </>
   );
 };

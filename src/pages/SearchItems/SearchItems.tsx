@@ -7,7 +7,7 @@ import { clearLocalStorageRecent, getLocalStorageRecent } from "../../utils";
 import SearchResultList from "./SearchResultList/SearchResultList";
 import VehicleCard from "../SearchVehicles/SearchVehicleResultList/VehicleCard/VehicleCard";
 import { useVehicleSearch } from "../SearchVehicles/useVehicleSearch";
-import "./SearchItems.css";
+import styles from "./SearchItems.module.css";
 
 const SearchItems = () => {
   const { t } = useTranslation();
@@ -32,14 +32,21 @@ const SearchItems = () => {
   const isEmptyHome = !hasFavoriteVehicles && !hasRecentItems;
 
   return (
-    <div className={`SearchItems ${isEmptyHome ? "empty-home" : ""}`}>
-      <div className="home-content">
+    <div
+      className={[
+        styles.SearchItems,
+        isEmptyHome ? styles.emptyHome : undefined,
+      ]
+        .filter(Boolean)
+        .join(" ")}
+    >
+      <div className={styles.homeContent}>
         {hasFavoriteVehicles && (
-          <section className="home-section">
+          <section className={styles.homeSection}>
             <h2>{t("SearchVehicleResultList.favoriteVehicles")}</h2>
-            <ul className="home-favorite-vehicle-list">
+            <ul className={styles.homeFavoriteVehicleList}>
               {vehicleSearch.favoriteVehicleList.map((vehicle) => (
-                <li key={vehicle.ClassName} className="home-vehicle-item">
+                <li key={vehicle.ClassName} className={styles.homeVehicleItem}>
                   <VehicleCard
                     vehicle={vehicle}
                     uexBuyPrice={vehicleSearch.getUexBuyPrice(vehicle)}
@@ -50,21 +57,24 @@ const SearchItems = () => {
           </section>
         )}
         {hasRecentItems && (
-          <section className="home-section">
-            <div className="home-section-title-row">
+          <section className={styles.homeSection}>
+            <div className={styles.homeSectionTitleRow}>
               <h2>{t("SearchItemBar.recentSearches")}</h2>
-              <button className="home-clear-recent" onClick={clearRecentItems}>
+              <button className={styles.homeClearRecent} onClick={clearRecentItems}>
                 <Icon path={mdiTrashCanOutline} size="1rem" />
                 {t("SearchItemBar.clear")}
               </button>
             </div>
-            <SearchResultList results={recentItems} />
+            <SearchResultList
+              className={styles.searchResultList}
+              results={recentItems}
+            />
           </section>
         )}
         {isEmptyHome && (
-          <div className="home-empty">
-            <div className="home-empty-title">{t("SearchItemBar.homeTitle")}</div>
-            <div className="home-empty-subtitle">
+          <div className={styles.homeEmpty}>
+            <div className={styles.homeEmptyTitle}>{t("SearchItemBar.homeTitle")}</div>
+            <div className={styles.homeEmptySubtitle}>
               {t("SearchItemBar.homeSubtitle")}
             </div>
           </div>

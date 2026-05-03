@@ -22,8 +22,8 @@
   display: block;
 }
 
-.WindowSelectCurrentLocation .bg {
-  display: absolute;
+.bg {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -32,7 +32,7 @@
   cursor: pointer;
 }
 
-.WindowSelectCurrentLocation .window-container {
+.windowContainer {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -46,7 +46,7 @@
   flex-direction: column;
 }
 
-.WindowSelectCurrentLocation .current-location-info {
+.currentLocationInfo {
   margin-bottom: .5rem;
   display: flex;
   align-items: center;
@@ -57,7 +57,7 @@
   border-bottom: 1px solid var(--color-bg-2);
 }
 
-.WindowSelectCurrentLocation .close {
+.close {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
@@ -67,12 +67,12 @@
   background-color: transparent;
 }
 
-.WindowSelectCurrentLocation .SearchLocationBar {
+.searchLocationBar.searchLocationBar {
   margin: .5rem 1rem 0 1rem;
-  width: auto;
+  width: calc(100% - 2rem);
 }
 
-.WindowSelectCurrentLocation .result-list-scrollable {
+.resultListScrollable {
   overflow-y: auto;
   margin-top: 0;
   padding: 1rem 0;

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import "./FlightAccelerations.css";
+import styles from "./FlightAccelerations.module.css";
 import LinearAccelerations from "./LinearAccelerations/LinearAccelerations";
 
 const FlightAccelerations = ({ spvFC }: { spvFC: SpvFlightCharacteristics }) => {
@@ -18,14 +18,14 @@ const FlightAccelerations = ({ spvFC }: { spvFC: SpvFlightCharacteristics }) => 
   )*10)/10;
 
   return (
-    <div className="FlightAccelerations">
-      <div className="textInfo">
-        <div className="titleValue"><div>{t("VehicleInfo.FlightBoost.RampUp")}</div><div>{spvFC.Boost.RampUp} s</div></div>
-        <div className="titleValue"><div>{t("VehicleInfo.FlightBoost.RampDown")}</div><div>{spvFC.Boost.RampDown} s</div></div>
-        <div className="titleValue"><div>{t("VehicleInfo.FlightBoost.CapacitorDeplete")}</div><div>{timeCapDepleteSeconds} s</div></div>
-        <div className="titleValue"><div>{t("VehicleInfo.FlightBoost.CapacitorRegen")}</div><div>{timeCapRegenSeconds} +({spvFCCap.CapacitorRegenDelay}) s</div></div>
-        <div className="titleValueHero"><div>{t("VehicleInfo.FlightCharacteristics.Time0ToMaxSpeed")}</div><div>{time0ToMaxSpeedSeconds} s</div></div>
-        {/* <div className="titleValueHero"><div>{t("VehicleInfo.FlightCharacteristics.BrakeDistanceAtMax")}</div><div>{20000} m</div></div> */}
+    <div className={styles.FlightAccelerations}>
+      <div className={styles.textInfo}>
+        <div className={styles.titleValue}><div>{t("VehicleInfo.FlightBoost.RampUp")}</div><div>{spvFC.Boost.RampUp} s</div></div>
+        <div className={styles.titleValue}><div>{t("VehicleInfo.FlightBoost.RampDown")}</div><div>{spvFC.Boost.RampDown} s</div></div>
+        <div className={styles.titleValue}><div>{t("VehicleInfo.FlightBoost.CapacitorDeplete")}</div><div>{timeCapDepleteSeconds} s</div></div>
+        <div className={styles.titleValue}><div>{t("VehicleInfo.FlightBoost.CapacitorRegen")}</div><div>{timeCapRegenSeconds} +({spvFCCap.CapacitorRegenDelay}) s</div></div>
+        <div className={styles.titleValueHero}><div>{t("VehicleInfo.FlightCharacteristics.Time0ToMaxSpeed")}</div><div>{time0ToMaxSpeedSeconds} s</div></div>
+        {/* <div className={styles.titleValueHero}><div>{t("VehicleInfo.FlightCharacteristics.BrakeDistanceAtMax")}</div><div>{20000} m</div></div> */}
       </div>
       <LinearAccelerations
         F={spvFCAccelG.Main  }

@@ -5,13 +5,13 @@
     border-radius: .5rem;
 }
 
-.SetButton>.zh {
+.zh {
     flex-grow: 1;
     text-align: start;
     font-weight: 400;
 }
 
-.SetButton>.price {
+.price {
     color: hsl(200deg 60% 50%);
     font-family: var(--font-slim);
     font-weight: 600;

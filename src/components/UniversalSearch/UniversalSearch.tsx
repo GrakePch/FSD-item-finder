@@ -1,4 +1,4 @@
-import "./UniversalSearch.css";
+import styles from "./UniversalSearch.module.css";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Icon from "@mdi/react";
 import {
@@ -221,10 +221,10 @@ export default function UniversalSearch() {
 
   const renderItemFilters = () => (
     <>
-      <div className="universal-filter-row">
+      <div className={styles.universalFilterRow}>
         <button
           onClick={itemSearch.clearTypeFilter}
-          className={itemSearch.filterType ? undefined : "active"}
+          className={itemSearch.filterType ? undefined : styles.active}
         >
           {t("FilterType.all")}
         </button>
@@ -234,7 +234,7 @@ export default function UniversalSearch() {
             onClick={() => itemSearch.toggleTypeFilter(type)}
             className={
               itemSearch.filterType && type.startsWith(itemSearch.filterType)
-                ? "active"
+                ? styles.active
                 : undefined
             }
           >
@@ -242,7 +242,7 @@ export default function UniversalSearch() {
           </button>
         ))}
         {itemSearch.isSearching && (
-          <label className="universal-check-filter">
+          <label className={styles.universalCheckFilter}>
             <input
               type="checkbox"
               checked={itemSearch.buyableOnlyChecked}
@@ -253,10 +253,10 @@ export default function UniversalSearch() {
         )}
       </div>
       {itemSubFilterTypes[itemSearch.filterType] && (
-        <div className="universal-filter-row sub">
+        <div className={`${styles.universalFilterRow} ${styles.sub}`}>
           <button
             onClick={() => itemSearch.setSubTypeFilter("")}
-            className={itemSearch.filterSubType ? undefined : "active"}
+            className={itemSearch.filterSubType ? undefined : styles.active}
           >
             {t("FilterType.all")}
           </button>
@@ -266,7 +266,7 @@ export default function UniversalSearch() {
               onClick={() => itemSearch.toggleSubTypeFilter(subType)}
               className={
                 typeKeyToCapitalized(subType) === itemSearch.filterSubType
-                  ? "active"
+                  ? styles.active
                   : undefined
               }
             >
@@ -279,10 +279,10 @@ export default function UniversalSearch() {
   );
 
   const renderVehicleFilters = () => (
-    <div className="universal-filter-row">
+    <div className={styles.universalFilterRow}>
       <button
         onClick={vehicleSearch.clearManufacturerFilter}
-        className={vehicleSearch.selectedManufacturer ? undefined : "active"}
+        className={vehicleSearch.selectedManufacturer ? undefined : styles.active}
       >
         {t("FilterType.all")}
       </button>
@@ -291,7 +291,9 @@ export default function UniversalSearch() {
           key={manufacturer}
           onClick={() => vehicleSearch.toggleManufacturerFilter(manufacturer)}
           className={
-            vehicleSearch.selectedManufacturer === manufacturer ? "active" : undefined
+            vehicleSearch.selectedManufacturer === manufacturer
+              ? styles.active
+              : undefined
           }
           title={getVehicleManufacturerLabel(t, manufacturer, "full")}
         >
@@ -304,7 +306,7 @@ export default function UniversalSearch() {
   const renderFilters = () => {
     if (activeMode === "items") return renderItemFilters();
     if (activeMode === "vehicles") return renderVehicleFilters();
-    return <div className="universal-filter-empty">{t(modeI18nKeys.locations)}</div>;
+    return <div className={styles.universalFilterEmpty}>{t(modeI18nKeys.locations)}</div>;
   };
 
   const hasActiveFilters =
@@ -320,6 +322,7 @@ export default function UniversalSearch() {
           results={itemSearch.isSearching ? itemSearch.resultList : []}
           onResultClick={handleResultNavigate}
           scrollMode="container"
+          className={styles.itemResults}
         />
       );
     }
@@ -330,6 +333,7 @@ export default function UniversalSearch() {
           searchName={debouncedVehicleSearchName}
           onResultClick={handleResultNavigate}
           showFavorites={false}
+          compact
         />
       );
     }
@@ -338,6 +342,7 @@ export default function UniversalSearch() {
       <SearchLocationResultList
         searchName={debouncedLocationSearchName}
         includeTerminal
+        listClassName={styles.locationList}
         onCelestialBodyClick={(body) => navigateWithSearch(`/b/${toUrlKey(body.name)}`)}
         onLocationClick={(scLocation) =>
           navigateWithSearch(`/l/${toUrlKey(scLocation.name)}`)
@@ -350,7 +355,7 @@ export default function UniversalSearch() {
   return (
     <>
       <button
-        className="universal-home-fab"
+        className={styles.universalHomeFab}
         type="button"
         onClick={goHome}
         aria-label="Home"
@@ -358,7 +363,7 @@ export default function UniversalSearch() {
         <Icon path={mdiHomeVariantOutline} size="1.5rem" />
       </button>
       <button
-        className="universal-search-fab"
+        className={styles.universalSearchFab}
         type="button"
         onClick={isOpen ? closeSearch : openSearch}
         aria-label={isOpen ? "Close search" : "Open search"}
@@ -366,22 +371,22 @@ export default function UniversalSearch() {
         <Icon path={isOpen ? mdiClose : mdiMagnify} size="1.5rem" />
       </button>
       {isOpen && (
-        <div className="UniversalSearch" role="dialog" aria-modal="true">
+        <div className={styles.UniversalSearch} role="dialog" aria-modal="true">
           <button
-            className="universal-search-backdrop"
+            className={styles.universalSearchBackdrop}
             type="button"
             aria-label="Close search"
             onClick={closeSearch}
           />
-          <div className="universal-search-panel" onClick={(event) => event.stopPropagation()}>
-            <div className="universal-search-tabs" role="tablist">
+          <div className={styles.universalSearchPanel} onClick={(event) => event.stopPropagation()}>
+            <div className={styles.universalSearchTabs} role="tablist">
               {searchModes.map((mode) => (
                 <button
                   key={mode}
                   type="button"
                   role="tab"
                   aria-selected={activeMode === mode}
-                  className={activeMode === mode ? "active" : undefined}
+                  className={activeMode === mode ? styles.active : undefined}
                   onClick={() => selectMode(mode)}
                 >
                   <Icon path={modeIcons[mode]} size="1.15rem" />
@@ -389,8 +394,8 @@ export default function UniversalSearch() {
                 </button>
               ))}
             </div>
-            <div className="universal-search-input-row">
-              <Icon className="universal-search-icon" path={mdiMagnify} size="1.35rem" />
+            <div className={styles.universalSearchInputRow}>
+              <Icon className={styles.universalSearchIcon} path={mdiMagnify} size="1.35rem" />
               <input
                 ref={inputRef}
                 value={searchNames[activeMode]}
@@ -400,9 +405,13 @@ export default function UniversalSearch() {
               />
               <button
                 type="button"
-                className={`universal-search-icon-button universal-search-clear-button ${
-                  searchNames[activeMode] ? "has-input" : ""
-                }`}
+                className={[
+                  styles.universalSearchIconButton,
+                  styles.universalSearchClearButton,
+                  searchNames[activeMode] ? styles.hasInput : undefined,
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
                 onClick={clearOrCloseSearch}
                 aria-label="Clear search"
               >
@@ -411,9 +420,13 @@ export default function UniversalSearch() {
               {hasAvailableFilters && (
                 <button
                   type="button"
-                  className={`universal-search-icon-button ${
-                    isFilterOpen ? "active" : ""
-                  } ${hasActiveFilters ? "has-active-filters" : ""}`}
+                  className={[
+                    styles.universalSearchIconButton,
+                    isFilterOpen ? styles.active : undefined,
+                    hasActiveFilters ? styles.hasActiveFilters : undefined,
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
                   onClick={() => setIsFilterOpen((value) => !value)}
                   aria-expanded={isFilterOpen}
                   aria-label="Toggle filters"
@@ -423,9 +436,9 @@ export default function UniversalSearch() {
               )}
             </div>
             {hasAvailableFilters && isFilterOpen && (
-              <div className="universal-search-filters">{renderFilters()}</div>
+              <div className={styles.universalSearchFilters}>{renderFilters()}</div>
             )}
-            <div className="universal-search-results">{renderResults()}</div>
+            <div className={styles.universalSearchResults}>{renderResults()}</div>
           </div>
         </div>
       )}
