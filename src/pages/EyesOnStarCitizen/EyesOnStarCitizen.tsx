@@ -6,23 +6,17 @@ import { toUrlKey } from "../../utils";
 import { Link, useParams, useSearchParams } from "react-router";
 import CelestialBodyInfo from "../CelestialBodyInfo/CelestialBodyInfo";
 import LocationInfo from "../LocationInfo/LocationInfo";
-import SearchLocationBar from "../SearchLocations/SearchLocationBar/SearchLocationBar";
-import SearchLocationResultList from "../SearchLocations/SearchLocationResultList/SearchLocationResultList";
 import CardCelestialBody from "./CardCelestialBody/CardCelestialBody";
 import CardLocation from "./CardLocation/CardLocation";
 import Icon from "@mdi/react";
 import {
   mdiChevronUp,
   mdiClose,
+  mdiHomeVariantOutline,
   mdiLayers,
-  mdiMapMarker,
-  mdiWidgetsOutline,
+  mdiMagnify,
 } from "@mdi/js";
-import { icon } from "../../assets/icon";
 import { useTranslation } from "react-i18next";
-import useDebouncedValue from "../../hooks/useDebouncedValue";
-
-const SEARCH_LOCATIONS_NAME_KEY = "fsd_searchLocations_searchName";
 
 const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
   const { t } = useTranslation();
@@ -32,7 +26,6 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
   const locationKey = useParams().locationKey || "";
   const [seeCelestialBody, setSeeCelestialBody] = useState<CelestialBody | null>(null);
   const seeLocation = dictLocations[locationKey] || null;
-  const [isSearchCardOpen, setIsSearchCardOpen] = useState(false);
   const [isInfoCardOpen, setIsInfoCardOpen] = useState(true);
   const [isLayersSettingOpen, setIsLayersSettingOpen] = useState(false);
 
@@ -58,6 +51,12 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
       searchParams.delete("datetime");
     }
     setSearchParams(searchParams, { replace: true });
+  };
+
+  const openSearch = () => {
+    const nextParams = new URLSearchParams(searchParams);
+    nextParams.set("search", "l");
+    setSearchParams(nextParams, { replace: true });
   };
 
   useEffect(() => {
@@ -93,15 +92,6 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
     currentLocation,
   ]);
 
-  const [searchName, setSearchName] = useState(
-    () => sessionStorage.getItem(SEARCH_LOCATIONS_NAME_KEY) || ""
-  );
-  const debouncedSearchName = useDebouncedValue(searchName);
-
-  useEffect(() => {
-    sessionStorage.setItem(SEARCH_LOCATIONS_NAME_KEY, searchName);
-  }, [searchName]);
-
   if (!seeCelestialBody) {
     if (routing === "_") return null;
     if (routing === "b") return <CelestialBodyInfo />;
@@ -111,10 +101,7 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
 
   return (
     <div className="EyesOnStarCitizen">
-      <div
-        onClick={() => setIsSearchCardOpen(false)}
-        style={{ width: "100%", height: "100%" }}
-      >
+      <div style={{ width: "100%", height: "100%" }}>
         <CelestialBody3D
           celestialBody={seeCelestialBody}
           location={seeLocation}
@@ -132,15 +119,17 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
       </div>
 
       <nav className="special-nav-bar">
-        <Link to="/">
-          <Icon path={mdiWidgetsOutline} size="2rem" />
+        <Link to="/" aria-label="Home">
+          <Icon path={mdiHomeVariantOutline} size="1.5rem" />
         </Link>
-        <Link to="/v">
-          <Icon path={icon.Vehicle} size="2rem" />
-        </Link>
-        <Link to="/l" className={"active"}>
-          <Icon path={mdiMapMarker} size="2rem" />
-        </Link>
+        <button
+          type="button"
+          className="fake-search-bar"
+          onClick={openSearch}
+          aria-label="Open search"
+        >
+          <Icon path={mdiMagnify} size="1.25rem" />
+        </button>
       </nav>
 
       <div className="date-time-picker-wrapper">
@@ -161,16 +150,6 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
         </button>
       </div>
 
-      <div className="fixed-search-bar">
-        <SearchLocationBar
-          searchName={searchName}
-          setSearchName={setSearchName}
-          setIsSearchCardOpen={setIsSearchCardOpen}
-        />
-      </div>
-      <div className={`search-card ${isSearchCardOpen ? "open" : ""}`}>
-        <SearchLocationResultList searchName={debouncedSearchName} includeTerminal />
-      </div>
       <div className={`info-card ${isInfoCardOpen ? "open" : ""}`}>
         <button
           className="info-card-toggle"

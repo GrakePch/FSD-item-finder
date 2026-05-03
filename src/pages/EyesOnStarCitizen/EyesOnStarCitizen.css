@@ -12,34 +12,33 @@
   position: fixed;
   top: 1rem;
   left: 1rem;
-}
-
-.EyesOnStarCitizen .special-nav-bar {
   display: flex;
-  flex-direction: column-reverse;
   align-items: center;
   gap: .25rem;
+  z-index: 1000;
 }
 
-.EyesOnStarCitizen .special-nav-bar a {
+.EyesOnStarCitizen .special-nav-bar a,
+.EyesOnStarCitizen .special-nav-bar button {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 3rem;
   height: 3rem;
+  padding: 0;
+  border: none;
   border-radius: 50%;
   color: var(--color-text-1);
+  background-color: transparent;
   cursor: pointer;
-  transition: color .2s, background-color .2s;
+  transition: color .2s, background-color .2s, box-shadow .2s;
 }
 
-.EyesOnStarCitizen .special-nav-bar a:hover {
+.EyesOnStarCitizen .special-nav-bar a:hover,
+.EyesOnStarCitizen .special-nav-bar button:hover,
+.EyesOnStarCitizen .special-nav-bar button:hover:not(:disabled) {
   color: var(--color-text);
-}
-
-.EyesOnStarCitizen .special-nav-bar a.active {
-  color: var(--color-bg);
-  background-color: var(--color-text);
+  background-color: var(--color-bg-1);
 }
 
 @media (max-width: 719px) {
@@ -78,67 +77,8 @@
 
 @media (max-width: 719px) {
   .EyesOnStarCitizen .date-time-picker-wrapper {
-    top: 5rem;
+    top: 1rem;
     bottom: unset;
-  }
-}
-
-.EyesOnStarCitizen .fixed-search-bar {
-  position: fixed;
-  top: 1rem;
-  left: 5rem;
-  width: 20rem;
-  z-index: 1000;
-}
-
-.EyesOnStarCitizen .fixed-search-bar .SearchLocationBar {
-  margin-bottom: 0;
-}
-
-.EyesOnStarCitizen .fixed-search-bar input {
-  background-color: var(--color-bg) !important;
-}
-
-@media (max-width: 719px) {
-  .EyesOnStarCitizen .fixed-search-bar {
-    width: unset;
-    left: 1rem;
-    right: 1rem;
-  }
-}
-
-.EyesOnStarCitizen .search-card {
-  position: fixed;
-  top: 5rem;
-  left: -22.5rem;
-  bottom: 1rem;
-  width: 20rem;
-  height: max-content;
-  max-height: calc(100% - 6rem);
-  background-color: var(--color-bg);
-  border-radius: .5rem;
-  overflow: hidden auto;
-  z-index: 1000;
-}
-
-.EyesOnStarCitizen .search-card.open {
-  left: 5rem;
-}
-
-
-@media (max-width: 719px) {
-  .EyesOnStarCitizen .search-card {
-    width: unset;
-    top: -100%;
-    left: 1rem;
-    right: 1rem;
-    max-height: calc(100% - 24rem);
-  }
-
-  .EyesOnStarCitizen .search-card.open {
-    top: 5rem;
-    left: 1rem;
-    right: 1rem;
   }
 }
 
@@ -148,7 +88,7 @@
   right: 0;
   bottom: 0;
   width: 24rem;
-  padding-bottom: 1rem;
+  padding-bottom: 6rem;
   background-color: var(--color-bg);
   overflow: hidden;
   border-radius: 1rem 1rem 0 0;
@@ -230,7 +170,7 @@
 @media (max-width: 719px) {
   .EyesOnStarCitizen .layers-setting {
     right: 1rem;
-    top: 5rem;
+    top: 1rem;
     bottom: unset;
   }
 
