@@ -23,7 +23,7 @@
     background-color: var(--color-bg-1);
     font-family: inherit;
     color: var(--color-text);
-    font-size: 1rem;
+    font-size: 16px;
     transition: background .2s;
 }
 
