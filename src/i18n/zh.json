@@ -209,6 +209,40 @@
     "FlightCharacteristics": {
       "Time0ToMaxSpeed": "零到极速耗时",
       "BrakeDistanceAtMax": "极速制动距离"
+    },
+    "ItemGrade": {
+      "Format": "{{classLabel}} - {{gradeLabel}}"
+    },
+    "Radar": {
+      "Unknown": "雷达",
+      "MaxLockRange": "最大锁定距离",
+      "InfraredSensitivity": "红外敏感度",
+      "ElectromagneticSensitivity": "电磁敏感度",
+      "CrossSectionSensitivity": "截面敏感度",
+      "RadarSignatureSensitivity": "雷达信号敏感度"
+    },
+    "QuantumTravel": {
+      "Unknown": "量子驱动器",
+      "MaxSpeed": "最大速度",
+      "ConsumptionPerGm": "每 Gm 消耗",
+      "FuelCapacity": "燃料容量",
+      "SpoolTime": "量子驱动校准时间",
+      "NavModeSpoolTime": "导航模式校准时间",
+      "CrusaderToHurston": "十字军到赫斯顿",
+      "MicroTechToPyroGateway": "微科星到派罗跳跃点",
+      "TerminusToEndgame": "终点到终局"
+    },
+    "Insurance": {
+      "StandardClaimTime": "标准理赔时间",
+      "ExpeditedClaimTime": "加急理赔时间",
+      "ExpeditedCost": "加急理赔费用"
+    },
+    "Armor": {
+      "Health": "装甲生命值",
+      "PhysicalDamageDeflection": "物理伤害偏转阈值",
+      "EnergyDamageDeflection": "能量伤害偏转阈值",
+      "PhysicalDamageResistance": "物理伤害抗性",
+      "EnergyDamageResistance": "能量伤害抗性"
     }
   },
   "SPVProgressTrackerStatus": {

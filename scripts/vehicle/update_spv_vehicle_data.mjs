@@ -29,6 +29,8 @@ const DATASETS = [
     compact: true,
   },
 ];
+const VEHICLE_ITEM_SOURCE_NAME = "vehicle-item-list.json";
+const VEHICLE_ITEMS_ESSENTIAL_OUTPUT_NAME = "spv_vehicle_items_essential.json";
 const MANUAL_SERIES_FILE_NAME = "manual_vehicle_classname_to_series.ts";
 
 function parseArgs(argv) {
@@ -179,10 +181,50 @@ function validateVehicleArray(dataset, data) {
   }
 }
 
+function validateVehicleItemArray(data) {
+  if (!Array.isArray(data)) {
+    throw new Error(`${VEHICLE_ITEM_SOURCE_NAME} must contain a JSON array.`);
+  }
+
+  const invalidEntry = data.find(
+    (entry) =>
+      !entry ||
+      typeof entry !== "object" ||
+      typeof entry.className !== "string" ||
+      !entry.stdItem ||
+      typeof entry.stdItem !== "object" ||
+      typeof entry.stdItem.ClassName !== "string",
+  );
+  if (invalidEntry) {
+    throw new Error(
+      `${VEHICLE_ITEM_SOURCE_NAME} contains an entry without className or stdItem.ClassName.`,
+    );
+  }
+}
+
 function buildTypescriptModule(dataset, data) {
   const indent = dataset.compact ? 0 : 2;
   const payload = JSON.stringify(data, null, indent);
   return `const ${dataset.variableName}: ${dataset.typeName}[] = ${payload};\n\nexport default ${dataset.variableName};\n`;
+}
+
+function hasEssentialVehicleInfo(item) {
+  const stdItem = item.stdItem;
+  const className = item.className || stdItem.ClassName;
+  return (
+    Boolean(stdItem.QuantumDrive || stdItem.Radar) ||
+    className.startsWith("QDRV_") ||
+    className.startsWith("RADR_") ||
+    stdItem.ClassName.startsWith("QDRV_") ||
+    stdItem.ClassName.startsWith("RADR_")
+  );
+}
+
+function buildEssentialVehicleItems(vehicleItems) {
+  return vehicleItems.filter(hasEssentialVehicleInfo).map((item) => ({
+    className: item.className,
+    stdItem: item.stdItem,
+  }));
 }
 
 async function loadExistingManualSeries(path) {
@@ -264,6 +306,18 @@ async function main() {
   );
   console.log(
     `Updated ${basename(manualSeriesOutput)} with ${spvVehicleIndexData.length} entries`,
+  );
+
+  const vehicleItemData = await loadSourceJson({ sourceName: VEHICLE_ITEM_SOURCE_NAME }, options);
+  validateVehicleItemArray(vehicleItemData);
+  const essentialVehicleItems = buildEssentialVehicleItems(vehicleItemData);
+  const vehicleItemsEssentialOutput = resolve(
+    options.outputDir,
+    VEHICLE_ITEMS_ESSENTIAL_OUTPUT_NAME,
+  );
+  await writeText(vehicleItemsEssentialOutput, `${JSON.stringify(essentialVehicleItems)}\n`);
+  console.log(
+    `Updated ${basename(vehicleItemsEssentialOutput)} with ${essentialVehicleItems.length} entries`,
   );
 }
 

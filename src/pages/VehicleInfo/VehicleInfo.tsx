@@ -6,14 +6,14 @@ import Icon from "@mdi/react";
 import { mdiHeart, mdiHeartOutline } from "@mdi/js";
 import spvVehicleIndex from "../../data/vehicles/spv_vehicle_index";
 import spvVehicleList from "../../data/vehicles/spv_vehicle_list";
+import spvVehicleHardpointsList from "../../data/vehicles/spv_vehicle_hardpoints";
 import spvClassNameToUexId from "../../data/vehicles/spv_classname_to_uex_id.json";
 import TradeOptionsSortingControl from "../../components/TradeOptionsSortingControl/TradeOptionsSortingControl";
 import TradeOptions from "../../components/TradeOptions/TradeOptions";
 import VehicleImage from "../../components/VehicleImage";
 import { spvRoleToKey } from "../../utils";
 import { useTranslation } from "react-i18next";
-import FlightVelocities from "./FlightVelocities/FlightVelocities";
-import FlightAccelerations from "./FlightAccelerations/FlightAccelerations";
+import VehicleSupplementalInfo from "./VehicleSupplementalInfo/VehicleSupplementalInfo";
 import useFavoriteVehicles from "../../hooks/useFavoriteVehicles";
 
 const spvClassNameToUexIdMap = spvClassNameToUexId as Record<string, number>;
@@ -31,6 +31,11 @@ const VehicleInfo = () => {
 
   const spvVehicleMain = useMemo(
     () => spvVehicleList.find((v) => v.ClassName === vehicleClassName),
+    [vehicleClassName]
+  );
+
+  const spvVehicleHardpoints = useMemo(
+    () => spvVehicleHardpointsList.find((v) => v.ClassName === vehicleClassName),
     [vehicleClassName]
   );
 
@@ -139,12 +144,10 @@ const VehicleInfo = () => {
               />
             )}
           </div>
-          {spvVehicleMain?.FlightCharacteristics && (
-            <FlightVelocities spvFC={spvVehicleMain.FlightCharacteristics} />
-          )}
-          {spvVehicleMain?.FlightCharacteristics && (
-            <FlightAccelerations spvFC={spvVehicleMain.FlightCharacteristics} />
-          )}
+          <VehicleSupplementalInfo
+            spvVehicleMain={spvVehicleMain}
+            spvVehicleHardpoints={spvVehicleHardpoints}
+          />
         </div>
       </div>
     )

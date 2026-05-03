@@ -209,6 +209,40 @@
     "FlightCharacteristics": {
       "Time0ToMaxSpeed": "Time from 0 to Max Speed",
       "BrakeDistanceAtMax": "Brake Distance at Max Speed"
+    },
+    "ItemGrade": {
+      "Format": "{{classLabel}} - {{gradeLabel}}"
+    },
+    "Radar": {
+      "Unknown": "Radar",
+      "MaxLockRange": "Max Lock Range",
+      "InfraredSensitivity": "Infrared Sensitivity",
+      "ElectromagneticSensitivity": "Electromagnetic Sensitivity",
+      "CrossSectionSensitivity": "Cross Section Sensitivity",
+      "RadarSignatureSensitivity": "Radar Signature Sensitivity"
+    },
+    "QuantumTravel": {
+      "Unknown": "Quantum Drive",
+      "MaxSpeed": "Max Speed",
+      "ConsumptionPerGm": "Consumption per Gm",
+      "FuelCapacity": "Fuel Capacity",
+      "SpoolTime": "Spool Time",
+      "NavModeSpoolTime": "NAV Spool Time",
+      "CrusaderToHurston": "Crusader to Hurston",
+      "MicroTechToPyroGateway": "MicroTech to Pyro Gateway",
+      "TerminusToEndgame": "Terminus to Endgame"
+    },
+    "Insurance": {
+      "StandardClaimTime": "Standard Claim Time",
+      "ExpeditedClaimTime": "Expedited Claim Time",
+      "ExpeditedCost": "Expedited Claim Cost"
+    },
+    "Armor": {
+      "Health": "Armor Health",
+      "PhysicalDamageDeflection": "Physical Damage Deflection",
+      "EnergyDamageDeflection": "Energy Damage Deflection",
+      "PhysicalDamageResistance": "Physical Damage Resistance",
+      "EnergyDamageResistance": "Energy Damage Resistance"
     }
   },
   "SPVProgressTrackerStatus": {
