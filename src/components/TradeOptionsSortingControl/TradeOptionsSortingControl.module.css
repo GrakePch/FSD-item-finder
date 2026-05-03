@@ -1,3 +1,12 @@
+.sortingControlWrapper {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+
 .TradeOptionsSortingControl {
     /* margin: 0 auto; */
     /* padding: .5rem .5rem; */

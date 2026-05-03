@@ -20,15 +20,7 @@ const TradeOptionsSortingControl = () => {
   }, [searchParams]);
 
   return (
-    <div
-      style={{
-        padding: "0 1rem",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        gap: ".5rem",
-      }}
-    >
+    <div className={styles.sortingControlWrapper}>
       <div className={styles.TradeOptionsSortingControl}>
         <button
           className={[
