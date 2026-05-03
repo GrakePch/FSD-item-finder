@@ -28,6 +28,27 @@ ITEM_KEY_PREFIXES = (
     "items_commodities",
 )
 
+VEHICLE_MANUFACTURER_PREFIXES = (
+    "Aegis ",
+    "Anvil ",
+    "Argo ",
+    "Aopoa ",
+    "Banu ",
+    "C.O. ",
+    "Crusader ",
+    "Drake ",
+    "Esperia ",
+    "Gatac ",
+    "Grey's ",
+    "Greycat ",
+    "Kruger ",
+    "MISC ",
+    "Mirai ",
+    "Origin ",
+    "RSI ",
+    "Tumbril ",
+)
+
 
 def fetch_bytes(url):
     last_error = None
@@ -115,6 +136,13 @@ def add_lookup(lookup, normalized_lookup, name, key, source="auto"):
     normalized_lookup.setdefault(normalize_text(name), []).append(candidate)
 
 
+def get_vehicle_short_name_alias(name):
+    for prefix in VEHICLE_MANUFACTURER_PREFIXES:
+        if name.startswith(prefix) and len(name) > len(prefix):
+            return name[len(prefix):].strip()
+    return None
+
+
 def build_item_lookup(english_entries, manual_rules, existing_keys):
     lookup = {}
     normalized_lookup = {}
@@ -144,6 +172,21 @@ def build_vehicle_lookup(english_entries, manual_rules):
     for key, name in vehicle_entries:
         if not is_short_key(key):
             add_lookup(lookup, normalized_lookup, name, canonical_vehicle_key(key))
+
+    alias_entries = []
+    alias_counts = {}
+    for key, name in vehicle_entries:
+        if is_short_key(key):
+            continue
+        alias = get_vehicle_short_name_alias(name)
+        if not alias:
+            continue
+        alias_entries.append((alias, canonical_vehicle_key(key)))
+        alias_counts[normalize_text(alias)] = alias_counts.get(normalize_text(alias), 0) + 1
+
+    for alias, key in alias_entries:
+        if alias_counts.get(normalize_text(alias)) == 1:
+            add_lookup(lookup, normalized_lookup, alias, key)
 
     for key, name in vehicle_entries:
         if is_short_key(key):

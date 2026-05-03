@@ -453,6 +453,48 @@
             "names": [
                 "Aurora LX"
             ]
+        },
+        {
+            "key": "vehicle_NameCRUS_Starfighter_Inferno",
+            "names": [
+                "Ares Inferno Starfighter"
+            ]
+        },
+        {
+            "key": "vehicle_NameCRUS_Starfighter_Ion",
+            "names": [
+                "Ares Ion Starfighter"
+            ]
+        },
+        {
+            "key": "vehicle_NameDRAK_Dragonfly",
+            "names": [
+                "Dragonfly Black"
+            ]
+        },
+        {
+            "key": "vehicle_NameORIG_600i",
+            "names": [
+                "600i Explorer"
+            ]
+        },
+        {
+            "key": "vehicle_NameORIG_85X",
+            "names": [
+                "85X"
+            ]
+        },
+        {
+            "key": "vehicle_NameORIG_m50",
+            "names": [
+                "M50"
+            ]
+        },
+        {
+            "key": "vehicle_NameTMBL_Nova",
+            "names": [
+                "Nova Tank"
+            ]
         }
     ]
 }

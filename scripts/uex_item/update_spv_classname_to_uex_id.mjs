@@ -6,9 +6,12 @@ const DEFAULT_VEHICLE_KEY_DATA = resolve("src/data/vehicles/key_to_uex_ids_and_i
 const DEFAULT_OUTPUT = resolve("src/data/vehicles/spv_classname_to_uex_id.json");
 
 const CLASS_NAME_EXCEPTIONS = new Map([
+  ["AEGS_Retaliator_Bomber", "AEGS_Retaliator"],
   ["ANVL_Hornet_F7A", "ANVL_Hornet_F7A_Mk1"],
   ["ANVL_Hornet_F7CM_Heartseeker_Mk2", "ANVL_Hornet_F7CM_Mk2_Heartseeker"],
   ["ARGO_MPUV_Tractor", "ARGO_MPUV_1T"],
+  ["ESPR_Blade", "VNCL_Blade"],
+  ["ESPR_Stinger", "VNCL_Stinger"],
   ["MISC_Starlancer_MAX", "MISC_Starlancer_Max"],
   ["RSI_Scorpius_Interdiction", "RSI_Scorpius_Antares"],
 ]);

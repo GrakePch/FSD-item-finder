@@ -13,6 +13,13 @@
         "en": "Aegis Avenger Titan",
         "zh_Hans": "圣盾 复仇者 泰坦"
     },
+    "vehicle_NameAEGS_Avenger_Titan_Renegade": {
+        "uex_ids": [
+            "v-28"
+        ],
+        "en": "Aegis Avenger Titan Renegade",
+        "zh_Hans": "圣盾 复仇者 泰坦变节者"
+    },
     "vehicle_NameAEGS_Avenger_Warlock": {
         "uex_ids": [
             "v-29"
@@ -160,6 +167,13 @@
         "en": "Anvil C8R Pisces Rescue",
         "zh_Hans": "铁砧 C8R 双鱼座 救护"
     },
+    "vehicle_NameANVL_C8X_Pisces_Expedition": {
+        "uex_ids": [
+            "v-38"
+        ],
+        "en": "Anvil C8X Pisces Expedition",
+        "zh_Hans": "铁砧 C8X 双鱼座 远征"
+    },
     "vehicle_nameANVL_Carrack": {
         "uex_ids": [
             "v-39"
@@ -187,6 +201,62 @@
         ],
         "en": "Anvil Hawk",
         "zh_Hans": "铁砧 猎鹰"
+    },
+    "vehicle_NameANVL_Hornet_F7C": {
+        "uex_ids": [
+            "v-224"
+        ],
+        "en": "Anvil F7C Hornet Mk I",
+        "zh_Hans": "铁砧 F7C 大黄蜂 Mk I"
+    },
+    "vehicle_NameANVL_Hornet_F7C_Mk2": {
+        "uex_ids": [
+            "v-73"
+        ],
+        "en": "Anvil F7C Hornet Mk II",
+        "zh_Hans": "铁砧 F7C 大黄蜂 Mk II"
+    },
+    "vehicle_NameANVL_Hornet_F7C_Wildfire": {
+        "uex_ids": [
+            "v-74"
+        ],
+        "en": "Anvil F7C Hornet Wildfire Mk I",
+        "zh_Hans": "铁砧 F7C 大黄蜂 野火 Mk I"
+    },
+    "vehicle_NameANVL_Hornet_F7CM": {
+        "uex_ids": [
+            "v-75"
+        ],
+        "en": "Anvil F7C-M Super Hornet Mk I",
+        "zh_Hans": "铁砧 F7C-M 超级大黄蜂 Mk I"
+    },
+    "vehicle_NameANVL_Hornet_F7CR": {
+        "uex_ids": [
+            "v-77"
+        ],
+        "en": "Anvil F7C-R Hornet Tracker Mk I",
+        "zh_Hans": "铁砧 F7C-R 大黄蜂 追踪者 Mk I"
+    },
+    "vehicle_NameANVL_Hornet_F7CR_Mk2": {
+        "uex_ids": [
+            "v-246"
+        ],
+        "en": "Anvil F7C-R Hornet Tracker Mk II",
+        "zh_Hans": "铁砧 F7C-R 大黄蜂 追踪者 Mk II"
+    },
+    "vehicle_NameANVL_Hornet_F7CS": {
+        "uex_ids": [
+            "v-78"
+        ],
+        "en": "Anvil F7C-S Hornet Ghost Mk I",
+        "zh_Hans": "铁砧 F7C-S 大黄蜂 幽灵 Mk I"
+    },
+    "vehicle_NameANVL_Hornet_F7CS_Mk2": {
+        "uex_ids": [
+            "v-247"
+        ],
+        "en": "Anvil F7C-S Hornet Ghost Mk II",
+        "zh_Hans": "铁砧 F7C-S 大黄蜂 幽灵 Mk II"
     },
     "vehicle_NameANVL_Hurricane": {
         "uex_ids": [
@@ -248,8 +318,8 @@
         "uex_ids": [
             "v-240"
         ],
-        "en": "Argo CSV-SM\\n",
-        "zh_Hans": "南船座 CSV-SM\\n"
+        "en": "Argo CSV-SM",
+        "zh_Hans": "南船座 CSV-SM"
     },
     "vehicle_NameARGO_Mole": {
         "uex_ids": [
@@ -307,12 +377,12 @@
         "en": "C.O. HoverQuad",
         "zh_Hans": "联合外域 悬浮驷"
     },
-    "vehicle_NameCNOU_Mustang": {
+    "vehicle_NameCNOU_Mustang_Alpha": {
         "uex_ids": [
             "v-128"
         ],
-        "en": "vehicle_NameCNOU_Mustang",
-        "zh_Hans": "vehicle_NameCNOU_Mustang"
+        "en": "C.O. Mustang Alpha",
+        "zh_Hans": "联合外域 野马 阿尔法"
     },
     "vehicle_NameCNOU_Mustang_Beta": {
         "uex_ids": [
@@ -362,6 +432,48 @@
         ],
         "en": "Crusader Intrepid",
         "zh_Hans": "十字军 无畏"
+    },
+    "vehicle_NameCRUS_Star_Runner": {
+        "uex_ids": [
+            "v-121"
+        ],
+        "en": "Crusader Mercury Star Runner",
+        "zh_Hans": "十字军 墨丘利 星际快运船"
+    },
+    "vehicle_NameCRUS_Starfighter_Inferno": {
+        "uex_ids": [
+            "v-17"
+        ],
+        "en": "Crusader Ares Star Fighter Inferno",
+        "zh_Hans": "十字军 战神 星际战斗机 地狱火"
+    },
+    "vehicle_NameCRUS_Starfighter_Ion": {
+        "uex_ids": [
+            "v-18"
+        ],
+        "en": "Crusader Ares Star Fighter Ion",
+        "zh_Hans": "十字军 战神 星际战斗机 离子光"
+    },
+    "vehicle_NameCRUS_Starlifter_A2": {
+        "uex_ids": [
+            "v-14"
+        ],
+        "en": "Crusader A2 Hercules Starlifter",
+        "zh_Hans": "十字军 大力神 A2 星际运输船"
+    },
+    "vehicle_NameCRUS_Starlifter_C2": {
+        "uex_ids": [
+            "v-35"
+        ],
+        "en": "Crusader C2 Hercules Starlifter",
+        "zh_Hans": "十字军 大力神 C2 星际运输船"
+    },
+    "vehicle_NameCRUS_Starlifter_M2": {
+        "uex_ids": [
+            "v-117"
+        ],
+        "en": "Crusader M2 Hercules Starlifter",
+        "zh_Hans": "十字军 大力神 M2 星际运输船"
     },
     "vehicle_NameDRAK_Buccaneer": {
         "uex_ids": [
@@ -433,6 +545,13 @@
         "en": "Drake Cutter Scout",
         "zh_Hans": "德雷克 小刀 侦察兵"
     },
+    "vehicle_NameDRAK_Dragonfly": {
+        "uex_ids": [
+            "v-67"
+        ],
+        "en": "Drake Dragonfly",
+        "zh_Hans": "德雷克 蜻蜓"
+    },
     "vehicle_NameDRAK_Golem": {
         "uex_ids": [
             "v-251"
@@ -460,6 +579,13 @@
         ],
         "en": "Drake Vulture",
         "zh_Hans": "德雷克 秃鹫"
+    },
+    "vehicle_NameESPR_Blade": {
+        "uex_ids": [
+            "v-33"
+        ],
+        "en": "Esperia Blade",
+        "zh_Hans": "埃斯佩里亚 刀锋"
     },
     "vehicle_NameESPR_Prowler": {
         "uex_ids": [
@@ -516,6 +642,55 @@
         ],
         "en": "Greycat MTC",
         "zh_Hans": "灰猫 MTC"
+    },
+    "vehicle_NameGRIN_PTV": {
+        "uex_ids": [
+            "v-150"
+        ],
+        "en": "Greycat PTV",
+        "zh_Hans": "灰猫 PTV"
+    },
+    "vehicle_NameGRIN_ROC": {
+        "uex_ids": [
+            "v-168"
+        ],
+        "en": "Greycat ROC",
+        "zh_Hans": "灰猫 ROC"
+    },
+    "vehicle_NameGRIN_ROC_DS": {
+        "uex_ids": [
+            "v-169"
+        ],
+        "en": "Greycat ROC-DS",
+        "zh_Hans": "灰猫 ROC-双人版"
+    },
+    "vehicle_NameGRIN_STV": {
+        "uex_ids": [
+            "v-187"
+        ],
+        "en": "Greycat STV",
+        "zh_Hans": "灰猫 STV"
+    },
+    "vehicle_NameKRIG_L21_Wolf": {
+        "uex_ids": [
+            "v-264"
+        ],
+        "en": "Kruger L-21 Wolf",
+        "zh_Hans": "克鲁格 L-21 狼式"
+    },
+    "vehicle_NameKRIG_P52_Merlin": {
+        "uex_ids": [
+            "v-142"
+        ],
+        "en": "Kruger P-52 Merlin",
+        "zh_Hans": "克鲁格 P-52 梅林"
+    },
+    "vehicle_NameKRIG_P72_Archimedes": {
+        "uex_ids": [
+            "v-143"
+        ],
+        "en": "Kruger P-72 Archimedes",
+        "zh_Hans": "克鲁格 P-72 阿基米德"
     },
     "vehicle_NameMISC_Fortune": {
         "uex_ids": [
@@ -755,6 +930,13 @@
         "en": "Origin 400i",
         "zh_Hans": "起源 400i"
     },
+    "vehicle_NameORIG_600i": {
+        "uex_ids": [
+            "v-10"
+        ],
+        "en": "Origin 600i",
+        "zh_Hans": "起源 600i"
+    },
     "vehicle_NameORIG_600i_Touring": {
         "uex_ids": [
             "v-11"
@@ -762,12 +944,26 @@
         "en": "Origin 600i Touring",
         "zh_Hans": "起源 600i 旅行版"
     },
+    "vehicle_NameORIG_85X": {
+        "uex_ids": [
+            "v-12"
+        ],
+        "en": "Origin 85X Limited",
+        "zh_Hans": "起源 85X 限量版"
+    },
     "vehicle_NameORIG_890Jump": {
         "uex_ids": [
             "v-13"
         ],
         "en": "Origin 890 Jump",
         "zh_Hans": "起源 890 跃动"
+    },
+    "vehicle_NameORIG_m50": {
+        "uex_ids": [
+            "v-118"
+        ],
+        "en": "Origin M50 Interceptor",
+        "zh_Hans": "起源 M50 截击机"
     },
     "vehicle_NameORIG_X1": {
         "uex_ids": [
@@ -832,6 +1028,41 @@
         "en": "RSI Aurora Mk I  LX",
         "zh_Hans": "RSI 极光 Mk I LX"
     },
+    "vehicle_NameRSI_Aurora_MR": {
+        "uex_ids": [
+            "v-25"
+        ],
+        "en": "RSI Aurora Mk I MR",
+        "zh_Hans": "RSI 极光 Mk I MR"
+    },
+    "vehicle_NameRSI_Constellation_Andromeda": {
+        "uex_ids": [
+            "v-45"
+        ],
+        "en": "RSI Constellation Andromeda",
+        "zh_Hans": "RSI 星座 仙女座"
+    },
+    "vehicle_NameRSI_Constellation_Aquila": {
+        "uex_ids": [
+            "v-46"
+        ],
+        "en": "RSI Constellation Aquila",
+        "zh_Hans": "RSI 星座 天鹰座"
+    },
+    "vehicle_NameRSI_Constellation_Phoenix": {
+        "uex_ids": [
+            "v-47"
+        ],
+        "en": "RSI Constellation Phoenix",
+        "zh_Hans": "RSI 星座 凤凰座"
+    },
+    "vehicle_NameRSI_Constellation_Taurus": {
+        "uex_ids": [
+            "v-49"
+        ],
+        "en": "RSI Constellation Taurus",
+        "zh_Hans": "RSI 星座 金牛座"
+    },
     "vehicle_NameRSI_Lynx": {
         "uex_ids": [
             "v-116"
@@ -846,6 +1077,13 @@
         "en": "RSI Mantis",
         "zh_Hans": "RSI 螳螂"
     },
+    "vehicle_NameRSI_Meteor": {
+        "uex_ids": [
+            "v-263"
+        ],
+        "en": "RSI Meteor",
+        "zh_Hans": "RSI 流星"
+    },
     "vehicle_NameRSI_Scorpius": {
         "uex_ids": [
             "v-174"
@@ -853,7 +1091,7 @@
         "en": "RSI Scorpius",
         "zh_Hans": "RSI 天蝎座"
     },
-    "vehicle_NameRSI_Scorpius_Interdiction": {
+    "vehicle_NameRSI_Scorpius_Antares": {
         "uex_ids": [
             "v-175"
         ],
@@ -930,6 +1168,13 @@
         "en": "Tumbril Cyclone TR",
         "zh_Hans": "盾博尔 旋风 TR"
     },
+    "vehicle_NameTMBL_Nova": {
+        "uex_ids": [
+            "v-137"
+        ],
+        "en": "Tumbril Nova",
+        "zh_Hans": "盾博尔 新星"
+    },
     "vehicle_NameTMBL_Storm": {
         "uex_ids": [
             "v-184"
@@ -943,13 +1188,6 @@
         ],
         "en": "Tumbril Storm AA",
         "zh_Hans": "盾博尔 风暴 AA"
-    },
-    "vehicle_NameVNCL_Blade": {
-        "uex_ids": [
-            "v-33"
-        ],
-        "en": "vehicle_NameVNCL_Blade",
-        "zh_Hans": "vehicle_NameVNCL_Blade"
     },
     "vehicle_NameXIAN_Nox": {
         "uex_ids": [
