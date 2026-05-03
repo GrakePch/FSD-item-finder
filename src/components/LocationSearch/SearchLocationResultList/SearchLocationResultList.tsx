@@ -1,7 +1,7 @@
 import "./SearchLocationResultList.css";
-import CelestialBodyCard from "../../../components/CelestialBodyCard/CelestialBodyCard";
-import LocationCard from "../../../components/LocationCard/LocationCard";
-import TerminalCard from "../../../components/TerminalCard/TerminalCard";
+import CelestialBodyCard from "../../CelestialBodyCard/CelestialBodyCard";
+import LocationCard from "../../LocationCard/LocationCard";
+import TerminalCard from "../../TerminalCard/TerminalCard";
 import { useLocationSearch } from "../useLocationSearch";
 
 interface SearchLocationResultListProps {

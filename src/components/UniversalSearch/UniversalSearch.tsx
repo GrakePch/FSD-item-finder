@@ -13,7 +13,7 @@ import { useLocation, useNavigate, useSearchParams } from "react-router";
 import { useTranslation } from "react-i18next";
 import SearchResultList from "../../pages/SearchItems/SearchResultList/SearchResultList";
 import SearchVehicleResultList from "../../pages/SearchVehicles/SearchVehicleResultList/SearchVehicleResultList";
-import SearchLocationResultList from "../../pages/SearchLocations/SearchLocationResultList/SearchLocationResultList";
+import SearchLocationResultList from "../LocationSearch/SearchLocationResultList/SearchLocationResultList";
 import useDebouncedValue from "../../hooks/useDebouncedValue";
 import {
   getNextSearchMode,
