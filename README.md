@@ -2,7 +2,7 @@
 
 为星际公民提供查询物品购买地点与价格的服务。
 
-目前部署在 [finder.grakeinterplanetary.com](https://finder.grakeinterplanetary.com/)
+目前部署在 [finder.grakep.ch](https://finder.grakep.ch/)
 
 本项目是游戏《星际公民》的非官方、非盈利的辅助工具，数据不保证及时、准确，仅供参考。
 
