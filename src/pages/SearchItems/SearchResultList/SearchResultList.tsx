@@ -7,7 +7,15 @@ import SearchResultListItem from "./SearchResultListItem";
 const RESULT_ROW_HEIGHT = 56;
 const RESULT_OVERSCAN = 8;
 
-const SearchResultList = ({ results }: { results: Item[] }) => {
+const SearchResultList = ({
+  results,
+  onResultClick,
+  scrollMode = "window",
+}: {
+  results: Item[];
+  onResultClick?: () => void;
+  scrollMode?: "window" | "container";
+}) => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const { dictItems } = useContext(ContextAllData);
@@ -33,18 +41,35 @@ const SearchResultList = ({ results }: { results: Item[] }) => {
       }
 
       const rect = listElement.getBoundingClientRect();
-      const start = Math.max(
-        0,
-        Math.floor(-rect.top / RESULT_ROW_HEIGHT) - RESULT_OVERSCAN
-      );
-      const end = Math.max(
-        0,
-        Math.min(
-          results.length,
-          Math.ceil((window.innerHeight - rect.top) / RESULT_ROW_HEIGHT) +
-            RESULT_OVERSCAN
-        )
-      );
+      const start =
+        scrollMode === "container"
+          ? Math.max(
+              0,
+              Math.floor(listElement.scrollTop / RESULT_ROW_HEIGHT) - RESULT_OVERSCAN
+            )
+          : Math.max(
+              0,
+              Math.floor(-rect.top / RESULT_ROW_HEIGHT) - RESULT_OVERSCAN
+            );
+      const end =
+        scrollMode === "container"
+          ? Math.max(
+              0,
+              Math.min(
+                results.length,
+                Math.ceil(
+                  (listElement.scrollTop + listElement.clientHeight) / RESULT_ROW_HEIGHT
+                ) + RESULT_OVERSCAN
+              )
+            )
+          : Math.max(
+              0,
+              Math.min(
+                results.length,
+                Math.ceil((window.innerHeight - rect.top) / RESULT_ROW_HEIGHT) +
+                  RESULT_OVERSCAN
+              )
+            );
 
       setVisibleRange((currentRange) =>
         currentRange.start === start && currentRange.end === end
@@ -55,17 +80,22 @@ const SearchResultList = ({ results }: { results: Item[] }) => {
 
     updateVisibleRange();
 
-    window.addEventListener("scroll", updateVisibleRange, { passive: true });
+    const scrollElement = scrollMode === "container" ? listRef.current : window;
+    scrollElement?.addEventListener("scroll", updateVisibleRange, { passive: true });
     window.addEventListener("resize", updateVisibleRange);
 
     return () => {
-      window.removeEventListener("scroll", updateVisibleRange);
+      scrollElement?.removeEventListener("scroll", updateVisibleRange);
       window.removeEventListener("resize", updateVisibleRange);
     };
-  }, [results.length]);
+  }, [results.length, scrollMode]);
 
   const handleResultClick = (key: string) => {
-    navigate(`/i/${key}?${searchParams.toString()}`);
+    const nextParams = new URLSearchParams(searchParams);
+    nextParams.delete("search");
+    const query = nextParams.toString();
+    navigate(`/i/${key}${query ? `?${query}` : ""}`);
+    onResultClick?.();
   };
 
   const visibleResults = results.slice(visibleRange.start, visibleRange.end);

@@ -5,23 +5,14 @@ import { icon } from "../../assets/icon";
 import { mdiMapMarker, mdiWidgetsOutline } from "@mdi/js";
 import "./NavBarBottom.css";
 import { useTranslation } from "react-i18next";
+import { getSearchModeFromPath } from "../../utils/searchMode";
 
 const NavBarBottom = () => {
   const location = useLocation();
   const { t } = useTranslation();
 
   const tabSearch = useMemo<"items" | "vehicles" | "locations">(() => {
-    if (location.pathname.startsWith("/v")) {
-      return "vehicles";
-    } else if (
-      location.pathname.startsWith("/l") ||
-      location.pathname.startsWith("/t") ||
-      location.pathname.startsWith("/b")
-    ) {
-      return "locations";
-    } else {
-      return "items";
-    }
+    return getSearchModeFromPath(location.pathname);
   }, [location.pathname]);
 
   return (

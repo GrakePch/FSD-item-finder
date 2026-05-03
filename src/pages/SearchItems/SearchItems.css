@@ -1,23 +1,109 @@
-
-
-.SearchItems .fixed-search-bar {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  max-width: 1280px;
-  padding: 1rem 12rem;
-  pointer-events: none;
+.SearchItems {
+  width: 100%;
+  padding: 0 1.5rem 3rem;
 }
 
-.SearchItems .fixed-search-bar>* {
-  pointer-events: auto;
+.SearchItems.empty-home {
+  padding-bottom: 0;
+}
+
+.SearchItems .home-content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.SearchItems .home-section + .home-section {
+  margin-top: 2rem;
+}
+
+.SearchItems .home-section h2 {
+  margin: 0 0 .75rem;
+  color: var(--color-text-1);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.SearchItems .home-section-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: .75rem;
+}
+
+.SearchItems .home-section-title-row h2 {
+  margin: 0;
+}
+
+.SearchItems .home-clear-recent {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  min-height: 1.5rem;
+  padding: 0 .5rem;
+  border-radius: .25rem;
+  color: var(--color-text-1);
+  background: transparent;
+  font-weight: 400;
+}
+
+.SearchItems .home-clear-recent:hover {
+  color: var(--color-text);
+  background: var(--color-bg-2);
+}
+
+.SearchItems .home-favorite-vehicle-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding-left: 0;
+}
+
+.SearchItems .home-vehicle-item {
+  width: 100%;
+  list-style: none;
+}
+
+.SearchItems .SearchResultList {
+  padding: 0;
+}
+
+.SearchItems .home-empty {
+  display: flex;
+  min-height: clamp(12rem, 32vh, 18rem);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  text-align: center;
+}
+
+.SearchItems .home-empty-title {
+  color: var(--color-text-1);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.SearchItems .home-empty-subtitle {
+  color: var(--color-text-2);
+  font-size: .95rem;
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
 @media (max-width: 719px) {
-  .SearchItems .fixed-search-bar {
-    padding: 1rem 1.5rem;
+  .SearchItems {
+    padding: 1rem 1rem 6rem;
+  }
+
+  .SearchItems.empty-home {
+    padding-bottom: 0;
+  }
+
+  .SearchItems .home-favorite-vehicle-list {
+    grid-template-columns: 1fr;
   }
 }

@@ -1,6 +1,6 @@
 import { lazy, Suspense, type ReactNode, useEffect, useRef, useState } from "react";
 import "./App.css";
-import { Route, Routes, useLocation } from "react-router";
+import { Navigate, Route, Routes, useLocation } from "react-router";
 import { ContextAllData, AllData } from "./contexts";
 import { buildDataBodiesAndLocations } from "./api/bodiesAndLocations";
 import { fetchAndProcessTerminals } from "./api/terminals";
@@ -16,11 +16,10 @@ import {
   KEY_CURRENT_LOCATION,
   WindowSelectCurrentLocation,
 } from "./components/CurrentLocation/CurrentLocation";
-import NavBarBottom from "./components/NavBarBottom/NavBarBottom";
 import { setUEXAttributes } from "./utils";
+import UniversalSearch from "./components/UniversalSearch/UniversalSearch";
 
 const SearchItems = lazy(() => import("./pages/SearchItems/SearchItems"));
-const SearchVehicles = lazy(() => import("./pages/SearchVehicles/SearchVehicles"));
 const ItemInfo = lazy(() => import("./pages/ItemInfo/ItemInfo"));
 const ItemGroupInfo = lazy(() => import("./pages/ItemGroupInfo/ItemGroupInfo"));
 const TerminalInfo = lazy(() => import("./pages/TerminalInfo/TerminalInfo"));
@@ -181,6 +180,10 @@ function App() {
     }));
   }, [currentLocation]);
 
+  if (location.pathname === "/v") {
+    return <Navigate to="/" replace />;
+  }
+
   if (loadState === "loading") {
     return (
       <I18nextProvider i18n={i18n}>
@@ -201,10 +204,9 @@ function App() {
     <I18nextProvider i18n={i18n}>
       <ContextAllData.Provider value={allData}>
         <NavBar />
-        <NavBarBottom />
         <Routes>
           <Route path="/" element={route(<SearchItems />)} />
-          <Route path="/v" element={route(<SearchVehicles />)} />
+          <Route path="/v" element={<Navigate to="/" replace />} />
           <Route path="/i/:itemKey" element={route(<ItemInfo />)} />
           <Route path="/iv/:itemKey" element={route(<ItemGroupInfo />)} />
           <Route path="/v/:vehicleClassName" element={route(<VehicleInfo />)} />
@@ -225,6 +227,7 @@ function App() {
         <Footer />
         <LanguageToggle />
         <WindowSelectCurrentLocation />
+        <UniversalSearch />
       </ContextAllData.Provider>
     </I18nextProvider>
   );

@@ -1,42 +1,44 @@
-import { useLocation, Link } from "react-router";
-import { useMemo } from "react";
+import { Link, useLocation, useSearchParams } from "react-router";
 import Icon from "@mdi/react";
-import { icon } from "../../assets/icon";
-import { mdiMapMarker, mdiWidgetsOutline } from "@mdi/js";
+import { mdiHomeVariantOutline, mdiMagnify } from "@mdi/js";
 import "./NavBar.css";
+import { getSearchModeFromPath, type SearchMode } from "../../utils/searchMode";
+
+const searchModeToQuery: Record<SearchMode, string> = {
+  items: "i",
+  vehicles: "v",
+  locations: "l",
+};
 
 const NavBar = () => {
   const location = useLocation();
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  const tabSearch = useMemo<"items" | "vehicles" | "locations">(() => {
-    if (location.pathname.startsWith("/v")) {
-      return "vehicles";
-    } else if (
-      location.pathname.startsWith("/l") ||
-      location.pathname.startsWith("/t") ||
-      location.pathname.startsWith("/b")
-    ) {
-      return "locations";
-    } else {
-      return "items";
-    }
-  }, [location.pathname]);
+  const openSearch = () => {
+    const mode = getSearchModeFromPath(location.pathname);
+    const nextParams = new URLSearchParams(searchParams);
+    nextParams.set("search", searchModeToQuery[mode]);
+    setSearchParams(nextParams, { replace: true });
+  };
 
   return (
     <>
       <div className="NavBar">
         <div className="nav-container">
           <nav className="links-container">
-            <Link to="/" className={tabSearch === "items" ? "active" : ""}>
-              <Icon path={mdiWidgetsOutline} size="2rem" />
-            </Link>
-            <Link to="/v" className={tabSearch === "vehicles" ? "active" : ""}>
-              <Icon path={icon.Vehicle} size="2rem" />
-            </Link>
-            <Link to="/l" className={tabSearch === "locations" ? "active" : ""}>
-              <Icon path={mdiMapMarker} size="2rem" />
+            <Link to="/" className="home-link" aria-label="Home">
+              <Icon path={mdiHomeVariantOutline} size="1.5rem" />
             </Link>
           </nav>
+          <button
+            type="button"
+            className="navbar-search-trigger"
+            onClick={openSearch}
+            aria-label="Open search"
+          >
+            <Icon path={mdiMagnify} size="1.25rem" />
+            <span>Ctrl+K</span>
+          </button>
         </div>
       </div>
       <div className="TopFiller-when-navbar-present"></div>

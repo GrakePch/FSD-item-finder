@@ -11,7 +11,7 @@
     font-weight: 600;
     background-color: var(--color-bg-2);
     box-shadow: var(--shadow-2);
-    z-index: 1100;
+    z-index: 2200;
 }
 
 @media (max-width: 719px) {
@@ -19,6 +19,7 @@
         width: 4rem;
         height: 4rem;
         font-size: 1.2rem;
-        bottom: 6rem;
+        bottom: 1rem;
+        z-index: 2200;
     }
 }

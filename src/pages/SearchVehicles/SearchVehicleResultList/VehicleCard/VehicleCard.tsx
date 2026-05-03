@@ -8,15 +8,17 @@ import { getTranslatedVehicleName } from "../../../../utils/vehicleI18n";
 interface VehicleCardProps {
   vehicle: SpvVehicleIndex;
   uexBuyPrice?: number | null;
+  onResultClick?: () => void;
 }
 
-const VehicleCard = ({ vehicle, uexBuyPrice }: VehicleCardProps) => {
+const VehicleCard = ({ vehicle, uexBuyPrice, onResultClick }: VehicleCardProps) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const isReleased = vehicle.ProgressTracker.Status === "Released";
 
   const handleClick = () => {
     navigate(`/v/${vehicle.ClassName}`);
+    onResultClick?.();
   };
 
   return (
