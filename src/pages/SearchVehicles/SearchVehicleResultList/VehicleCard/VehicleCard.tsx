@@ -59,7 +59,7 @@ const VehicleCard = ({
               {t("VehicleInfo.notDelivered")}
             </p>
           ) : typeof uexBuyPrice === "number" ? (
-            <p className={styles.vehiclePriceUEC}>{`陇 ${uexBuyPrice.toLocaleString()}`}</p>
+            <p className={styles.vehiclePriceUEC}>{`¤ ${uexBuyPrice.toLocaleString()}`}</p>
           ) : uexBuyPrice === null ? (
             <p className={`${styles.vehiclePriceUEC} ${styles.inactive}`}>{t("VehicleInfo.notBuyableUEC")}</p>
           ) : null}
