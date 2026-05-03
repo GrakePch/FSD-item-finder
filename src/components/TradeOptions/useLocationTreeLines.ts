@@ -40,7 +40,7 @@ export const useLocationTreeLines = (rows: LocationTreeRow[]) => {
       const childAnchors = childRows
         .map((childRow) => {
           const childElement = rowRefs.current.get(childRow.id);
-          const childChips = childElement?.querySelector(".LocationPathChips");
+          const childChips = childElement?.querySelector("[data-location-path-chips]");
           if (!childElement || !childChips) return null;
 
           const childRect = childElement.getBoundingClientRect();

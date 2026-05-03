@@ -18,6 +18,7 @@ const LocationPathChips = ({ path, startDepth, onClick }: LocationPathChipsProps
 
   return (
     <p
+      data-location-path-chips
       className={[
         styles.LocationPathChips,
         onClick ? styles.clickable : undefined,
