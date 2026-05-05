@@ -74,7 +74,6 @@ const SearchVehicleResultList = ({
               {vehicleSearch.favoriteVehicleList.map((vehicle) => (
                 <li key={vehicle.ClassName} className={styles.singleVehicleItem}>
                   <VehicleCard
-                    compactLarge={compact}
                     vehicle={vehicle}
                     uexBuyPrice={vehicleSearch.getUexBuyPrice(vehicle)}
                     onResultClick={onResultClick}
@@ -97,7 +96,6 @@ const SearchVehicleResultList = ({
               .map((vehicle) => (
                 <li key={vehicle.ClassName} className={styles.singleVehicleItem}>
                   <VehicleCard
-                    compactLarge={compact}
                     vehicle={vehicle}
                     uexBuyPrice={vehicleSearch.getUexBuyPrice(vehicle)}
                     onResultClick={onResultClick}

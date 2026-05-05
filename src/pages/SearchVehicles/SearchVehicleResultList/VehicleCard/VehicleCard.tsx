@@ -6,14 +6,12 @@ import { useTranslation } from "react-i18next";
 import { getTranslatedVehicleName } from "../../../../utils/vehicleI18n";
 
 interface VehicleCardProps {
-  compactLarge?: boolean;
   vehicle: SpvVehicleIndex;
   uexBuyPrice?: number | null;
   onResultClick?: () => void;
 }
 
 const VehicleCard = ({
-  compactLarge = false,
   vehicle,
   uexBuyPrice,
   onResultClick,
@@ -32,7 +30,6 @@ const VehicleCard = ({
       className={[
         styles.VehicleCard,
         vehicle.Size > 4 ? styles.big : undefined,
-        vehicle.Size > 4 && compactLarge ? styles.compactLarge : undefined,
       ]
         .filter(Boolean)
         .join(" ")}
