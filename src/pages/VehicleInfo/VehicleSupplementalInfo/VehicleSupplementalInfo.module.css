@@ -56,6 +56,9 @@
 .grade {
     font-weight: 700;
     margin-left: .5rem;
+    line-height: 1;
+    padding: .25rem;
+    border-radius: .25rem;
 }
 
 .icon {
