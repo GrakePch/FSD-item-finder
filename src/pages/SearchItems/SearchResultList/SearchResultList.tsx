@@ -104,7 +104,11 @@ const SearchResultList = ({
 
   return (
     <div
-      className={[styles.SearchResultList, className]
+      className={[
+        styles.SearchResultList,
+        scrollMode === "container" ? styles.containerScroll : undefined,
+        className,
+      ]
         .filter(Boolean)
         .join(" ")}
       ref={listRef}

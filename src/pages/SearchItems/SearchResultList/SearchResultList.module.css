@@ -3,6 +3,10 @@
     padding: 0 1rem;
 }
 
+.containerScroll {
+    overflow-y: auto;
+}
+
 .virtualResultSpacer {
     position: relative;
     width: 100%;

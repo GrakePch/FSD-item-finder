@@ -1,5 +1,7 @@
 import { expect, test, type Page } from "@playwright/test";
 
+const VIRTUAL_ITEM_ROW_HEIGHT = 56;
+
 async function mockUexApi(page: Page) {
   await page.route("https://api.uexcorp.space/2.0/**", async (route) => {
     const url = new URL(route.request().url());
@@ -48,6 +50,18 @@ async function mockUexApi(page: Page) {
   });
 }
 
+async function getMaxRenderedItemIndex(page: Page) {
+  return page.locator('[class*="resultListItem"]').evaluateAll((rows) =>
+    Math.max(
+      ...rows.map((row) => {
+        const transform = (row as HTMLElement).style.transform;
+        const match = transform.match(/translateY\(([-0-9.]+)px\)/);
+        return match ? Number(match[1]) / 56 : 0;
+      })
+    )
+  );
+}
+
 test.beforeEach(async ({ page }) => {
   await mockUexApi(page);
 });
@@ -64,7 +78,7 @@ test("desktop universal search and language query", async ({ page }, testInfo) =
   const dialog = page.getByRole("dialog", { name: "" });
   await expect(dialog).toBeVisible();
 
-  const searchInput = page.locator(".universal-search-input-row input");
+  const searchInput = page.locator('[class*="universalSearchInputRow"] input');
   await expect(searchInput).toBeFocused();
   await expect(page.locator('[role="tab"][aria-selected="true"]')).toHaveCount(1);
 
@@ -78,7 +92,7 @@ test("desktop universal search and language query", async ({ page }, testInfo) =
     )
     .not.toBe(selectedTabBefore);
 
-  await page.locator(".LanguageToggle").click();
+  await page.locator('[class*="LanguageToggle"]').click();
   await expect
     .poll(() => new URL(page.url()).searchParams.get("lang"))
     .toBe("en");
@@ -92,6 +106,33 @@ test("desktop universal search and language query", async ({ page }, testInfo) =
   await expect(dialog).toBeHidden();
 });
 
+test("desktop item type filter scrolls through virtualized results", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "desktop", "desktop-only smoke");
+
+  await page.goto("/?search=i&type=Systems.&show_unbuyable=1");
+
+  await expect(page.getByRole("dialog", { name: "" })).toBeVisible();
+  const itemResults = page.locator('[class*="itemResults"]').first();
+  await expect(itemResults).toBeVisible();
+  await expect.poll(() =>
+    itemResults.evaluate((element) => element.scrollHeight > element.clientHeight)
+  ).toBe(true);
+
+  const initialMaxIndex = await getMaxRenderedItemIndex(page);
+  expect(initialMaxIndex).toBeLessThan(50);
+
+  const lastIndex = await itemResults.evaluate(
+    (element, rowHeight) => Math.floor(element.scrollHeight / rowHeight) - 1,
+    VIRTUAL_ITEM_ROW_HEIGHT
+  );
+  await itemResults.evaluate((element) => {
+    element.scrollTop = element.scrollHeight;
+    element.dispatchEvent(new Event("scroll", { bubbles: true }));
+  });
+
+  await expect.poll(() => getMaxRenderedItemIndex(page)).toBeGreaterThanOrEqual(lastIndex - 1);
+});
+
 test("mobile floating actions", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== "mobile", "mobile-only smoke");
 
@@ -99,7 +140,7 @@ test("mobile floating actions", async ({ page }, testInfo) => {
 
   const homeFab = page.getByRole("button", { name: "Home" });
   const searchFab = page.getByRole("button", { name: "Open search" });
-  const languageFab = page.locator(".LanguageToggle");
+  const languageFab = page.locator('[class*="LanguageToggle"]');
 
   await expect(homeFab).toBeVisible();
   await expect(searchFab).toBeVisible();
@@ -107,7 +148,7 @@ test("mobile floating actions", async ({ page }, testInfo) => {
 
   await searchFab.click();
   await expect(page.getByRole("dialog", { name: "" })).toBeVisible();
-  const closeSearchFab = page.locator(".universal-search-fab");
+  const closeSearchFab = page.locator('[class*="universalSearchFab"]');
   await expect(closeSearchFab).toHaveAttribute("aria-label", "Close search");
 
   await languageFab.click();
