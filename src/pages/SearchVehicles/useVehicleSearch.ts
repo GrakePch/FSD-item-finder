@@ -8,6 +8,7 @@ import vehicleClassNameToSeries from "../../data/vehicles/manual_vehicle_classna
 import spvClassNameToUexId from "../../data/vehicles/spv_classname_to_uex_id.json";
 import { getTranslatedVehicleName } from "../../utils/vehicleI18n";
 import useFavoriteVehicles from "../../hooks/useFavoriteVehicles";
+import { spvRoleToKey } from "../../utils";
 
 export type VehicleSeriesInfo = {
   isSeries: boolean;
@@ -92,12 +93,20 @@ export function getVehicleManufacturerLabel(
     : manufacturer;
 }
 
+export function getVehicleCareerLabel(t: TFunction, career: string) {
+  return t(`vehicle_class_${spvRoleToKey(career)}`, {
+    ns: "vehicle_classes",
+    defaultValue: career,
+  });
+}
+
 export function useVehicleSearch(searchName: string) {
   const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
   const { dictVehicles } = useContext(ContextAllData);
   const { favoriteVehicles } = useFavoriteVehicles();
   const selectedManufacturer = searchParams.get("manufacturer") || "";
+  const selectedCareer = searchParams.get("career") || "";
   const normalizedSearchName = searchName.trim().toLowerCase();
 
   const uexVehicleById = useMemo(() => {
@@ -109,6 +118,14 @@ export function useVehicleSearch(searchName: string) {
   const manufacturers = useMemo(
     () =>
       Array.from(new Set(spvVehicleIndex.map((vehicle) => vehicle.Manufacturer)))
+        .filter(Boolean)
+        .sort((a, b) => a.localeCompare(b)),
+    []
+  );
+
+  const careers = useMemo(
+    () =>
+      Array.from(new Set(spvVehicleIndex.map((vehicle) => vehicle.Career)))
         .filter(Boolean)
         .sort((a, b) => a.localeCompare(b)),
     []
@@ -133,9 +150,10 @@ export function useVehicleSearch(searchName: string) {
         const i18nMatch = i18nName.toLowerCase().includes(normalizedSearchName);
         const manufacturerMatch =
           !selectedManufacturer || vehicle.Manufacturer === selectedManufacturer;
-        return (nameMatch || i18nMatch) && manufacturerMatch;
+        const careerMatch = !selectedCareer || vehicle.Career === selectedCareer;
+        return (nameMatch || i18nMatch) && manufacturerMatch && careerMatch;
       }),
-    [normalizedSearchName, selectedManufacturer, t]
+    [normalizedSearchName, selectedCareer, selectedManufacturer, t]
   );
 
   const favoriteVehicleList = useMemo(() => {
@@ -169,7 +187,9 @@ export function useVehicleSearch(searchName: string) {
     favoriteVehicleList,
     shouldShowFavoriteVehicles,
     selectedManufacturer,
+    selectedCareer,
     manufacturers,
+    careers,
     getUexBuyPrice,
     clearManufacturerFilter: () =>
       updateParams((params) => params.delete("manufacturer")),
@@ -179,6 +199,15 @@ export function useVehicleSearch(searchName: string) {
           params.delete("manufacturer");
         } else {
           params.set("manufacturer", manufacturer);
+        }
+      }),
+    clearCareerFilter: () => updateParams((params) => params.delete("career")),
+    toggleCareerFilter: (career: string) =>
+      updateParams((params) => {
+        if (selectedCareer === career) {
+          params.delete("career");
+        } else {
+          params.set("career", career);
         }
       }),
   };

@@ -43,7 +43,9 @@
   },
   "SearchVehicleResultList": {
     "noResult": "No search results",
-    "favoriteVehicles": "Favorite Vehicles"
+    "favoriteVehicles": "Favorite Vehicles",
+    "manufacturerFilterTitle": "Manufacturer",
+    "careerFilterTitle": "Type"
   },
   "VehicleManufacturer": {
     "short": {

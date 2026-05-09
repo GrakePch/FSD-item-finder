@@ -2,6 +2,7 @@ import styles from "./SearchVehicleResultList.module.css";
 import VehicleCard from "./VehicleCard/VehicleCard";
 import { useTranslation } from "react-i18next";
 import {
+  getVehicleCareerLabel,
   getVehicleManufacturerLabel,
   useVehicleSearch,
 } from "../useVehicleSearch";
@@ -23,33 +24,65 @@ const SearchVehicleResultList = ({
   const vehicleSearch = useVehicleSearch(searchName);
 
   const manufacturerFilters = (
-    <div className={styles.filters}>
-      <button
-        onClick={vehicleSearch.clearManufacturerFilter}
-        className={vehicleSearch.selectedManufacturer ? undefined : styles.active}
-      >
-        {t("FilterType.all")}
-      </button>
-      {vehicleSearch.manufacturers.map((manufacturer) => {
-        const displayName = getVehicleManufacturerLabel(t, manufacturer, "short");
-        const fullName = getVehicleManufacturerLabel(t, manufacturer, "full");
+    <section className={styles.filterGroup}>
+      <h2 className={styles.filterTitle}>
+        {t("SearchVehicleResultList.manufacturerFilterTitle")}
+      </h2>
+      <div className={styles.filters}>
+        <button
+          onClick={vehicleSearch.clearManufacturerFilter}
+          className={vehicleSearch.selectedManufacturer ? undefined : styles.active}
+        >
+          {t("FilterType.all")}
+        </button>
+        {vehicleSearch.manufacturers.map((manufacturer) => {
+          const displayName = getVehicleManufacturerLabel(t, manufacturer, "short");
+          const fullName = getVehicleManufacturerLabel(t, manufacturer, "full");
 
-        return (
+          return (
+            <button
+              key={manufacturer}
+              onClick={() => vehicleSearch.toggleManufacturerFilter(manufacturer)}
+              className={
+                vehicleSearch.selectedManufacturer === manufacturer
+                  ? styles.active
+                  : undefined
+              }
+              title={fullName}
+            >
+              {displayName}
+            </button>
+          );
+        })}
+      </div>
+    </section>
+  );
+
+  const careerFilters = (
+    <section className={styles.filterGroup}>
+      <h2 className={styles.filterTitle}>
+        {t("SearchVehicleResultList.careerFilterTitle")}
+      </h2>
+      <div className={styles.filters}>
+        <button
+          onClick={vehicleSearch.clearCareerFilter}
+          className={vehicleSearch.selectedCareer ? undefined : styles.active}
+        >
+          {t("FilterType.all")}
+        </button>
+        {vehicleSearch.careers.map((career) => (
           <button
-            key={manufacturer}
-            onClick={() => vehicleSearch.toggleManufacturerFilter(manufacturer)}
+            key={career}
+            onClick={() => vehicleSearch.toggleCareerFilter(career)}
             className={
-              vehicleSearch.selectedManufacturer === manufacturer
-                ? styles.active
-                : undefined
+              vehicleSearch.selectedCareer === career ? styles.active : undefined
             }
-            title={fullName}
           >
-            {displayName}
+            {getVehicleCareerLabel(t, career)}
           </button>
-        );
-      })}
-    </div>
+        ))}
+      </div>
+    </section>
   );
 
   return (
@@ -85,7 +118,10 @@ const SearchVehicleResultList = ({
           <div className={styles.vehicleListDivider} />
         </>
       )}
-      {manufacturerFilters}
+      <div className={styles.filterGroups}>
+        {careerFilters}
+        {manufacturerFilters}
+      </div>
       {!vehicleSearch.vehicles.length ? (
         <div className={styles.vehicleNoResult}>{t("SearchVehicleResultList.noResult")}</div>
       ) : (

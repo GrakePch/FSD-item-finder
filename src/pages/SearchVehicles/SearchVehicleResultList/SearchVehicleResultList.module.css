@@ -28,8 +28,26 @@
     background-color: var(--color-bg-2);
 }
 
-.filters {
+.filterGroups {
+    display: grid;
+    gap: .75rem;
     padding: 0 0 1rem;
+}
+
+.filterGroup {
+    display: grid;
+    gap: .375rem;
+}
+
+.filterTitle {
+    margin: 0;
+    color: var(--color-text-1);
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+}
+
+.filters {
     display: flex;
     align-items: center;
     gap: .5rem;
@@ -79,7 +97,7 @@
     grid-template-columns: 1fr;
 }
 
-.compact .filters {
+.compact .filterGroups {
     display: none;
 }
 

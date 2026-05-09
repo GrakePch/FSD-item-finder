@@ -43,7 +43,9 @@
   },
   "SearchVehicleResultList": {
     "noResult": "暂无搜索结果",
-    "favoriteVehicles": "收藏的载具"
+    "favoriteVehicles": "收藏的载具",
+    "manufacturerFilterTitle": "制造商",
+    "careerFilterTitle": "类型"
   },
   "VehicleManufacturer": {
     "short": {

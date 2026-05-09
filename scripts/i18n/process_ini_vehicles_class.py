@@ -42,6 +42,7 @@ alias_source_initials = (
 manual_aliases = {
     "Armored Cargo": ("Armored Cargo", "装甲货运"),
     "Boarding": ("Boarding", "登舰"),
+    "Competition": ("Competition", "竞赛"),
     "Ground construction": ("Ground Construction", "地面建造"),
     "Heavy Construction": ("Heavy Construction", "重型建造"),
     "Heavy Dropship": ("Heavy Dropship", "重型空投"),
@@ -88,7 +89,14 @@ def read_spv_roles(filepath):
         raise ValueError(f"Unexpected SPV vehicle index format: {filepath}")
 
     vehicles = json.loads(match.group(1))
-    return sorted({vehicle["Role"].strip() for vehicle in vehicles if vehicle.get("Role", "").strip()})
+    return sorted(
+        {
+            value.strip()
+            for vehicle in vehicles
+            for value in (vehicle.get("Role", ""), vehicle.get("Career", ""))
+            if value.strip()
+        }
+    )
 
 
 def build_value_index(en_source_dict, zh_source_dict):

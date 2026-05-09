@@ -27,6 +27,7 @@ import {
   useItemSearch,
 } from "../../pages/SearchItems/useItemSearch";
 import {
+  getVehicleCareerLabel,
   getVehicleManufacturerLabel,
   useVehicleSearch,
 } from "../../pages/SearchVehicles/useVehicleSearch";
@@ -279,28 +280,59 @@ export default function UniversalSearch() {
   );
 
   const renderVehicleFilters = () => (
-    <div className={styles.universalFilterRow}>
-      <button
-        onClick={vehicleSearch.clearManufacturerFilter}
-        className={vehicleSearch.selectedManufacturer ? undefined : styles.active}
-      >
-        {t("FilterType.all")}
-      </button>
-      {vehicleSearch.manufacturers.map((manufacturer) => (
-        <button
-          key={manufacturer}
-          onClick={() => vehicleSearch.toggleManufacturerFilter(manufacturer)}
-          className={
-            vehicleSearch.selectedManufacturer === manufacturer
-              ? styles.active
-              : undefined
-          }
-          title={getVehicleManufacturerLabel(t, manufacturer, "full")}
-        >
-          {getVehicleManufacturerLabel(t, manufacturer, "short")}
-        </button>
-      ))}
-    </div>
+    <>
+      <section className={styles.universalFilterGroup}>
+        <h2 className={styles.universalFilterTitle}>
+          {t("SearchVehicleResultList.careerFilterTitle")}
+        </h2>
+        <div className={styles.universalFilterRow}>
+          <button
+            onClick={vehicleSearch.clearCareerFilter}
+            className={vehicleSearch.selectedCareer ? undefined : styles.active}
+          >
+            {t("FilterType.all")}
+          </button>
+          {vehicleSearch.careers.map((career) => (
+            <button
+              key={career}
+              onClick={() => vehicleSearch.toggleCareerFilter(career)}
+              className={
+                vehicleSearch.selectedCareer === career ? styles.active : undefined
+              }
+            >
+              {getVehicleCareerLabel(t, career)}
+            </button>
+          ))}
+        </div>
+      </section>
+      <section className={styles.universalFilterGroup}>
+        <h2 className={styles.universalFilterTitle}>
+          {t("SearchVehicleResultList.manufacturerFilterTitle")}
+        </h2>
+        <div className={styles.universalFilterRow}>
+          <button
+            onClick={vehicleSearch.clearManufacturerFilter}
+            className={vehicleSearch.selectedManufacturer ? undefined : styles.active}
+          >
+            {t("FilterType.all")}
+          </button>
+          {vehicleSearch.manufacturers.map((manufacturer) => (
+            <button
+              key={manufacturer}
+              onClick={() => vehicleSearch.toggleManufacturerFilter(manufacturer)}
+              className={
+                vehicleSearch.selectedManufacturer === manufacturer
+                  ? styles.active
+                  : undefined
+              }
+              title={getVehicleManufacturerLabel(t, manufacturer, "full")}
+            >
+              {getVehicleManufacturerLabel(t, manufacturer, "short")}
+            </button>
+          ))}
+        </div>
+      </section>
+    </>
   );
 
   const renderFilters = () => {
@@ -312,7 +344,9 @@ export default function UniversalSearch() {
   const hasActiveFilters =
     (activeMode === "items" &&
       (Boolean(itemSearch.filterType) || !itemSearch.buyableOnlyChecked)) ||
-    (activeMode === "vehicles" && Boolean(vehicleSearch.selectedManufacturer));
+    (activeMode === "vehicles" &&
+      (Boolean(vehicleSearch.selectedManufacturer) ||
+        Boolean(vehicleSearch.selectedCareer)));
   const hasAvailableFilters = activeMode === "items" || activeMode === "vehicles";
 
   const renderResults = () => {
