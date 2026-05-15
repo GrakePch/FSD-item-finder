@@ -24,7 +24,8 @@ import LocationCard from "../../components/LocationCard/LocationCard";
 import useDebouncedValue from "../../hooks/useDebouncedValue";
 
 const TerminalInfo = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isEnglish = (i18n.resolvedLanguage || i18n.language).startsWith("en");
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const { dictTerminals, dictItems } = useContext(ContextAllData);
@@ -273,9 +274,13 @@ const TerminalInfo = () => {
                         )}
                         <div className="names">
                           <p className="zh">
-                            {t(item.key, { ns: "items", lng: "zh" }) || item.key}
+                            {t(item.key, { ns: "items" }) || item.key}
                           </p>
-                          <p className="en">{t(item.key, { ns: "items", lng: "en" })}</p>
+                          {!isEnglish && (
+                            <p className="en">
+                              {t(item.key, { ns: "items", lng: "en" })}
+                            </p>
+                          )}
                         </div>
                         {attrClass && attrGrade && (
                           <div

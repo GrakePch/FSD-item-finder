@@ -40,7 +40,17 @@ async function mockUexApi(page: Page) {
             has_freight_elevator: 0,
           },
         ]
-      : [];
+      : pathname.endsWith("/items_prices")
+        ? [
+            {
+              id_item: 777,
+              id_terminal: 94,
+              price_buy: 100,
+              price_sell: null,
+              date_modified: 0,
+            },
+          ]
+        : [];
 
     await route.fulfill({
       status: 200,
@@ -64,6 +74,40 @@ async function getMaxRenderedItemIndex(page: Page) {
 
 test.beforeEach(async ({ page }) => {
   await mockUexApi(page);
+});
+
+test("terminal item list follows English language query", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "desktop", "desktop-only smoke");
+
+  await page.goto("/t/94?lang=en");
+
+  const terminalItemList = page.locator(".TerminalInfo .list-sell");
+  await expect(terminalItemList).toContainText("Brandt Module");
+  await expect(terminalItemList).not.toContainText("布兰特 模组");
+});
+
+test("home history item list follows English language query", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "desktop", "desktop-only smoke");
+
+  await page.addInitScript(() => {
+    window.localStorage.setItem("recent", "item_Mining_Consumable_Brandt");
+  });
+  await page.goto("/?lang=en");
+
+  const homeHistoryList = page.locator('[class*="SearchResultList"]').first();
+  await expect(homeHistoryList).toContainText("Brandt Module");
+  await expect(homeHistoryList).not.toContainText("布兰特 模组");
+});
+
+test("item search results follow English language query", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "desktop", "desktop-only smoke");
+
+  await page.goto("/?lang=en&search=i&show_unbuyable=1");
+  await page.locator('[class*="universalSearchInputRow"] input').fill("brandt");
+
+  const itemResults = page.locator('[class*="itemResults"]').first();
+  await expect(itemResults).toContainText("Brandt Module");
+  await expect(itemResults).not.toContainText("布兰特 模组");
 });
 
 test("desktop universal search and language query", async ({ page }, testInfo) => {

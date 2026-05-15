@@ -25,7 +25,8 @@ const SearchResultListItem = ({
   styles,
   top,
 }: SearchResultListItemProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isEnglish = (i18n.resolvedLanguage || i18n.language).startsWith("en");
   let attrsize: string | null = null;
   let attrClass: string | null = null;
   let attrGrade: string | null = null;
@@ -60,7 +61,9 @@ const SearchResultListItem = ({
       )}
       <div className={styles.names}>
         <p className={styles.zh}>{t(item.key, { ns: "items" })}</p>
-        <p className={styles.en}>{t(item.key, { ns: "items", lng: "en" })}</p>
+        {!isEnglish && (
+          <p className={styles.en}>{t(item.key, { ns: "items", lng: "en" })}</p>
+        )}
       </div>
       {attrClass && attrGrade && (
         <div
