@@ -52,7 +52,7 @@ interface SpvVehicleHardpoints {
                   Regen: string;
                   RegenNavMode: string;
                   Usage: string;
-                  AngVelocity: { x: number; y: number }[6];
+                  AngVelocity: { x: number; y: number }[];
                 }
               | object;
             ShieldEmitter:
@@ -88,6 +88,7 @@ interface SpvVehicleHardpoints {
                         DecayRate: number;
                       };
                     };
+                    PowerRanges?: unknown[];
                     State: "Online";
                   }
                 ];
@@ -115,8 +116,8 @@ interface SpvVehicleHardpoints {
           InstalledItems?: (SpvHardpointsOldItem & {
             Grade: number;
             FuelIntakeRate: number;
-            Power: SpvHardpointPower;
-            Heat: SpvHardpointHeat;
+            Power?: SpvHardpointPower;
+            Heat?: SpvHardpointHeat;
           })[];
           ItemsQuantity: number;
           TotalFuelIntakeRate: number;
@@ -128,7 +129,7 @@ interface SpvVehicleHardpoints {
             Speed: number;
             Range: number;
             Type: "Noise" | "Decoy";
-            Power: SpvHardpointPower;
+            Power?: SpvHardpointPower;
           })[];
           ItemsQuantity: number;
         };
@@ -234,7 +235,7 @@ interface SpvVehicleHardpoints {
         }[];
         ItemsQuantity: number;
       };
-      Usables: {
+      Usables?: {
         InstalledItems?: (SpvHardpointsOldItem & {
           Power: SpvHardpointPower;
           Heat: SpvHardpointHeat;
@@ -282,8 +283,9 @@ interface SpvLoadout {
   ClassName: string;
   Name: string;
   Type: string;
+  Size?: number;
   Grade: number;
-  Class: Class | "@LOC_PLACEHOLDER" | "@item_Desc_RADR_Default";
+  Class: Class | "@LOC_PLACEHOLDER" | "@item_Desc_RADR_Default" | string;
 }
 
 type Class = "Military" | "Stealth" | "Civilian" | "Industrial" | "Competition" | "";
@@ -295,8 +297,8 @@ interface SpvThrusters {
     FuelBurnRatePerMN: number;
     FuelUsagePerSecond: number;
     Durability: SpvHardpointDurability;
-    Power: SpvHardpointPower;
-    Heat: SpvHardpointHeat;
+    Power?: SpvHardpointPower;
+    Heat?: SpvHardpointHeat;
   })[];
   ItemsQuantity: number;
 }

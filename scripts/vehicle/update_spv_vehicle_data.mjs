@@ -9,23 +9,17 @@ const RETRIES = 3;
 const DATASETS = [
   {
     sourceName: "vehicle-main-list.json",
-    outputPath: "src/data/vehicles/spv_vehicle_list.ts",
-    variableName: "spvVehicleList",
-    typeName: "SpvVehicleMain",
+    outputName: "spv_vehicle_list.json",
     compact: false,
   },
   {
     sourceName: "vehicle-basic-list.json",
-    outputPath: "src/data/vehicles/spv_vehicle_index.ts",
-    variableName: "spvVehicleIndex",
-    typeName: "SpvVehicleIndex",
+    outputName: "spv_vehicle_index.json",
     compact: false,
   },
   {
     sourceName: "vehicle-hardpoints-list.json",
-    outputPath: "src/data/vehicles/spv_vehicle_hardpoints.ts",
-    variableName: "spvVehicleHardpoints",
-    typeName: "SpvVehicleHardpoints",
+    outputName: "spv_vehicle_hardpoints.json",
     compact: true,
   },
 ];
@@ -83,7 +77,7 @@ function parseArgs(argv) {
           "",
           "Options:",
           "  --source-base-url <url>   Base raw URL for SPV JSON files.",
-          "  --output-dir <path>       Output directory. Defaults to src/data/vehicles",
+          "  --output-dir <path>       Output directory for generated JSON files. Defaults to src/data/vehicles",
           "  --local-source-dir <path> Read source JSON files from a local directory instead of GitHub.",
           "  --manual-series-input <path> Existing manual ClassName-to-series table to preserve values from.",
           "  --manual-series-output <path> Output path for the manual ClassName-to-series table.",
@@ -202,10 +196,8 @@ function validateVehicleItemArray(data) {
   }
 }
 
-function buildTypescriptModule(dataset, data) {
-  const indent = dataset.compact ? 0 : 2;
-  const payload = JSON.stringify(data, null, indent);
-  return `const ${dataset.variableName}: ${dataset.typeName}[] = ${payload};\n\nexport default ${dataset.variableName};\n`;
+function buildJsonFile(dataset, data) {
+  return `${JSON.stringify(data, null, dataset.compact ? 0 : 2)}\n`;
 }
 
 function hasEssentialVehicleInfo(item) {
@@ -282,8 +274,8 @@ async function main() {
     const data = await loadSourceJson(dataset, options);
     validateVehicleArray(dataset, data);
 
-    const outputPath = resolve(options.outputDir, basename(dataset.outputPath));
-    await writeText(outputPath, buildTypescriptModule(dataset, data));
+    const outputPath = resolve(options.outputDir, dataset.outputName);
+    await writeText(outputPath, buildJsonFile(dataset, data));
     console.log(`Updated ${basename(outputPath)} with ${data.length} entries`);
 
     if (dataset.sourceName === "vehicle-main-list.json") {

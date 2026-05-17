@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { basename, resolve } from "node:path";
 
-const DEFAULT_SPV_VEHICLE_SOURCE = resolve("src/data/vehicles/spv_vehicle_list.ts");
+const DEFAULT_SPV_VEHICLE_SOURCE = resolve("src/data/vehicles/spv_vehicle_list.json");
 const DEFAULT_VEHICLE_KEY_DATA = resolve("src/data/vehicles/key_to_uex_ids_and_i18n.json");
 const DEFAULT_OUTPUT = resolve("src/data/vehicles/spv_classname_to_uex_id.json");
 
@@ -65,7 +65,7 @@ function parseArgs(argv) {
           "Usage: node scripts/uex_item/update_spv_classname_to_uex_id.mjs [options]",
           "",
           "Options:",
-          "  --spv-vehicles <path>              SPV vehicle TS source. Defaults to src/data/vehicles/spv_vehicle_list.ts",
+          "  --spv-vehicles <path>              SPV vehicle JSON or legacy TS source. Defaults to src/data/vehicles/spv_vehicle_list.json",
           "  --vehicle-key-data <path>          Vehicle key data JSON. Defaults to src/data/vehicles/key_to_uex_ids_and_i18n.json",
           "  --output <path>                    Output JSON path. Defaults to src/data/vehicles/spv_classname_to_uex_id.json",
           "  --class-name-to-key-output <path>  Optional debug output for the intermediate ClassName-to-key map",
@@ -85,6 +85,11 @@ async function readJson(path) {
 
 async function loadSpvVehicleList(path) {
   const source = await readFile(path, "utf8");
+
+  if (path.endsWith(".json")) {
+    return JSON.parse(source);
+  }
+
   const match = source.match(
     /const\s+spvVehicleList[^=]*=\s*([\s\S]*?);\s*export\s+default\s+spvVehicleList/,
   );

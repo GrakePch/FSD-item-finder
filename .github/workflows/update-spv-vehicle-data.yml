@@ -20,6 +20,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Checkout Fancy-SC-Ship-Info-2 source data
+        uses: actions/checkout@v4
+        with:
+          repository: GrakePch/Fancy-SC-Ship-Info-2
+          path: fancy-sc-ship-info-2
+          persist-credentials: false
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -28,7 +35,7 @@ jobs:
 
       - name: Generate SPV vehicle data
         run: |
-          node scripts/vehicle/update_spv_vehicle_data.mjs
+          node scripts/vehicle/update_spv_vehicle_data.mjs --local-source-dir fancy-sc-ship-info-2/src/data
           node scripts/uex_item/update_spv_classname_to_uex_id.mjs
 
       - name: Validate generated data
@@ -40,13 +47,13 @@ jobs:
 
       - name: Commit updated data
         run: |
-          if git diff --quiet -- src/data/vehicles/spv_vehicle_list.ts src/data/vehicles/spv_vehicle_index.ts src/data/vehicles/spv_vehicle_hardpoints.ts src/data/vehicles/manual_vehicle_classname_to_series.ts src/data/vehicles/spv_classname_to_uex_id.json src/data/vehicles/spv_vehicle_items_essential.json; then
+          if git diff --quiet -- src/data/vehicles/spv_vehicle_list.json src/data/vehicles/spv_vehicle_index.json src/data/vehicles/spv_vehicle_hardpoints.json src/data/vehicles/manual_vehicle_classname_to_series.ts src/data/vehicles/spv_classname_to_uex_id.json src/data/vehicles/spv_vehicle_items_essential.json; then
             echo "No SPV vehicle data changes to commit."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/vehicles/spv_vehicle_list.ts src/data/vehicles/spv_vehicle_index.ts src/data/vehicles/spv_vehicle_hardpoints.ts src/data/vehicles/manual_vehicle_classname_to_series.ts src/data/vehicles/spv_classname_to_uex_id.json src/data/vehicles/spv_vehicle_items_essential.json
+          git add src/data/vehicles/spv_vehicle_list.json src/data/vehicles/spv_vehicle_index.json src/data/vehicles/spv_vehicle_hardpoints.json src/data/vehicles/manual_vehicle_classname_to_series.ts src/data/vehicles/spv_classname_to_uex_id.json src/data/vehicles/spv_vehicle_items_essential.json
           git commit -m "chore(data): update SPV vehicle data"
           git push

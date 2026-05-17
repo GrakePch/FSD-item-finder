@@ -4,9 +4,9 @@ import { ContextAllData } from "../../contexts";
 import { useContext, useMemo } from "react";
 import Icon from "@mdi/react";
 import { mdiHeart, mdiHeartOutline } from "@mdi/js";
-import spvVehicleIndex from "../../data/vehicles/spv_vehicle_index";
-import spvVehicleList from "../../data/vehicles/spv_vehicle_list";
-import spvVehicleHardpointsList from "../../data/vehicles/spv_vehicle_hardpoints";
+import spvVehicleIndexRaw from "../../data/vehicles/spv_vehicle_index.json";
+import spvVehicleListRaw from "../../data/vehicles/spv_vehicle_list.json";
+import spvVehicleHardpointsRaw from "../../data/vehicles/spv_vehicle_hardpoints.json";
 import spvClassNameToUexId from "../../data/vehicles/spv_classname_to_uex_id.json";
 import TradeOptionsSortingControl from "../../components/TradeOptionsSortingControl/TradeOptionsSortingControl";
 import TradeOptions from "../../components/TradeOptions/TradeOptions";
@@ -17,6 +17,9 @@ import VehicleSupplementalInfo from "./VehicleSupplementalInfo/VehicleSupplement
 import useFavoriteVehicles from "../../hooks/useFavoriteVehicles";
 
 const spvClassNameToUexIdMap = spvClassNameToUexId as Record<string, number>;
+const spvVehicleIndex = spvVehicleIndexRaw as unknown as SpvVehicleIndex[];
+const spvVehicleList = spvVehicleListRaw as unknown as SpvVehicleMain[];
+const spvVehicleHardpointsList = spvVehicleHardpointsRaw as unknown as SpvVehicleHardpoints[];
 
 const VehicleInfo = () => {
   const { t } = useTranslation();

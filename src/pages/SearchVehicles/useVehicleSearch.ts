@@ -3,12 +3,14 @@ import { useSearchParams } from "react-router";
 import type { TFunction } from "i18next";
 import { useTranslation } from "react-i18next";
 import { ContextAllData } from "../../contexts";
-import spvVehicleIndex from "../../data/vehicles/spv_vehicle_index";
+import spvVehicleIndexRaw from "../../data/vehicles/spv_vehicle_index.json";
 import vehicleClassNameToSeries from "../../data/vehicles/manual_vehicle_classname_to_series";
 import spvClassNameToUexId from "../../data/vehicles/spv_classname_to_uex_id.json";
 import { getTranslatedVehicleName } from "../../utils/vehicleI18n";
 import useFavoriteVehicles from "../../hooks/useFavoriteVehicles";
 import { spvRoleToKey } from "../../utils";
+
+const spvVehicleIndex = spvVehicleIndexRaw as unknown as SpvVehicleIndex[];
 
 export type VehicleSeriesInfo = {
   isSeries: boolean;
