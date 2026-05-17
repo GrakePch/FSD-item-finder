@@ -489,6 +489,13 @@
         "en": "Drake Caterpillar",
         "zh_Hans": "德雷克 毛虫"
     },
+    "vehicle_NameDRAK_Clipper": {
+        "uex_ids": [
+            "v-268"
+        ],
+        "en": "Drake Clipper",
+        "zh_Hans": "德雷克 快帆"
+    },
     "vehicle_NameDRAK_Corsair": {
         "uex_ids": [
             "v-50"
@@ -1063,6 +1070,13 @@
         "en": "RSI Constellation Taurus",
         "zh_Hans": "RSI 星座 金牛座"
     },
+    "vehicle_NameRSI_Hermes": {
+        "uex_ids": [
+            "v-275"
+        ],
+        "en": "RSI Hermes",
+        "zh_Hans": "RSI 赫尔墨斯"
+    },
     "vehicle_NameRSI_Lynx": {
         "uex_ids": [
             "v-116"
@@ -1083,6 +1097,20 @@
         ],
         "en": "RSI Meteor",
         "zh_Hans": "RSI 流星"
+    },
+    "vehicle_NameRSI_Perseus": {
+        "uex_ids": [
+            "v-145"
+        ],
+        "en": "RSI Perseus",
+        "zh_Hans": "RSI 英仙座"
+    },
+    "vehicle_NameRSI_Salvation": {
+        "uex_ids": [
+            "v-271"
+        ],
+        "en": "RSI Salvation",
+        "zh_Hans": "RSI 拯救"
     },
     "vehicle_NameRSI_Scorpius": {
         "uex_ids": [
