@@ -1,5 +1,4 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
-import { get } from "node:https";
 import { basename, dirname, resolve } from "node:path";
 
 const SOURCE_BASE_URL =
@@ -96,44 +95,21 @@ function sleep(ms) {
   });
 }
 
-function fetchTextOnce(url) {
-  return new Promise((resolveFetch, rejectFetch) => {
-    const request = get(
-      url,
-      {
-        headers: {
-          Accept: "application/json,text/plain,*/*",
-          "User-Agent": "fsd-item-finder-spv-data-updater/1.0",
-        },
-        timeout: 60000,
-      },
-      (response) => {
-        const chunks = [];
-
-        response.on("data", (chunk) => {
-          chunks.push(chunk);
-        });
-
-        response.on("end", () => {
-          const text = Buffer.concat(chunks).toString("utf8");
-          if (response.statusCode < 200 || response.statusCode >= 300) {
-            rejectFetch(
-              new Error(`HTTP ${response.statusCode} ${response.statusMessage}: ${text.slice(0, 200)}`),
-            );
-            return;
-          }
-
-          resolveFetch(text);
-        });
-      },
-    );
-
-    request.on("timeout", () => {
-      request.destroy(new Error(`Timed out fetching ${url}`));
-    });
-
-    request.on("error", rejectFetch);
+async function fetchTextOnce(url) {
+  const response = await fetch(url, {
+    headers: {
+      Accept: "application/json,text/plain,*/*",
+      "User-Agent": "fsd-item-finder-spv-data-updater/1.0",
+    },
+    signal: AbortSignal.timeout(60000),
   });
+  const text = await response.text();
+
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status} ${response.statusText}: ${text.slice(0, 200)}`);
+  }
+
+  return text;
 }
 
 async function fetchJson(url) {

@@ -20,13 +20,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Checkout Fancy-SC-Ship-Info-2 source data
-        uses: actions/checkout@v4
-        with:
-          repository: GrakePch/Fancy-SC-Ship-Info-2
-          path: fancy-sc-ship-info-2
-          persist-credentials: false
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -35,7 +28,7 @@ jobs:
 
       - name: Generate SPV vehicle data
         run: |
-          node scripts/vehicle/update_spv_vehicle_data.mjs --local-source-dir fancy-sc-ship-info-2/src/data
+          node scripts/vehicle/update_spv_vehicle_data.mjs
           node scripts/uex_item/update_spv_classname_to_uex_id.mjs
 
       - name: Validate generated data

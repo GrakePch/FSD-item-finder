@@ -23034,12 +23034,13 @@
         "Maneuvering": 5440380.4
       },
       "AccelerationG": {
-        "IsValidated": false,
-        "Main": 20.05,
-        "Retro": 5.86,
-        "Strafe": 0,
-        "Up": 0,
-        "Down": 0
+        "IsValidated": true,
+        "Main": 14.3,
+        "Retro": 4.1,
+        "Strafe": 10.4,
+        "Up": 10.4,
+        "Down": 6.4,
+        "CheckDate": "2026-05-15"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -36531,9 +36532,9 @@
     "Mass": 135649,
     "ComponentsMass": 14004,
     "Dimensions": {
-      "Length": 11.5,
-      "Width": 11,
-      "Height": 3.5
+      "Length": 32,
+      "Width": 17.3,
+      "Height": 6.4
     },
     "IsSpaceship": true,
     "Armor": {
@@ -36640,12 +36641,13 @@
         "Maneuvering": 25727544
       },
       "AccelerationG": {
-        "IsValidated": false,
-        "Main": 15.76,
-        "Retro": 3.88,
-        "Strafe": 0,
-        "Up": 0,
-        "Down": 0
+        "IsValidated": true,
+        "Main": 14.3,
+        "Retro": 3.4,
+        "Strafe": 4.5,
+        "Up": 4.4,
+        "Down": 3.2,
+        "CheckDate": "2026-05-16"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
