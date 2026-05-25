@@ -31,7 +31,7 @@ import {
   getVehicleManufacturerLabel,
   useVehicleSearch,
 } from "../../pages/SearchVehicles/useVehicleSearch";
-import { typeKeyToCapitalized, toUrlKey } from "../../utils";
+import { typeKeyToCapitalized } from "../../utils";
 import { icon } from "../../assets/icon";
 
 const SEARCH_NAME_KEYS: Record<SearchMode, string> = {
@@ -377,9 +377,9 @@ export default function UniversalSearch() {
         searchName={debouncedLocationSearchName}
         includeTerminal
         listClassName={styles.locationList}
-        onCelestialBodyClick={(body) => navigateWithSearch(`/b/${toUrlKey(body.name)}`)}
+        onCelestialBodyClick={(body) => navigateWithSearch(`/b/${body.code}`)}
         onLocationClick={(scLocation) =>
-          navigateWithSearch(`/l/${toUrlKey(scLocation.name)}`)
+          navigateWithSearch(`/l/${scLocation.code}`)
         }
         onTerminalClick={(terminal) => navigateWithSearch(`/t/${terminal.id}`)}
       />
