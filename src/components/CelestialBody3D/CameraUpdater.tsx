@@ -9,7 +9,7 @@ export default function CameraUpdater({ location, radius }: { location?: SCLocat
 
   useEffect(() => {
     if (!location) return;
-    const { coordinateX: x, coordinateY: y, coordinateZ: z } = location;
+    const { x, y, z } = location.cartesianInKm;
     const len = Math.sqrt(x * x + y * y + z * z);
     if (len === 0) return;
     const target = new THREE.Vector3(x, z, -y);

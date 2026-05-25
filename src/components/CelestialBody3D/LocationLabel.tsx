@@ -4,9 +4,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 import * as THREE from "three";
 import Icon from "@mdi/react";
-import locationIcon from "../../assets/locationIcon";
-import LocationIconColor from "../../assets/locationIconColor";
-import { locationNameToI18nKey, toUrlKey } from "../../utils";
+import { getLocationIcon } from "../../assets/locationIcon";
+import { getLocationIconColor } from "../../assets/locationIconColor";
+import { locationNameToI18nKey } from "../../utils";
 import { useThree, useFrame } from "@react-three/fiber";
 import { isLocationInDaylight } from "./utilsSunriseSunSetCalc";
 
@@ -24,17 +24,21 @@ export default function LocationLabel({
   const handleClick = (e: any) => {
     e.stopPropagation();
     const search = window.location.search;
-    navigate(`/l/${toUrlKey(loc.name)}${search}`);
+    navigate(`/l/${loc.code}${search}`);
   };
   const isLarge =
-    loc.type === "Landing zone" ||
-    loc.type === "Space station" ||
-    loc.type === "Asteroid base";
+    loc.beaconType === "LandingZone" ||
+    loc.type === "station" ||
+    loc.type === "asteroidbase";
 
   const { camera } = useThree();
 
   // Label position
-  const labelPos = new THREE.Vector3(loc.coordinateX, loc.coordinateZ, -loc.coordinateY);
+  const labelPos = new THREE.Vector3(
+    loc.cartesianInKm.x,
+    loc.cartesianInKm.z,
+    -loc.cartesianInKm.y
+  );
 
   useFrame(() => {
     // Ray direction (normalized)
@@ -58,7 +62,7 @@ export default function LocationLabel({
 
   return (
     <Html
-      position={[loc.coordinateX, loc.coordinateZ, -loc.coordinateY]}
+      position={[loc.cartesianInKm.x, loc.cartesianInKm.z, -loc.cartesianInKm.y]}
       center
       occlude={false} /* Implemented a more efficient occlusion check */
       className={`location-label ${occluded ? "occluded" : ""} ${
@@ -71,10 +75,12 @@ export default function LocationLabel({
           className="icon"
           style={{
             backgroundColor:
-              loc.private === 1 ? "#f74a55" : LocationIconColor[loc.type] || "#78909c",
+              loc.restrictions.includes("private")
+                ? "#f74a55"
+                : getLocationIconColor(loc),
           }}
         >
-          <Icon path={locationIcon[loc.type] || locationIcon.Outpost!} />
+          <Icon path={getLocationIcon(loc)} />
         </div>
         <p className="name">
           {t(locationNameToI18nKey(loc.name), { ns: "locations", defaultValue: loc.name })}

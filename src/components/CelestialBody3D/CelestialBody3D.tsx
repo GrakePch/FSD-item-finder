@@ -18,7 +18,7 @@ import { useParentStarRotation } from "./useParentStarRotation";
 import { scToThree } from "./utils";
 import { Vector3 } from "three";
 import Atmosphere from "./post_processings/Atmosphere";
-import { hexColorToVector3 } from "../../utils";
+import { hexColorToVector3, isLocationDisplayHidden } from "../../utils";
 import Starfield from "./Starfield";
 
 /** NOTE:
@@ -61,7 +61,8 @@ export default function CelestialBody3D({
   const bodyTextureRoughness = texture.roughness[celestialBody.name];
   const bodyTextureEmission = texture.emission[celestialBody.name];
   const bodyTextureNormal = texture.normal[celestialBody.name];
-  const radius = celestialBody.bodyRadius || 1;
+  const renderData = celestialBody.renderData;
+  const radius = celestialBody.bodyRadiusInKm || 1;
   const distance = 5 * radius;
   const distanceMax = 16 * radius;
   const distanceMin = 1.5 * radius;
@@ -70,29 +71,29 @@ export default function CelestialBody3D({
   const cameraNear = 0.09 * radius;
   const cameraFar = 70000000;
   const themeColor =
-    celestialBody.themeColorR && celestialBody.themeColorG && celestialBody.themeColorB
-      ? `rgb(${celestialBody.themeColorR}, ${celestialBody.themeColorG}, ${celestialBody.themeColorB})`
+    renderData?.themeColorR && renderData.themeColorG && renderData.themeColorB
+      ? `rgb(${renderData.themeColorR}, ${renderData.themeColorG}, ${renderData.themeColorB})`
       : undefined;
-  const atmosphereRadius = celestialBody.atmosphereHeightM
-    ? radius + celestialBody.atmosphereHeightM / 1000
+  const atmosphereRadius = renderData?.atmosphereHeightM
+    ? radius + renderData.atmosphereHeightM / 1000
     : 1.05 * radius;
-  const atmosphereColor = celestialBody.colorSkyNoon
-    ? new Vector3(...hexColorToVector3(celestialBody.colorSkyNoon))
+  const atmosphereColor = renderData?.colorSkyNoon
+    ? new Vector3(...hexColorToVector3(renderData.colorSkyNoon))
     : new Vector3(1, 1, 1);
-  const atmosphereColorNight = celestialBody.colorSkyNight
-    ? new Vector3(...hexColorToVector3(celestialBody.colorSkyNight))
+  const atmosphereColorNight = renderData?.colorSkyNight
+    ? new Vector3(...hexColorToVector3(renderData.colorSkyNight))
     : new Vector3(0, 0, 0);
 
   const bodyPositionAbs: [number, number, number] = scToThree([
-    celestialBody.coordinateX,
-    celestialBody.coordinateY,
-    celestialBody.coordinateZ,
+    celestialBody.cartesianInKm.x,
+    celestialBody.cartesianInKm.y,
+    celestialBody.cartesianInKm.z,
   ]);
   const parentStarPositionAbs: [number, number, number] = celestialBody.parentStar
     ? scToThree([
-        celestialBody.parentStar.coordinateX,
-        celestialBody.parentStar.coordinateY,
-        celestialBody.parentStar.coordinateZ,
+        celestialBody.parentStar.cartesianInKm.x,
+        celestialBody.parentStar.cartesianInKm.y,
+        celestialBody.parentStar.cartesianInKm.z,
       ])
     : [0, 0, 0];
   const parentStarPositionRelInitial: [number, number, number] = [
@@ -118,10 +119,10 @@ export default function CelestialBody3D({
     : new Vector3(1, 0, 0);
 
   const needOrbitCircle = (loc: SCLocation) =>
-    loc.type === "Space station" ||
-    loc.type === "Asteroid base" ||
-    loc.type === "CommArray" ||
-    loc.type === "Orbital laser platform";
+    loc.type === "station" ||
+    loc.type === "asteroidbase" ||
+    loc.type === "comm" ||
+    loc.type === "orbitallaser";
   const controlsRef = useRef<any>(null);
   const sphereApiRef = useRef<{ setRotationTarget: (target: number) => void } | null>(
     null
@@ -138,7 +139,7 @@ export default function CelestialBody3D({
   const dynamicRotationSpeed = (0.1 * (currentDistance - radius)) / radius;
 
   return (
-    <Canvas key={celestialBody.name} className="CelestialBody3D">
+    <Canvas key={celestialBody.code} className="CelestialBody3D">
       <PerspectiveCamera
         ref={cameraRef}
         makeDefault
@@ -169,7 +170,7 @@ export default function CelestialBody3D({
               .normalize()
               .multiplyScalar(distanceToParentStar)}
           >
-            <sphereGeometry args={[celestialBody.parentStar.bodyRadius, 32, 32]} />
+            <sphereGeometry args={[celestialBody.parentStar.bodyRadiusInKm, 32, 32]} />
             <meshBasicMaterial color={"#fff"} />
           </mesh>
         )}
@@ -177,10 +178,10 @@ export default function CelestialBody3D({
           <LatLongLines radius={radius + 1} color={themeColor} />
         )}
         {/* Render ring*/}
-        {celestialBody.ringRadiusInner && celestialBody.ringRadiusOuter && (
+        {renderData?.ringRadiusInner && renderData.ringRadiusOuter && (
           <CelestialBodyRing
-            innerRadius={celestialBody.ringRadiusInner}
-            outerRadius={celestialBody.ringRadiusOuter}
+            innerRadius={renderData.ringRadiusInner}
+            outerRadius={renderData.ringRadiusOuter}
             map={texture.ring.Yela}
           />
         )}
@@ -188,29 +189,38 @@ export default function CelestialBody3D({
         {showOrbitLines &&
           celestialBody.locations &&
           celestialBody.locations
-            .filter((loc) => needOrbitCircle(loc))
+            .filter(
+              (loc) =>
+                !isLocationDisplayHidden(loc) &&
+                (showNoQTMarkers || loc.beaconMarker) &&
+                needOrbitCircle(loc)
+            )
             .map((loc) => (
               <OrbitCircle
-                key={loc.name + "-orbit"}
-                centerY={loc.coordinateZ}
-                radius={Math.sqrt(loc.coordinateX ** 2 + loc.coordinateY ** 2)}
+                key={loc.code + "-orbit"}
+                centerY={loc.cartesianInKm.z}
+                radius={Math.sqrt(
+                  loc.cartesianInKm.x ** 2 + loc.cartesianInKm.y ** 2
+                )}
               />
             ))}
         {/* Render location labels */}
         {showLocationLabels &&
           celestialBody.locations &&
           celestialBody.locations
-            .filter((loc) => showNoQTMarkers || loc.quantum != 0)
-            .map((loc) => <LocationLabel loc={loc} key={loc.name} bodyRadius={radius} />)}
+            .filter(
+              (loc) => !isLocationDisplayHidden(loc) && (showNoQTMarkers || loc.beaconMarker)
+            )
+            .map((loc) => <LocationLabel loc={loc} key={loc.code} bodyRadius={radius} />)}
         {/* Render Subsolar Point Direction Line */}
         {showSubsolarDirection && celestialBody.parentStar && (
           <SubsolarDirectionLine celestialBody={celestialBody} />
         )}
         {/* Render Orbital Markers */}
-        {showOMs && celestialBody.omRadius && (
+        {showOMs && celestialBody.omRadiusInKm && (
           <OrbitalMarkers
             radius={radius}
-            omRadius={celestialBody.omRadius}
+            omRadius={celestialBody.omRadiusInKm}
             color={themeColor}
           />
         )}
@@ -244,19 +254,19 @@ export default function CelestialBody3D({
             dirToSun={dirToSunCameraAdjusted}
             atmosColor={atmosphereColor}
             atmosColorNight={atmosphereColorNight}
-            atmosColorOverrideCoefficient={celestialBody.atmosphereColorOverrideCoefficient}
+            atmosColorOverrideCoefficient={renderData?.atmosphereColorOverrideCoefficient}
             waveLengths={
-              celestialBody.atmosphereWaveLengthR &&
-              celestialBody.atmosphereWaveLengthG &&
-              celestialBody.atmosphereWaveLengthB
+              renderData?.atmosphereWaveLengthR &&
+              renderData.atmosphereWaveLengthG &&
+              renderData.atmosphereWaveLengthB
                 ? new Vector3(
-                    celestialBody.atmosphereWaveLengthR,
-                    celestialBody.atmosphereWaveLengthG,
-                    celestialBody.atmosphereWaveLengthB
+                    renderData.atmosphereWaveLengthR,
+                    renderData.atmosphereWaveLengthG,
+                    renderData.atmosphereWaveLengthB
                   )
                 : undefined
             }
-            scatteringStrength={celestialBody.atmosphereScatteringStrength}
+            scatteringStrength={renderData?.atmosphereScatteringStrength}
           />
         ) : (
           <></>

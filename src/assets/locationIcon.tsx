@@ -24,6 +24,13 @@ import {
 
 const locationIcon: Record<string, string | undefined> = {
   Star: mdiWhiteBalanceSunny,
+  SINGLE_STAR: mdiWhiteBalanceSunny,
+  PLANET: mdiCircleMedium,
+  SATELLITE: mdiCircleMedium,
+  PLANETOID: mdiCircleMedium,
+  LP: "M12,3.515L20.485,12L12,20.485L3.515,12L12,3.515ZM12,6.343L6.343,12L12,17.657L17.657,12L12,6.343Z",
+  JUMPPOINT:
+    "M7.342,16.999C6.792,18.828 5.947,20 5,20C3.344,20 2,16.415 2,12C2,7.585 3.344,4 5,4C5.947,4 6.792,5.172 7.342,7.001C8.341,8.153 9.897,9.375 12,9.375C14.103,9.375 15.659,8.153 16.658,7.001C17.208,5.172 18.053,4 19,4C20.656,4 22,7.585 22,12C22,16.415 20.656,20 19,20C18.053,20 17.208,18.828 16.658,16.999C15.659,15.847 14.103,14.625 12,14.625C9.897,14.625 8.341,15.847 7.342,16.999ZM19,7C18.08,7 17.333,9.24 17.333,12C17.333,14.76 18.08,17 19,17C19.92,17 20.667,14.76 20.667,12C20.667,9.24 19.92,7 19,7ZM5,7C4.08,7 3.333,9.24 3.333,12C3.333,14.76 4.08,17 5,17C5.92,17 6.667,14.76 6.667,12C6.667,9.24 5.92,7 5,7ZM16.15,9.494C15.038,10.291 13.65,10.875 12,10.875C10.35,10.875 8.962,10.291 7.85,9.494C7.947,10.282 8,11.125 8,12C8,12.875 7.947,13.718 7.85,14.506C8.962,13.709 10.35,13.125 12,13.125C13.65,13.125 15.038,13.709 16.15,14.506C16.053,13.718 16,12.875 16,12C16,11.125 16.053,10.282 16.15,9.494Z",
   "Lagrange Point":
     "M12,3.515L20.485,12L12,20.485L3.515,12L12,3.515ZM12,6.343L6.343,12L12,17.657L17.657,12L12,6.343Z",
   "Jump Point":
@@ -63,5 +70,38 @@ const locationIcon: Record<string, string | undefined> = {
   Terminal_refinery: mdiFire,
   Terminal_fuel: mdiFuel,
 };
+
+const legacyTypeByVerseGuideType: Record<string, string> = {
+  antenna: "Planetary alignment facility",
+  asteroidbase: "Asteroid base",
+  city: "City",
+  drug: "Outpost",
+  farm: "Outpost",
+  fob: "Forward operating base",
+  junkyard: "Scrapyard",
+  mining: "Outpost",
+  orbitallaser: "Orbital laser platform",
+  outpost: "Outpost",
+  platforms: "Settlement",
+  prison: "Prison",
+  race: "Racetrack",
+  research: "Outpost",
+  shanty: "Settlement",
+  shelter: "Emergency shelter",
+  stash: "Outpost",
+  station: "Space station",
+  ugf: "Distribution center",
+  underground: "Underground bunker",
+};
+
+export function getLocationIcon(
+  location: Pick<SCLocation, "type" | "beaconType">
+): string {
+  const legacyType =
+    location.type === "city" && location.beaconType === "LandingZone"
+      ? "Landing zone"
+      : legacyTypeByVerseGuideType[location.type] || location.type;
+  return locationIcon[legacyType] || locationIcon.Outpost!;
+}
 
 export default locationIcon;

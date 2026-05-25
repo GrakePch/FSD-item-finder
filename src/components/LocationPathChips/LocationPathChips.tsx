@@ -15,6 +15,7 @@ type LocationPathChipsProps = {
 const LocationPathChips = ({ path, startDepth, onClick }: LocationPathChipsProps) => {
   const { t } = useTranslation();
   const { dictLocations } = useContext(ContextAllData);
+  const locationsByName = Object.values(dictLocations);
 
   return (
     <p
@@ -36,7 +37,7 @@ const LocationPathChips = ({ path, startDepth, onClick }: LocationPathChipsProps
           }}
           onClick={onClick}
         >
-          {dictLocations[loc]?.type?.toLowerCase() === "space station" && (
+          {locationsByName.find((location) => location.name === loc)?.type === "station" && (
             <Icon path={icon["Space Station"]} size="1rem" color="hsl(170deg 80% 50%)" />
           )}
           {t(locationNameToI18nKey(loc), { ns: "locations" })}

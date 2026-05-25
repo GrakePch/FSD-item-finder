@@ -1,10 +1,17 @@
-import bodies from "../data/bodies.json";
-import bodies_info from "../data/bodies_info.json";
-import locations from "../data/locations.json";
-import { toUrlKey } from "../utils";
+import bodies from "../data/starmap/body.json";
+import bodiesRenderData from "../data/bodies_render_data.json";
+import locations from "../data/starmap/locations.json";
 
-function getBodyInfo(name: string) {
-  return bodies_info.find((b) => b.name === name);
+const bodyRenderDataByCode = new Map(
+  bodiesRenderData.map((renderData) => [renderData.code, renderData])
+);
+
+function isUsableBody(
+  body: (typeof bodies)[number]
+): body is (typeof bodies)[number] & { type: CelestialBodyType } {
+  if (!body.type) return false;
+  if (body.type === "LP" && !body.subType) return false;
+  return true;
 }
 
 export function buildDataBodiesAndLocations(): [
@@ -16,88 +23,70 @@ export function buildDataBodiesAndLocations(): [
   const flattened: CelestialBodyDictionary = {};
   const dictLocations: LocationDictionary = {};
 
-  for (const body of bodies) {
+  const usableBodies = bodies.filter(isUsableBody);
+
+  for (const body of usableBodies) {
     const cbody: CelestialBody = {
+      code: body.code,
       name: body.name,
       type: body.type,
-      ordinal: body.ordinal,
+      subType: body.subType,
+      parentCode: body.parentCode,
+      parentStarCode: body.parentStarCode,
       parentBody: null,
       parentStar: null,
-      coordinateX: body.coordinateX,
-      coordinateY: body.coordinateY,
-      coordinateZ: body.coordinateZ,
-      quaternionW: body.quaternionW,
-      quaternionX: body.quaternionX,
-      quaternionY: body.quaternionY,
-      quaternionZ: body.quaternionZ,
-      bodyRadius: body.bodyRadius,
-      omRadius: body.omRadius,
-      hoursPerCycle: body.rotationRate,
+      cartesianInKm: body.cartesianInKm,
+      quaternion: body.quaternion,
+      bodyRadiusInKm: body.bodyRadiusInKm,
+      omRadiusInKm: body.omRadiusInKm,
+      rotationPeriodInHours: body.rotationPeriodInHours,
       rotationCorrection: body.rotationCorrection,
-      orbitAngle: body.orbitAngle,
-      orbitRadius: body.orbitRadius,
-      ringRadiusInner: body.ringRadiusInner,
-      ringRadiusOuter: body.ringRadiusOuter,
-      themeColorR: body.themeColorR,
-      themeColorG: body.themeColorG,
-      themeColorB: body.themeColorB,
+      orbitPeriod: body.orbitPeriod,
+      atmosphereHeightInKm: body.atmosphereHeightInKm,
+      renderData: bodyRenderDataByCode.get(body.code),
       locations: [],
       children: [],
     };
 
-    const cbodyInfo = getBodyInfo(body.name);
-    if (cbodyInfo) {
-      cbody.surfacePressureAtm = cbodyInfo.surfacePressureAtm;
-      cbody.atmosphereHeightM = cbodyInfo.atmosphereHeightM;
-      cbody.colorSkyNoon = cbodyInfo.colorSkyNoon;
-      cbody.colorSkyHorizon = cbodyInfo.colorSkyHorizon;
-      cbody.colorSkyNight = cbodyInfo.colorSkyNight;
-      cbody.atmosphereColorOverrideCoefficient = cbodyInfo.atmosphereColorOverrideCoefficient;
-      cbody.atmosphereWaveLengthR = cbodyInfo.atmosphereWaveLengthR;
-      cbody.atmosphereWaveLengthG = cbodyInfo.atmosphereWaveLengthG;
-      cbody.atmosphereWaveLengthB = cbodyInfo.atmosphereWaveLengthB;
-      cbody.atmosphereScatteringStrength = cbodyInfo.atmosphereScatteringStrength;
-    }
+    flattened[cbody.code] = cbody;
+  }
 
-    const urlKey = toUrlKey(body.name);
-    flattened[urlKey] = cbody;
-
-    /* Build Forest */
-    if (!body.parentBody) {
-      systems[urlKey] = cbody;
+  for (const body of Object.values(flattened)) {
+    if (body.parentCode) {
+      body.parentBody = flattened[body.parentCode] || null;
+      body.parentBody?.children.push(body);
     } else {
-      const parentKey = toUrlKey(body.parentBody);
-      flattened[parentKey].children.push(cbody);
+      systems[body.code] = body;
     }
-
-    /* Link parent body & star */
-    cbody.parentBody = body.parentBody ? flattened[toUrlKey(body.parentBody)] || null : null;
-    cbody.parentStar = body.parentStar ? flattened[toUrlKey(body.parentStar)] || null : null;
+    body.parentStar = body.parentStarCode ? flattened[body.parentStarCode] || null : null;
   }
 
   for (const location of locations) {
+    if (!location.type) continue;
     const cloc: SCLocation = {
+      code: location.code,
       name: location.name,
-      type: location.type,
+      type: location.type as SCLocationType,
+      designation: location.designation,
+      restrictions: location.restrictions as SCLocationRestriction[],
+      factions: location.factions,
+      features: location.features,
+      weather: location.weather,
+      beaconMarker: location.beaconMarker,
+      beaconType: location.beaconType,
+      parentCode: location.parentCode,
+      parentStarCode: location.parentStarCode,
       parentBody: null,
       parentStar: null,
-      coordinateX: location.coordinateX,
-      coordinateY: location.coordinateY,
-      coordinateZ: location.coordinateZ,
-      wikiLink: location.wikiLink,
-      private: location.private,
-      quantum: location.quantum,
+      cartesianInKm: location.cartesianInKm,
       terminals: [],
     };
-    const urlKey = toUrlKey(location.name);
-    dictLocations[urlKey] = cloc;
 
-    /* Push to parent body */
-    flattened[toUrlKey(location.parentBody)].locations.push(cloc);
+    dictLocations[cloc.code] = cloc;
 
-    /* Link parent body & star */
-    cloc.parentBody = flattened[toUrlKey(location.parentBody)] || null;
-    cloc.parentStar = flattened[toUrlKey(location.parentStar)] || null;
+    cloc.parentBody = flattened[location.parentCode] || null;
+    cloc.parentStar = flattened[location.parentStarCode] || null;
+    cloc.parentBody?.locations.push(cloc);
   }
   return [systems, flattened, dictLocations];
 }

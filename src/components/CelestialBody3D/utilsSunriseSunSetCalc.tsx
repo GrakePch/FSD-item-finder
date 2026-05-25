@@ -16,16 +16,16 @@ export function getParentStarECEFCoords(cb: CelestialBody): [number, number, num
   if (!cb.parentStar) return [0, 0, 0];
 
   const parentStar = cb.parentStar;
-  const sx = parentStar.coordinateX;
-  const sy = parentStar.coordinateY;
-  const sz = parentStar.coordinateZ;
-  const bx = cb.coordinateX;
-  const by = cb.coordinateY;
-  const bz = cb.coordinateZ;
-  const qw = parentStar.quaternionW;
-  const qx = parentStar.quaternionX;
-  const qy = parentStar.quaternionY;
-  const qz = parentStar.quaternionZ;
+  const sx = parentStar.cartesianInKm.x;
+  const sy = parentStar.cartesianInKm.y;
+  const sz = parentStar.cartesianInKm.z;
+  const bx = cb.cartesianInKm.x;
+  const by = cb.cartesianInKm.y;
+  const bz = cb.cartesianInKm.z;
+  const qw = parentStar.quaternion.w;
+  const qx = parentStar.quaternion.x;
+  const qy = parentStar.quaternion.y;
+  const qz = parentStar.quaternion.z;
 
   const bsx =
     (1 - 2 * qy * qy - 2 * qz * qz) * (sx - bx) +
@@ -60,7 +60,7 @@ export function getParentStarDeclinationDeg(cb: CelestialBody): number {
 export function getParentStarApparentRadiusDeg(cb: CelestialBody): number {
   if (!cb.parentStar) return 0;
   const [bsx, bsy, bsz] = getParentStarECEFCoords(cb);
-  const radiusStar = cb.parentStar.bodyRadius;
+  const radiusStar = cb.parentStar.bodyRadiusInKm;
   const distance = Math.sqrt(bsx * bsx + bsy * bsy + bsz * bsz);
   if (distance === 0) return 0;
   // Clamp value to [-1, 1] to avoid NaN from floating point errors
@@ -93,7 +93,7 @@ export function getMeridianDeg(cb: CelestialBody): number {
 
 export function getParentStarLongitudeDeg(cb: CelestialBody): number {
   const currentRotation = getCurrentRotationDegRaw(
-    cb.hoursPerCycle || 0,
+    cb.rotationPeriodInHours || 0,
     cb.rotationCorrection || 0
   );
   const meridian = getMeridianDeg(cb);
@@ -109,9 +109,9 @@ export function getParentStarLongitudeDeg(cb: CelestialBody): number {
 }
 
 export function getLatitude(location: SCLocation): number {
-  const X = location.coordinateX;
-  const Y = location.coordinateY;
-  const Z = location.coordinateZ;
+  const X = location.cartesianInKm.x;
+  const Y = location.cartesianInKm.y;
+  const Z = location.cartesianInKm.z;
   const latitudeRad = Math.atan2(Z, Math.sqrt(X * X + Y * Y));
   return (latitudeRad * 180) / Math.PI;
 }
@@ -123,8 +123,8 @@ export function getLatitude(location: SCLocation): number {
  * @returns
  */
 export function getLongitude360(location: SCLocation): number {
-  const X = location.coordinateX;
-  const Y = location.coordinateY;
+  const X = location.cartesianInKm.x;
+  const Y = location.cartesianInKm.y;
   const latitude = getLatitude(location);
   if (Math.abs(latitude) === 90) return 0;
 
@@ -143,17 +143,17 @@ export function getLongitude(location: SCLocation): number {
 }
 
 export function getHeight(location: SCLocation): number {
-  const X = location.coordinateX;
-  const Y = location.coordinateY;
-  const Z = location.coordinateZ;
-  const bodyRadius = location.parentBody?.bodyRadius || 0;
+  const X = location.cartesianInKm.x;
+  const Y = location.cartesianInKm.y;
+  const Z = location.cartesianInKm.z;
+  const bodyRadius = location.parentBody?.bodyRadiusInKm || 0;
   const height = Math.sqrt(X * X + Y * Y + Z * Z) - bodyRadius;
   return height;
 }
 
 export function getElevationCorrection(location: SCLocation): number {
   if (!location.parentBody) return 0;
-  const bodyRadius = location.parentBody.bodyRadius;
+  const bodyRadius = location.parentBody.bodyRadiusInKm;
   const height = getHeight(location);
   const effectiveHeight = height < 0 ? 0 : height;
   const denominator = bodyRadius + effectiveHeight;
@@ -205,7 +205,7 @@ export function getCurrentHourAngle(location: SCLocation): number {
   const body = location.parentBody;
   if (!body) return NaN;
   const currentRotation = getCurrentRotationDegRaw(
-    body.hoursPerCycle || 0,
+    body.rotationPeriodInHours || 0,
     body.rotationCorrection || 0
   );
   const locationLongitude360 = getLongitude360(location);
@@ -220,8 +220,8 @@ export function getCurrentHourAngle(location: SCLocation): number {
 
 export function getRotateDegreesPerMinute(location: SCLocation): number {
   const body = location.parentBody;
-  if (!body || !body.hoursPerCycle) return 0;
-  return 360 / (body.hoursPerCycle * 60);
+  if (!body || !body.rotationPeriodInHours) return 0;
+  return 360 / (body.rotationPeriodInHours * 60);
 }
 
 export function getMinutesToNextSunrise(

@@ -1,5 +1,8 @@
 import location_name_to_i18n_key from "./data/location_name_to_i18n_key.json";
-import bodies from "./data/bodies.json";
+import bodies from "./data/starmap/body.json";
+import locations from "./data/starmap/locations.json";
+import bodyAliasToCode from "./data/body_alias_to_code.json";
+import locationAliasToCode from "./data/location_alias_to_code.json";
 import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
 import itemsNameI18nEn from "./i18n/items/en.json";
 
@@ -7,6 +10,24 @@ let uexAttributes: UexCategoryAttribute[] = [];
 const locationNameToI18nKeyMap = location_name_to_i18n_key as Record<string, string>;
 const itemsNameI18nEnMap = itemsNameI18nEn as Record<string, string>;
 const uexBodiesFixMap = uexBodiesFixM as Record<string, string>;
+const bodyAliasToCodeMap = bodyAliasToCode as Record<string, string>;
+const locationAliasToCodeMap = locationAliasToCode as Record<string, string>;
+const bodiesByCode = new Map(
+  bodies
+    .filter((body) => body.type && !(body.type === "LP" && !body.subType))
+    .map((body) => [body.code, body])
+);
+const locationsByCode = new Map(locations.map((location) => [location.code, location]));
+const uniqueLocationCodeByName = new Map<string, string>();
+
+for (const location of locations) {
+  const existing = uniqueLocationCodeByName.get(location.name);
+  if (existing === undefined) {
+    uniqueLocationCodeByName.set(location.name, location.code);
+  } else if (existing !== location.code) {
+    uniqueLocationCodeByName.set(location.name, "");
+  }
+}
 
 export function setUEXAttributes(attributes: UexCategoryAttribute[]) {
   uexAttributes = attributes;
@@ -20,6 +41,40 @@ export function isAscii(char: string): boolean {
 // Utility to sanitize body/location names to keys for URL usage
 export function toUrlKey(str: string): string {
   return str.replace(/[^a-zA-Z0-9-]+/g, "_");
+}
+
+export function resolveBodyCode(nameOrCode: string | null | undefined): string | null {
+  if (!nameOrCode) return null;
+  if (bodiesByCode.has(nameOrCode)) return nameOrCode;
+  const fixed = uexBodiesFixMap[nameOrCode] || bodyAliasToCodeMap[nameOrCode];
+  return fixed && bodiesByCode.has(fixed) ? fixed : null;
+}
+
+export function resolveLocationCode(
+  nameOrCode: string | null | undefined,
+  context?: { starSystemName?: string | null }
+): string | null {
+  if (!nameOrCode) return null;
+  if (locationsByCode.has(nameOrCode)) return nameOrCode;
+
+  const contextKey = context?.starSystemName
+    ? `${context.starSystemName}:${nameOrCode}`
+    : null;
+  const alias =
+    (contextKey ? locationAliasToCodeMap[contextKey] : null) ||
+    locationAliasToCodeMap[nameOrCode];
+  if (alias && locationsByCode.has(alias)) return alias;
+
+  const uniqueCode = uniqueLocationCodeByName.get(nameOrCode);
+  return uniqueCode && locationsByCode.has(uniqueCode) ? uniqueCode : null;
+}
+
+export function isSurfaceBodyType(type: string | null | undefined): boolean {
+  return type === "PLANET" || type === "SATELLITE" || type === "PLANETOID";
+}
+
+export function isLocationDisplayHidden(location: SCLocation): boolean {
+  return ["cave", "other", "onyx", "crash", "river"].includes(location.type);
 }
 
 export function locationNameToI18nKey(name: string): string {
@@ -101,21 +156,14 @@ function getDistance(v1: [number, number, number], v2: [number, number, number])
 }
 
 export function getBody(name: string | null | undefined): CelestialBody | null {
-  if (!name) return null;
-  /* Manually fix the name difference between UEX and bodies.json */
-  const manualFixIfPossible = uexBodiesFixMap[name];
-  const bodiesData = bodies as unknown as CelestialBody[];
-  return (
-    bodiesData.find((e) => e.name === name) ||
-    bodiesData.find((e) => e.name === manualFixIfPossible) ||
-    null
-  );
+  const code = resolveBodyCode(name);
+  return code ? ((bodiesByCode.get(code) as unknown as CelestialBody) || null) : null;
 }
 
 export function getPathTo(loc: SCLocation | CelestialBody): string[] {
   const path = [loc.name];
   while (loc.parentBody) {
-    if (loc.type === "Lagrange Point" && loc.parentBody.parentBody) loc = loc.parentBody.parentBody;
+    if (loc.type === "LP" && loc.parentBody.parentBody) loc = loc.parentBody.parentBody;
     else loc = loc.parentBody;
     if (loc) path.unshift(loc.name);
   }
@@ -132,15 +180,19 @@ export function getBodiesDistance(b1: string | null | undefined, b2: string | nu
   const info1 = getBody(b1);
   const info2 = getBody(b2);
   if (!info1 || !info2) return Infinity;
-  if ((info1.parentStar || info1.name) !== (info2.parentStar || info2.name))
+  if ((info1.parentStarCode || info1.code) !== (info2.parentStarCode || info2.code))
     return Infinity; //TODO: Better calculation for interstellar distance
   return getDistance(
-    [info1.coordinateX, info1.coordinateY, info1.coordinateZ],
-    [info2.coordinateX, info2.coordinateY, info2.coordinateZ]
+    [info1.cartesianInKm.x, info1.cartesianInKm.y, info1.cartesianInKm.z],
+    [info2.cartesianInKm.x, info2.cartesianInKm.y, info2.cartesianInKm.z]
   );
 }
 
 export function getTerminalDistance(op: TradeOption, body: string, tdata: TerminalDictionary): number {
+  const terminal = tdata?.[op.id_terminal];
+  const terminalBodyCode = terminal?.parentLocation?.parentBody?.code;
+  if (terminalBodyCode) return getBodiesDistance(terminalBodyCode, body);
+
   const locPath = getLocPath(op, tdata);
   if (!locPath) return Infinity;
   return getBodiesDistance(locPath[1], body);

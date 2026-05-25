@@ -1,16 +1,19 @@
 import uexBodiesFixM from "../data/uex_bodies_fix_manual.json";
 import { fetchWithCache } from "./apiFetch";
-import { getPathToTerminal, toUrlKey } from "../utils";
+import { getPathToTerminal, resolveBodyCode, resolveLocationCode } from "../utils";
 
 export async function fetchAndProcessTerminals(dictLocations: LocationDictionary): Promise<TerminalDictionary> {
   const res = await fetchWithCache("terminals", "https://api.uexcorp.space/2.0/terminals");
 
   const temp: Terminal[] = res.data.map((t: TerminalApiResponse): Terminal => {
-    let orbit_name_fix = t.orbit_name
-      ? (uexBodiesFixM as Record<string, string>)[t.orbit_name] || t.orbit_name
-      : t.orbit_name;
+    let orbitName = t.orbit_name;
     if (t.star_system_name === "Pyro" && t.orbit_name === "Pyro Jump Point")
-      orbit_name_fix = "Stanton Jump Point";
+      orbitName = "Stanton Jump Point";
+    const orbit_name_fix = orbitName
+      ? (uexBodiesFixM as Record<string, string>)[orbitName] ||
+        resolveBodyCode(orbitName) ||
+        orbitName
+      : orbitName;
     const locPath3rd = t.name.split(" - ").reverse();
     if (locPath3rd[0] === "Stanton Gateway Station")
       locPath3rd[0] = "Stanton Gateway";
@@ -89,12 +92,13 @@ export async function fetchAndProcessTerminals(dictLocations: LocationDictionary
       terminalAt = terminalAt.slice(terminalAt.indexOf(" ") + 1);
     }
 
-    if (terminalAt.endsWith(" Gateway")) {
-      terminalAt = terminalAt + ` (${t.location.name_star_system})`;
-    }
-
     /* Set parentLocation and location_path. Push Terminal into the parent location */
-    const _parentLocation = dictLocations[toUrlKey(terminalAt)];
+    const parentLocationCode = resolveLocationCode(terminalAt, {
+      starSystemName: t.location.name_star_system,
+    });
+    const _parentLocation = parentLocationCode
+      ? dictLocations[parentLocationCode]
+      : null;
     if (_parentLocation) {
       t.parentLocation = _parentLocation;
       t.location_path = getPathToTerminal(t);

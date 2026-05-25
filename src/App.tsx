@@ -13,6 +13,7 @@ import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import LanguageToggle from "./components/LanguageToggle/LanguageToggle";
 import {
+  DEFAULT_CURRENT_BODY_CODE,
   KEY_CURRENT_LOCATION,
   WindowSelectCurrentLocation,
 } from "./components/CurrentLocation/CurrentLocation";
@@ -55,7 +56,7 @@ function ErrorScreen({ message }: { message: string }) {
 
 function App() {
   const [currentLocation, setCurrentLocation] = useState<string>(
-    () => localStorage.getItem(KEY_CURRENT_LOCATION) || "Crusader"
+    () => localStorage.getItem(KEY_CURRENT_LOCATION) || DEFAULT_CURRENT_BODY_CODE
   );
   const setCurrentLocationWithLocalStorage = (location: string) => {
     localStorage.setItem(KEY_CURRENT_LOCATION, location);
@@ -86,11 +87,20 @@ function App() {
     const initializeAppData = async () => {
       // Synchronous data build
       const [dictSystems, dictBodies, dictLocations] = buildDataBodiesAndLocations();
+      const normalizedCurrentLocation = normalizeCurrentLocation(
+        currentLocation,
+        dictBodies,
+        dictLocations
+      );
+      if (normalizedCurrentLocation !== currentLocation) {
+        setCurrentLocationWithLocalStorage(normalizedCurrentLocation);
+      }
       setAllData((prev) => ({
         ...prev,
         dictSystems,
         dictCelestialBodies: dictBodies,
         dictLocations,
+        currentLocation: normalizedCurrentLocation,
       }));
 
       // Fire all async fetches in parallel, track results
@@ -165,10 +175,12 @@ function App() {
     const fromParam = params.get("from");
     const stored = localStorage.getItem(KEY_CURRENT_LOCATION);
     if (fromParam) {
-      setCurrentLocationWithLocalStorage(fromParam);
+      setCurrentLocationWithLocalStorage(
+        fromParam.startsWith("_loc_") ? DEFAULT_CURRENT_BODY_CODE : fromParam
+      );
     } else {
       if (!stored) {
-        localStorage.setItem(KEY_CURRENT_LOCATION, "Crusader");
+        localStorage.setItem(KEY_CURRENT_LOCATION, DEFAULT_CURRENT_BODY_CODE);
       }
     }
   }, [location.search]);
@@ -215,11 +227,11 @@ function App() {
             element={route(<EyesOnStarCitizen routing="_" />)}
           />
           <Route
-            path="/b/:celestialBodyKey"
+            path="/b/*"
             element={route(<EyesOnStarCitizen routing="b" />)}
           />
           <Route
-            path="/l/:locationKey"
+            path="/l/*"
             element={route(<EyesOnStarCitizen routing="l" />)}
           />
           <Route path="/t/:terminalId" element={route(<TerminalInfo />)} />
@@ -234,3 +246,12 @@ function App() {
 }
 
 export default App;
+
+function normalizeCurrentLocation(
+  value: string,
+  dictBodies: CelestialBodyDictionary,
+  dictLocations: LocationDictionary
+) {
+  if (dictLocations[value]) return value;
+  return dictBodies[value] ? value : DEFAULT_CURRENT_BODY_CODE;
+}

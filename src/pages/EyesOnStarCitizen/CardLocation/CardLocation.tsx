@@ -26,12 +26,12 @@ import {
 } from "../../../components/CelestialBody3D/utilsSunriseSunSetCalc";
 
 function getDistancesToOM(location: SCLocation): [number, number][] {
-  if (!location.parentBody || !location.parentBody.omRadius) return [];
-  const omRadius = location.parentBody.omRadius;
+  if (!location.parentBody || !location.parentBody.omRadiusInKm) return [];
+  const omRadius = location.parentBody.omRadiusInKm;
   const locPos = scToThree([
-    location.coordinateX,
-    location.coordinateY,
-    location.coordinateZ,
+    location.cartesianInKm.x,
+    location.cartesianInKm.y,
+    location.cartesianInKm.z,
   ]);
   const distances = omCoordinates.map((omVec, i) => {
     const omPos = [omVec[0] * omRadius, omVec[1] * omRadius, omVec[2] * omRadius];
@@ -49,19 +49,19 @@ function getDistancesToOM(location: SCLocation): [number, number][] {
 const CardLocation = ({ location }: { location: SCLocation }) => {
   const { t } = useTranslation();
   const position = scToThree([
-    location.coordinateX,
-    location.coordinateY,
-    location.coordinateZ,
+    location.cartesianInKm.x,
+    location.cartesianInKm.y,
+    location.cartesianInKm.z,
   ]);
   const { r, theta, phi } = cartesianToSpherical(...position);
   const { lat, long } = sphericalToLatLong(theta, phi);
 
   // Compute distances to each OM (orbital marker)
-  const canNavigatedByOMs = location.parentBody && location.parentBody.omRadius;
+  const canNavigatedByOMs = location.parentBody && location.parentBody.omRadiusInKm;
   const distancesToOMs = canNavigatedByOMs ? getDistancesToOM(location) : [];
 
   // Time related values
-  const lengthOfDayInHour = location.parentBody?.hoursPerCycle ?? 0;
+  const lengthOfDayInHour = location.parentBody?.rotationPeriodInHours ?? 0;
   const lengthOfDaylightInHour = getLengthOfDaylightInMinutes(location) / 60;
   const lengthOfNightInHour = getLengthOfNightInMinutes(location) / 60;
 
@@ -143,13 +143,13 @@ const CardLocation = ({ location }: { location: SCLocation }) => {
         </div>
         <h3 className="type">
           {typeInfo}
-          {location.quantum === 0 && (
+          {!location.beaconMarker && (
             <span className="quantum-not-available">
               <Icon path={icon.quantum_off} size="1.5rem" />
               {t("LocationInfo.quantumNotAvailable")}
             </span>
           )}
-          {location.private === 1 && (
+          {location.restrictions.includes("private") && (
             <span className="private-property">
               <Icon path={icon.private_property} size="1.5rem" />
               {t("LocationInfo.privateProperty")}
@@ -170,7 +170,7 @@ const CardLocation = ({ location }: { location: SCLocation }) => {
           </li>
           <li>
             <span>{t("LocationInfo.altitude")}</span>
-            <span>{(r - (location.parentBody?.bodyRadius ?? 0)).toFixed(2)} km</span>
+            <span>{(r - (location.parentBody?.bodyRadiusInKm ?? 0)).toFixed(2)} km</span>
           </li>
         </ul>
       </div>
@@ -178,15 +178,15 @@ const CardLocation = ({ location }: { location: SCLocation }) => {
         <ClockFace
           hourAngleDeg={currentHourAngleDeg}
           sunriseHourAngleDeg={sunriseHourAngleDeg}
-          colorDay={location.parentBody?.colorSkyNoon}
+          colorDay={location.parentBody?.renderData?.colorSkyNoon}
           colorDawn={
-            location.parentBody?.colorSkyHorizon ??
+            location.parentBody?.renderData?.colorSkyHorizon ??
             mixHexColor(
-              location.parentBody?.colorSkyNoon,
-              location.parentBody?.colorSkyNight
+              location.parentBody?.renderData?.colorSkyNoon,
+              location.parentBody?.renderData?.colorSkyNight
             )
           }
-          colorNight={location.parentBody?.colorSkyNight}
+          colorNight={location.parentBody?.renderData?.colorSkyNight}
         />
         <div className="section-wrapper">
           <ul>

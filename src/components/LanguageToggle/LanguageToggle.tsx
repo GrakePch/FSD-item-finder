@@ -26,7 +26,7 @@ export default function LanguageToggle() {
   };
 
   return (
-    <button onClick={toggleLang} className={styles.LanguageToggle}>
+    <button onClick={toggleLang} className={`${styles.LanguageToggle} LanguageToggle`}>
       {i18n.language === 'en' ? '中' : 'EN'}
     </button>
   );

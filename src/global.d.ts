@@ -1,31 +1,21 @@
 // Main data types
 
-interface CelestialBody {
-  name: string;
-  type: string;
-  ordinal?: string;
-  parentBody: CelestialBody | null;
-  parentStar: CelestialBody | null;
-  coordinateX: number;
-  coordinateY: number;
-  coordinateZ: number;
-  quaternionW: number;
-  quaternionX: number;
-  quaternionY: number;
-  quaternionZ: number;
-  bodyRadius: number;
-  omRadius?: number;
-  hoursPerCycle?: number;
-  rotationCorrection?: number;
-  orbitAngle?: number;
-  orbitRadius?: number;
-  themeColorR?: number;
-  themeColorG?: number;
-  themeColorB?: number;
-  locations: SCLocation[];
-  children: CelestialBody[];
-  ringRadiusInner?: number;
-  ringRadiusOuter?: number;
+type VerseGuideCartesianInKm = {
+  x: number;
+  y: number;
+  z: number;
+};
+
+type VerseGuideQuaternion = {
+  w: number;
+  x: number;
+  y: number;
+  z: number;
+};
+
+type CelestialBodyRenderData = {
+  code: string;
+  name?: string;
   surfacePressureAtm?: number;
   atmosphereHeightM?: number;
   colorSkyNoon?: string;
@@ -36,48 +26,113 @@ interface CelestialBody {
   atmosphereWaveLengthG?: number;
   atmosphereWaveLengthB?: number;
   atmosphereScatteringStrength?: number;
+  themeColorR?: number;
+  themeColorG?: number;
+  themeColorB?: number;
+  ringRadiusInner?: number;
+  ringRadiusOuter?: number;
+};
+
+interface CelestialBody {
+  code: string;
+  name: string;
+  type: CelestialBodyType;
+  subType?: string | null;
+  parentCode: string | null;
+  parentStarCode: string | null;
+  parentBody: CelestialBody | null;
+  parentStar: CelestialBody | null;
+  cartesianInKm: VerseGuideCartesianInKm;
+  quaternion: VerseGuideQuaternion;
+  bodyRadiusInKm: number;
+  omRadiusInKm?: number;
+  rotationPeriodInHours?: number;
+  rotationCorrection?: number;
+  orbitPeriod?: number;
+  atmosphereHeightInKm?: number;
+  renderData?: CelestialBodyRenderData;
+  locations: SCLocation[];
+  children: CelestialBody[];
 }
 
 interface SCLocation {
+  code: string;
   name: string;
-  type: string;
+  type: SCLocationType;
+  designation: string | null;
+  restrictions: SCLocationRestriction[];
+  factions: string | null;
+  features: SCLocationFeature[];
+  weather: SCLocationWeather | null;
+  beaconMarker: boolean;
+  beaconType: string | null;
+  parentCode: string;
+  parentStarCode: string;
   parentBody: CelestialBody | null;
   parentStar: CelestialBody | null;
-  coordinateX: number;
-  coordinateY: number;
-  coordinateZ: number;
-  wikiLink: string | null;
-  private: number;
-  quantum: number;
+  cartesianInKm: VerseGuideCartesianInKm;
   terminals: Terminal[];
 }
 
-type CelestialBodyType = "Star" | "Planet" | "Moon" | "Lagrange Point" | "Jump Point";
+type CelestialBodyType =
+  | "SINGLE_STAR"
+  | "PLANET"
+  | "SATELLITE"
+  | "PLANETOID"
+  | "LP"
+  | "JUMPPOINT";
 
 type SCLocationType =
-  | "Ruins"
-  | "Underground bunker"
-  | "Outpost"
-  | "City"
-  | "Landing zone"
-  | "Emergency shelter"
-  | "Settlement"
-  | "Space station"
-  | "Space Station"
-  | "Landmark"
-  | "Scrapyard"
-  | "CommArray"
-  | "Asteroid base"
-  | "Cave"
-  | "Shipwreck"
-  | "Prison"
-  | "Racetrack"
-  | "Distribution center"
-  | "Asteroid cluster"
-  | "Forward operating base"
-  | "Planetary alignment facility"
-  | "Orbital laser platform"
-  | "Depot";
+  | "abandoned"
+  | "antenna"
+  | "asteroidbase"
+  | "cave"
+  | "city"
+  | "comm"
+  | "crash"
+  | "depot"
+  | "drug"
+  | "farm"
+  | "fob"
+  | "junkyard"
+  | "mining"
+  | "onyx"
+  | "orbitallaser"
+  | "other"
+  | "outpost"
+  | "platforms"
+  | "prison"
+  | "race"
+  | "research"
+  | "river"
+  | "ruins"
+  | "scramble"
+  | "shanty"
+  | "shelter"
+  | "stash"
+  | "station"
+  | "ugf"
+  | "underground";
+
+type SCLocationRestriction =
+  | "armistice"
+  | "hostile"
+  | "nofly"
+  | "private"
+  | "restricted";
+
+type SCLocationFeature = {
+  val: string;
+  desc: string;
+  types?: string[];
+};
+
+type SCLocationWeather = {
+  low: number;
+  high: number;
+  average: number;
+  count: number;
+};
 
 interface Terminal {
   id: number;
@@ -190,7 +245,7 @@ type ArmorSet = {
 };
 
 type CelestialBodyDictionary = { [name: string]: CelestialBody };
-type LocationDictionary = { [name: string]: SCLocation };
+type LocationDictionary = { [code: string]: SCLocation };
 type TerminalDictionary = { [id: number]: Terminal };
 type ItemDictionary = { [key: string]: Item };
 type VehicleDictionary = { [key: string]: Vehicle };

@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import CelestialBody3D from "../../components/CelestialBody3D/CelestialBody3D";
 import "./EyesOnStarCitizen.css";
 import { ContextAllData } from "../../contexts";
-import { toUrlKey } from "../../utils";
+import { isSurfaceBodyType } from "../../utils";
 import { Link, useParams, useSearchParams } from "react-router";
 import CelestialBodyInfo from "../CelestialBodyInfo/CelestialBodyInfo";
 import LocationInfo from "../LocationInfo/LocationInfo";
@@ -22,8 +22,8 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
   const { t } = useTranslation();
   const { dictCelestialBodies, dictLocations, currentLocation } =
     useContext(ContextAllData);
-  const celestialBodyKey = useParams().celestialBodyKey || "";
-  const locationKey = useParams().locationKey || "";
+  const celestialBodyKey = useParams()["*"] || "";
+  const locationKey = useParams()["*"] || "";
   const [seeCelestialBody, setSeeCelestialBody] = useState<CelestialBody | null>(null);
   const seeLocation = dictLocations[locationKey] || null;
   const [isInfoCardOpen, setIsInfoCardOpen] = useState(true);
@@ -63,22 +63,22 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
     let tempCB = null;
     if (routing === "_") {
       tempCB =
-        (currentLocation.startsWith("_loc_")
-          ? dictLocations[toUrlKey(currentLocation.slice(5))]?.parentBody
-          : dictCelestialBodies[toUrlKey(currentLocation)]) || null;
+        dictLocations[currentLocation]?.parentBody ||
+        dictCelestialBodies[currentLocation] ||
+        null;
       if (!tempCB) {
-        tempCB = dictCelestialBodies["Crusader"];
-      } else if (tempCB.type !== "Planet" && tempCB.type !== "Moon") {
-        tempCB = dictCelestialBodies["Crusader"];
+        tempCB = dictCelestialBodies["STANTON/II"];
+      } else if (!isSurfaceBodyType(tempCB.type)) {
+        tempCB = dictCelestialBodies["STANTON/II"];
       }
     } else if (routing === "b") {
       tempCB = dictCelestialBodies[celestialBodyKey] || null;
-      if (tempCB && tempCB.type !== "Planet" && tempCB.type !== "Moon") {
+      if (tempCB && !isSurfaceBodyType(tempCB.type)) {
         tempCB = null;
       }
     } else if (routing === "l") {
       tempCB = dictLocations[locationKey]?.parentBody || null;
-      if (tempCB && tempCB.type !== "Planet" && tempCB.type !== "Moon") {
+      if (tempCB && !isSurfaceBodyType(tempCB.type)) {
         tempCB = null;
       }
     }

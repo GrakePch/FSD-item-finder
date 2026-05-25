@@ -10,7 +10,7 @@ export function useParentStarRotation({
 }) {
   const [rotation, setRotation] = useState(() => {
     const deg = -getRotationDeg(
-      celestialBody.hoursPerCycle,
+      celestialBody.rotationPeriodInHours,
       celestialBody.rotationCorrection || 0
     );
     const rad = (deg * Math.PI) / 180;
@@ -30,7 +30,7 @@ export function useParentStarRotation({
   useEffect(() => {
     const interval = setInterval(() => {
       const deg = -getRotationDeg(
-        celestialBody.hoursPerCycle,
+        celestialBody.rotationPeriodInHours,
         celestialBody.rotationCorrection || 0
       );
       const rad = (deg * Math.PI) / 180;

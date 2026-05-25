@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 import styles from "./CelestialBodyCard.module.css";
-import { locationNameToI18nKey, toUrlKey } from "../../utils";
+import { isSurfaceBodyType, locationNameToI18nKey } from "../../utils";
 import { useTranslation } from "react-i18next";
 import Icon from "@mdi/react";
 import locationIcon from "../../assets/locationIcon";
@@ -27,19 +27,21 @@ const CelestialBodyCard = ({ celestialBody, onClick }: CelestialBodyCardProps) =
     } else {
       // Keep query params when navigating
       const search = typeof window !== "undefined" ? window.location.search : "";
-      navigate(`/b/${toUrlKey(celestialBody.name)}${search}`);
+      navigate(`/b/${celestialBody.code}${search}`);
     }
   };
 
+  const renderData = celestialBody.renderData;
   const themeColor =
-    celestialBody.themeColorR && celestialBody.themeColorG && celestialBody.themeColorB
-      ? `rgb(${celestialBody.themeColorR}, ${celestialBody.themeColorG}, ${celestialBody.themeColorB})`
+    renderData?.themeColorR && renderData.themeColorG && renderData.themeColorB
+      ? `rgb(${renderData.themeColorR}, ${renderData.themeColorG}, ${renderData.themeColorB})`
       : undefined;
+  const isSurfaceBody = isSurfaceBodyType(celestialBody.type);
 
   return (
     <a
       className={styles.CelestialBodyCard}
-      href={`/b/${toUrlKey(celestialBody.name)}${
+      href={`/b/${celestialBody.code}${
         typeof window !== "undefined" ? window.location.search : ""
       }`}
       onClick={handleClick}
@@ -48,13 +50,10 @@ const CelestialBodyCard = ({ celestialBody, onClick }: CelestialBodyCardProps) =
         className={styles.iconOrThumbnail}
         style={{
           backgroundImage: `url(/body_thumbnails/${celestialBody.name}.png)`,
-          backgroundColor:
-            celestialBody.type === "Planet" || celestialBody.type === "Moon"
-              ? themeColor
-              : undefined,
+          backgroundColor: isSurfaceBody ? themeColor : undefined,
         }}
       >
-        <Icon path={locationIcon[celestialBody.type] || ""} />
+        {!isSurfaceBody && <Icon path={locationIcon[celestialBody.type] || ""} />}
       </div>
       <div className={styles.info}>
         <p className={styles.name}>

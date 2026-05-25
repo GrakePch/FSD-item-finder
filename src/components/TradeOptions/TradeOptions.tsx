@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useSearchParams } from "react-router";
 import { ContextAllData } from "../../contexts";
-import { getLocPath, getTerminalDistance, toUrlKey } from "../../utils";
+import { getLocPath, getTerminalDistance } from "../../utils";
 import LocationTreeList from "./LocationTreeList";
 import PriceSortedOptionsList from "./PriceSortedOptionsList";
 import styles from "./TradeOptions.module.css";
@@ -33,13 +33,13 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }: TradeOptionsProps)
           .localeCompare((getLocPath(b, dictTerminals) || []).join("  "))
       );
 
-    const fromBodyName = getCurrentBodyName(
+    const fromBodyRef = getCurrentBodyRef(
       currentLocation,
       dictLocations,
-      "Crusader"
+      "STANTON/II"
     );
     tempOptions.forEach((option: TradeOption) => {
-      option.distance = getTerminalDistance(option, fromBodyName, dictTerminals);
+      option.distance = getTerminalDistance(option, fromBodyRef, dictTerminals);
     });
     tempOptions.sort(
       (a: TradeOption, b: TradeOption) => (a.distance || 0) - (b.distance || 0)
@@ -114,16 +114,13 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }: TradeOptionsProps)
   );
 };
 
-const getCurrentBodyName = (
+const getCurrentBodyRef = (
   currentLocation: string,
   dictLocations: LocationDictionary,
-  fallbackBodyName: string
+  fallbackBodyCode: string
 ) => {
-  if (!currentLocation.startsWith("_loc_")) return currentLocation;
-
-  const storedLocationName = currentLocation.slice(5);
-  const location = dictLocations[toUrlKey(storedLocationName)];
-  return location?.parentBody?.name || fallbackBodyName;
+  const location = dictLocations[currentLocation];
+  return location?.parentBody?.code || fallbackBodyCode;
 };
 
 const getOptionPrice = (option: TradeOption, tradeType: TradeType) =>

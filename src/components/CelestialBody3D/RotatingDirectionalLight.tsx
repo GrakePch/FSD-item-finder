@@ -14,15 +14,15 @@ export default function RotatingDirectionalLight({
 
   // Calculate positions
   const bodyPosition: [number, number, number] = [
-    celestialBody.coordinateX,
-    celestialBody.coordinateZ,
-    -celestialBody.coordinateY,
+    celestialBody.cartesianInKm.x,
+    celestialBody.cartesianInKm.z,
+    -celestialBody.cartesianInKm.y,
   ];
   const parentStarPosition: [number, number, number] = celestialBody.parentStar
     ? [
-        celestialBody.parentStar.coordinateX,
-        celestialBody.parentStar.coordinateZ,
-        -celestialBody.parentStar.coordinateY,
+        celestialBody.parentStar.cartesianInKm.x,
+        celestialBody.parentStar.cartesianInKm.z,
+        -celestialBody.parentStar.cartesianInKm.y,
       ]
     : [0, 0, 0];
   const lightSourceRelativePosition: [number, number, number] = [
@@ -44,12 +44,12 @@ export default function RotatingDirectionalLight({
     const now = Date.now();
     if (
       dirLightRef.current &&
-      celestialBody.hoursPerCycle &&
+      celestialBody.rotationPeriodInHours &&
       (now - lastUpdateRef.current > 100 || lastUpdateRef.current === 0)
     ) {
       lastUpdateRef.current = now;
       const deg = -getRotationDeg(
-        celestialBody.hoursPerCycle,
+        celestialBody.rotationPeriodInHours,
         celestialBody.rotationCorrection || 0
       );
       const r = new THREE.Vector3(...lightSourceRelativePosition).length();

@@ -1,5 +1,6 @@
 [
   {
+    "code": "STANTON/I",
     "name": "Hurston",
     "surfacePressureAtm": 0.89,
     "atmosphereHeightM": 100000,
@@ -10,11 +11,15 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 650,
     "atmosphereWaveLengthB": 650,
-    "atmosphereScatteringStrength": 16
+    "atmosphereScatteringStrength": 16,
+    "themeColorR": 138,
+    "themeColorG": 101,
+    "themeColorB": 71
   },
   {
+    "code": "STANTON/II",
     "name": "Crusader",
-    "surfacePressureAtm": 1.0,
+    "surfacePressureAtm": 1,
     "atmosphereHeightM": 745000,
     "colorSkyNoon": "#a7deea",
     "colorSkyHorizon": "#f4a47e",
@@ -23,9 +28,13 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 560,
     "atmosphereWaveLengthB": 500,
-    "atmosphereScatteringStrength": 16
+    "atmosphereScatteringStrength": 16,
+    "themeColorR": 231,
+    "themeColorG": 152,
+    "themeColorB": 147
   },
   {
+    "code": "STANTON/III",
     "name": "ArcCorp",
     "surfacePressureAtm": 0.84,
     "atmosphereHeightM": 80000,
@@ -36,9 +45,13 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 530,
     "atmosphereWaveLengthB": 500,
-    "atmosphereScatteringStrength": 16
+    "atmosphereScatteringStrength": 16,
+    "themeColorR": 172,
+    "themeColorG": 102,
+    "themeColorB": 90
   },
   {
+    "code": "STANTON/IV",
     "name": "microTech",
     "surfacePressureAtm": 1.1,
     "atmosphereHeightM": 100000,
@@ -49,9 +62,13 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 530,
     "atmosphereWaveLengthB": 440,
-    "atmosphereScatteringStrength": 16
+    "atmosphereScatteringStrength": 16,
+    "themeColorR": 167,
+    "themeColorG": 184,
+    "themeColorB": 193
   },
   {
+    "code": "STANTON/1A",
     "name": "Arial",
     "surfacePressureAtm": 0.77,
     "atmosphereHeightM": 34450,
@@ -62,9 +79,13 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 700,
     "atmosphereWaveLengthB": 700,
-    "atmosphereScatteringStrength": 16
+    "atmosphereScatteringStrength": 16,
+    "themeColorR": 214,
+    "themeColorG": 142,
+    "themeColorB": 34
   },
   {
+    "code": "STANTON/1B",
     "name": "Aberdeen",
     "surfacePressureAtm": 1.04,
     "atmosphereHeightM": 27400,
@@ -74,9 +95,13 @@
     "atmosphereWaveLengthR": 440,
     "atmosphereWaveLengthG": 440,
     "atmosphereWaveLengthB": 440,
-    "atmosphereScatteringStrength": 16
+    "atmosphereScatteringStrength": 16,
+    "themeColorR": 219,
+    "themeColorG": 180,
+    "themeColorB": 88
   },
   {
+    "code": "STANTON/1C",
     "name": "Magda",
     "surfacePressureAtm": 0.33,
     "atmosphereHeightM": 34000,
@@ -86,9 +111,13 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 700,
     "atmosphereWaveLengthB": 700,
-    "atmosphereScatteringStrength": 4
+    "atmosphereScatteringStrength": 4,
+    "themeColorR": 207,
+    "themeColorG": 165,
+    "themeColorB": 159
   },
   {
+    "code": "STANTON/1D",
     "name": "Ita",
     "surfacePressureAtm": 0.15,
     "atmosphereHeightM": 32500,
@@ -98,9 +127,13 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 700,
     "atmosphereWaveLengthB": 700,
-    "atmosphereScatteringStrength": 4
+    "atmosphereScatteringStrength": 4,
+    "themeColorR": 121,
+    "themeColorG": 135,
+    "themeColorB": 122
   },
   {
+    "code": "STANTON/2A",
     "name": "Cellin",
     "surfacePressureAtm": 0.19,
     "atmosphereHeightM": 26000,
@@ -110,9 +143,13 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 650,
     "atmosphereWaveLengthB": 600,
-    "atmosphereScatteringStrength": 4
+    "atmosphereScatteringStrength": 4,
+    "themeColorR": 113,
+    "themeColorG": 127,
+    "themeColorB": 144
   },
   {
+    "code": "STANTON/2B",
     "name": "Daymar",
     "surfacePressureAtm": 0.6,
     "atmosphereHeightM": 29500,
@@ -122,9 +159,13 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 700,
     "atmosphereWaveLengthB": 700,
-    "atmosphereScatteringStrength": 8
+    "atmosphereScatteringStrength": 8,
+    "themeColorR": 211,
+    "themeColorG": 170,
+    "themeColorB": 150
   },
   {
+    "code": "STANTON/2C",
     "name": "Yela",
     "surfacePressureAtm": 0.19,
     "atmosphereHeightM": 31300,
@@ -134,9 +175,15 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 650,
     "atmosphereWaveLengthB": 600,
-    "atmosphereScatteringStrength": 4
+    "atmosphereScatteringStrength": 4,
+    "themeColorR": 128,
+    "themeColorG": 128,
+    "themeColorB": 150,
+    "ringRadiusInner": 500,
+    "ringRadiusOuter": 750
   },
   {
+    "code": "STANTON/3B",
     "name": "Wala",
     "surfacePressureAtm": 0.09,
     "atmosphereHeightM": 28300,
@@ -146,9 +193,13 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 700,
     "atmosphereWaveLengthB": 700,
-    "atmosphereScatteringStrength": 4
+    "atmosphereScatteringStrength": 4,
+    "themeColorR": 124,
+    "themeColorG": 150,
+    "themeColorB": 158
   },
   {
+    "code": "STANTON/3A",
     "name": "Lyria",
     "surfacePressureAtm": 0.09,
     "atmosphereHeightM": 22300,
@@ -158,9 +209,13 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 650,
     "atmosphereWaveLengthB": 600,
-    "atmosphereScatteringStrength": 8
+    "atmosphereScatteringStrength": 8,
+    "themeColorR": 112,
+    "themeColorG": 142,
+    "themeColorB": 178
   },
   {
+    "code": "STANTON/4A",
     "name": "Calliope",
     "surfacePressureAtm": 0.8,
     "atmosphereHeightM": 24000,
@@ -170,9 +225,13 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 700,
     "atmosphereWaveLengthB": 700,
-    "atmosphereScatteringStrength": 16
+    "atmosphereScatteringStrength": 16,
+    "themeColorR": 124,
+    "themeColorG": 132,
+    "themeColorB": 148
   },
   {
+    "code": "STANTON/4B",
     "name": "Clio",
     "surfacePressureAtm": 0.62,
     "atmosphereHeightM": 33700,
@@ -183,9 +242,13 @@
     "atmosphereWaveLengthR": 600,
     "atmosphereWaveLengthG": 300,
     "atmosphereWaveLengthB": 300,
-    "atmosphereScatteringStrength": 4
+    "atmosphereScatteringStrength": 4,
+    "themeColorR": 130,
+    "themeColorG": 141,
+    "themeColorB": 137
   },
   {
+    "code": "STANTON/4C",
     "name": "Euterpe",
     "surfacePressureAtm": 0.79,
     "atmosphereHeightM": 21300,
@@ -195,10 +258,13 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 600,
     "atmosphereWaveLengthB": 600,
-    "atmosphereScatteringStrength": 8
+    "atmosphereScatteringStrength": 8,
+    "themeColorR": 130,
+    "themeColorG": 141,
+    "themeColorB": 159
   },
-
   {
+    "code": "PYRO/I",
     "name": "Pyro I",
     "surfacePressureAtm": 2.38,
     "atmosphereHeightM": 38000,
@@ -208,9 +274,13 @@
     "atmosphereWaveLengthR": 440,
     "atmosphereWaveLengthG": 440,
     "atmosphereWaveLengthB": 440,
-    "atmosphereScatteringStrength": 16
+    "atmosphereScatteringStrength": 16,
+    "themeColorR": 54,
+    "themeColorG": 80,
+    "themeColorB": 106
   },
   {
+    "code": "PYRO/II",
     "name": "Monox",
     "surfacePressureAtm": 0.91,
     "atmosphereHeightM": 30000,
@@ -221,9 +291,13 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 550,
     "atmosphereWaveLengthB": 500,
-    "atmosphereScatteringStrength": 16
+    "atmosphereScatteringStrength": 16,
+    "themeColorR": 157,
+    "themeColorG": 77,
+    "themeColorB": 72
   },
   {
+    "code": "PYRO/III",
     "name": "Bloom",
     "surfacePressureAtm": 0.99,
     "atmosphereHeightM": 48000,
@@ -234,9 +308,13 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 540,
     "atmosphereWaveLengthB": 450,
-    "atmosphereScatteringStrength": 4
+    "atmosphereScatteringStrength": 4,
+    "themeColorR": 149,
+    "themeColorG": 103,
+    "themeColorB": 29
   },
   {
+    "code": "PYRO/V",
     "name": "Pyro V",
     "surfacePressureAtm": 2.99,
     "atmosphereHeightM": 750000,
@@ -246,9 +324,13 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 700,
     "atmosphereWaveLengthB": 700,
-    "atmosphereScatteringStrength": 16
+    "atmosphereScatteringStrength": 16,
+    "themeColorR": 161,
+    "themeColorG": 186,
+    "themeColorB": 116
   },
   {
+    "code": "PYRO/IV",
     "name": "Pyro IV",
     "surfacePressureAtm": 0.49,
     "atmosphereHeightM": 30000,
@@ -259,9 +341,15 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 530,
     "atmosphereWaveLengthB": 500,
-    "atmosphereScatteringStrength": 16
+    "atmosphereScatteringStrength": 16,
+    "themeColorR": 172,
+    "themeColorG": 111,
+    "themeColorB": 81,
+    "ringRadiusInner": 420,
+    "ringRadiusOuter": 710
   },
   {
+    "code": "PYRO/VI",
     "name": "Terminus",
     "surfacePressureAtm": 1.13,
     "atmosphereHeightM": 32000,
@@ -272,11 +360,17 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 700,
     "atmosphereWaveLengthB": 700,
-    "atmosphereScatteringStrength": 16
+    "atmosphereScatteringStrength": 16,
+    "themeColorR": 47,
+    "themeColorG": 48,
+    "themeColorB": 50,
+    "ringRadiusInner": 410,
+    "ringRadiusOuter": 670
   },
   {
+    "code": "PYRO/5A",
     "name": "Ignis",
-    "surfacePressureAtm":  0.08,
+    "surfacePressureAtm": 0.08,
     "atmosphereHeightM": 25000,
     "colorSkyNoon": "#9fc2bd",
     "colorSkyHorizon": "#cd7456",
@@ -285,9 +379,13 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 580,
     "atmosphereWaveLengthB": 550,
-    "atmosphereScatteringStrength": 16
+    "atmosphereScatteringStrength": 16,
+    "themeColorR": 205,
+    "themeColorG": 161,
+    "themeColorB": 147
   },
   {
+    "code": "PYRO/5B",
     "name": "Vatra",
     "surfacePressureAtm": 1.21,
     "atmosphereHeightM": 20000,
@@ -298,9 +396,13 @@
     "atmosphereWaveLengthR": 620,
     "atmosphereWaveLengthG": 550,
     "atmosphereWaveLengthB": 600,
-    "atmosphereScatteringStrength": 16
+    "atmosphereScatteringStrength": 16,
+    "themeColorR": 154,
+    "themeColorG": 162,
+    "themeColorB": 140
   },
   {
+    "code": "PYRO/5C",
     "name": "Adir",
     "surfacePressureAtm": 0.05,
     "atmosphereHeightM": 20000,
@@ -310,9 +412,13 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 700,
     "atmosphereWaveLengthB": 700,
-    "atmosphereScatteringStrength": 4
+    "atmosphereScatteringStrength": 4,
+    "themeColorR": 126,
+    "themeColorG": 125,
+    "themeColorB": 139
   },
   {
+    "code": "PYRO/5D",
     "name": "Fairo",
     "surfacePressureAtm": 1.77,
     "atmosphereHeightM": 30000,
@@ -323,9 +429,13 @@
     "atmosphereWaveLengthR": 500,
     "atmosphereWaveLengthG": 700,
     "atmosphereWaveLengthB": 650,
-    "atmosphereScatteringStrength": 16
+    "atmosphereScatteringStrength": 16,
+    "themeColorR": 165,
+    "themeColorG": 76,
+    "themeColorB": 69
   },
   {
+    "code": "PYRO/5E",
     "name": "Fuego",
     "surfacePressureAtm": 0.56,
     "atmosphereHeightM": 37000,
@@ -335,9 +445,13 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 700,
     "atmosphereWaveLengthB": 700,
-    "atmosphereScatteringStrength": 8
+    "atmosphereScatteringStrength": 8,
+    "themeColorR": 225,
+    "themeColorG": 175,
+    "themeColorB": 112
   },
   {
+    "code": "PYRO/5F",
     "name": "Vuur",
     "surfacePressureAtm": 1.25,
     "atmosphereHeightM": 60000,
@@ -347,6 +461,9 @@
     "atmosphereWaveLengthR": 700,
     "atmosphereWaveLengthG": 700,
     "atmosphereWaveLengthB": 700,
-    "atmosphereScatteringStrength": 16
+    "atmosphereScatteringStrength": 16,
+    "themeColorR": 163,
+    "themeColorG": 178,
+    "themeColorB": 167
   }
 ]

@@ -11,12 +11,14 @@ import { ContextAllData } from "../../contexts";
 import useDebouncedValue from "../../hooks/useDebouncedValue";
 
 export const KEY_CURRENT_LOCATION = "fsd_current_location";
+export const DEFAULT_CURRENT_BODY_CODE = "STANTON/II";
 
 export const CurrentLocationButton = () => {
   const { t } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
-  const { currentLocation } = useContext(ContextAllData);
+  const { currentLocation, dictCelestialBodies, dictLocations } =
+    useContext(ContextAllData);
 
   // Use search param for popup state
   const params = new URLSearchParams(location.search);
@@ -26,7 +28,11 @@ export const CurrentLocationButton = () => {
     navigate({ search: params.toString() }, { replace: false });
   };
 
-  const nameCurrentLocation = parseCurrentLocationName(currentLocation);
+  const nameCurrentLocation = parseCurrentLocationName(
+    currentLocation,
+    dictCelestialBodies,
+    dictLocations
+  );
 
   return (
     <>
@@ -42,7 +48,8 @@ export const WindowSelectCurrentLocation = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
-  const { currentLocation, setCurrentLocation } = useContext(ContextAllData);
+  const { currentLocation, setCurrentLocation, dictCelestialBodies, dictLocations } =
+    useContext(ContextAllData);
   const [searchName, setSearchName] = useState("");
   const debouncedSearchName = useDebouncedValue(searchName);
 
@@ -55,20 +62,20 @@ export const WindowSelectCurrentLocation = () => {
   };
 
   /*
-   * When Clicking on Celestial Body card, from := celestialBody.name
-   * When Clicking on Location card, from := "_loc_" + location.name
+   * When Clicking on Celestial Body card, from := celestialBody.code
+   * When Clicking on Location card, from := location.code
    */
 
   const handleCelestialBodyClick = (body: CelestialBody) => {
-    setCurrentLocation(body.name);
+    setCurrentLocation(body.code);
     const params = new URLSearchParams(window.location.search);
     params.delete("from");
     params.delete("selectLoc");
     navigate({ search: params.toString() }, { replace: false });
   };
   const handleLocationClick = (location: SCLocation) => {
-    if (location.parentBody && location.parentBody.name) {
-      setCurrentLocation("_loc_" + location.name);
+    if (location.parentBody) {
+      setCurrentLocation(location.code);
     }
     const params = new URLSearchParams(window.location.search);
     params.delete("from");
@@ -76,7 +83,11 @@ export const WindowSelectCurrentLocation = () => {
     navigate({ search: params.toString() }, { replace: false });
   };
 
-  const nameCurrentLocation = parseCurrentLocationName(currentLocation);
+  const nameCurrentLocation = parseCurrentLocationName(
+    currentLocation,
+    dictCelestialBodies,
+    dictLocations
+  );
 
   return (
     <div
@@ -115,5 +126,9 @@ export const WindowSelectCurrentLocation = () => {
   );
 };
 
-export const parseCurrentLocationName = (value: string): string =>
-  value.startsWith("_loc_") ? value.substring(5) : value;
+export const parseCurrentLocationName = (
+  value: string,
+  dictCelestialBodies: CelestialBodyDictionary = {},
+  dictLocations: LocationDictionary = {}
+): string =>
+  dictLocations[value]?.name || dictCelestialBodies[value]?.name || value;

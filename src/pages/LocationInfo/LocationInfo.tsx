@@ -11,7 +11,7 @@ import { icon } from "../../assets/icon";
 
 const LocationInfo = () => {
   const { t } = useTranslation();
-  const locationKey = useParams().locationKey;
+  const locationKey = useParams()["*"];
   const { dictLocations } = useContext(ContextAllData);
   const location = dictLocations[locationKey || ""] || null;
 
@@ -44,13 +44,13 @@ const LocationInfo = () => {
         </div>
         <h3 className="type">
           {typeInfo}
-          {location.quantum === 0 && (
+          {!location.beaconMarker && (
             <span className="quantum-not-available">
               <Icon path={icon.quantum_off} size="1.5rem" />
               {t("LocationInfo.quantumNotAvailable")}
             </span>
           )}
-          {location.private === 1 && (
+          {location.restrictions.includes("private") && (
             <span className="private-property">
               <Icon path={icon.private_property} size="1.5rem" />
               {t("LocationInfo.privateProperty")}

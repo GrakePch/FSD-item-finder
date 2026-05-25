@@ -16,6 +16,33 @@ const LocationIconColor: Record<string, string> = {
   City: "#0597ff",
   "Planetary alignment facility": "#ff8126",
   "Orbital laser platform": "#ff8126",
+  antenna: "#ff8126",
+  asteroidbase: "#ffb600",
+  city: "#0597ff",
+  drug: "#0597ff",
+  farm: "#0597ff",
+  fob: "#0597ff",
+  junkyard: "#ff8126",
+  mining: "#0597ff",
+  orbitallaser: "#ff8126",
+  outpost: "#0597ff",
+  prison: "#f74a55",
+  race: "#b56aff",
+  research: "#0597ff",
+  shelter: "#17a773",
+  stash: "#0597ff",
+  station: "#ffb600",
+  ugf: "#0597ff",
 };
+
+export function getLocationIconColor(
+  location: Pick<SCLocation, "type" | "beaconType">
+): string {
+  if (location.type === "city" && location.beaconType === "LandingZone") {
+    return LocationIconColor["Landing zone"];
+  }
+
+  return LocationIconColor[location.type] || "#78909c";
+}
 
 export default LocationIconColor;

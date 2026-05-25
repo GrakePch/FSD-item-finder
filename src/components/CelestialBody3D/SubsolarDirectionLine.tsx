@@ -12,7 +12,7 @@ interface SubsolarDirectionLineProps {
 }
 
 const SubsolarDirectionLine = ({ celestialBody }: SubsolarDirectionLineProps) => {
-  const radius = celestialBody.bodyRadius || 1;
+  const radius = celestialBody.bodyRadiusInKm || 1;
   const [vecSubsolar, setVecSubsolar] = useState(() => {
     const declinationDeg = getParentStarDeclinationDeg(celestialBody);
     const longitudeDeg = getParentStarLongitudeDeg(celestialBody);

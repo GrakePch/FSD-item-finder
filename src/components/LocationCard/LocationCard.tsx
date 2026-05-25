@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router";
-import { locationNameToI18nKey, toUrlKey } from "../../utils";
+import { locationNameToI18nKey } from "../../utils";
 import styles from "./LocationCard.module.css";
 import { useTranslation } from "react-i18next";
 import Icon from "@mdi/react";
-import locationIcon from "../../assets/locationIcon";
-import LocationIconColor from "../../assets/locationIconColor";
+import { getLocationIcon } from "../../assets/locationIcon";
+import { getLocationIconColor } from "../../assets/locationIconColor";
 import { icon } from "../../assets/icon";
 
 interface LocationCardProps {
@@ -28,14 +28,14 @@ const LocationCard = ({ location, onClick }: LocationCardProps) => {
     } else {
       // Keep query params when navigating
       const search = window.location.search;
-      navigate(`/l/${toUrlKey(location.name)}${search}`);
+      navigate(`/l/${location.code}${search}`);
     }
   };
 
   return (
     <a
       className={styles.LocationCard}
-      href={`/l/${toUrlKey(location.name)}${
+      href={`/l/${location.code}${
         typeof window !== "undefined" ? window.location.search : ""
       }`}
       onClick={handleClick}
@@ -44,23 +44,23 @@ const LocationCard = ({ location, onClick }: LocationCardProps) => {
         className={styles.icon}
         style={{
           backgroundColor:
-            location.private === 1
+            location.restrictions.includes("private")
               ? "#f74a55"
-              : LocationIconColor[location.type] || "#78909c",
+              : getLocationIconColor(location),
         }}
       >
-        <Icon path={locationIcon[location.type] || locationIcon.Outpost!} />
+        <Icon path={getLocationIcon(location)} />
       </div>
       <div className={styles.info}>
         <p className={styles.name}>{t(locationNameToI18nKey(location.name), { ns: "locations" })}</p>
         <p className={styles.descrip}>
           {description}
-          {location.quantum === 0 && (
+          {!location.beaconMarker && (
             <span className={styles.quantumNotAvailable}>
               <Icon path={icon.quantum_off} size="1rem" />
             </span>
           )}
-          {location.private === 1 && (
+          {location.restrictions.includes("private") && (
             <span className={styles.privateProperty}>
               <Icon path={icon.private_property} size="1rem" />
             </span>

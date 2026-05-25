@@ -1,7 +1,7 @@
 import { useContext, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { ContextAllData } from "../../contexts";
-import { locationNameToI18nKey } from "../../utils";
+import { isLocationDisplayHidden, locationNameToI18nKey } from "../../utils";
 
 const isNameOrI18nMatch = (
   normalizedSearchName: string,
@@ -38,6 +38,7 @@ export function useLocationSearch(searchName: string, includeTerminal = false) {
     () =>
       normalizedSearchName
         ? Object.values(dictLocations).filter((location) =>
+            !isLocationDisplayHidden(location) &&
             isNameOrI18nMatch(
               normalizedSearchName,
               location.name,

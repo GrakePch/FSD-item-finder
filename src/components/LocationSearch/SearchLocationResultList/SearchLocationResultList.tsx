@@ -36,10 +36,10 @@ const SearchLocationResultList = ({
     >
       <ul className={[styles.locationList, listClassName].filter(Boolean).join(" ")}>
         {celestialBody.map((body) => (
-          <CelestialBodyCard key={body.name} celestialBody={body} onClick={onCelestialBodyClick} />
+          <CelestialBodyCard key={body.code} celestialBody={body} onClick={onCelestialBodyClick} />
         ))}
         {locations.map((location) => (
-          <LocationCard key={location.name} location={location} onClick={onLocationClick} />
+          <LocationCard key={location.code} location={location} onClick={onLocationClick} />
         ))}
         {terminals.map((terminal) => (
           <TerminalCard key={terminal.id} terminal={terminal} onClick={onTerminalClick} />
