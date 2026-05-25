@@ -3,7 +3,7 @@ name: Update I18n Data
 on:
   workflow_dispatch:
   workflow_run:
-    workflows: ["Update Location Data"]
+    workflows: ["Update VerseGuide Starmap Data"]
     types: [completed]
 
 permissions:

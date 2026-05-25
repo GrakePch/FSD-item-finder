@@ -1,0 +1,66 @@
+name: Update VerseGuide Starmap Data
+
+on:
+  workflow_dispatch:
+    inputs:
+      fancy_star_data_ref:
+        description: "Fancy-Star-Data ref to download starmap data from"
+        required: true
+        default: "main"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  update-verseguide-starmap-data:
+    runs-on: ubuntu-latest
+    env:
+      FANCY_STAR_DATA_REF: ${{ github.event.inputs.fancy_star_data_ref || 'main' }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Checkout Fancy-Star-Data
+        uses: actions/checkout@v4
+        with:
+          repository: GrakePch/Fancy-Star-Data
+          ref: ${{ env.FANCY_STAR_DATA_REF }}
+          token: ${{ secrets.FANCY_STAR_DATA_TOKEN }}
+          path: .tmp/fancy-star-data
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Download starmap data
+        run: |
+          mkdir -p src/data/starmap
+          cp .tmp/fancy-star-data/data/starmap/body.json src/data/starmap/body.json
+          cp .tmp/fancy-star-data/data/starmap/locations.json src/data/starmap/locations.json
+
+      - name: Validate generated data
+        run: |
+          npm ci
+          npm run lint
+          npm run typecheck
+          npm run build
+
+      - name: Commit updated data
+        run: |
+          if [ -z "$(git status --porcelain -- src/data/starmap/body.json src/data/starmap/locations.json)" ]; then
+            echo "No VerseGuide starmap data changes to download."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/starmap/body.json src/data/starmap/locations.json
+          git commit -m "chore(data): download VerseGuide starmap data"
+          git push
