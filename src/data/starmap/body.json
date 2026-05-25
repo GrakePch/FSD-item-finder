@@ -1,0 +1,2248 @@
+[
+  {
+    "code": "STANTON",
+    "name": "Stanton",
+    "type": "SINGLE_STAR",
+    "subType": "SINGLE_STAR",
+    "parentCode": null,
+    "parentStarCode": null,
+    "cartesianInKm": {
+      "x": 136049.87,
+      "y": 1294427.4,
+      "z": 2923345.368
+    },
+    "bodyRadiusInKm": 696000.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "affiliation": {
+      "code": "uee",
+      "name": "UEE",
+      "color": "#48bbd4"
+    }
+  },
+  {
+    "code": "STANTON/1A",
+    "name": "Arial",
+    "type": "SATELLITE",
+    "subType": "Planetary Moon",
+    "parentCode": "STANTON/I",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 12892673.308861,
+      "y": -31476.12884,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 344.5,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "atmosphere_compounds": {
+      "CH4": "1.8",
+      "H": "0.53",
+      "N": "97.7"
+    },
+    "omRadiusInKm": 504.324,
+    "rotationPeriodInHours": 5.5100002,
+    "rotationCorrection": 293.74942516417775,
+    "atmosphereHeightInKm": 34.45
+  },
+  {
+    "code": "STANTON/1B",
+    "name": "Aberdeen",
+    "type": "SATELLITE",
+    "subType": "Planetary Moon",
+    "parentCode": "STANTON/I",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 12905757.636431,
+      "y": 40955.55056,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 274,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "atmosphere_compounds": {
+      "NaCl": "0.9",
+      "SO": "9.3",
+      "SO2": "89.8"
+    },
+    "omRadiusInKm": 404.625,
+    "rotationPeriodInHours": 2.5999999,
+    "rotationCorrection": 199.00961210504877,
+    "atmosphereHeightInKm": 27.4
+  },
+  {
+    "code": "STANTON/1C",
+    "name": "Magda",
+    "type": "SATELLITE",
+    "subType": "Planetary Moon",
+    "parentCode": "STANTON/I",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 12792686.359418,
+      "y": -74464.580982,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 340.8,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "atmosphere_compounds": {
+      "CH4": "1.5",
+      "CO2": "0.21",
+      "H": "0.21",
+      "N": "98.1"
+    },
+    "omRadiusInKm": 499.104,
+    "rotationPeriodInHours": 1.9400001,
+    "rotationCorrection": 117.22256233719978,
+    "atmosphereHeightInKm": 34.08
+  },
+  {
+    "code": "STANTON/1D",
+    "name": "Ita",
+    "type": "SATELLITE",
+    "subType": "Planetary Moon",
+    "parentCode": "STANTON/I",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 12830194.715813,
+      "y": 114913.6086,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 325,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "atmosphere_compounds": {
+      "CH4": "1.4",
+      "CO": "0.05",
+      "N": "98.5"
+    },
+    "omRadiusInKm": 475.266,
+    "rotationPeriodInHours": 4.8499999,
+    "rotationCorrection": 143.8168967935394,
+    "atmosphereHeightInKm": 32.5
+  },
+  {
+    "code": "STANTON/2A",
+    "name": "Cellin",
+    "type": "SATELLITE",
+    "subType": "Planetary Moon",
+    "parentCode": "STANTON/II",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": -18987611.119233,
+      "y": -2709009.660705,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 260,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "omRadiusInKm": 383.346,
+    "rotationPeriodInHours": 4.4499998,
+    "rotationCorrection": 300.5254428559166,
+    "atmosphereHeightInKm": 26
+  },
+  {
+    "code": "STANTON/2B",
+    "name": "Daymar",
+    "type": "SATELLITE",
+    "subType": "Planetary Moon",
+    "parentCode": "STANTON/II",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": -18930539.539535,
+      "y": -2610158.765499,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 295,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "omRadiusInKm": 432.84,
+    "rotationPeriodInHours": 2.48,
+    "rotationCorrection": 27.50306265284594,
+    "atmosphereHeightInKm": 29.5
+  },
+  {
+    "code": "STANTON/2C",
+    "name": "Yela",
+    "type": "SATELLITE",
+    "subType": "Planetary Moon",
+    "parentCode": "STANTON/II",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": -19022916.798927,
+      "y": -2613996.151998,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 313,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "omRadiusInKm": 458.292,
+    "rotationPeriodInHours": 1.8200001,
+    "rotationCorrection": 269.1462040514602,
+    "atmosphereHeightInKm": 31.3
+  },
+  {
+    "code": "STANTON/3A",
+    "name": "Lyria",
+    "type": "SATELLITE",
+    "subType": "Planetary Moon",
+    "parentCode": "STANTON/III",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 18703607.171556,
+      "y": -22121650.133864,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 223,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "atmosphere_compounds": {
+      "H2O": "1.5",
+      "NH3": ".77",
+      "O2": "97.7"
+    },
+    "omRadiusInKm": 331.026,
+    "rotationPeriodInHours": 6.4299998,
+    "rotationCorrection": 85.39224824040475,
+    "atmosphereHeightInKm": 22.3
+  },
+  {
+    "code": "STANTON/3B",
+    "name": "Wala",
+    "type": "SATELLITE",
+    "subType": "Planetary Moon",
+    "parentCode": "STANTON/III",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 18379649.309867,
+      "y": -22000466.768038,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 283,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "omRadiusInKm": 415.87,
+    "rotationPeriodInHours": 6.3200002,
+    "rotationCorrection": 294.84189711299234,
+    "atmosphereHeightInKm": 28.3
+  },
+  {
+    "code": "STANTON/4A",
+    "name": "Calliope",
+    "type": "SATELLITE",
+    "subType": "Planetary Moon",
+    "parentCode": "STANTON/IV",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 22525801.196722,
+      "y": 37202649.250649,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 240,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "atmosphere_compounds": {
+      "H2O": "0.2",
+      "O2": "99.8"
+    },
+    "omRadiusInKm": 355.067,
+    "rotationPeriodInHours": 4.5900002,
+    "rotationCorrection": 114.33823358068037,
+    "atmosphereHeightInKm": 24
+  },
+  {
+    "code": "STANTON/4B",
+    "name": "Clio",
+    "type": "SATELLITE",
+    "subType": "Planetary Moon",
+    "parentCode": "STANTON/IV",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 22447442.28446,
+      "y": 37280469.855285,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 337,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "atmosphere_compounds": {
+      "N": "99.2",
+      "O2": "0.8"
+    },
+    "omRadiusInKm": 492.484,
+    "rotationPeriodInHours": 3.25,
+    "rotationCorrection": 285.4383284042566,
+    "atmosphereHeightInKm": 33.7
+  },
+  {
+    "code": "STANTON/4C",
+    "name": "Euterpe",
+    "type": "SATELLITE",
+    "subType": "Planetary Moon",
+    "parentCode": "STANTON/IV",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 22436060.769269,
+      "y": 37290366.364981,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 213,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "atmosphere_compounds": {
+      "H2O": "0.2",
+      "O2": "99.8"
+    },
+    "omRadiusInKm": 316.883,
+    "rotationPeriodInHours": 4.2800002,
+    "rotationCorrection": 72.56733780186032,
+    "atmosphereHeightInKm": 21.3
+  },
+  {
+    "code": "STANTON/I",
+    "name": "Hurston",
+    "type": "PLANET",
+    "subType": "Super-Earth",
+    "parentCode": "STANTON",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 12850457.093,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 1000,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": true,
+    "affiliation": {
+      "code": "uee",
+      "name": "UEE",
+      "color": "#48bbd4"
+    },
+    "atmosphere_compounds": {
+      "CO": "0.7",
+      "CO2": "0.08",
+      "N": "78.2",
+      "O2": "21",
+      "SO2": "0.02"
+    },
+    "omRadiusInKm": 1436.79,
+    "rotationPeriodInHours": 2.48,
+    "rotationCorrection": 27.503007139481042,
+    "orbitPeriod": 291.02,
+    "atmosphereHeightInKm": 100
+  },
+  {
+    "code": "STANTON/I.1",
+    "name": "HUR L1",
+    "type": "LP",
+    "subType": "L1",
+    "parentCode": "STANTON/I",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 11565411.328,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/I.2",
+    "name": "HUR L2",
+    "type": "LP",
+    "subType": "L2",
+    "parentCode": "STANTON/I",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 14135502.848,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/I.3",
+    "name": "HUR L3",
+    "type": "LP",
+    "subType": "L3",
+    "parentCode": "STANTON/I",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": -12850457.6,
+      "y": -1.123423,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/I.4",
+    "name": "HUR L4",
+    "type": "LP",
+    "subType": "L4",
+    "parentCode": "STANTON/I",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 6425228.288,
+      "y": 11128823.808,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/I.5",
+    "name": "HUR L5",
+    "type": "LP",
+    "subType": "L5",
+    "parentCode": "STANTON/I",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 6425227.776,
+      "y": -11128823.808,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/I.6",
+    "name": "HUR L5",
+    "type": "LP",
+    "subType": null,
+    "parentCode": "STANTON/I",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": -10555971.591186,
+      "y": -7328416.366308,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/II",
+    "name": "Crusader",
+    "type": "PLANET",
+    "subType": "Gas Giant",
+    "parentCode": "STANTON",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": -18962176.0,
+      "y": -2664960.0,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 7450.01,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": true,
+    "affiliation": {
+      "code": "uee",
+      "name": "UEE",
+      "color": "#48bbd4"
+    },
+    "atmosphere_compounds": {
+      "Ar": "0.93",
+      "CO2": "0.04",
+      "N": "78.1",
+      "O2": "20.9"
+    },
+    "omRadiusInKm": 10673.161,
+    "rotationPeriodInHours": 5.0999999,
+    "rotationCorrection": 152.3234153021351,
+    "orbitPeriod": 534.63,
+    "atmosphereHeightInKm": 150
+  },
+  {
+    "code": "STANTON/II.1",
+    "name": "CRU L1",
+    "type": "LP",
+    "subType": "L1",
+    "parentCode": "STANTON/II",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": -17065957.376,
+      "y": -2398464.0,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/II.2",
+    "name": "CRU L2",
+    "type": "LP",
+    "subType": "L2",
+    "parentCode": "STANTON/II",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": -20858376.485433,
+      "y": -2931474.402058,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/II.3",
+    "name": "CRU L3",
+    "type": "LP",
+    "subType": "L3",
+    "parentCode": "STANTON/II",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 18962164.826094,
+      "y": 2664965.040502,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/II.4",
+    "name": "CRU L4",
+    "type": "LP",
+    "subType": "L4",
+    "parentCode": "STANTON/II",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": -7173168.64,
+      "y": -17754204.16,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/II.5",
+    "name": "CRU L5",
+    "type": "LP",
+    "subType": "L5",
+    "parentCode": "STANTON/II",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": -11789008.98826,
+      "y": 15089246.106764,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/II.6",
+    "name": "CRU L5",
+    "type": "LP",
+    "subType": null,
+    "parentCode": "STANTON/II",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 14056638.123679,
+      "y": 13002957.264801,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/III",
+    "name": "ArcCorp",
+    "type": "PLANET",
+    "subType": "Super-Earth",
+    "parentCode": "STANTON",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 18587664.739856,
+      "y": -22151916.920313,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 800,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": true,
+    "affiliation": {
+      "code": "uee",
+      "name": "UEE",
+      "color": "#48bbd4"
+    },
+    "atmosphere_compounds": {
+      "Ar": "0.93",
+      "CO2": "0.04",
+      "N": "78.1",
+      "O2": "20.9"
+    },
+    "omRadiusInKm": 1151.44,
+    "rotationPeriodInHours": 3.1099999,
+    "rotationCorrection": 88.72114907759754,
+    "orbitPeriod": 982.18,
+    "atmosphereHeightInKm": 80
+  },
+  {
+    "code": "STANTON/III.1",
+    "name": "ARC L1",
+    "type": "LP",
+    "subType": "L1",
+    "parentCode": "STANTON/III",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 16729134.637385,
+      "y": -19937006.924891,
+      "z": 8.076625
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/III.2",
+    "name": "ARC L2",
+    "type": "LP",
+    "subType": "L2",
+    "parentCode": "STANTON/III",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 20446718.50339,
+      "y": -24367450.990706,
+      "z": 8.076625
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/III.3",
+    "name": "ARC L3",
+    "type": "LP",
+    "subType": "L3",
+    "parentCode": "STANTON/III",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": -25043446.883503,
+      "y": 14458841.787628,
+      "z": 8.076625
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/III.4",
+    "name": "ARC L4",
+    "type": "LP",
+    "subType": "L4",
+    "parentCode": "STANTON/III",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 28478354.915656,
+      "y": 5021502.482912,
+      "z": 8.076625
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/III.5",
+    "name": "ARC L5",
+    "type": "LP",
+    "subType": "L5",
+    "parentCode": "STANTON/III",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": -9890422.51617,
+      "y": -27173732.22514,
+      "z": 8.076625
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/III.6",
+    "name": "ARC L5",
+    "type": "LP",
+    "subType": null,
+    "parentCode": "STANTON/III",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": -27902071.592252,
+      "y": 7596468.5931,
+      "z": 8.076624
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/IV",
+    "name": "microTech",
+    "type": "PLANET",
+    "subType": "Super-Earth",
+    "parentCode": "STANTON",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 22462085.252485,
+      "y": 37185744.96483,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 1000,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": true,
+    "affiliation": {
+      "code": "uee",
+      "name": "UEE",
+      "color": "#48bbd4"
+    },
+    "atmosphere_compounds": {
+      "Ar": "0.93",
+      "CO2": "0.04",
+      "N": "78.1",
+      "O2": "20.9"
+    },
+    "omRadiusInKm": 1439.603,
+    "rotationPeriodInHours": 4.1199999,
+    "rotationCorrection": 131.56200508353254,
+    "orbitPeriod": 1804.39,
+    "atmosphereHeightInKm": 100
+  },
+  {
+    "code": "STANTON/IV.1",
+    "name": "MIC L1",
+    "type": "LP",
+    "subType": "L1",
+    "parentCode": "STANTON/IV",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 20215824.238186,
+      "y": 33467065.007615,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/IV.2",
+    "name": "MIC L2",
+    "type": "LP",
+    "subType": "L2",
+    "parentCode": "STANTON/IV",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 24708827.153476,
+      "y": 40905202.459223,
+      "z": -5e-05
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/IV.3",
+    "name": "MIC L3",
+    "type": "LP",
+    "subType": "L3",
+    "parentCode": "STANTON/IV",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": -22457170.265786,
+      "y": -37187612.39564,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/IV.4",
+    "name": "MIC L4",
+    "type": "LP",
+    "subType": "L4",
+    "parentCode": "STANTON/IV",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": -20971933.230166,
+      "y": 38045504.032019,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/IV.5",
+    "name": "MIC L5",
+    "type": "LP",
+    "subType": "L5",
+    "parentCode": "STANTON/IV",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 43435204.288219,
+      "y": -851406.955908,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/IV.6",
+    "name": "MIC L5",
+    "type": "LP",
+    "subType": null,
+    "parentCode": "STANTON/IV",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 2763499.686893,
+      "y": -43355557.646102,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "STANTON/JP.MAGNUS",
+    "name": "Stanton - Magnus",
+    "type": "JUMPPOINT",
+    "subType": null,
+    "parentCode": "STANTON",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": -62284282.868185,
+      "y": 23467602.586872,
+      "z": 20198396.608
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "habitable": false
+  },
+  {
+    "code": "STANTON/JP.PYRO",
+    "name": "Stanton - Pyro",
+    "type": "JUMPPOINT",
+    "subType": null,
+    "parentCode": "STANTON",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 3310491.639802,
+      "y": -27979408.221457,
+      "z": -2676285.679
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "habitable": false
+  },
+  {
+    "code": "STANTON/JP.TERRA",
+    "name": "Stanton - Terra",
+    "type": "JUMPPOINT",
+    "subType": null,
+    "parentCode": "STANTON",
+    "parentStarCode": "STANTON",
+    "cartesianInKm": {
+      "x": 51118221.616903,
+      "y": -5269981.303114,
+      "z": -4339551.619
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "habitable": false
+  },
+  {
+    "code": "PYRO",
+    "name": "Pyro",
+    "type": "SINGLE_STAR",
+    "subType": "SINGLE_STAR",
+    "parentCode": null,
+    "parentStarCode": null,
+    "cartesianInKm": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 570720.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "affiliation": {
+      "code": "UNC",
+      "name": "Unclaimed",
+      "color": "#f6851f"
+    }
+  },
+  {
+    "code": "PYRO/5A",
+    "name": "Ignis",
+    "type": "SATELLITE",
+    "subType": "Planetary Moon",
+    "parentCode": "PYRO/V",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -3965327.312015,
+      "y": -42774792.832458,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 393.17,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "omRadiusInKm": 571.675,
+    "rotationPeriodInHours": 3.44000006,
+    "rotationCorrection": 286.2164268,
+    "orbitPeriod": 2.121,
+    "atmosphereHeightInKm": 4
+  },
+  {
+    "code": "PYRO/5B",
+    "name": "Vatra",
+    "type": "SATELLITE",
+    "subType": "Planetary Moon",
+    "parentCode": "PYRO/V",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -3889829.128582,
+      "y": -42688062.499767,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 365.81,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "omRadiusInKm": 532.975,
+    "rotationPeriodInHours": 3.42000008,
+    "rotationCorrection": 266.2706202,
+    "orbitPeriod": 2.645
+  },
+  {
+    "code": "PYRO/5C",
+    "name": "Adir",
+    "type": "SATELLITE",
+    "subType": "Planetary Moon",
+    "parentCode": "PYRO/V",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -3815633.249856,
+      "y": -42729087.632414,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 431,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "omRadiusInKm": 625.174,
+    "rotationPeriodInHours": 2.36999989,
+    "rotationCorrection": 227.4638716,
+    "orbitPeriod": 4.047
+  },
+  {
+    "code": "PYRO/5D",
+    "name": "Fairo",
+    "type": "SATELLITE",
+    "subType": "Planetary Moon",
+    "parentCode": "PYRO/V",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -3946426.938827,
+      "y": -42879832.788252,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 392.24,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "omRadiusInKm": 570.359,
+    "rotationPeriodInHours": 5.07999992,
+    "rotationCorrection": 264.5364933,
+    "orbitPeriod": 6.117
+  },
+  {
+    "code": "PYRO/5E",
+    "name": "Fuego",
+    "type": "SATELLITE",
+    "subType": "Planetary Moon",
+    "parentCode": "PYRO/V",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -3780104.296854,
+      "y": -42827190.111969,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 465.67,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "omRadiusInKm": 674.203,
+    "rotationPeriodInHours": 0,
+    "rotationCorrection": 184.7700778,
+    "orbitPeriod": 9.177
+  },
+  {
+    "code": "PYRO/5F",
+    "name": "Vuur",
+    "type": "SATELLITE",
+    "subType": "Planetary Moon",
+    "parentCode": "PYRO/V",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -4049984.179753,
+      "y": -42648941.424041,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 452.83,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "omRadiusInKm": 656.045,
+    "rotationPeriodInHours": 5.15999985,
+    "rotationCorrection": 40.5762417,
+    "orbitPeriod": 14.578
+  },
+  {
+    "code": "PYRO/I",
+    "name": "Pyro I",
+    "type": "PLANET",
+    "subType": "Terrestrial Rocky",
+    "parentCode": "PYRO",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -7920919.212372,
+      "y": -2386977.492921,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 411.7,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "affiliation": {
+      "code": "UNC",
+      "name": "Unclaimed",
+      "color": "#f6851f"
+    },
+    "omRadiusInKm": 603.5523,
+    "rotationPeriodInHours": 2.42000008,
+    "rotationCorrection": 256.6032357022916,
+    "orbitPeriod": 167.8544306
+  },
+  {
+    "code": "PYRO/I.1",
+    "name": "P1 L1",
+    "type": "LP",
+    "subType": "L1",
+    "parentCode": "PYRO/I",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -7090223.217135,
+      "y": -2272462.965493,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/I.2",
+    "name": "P1 L2",
+    "type": "LP",
+    "subType": "L2",
+    "parentCode": "PYRO/I",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -8713007.8445,
+      "y": -2625678.663236,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/I.3",
+    "name": "P1 L3",
+    "type": "LP",
+    "subType": "L3",
+    "parentCode": "PYRO/I",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": 8274709.837275,
+      "y": 2229681.556855,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/I.4",
+    "name": "P1 L4",
+    "type": "LP",
+    "subType": "L4",
+    "parentCode": "PYRO/I",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -1893294.681848,
+      "y": -8053201.354486,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/I.5",
+    "name": "P1 L5",
+    "type": "LP",
+    "subType": "L5",
+    "parentCode": "PYRO/I",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -6027626.663059,
+      "y": 5666239.343687,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/II",
+    "name": "Monox",
+    "type": "PLANET",
+    "subType": "Terrestrial Rocky",
+    "parentCode": "PYRO",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": 6057267.758473,
+      "y": -8724928.709892,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 529.5,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "affiliation": {
+      "code": "UNC",
+      "name": "Unclaimed",
+      "color": "#f6851f"
+    },
+    "omRadiusInKm": 770.133,
+    "rotationPeriodInHours": 3.1099999,
+    "rotationCorrection": 109.5576491,
+    "orbitPeriod": 244.1995135
+  },
+  {
+    "code": "PYRO/II.1",
+    "name": "P2 L1",
+    "type": "LP",
+    "subType": "L1",
+    "parentCode": "PYRO/II",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": 5587581.305523,
+      "y": -7754527.199795,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/II.2",
+    "name": "P2 L2",
+    "type": "LP",
+    "subType": "L2",
+    "parentCode": "PYRO/II",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": 6662974.313276,
+      "y": -9597450.466758,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/II.3",
+    "name": "P2 L3",
+    "type": "LP",
+    "subType": "L3",
+    "parentCode": "PYRO/II",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -2707848.073148,
+      "y": 10270477.23057,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/II.4",
+    "name": "P2 L4",
+    "type": "LP",
+    "subType": "L4",
+    "parentCode": "PYRO/II",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": 10577227.907883,
+      "y": -968164.460551,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/II.5",
+    "name": "P2 L5",
+    "type": "LP",
+    "subType": "L5",
+    "parentCode": "PYRO/II",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -6127059.040536,
+      "y": -8676078.653917,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/III",
+    "name": "Bloom",
+    "type": "PLANET",
+    "subType": "Terrestrial Rocky",
+    "parentCode": "PYRO",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -16103893.419746,
+      "y": 7587934.810788,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 413.9,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": true,
+    "affiliation": {
+      "code": "UNC",
+      "name": "Unclaimed",
+      "color": "#f6851f"
+    },
+    "omRadiusInKm": 606.647,
+    "rotationPeriodInHours": 5.0300002,
+    "rotationCorrection": 109.5576491,
+    "orbitPeriod": 529.7721478,
+    "atmosphereHeightInKm": 8
+  },
+  {
+    "code": "PYRO/III.1",
+    "name": "P3 L1",
+    "type": "LP",
+    "subType": "L1",
+    "parentCode": "PYRO/III",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -14610505.524424,
+      "y": 6575342.858129,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/III.2",
+    "name": "P3 L2",
+    "type": "LP",
+    "subType": "L2",
+    "parentCode": "PYRO/III",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -17714299.311503,
+      "y": 8346983.514036,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/III.3",
+    "name": "P3 L3",
+    "type": "LP",
+    "subType": "L3",
+    "parentCode": "PYRO/III",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": 14541573.104495,
+      "y": -10269329.266312,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/III.4",
+    "name": "P3 L4",
+    "type": "LP",
+    "subType": "L4",
+    "parentCode": "PYRO/III",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -14623503.828951,
+      "y": -10152319.540572,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/III.5",
+    "name": "P3 L5",
+    "type": "LP",
+    "subType": "L5",
+    "parentCode": "PYRO/III",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": 12638427.408268,
+      "y": 12537403.687699,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/IV",
+    "name": "Pyro IV",
+    "type": "PLANET",
+    "subType": "Terrestrial Rocky",
+    "parentCode": "PYRO/V",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -3704129.439389,
+      "y": -43071653.306892,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 321.4,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "affiliation": {
+      "code": "UNC",
+      "name": "Unclaimed",
+      "color": "#f6851f"
+    },
+    "omRadiusInKm": 475.829,
+    "rotationPeriodInHours": 4.0900002,
+    "rotationCorrection": 140.086952,
+    "orbitPeriod": 14.52610819,
+    "atmosphereHeightInKm": 8
+  },
+  {
+    "code": "PYRO/JP.CANO",
+    "name": "Pyro - Cano",
+    "type": "JUMPPOINT",
+    "subType": null,
+    "parentCode": "PYRO",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/JP.CASTRA",
+    "name": "Pyro - Castra",
+    "type": "JUMPPOINT",
+    "subType": null,
+    "parentCode": "PYRO",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/JP.HADRIAN",
+    "name": "Pyro - Hadrian",
+    "type": "JUMPPOINT",
+    "subType": null,
+    "parentCode": "PYRO",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/JP.NYX",
+    "name": "Pyro - Nyx",
+    "type": "JUMPPOINT",
+    "subType": null,
+    "parentCode": "PYRO",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -35275850.84016,
+      "y": -36052314.188223,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "habitable": false
+  },
+  {
+    "code": "PYRO/JP.OSO",
+    "name": "Pyro - Oso",
+    "type": "JUMPPOINT",
+    "subType": null,
+    "parentCode": "PYRO",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/JP.STANTON",
+    "name": "Pyro - Stanton",
+    "type": "JUMPPOINT",
+    "subType": null,
+    "parentCode": "PYRO",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": 34178631.662543,
+      "y": 40591997.867004,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "habitable": false
+  },
+  {
+    "code": "PYRO/JP.TERRA",
+    "name": "Pyro - Terra",
+    "type": "JUMPPOINT",
+    "subType": null,
+    "parentCode": "PYRO",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/V",
+    "name": "Pyro V",
+    "type": "PLANET",
+    "subType": "Gas Giant",
+    "parentCode": "PYRO",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -3912418.652954,
+      "y": -42758726.678397,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 7812.3,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": null,
+    "affiliation": {
+      "code": "UNC",
+      "name": "Unclaimed",
+      "color": "#f6851f"
+    },
+    "omRadiusInKm": 11161.057,
+    "rotationPeriodInHours": 5.0999999,
+    "rotationCorrection": 170.1257735,
+    "orbitPeriod": 4393.647046
+  },
+  {
+    "code": "PYRO/V.1",
+    "name": "P5 L1",
+    "type": "LP",
+    "subType": "L1",
+    "parentCode": "PYRO/V",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -3522313.156429,
+      "y": -38482735.017711,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/V.2",
+    "name": "P5 L2",
+    "type": "LP",
+    "subType": "L2",
+    "parentCode": "PYRO/V",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -4305004.889998,
+      "y": -47034467.986084,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/V.3",
+    "name": "P5 L3",
+    "type": "LP",
+    "subType": "L3",
+    "parentCode": "PYRO/V",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": 18302056.340048,
+      "y": 38841339.110605,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/V.4",
+    "name": "P5 L4",
+    "type": "LP",
+    "subType": "L4",
+    "parentCode": "PYRO/V",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": 41429346.943064,
+      "y": -11279325.001766,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/V.5",
+    "name": "P5 L5",
+    "type": "LP",
+    "subType": "L5",
+    "parentCode": "PYRO/V",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -42314558.062831,
+      "y": -7286471.415825,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/VI",
+    "name": "Terminus",
+    "type": "PLANET",
+    "subType": "Terrestrial Rocky",
+    "parentCode": "PYRO",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -48118274.99536,
+      "y": 48503115.86545,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 285,
+    "quaternion": {
+      "w": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "habitable": true,
+    "affiliation": {
+      "code": "UNC",
+      "name": "Unclaimed",
+      "color": "#f6851f"
+    },
+    "omRadiusInKm": 424.359,
+    "rotationPeriodInHours": 2.8699999,
+    "rotationCorrection": 36.2657632,
+    "orbitPeriod": 15146.03167,
+    "atmosphereHeightInKm": 8
+  },
+  {
+    "code": "PYRO/VI.1",
+    "name": "P6 L1",
+    "type": "LP",
+    "subType": "L1",
+    "parentCode": "PYRO/VI",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -47417386.549128,
+      "y": 46159148.32349,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/VI.2",
+    "name": "P6 L2",
+    "type": "LP",
+    "subType": "L2",
+    "parentCode": "PYRO/VI",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -49918484.043002,
+      "y": 50320235.692648,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/VI.3",
+    "name": "P6 L3",
+    "type": "LP",
+    "subType": "L3",
+    "parentCode": "PYRO/VI",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": 52161403.004423,
+      "y": -44126476.048873,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/VI.4",
+    "name": "P6 L4",
+    "type": "LP",
+    "subType": "L4",
+    "parentCode": "PYRO/VI",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": -62036426.86363,
+      "y": -28625948.333751,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/VI.5",
+    "name": "P6 L5",
+    "type": "LP",
+    "subType": "L5",
+    "parentCode": "PYRO/VI",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": 29122455.75674,
+      "y": 61804890.580562,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "PYRO/VI.6",
+    "name": "VI.6",
+    "type": null,
+    "subType": null,
+    "parentCode": "PYRO",
+    "parentStarCode": "PYRO",
+    "cartesianInKm": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+  {
+    "code": "NYX",
+    "name": "Nyx",
+    "type": "SINGLE_STAR",
+    "subType": "SINGLE_STAR",
+    "parentCode": null,
+    "parentStarCode": null,
+    "cartesianInKm": {
+      "x": 0.026538,
+      "y": 0.027071,
+      "z": -0.014517
+    },
+    "bodyRadiusInKm": 965325.11564,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "affiliation": {
+      "code": "UNC",
+      "name": "Unclaimed",
+      "color": "#f6851f"
+    }
+  },
+  {
+    "code": "NYX/DELAMAR",
+    "name": "Delamar",
+    "type": "PLANETOID",
+    "subType": "Protoplanet",
+    "parentCode": "NYX",
+    "parentStarCode": "NYX",
+    "cartesianInKm": {
+      "x": -12252716.038304,
+      "y": 8652739.83455,
+      "z": -113.972046
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "habitable": null,
+    "orbitPeriod": 975
+  },
+  {
+    "code": "NYX/I",
+    "name": "Nyx I",
+    "type": "PLANET",
+    "subType": "Terrestrial Rocky",
+    "parentCode": "NYX",
+    "parentStarCode": "NYX",
+    "cartesianInKm": {
+      "x": -7057927.334715,
+      "y": -2536859.461797,
+      "z": -3334554.479794
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "habitable": null,
+    "affiliation": {
+      "code": "UNC",
+      "name": "Unclaimed",
+      "color": "#f6851f"
+    },
+    "orbitPeriod": 274.13
+  },
+  {
+    "code": "NYX/II",
+    "name": "Nyx II",
+    "type": "PLANET",
+    "subType": "Smog Planet",
+    "parentCode": "NYX",
+    "parentStarCode": "NYX",
+    "cartesianInKm": {
+      "x": 10333078.733737,
+      "y": -1864779.819561,
+      "z": 2874883.020508
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "habitable": null,
+    "affiliation": {
+      "code": "UNC",
+      "name": "Unclaimed",
+      "color": "#f6851f"
+    },
+    "orbitPeriod": 589.15
+  },
+  {
+    "code": "NYX/III",
+    "name": "Nyx III",
+    "type": "PLANET",
+    "subType": "Ice Giant",
+    "parentCode": "NYX",
+    "parentStarCode": "NYX",
+    "cartesianInKm": {
+      "x": 29063515.951628,
+      "y": 34355658.841694,
+      "z": -3339487.585568
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "habitable": null,
+    "affiliation": {
+      "code": "UNC",
+      "name": "Unclaimed",
+      "color": "#f6851f"
+    },
+    "orbitPeriod": 6848.17
+  },
+  {
+    "code": "NYX/JP.CASTRA",
+    "name": "Nyx - Castra",
+    "type": "JUMPPOINT",
+    "subType": null,
+    "parentCode": "NYX",
+    "parentStarCode": "NYX",
+    "cartesianInKm": {
+      "x": -24424343.169015,
+      "y": 11508730.415197,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "habitable": false
+  },
+  {
+    "code": "NYX/JP.PYRO",
+    "name": "Nyx - Pyro",
+    "type": "JUMPPOINT",
+    "subType": null,
+    "parentCode": "NYX",
+    "parentStarCode": "NYX",
+    "cartesianInKm": {
+      "x": 19714699.98405,
+      "y": 13686870.520268,
+      "z": 0.0
+    },
+    "bodyRadiusInKm": 0.0,
+    "quaternion": {
+      "w": 1.0,
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "habitable": false
+  }
+]
