@@ -1,45 +1,45 @@
-interface SpvVehicleHardpoints {
+interface VehicleHardpointData {
   ClassName: string;
   Name: string;
   IsSpaceship: boolean;
   IsGravlev?: boolean;
   IsVehicle?: boolean;
   PortTags: string[];
-  Hull: { Structure: SpvHullPart[] };
+  Hull: { Structure: VehicleHullPart[] };
   Hardpoints: {
     Weapons: {
-      PilotWeapons: SpvHardpoints;
-      MannedTurrets: SpvHardpoints;
-      RemoteTurrets: SpvHardpoints;
-      PDCTurrets: SpvHardpoints;
-      MissileRacks: SpvHardpoints;
-      BombRacks: SpvHardpoints;
+      PilotWeapons: VehicleHardpointGroup;
+      MannedTurrets: VehicleHardpointGroup;
+      RemoteTurrets: VehicleHardpointGroup;
+      PDCTurrets: VehicleHardpointGroup;
+      MissileRacks: VehicleHardpointGroup;
+      BombRacks: VehicleHardpointGroup;
       InterdictionHardpoints: {
-        EMP?: SpvHardpoints;
-        QED?: SpvHardpoints;
+        EMP?: VehicleHardpointGroup;
+        QED?: VehicleHardpointGroup;
       };
-      MiningHardpoints: SpvHardpoints;
-      SalvageHardpoints: SpvHardpoints;
-      UtilityHardpoints: SpvHardpoints;
-      UtilityTurrets: SpvHardpoints;
+      MiningHardpoints: VehicleHardpointGroup;
+      SalvageHardpoints: VehicleHardpointGroup;
+      UtilityHardpoints: VehicleHardpointGroup;
+      UtilityTurrets: VehicleHardpointGroup;
     };
     Components: {
       Propulsion: {
-        PowerPlants: SpvHardpoints;
-        QuantumDrives: SpvHardpoints;
+        PowerPlants: VehicleHardpointGroup;
+        QuantumDrives: VehicleHardpointGroup;
         Thrusters: {
-          MainThrusters: SpvThrusters;
-          RetroThrusters: SpvThrusters;
-          VtolThrusters: SpvThrusters;
-          ManeuveringThrusters: SpvThrusters;
+          MainThrusters: VehicleThrusters;
+          RetroThrusters: VehicleThrusters;
+          VtolThrusters: VehicleThrusters;
+          ManeuveringThrusters: VehicleThrusters;
         };
         QuantumFuelTanks: {
-          InstalledItems?: (SpvHardpointsOldItem & { Grade: number; Capacity: number })[];
+          InstalledItems?: (VehicleHardpointOldItem & { Grade: number; Capacity: number })[];
           ItemsQuantity: number;
           TotalQuantumFuelCapacity: number;
         };
         HydrogenFuelTanks: {
-          InstalledItems?: (SpvHardpointsOldItem & { Grade: number; Capacity: number })[];
+          InstalledItems?: (VehicleHardpointOldItem & { Grade: number; Capacity: number })[];
           ItemsQuantity: number;
           TotalFuelCapacity: number;
         };
@@ -109,35 +109,35 @@ interface SpvVehicleHardpoints {
           };
           Wheeled: object;
         };
-        Shields: SpvHardpoints & { FaceType?: "Bubble" | "Quadrant" };
-        Coolers: SpvHardpoints;
-        LifeSupport: SpvHardpoints;
+        Shields: VehicleHardpointGroup & { FaceType?: "Bubble" | "Quadrant" };
+        Coolers: VehicleHardpointGroup;
+        LifeSupport: VehicleHardpointGroup;
         FuelIntakes: {
-          InstalledItems?: (SpvHardpointsOldItem & {
+          InstalledItems?: (VehicleHardpointOldItem & {
             Grade: number;
             FuelIntakeRate: number;
-            Power?: SpvHardpointPower;
-            Heat?: SpvHardpointHeat;
+            Power?: VehicleHardpointPower;
+            Heat?: VehicleHardpointHeat;
           })[];
           ItemsQuantity: number;
           TotalFuelIntakeRate: number;
         };
         Countermeasures: {
-          InstalledItems?: (SpvHardpointsOldItem & {
+          InstalledItems?: (VehicleHardpointOldItem & {
             Grade: number;
             Ammunition: number;
             Speed: number;
             Range: number;
             Type: "Noise" | "Decoy";
-            Power?: SpvHardpointPower;
+            Power?: VehicleHardpointPower;
           })[];
           ItemsQuantity: number;
         };
       };
       Avionics: {
-        FlightBlade: SpvHardpoints;
+        FlightBlade: VehicleHardpointGroup;
         Radars: {
-          InstalledItems?: (SpvPort & {
+          InstalledItems?: (VehiclePort & {
             RemoteController?: { Slaved: boolean; Seats: string[] };
           })[];
           DetectionCapability?: {
@@ -166,7 +166,7 @@ interface SpvVehicleHardpoints {
           ItemsQuantity: number;
         };
         SelfDestruct: {
-          InstalledItems?: (SpvHardpointsOldItem & {
+          InstalledItems?: (VehicleHardpointOldItem & {
             Grade: number;
             Countdown: number;
             Damage: number;
@@ -176,9 +176,9 @@ interface SpvVehicleHardpoints {
           ItemsQuantity: number;
         };
       };
-      Modules: SpvHardpoints;
+      Modules: VehicleHardpointGroup;
       CargoGrids: {
-        InstalledItems?: (SpvHardpointsOldItem & {
+        InstalledItems?: (VehicleHardpointOldItem & {
           Grade: number;
           Capacity: number;
           GridProperties: {
@@ -198,26 +198,26 @@ interface SpvVehicleHardpoints {
               Depth: number;
             };
           };
-          Power: SpvHardpointPower;
-          Heat: SpvHardpointHeat;
+          Power: VehicleHardpointPower;
+          Heat: VehicleHardpointHeat;
         })[];
         ItemsQuantity: number;
       };
       CargoContainers: {
-        InstalledItems?: (SpvHardpointsOldItem & {
+        InstalledItems?: (VehicleHardpointOldItem & {
           Grade: number;
           Capacity: number;
-          Power: SpvHardpointPower;
-          Heat: SpvHardpointHeat;
+          Power: VehicleHardpointPower;
+          Heat: VehicleHardpointHeat;
         })[];
         ItemsQuantity: number;
       };
       Storage: {
-        InstalledItems?: (SpvHardpointsOldItem & {
+        InstalledItems?: (VehicleHardpointOldItem & {
           Grade: number;
           Capacity: number;
-          Power?: SpvHardpointPower;
-          Heat?: SpvHardpointHeat;
+          Power?: VehicleHardpointPower;
+          Heat?: VehicleHardpointHeat;
         })[];
         ItemsQuantity: number;
       };
@@ -236,39 +236,39 @@ interface SpvVehicleHardpoints {
         ItemsQuantity: number;
       };
       Usables?: {
-        InstalledItems?: (SpvHardpointsOldItem & {
-          Power: SpvHardpointPower;
-          Heat: SpvHardpointHeat;
+        InstalledItems?: (VehicleHardpointOldItem & {
+          Power: VehicleHardpointPower;
+          Heat: VehicleHardpointHeat;
         })[];
         ItemsQuantity: number;
       };
-      Paints: SpvHardpoints;
-      Flairs: SpvHardpoints;
+      Paints: VehicleHardpointGroup;
+      Flairs: VehicleHardpointGroup;
     };
   };
 }
 
-interface SpvHullPart {
+interface VehicleHullPart {
   Name: string;
   MaximumDamage?: number;
-  Parts?: SpvHullPart[];
+  Parts?: VehicleHullPart[];
   ShipDestructionDamage?: number;
   DetachRatio?: number;
 }
 
-type SpvHardpoints =
+type VehicleHardpointGroup =
   | {
-      InstalledItems?: SpvPort[];
+      InstalledItems?: VehiclePort[];
       Hardpoints: number;
     }
   | object;
 
-interface SpvPort {
+interface VehiclePort {
   PortName: string;
   MinSize: number;
   MaxSize: number;
   Loadout: string;
-  BaseLoadout: SpvLoadout;
+  BaseLoadout: VehicleLoadout;
   Types: string[];
   RequiredTags?: string[];
   Tags?: string[];
@@ -276,10 +276,10 @@ interface SpvPort {
   Flags?: string[];
   Gimballed?: boolean;
   Uneditable: boolean;
-  Ports?: SpvPort[];
+  Ports?: VehiclePort[];
 }
 
-interface SpvLoadout {
+interface VehicleLoadout {
   ClassName: string;
   Name: string;
   Type: string;
@@ -290,38 +290,38 @@ interface SpvLoadout {
 
 type Class = "Military" | "Stealth" | "Civilian" | "Industrial" | "Competition" | "";
 
-interface SpvThrusters {
-  InstalledItems?: (SpvHardpointsOldItem & {
+interface VehicleThrusters {
+  InstalledItems?: (VehicleHardpointOldItem & {
     Grade: number;
     ThrustCapacity: number;
     FuelBurnRatePerMN: number;
     FuelUsagePerSecond: number;
-    Durability: SpvHardpointDurability;
-    Power?: SpvHardpointPower;
-    Heat?: SpvHardpointHeat;
+    Durability: VehicleHardpointDurability;
+    Power?: VehicleHardpointPower;
+    Heat?: VehicleHardpointHeat;
   })[];
   ItemsQuantity: number;
 }
 
-interface SpvHardpointsOldItem {
+interface VehicleHardpointOldItem {
   Name: string;
   Size: number;
   Mass: number;
   Uneditable?: boolean;
 }
 
-interface SpvHardpointDurability {
+interface VehicleHardpointDurability {
   Health: number;
 }
 
-interface SpvHardpointPower {
+interface VehicleHardpointPower {
   PowerBase: number;
   PowerDraw: number;
   IdlePowerEmission: number;
   ActivePowerEmission: number;
 }
 
-interface SpvHardpointHeat {
+interface VehicleHardpointHeat {
   StartComponentTemperature: number;
   StartIRTemperature: number;
   StartIREmission: number;

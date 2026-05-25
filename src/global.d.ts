@@ -222,8 +222,8 @@ interface SimpleVehicleOptions {
 type SimpleItemOptionsDictionary = { [id: number]: SimpleItemOptions };
 type SimpleVehicleOptionsDictionary = { [id: number]: SimpleVehicleOptions };
 
-// Ships Performances Viewer interfaces
-interface SpvVehicleIndex {
+// Vehicle data interfaces
+interface VehicleIndex {
   "New Ship"?: string | null;
   "New Vehicle"?: string | null;
   ClassName: string;

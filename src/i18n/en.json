@@ -247,7 +247,7 @@
       "EnergyDamageResistance": "Energy Damage Resistance"
     }
   },
-  "SPVProgressTrackerStatus": {
+  "VehicleProgressTrackerStatus": {
     "Concept": "Concept",
     "InProd": "In Production",
     "Released": "Released",

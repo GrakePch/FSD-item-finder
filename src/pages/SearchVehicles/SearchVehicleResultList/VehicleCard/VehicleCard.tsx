@@ -1,12 +1,12 @@
 import styles from "./VehicleCard.module.css";
 import { useNavigate } from "react-router";
 import VehicleImage from "../../../../components/VehicleImage";
-import { spvRoleToKey } from "../../../../utils";
+import { vehicleRoleToKey } from "../../../../utils";
 import { useTranslation } from "react-i18next";
 import { getTranslatedVehicleName } from "../../../../utils/vehicleI18n";
 
 interface VehicleCardProps {
-  vehicle: SpvVehicleIndex;
+  vehicle: VehicleIndex;
   uexBuyPrice?: number | null;
   onResultClick?: () => void;
 }
@@ -37,7 +37,7 @@ const VehicleCard = ({
     >
       <div className={styles.vehicleInfo}>
         <p className={styles.vehicleRole}>
-          {t("vehicle_class_" + spvRoleToKey(vehicle.Role), {
+          {t("vehicle_class_" + vehicleRoleToKey(vehicle.Role), {
             ns: "vehicle_classes",
             defaultValue: vehicle.Role,
           })}

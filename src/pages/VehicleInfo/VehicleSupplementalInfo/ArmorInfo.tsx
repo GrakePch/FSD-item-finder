@@ -9,7 +9,7 @@ import {
 import InfoRow from "./InfoRow";
 import styles from "./VehicleSupplementalInfo.module.css";
 
-const ArmorInfo = ({ armor }: { armor: SpvVehicleMain["Armor"] }) => {
+const ArmorInfo = ({ armor }: { armor: VehicleMain["Armor"] }) => {
   const { t } = useTranslation();
   const armorHealth = armor?.Durability?.Health;
   const physicalDamageDeflection = armor?.DamageDeflection?.Physical;

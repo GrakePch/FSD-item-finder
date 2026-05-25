@@ -2,24 +2,24 @@ import styles from "./FlightVelocities.module.css";
 import PitchYawRoll from "./PitchYawRoll/PitchYawRoll";
 import VelocitiesScmNav from "./VelocitiesScmNav/VelocitiesScmNav";
 
-const FlightVelocities = ({ spvFC }: { spvFC: SpvFlightCharacteristics }) => {
-  const spvFCBAngular = spvFC.Boost.AngularVelocityMultiplier;
+const FlightVelocities = ({ flightCharacteristics }: { flightCharacteristics: VehicleFlightCharacteristics }) => {
+  const vehicleFlightBoostAngular = flightCharacteristics.Boost.AngularVelocityMultiplier;
   return (
     <div className={styles.FlightVelocities}>
       <VelocitiesScmNav
-        scm={spvFC.ScmSpeed}
-        scmBoostF={spvFC.MasterModes.ScmMode.BoostSpeedForward}
-        scmBoostB={spvFC.MasterModes.ScmMode.BoostSpeedBackward}
-        nav={spvFC.MaxSpeed}
+        scm={flightCharacteristics.ScmSpeed}
+        scmBoostF={flightCharacteristics.MasterModes.ScmMode.BoostSpeedForward}
+        scmBoostB={flightCharacteristics.MasterModes.ScmMode.BoostSpeedBackward}
+        nav={flightCharacteristics.MaxSpeed}
         max={1500}
       />
       <PitchYawRoll
-        P={spvFC.Pitch}
-        Y={spvFC.Yaw}
-        R={spvFC.Roll}
-        PB={spvFC.Pitch * spvFCBAngular.Pitch}
-        YB={spvFC.Yaw * spvFCBAngular.Yaw}
-        RB={spvFC.Roll * spvFCBAngular.Roll}
+        P={flightCharacteristics.Pitch}
+        Y={flightCharacteristics.Yaw}
+        R={flightCharacteristics.Roll}
+        PB={flightCharacteristics.Pitch * vehicleFlightBoostAngular.Pitch}
+        YB={flightCharacteristics.Yaw * vehicleFlightBoostAngular.Yaw}
+        RB={flightCharacteristics.Roll * vehicleFlightBoostAngular.Roll}
         PM={120}
         YM={120}
         RM={360}

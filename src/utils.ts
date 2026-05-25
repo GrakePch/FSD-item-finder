@@ -218,8 +218,8 @@ export function clearLocalStorageRecent(): void {
   localStorage.removeItem("recent");
 }
 
-export function getVehicleNameNoBrand(spvVehicleIndex: SpvVehicleIndex): string {
-  let name = spvVehicleIndex.Name;
+export function getVehicleNameNoBrand(vehicleIndex: VehicleIndex): string {
+  let name = vehicleIndex.Name;
   if (name.includes(" ")) {
     name = name.split(" ").slice(1).join(" ");
   }
@@ -227,7 +227,7 @@ export function getVehicleNameNoBrand(spvVehicleIndex: SpvVehicleIndex): string 
 }
 
 export function formatVehicleImageSrc(
-  spvVehicleIndex: SpvVehicleIndex,
+  vehicleIndex: VehicleIndex,
   view: string = "top"
 ): string {
   const specialFileName: Record<string, string> = {
@@ -246,7 +246,7 @@ export function formatVehicleImageSrc(
     CNOU_Pionneer: "pioneer",
   };
   const fileNameBeforeProcess =
-    specialFileName[spvVehicleIndex.ClassName] || getVehicleNameNoBrand(spvVehicleIndex);
+    specialFileName[vehicleIndex.ClassName] || getVehicleNameNoBrand(vehicleIndex);
   return `https://ships.42kit.com/resized/${fileNameBeforeProcess
     ?.normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
@@ -272,7 +272,7 @@ export const typeCapitalizedToKey = (capitalized: string | null) =>
         .join("_")
     : "";
 
-export const spvRoleToKey = (role: string) =>
+export const vehicleRoleToKey = (role: string) =>
   role.toLowerCase().replaceAll(/[^a-z0-9]/g, "");
 
 export const toI18nKey = (str: string) =>

@@ -2,28 +2,29 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { basename, dirname, resolve } from "node:path";
 
 const SOURCE_BASE_URL =
-  "https://raw.githubusercontent.com/GrakePch/Fancy-SC-Ship-Info-2/main/src/data";
+  "https://raw.githubusercontent.com/GrakePch/Fancy-Star-Data/main/data/spviewer/live/json";
+const SOURCE_TOKEN_ENV = "FANCY_STAR_DATA_TOKEN";
 const RETRIES = 3;
 
 const DATASETS = [
   {
     sourceName: "vehicle-main-list.json",
-    outputName: "spv_vehicle_list.json",
+    outputName: "vehicle_list.json",
     compact: false,
   },
   {
     sourceName: "vehicle-basic-list.json",
-    outputName: "spv_vehicle_index.json",
+    outputName: "vehicle_index.json",
     compact: false,
   },
   {
     sourceName: "vehicle-hardpoints-list.json",
-    outputName: "spv_vehicle_hardpoints.json",
+    outputName: "vehicle_hardpoints.json",
     compact: true,
   },
 ];
 const VEHICLE_ITEM_SOURCE_NAME = "vehicle-item-list.json";
-const VEHICLE_ITEMS_ESSENTIAL_OUTPUT_NAME = "spv_vehicle_items_essential.json";
+const VEHICLE_ITEMS_ESSENTIAL_OUTPUT_NAME = "vehicle_items_essential.json";
 const MANUAL_SERIES_FILE_NAME = "manual_vehicle_classname_to_series.ts";
 
 function parseArgs(argv) {
@@ -33,6 +34,7 @@ function parseArgs(argv) {
     localSourceDir: null,
     manualSeriesInput: null,
     manualSeriesOutput: null,
+    sourceToken: process.env[SOURCE_TOKEN_ENV] ?? null,
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -72,14 +74,15 @@ function parseArgs(argv) {
     if (arg === "--help") {
       console.log(
         [
-          "Usage: node scripts/vehicle/update_spv_vehicle_data.mjs [options]",
+          "Usage: node scripts/vehicle/update_vehicle_data.mjs [options]",
           "",
           "Options:",
-          "  --source-base-url <url>   Base raw URL for SPV JSON files.",
+          "  --source-base-url <url>   Base raw URL for vehicle JSON files.",
           "  --output-dir <path>       Output directory for generated JSON files. Defaults to src/data/vehicles",
           "  --local-source-dir <path> Read source JSON files from a local directory instead of GitHub.",
           "  --manual-series-input <path> Existing manual ClassName-to-series table to preserve values from.",
           "  --manual-series-output <path> Output path for the manual ClassName-to-series table.",
+          `  ${SOURCE_TOKEN_ENV}=<token> Read private GitHub source data with this token.`,
         ].join("\n"),
       );
       process.exit(0);
@@ -95,12 +98,17 @@ function sleep(ms) {
   });
 }
 
-async function fetchTextOnce(url) {
+async function fetchTextOnce(url, token) {
+  const headers = {
+    Accept: "application/json,text/plain,*/*",
+    "User-Agent": "fsd-item-finder-vehicle-data-updater/1.0",
+  };
+  if (token) {
+    headers.Authorization = `Bearer ${token}`;
+  }
+
   const response = await fetch(url, {
-    headers: {
-      Accept: "application/json,text/plain,*/*",
-      "User-Agent": "fsd-item-finder-spv-data-updater/1.0",
-    },
+    headers,
     signal: AbortSignal.timeout(60000),
   });
   const text = await response.text();
@@ -112,12 +120,12 @@ async function fetchTextOnce(url) {
   return text;
 }
 
-async function fetchJson(url) {
+async function fetchJson(url, token) {
   let lastError = null;
 
   for (let attempt = 1; attempt <= RETRIES; attempt += 1) {
     try {
-      return JSON.parse(await fetchTextOnce(url));
+      return JSON.parse(await fetchTextOnce(url, token));
     } catch (error) {
       lastError = error;
       if (attempt < RETRIES) {
@@ -126,7 +134,10 @@ async function fetchJson(url) {
     }
   }
 
-  throw new Error(`Failed to fetch ${url}: ${lastError?.message ?? lastError}`);
+  const tokenHint = token
+    ? ""
+    : ` If this is a private repository, set ${SOURCE_TOKEN_ENV}.`;
+  throw new Error(`Failed to fetch ${url}: ${lastError?.message ?? lastError}.${tokenHint}`);
 }
 
 async function loadSourceJson(dataset, options) {
@@ -135,7 +146,7 @@ async function loadSourceJson(dataset, options) {
     return JSON.parse(await readFile(sourcePath, "utf8"));
   }
 
-  return fetchJson(`${options.sourceBaseUrl}/${dataset.sourceName}`);
+  return fetchJson(`${options.sourceBaseUrl}/${dataset.sourceName}`, options.sourceToken);
 }
 
 function validateVehicleArray(dataset, data) {
@@ -217,10 +228,10 @@ async function loadExistingManualSeries(path) {
   }
 }
 
-function buildManualSeriesModule(spvVehicleData, existingSeries) {
+function buildManualSeriesModule(vehicleData, existingSeries) {
   const lines = [
     "const vehicleClassNameToSeries: Record<string, string> = {",
-    ...spvVehicleData.map((vehicle) => {
+    ...vehicleData.map((vehicle) => {
       const series =
         existingSeries.entries.get(vehicle.ClassName) ??
         existingSeries.entriesByLowerClassName.get(vehicle.ClassName.toLowerCase()) ??
@@ -243,8 +254,8 @@ async function writeText(path, text) {
 
 async function main() {
   const options = parseArgs(process.argv.slice(2));
-  let spvVehicleData = null;
-  let spvVehicleIndexData = null;
+  let vehicleData = null;
+  let vehicleIndexData = null;
 
   for (const dataset of DATASETS) {
     const data = await loadSourceJson(dataset, options);
@@ -255,11 +266,11 @@ async function main() {
     console.log(`Updated ${basename(outputPath)} with ${data.length} entries`);
 
     if (dataset.sourceName === "vehicle-main-list.json") {
-      spvVehicleData = data;
+      vehicleData = data;
     }
 
     if (dataset.sourceName === "vehicle-basic-list.json") {
-      spvVehicleIndexData = data;
+      vehicleIndexData = data;
     }
   }
 
@@ -270,10 +281,10 @@ async function main() {
   );
   await writeText(
     manualSeriesOutput,
-    buildManualSeriesModule(spvVehicleIndexData, existingSeries),
+    buildManualSeriesModule(vehicleIndexData, existingSeries),
   );
   console.log(
-    `Updated ${basename(manualSeriesOutput)} with ${spvVehicleIndexData.length} entries`,
+    `Updated ${basename(manualSeriesOutput)} with ${vehicleIndexData.length} entries`,
   );
 
   const vehicleItemData = await loadSourceJson({ sourceName: VEHICLE_ITEM_SOURCE_NAME }, options);

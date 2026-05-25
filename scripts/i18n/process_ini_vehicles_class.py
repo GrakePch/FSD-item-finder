@@ -22,10 +22,10 @@ parser.add_argument(
     help="Path to write the generated Simplified Chinese vehicle class i18n JSON.",
 )
 parser.add_argument(
-    "--spv-index",
-    default=repo_root / "src" / "data" / "vehicles" / "spv_vehicle_index.ts",
+    "--vehicle-index",
+    default=repo_root / "src" / "data" / "vehicles" / "vehicle_index.json",
     type=Path,
-    help="Path to the generated SPV vehicle index used to derive role aliases.",
+    help="Path to the generated vehicle index used to derive role aliases.",
 )
 args = parser.parse_args()
 
@@ -78,17 +78,8 @@ def ini_to_dict(filepath, initials):
     return result
 
 
-def read_spv_roles(filepath):
-    source = filepath.read_text(encoding="utf-8")
-    match = re.fullmatch(
-        r"\s*const spvVehicleIndex: SpvVehicleIndex\[\] = (\[.*\]);\s*export default spvVehicleIndex;\s*",
-        source,
-        re.DOTALL,
-    )
-    if not match:
-        raise ValueError(f"Unexpected SPV vehicle index format: {filepath}")
-
-    vehicles = json.loads(match.group(1))
+def read_vehicle_roles(filepath):
+    vehicles = json.loads(filepath.read_text(encoding="utf-8"))
     return sorted(
         {
             value.strip()
@@ -115,7 +106,7 @@ en_alias_sources = ini_to_dict(args.en, alias_source_initials)
 zh_alias_sources = ini_to_dict(args.zh, alias_source_initials)
 source_value_index = build_value_index(en_alias_sources, zh_alias_sources)
 
-for role in read_spv_roles(args.spv_index):
+for role in read_vehicle_roles(args.vehicle_index):
     key = "vehicle_class_" + role_to_key(role)
     if key in en_dict and key in zh_dict:
         continue

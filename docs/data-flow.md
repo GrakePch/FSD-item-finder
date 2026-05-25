@@ -37,9 +37,9 @@ component "Update I18n Data" as I18N_ACTION
 rectangle "UEX API\nitems / vehicles / prices / categories" as UEX
 component "Update UEX Item Data" as UEX_ACTION
 
-rectangle "Fancy-SC-Ship-Info-2\nvehicle JSON" as SPV_REPO
-component "Update SPV Vehicle Data" as SPV_ACTION
-note bottom of SPV_ACTION
+rectangle "Fancy-Star-Data\nvehicle JSON" as VEHICLE_REPO
+component "Update Vehicle Data" as VEHICLE_ACTION
+note bottom of VEHICLE_ACTION
   schedule:
   Sun 18:30 UTC
 end note
@@ -53,11 +53,11 @@ package "Frontend-consumed files" {
   artifact "src/data/bodies.json\nsrc/data/locations.json" as LOC
   artifact "src/data/bodies_info.json" as BODIES_INFO #F8D7E8
   artifact "src/data/uex_bodies_fix_manual.json" as RUNTIME_STATIC #F8D7E8
-  artifact "src/data/vehicles/spv_vehicle_*.ts" as SPV_DATA
-  artifact "src/data/vehicles/spv_vehicle_items_essential.json" as SPV_ITEMS
+  artifact "src/data/vehicles/vehicle_*.json" as VEHICLE_DATA
+  artifact "src/data/vehicles/vehicle_items_essential.json" as VEHICLE_ITEMS
   artifact "src/data/vehicles/manual_vehicle_classname_to_series.ts" as MANUAL_SERIES #F8D7E8
   artifact "src/data/vehicles/key_to_uex_ids_and_i18n.json" as VEH_UEX
-  artifact "src/data/vehicles/spv_classname_to_uex_id.json" as SPV_UEX
+  artifact "src/data/vehicles/vehicle_classname_to_uex_id.json" as VEHICLE_UEX
 }
 
 VT --> LOC_ACTION
@@ -74,14 +74,14 @@ INI --> UEX_ACTION
 UEX_STATIC --> UEX_ACTION
 UEX_ACTION --> ITEM
 UEX_ACTION --> VEH_UEX
-UEX_ACTION --> SPV_UEX
+UEX_ACTION --> VEHICLE_UEX
 
-SPV_REPO --> SPV_ACTION
-MANUAL_SERIES --> SPV_ACTION : preserve manual series
-SPV_ACTION --> SPV_DATA
-SPV_ACTION --> SPV_ITEMS
-SPV_ACTION --> MANUAL_SERIES
-SPV_ACTION --> SPV_UEX
+VEHICLE_REPO --> VEHICLE_ACTION
+MANUAL_SERIES --> VEHICLE_ACTION : preserve manual series
+VEHICLE_ACTION --> VEHICLE_DATA
+VEHICLE_ACTION --> VEHICLE_ITEMS
+VEHICLE_ACTION --> MANUAL_SERIES
+VEHICLE_ACTION --> VEHICLE_UEX
 
 LOC --> BODIES_INFO : same body name
 BODIES_INFO --> LOC : runtime rendering params
@@ -119,11 +119,11 @@ endlegend
   - 管理 workflow：`.github/workflows/update-location-data.yml`。
   - 触发条件：手动 `workflow_dispatch`；或每周日 `18:00 UTC` 定时触发。
 
-- Fancy-SC-Ship-Info-2 vehicle JSON
+- Fancy-Star-Data vehicle JSON
   - 来源类型：其他仓库。
-  - 来源仓库：`GrakePch/Fancy-SC-Ship-Info-2/main/src/data`。
-  - 主要用途：SPV 载具主列表、载具索引、hardpoint 数据，以及载具详情补充卡片需要的 quantum drive / radar item 数据。
-  - 管理 workflow：`.github/workflows/update-spv-vehicle-data.yml`。
+  - 来源仓库：`GrakePch/Fancy-Star-Data/main/data/spviewer/live/json`。
+  - 主要用途：vehicle 载具主列表、载具索引、hardpoint 数据，以及载具详情补充卡片需要的 quantum drive / radar item 数据。
+  - 管理 workflow：`.github/workflows/update-vehicle-data.yml`。
   - 触发条件：手动 `workflow_dispatch`；或每周日 `18:30 UTC` 定时触发。
 
 - 本地静态辅助文件
@@ -154,43 +154,43 @@ endlegend
 
 ### vehicle
 
-- `src/data/vehicles/spv_vehicle_list.ts`
+- `src/data/vehicles/vehicle_list.json`
   - 类型：list。
   - 主要查找入口：`ClassName`。
-  - 主要用途：完整 SPV 载具数据。
+  - 主要用途：完整 vehicle 载具数据。
   - 覆盖范围：仅包含已交付载具。
 
-- `src/data/vehicles/spv_vehicle_index.ts`
+- `src/data/vehicles/vehicle_index.json`
   - 类型：list。
   - 主要查找入口：`ClassName`。
-  - 主要用途：较轻量的 SPV 载具索引/基础信息。
-  - 覆盖范围：包含未交付载具，因此条目多于 `spv_vehicle_list.ts`。
+  - 主要用途：较轻量的 vehicle 载具索引/基础信息。
+  - 覆盖范围：包含未交付载具，因此条目多于 `vehicle_list.json`。
 
-- `src/data/vehicles/spv_vehicle_hardpoints.ts`
+- `src/data/vehicles/vehicle_hardpoints.json`
   - 类型：list。
   - 主要查找入口：`ClassName`。
-  - 主要用途：SPV hardpoint 数据。
+  - 主要用途：vehicle hardpoint 数据。
 
-- `src/data/vehicles/spv_vehicle_items_essential.json`
+- `src/data/vehicles/vehicle_items_essential.json`
   - 类型：list。
   - 主要查找入口：`className` / `stdItem.ClassName`。
   - 主要用途：VehicleInfo 补充卡片使用的 quantum drive 和 radar item 数据。
-  - 覆盖范围：从 SPV `vehicle-item-list.json` 中筛选包含 `QuantumDrive` 或 `Radar` 数据的条目，保留 `{ className, stdItem }`。
+  - 覆盖范围：从 vehicle `vehicle-item-list.json` 中筛选包含 `QuantumDrive` 或 `Radar` 数据的条目，保留 `{ className, stdItem }`。
 
 - `src/data/vehicles/manual_vehicle_classname_to_series.ts`
   - 类型：object。
-  - key：SPV `ClassName`。
+  - key：vehicle `ClassName`。
   - value：人工维护的 series 字符串。
-  - 生产关系：它会被 `Update SPV Vehicle Data` 读取以保留人工值，同时也是该 workflow 更新后的提交产物。
+  - 生产关系：它会被 `Update Vehicle Data` 读取以保留人工值，同时也是该 workflow 更新后的提交产物。
 
 - `src/data/vehicles/key_to_uex_ids_and_i18n.json`
   - 类型：object。
   - key：vehicle i18n key，例如 `vehicle_NameAEGS_Avenger_Titan`。
   - value：`uex_ids`、`en`、`zh_Hans`。
 
-- `src/data/vehicles/spv_classname_to_uex_id.json`
+- `src/data/vehicles/vehicle_classname_to_uex_id.json`
   - 类型：object。
-  - key：SPV `ClassName`。
+  - key：vehicle `ClassName`。
   - value：数字 UEX vehicle id。
 
 ### location
@@ -255,11 +255,11 @@ endlegend
 
 ### vehicle data
 
-- `scripts/vehicle/update_spv_vehicle_data.mjs`
-  - 上游：Fancy-SC-Ship-Info-2 vehicle JSON、现有 `manual_vehicle_classname_to_series.ts`。
+- `scripts/vehicle/update_vehicle_data.mjs`
+  - 上游：Fancy-Star-Data vehicle JSON、现有 `manual_vehicle_classname_to_series.ts`。
   - 匹配方式：源数据以 `ClassName` 为主键；manual series 用精确 `ClassName` 和大小写不敏感 `ClassName` 保留旧值。
   - item essential 筛选：从 `vehicle-item-list.json` 中保留包含 `QuantumDrive` 或 `Radar` 的条目，额外兜底 `QDRV_` / `RADR_` class 前缀。
-  - 输出：`spv_vehicle_list.ts`、`spv_vehicle_index.ts`、`spv_vehicle_hardpoints.ts`、`spv_vehicle_items_essential.json`、`manual_vehicle_classname_to_series.ts`。
+  - 输出：`vehicle_list.json`、`vehicle_index.json`、`vehicle_hardpoints.json`、`vehicle_items_essential.json`、`manual_vehicle_classname_to_series.ts`。
 
 - `scripts/uex_item/update_key_to_uex_id.py`
   - 上游：UEX `vehicles_purchases_prices_all`、英文 `global.ini`、`key_match_rules.json` 中的 vehicle rules。
@@ -271,10 +271,10 @@ endlegend
   - 匹配方式：按 vehicle i18n key 直接查翻译。
   - 输出：`src/data/vehicles/key_to_uex_ids_and_i18n.json`。
 
-- `scripts/uex_item/update_spv_classname_to_uex_id.mjs`
-  - 上游：`spv_vehicle_list.ts`、`key_to_uex_ids_and_i18n.json`。
-  - 匹配方式：把 `vehicle_Name*` key 转成候选 `ClassName`，应用已知例外映射，然后只保留存在于 SPV `ClassName` 集合中的项。
-  - 输出：`src/data/vehicles/spv_classname_to_uex_id.json`。
+- `scripts/uex_item/update_vehicle_classname_to_uex_id.mjs`
+  - 上游：`vehicle_list.json`、`key_to_uex_ids_and_i18n.json`。
+  - 匹配方式：把 `vehicle_Name*` key 转成候选 `ClassName`，应用已知例外映射，然后只保留存在于 vehicle `ClassName` 集合中的项。
+  - 输出：`src/data/vehicles/vehicle_classname_to_uex_id.json`。
 
 ### location data
 
@@ -324,6 +324,6 @@ endlegend
   - 手动或在 `Update I18n Data` 成功后触发。
   - 生成 item catalog 和 UEX vehicle lookup 产物。
 
-- `Update SPV Vehicle Data`
+- `Update Vehicle Data`
   - 手动或每周定时触发。
-  - 生成 SPV vehicle TS 数据和 VehicleInfo 使用的 essential item JSON，并刷新 SPV `ClassName` 到 UEX id 的映射。
+  - 生成 vehicle JSON 数据和 VehicleInfo 使用的 essential item JSON，并刷新 vehicle `ClassName` 到 UEX id 的映射。

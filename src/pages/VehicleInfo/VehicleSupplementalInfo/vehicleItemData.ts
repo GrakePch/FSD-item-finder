@@ -1,4 +1,4 @@
-import vehicleItemsEssentialRaw from "../../../data/vehicles/spv_vehicle_items_essential.json";
+import vehicleItemsEssentialRaw from "../../../data/vehicles/vehicle_items_essential.json";
 import type { EssentialVehicleItem } from "./types";
 
 const vehicleItemsEssential = vehicleItemsEssentialRaw as EssentialVehicleItem[];

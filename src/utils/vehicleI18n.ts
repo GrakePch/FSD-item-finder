@@ -35,7 +35,7 @@ export function getVehicleNameI18nKey(className: string): string {
 
 export function getTranslatedVehicleName(
   t: (key: string, options?: Record<string, unknown>) => string,
-  vehicle: SpvVehicleIndex
+  vehicle: VehicleIndex
 ): string {
   return t(getVehicleNameI18nKey(vehicle.ClassName), {
     ns: "vehicles",

@@ -1,0 +1,54 @@
+name: Update Vehicle Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 18 * * 0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  update-vehicle-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Generate vehicle data
+        env:
+          FANCY_STAR_DATA_TOKEN: ${{ secrets.FANCY_STAR_DATA_TOKEN }}
+        run: |
+          node scripts/vehicle/update_vehicle_data.mjs
+          node scripts/uex_item/update_vehicle_classname_to_uex_id.mjs
+
+      - name: Validate generated data
+        run: |
+          npm ci
+          npm run lint
+          npm run typecheck
+          npm run build
+
+      - name: Commit updated data
+        run: |
+          if git diff --quiet -- src/data/vehicles/vehicle_list.json src/data/vehicles/vehicle_index.json src/data/vehicles/vehicle_hardpoints.json src/data/vehicles/manual_vehicle_classname_to_series.ts src/data/vehicles/vehicle_classname_to_uex_id.json src/data/vehicles/vehicle_items_essential.json; then
+            echo "No vehicle data changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/vehicles/vehicle_list.json src/data/vehicles/vehicle_index.json src/data/vehicles/vehicle_hardpoints.json src/data/vehicles/manual_vehicle_classname_to_series.ts src/data/vehicles/vehicle_classname_to_uex_id.json src/data/vehicles/vehicle_items_essential.json
+          git commit -m "chore(data): update vehicle data"
+          git push

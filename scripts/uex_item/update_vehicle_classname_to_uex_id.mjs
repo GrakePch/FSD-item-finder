@@ -1,9 +1,9 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { basename, resolve } from "node:path";
 
-const DEFAULT_SPV_VEHICLE_SOURCE = resolve("src/data/vehicles/spv_vehicle_list.json");
+const DEFAULT_VEHICLE_SOURCE = resolve("src/data/vehicles/vehicle_list.json");
 const DEFAULT_VEHICLE_KEY_DATA = resolve("src/data/vehicles/key_to_uex_ids_and_i18n.json");
-const DEFAULT_OUTPUT = resolve("src/data/vehicles/spv_classname_to_uex_id.json");
+const DEFAULT_OUTPUT = resolve("src/data/vehicles/vehicle_classname_to_uex_id.json");
 
 const CLASS_NAME_EXCEPTIONS = new Map([
   ["AEGS_Retaliator_Bomber", "AEGS_Retaliator"],
@@ -18,7 +18,7 @@ const CLASS_NAME_EXCEPTIONS = new Map([
 
 function parseArgs(argv) {
   const options = {
-    spvVehicles: DEFAULT_SPV_VEHICLE_SOURCE,
+    vehicles: DEFAULT_VEHICLE_SOURCE,
     vehicleKeyData: DEFAULT_VEHICLE_KEY_DATA,
     output: DEFAULT_OUTPUT,
     classNameToKeyOutput: null,
@@ -29,8 +29,8 @@ function parseArgs(argv) {
     const arg = argv[index];
     const next = argv[index + 1];
 
-    if (arg === "--spv-vehicles" && next) {
-      options.spvVehicles = resolve(next);
+    if (arg === "--vehicles" && next) {
+      options.vehicles = resolve(next);
       index += 1;
       continue;
     }
@@ -62,12 +62,12 @@ function parseArgs(argv) {
     if (arg === "--help") {
       console.log(
         [
-          "Usage: node scripts/uex_item/update_spv_classname_to_uex_id.mjs [options]",
+          "Usage: node scripts/uex_item/update_vehicle_classname_to_uex_id.mjs [options]",
           "",
           "Options:",
-          "  --spv-vehicles <path>              SPV vehicle JSON or legacy TS source. Defaults to src/data/vehicles/spv_vehicle_list.json",
+          "  --vehicles <path>                  Vehicle JSON source. Defaults to src/data/vehicles/vehicle_list.json",
           "  --vehicle-key-data <path>          Vehicle key data JSON. Defaults to src/data/vehicles/key_to_uex_ids_and_i18n.json",
-          "  --output <path>                    Output JSON path. Defaults to src/data/vehicles/spv_classname_to_uex_id.json",
+          "  --output <path>                    Output JSON path. Defaults to src/data/vehicles/vehicle_classname_to_uex_id.json",
           "  --class-name-to-key-output <path>  Optional debug output for the intermediate ClassName-to-key map",
           "  --unmatched-preview <number>       Number of unmatched ClassNames to print. Defaults to 40",
         ].join("\n"),
@@ -83,22 +83,8 @@ async function readJson(path) {
   return JSON.parse(await readFile(path, "utf8"));
 }
 
-async function loadSpvVehicleList(path) {
-  const source = await readFile(path, "utf8");
-
-  if (path.endsWith(".json")) {
-    return JSON.parse(source);
-  }
-
-  const match = source.match(
-    /const\s+spvVehicleList[^=]*=\s*([\s\S]*?);\s*export\s+default\s+spvVehicleList/,
-  );
-
-  if (!match) {
-    throw new Error(`Unable to extract spvVehicleList from ${path}`);
-  }
-
-  return JSON.parse(match[1]);
+async function loadVehicleList(path) {
+  return JSON.parse(await readFile(path, "utf8"));
 }
 
 function isVehicleNameKey(key) {
@@ -127,18 +113,18 @@ function normalizeClassNameCandidate(iniKey) {
   return className;
 }
 
-function resolveClassNameFromVehicleKey(key, spvClassNameByLower) {
+function resolveClassNameFromVehicleKey(key, vehicleClassNameByLower) {
   const normalizedClassName = normalizeClassNameCandidate(stripVehicleNamePrefix(key));
   const exceptionClassName = CLASS_NAME_EXCEPTIONS.get(normalizedClassName);
   const className = exceptionClassName ?? normalizedClassName;
 
-  return spvClassNameByLower.get(className.toLowerCase()) ?? className;
+  return vehicleClassNameByLower.get(className.toLowerCase()) ?? className;
 }
 
-function buildClassNameToVehicleKeyMap(vehicleKeyData, spvVehicles) {
-  const spvClassNames = new Set(spvVehicles.map((vehicle) => vehicle.ClassName));
-  const spvClassNameByLower = new Map(
-    spvVehicles.map((vehicle) => [vehicle.ClassName.toLowerCase(), vehicle.ClassName]),
+function buildClassNameToVehicleKeyMap(vehicleKeyData, vehicles) {
+  const vehicleClassNames = new Set(vehicles.map((vehicle) => vehicle.ClassName));
+  const vehicleClassNameByLower = new Map(
+    vehicles.map((vehicle) => [vehicle.ClassName.toLowerCase(), vehicle.ClassName]),
   );
   const classNameToKey = new Map();
   const duplicateClassNames = [];
@@ -148,8 +134,8 @@ function buildClassNameToVehicleKeyMap(vehicleKeyData, spvVehicles) {
       continue;
     }
 
-    const className = resolveClassNameFromVehicleKey(key, spvClassNameByLower);
-    if (!spvClassNames.has(className)) {
+    const className = resolveClassNameFromVehicleKey(key, vehicleClassNameByLower);
+    if (!vehicleClassNames.has(className)) {
       continue;
     }
 
@@ -178,11 +164,11 @@ function parseFirstUexVehicleId(entry) {
   return match ? Number.parseInt(match[1], 10) : null;
 }
 
-function buildSpvClassNameToUexId(vehicleKeyData, spvVehicles, classNameToKey) {
+function buildVehicleClassNameToUexId(vehicleKeyData, vehicles, classNameToKey) {
   const result = {};
   const missingIds = [];
 
-  for (const vehicle of [...spvVehicles].sort((left, right) =>
+  for (const vehicle of [...vehicles].sort((left, right) =>
     left.ClassName.localeCompare(right.ClassName),
   )) {
     const key = classNameToKey.get(vehicle.ClassName);
@@ -216,21 +202,21 @@ function printPreview(label, values, previewLimit, formatValue = (value) => valu
 
 async function main() {
   const options = parseArgs(process.argv.slice(2));
-  const [spvVehicles, vehicleKeyData] = await Promise.all([
-    loadSpvVehicleList(options.spvVehicles),
+  const [vehicles, vehicleKeyData] = await Promise.all([
+    loadVehicleList(options.vehicles),
     readJson(options.vehicleKeyData),
   ]);
 
   const { classNameToKey, duplicateClassNames } = buildClassNameToVehicleKeyMap(
     vehicleKeyData,
-    spvVehicles,
+    vehicles,
   );
-  const { result, missingIds } = buildSpvClassNameToUexId(
+  const { result, missingIds } = buildVehicleClassNameToUexId(
     vehicleKeyData,
-    spvVehicles,
+    vehicles,
     classNameToKey,
   );
-  const unmatchedClassNames = spvVehicles
+  const unmatchedClassNames = vehicles
     .map((vehicle) => vehicle.ClassName)
     .filter((className) => !classNameToKey.has(className))
     .sort((left, right) => left.localeCompare(right));
@@ -245,10 +231,10 @@ async function main() {
   }
 
   console.log(`Updated ${basename(options.output)} with ${Object.keys(result).length} entries`);
-  console.log(`SPV vehicles: ${spvVehicles.length}`);
+  console.log(`Vehicles: ${vehicles.length}`);
   console.log(`Vehicle key entries: ${Object.keys(vehicleKeyData).length}`);
   console.log(`ClassName-to-key matches: ${classNameToKey.size}`);
-  printPreview("Unmatched SPV ClassNames", unmatchedClassNames, options.unmatchedPreview);
+  printPreview("Unmatched Vehicle ClassNames", unmatchedClassNames, options.unmatchedPreview);
   printPreview(
     "Duplicate ClassName key matches",
     duplicateClassNames,

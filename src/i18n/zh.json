@@ -247,7 +247,7 @@
       "EnergyDamageResistance": "能量伤害抗性"
     }
   },
-  "SPVProgressTrackerStatus": {
+  "VehicleProgressTrackerStatus": {
     "Concept": "概念",
     "InProd": "制作中",
     "Released": "已交付",

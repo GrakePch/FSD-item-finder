@@ -4,22 +4,22 @@ import { ContextAllData } from "../../contexts";
 import { useContext, useMemo } from "react";
 import Icon from "@mdi/react";
 import { mdiHeart, mdiHeartOutline } from "@mdi/js";
-import spvVehicleIndexRaw from "../../data/vehicles/spv_vehicle_index.json";
-import spvVehicleListRaw from "../../data/vehicles/spv_vehicle_list.json";
-import spvVehicleHardpointsRaw from "../../data/vehicles/spv_vehicle_hardpoints.json";
-import spvClassNameToUexId from "../../data/vehicles/spv_classname_to_uex_id.json";
+import vehicleIndexRaw from "../../data/vehicles/vehicle_index.json";
+import vehicleListRaw from "../../data/vehicles/vehicle_list.json";
+import vehicleHardpointsRaw from "../../data/vehicles/vehicle_hardpoints.json";
+import vehicleClassNameToUexId from "../../data/vehicles/vehicle_classname_to_uex_id.json";
 import TradeOptionsSortingControl from "../../components/TradeOptionsSortingControl/TradeOptionsSortingControl";
 import TradeOptions from "../../components/TradeOptions/TradeOptions";
 import VehicleImage from "../../components/VehicleImage";
-import { spvRoleToKey } from "../../utils";
+import { vehicleRoleToKey } from "../../utils";
 import { useTranslation } from "react-i18next";
 import VehicleSupplementalInfo from "./VehicleSupplementalInfo/VehicleSupplementalInfo";
 import useFavoriteVehicles from "../../hooks/useFavoriteVehicles";
 
-const spvClassNameToUexIdMap = spvClassNameToUexId as Record<string, number>;
-const spvVehicleIndex = spvVehicleIndexRaw as unknown as SpvVehicleIndex[];
-const spvVehicleList = spvVehicleListRaw as unknown as SpvVehicleMain[];
-const spvVehicleHardpointsList = spvVehicleHardpointsRaw as unknown as SpvVehicleHardpoints[];
+const vehicleClassNameToUexIdMap = vehicleClassNameToUexId as Record<string, number>;
+const vehicleIndex = vehicleIndexRaw as unknown as VehicleIndex[];
+const vehicleList = vehicleListRaw as unknown as VehicleMain[];
+const vehicleHardpointsList = vehicleHardpointsRaw as unknown as VehicleHardpointData[];
 
 const VehicleInfo = () => {
   const { t } = useTranslation();
@@ -27,68 +27,68 @@ const VehicleInfo = () => {
   const { dictVehicles } = useContext(ContextAllData);
   const { isFavoriteVehicle, toggleFavoriteVehicle } = useFavoriteVehicles();
 
-  const spvVehicle = useMemo(
-    () => spvVehicleIndex.find((v) => v.ClassName === vehicleClassName),
+  const vehicle = useMemo(
+    () => vehicleIndex.find((v) => v.ClassName === vehicleClassName),
     [vehicleClassName]
   );
 
-  const spvVehicleMain = useMemo(
-    () => spvVehicleList.find((v) => v.ClassName === vehicleClassName),
+  const vehicleMain = useMemo(
+    () => vehicleList.find((v) => v.ClassName === vehicleClassName),
     [vehicleClassName]
   );
 
-  const spvVehicleHardpoints = useMemo(
-    () => spvVehicleHardpointsList.find((v) => v.ClassName === vehicleClassName),
+  const vehicleHardpoints = useMemo(
+    () => vehicleHardpointsList.find((v) => v.ClassName === vehicleClassName),
     [vehicleClassName]
   );
 
   const uexVehicle = useMemo(() => {
-    const uexId = vehicleClassName ? spvClassNameToUexIdMap[vehicleClassName] : undefined;
+    const uexId = vehicleClassName ? vehicleClassNameToUexIdMap[vehicleClassName] : undefined;
     return Object.values(dictVehicles).find((v) => v.id_vehicle === uexId);
-  }, [dictVehicles, spvClassNameToUexId, vehicleClassName]);
+  }, [dictVehicles, vehicleClassName]);
 
   const isFavorite = vehicleClassName ? isFavoriteVehicle(vehicleClassName) : false;
 
   return (
-    spvVehicle && (
+    vehicle && (
       <div className="VehicleInfo">
         <div className="highlight-info">
           <VehicleImage
             className="vehicle-image"
-            vehicleClassName={spvVehicle.ClassName}
+            vehicleClassName={vehicle.ClassName}
             angle="iso"
             size="l"
             alt=""
           />
           <div className="vehicle-main-info">
             <h1>
-              {t("vehicle_Name" + spvVehicle.ClassName, {
+              {t("vehicle_Name" + vehicle.ClassName, {
                 ns: "vehicles",
-                defaultValue: spvVehicle.Name,
+                defaultValue: vehicle.Name,
               })}
             </h1>
             <h2>
-              {t("vehicle_Name" + spvVehicle.ClassName, {
+              {t("vehicle_Name" + vehicle.ClassName, {
                 ns: "vehicles",
-                defaultValue: spvVehicle.Name,
+                defaultValue: vehicle.Name,
                 lng: "en",
               })}
             </h2>
             <p className="vehicle-tags">
               <span className="vehicle-role">
-                {t("vehicle_class_" + spvRoleToKey(spvVehicle.Role), {
+                {t("vehicle_class_" + vehicleRoleToKey(vehicle.Role), {
                   ns: "vehicle_classes",
-                  defaultValue: spvVehicle.Role,
+                  defaultValue: vehicle.Role,
                 })}
               </span>
-              <span className={`vehicle-status ${spvVehicle.ProgressTracker.Status}`}>
-                {t("SPVProgressTrackerStatus." + spvVehicle.ProgressTracker.Status)}{" "}
-                {spvVehicle.ProgressTracker.Patch}
+              <span className={`vehicle-status ${vehicle.ProgressTracker.Status}`}>
+                {t("VehicleProgressTrackerStatus." + vehicle.ProgressTracker.Status)}{" "}
+                {vehicle.ProgressTracker.Patch}
               </span>
               <button
                 className={`favorite-vehicle-button ${isFavorite ? "active" : ""}`}
                 type="button"
-                onClick={() => toggleFavoriteVehicle(spvVehicle.ClassName)}
+                onClick={() => toggleFavoriteVehicle(vehicle.ClassName)}
               >
                 <Icon path={isFavorite ? mdiHeart : mdiHeartOutline} size="1rem" />
                 <span>
@@ -98,27 +98,27 @@ const VehicleInfo = () => {
                 </span>
               </button>
             </p>
-            {/* {spvVehicleMain &&
+            {/* {vehicleMain &&
             <p className="dimensions">{t("VehicleInfo.Dimensions", {
-              L: spvVehicleMain.Dimensions.Length, 
-              W: spvVehicleMain.Dimensions.Width, 
-              H: spvVehicleMain.Dimensions.Height
+              L: vehicleMain.Dimensions.Length, 
+              W: vehicleMain.Dimensions.Width, 
+              H: vehicleMain.Dimensions.Height
               })}
             </p>
           } */}
             <div style={{ flexGrow: 1, flexBasis: "1rem" }}></div>
             <p className="store-info">
-              {spvVehicle.Store.Buy ? (
-                <span className="price-USD">$ {spvVehicle.Store.Buy}</span>
+              {vehicle.Store.Buy ? (
+                <span className="price-USD">$ {vehicle.Store.Buy}</span>
               ) : (
                 <span className="price-USD inactive">
                   {t("VehicleInfo.notBuyableUSD")}
                 </span>
               )}
-              {spvVehicle.Store.IsLimitedSale && (
+              {vehicle.Store.IsLimitedSale && (
                 <span className="is-limited-sale">{t("VehicleInfo.isLimitedSale")}</span>
               )}
-              {spvVehicle.Store.IsPromotionOnly && (
+              {vehicle.Store.IsPromotionOnly && (
                 <span className="is-promotion-only">
                   {t("VehicleInfo.isPromotionOnly")}
                 </span>
@@ -148,8 +148,8 @@ const VehicleInfo = () => {
             )}
           </div>
           <VehicleSupplementalInfo
-            spvVehicleMain={spvVehicleMain}
-            spvVehicleHardpoints={spvVehicleHardpoints}
+            vehicleMain={vehicleMain}
+            vehicleHardpoints={vehicleHardpoints}
           />
         </div>
       </div>

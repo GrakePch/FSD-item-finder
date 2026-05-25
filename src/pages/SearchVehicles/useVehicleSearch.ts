@@ -3,19 +3,19 @@ import { useSearchParams } from "react-router";
 import type { TFunction } from "i18next";
 import { useTranslation } from "react-i18next";
 import { ContextAllData } from "../../contexts";
-import spvVehicleIndexRaw from "../../data/vehicles/spv_vehicle_index.json";
+import vehicleIndexRaw from "../../data/vehicles/vehicle_index.json";
 import vehicleClassNameToSeries from "../../data/vehicles/manual_vehicle_classname_to_series";
-import spvClassNameToUexId from "../../data/vehicles/spv_classname_to_uex_id.json";
+import vehicleClassNameToUexId from "../../data/vehicles/vehicle_classname_to_uex_id.json";
 import { getTranslatedVehicleName } from "../../utils/vehicleI18n";
 import useFavoriteVehicles from "../../hooks/useFavoriteVehicles";
-import { spvRoleToKey } from "../../utils";
+import { vehicleRoleToKey } from "../../utils";
 
-const spvVehicleIndex = spvVehicleIndexRaw as unknown as SpvVehicleIndex[];
+const vehicleIndex = vehicleIndexRaw as unknown as VehicleIndex[];
 
 export type VehicleSeriesInfo = {
   isSeries: boolean;
   seriesKey: string;
-  vehicles: SpvVehicleIndex[];
+  vehicles: VehicleIndex[];
   priceMin: number;
   priceMax: number;
 };
@@ -42,8 +42,8 @@ export const manufacturerI18nKeys: Record<string, string> = {
   Vanduul: "VNCL",
 };
 
-function buildSeriesList(vehicles: SpvVehicleIndex[]) {
-  const seriesMap: { [seriesKey: string]: SpvVehicleIndex[] } = {};
+function buildSeriesList(vehicles: VehicleIndex[]) {
+  const seriesMap: { [seriesKey: string]: VehicleIndex[] } = {};
 
   vehicles.forEach((vehicle) => {
     const series = vehicleClassNameToSeries[vehicle.ClassName] || "";
@@ -96,7 +96,7 @@ export function getVehicleManufacturerLabel(
 }
 
 export function getVehicleCareerLabel(t: TFunction, career: string) {
-  return t(`vehicle_class_${spvRoleToKey(career)}`, {
+  return t(`vehicle_class_${vehicleRoleToKey(career)}`, {
     ns: "vehicle_classes",
     defaultValue: career,
   });
@@ -119,7 +119,7 @@ export function useVehicleSearch(searchName: string) {
 
   const manufacturers = useMemo(
     () =>
-      Array.from(new Set(spvVehicleIndex.map((vehicle) => vehicle.Manufacturer)))
+      Array.from(new Set(vehicleIndex.map((vehicle) => vehicle.Manufacturer)))
         .filter(Boolean)
         .sort((a, b) => a.localeCompare(b)),
     []
@@ -127,17 +127,17 @@ export function useVehicleSearch(searchName: string) {
 
   const careers = useMemo(
     () =>
-      Array.from(new Set(spvVehicleIndex.map((vehicle) => vehicle.Career)))
+      Array.from(new Set(vehicleIndex.map((vehicle) => vehicle.Career)))
         .filter(Boolean)
         .sort((a, b) => a.localeCompare(b)),
     []
   );
 
-  const getUexBuyPrice = (vehicle: SpvVehicleIndex) => {
+  const getUexBuyPrice = (vehicle: VehicleIndex) => {
     if (Object.keys(uexVehicleById).length === 0) return undefined;
 
     const uexId =
-      (spvClassNameToUexId as Record<string, number | null | undefined>)[
+      (vehicleClassNameToUexId as Record<string, number | null | undefined>)[
         vehicle.ClassName
       ];
     const buyPrice = uexId ? uexVehicleById[uexId]?.price_min_max.buy_min : null;
@@ -146,7 +146,7 @@ export function useVehicleSearch(searchName: string) {
 
   const vehicles = useMemo(
     () =>
-      spvVehicleIndex.filter((vehicle) => {
+      vehicleIndex.filter((vehicle) => {
         const nameMatch = vehicle.Name.toLowerCase().includes(normalizedSearchName);
         const i18nName = getTranslatedVehicleName(t, vehicle);
         const i18nMatch = i18nName.toLowerCase().includes(normalizedSearchName);
@@ -160,12 +160,12 @@ export function useVehicleSearch(searchName: string) {
 
   const favoriteVehicleList = useMemo(() => {
     const vehicleByClassName = Object.fromEntries(
-      spvVehicleIndex.map((vehicle) => [vehicle.ClassName, vehicle])
+      vehicleIndex.map((vehicle) => [vehicle.ClassName, vehicle])
     );
 
     return favoriteVehicles
       .map((vehicleClassName) => vehicleByClassName[vehicleClassName])
-      .filter((vehicle): vehicle is SpvVehicleIndex => !!vehicle)
+      .filter((vehicle): vehicle is VehicleIndex => !!vehicle)
       .sort((a, b) => {
         const priceA = typeof a.Store.Buy === "number" ? a.Store.Buy : Infinity;
         const priceB = typeof b.Store.Buy === "number" ? b.Store.Buy : Infinity;

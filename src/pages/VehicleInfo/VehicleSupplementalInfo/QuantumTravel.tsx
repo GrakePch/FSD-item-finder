@@ -109,13 +109,13 @@ const FuelCapacityBar = ({
 };
 
 const QuantumTravel = ({
-  spvVehicleHardpoints,
+  vehicleHardpoints,
 }: {
-  spvVehicleHardpoints: SpvVehicleHardpoints;
+  vehicleHardpoints: VehicleHardpointData;
 }) => {
   const { t } = useTranslation();
-  const propulsion = spvVehicleHardpoints.Hardpoints.Components.Propulsion;
-  const quantumDrive = getInstalledItems<SpvPort>(propulsion.QuantumDrives)?.at(0);
+  const propulsion = vehicleHardpoints.Hardpoints.Components.Propulsion;
+  const quantumDrive = getInstalledItems<VehiclePort>(propulsion.QuantumDrives)?.at(0);
   const fuelCapacity = propulsion.QuantumFuelTanks.TotalQuantumFuelCapacity;
   const vItem = findVehicleItem(
     quantumDrive?.BaseLoadout?.ClassName || quantumDrive?.Loadout

@@ -1,4 +1,4 @@
-export type InstalledItem = SpvPort | SpvHardpointsOldItem;
+export type InstalledItem = VehiclePort | VehicleHardpointOldItem;
 
 export type EssentialVehicleItem = {
   className: string;
@@ -26,6 +26,6 @@ export type EssentialVehicleItem = {
 };
 
 export type VehicleSupplementalInfoProps = {
-  spvVehicleMain?: SpvVehicleMain;
-  spvVehicleHardpoints?: SpvVehicleHardpoints;
+  vehicleMain?: VehicleMain;
+  vehicleHardpoints?: VehicleHardpointData;
 };

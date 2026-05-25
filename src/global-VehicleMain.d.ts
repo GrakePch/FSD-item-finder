@@ -1,4 +1,4 @@
-interface SpvVehicleMain {
+interface VehicleMain {
   "New Ship"?: string;
   "New Vehicle"?: string;
   ClassName: string;
@@ -67,8 +67,8 @@ interface SpvVehicleMain {
       Maneuvering: { [key: string]: number };
     };
   };
-  FlightCharacteristics?: SpvFlightCharacteristics;
-  FuelManagement?: SpvFuelManagement;
+  FlightCharacteristics?: VehicleFlightCharacteristics;
+  FuelManagement?: VehicleFuelManagement;
   SteerCharacteristics?: {
     V0SteerSpeed: number;
     VMaxSteerSpeed: number;
@@ -152,7 +152,7 @@ interface SpvVehicleMain {
   };
 }
 
-interface SpvFlightCharacteristics {
+interface VehicleFlightCharacteristics {
   ScmSpeed: number;
   HoverMaxSpeed?: number;
   MaxSpeed: number;
@@ -212,7 +212,7 @@ interface SpvFlightCharacteristics {
   };
 }
 
-interface SpvFuelManagement {
+interface VehicleFuelManagement {
   FuelCapacity: number;
   FuelIntakeRate: number;
   QuantumFuelCapacity: number;

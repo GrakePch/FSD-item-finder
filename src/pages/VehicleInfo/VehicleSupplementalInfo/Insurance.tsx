@@ -8,7 +8,7 @@ import { formatTime } from "./formatters";
 import InfoRow from "./InfoRow";
 import styles from "./VehicleSupplementalInfo.module.css";
 
-const Insurance = ({ insurance }: { insurance: SpvVehicleMain["Insurance"] }) => {
+const Insurance = ({ insurance }: { insurance: VehicleMain["Insurance"] }) => {
   const { t } = useTranslation();
   const hasInsurance =
     insurance.StandardClaimTime !== undefined ||

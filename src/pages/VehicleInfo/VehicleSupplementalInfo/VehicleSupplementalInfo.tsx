@@ -8,27 +8,27 @@ import type { VehicleSupplementalInfoProps } from "./types";
 import styles from "./VehicleSupplementalInfo.module.css";
 
 const VehicleSupplementalInfo = ({
-  spvVehicleMain,
-  spvVehicleHardpoints,
+  vehicleMain,
+  vehicleHardpoints,
 }: VehicleSupplementalInfoProps) => {
-  if (!spvVehicleMain) return null;
+  if (!vehicleMain) return null;
 
   return (
     <div className={styles.cards}>
-      {spvVehicleMain.FlightCharacteristics && (
-        <FlightVelocities spvFC={spvVehicleMain.FlightCharacteristics} />
+      {vehicleMain.FlightCharacteristics && (
+        <FlightVelocities flightCharacteristics={vehicleMain.FlightCharacteristics} />
       )}
-      {spvVehicleMain.FlightCharacteristics && (
-        <FlightAccelerations spvFC={spvVehicleMain.FlightCharacteristics} />
+      {vehicleMain.FlightCharacteristics && (
+        <FlightAccelerations flightCharacteristics={vehicleMain.FlightCharacteristics} />
       )}
-      {spvVehicleHardpoints && (
-        <RadarInfo spvVehicleHardpoints={spvVehicleHardpoints} />
+      {vehicleHardpoints && (
+        <RadarInfo vehicleHardpoints={vehicleHardpoints} />
       )}
-      {spvVehicleHardpoints && (
-        <QuantumTravel spvVehicleHardpoints={spvVehicleHardpoints} />
+      {vehicleHardpoints && (
+        <QuantumTravel vehicleHardpoints={vehicleHardpoints} />
       )}
-      <Insurance insurance={spvVehicleMain.Insurance} />
-      <ArmorInfo armor={spvVehicleMain.Armor} />
+      <Insurance insurance={vehicleMain.Insurance} />
+      <ArmorInfo armor={vehicleMain.Armor} />
     </div>
   );
 };

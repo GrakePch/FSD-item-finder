@@ -9,12 +9,12 @@ import { findVehicleItem } from "./vehicleItemData";
 import styles from "./VehicleSupplementalInfo.module.css";
 
 const RadarInfo = ({
-  spvVehicleHardpoints,
+  vehicleHardpoints,
 }: {
-  spvVehicleHardpoints: SpvVehicleHardpoints;
+  vehicleHardpoints: VehicleHardpointData;
 }) => {
   const { t } = useTranslation();
-  const radars = spvVehicleHardpoints.Hardpoints.Components.Avionics.Radars;
+  const radars = vehicleHardpoints.Hardpoints.Components.Avionics.Radars;
   const radar = radars.InstalledItems?.find((item) => {
     const className = item?.BaseLoadout?.ClassName || item?.Loadout;
     return Boolean(className && !className.endsWith("_Fake"));

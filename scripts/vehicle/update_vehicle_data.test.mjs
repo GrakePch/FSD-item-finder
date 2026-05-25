@@ -13,8 +13,8 @@ async function writeJson(path, data) {
   await writeFile(path, `${JSON.stringify(data, null, 2)}\n`, "utf8");
 }
 
-test("SPV vehicle updater writes raw JSON data files instead of TypeScript data modules", async () => {
-  const root = await mkdtemp(join(tmpdir(), "spv-vehicle-data-"));
+test("vehicle updater writes raw JSON data files instead of TypeScript data modules", async () => {
+  const root = await mkdtemp(join(tmpdir(), "vehicle-data-"));
   const sourceDir = join(root, "source");
   const outputDir = join(root, "out");
 
@@ -35,23 +35,23 @@ test("SPV vehicle updater writes raw JSON data files instead of TypeScript data 
   ]);
 
   await execFileAsync("node", [
-    "scripts/vehicle/update_spv_vehicle_data.mjs",
+    "scripts/vehicle/update_vehicle_data.mjs",
     "--local-source-dir",
     sourceDir,
     "--output-dir",
     outputDir,
   ]);
 
-  const list = JSON.parse(await readFile(join(outputDir, "spv_vehicle_list.json"), "utf8"));
-  const index = JSON.parse(await readFile(join(outputDir, "spv_vehicle_index.json"), "utf8"));
-  const hardpoints = JSON.parse(await readFile(join(outputDir, "spv_vehicle_hardpoints.json"), "utf8"));
-  const essentials = JSON.parse(await readFile(join(outputDir, "spv_vehicle_items_essential.json"), "utf8"));
+  const list = JSON.parse(await readFile(join(outputDir, "vehicle_list.json"), "utf8"));
+  const index = JSON.parse(await readFile(join(outputDir, "vehicle_index.json"), "utf8"));
+  const hardpoints = JSON.parse(await readFile(join(outputDir, "vehicle_hardpoints.json"), "utf8"));
+  const essentials = JSON.parse(await readFile(join(outputDir, "vehicle_items_essential.json"), "utf8"));
 
   assert.equal(list[0].ClassName, "TEST_Ship");
   assert.equal(index[0].ClassName, "TEST_Ship");
   assert.equal(hardpoints[0].ClassName, "TEST_Ship");
   assert.deepEqual(essentials.map((item) => item.className), ["QDRV_Test"]);
-  assert.equal(existsSync(join(outputDir, "spv_vehicle_list.ts")), false);
-  assert.equal(existsSync(join(outputDir, "spv_vehicle_index.ts")), false);
-  assert.equal(existsSync(join(outputDir, "spv_vehicle_hardpoints.ts")), false);
+  assert.equal(existsSync(join(outputDir, "vehicle_list.ts")), false);
+  assert.equal(existsSync(join(outputDir, "vehicle_index.ts")), false);
+  assert.equal(existsSync(join(outputDir, "vehicle_hardpoints.ts")), false);
 });
