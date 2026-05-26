@@ -1,0 +1,1676 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 6
+      },
+      "vgCode": "STANTON/III/baijini-point",
+      "i18nKey": "Stanton3_Transfer",
+      "source": {
+        "method": "generated",
+        "uexName": "Baijini Point",
+        "vgName": "Baijini Point",
+        "terminalIds": [
+          13,
+          95,
+          132,
+          156,
+          188,
+          199,
+          208,
+          301,
+          365,
+          588,
+          669,
+          670,
+          671,
+          672,
+          673
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 10
+      },
+      "vgCode": "STANTON/I/everus-harbor",
+      "i18nKey": "Stanton1_Transfer",
+      "source": {
+        "method": "generated",
+        "uexName": "Everus Harbor",
+        "vgName": "Everus Harbor",
+        "terminalIds": [
+          25,
+          98,
+          136,
+          163,
+          180,
+          200,
+          210,
+          303,
+          371,
+          659,
+          660,
+          661,
+          662,
+          663,
+          664,
+          722
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 11
+      },
+      "vgCode": "STANTON/2C/grim-hex",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "GrimHEX",
+        "vgName": "Grim HEX",
+        "terminalIds": [
+          27,
+          115,
+          143,
+          209,
+          340,
+          341,
+          344,
+          372,
+          818
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 23
+      },
+      "vgCode": "STANTON/IV/port-tressler",
+      "i18nKey": "Stanton4_Transfer",
+      "source": {
+        "method": "generated",
+        "uexName": "Port Tressler",
+        "vgName": "Port Tressler",
+        "terminalIds": [
+          66,
+          106,
+          140,
+          167,
+          183,
+          201,
+          211,
+          262,
+          400,
+          427,
+          698,
+          699,
+          700,
+          701,
+          702
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 27
+      },
+      "vgCode": "STANTON/II/seraphim-station",
+      "i18nKey": "Stanton2_Transfer_Seraphim",
+      "source": {
+        "method": "generated",
+        "uexName": "Seraphim Station",
+        "vgName": "Seraphim Station",
+        "terminalIds": [
+          259,
+          278,
+          285,
+          286,
+          287,
+          288,
+          289,
+          346,
+          421,
+          519,
+          714,
+          715,
+          716,
+          717,
+          718,
+          731
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 32
+      },
+      "vgCode": "PYRO/III/orbituary",
+      "i18nKey": "RR_P3",
+      "source": {
+        "method": "generated",
+        "uexName": "Orbituary",
+        "vgName": "Orbituary",
+        "terminalIds": [
+          432,
+          443,
+          444,
+          445,
+          446,
+          449,
+          498,
+          499,
+          500,
+          501,
+          502,
+          527,
+          528,
+          592,
+          691,
+          720,
+          730
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 33
+      },
+      "vgCode": "PYRO/III.1/starlight-service-station",
+      "i18nKey": "RR_P3_L1",
+      "source": {
+        "method": "generated",
+        "uexName": "Starlight Service Station",
+        "vgName": "Starlight Service Station",
+        "terminalIds": [
+          434,
+          450,
+          451,
+          452,
+          545,
+          589,
+          712
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 34
+      },
+      "vgCode": "PYRO/III.3/patch-city",
+      "i18nKey": "RR_P3_L3",
+      "source": {
+        "method": "generated",
+        "uexName": "Patch City",
+        "vgName": "Patch City",
+        "terminalIds": [
+          430,
+          433,
+          453,
+          454,
+          455,
+          456,
+          690,
+          707
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 38
+      },
+      "vgCode": "PYRO/V.4/rod-s-fuel-n-supplies",
+      "i18nKey": "RR_P5_L4",
+      "source": {
+        "method": "generated",
+        "uexName": "Rod's Fuel 'N Supplies",
+        "vgName": "Rod's Fuel 'N Supplies",
+        "terminalIds": [
+          486,
+          487,
+          488,
+          489,
+          703,
+          704,
+          713
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 39
+      },
+      "vgCode": "PYRO/V.5/rat-s-nest",
+      "i18nKey": "RR_P5_L5",
+      "source": {
+        "method": "generated",
+        "uexName": "Rat's Nest",
+        "vgName": "Rat's Nest",
+        "terminalIds": [
+          523,
+          524,
+          525,
+          526,
+          593,
+          598,
+          719
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 41
+      },
+      "vgCode": "PYRO/VI.3/endgame",
+      "i18nKey": "RR_P6_L3",
+      "source": {
+        "method": "generated",
+        "uexName": "Endgame",
+        "vgName": "Endgame",
+        "terminalIds": [
+          482,
+          483,
+          484,
+          485,
+          652,
+          695,
+          696
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 42
+      },
+      "vgCode": "PYRO/VI.4/dudley-daughters",
+      "i18nKey": "RR_P6_L4",
+      "source": {
+        "method": "generated",
+        "uexName": "Dudley & Daughters",
+        "vgName": "Dudley & Daughters",
+        "terminalIds": [
+          546,
+          547,
+          548,
+          549,
+          606,
+          705,
+          706
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 43
+      },
+      "vgCode": "PYRO/VI.5/megumi-refueling",
+      "i18nKey": "RR_P6_L5",
+      "source": {
+        "method": "generated",
+        "uexName": "Megumi Refueling",
+        "vgName": "Megumi Refueling",
+        "terminalIds": [
+          478,
+          479,
+          480,
+          481,
+          568,
+          569,
+          570,
+          571
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 45
+      },
+      "vgCode": "PYRO/VI/ruin-station",
+      "i18nKey": "Pyro_ruinstation,P",
+      "source": {
+        "method": "generated",
+        "uexName": "Ruin Station",
+        "vgName": "Ruin Station",
+        "terminalIds": [
+          457,
+          458,
+          459,
+          460,
+          461,
+          462,
+          463,
+          464,
+          465,
+          466,
+          468,
+          469,
+          470,
+          471,
+          472,
+          473,
+          536,
+          537,
+          540,
+          580,
+          586,
+          587,
+          724
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 46
+      },
+      "vgCode": "PYRO/V.2/gaslight",
+      "i18nKey": "RR_P5_L2",
+      "source": {
+        "method": "generated",
+        "uexName": "Gaslight",
+        "vgName": "Gaslight",
+        "terminalIds": [
+          511,
+          512,
+          513,
+          514,
+          515,
+          604,
+          693,
+          694
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 1
+      },
+      "vgCode": "STANTON/3B/arccorp-mining-area-045",
+      "i18nKey": "Stanton3b_ArcCorp_001",
+      "source": {
+        "method": "generated",
+        "uexName": "ArcCorp Mining Area 045",
+        "vgName": "ArcCorp Mining Area 045",
+        "terminalIds": [
+          6,
+          358
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 2
+      },
+      "vgCode": "STANTON/3B/arccorp-mining-area-048",
+      "i18nKey": "Stanton3b_ArcCorp_002",
+      "source": {
+        "method": "generated",
+        "uexName": "ArcCorp Mining Area 048",
+        "vgName": "ArcCorp Mining Area 048",
+        "terminalIds": [
+          7,
+          359
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 3
+      },
+      "vgCode": "STANTON/3B/arccorp-mining-area-056",
+      "i18nKey": "Stanton3b_ArcCorp_003",
+      "source": {
+        "method": "generated",
+        "uexName": "ArcCorp Mining Area 056",
+        "vgName": "ArcCorp Mining Area 056",
+        "terminalIds": [
+          8,
+          360
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 4
+      },
+      "vgCode": "STANTON/3B/arccorp-mining-area-061",
+      "i18nKey": "Stanton3b_ArcCorp_004",
+      "source": {
+        "method": "generated",
+        "uexName": "ArcCorp Mining Area 061",
+        "vgName": "ArcCorp Mining Area 061",
+        "terminalIds": [
+          9,
+          361
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 5
+      },
+      "vgCode": "STANTON/2B/arccorp-mining-area-141",
+      "i18nKey": "Stanton2b_ArcCorp_001",
+      "source": {
+        "method": "generated",
+        "uexName": "ArcCorp Mining Area 141",
+        "vgName": "ArcCorp Mining Area 141",
+        "terminalIds": [
+          10,
+          362
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 6
+      },
+      "vgCode": "STANTON/2C/arccorp-mining-area-157",
+      "i18nKey": "Stanton2c_ArcCorp_001",
+      "source": {
+        "method": "generated",
+        "uexName": "ArcCorp Mining Area 157",
+        "vgName": "ArcCorp Mining Area 157",
+        "terminalIds": [
+          11,
+          363
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 7
+      },
+      "vgCode": "STANTON/2C/benson-mining-outpost",
+      "i18nKey": "Stanton2c_IndyMine_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Benson Mining Outpost",
+        "vgName": "Benson Mining Outpost",
+        "terminalIds": [
+          14
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 8
+      },
+      "vgCode": "STANTON/2B/bountiful-harvest-hydroponics",
+      "i18nKey": "Stanton2b_IndyFarmer_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Bountiful Harvest Hydroponics",
+        "vgName": "Bountiful Harvest Hydroponics",
+        "terminalIds": [
+          15
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 9
+      },
+      "vgCode": "STANTON/2B/brio-s-breaker-yard",
+      "i18nKey": "Stanton2b_SalvageYard_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Brio's Breaker Yard",
+        "vgName": "Brio's Breaker Yard",
+        "terminalIds": [
+          16
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 10
+      },
+      "vgCode": "STANTON/4C/bud-s-growery",
+      "i18nKey": "Stanton4c_IndyFarmer_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Bud's Growery",
+        "vgName": "Bud's Growery",
+        "terminalIds": [
+          17
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 11
+      },
+      "vgCode": "STANTON/2C/deakins-research-outpost",
+      "i18nKey": "Stanton2c_Rayari_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Deakins Research Outpost",
+        "vgName": "Deakins Research Outpost",
+        "terminalIds": [
+          23,
+          370
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 12
+      },
+      "vgCode": "STANTON/4C/devlin-scrap-salvage",
+      "i18nKey": "Stanton4c_SalvageYard_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Devlin Scrap & Salvage",
+        "vgName": "Devlin Scrap & Salvage",
+        "terminalIds": [
+          24
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 13
+      },
+      "vgCode": "STANTON/2A/gallete-family-farms",
+      "i18nKey": "Stanton2a_IndyFarmer_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Gallete Family Farms",
+        "vgName": "Gallete Family Farms",
+        "terminalIds": [
+          26
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 14
+      },
+      "vgCode": "STANTON/1B/hdms-anderson",
+      "i18nKey": "Stanton1b_HurDynMining_002",
+      "source": {
+        "method": "generated",
+        "uexName": "HDMS Anderson",
+        "vgName": "HDMS-Anderson",
+        "terminalIds": [
+          28,
+          373
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 15
+      },
+      "vgCode": "STANTON/1A/hdms-bezdek",
+      "i18nKey": "Stanton1a_HurDynMining_001",
+      "source": {
+        "method": "generated",
+        "uexName": "HDMS-Bezdek",
+        "vgName": "HDMS-Bezdek",
+        "terminalIds": [
+          29,
+          374
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 16
+      },
+      "vgCode": "STANTON/I/hdms-edmond",
+      "i18nKey": "Stanton1_HurDynMining_001",
+      "source": {
+        "method": "generated",
+        "uexName": "HDMS-Edmond",
+        "vgName": "HDMS-Edmond",
+        "terminalIds": [
+          30,
+          375
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 17
+      },
+      "vgCode": "STANTON/I/hdms-hadley",
+      "i18nKey": "Stanton1_HurDynMining_005",
+      "source": {
+        "method": "generated",
+        "uexName": "HDMS-Hadley",
+        "vgName": "HDMS-Hadley",
+        "terminalIds": [
+          31,
+          376
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 18
+      },
+      "vgCode": "STANTON/1C/hdms-hahn",
+      "i18nKey": "Stanton1c_HurDynMining_001",
+      "source": {
+        "method": "generated",
+        "uexName": "HDMS-Hahn",
+        "vgName": "HDMS-Hahn",
+        "terminalIds": [
+          32,
+          377
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 19
+      },
+      "vgCode": "STANTON/1A/hdms-lathan",
+      "i18nKey": "Stanton1a_HurDynMining_002",
+      "source": {
+        "method": "generated",
+        "uexName": "HDMS-Lathan",
+        "vgName": "HDMS-Lathan",
+        "terminalIds": [
+          33,
+          378
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 20
+      },
+      "vgCode": "STANTON/1B/hdms-norgaard",
+      "i18nKey": "Stanton1b_HurDynMining_001",
+      "source": {
+        "method": "generated",
+        "uexName": "HDMS Norgaard",
+        "vgName": "HDMS-Norgaard",
+        "terminalIds": [
+          34,
+          379
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 21
+      },
+      "vgCode": "STANTON/I/hdms-oparei",
+      "i18nKey": "Stanton1_HurDynMining_002",
+      "source": {
+        "method": "generated",
+        "uexName": "HDMS-Oparei",
+        "vgName": "HDMS-Oparei",
+        "terminalIds": [
+          35,
+          380
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 22
+      },
+      "vgCode": "STANTON/1C/hdms-perlman",
+      "i18nKey": "Stanton1c_HurDynMining_002",
+      "source": {
+        "method": "generated",
+        "uexName": "HDMS-Perlman",
+        "vgName": "HDMS-Perlman",
+        "terminalIds": [
+          36,
+          381
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 23
+      },
+      "vgCode": "STANTON/I/hdms-pinewood",
+      "i18nKey": "Stanton1_HurDynMining_003",
+      "source": {
+        "method": "generated",
+        "uexName": "HDMS-Pinewood",
+        "vgName": "HDMS-Pinewood",
+        "terminalIds": [
+          37,
+          382
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 24
+      },
+      "vgCode": "STANTON/1D/hdms-ryder",
+      "i18nKey": "Stanton1d_HurDynMining_002",
+      "source": {
+        "method": "generated",
+        "uexName": "HDMS-Ryder",
+        "vgName": "HDMS-Ryder",
+        "terminalIds": [
+          38,
+          383
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 25
+      },
+      "vgCode": "STANTON/I/hdms-stanhope",
+      "i18nKey": "Stanton1_HurDynMining_006",
+      "source": {
+        "method": "generated",
+        "uexName": "HDMS-Stanhope",
+        "vgName": "HDMS-Stanhope",
+        "terminalIds": [
+          39,
+          384
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 26
+      },
+      "vgCode": "STANTON/I/hdms-thedus",
+      "i18nKey": "Stanton1_HurDynMining_004",
+      "source": {
+        "method": "generated",
+        "uexName": "HDMS-Thedus",
+        "vgName": "HDMS-Thedus",
+        "terminalIds": [
+          40,
+          385
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 27
+      },
+      "vgCode": "STANTON/1D/hdms-woodruff",
+      "i18nKey": "Stanton1d_HurDynMining_001",
+      "source": {
+        "method": "generated",
+        "uexName": "HDMS-Woodruff",
+        "vgName": "HDMS-Woodruff",
+        "terminalIds": [
+          41,
+          386
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 28
+      },
+      "vgCode": "STANTON/2A/hickes-research-outpost",
+      "i18nKey": "Stanton2a_Rayari_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Hickes Research Outpost",
+        "vgName": "Hickes Research Outpost",
+        "terminalIds": [
+          42,
+          387
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 29
+      },
+      "vgCode": "STANTON/3A/humboldt-mines",
+      "i18nKey": "Stanton3a_IndyMine_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Humboldt Mines",
+        "vgName": "Humboldt Mines",
+        "terminalIds": [
+          43
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 31
+      },
+      "vgCode": "STANTON/2B/kudre-ore",
+      "i18nKey": "Stanton2b_IndyMine_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Kudre Ore",
+        "vgName": "Kudre Ore",
+        "terminalIds": [
+          50
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 32
+      },
+      "vgCode": "STANTON/3A/loveridge-mineral-reserve",
+      "i18nKey": "Stanton3a_IndyMine_002",
+      "source": {
+        "method": "generated",
+        "uexName": "Loveridge Mineral Reserve",
+        "vgName": "Loveridge Mineral Reserve",
+        "terminalIds": [
+          53
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 33
+      },
+      "vgCode": "STANTON/2C/nt-999-xx",
+      "i18nKey": "Stanton2c_Stash_001",
+      "source": {
+        "method": "generated",
+        "uexName": "NT-999-XX",
+        "vgName": "NT-999-XX",
+        "terminalIds": [
+          60
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 34
+      },
+      "vgCode": "STANTON/2B/nuen-waste-management",
+      "i18nKey": "Stanton2b_Stash_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Nuen Waste Management",
+        "vgName": "Nuen Waste Management",
+        "terminalIds": [
+          61
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 35
+      },
+      "vgCode": "STANTON/IV/outpost-54",
+      "i18nKey": "Stanton4_Stash_002",
+      "source": {
+        "method": "generated",
+        "uexName": "Outpost 54",
+        "vgName": "Outpost 54",
+        "terminalIds": [
+          63
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 36
+      },
+      "vgCode": "STANTON/3B/paradise-cove",
+      "i18nKey": "Stanton3a_DrugLab_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Paradise Cove",
+        "vgName": "Paradise Cove",
+        "terminalIds": [
+          64
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 37
+      },
+      "vgCode": "STANTON/2A/private-property",
+      "i18nKey": "Stanton2a_Stash_001",
+      "source": {
+        "method": "generated",
+        "uexName": "PRIVATE PROPERTY",
+        "vgName": "PRIVATE PROPERTY",
+        "terminalIds": [
+          67
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 38
+      },
+      "vgCode": "STANTON/IV/raven-s-roost",
+      "i18nKey": "Stanton4a_DrugLab_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Raven's Roost",
+        "vgName": "Raven's Roost",
+        "terminalIds": [
+          68
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 39
+      },
+      "vgCode": "STANTON/4A/rayari-anvik-research-outpost",
+      "i18nKey": "Stanton4a_Rayari_002",
+      "source": {
+        "method": "generated",
+        "uexName": "Rayari Anvik Research Outpost",
+        "vgName": "Rayari Anvik Research Outpost",
+        "terminalIds": [
+          69,
+          401
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 40
+      },
+      "vgCode": "STANTON/4B/rayari-cantwell-research-outpost",
+      "i18nKey": "Stanton4b_Rayari_002",
+      "source": {
+        "method": "generated",
+        "uexName": "Rayari Cantwell Research Outpost",
+        "vgName": "Rayari Cantwell Research Outpost",
+        "terminalIds": [
+          70,
+          402
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 41
+      },
+      "vgCode": "STANTON/IV/rayari-deltana-research-outpost",
+      "i18nKey": "Stanton4_Rayari_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Rayari Deltana Research Outpost",
+        "vgName": "Rayari Deltana Research Outpost",
+        "terminalIds": [
+          71,
+          403
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 42
+      },
+      "vgCode": "STANTON/4A/rayari-kaltag-research-outpost",
+      "i18nKey": "Stanton4a_Rayari_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Rayari Kaltag Research Outpost",
+        "vgName": "Rayari Kaltag Research Outpost",
+        "terminalIds": [
+          72,
+          404
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 43
+      },
+      "vgCode": "STANTON/4B/rayari-mcgrath-research-outpost",
+      "i18nKey": "Stanton4b_Rayari_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Rayari McGrath Research Outpost",
+        "vgName": "Rayari McGrath Research Outpost",
+        "terminalIds": [
+          73,
+          405
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 44
+      },
+      "vgCode": "STANTON/I/reclamation-disposal-orinth",
+      "i18nKey": "Stanton1_SalvageYard_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Reclamation & Disposal Orinth",
+        "vgName": "Reclamation & Disposal Orinth",
+        "terminalIds": [
+          74
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 45
+      },
+      "vgCode": "STANTON/3B/samson-son-s-salvage-center",
+      "i18nKey": "Stanton3b_SalvageYard_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Samson & Son's Salvage Center",
+        "vgName": "Samson & Son's Salvage Center",
+        "terminalIds": [
+          75
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 46
+      },
+      "vgCode": "STANTON/3A/shubin-mining-facility-sal-2",
+      "i18nKey": "Stanton3a_Shubin_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Shubin Mining Facility SAL-2",
+        "vgName": "Shubin Mining Facility SAL-2",
+        "terminalIds": [
+          77,
+          406
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 47
+      },
+      "vgCode": "STANTON/3A/shubin-mining-facility-sal-5",
+      "i18nKey": "Stanton3a_Shubin_002",
+      "source": {
+        "method": "generated",
+        "uexName": "Shubin Mining Facility SAL-5",
+        "vgName": "Shubin Mining Facility SAL-5",
+        "terminalIds": [
+          78,
+          407
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 48
+      },
+      "vgCode": "STANTON/2B/shubin-mining-facility-scd-1",
+      "i18nKey": "Stanton2b_Shubin_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Shubin Mining Facility SCD-1",
+        "vgName": "Shubin Mining Facility SCD-1",
+        "terminalIds": [
+          79,
+          408
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 49
+      },
+      "vgCode": "STANTON/IV/shubin-mining-facility-sm0-10",
+      "i18nKey": "Stanton4_Shubin_004",
+      "source": {
+        "method": "generated",
+        "uexName": "Shubin Mining Facility SM0-10",
+        "vgName": "Shubin Mining Facility SM0-10",
+        "terminalIds": [
+          80,
+          409
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 50
+      },
+      "vgCode": "STANTON/IV/shubin-mining-facility-sm0-13",
+      "i18nKey": "Stanton4_Shubin_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Shubin Mining Facility SM0-13",
+        "vgName": "Shubin Mining Facility SM0-13",
+        "terminalIds": [
+          81,
+          410
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 51
+      },
+      "vgCode": "STANTON/IV/shubin-mining-facility-sm0-18",
+      "i18nKey": "Stanton4_Shubin_003",
+      "source": {
+        "method": "generated",
+        "uexName": "Shubin Mining Facility SM0-18",
+        "vgName": "Shubin Mining Facility SM0-18",
+        "terminalIds": [
+          82,
+          411
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 52
+      },
+      "vgCode": "STANTON/IV/shubin-mining-facility-sm0-22",
+      "i18nKey": "Stanton4_Shubin_002",
+      "source": {
+        "method": "generated",
+        "uexName": "Shubin Mining Facility SM0-22",
+        "vgName": "Shubin Mining Facility SM0-22",
+        "terminalIds": [
+          83,
+          412
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 53
+      },
+      "vgCode": "STANTON/4A/shubin-mining-facility-smca-6",
+      "i18nKey": "Stanton4a_Shubin_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Shubin Mining Facility SMCa-6",
+        "vgName": "Shubin Mining Facility SMCa-6",
+        "terminalIds": [
+          84,
+          413
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 54
+      },
+      "vgCode": "STANTON/4A/shubin-mining-facility-smca-8",
+      "i18nKey": "Stanton4a_Shubin_002",
+      "source": {
+        "method": "generated",
+        "uexName": "Shubin Mining Facility SMCa-8",
+        "vgName": "Shubin Mining Facility SMCa-8",
+        "terminalIds": [
+          85,
+          414
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 55
+      },
+      "vgCode": "STANTON/2A/terra-mills-hydrofarm",
+      "i18nKey": "Stanton2a_TerraMills_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Terra Mills HydroFarm",
+        "vgName": "Terra Mills HydroFarm",
+        "terminalIds": [
+          86,
+          415
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 56
+      },
+      "vgCode": "STANTON/IV/the-necropolis",
+      "i18nKey": "Stanton4_Stash_001",
+      "source": {
+        "method": "generated",
+        "uexName": "The Necropolis",
+        "vgName": "The Necropolis",
+        "terminalIds": [
+          87
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 57
+      },
+      "vgCode": "STANTON/3A/the-orphanage",
+      "i18nKey": "Stanton3a_Stash_001",
+      "source": {
+        "method": "generated",
+        "uexName": "The Orphanage",
+        "vgName": "The Orphanage",
+        "terminalIds": [
+          88
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 58
+      },
+      "vgCode": "STANTON/2A/tram-myers-mining",
+      "i18nKey": "Stanton2a_IndyMine_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Tram & Myers Mining",
+        "vgName": "Tram & Myers Mining",
+        "terminalIds": [
+          91
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 59
+      },
+      "vgCode": "STANTON/3B/shady-glen-farms",
+      "i18nKey": "Stanton3b_IndyFarmer_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Shady Glen Farms",
+        "vgName": "Shady Glen Farms",
+        "terminalIds": [
+          76
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 60
+      },
+      "vgCode": "STANTON/IV/astor-s-clearing",
+      "i18nKey": "Stanton4_DerelictSettlement_AstorsClearing",
+      "source": {
+        "method": "generated",
+        "uexName": "Astor's Clearing",
+        "vgName": "Astor's Clearing",
+        "terminalIds": [
+          264,
+          265
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 62
+      },
+      "vgCode": "STANTON/IV/dunboro",
+      "i18nKey": "Stanton4_DerelictSettlement_Dunboro",
+      "source": {
+        "method": "generated",
+        "uexName": "Dunboro",
+        "vgName": "Dunboro",
+        "terminalIds": [
+          266,
+          333,
+          334,
+          338
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 63
+      },
+      "vgCode": "STANTON/I/weeping-cove",
+      "i18nKey": "Stanton1_DerelictSettlement_WeepingCove",
+      "source": {
+        "method": "generated",
+        "uexName": "Weeping Cove",
+        "vgName": "Weeping Cove",
+        "terminalIds": [
+          269
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 65
+      },
+      "vgCode": "STANTON/I/rappel",
+      "i18nKey": "Stanton1_DerelictSettlement_Rappel",
+      "source": {
+        "method": "generated",
+        "uexName": "Rappel",
+        "vgName": "Rappel",
+        "terminalIds": [
+          274,
+          275
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 66
+      },
+      "vgCode": "STANTON/I/picker-s-field",
+      "i18nKey": "Stanton1_DerelictSettlement_PickersField",
+      "source": {
+        "method": "generated",
+        "uexName": "Picker's Field",
+        "vgName": "Picker's Field",
+        "terminalIds": [
+          276,
+          277
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 67
+      },
+      "vgCode": "STANTON/2C/nt-999-xxii",
+      "i18nKey": "Stanton2c_DrugUGF_001",
+      "source": {
+        "method": "generated",
+        "uexName": "NT-999-XXII",
+        "vgName": "NT-999-XXII",
+        "terminalIds": [
+          280
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 78
+      },
+      "vgCode": "STANTON/I/zephyr",
+      "i18nKey": "Stanton1_DerelictSettlement_Zephyr",
+      "source": {
+        "method": "generated",
+        "uexName": "Zephyr",
+        "vgName": "Zephyr",
+        "terminalIds": [
+          336,
+          337
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 83
+      },
+      "vgCode": "STANTON/IV/frostbite",
+      "i18nKey": "Stanton4_DerelictSettlement_Frostbite",
+      "source": {
+        "method": "generated",
+        "uexName": "Frostbite",
+        "vgName": "Frostbite",
+        "terminalIds": [
+          351
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 87
+      },
+      "vgCode": "STANTON/2B/jumptown",
+      "i18nKey": "Stanton2c_DrugLab_001",
+      "source": {
+        "method": "generated",
+        "uexName": "Jumptown",
+        "vgName": "Jumptown",
+        "terminalIds": [
+          332
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "city",
+        "id": 1
+      },
+      "vgCode": "STANTON/III/area-18",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Area18",
+        "vgName": "Area 18",
+        "terminalIds": [
+          12,
+          49,
+          94,
+          107,
+          113,
+          114,
+          148,
+          151,
+          155,
+          331,
+          364,
+          553,
+          554,
+          653,
+          826
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "city",
+        "id": 2
+      },
+      "vgCode": "NYX/DELAMAR/levski",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Levski",
+        "vgName": "Levski",
+        "terminalIds": [
+          109,
+          110,
+          116,
+          119,
+          120,
+          145,
+          393,
+          777,
+          778,
+          779,
+          780,
+          781,
+          782,
+          783,
+          784,
+          785,
+          786,
+          787,
+          788,
+          789,
+          790,
+          791,
+          793,
+          794,
+          796,
+          797,
+          819
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "city",
+        "id": 3
+      },
+      "vgCode": "STANTON/I/lorville",
+      "i18nKey": "Stanton1_Lorville",
+      "source": {
+        "method": "generated",
+        "uexName": "Lorville",
+        "vgName": "Lorville",
+        "terminalIds": [
+          18,
+          51,
+          144,
+          149,
+          152,
+          203,
+          207,
+          366,
+          732,
+          827,
+          829
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "city",
+        "id": 4
+      },
+      "vgCode": "STANTON/IV/new-babbage",
+      "i18nKey": "Stanton4_NewBabbage",
+      "source": {
+        "method": "generated",
+        "uexName": "New Babbage",
+        "vgName": "New Babbage",
+        "terminalIds": [
+          59,
+          89,
+          108,
+          130,
+          142,
+          147,
+          260,
+          261,
+          339,
+          342,
+          345,
+          416,
+          423,
+          424,
+          425,
+          426
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "city",
+        "id": 5
+      },
+      "vgCode": "STANTON/II/orison",
+      "i18nKey": "Stanton2_Orison",
+      "source": {
+        "method": "generated",
+        "uexName": "Orison",
+        "vgName": "Orison",
+        "terminalIds": [
+          62,
+          90,
+          111,
+          112,
+          121,
+          141,
+          150,
+          204,
+          205,
+          206,
+          268,
+          343,
+          347,
+          348,
+          350,
+          417
+        ]
+      }
+    }
+  ]
+}

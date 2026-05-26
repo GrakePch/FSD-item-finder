@@ -57,6 +57,7 @@ package "Frontend-consumed files" {
   artifact "src/data/starmap/body.json\nsrc/data/starmap/locations.json" as VG_LOC
   artifact "src/data/bodies_render_data.json" as BODIES_INFO #F8D7E8
   artifact "src/data/uex_bodies_fix_manual.json" as RUNTIME_STATIC #F8D7E8
+  artifact "src/data/uex_location_vg_location_map.*.json" as UEX_LOC_MAP #F8D7E8
   artifact "src/data/vehicles/vehicle_*.json" as VEHICLE_DATA
   artifact "src/data/vehicles/vehicle_items_essential.json" as VEHICLE_ITEMS
   artifact "src/data/vehicles/manual_vehicle_classname_to_series.ts" as MANUAL_SERIES #F8D7E8
@@ -151,6 +152,8 @@ endlegend
 - `src/data/body_alias_to_code.json`：旧 location/UEX body 名称到 VerseGuide body `code` 的内部匹配表，不用于 `/b/*` 路由兼容。
 - `src/data/location_alias_to_code.json`：UEX/legacy location 名称到 VerseGuide location `code` 的内部匹配表，不用于 `/l/*` 路由兼容。
   - `src/data/uex_bodies_fix_manual.json`：运行时 terminal/location 匹配使用的 body/orbit 名称修正。
+- `src/data/uex_location_vg_location_map.generated.json`：UEX typed location id 到 VerseGuide location `code` 与 location i18n key 的预计算映射，由 `scripts/location/update_uex_location_vg_location_map.mjs` 生成。
+- `src/data/uex_location_vg_location_map.manual.json`：同结构的人工覆盖映射；按 `uex.type + uex.id` 覆盖 generated entry。
 
 ## 2. 最终产物
 
@@ -168,7 +171,7 @@ endlegend
   - 主要查找入口：`public/data/items.json` 中的 `ids`，对应 UEX item id。
   - 主要用途：运行时生成交易 `options` 和价格 min/max。
   - `price_min_max` 从 `options` 计算；计算时会忽略 4.0 时间点以前的旧价格。
-  - item 详情页中的交易地点路径依赖 UEX `terminals` 运行时接口，以及本地 `src/data/starmap/body.json`、`src/data/starmap/locations.json`、`uex_bodies_fix_manual.json`、`body_alias_to_code.json`、`location_alias_to_code.json` 和 `location_name_to_i18n_key.json`。
+  - item 详情页中的交易地点路径依赖 UEX `terminals` 运行时接口，以及本地 `src/data/starmap/body.json`、`src/data/starmap/locations.json`、`uex_bodies_fix_manual.json`、`uex_location_vg_location_map.*.json` 和 `location_name_to_i18n_key.json`。
 
 ### vehicle
 
@@ -327,10 +330,15 @@ endlegend
   - 匹配方式：恒星天体来自 system payload；非恒星天体由 Firestore planet 几何数据匹配 payload `celestial_objects` 语义数据；location 只保留 official、非 hidden、属于目标版本的地点。
   - 输出：`data/starmap/body.json`、`data/starmap/locations.json`、`temp/report.json`；本仓库下载后保存为 `src/data/starmap/body.json`、`src/data/starmap/locations.json`。
 
+- `scripts/location/update_uex_location_vg_location_map.mjs`
+  - 上游：UEX terminal 数据、`src/data/starmap/locations.json`、`src/data/location_alias_to_code.json`、`src/data/location_name_to_i18n_key.json`、`src/i18n/locations/{en,zh}.json`。
+  - 匹配方式：离线复用旧 terminal name matching 逻辑，把 UEX typed location ref 解析到 VerseGuide location `code`，再按 VG location `name` 填充 nullable `i18nKey`。
+  - 输出：`src/data/uex_location_vg_location_map.generated.json`；`src/data/uex_location_vg_location_map.manual.json` 可人工覆盖同一 UEX ref。
+
 - 运行时 terminal/location 匹配
-  - 上游：UEX terminal 数据、生成的 body/location JSON、`uex_bodies_fix_manual.json`、`body_alias_to_code.json`、`location_alias_to_code.json`、`location_name_to_i18n_key.json`。
-  - 匹配方式：body 使用 VerseGuide body `code`；location 使用 VerseGuide location `code`，UEX/legacy 名称只通过内部 alias 或唯一 VG name 做 best-effort 匹配。
-  - 输出：不提交为生成文件，只用于浏览器状态、item 交易地点路径展示和距离计算。
+  - 上游：UEX terminal 数据、生成的 body/location JSON、`uex_bodies_fix_manual.json`、`uex_location_vg_location_map.generated.json`、`uex_location_vg_location_map.manual.json`。
+  - 匹配方式：terminal 从 `id_space_station > id_outpost > id_city > id_poi` 取 typed UEX location ref，再通过预计算映射解析到 VerseGuide location `code`；映射 entry 同时携带 nullable `i18nKey` 供 UEX / VG / i18n 三向索引。
+  - 输出：映射文件提交为静态 JSON；浏览器运行时构建双向/三向索引，用于 terminal parentLocation、item 交易地点路径展示和距离计算。
 
 ### i18n data
 

@@ -56,6 +56,9 @@ jobs:
           node-version: 22
           cache: npm
 
+      - name: Generate UEX location map
+        run: node scripts/location/update_uex_location_vg_location_map.mjs
+
       - name: Validate generated data
         run: |
           npm ci
@@ -65,13 +68,13 @@ jobs:
 
       - name: Commit updated data
         run: |
-          if git diff --quiet -- src/i18n/items/en.json src/i18n/items/zh.json src/i18n/locations/en.json src/i18n/locations/zh.json src/data/location_name_to_i18n_key.json src/i18n/vehicles/en.json src/i18n/vehicles/zh.json src/i18n/vehicle_classes/en.json src/i18n/vehicle_classes/zh.json; then
+          if git diff --quiet -- src/i18n/items/en.json src/i18n/items/zh.json src/i18n/locations/en.json src/i18n/locations/zh.json src/data/location_name_to_i18n_key.json src/data/uex_location_vg_location_map.generated.json src/i18n/vehicles/en.json src/i18n/vehicles/zh.json src/i18n/vehicle_classes/en.json src/i18n/vehicle_classes/zh.json; then
             echo "No i18n data changes to commit."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/i18n/items/en.json src/i18n/items/zh.json src/i18n/locations/en.json src/i18n/locations/zh.json src/data/location_name_to_i18n_key.json src/i18n/vehicles/en.json src/i18n/vehicles/zh.json src/i18n/vehicle_classes/en.json src/i18n/vehicle_classes/zh.json
+          git add src/i18n/items/en.json src/i18n/items/zh.json src/i18n/locations/en.json src/i18n/locations/zh.json src/data/location_name_to_i18n_key.json src/data/uex_location_vg_location_map.generated.json src/i18n/vehicles/en.json src/i18n/vehicles/zh.json src/i18n/vehicle_classes/en.json src/i18n/vehicle_classes/zh.json
           git commit -m "chore(i18n): update generated translations"
           git push
