@@ -3,6 +3,7 @@ import { basename, dirname, resolve } from "node:path";
 
 const DEFAULT_TERMINALS_URL = "https://api.uexcorp.space/2.0/terminals";
 const DEFAULT_OUTPUT = resolve("src/data/uex_location_vg_location_map.generated.json");
+const DEFAULT_UNMATCHED_OUTPUT = resolve("src/data/uex_location_vg_location_map.unmatched.json");
 const DEFAULT_MANUAL = resolve("src/data/uex_location_vg_location_map.manual.json");
 const DEFAULT_LOCATIONS = resolve("src/data/starmap/locations.json");
 const DEFAULT_LOCATION_ALIAS = resolve("src/data/location_alias_to_code.json");
@@ -20,6 +21,7 @@ function parseArgs(argv) {
     terminalsUrl: DEFAULT_TERMINALS_URL,
     terminalsInput: null,
     output: DEFAULT_OUTPUT,
+    unmatchedOutput: DEFAULT_UNMATCHED_OUTPUT,
     manual: DEFAULT_MANUAL,
     locations: DEFAULT_LOCATIONS,
     locationAlias: DEFAULT_LOCATION_ALIAS,
@@ -47,6 +49,12 @@ function parseArgs(argv) {
 
     if (arg === "--output" && next) {
       options.output = resolve(next);
+      index += 1;
+      continue;
+    }
+
+    if (arg === "--unmatched-output" && next) {
+      options.unmatchedOutput = resolve(next);
       index += 1;
       continue;
     }
@@ -102,6 +110,7 @@ function parseArgs(argv) {
           "  --terminals-url <url>              UEX terminals API URL.",
           "  --terminals-input <path>           Read terminals JSON from a local file instead of the API.",
           "  --output <path>                    Generated mapping output path.",
+          "  --unmatched-output <path>          Unmatched review JSON output path.",
           "  --manual <path>                    Manual mapping path to validate and merge.",
           "  --locations <path>                 VerseGuide locations JSON path.",
           "  --location-alias <path>            Legacy/UEX location alias JSON path.",
@@ -197,10 +206,30 @@ function normalizeTerminalLocationName(name) {
   return normalized;
 }
 
-function getTerminalLocationName(terminal) {
-  return normalizeTerminalLocationName(
-    terminal.space_station_name || terminal.outpost_name || terminal.city_name,
-  );
+function getRawTerminalLocationName(terminal) {
+  return terminal.space_station_name || terminal.outpost_name || terminal.city_name || null;
+}
+
+function getParentheticalBaseName(name) {
+  const match = name?.match(/^(.+?) \((.+?)\)$/);
+  return match ? match[1] : null;
+}
+
+function getTerminalLocationNameCandidates(terminal) {
+  const rawName = getRawTerminalLocationName(terminal);
+  const candidates = [];
+
+  for (const name of [
+    rawName,
+    getParentheticalBaseName(rawName),
+    normalizeTerminalLocationName(rawName),
+  ]) {
+    if (name && !candidates.includes(name)) {
+      candidates.push(name);
+    }
+  }
+
+  return candidates;
 }
 
 function getTerminalLocationRef(terminal) {
@@ -243,6 +272,189 @@ function resolveLocationCode(nameOrCode, starSystemName, context) {
   return uniqueCode && context.locationsByCode.has(uniqueCode) ? uniqueCode : null;
 }
 
+function resolveFactionSuffixedLocationCode(name, starSystemName, context) {
+  if (!name || !starSystemName) {
+    return null;
+  }
+
+  const parentStarCode = starSystemName.toUpperCase();
+  const matches = context.locations.filter(
+    (location) =>
+      location.parentStarCode === parentStarCode &&
+      typeof location.name === "string" &&
+      location.name.startsWith(`${name} (`),
+  );
+
+  return matches.length === 1 ? matches[0].code : null;
+}
+
+function resolveTerminalLocation(terminal, context) {
+  const rawName = getRawTerminalLocationName(terminal);
+  const candidates = getTerminalLocationNameCandidates(terminal);
+
+  for (const name of candidates) {
+    const vgCode = resolveLocationCode(name, terminal.star_system_name, context);
+    if (vgCode) {
+      return { uexName: name, vgCode };
+    }
+  }
+
+  const factionSuffixedCode = resolveFactionSuffixedLocationCode(
+    rawName,
+    terminal.star_system_name,
+    context,
+  );
+  if (factionSuffixedCode) {
+    return { uexName: rawName, vgCode: factionSuffixedCode };
+  }
+
+  return { uexName: rawName, vgCode: null };
+}
+
+function normalizeReviewText(value) {
+  return (value || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+function tokenOverlap(left, right) {
+  const leftTokens = new Set(normalizeReviewText(left).split(" ").filter(Boolean));
+  const rightTokens = new Set(normalizeReviewText(right).split(" ").filter(Boolean));
+  let overlap = 0;
+
+  for (const token of leftTokens) {
+    if (rightTokens.has(token)) {
+      overlap += 1;
+    }
+  }
+
+  return overlap / Math.max(1, Math.min(leftTokens.size, rightTokens.size));
+}
+
+function buildCandidateVgLocations(name, starSystemName, context) {
+  if (!name) {
+    return [];
+  }
+
+  const candidatesByCode = new Map();
+  const parentStarCode = starSystemName?.toUpperCase() || null;
+  const candidateNames = [
+    name,
+    getParentheticalBaseName(name),
+    normalizeTerminalLocationName(name),
+  ].filter(Boolean);
+
+  function addCandidate(location, reason) {
+    if (!location || candidatesByCode.has(location.code)) {
+      return;
+    }
+    candidatesByCode.set(location.code, {
+      code: location.code,
+      name: location.name,
+      type: location.type,
+      parentCode: location.parentCode,
+      parentStarCode: location.parentStarCode,
+      reason,
+    });
+  }
+
+  for (const candidateName of candidateNames) {
+    const exactMatches = context.locationsByName.get(candidateName) || [];
+    for (const location of exactMatches) {
+      addCandidate(location, "exact_name");
+    }
+  }
+
+  for (const location of context.locations) {
+    if (parentStarCode && location.parentStarCode !== parentStarCode) {
+      continue;
+    }
+
+    const locationName = typeof location.name === "string" ? location.name.trim() : "";
+    for (const candidateName of candidateNames) {
+      const normalizedCandidate = normalizeReviewText(candidateName);
+      const normalizedLocationName = normalizeReviewText(locationName);
+      if (
+        normalizedLocationName.startsWith(`${normalizedCandidate} `) ||
+        normalizedCandidate.startsWith(`${normalizedLocationName} `)
+      ) {
+        addCandidate(location, "name_prefix");
+      } else if (tokenOverlap(candidateName, locationName) >= 0.75) {
+        addCandidate(location, "token_overlap");
+      }
+    }
+  }
+
+  return [...candidatesByCode.values()]
+    .sort((left, right) => left.code.localeCompare(right.code))
+    .slice(0, 8);
+}
+
+function buildUnmatchedMapFile(terminals, unmatchedTerminals, mergedEntries, context) {
+  const matchedTerminalIds = new Set(
+    mergedEntries.flatMap((entry) => entry.source.terminalIds || []),
+  );
+  const mappedUexRefs = new Set(
+    mergedEntries.map((entry) => makeUexLocationKey(entry.uex)),
+  );
+  const groups = new Map();
+
+  for (const unmatched of unmatchedTerminals) {
+    if (unmatched.uexRef && mappedUexRefs.has(unmatched.uexRef)) {
+      continue;
+    }
+
+    const key = unmatched.uexRef || "none";
+    const group = groups.get(key) || {
+      uex: unmatched.uex,
+      uexRef: unmatched.uexRef,
+      uexName: unmatched.uexName,
+      starSystemName: unmatched.starSystemName,
+      terminalIds: [],
+      terminalTypes: {},
+      candidateVgLocations: buildCandidateVgLocations(
+        unmatched.uexName,
+        unmatched.starSystemName,
+        context,
+      ),
+    };
+    group.terminalIds.push(unmatched.terminalId);
+    group.terminalTypes[unmatched.terminalType] =
+      (group.terminalTypes[unmatched.terminalType] || 0) + 1;
+    groups.set(key, group);
+  }
+
+  const entries = [...groups.values()]
+    .map((entry) => ({
+      ...entry,
+      terminalIds: entry.terminalIds.sort((left, right) => left - right),
+      terminalTypes: Object.fromEntries(
+        Object.entries(entry.terminalTypes).sort(([left], [right]) =>
+          left.localeCompare(right),
+        ),
+      ),
+    }))
+    .sort((left, right) => {
+      const countDiff = right.terminalIds.length - left.terminalIds.length;
+      return countDiff || (left.uexRef || "none").localeCompare(right.uexRef || "none");
+    });
+
+  const unmatchedTerminalCount = entries.reduce(
+    (count, entry) => count + entry.terminalIds.length,
+    0,
+  );
+
+  return {
+    schemaVersion: 1,
+    summary: {
+      terminalCount: terminals.length,
+      matchedTerminalCount: terminals.length - unmatchedTerminalCount,
+      unmatchedTerminalCount,
+      mappedUexLocationRefCount: mergedEntries.length,
+      unmatchedUexLocationRefCount: entries.length,
+    },
+    entries,
+  };
+}
+
 function sortEntries(entries) {
   return entries.sort((left, right) => {
     const typeOrder =
@@ -261,16 +473,17 @@ function buildGeneratedMap(terminals, context) {
 
   for (const terminal of terminals) {
     const ref = getTerminalLocationRef(terminal);
-    const uexName = getTerminalLocationName(terminal);
-    const vgCode = resolveLocationCode(uexName, terminal.star_system_name, context);
+    const { uexName, vgCode } = resolveTerminalLocation(terminal, context);
 
     if (!ref || !vgCode) {
       unmatchedTerminals.push({
+        uex: ref,
         terminalId: terminal.id,
         terminalName: terminal.name,
         uexRef: ref ? makeUexLocationKey(ref) : null,
         uexName,
         starSystemName: terminal.star_system_name,
+        terminalType: terminal.type,
       });
       continue;
     }
@@ -413,29 +626,47 @@ async function main() {
   ]);
 
   const context = {
+    locations,
     locationsByCode: new Map(locations.map((location) => [location.code, location])),
+    locationsByName: new Map(),
     locationAlias,
     uniqueLocationCodeByName: buildUniqueLocationCodeByName(locations),
     locationNameKeyMap,
     validI18nKeys: new Set([...Object.keys(locationsEn), ...Object.keys(locationsZh)]),
   };
+  for (const location of locations) {
+    const matches = context.locationsByName.get(location.name) || [];
+    matches.push(location);
+    context.locationsByName.set(location.name, matches);
+  }
 
   const { mapFile, unmatchedTerminals } = buildGeneratedMap(terminals, context);
   validateMapFile(mapFile, "generated", context);
   validateMapFile(manualMap, "manual", context);
   const mergedEntries = validateMergedMap(mapFile, manualMap);
+  const unmatchedMapFile = buildUnmatchedMapFile(
+    terminals,
+    unmatchedTerminals,
+    mergedEntries,
+    context,
+  );
 
   await writeJson(options.output, mapFile);
+  await writeJson(options.unmatchedOutput, unmatchedMapFile);
 
   console.log(`Updated ${basename(options.output)} with ${mapFile.entries.length} entries`);
+  console.log(
+    `Updated ${basename(options.unmatchedOutput)} with ${unmatchedMapFile.entries.length} entries`,
+  );
   console.log(`UEX terminals: ${terminals.length}`);
   console.log(`Merged mapping entries: ${mergedEntries.length}`);
+  console.log(`Unmatched terminals: ${unmatchedMapFile.summary.unmatchedTerminalCount}`);
   printPreview(
-    "Unmatched terminals",
-    unmatchedTerminals,
+    "Unmatched location refs",
+    unmatchedMapFile.entries,
     options.unmatchedPreview,
-    (terminal) =>
-      `${terminal.terminalId} ${terminal.terminalName} (${terminal.uexRef ?? "no-ref"}: ${terminal.uexName ?? "no-name"})`,
+    (entry) =>
+      `${entry.uexRef ?? "no-ref"} ${entry.uexName ?? "no-name"} (${entry.terminalIds.length} terminals)`,
   );
 }
 

@@ -4,6 +4,108 @@
     {
       "uex": {
         "type": "space_station",
+        "id": 1
+      },
+      "vgCode": "STANTON/III.1/arc-l1-wide-forest-station",
+      "i18nKey": "RR_ARC_L1",
+      "source": {
+        "method": "generated",
+        "uexName": "ARC-L1 Wide Forest Station",
+        "vgName": "ARC-L1 Wide Forest Station",
+        "terminalIds": [
+          1,
+          122,
+          131,
+          157,
+          176,
+          184,
+          196,
+          234,
+          246,
+          263,
+          353,
+          574,
+          575,
+          576,
+          577,
+          578,
+          579
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 3
+      },
+      "vgCode": "STANTON/III.3/arc-l3-modern-express-station",
+      "i18nKey": "RR_ARC_L3",
+      "source": {
+        "method": "generated",
+        "uexName": "ARC-L3 Modern Express Station",
+        "vgName": "ARC-L3 Modern Express Station",
+        "terminalIds": [
+          3,
+          171,
+          186,
+          355,
+          643
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 4
+      },
+      "vgCode": "STANTON/III.4/arc-l4-faint-glen-station",
+      "i18nKey": "RR_ARC_L4",
+      "source": {
+        "method": "generated",
+        "uexName": "ARC-L4 Faint Glen Station",
+        "vgName": "ARC-L4 Faint Glen Station",
+        "terminalIds": [
+          4,
+          172,
+          177,
+          198,
+          219,
+          250,
+          267,
+          356,
+          640,
+          641,
+          642,
+          723
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 5
+      },
+      "vgCode": "STANTON/III.5/arc-l5-yellow-core-station",
+      "i18nKey": "RR_ARC_L5",
+      "source": {
+        "method": "generated",
+        "uexName": "ARC-L5 Yellow Core Station",
+        "vgName": "ARC-L5 Yellow Core Station",
+        "terminalIds": [
+          5,
+          173,
+          187,
+          220,
+          357,
+          572,
+          573,
+          616
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
         "id": 6
       },
       "vgCode": "STANTON/III/baijini-point",
@@ -28,6 +130,89 @@
           671,
           672,
           673
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 7
+      },
+      "vgCode": "STANTON/II.1/cru-l1-ambitious-dream-station",
+      "i18nKey": "RR_CRU_L1",
+      "source": {
+        "method": "generated",
+        "uexName": "CRU-L1 Ambitious Dream Station",
+        "vgName": "CRU-L1 Ambitious Dream Station",
+        "terminalIds": [
+          19,
+          123,
+          133,
+          160,
+          178,
+          212,
+          221,
+          236,
+          245,
+          302,
+          367,
+          607,
+          608,
+          609,
+          610,
+          611,
+          612
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 8
+      },
+      "vgCode": "STANTON/II.4/cru-l4-shallow-fields-station",
+      "i18nKey": "RR_CRU_L4",
+      "source": {
+        "method": "generated",
+        "uexName": "CRU-L4 Shallow Fields Station",
+        "vgName": "CRU-L4 Shallow Fields Station",
+        "terminalIds": [
+          20,
+          21,
+          96,
+          134,
+          222,
+          283,
+          284,
+          368,
+          566,
+          567
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 9
+      },
+      "vgCode": "STANTON/II.5/cru-l5-beautiful-glen-station",
+      "i18nKey": "RR_CRU_L5",
+      "source": {
+        "method": "generated",
+        "uexName": "CRU-L5 Beautiful Glen Station",
+        "vgName": "CRU-L5 Beautiful Glen Station",
+        "terminalIds": [
+          22,
+          124,
+          135,
+          189,
+          223,
+          282,
+          352,
+          369,
+          613,
+          614,
+          615
         ]
       }
     },
@@ -71,7 +256,7 @@
       "i18nKey": null,
       "source": {
         "method": "generated",
-        "uexName": "GrimHEX",
+        "uexName": "Green Imperial Housing Exchange",
         "vgName": "Grim HEX",
         "terminalIds": [
           27,
@@ -83,6 +268,262 @@
           344,
           372,
           818
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 12
+      },
+      "vgCode": "STANTON/I.1/hur-l1-green-glade-station",
+      "i18nKey": "RR_HUR_L1",
+      "source": {
+        "method": "generated",
+        "uexName": "HUR-L1 Green Glade Station",
+        "vgName": "HUR-L1 Green Glade Station",
+        "terminalIds": [
+          44,
+          99,
+          125,
+          153,
+          179,
+          213,
+          224,
+          237,
+          248,
+          388,
+          624,
+          625,
+          626,
+          627,
+          628,
+          629
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 13
+      },
+      "vgCode": "STANTON/I.2/hur-l2-faithful-dream-station",
+      "i18nKey": "RR_HUR_L2",
+      "source": {
+        "method": "generated",
+        "uexName": "HUR-L2 Faithful Dream Station",
+        "vgName": "HUR-L2 Faithful Dream Station",
+        "terminalIds": [
+          45,
+          126,
+          137,
+          162,
+          190,
+          214,
+          225,
+          238,
+          249,
+          304,
+          389,
+          622,
+          623
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 14
+      },
+      "vgCode": "STANTON/I.3/hur-l3-thundering-express-station",
+      "i18nKey": "RR_HUR_L3",
+      "source": {
+        "method": "generated",
+        "uexName": "HUR-L3 Thundering Express Station",
+        "vgName": "HUR-L3 Thundering Express Station",
+        "terminalIds": [
+          46,
+          138,
+          191,
+          226,
+          305,
+          390,
+          618
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 15
+      },
+      "vgCode": "STANTON/I.4/hur-l4-melodic-fields-station",
+      "i18nKey": "RR_HUR_L4",
+      "source": {
+        "method": "generated",
+        "uexName": "HUR-L4 Melodic Fields Station",
+        "vgName": "HUR-L4 Melodic Fields Station",
+        "terminalIds": [
+          47,
+          102,
+          127,
+          192,
+          227,
+          391,
+          630,
+          631
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 16
+      },
+      "vgCode": "STANTON/I.5/hur-l5-high-course-station",
+      "i18nKey": "RR_HUR_L5",
+      "source": {
+        "method": "generated",
+        "uexName": "HUR-L5 High Course Station",
+        "vgName": "HUR-L5 High Course Station",
+        "terminalIds": [
+          48,
+          128,
+          139,
+          193,
+          228,
+          306,
+          392,
+          632,
+          708
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 17
+      },
+      "vgCode": "STANTON/IV.1/mic-l1-shallow-frontier-station",
+      "i18nKey": "RR_MIC_L1",
+      "source": {
+        "method": "generated",
+        "uexName": "MIC-L1 Shallow Frontier Station",
+        "vgName": "MIC-L1 Shallow Frontier Station",
+        "terminalIds": [
+          54,
+          164,
+          168,
+          181,
+          215,
+          229,
+          239,
+          242,
+          281,
+          394,
+          633,
+          634,
+          635,
+          636,
+          637,
+          638
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 18
+      },
+      "vgCode": "STANTON/IV.2/mic-l2-long-forest-station",
+      "i18nKey": "RR_MIC_L2",
+      "source": {
+        "method": "generated",
+        "uexName": "MIC-L2 Long Forest Station",
+        "vgName": "MIC-L2 Long Forest Station",
+        "terminalIds": [
+          55,
+          165,
+          169,
+          194,
+          216,
+          230,
+          240,
+          243,
+          279,
+          395,
+          582,
+          583,
+          584
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 19
+      },
+      "vgCode": "STANTON/IV.3/mic-l3-endless-odyssey-station",
+      "i18nKey": "RR_MIC_L3",
+      "source": {
+        "method": "generated",
+        "uexName": "MIC-L3 Endless Odyssey Station",
+        "vgName": "MIC-L3 Endless Odyssey Station",
+        "terminalIds": [
+          56,
+          170,
+          195,
+          231,
+          396,
+          617
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 20
+      },
+      "vgCode": "STANTON/IV.4/mic-l4-red-crossroads-station",
+      "i18nKey": "RR_MIC_L4",
+      "source": {
+        "method": "generated",
+        "uexName": "MIC-L4 Red Crossroads Station",
+        "vgName": "MIC-L4 Red Crossroads Station",
+        "terminalIds": [
+          57,
+          182,
+          232,
+          397,
+          619,
+          620,
+          621
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 21
+      },
+      "vgCode": "STANTON/IV.5/mic-l5-modern-icarus-station",
+      "i18nKey": "RR_MIC_L5",
+      "source": {
+        "method": "generated",
+        "uexName": "MIC-L5 Modern Icarus Station",
+        "vgName": "MIC-L5 Modern Icarus Station",
+        "terminalIds": [
+          58,
+          166,
+          175,
+          217,
+          233,
+          241,
+          244,
+          398,
+          601,
+          602,
+          603
         ]
       }
     },
@@ -113,6 +554,79 @@
           700,
           701,
           702
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 24
+      },
+      "vgCode": "STANTON/JP.PYRO/pyro-gateway",
+      "i18nKey": "Stanton_Pyro_JPStation",
+      "source": {
+        "method": "generated",
+        "uexName": "Pyro Gateway",
+        "vgName": "Pyro Gateway",
+        "terminalIds": [
+          252,
+          254,
+          307,
+          309,
+          311,
+          312,
+          313,
+          314,
+          315,
+          316,
+          317,
+          318,
+          319,
+          320,
+          329,
+          419,
+          560,
+          647,
+          648,
+          649,
+          650,
+          651
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 26
+      },
+      "vgCode": "STANTON/JP.TERRA/terra-gateway",
+      "i18nKey": "Stanton_Terra_JPStation",
+      "source": {
+        "method": "generated",
+        "uexName": "Terra Gateway",
+        "vgName": "Terra Gateway",
+        "terminalIds": [
+          251,
+          256,
+          258,
+          290,
+          291,
+          292,
+          293,
+          294,
+          295,
+          296,
+          297,
+          298,
+          299,
+          300,
+          418,
+          639,
+          733,
+          734,
+          735,
+          736,
+          737
         ]
       }
     },
@@ -398,6 +912,146 @@
     },
     {
       "uex": {
+        "type": "space_station",
+        "id": 50
+      },
+      "vgCode": "PYRO/JP.STANTON/stanton-gateway",
+      "i18nKey": "Pyro_Stanton_JPStation",
+      "source": {
+        "method": "generated",
+        "uexName": "Stanton Gateway",
+        "vgName": "Stanton Gateway",
+        "terminalIds": [
+          520,
+          521,
+          522,
+          529,
+          530,
+          543,
+          544,
+          559,
+          561,
+          562,
+          563,
+          564,
+          581,
+          654,
+          655,
+          656,
+          657,
+          658,
+          668,
+          697
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 55
+      },
+      "vgCode": "PYRO/JP.NYX/nyx-gateway",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Nyx Gateway",
+        "vgName": "Nyx Gateway",
+        "terminalIds": [
+          738,
+          739,
+          740,
+          741,
+          742,
+          743,
+          744,
+          745,
+          746,
+          747,
+          748,
+          749,
+          750,
+          751,
+          752,
+          753,
+          754,
+          755,
+          756,
+          757
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 56
+      },
+      "vgCode": "NYX/JP.CASTRA/stanton-gateway",
+      "i18nKey": "Pyro_Stanton_JPStation",
+      "source": {
+        "method": "generated",
+        "uexName": "Stanton Gateway",
+        "vgName": "Stanton Gateway",
+        "terminalIds": [
+          798,
+          799,
+          800,
+          801,
+          802,
+          803,
+          804,
+          805,
+          806,
+          807,
+          808,
+          809,
+          810,
+          811,
+          812,
+          813,
+          814,
+          815,
+          816,
+          817
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 57
+      },
+      "vgCode": "NYX/JP.PYRO/pyro-gateway",
+      "i18nKey": "Stanton_Pyro_JPStation",
+      "source": {
+        "method": "generated",
+        "uexName": "Pyro Gateway",
+        "vgName": "Pyro Gateway",
+        "terminalIds": [
+          758,
+          759,
+          760,
+          761,
+          762,
+          763,
+          764,
+          765,
+          766,
+          767,
+          768,
+          769,
+          770,
+          771,
+          772,
+          773,
+          774,
+          775,
+          776,
+          825
+        ]
+      }
+    },
+    {
+      "uex": {
         "type": "outpost",
         "id": 1
       },
@@ -571,7 +1225,7 @@
       "i18nKey": "Stanton2c_Rayari_001",
       "source": {
         "method": "generated",
-        "uexName": "Deakins Research Outpost",
+        "uexName": "Deakins Research",
         "vgName": "Deakins Research Outpost",
         "terminalIds": [
           23,
@@ -620,7 +1274,7 @@
       "i18nKey": "Stanton1b_HurDynMining_002",
       "source": {
         "method": "generated",
-        "uexName": "HDMS Anderson",
+        "uexName": "HDMS-Anderson",
         "vgName": "HDMS-Anderson",
         "terminalIds": [
           28,
@@ -722,7 +1376,7 @@
       "i18nKey": "Stanton1b_HurDynMining_001",
       "source": {
         "method": "generated",
-        "uexName": "HDMS Norgaard",
+        "uexName": "HDMS-Norgaard",
         "vgName": "HDMS-Norgaard",
         "terminalIds": [
           34,
@@ -858,7 +1512,7 @@
       "i18nKey": "Stanton2a_Rayari_001",
       "source": {
         "method": "generated",
-        "uexName": "Hickes Research Outpost",
+        "uexName": "Hickes Research",
         "vgName": "Hickes Research Outpost",
         "terminalIds": [
           42,
@@ -987,7 +1641,7 @@
       "i18nKey": "Stanton2a_Stash_001",
       "source": {
         "method": "generated",
-        "uexName": "PRIVATE PROPERTY",
+        "uexName": "Private Property",
         "vgName": "PRIVATE PROPERTY",
         "terminalIds": [
           67
@@ -1354,7 +2008,7 @@
       "i18nKey": "Stanton3b_IndyFarmer_001",
       "source": {
         "method": "generated",
-        "uexName": "Shady Glen Farms",
+        "uexName": "Shady Glen",
         "vgName": "Shady Glen Farms",
         "terminalIds": [
           76
@@ -1466,6 +2120,109 @@
     {
       "uex": {
         "type": "outpost",
+        "id": 68
+      },
+      "vgCode": "PYRO/I/rustville-headhunters",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Rustville",
+        "vgName": "Rustville (Headhunters)",
+        "terminalIds": [
+          533,
+          534,
+          590
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 69
+      },
+      "vgCode": "PYRO/II/jackson-s-swap-citizens-for-prosperity",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Jackson's Swap",
+        "vgName": "Jackson's Swap (Citizens for Prosperity)",
+        "terminalIds": [
+          504,
+          539
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 71
+      },
+      "vgCode": "PYRO/II/sunset-mesa-citizens-for-prosperity",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Sunset Mesa",
+        "vgName": "Sunset Mesa (Citizens for Prosperity)",
+        "terminalIds": [
+          541,
+          542,
+          599
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 73
+      },
+      "vgCode": "PYRO/III/bueno-ravine-citizens-for-prosperity",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Bueno Ravine",
+        "vgName": "Bueno Ravine (Citizens for Prosperity)",
+        "terminalIds": [
+          550,
+          551
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 75
+      },
+      "vgCode": "PYRO/III/shepherd-s-rest-citizens-for-prosperity",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Shepherd's Rest",
+        "vgName": "Shepherd's Rest (Citizens for Prosperity)",
+        "terminalIds": [
+          555,
+          556
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 77
+      },
+      "vgCode": "PYRO/III/the-yard-headhunters",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "The Yard",
+        "vgName": "The Yard (Headhunters)",
+        "terminalIds": [
+          474
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
         "id": 78
       },
       "vgCode": "STANTON/I/zephyr",
@@ -1514,6 +2271,449 @@
     },
     {
       "uex": {
+        "type": "outpost",
+        "id": 89
+      },
+      "vgCode": "PYRO/I/stag-s-rut-citizens-for-prosperity",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Stag's Rut",
+        "vgName": "Stag's Rut (Citizens for Prosperity)",
+        "terminalIds": [
+          692
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 90
+      },
+      "vgCode": "PYRO/II/arid-reach-headhunters",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Arid Reach",
+        "vgName": "Arid Reach (Headhunters)",
+        "terminalIds": [
+          686
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 92
+      },
+      "vgCode": "PYRO/II/ostler-s-claim-headhunters",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Ostler's Claim",
+        "vgName": "Ostler's Claim (Headhunters)",
+        "terminalIds": [
+          538
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 93
+      },
+      "vgCode": "PYRO/III/carver-s-ridge-headhunters",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Carver's Ridge",
+        "vgName": "Carver's Ridge (Headhunters)",
+        "terminalIds": [
+          679
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 94
+      },
+      "vgCode": "PYRO/III/frigid-knot-citizens-for-prosperity",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Frigid Knot",
+        "vgName": "Frigid Knot (Citizens for Prosperity)",
+        "terminalIds": [
+          558
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 95
+      },
+      "vgCode": "PYRO/III/narena-s-rest-citizens-for-prosperity",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Narena's Rest",
+        "vgName": "Narena's Rest (Citizens for Prosperity)",
+        "terminalIds": [
+          505
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 96
+      },
+      "vgCode": "PYRO/III/windfall-headhunters",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Windfall",
+        "vgName": "Windfall (Headhunters)",
+        "terminalIds": [
+          557,
+          666
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 98
+      },
+      "vgCode": "PYRO/5A/ashland-headhunters",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Ashland",
+        "vgName": "Ashland (Headhunters)",
+        "terminalIds": [
+          507,
+          508
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 99
+      },
+      "vgCode": "PYRO/IV/chawla-s-beach-citizens-for-prosperity",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Chawla's Beach",
+        "vgName": "Chawla's Beach (Citizens for Prosperity)",
+        "terminalIds": [
+          509,
+          510,
+          594
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 100
+      },
+      "vgCode": "PYRO/IV/fallow-field-headhunters",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Fallow Field",
+        "vgName": "Fallow Field (Headhunters)",
+        "terminalIds": [
+          605,
+          687
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 101
+      },
+      "vgCode": "PYRO/IV/goner-s-deal-headhunters",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Goner's Deal",
+        "vgName": "Goner's Deal (Headhunters)",
+        "terminalIds": [
+          585
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 102
+      },
+      "vgCode": "PYRO/IV/sacren-s-plot-citizens-for-prosperity",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Sacren's Plot",
+        "vgName": "Sacren's Plot (Citizens for Prosperity)",
+        "terminalIds": [
+          688,
+          728
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 103
+      },
+      "vgCode": "PYRO/5A/kabir-s-post-citizens-for-prosperity",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Kabir's Post",
+        "vgName": "Kabir's Post (Citizens for Prosperity)",
+        "terminalIds": [
+          552
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 104
+      },
+      "vgCode": "PYRO/VI/blackrock-exchange-citizens-for-prosperity",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Blackrock Exchange",
+        "vgName": "Blackrock Exchange (Citizens for Prosperity)",
+        "terminalIds": [
+          476
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 105
+      },
+      "vgCode": "PYRO/VI/bullock-s-reach-citizens-for-prosperity",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Bullock's Reach",
+        "vgName": "Bullock's Reach (Citizens for Prosperity)",
+        "terminalIds": [
+          820
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 106
+      },
+      "vgCode": "PYRO/VI/canard-view-citizens-for-prosperity",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Canard View",
+        "vgName": "Canard View (Citizens for Prosperity)",
+        "terminalIds": [
+          475,
+          591
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 107
+      },
+      "vgCode": "PYRO/VI/kinder-plots-headhunters",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Kinder Plots",
+        "vgName": "Kinder Plots (Headhunters)",
+        "terminalIds": [
+          821
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 108
+      },
+      "vgCode": "PYRO/VI/last-landings-headhunters",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Last Landings",
+        "vgName": "Last Landings (Headhunters)",
+        "terminalIds": [
+          565,
+          667,
+          721
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 109
+      },
+      "vgCode": "PYRO/VI/rough-landing-headhunters",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Rough Landing",
+        "vgName": "Rough Landing (Headhunters)",
+        "terminalIds": [
+          497
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 110
+      },
+      "vgCode": "PYRO/VI/scarper-s-turn-xenothreat",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Scarper's Turn",
+        "vgName": "Scarper's Turn (XenoThreat)",
+        "terminalIds": [
+          477
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 112
+      },
+      "vgCode": "PYRO/5C/prophet-s-peak-citizens-for-prosperity",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Prophet's Peak",
+        "vgName": "Prophet's Peak (Citizens for Prosperity)",
+        "terminalIds": [
+          516
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 113
+      },
+      "vgCode": "PYRO/5B/seer-s-canyon-headhunters",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Seer's Canyon",
+        "vgName": "Seer's Canyon (Headhunters)",
+        "terminalIds": [
+          517,
+          518,
+          531
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 114
+      },
+      "vgCode": "PYRO/III/prospect-depot-xenothreat",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Prospect Depot",
+        "vgName": "Prospect Depot (XenoThreat)",
+        "terminalIds": [
+          680
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 115
+      },
+      "vgCode": "PYRO/IV/dinger-s-depot-xenothreat",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Dinger's Depot",
+        "vgName": "Dinger's Depot (XenoThreat)",
+        "terminalIds": [
+          682
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 116
+      },
+      "vgCode": "PYRO/II/slowburn-depot-xenothreat",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Slowburn Depot",
+        "vgName": "Slowburn Depot (XenoThreat)",
+        "terminalIds": [
+          684
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 118
+      },
+      "vgCode": "PYRO/I/gray-gardens-depot-xenothreat",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Gray Gardens Depot",
+        "vgName": "Gray Gardens Depot (XenoThreat)",
+        "terminalIds": [
+          683
+        ]
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 119
+      },
+      "vgCode": "PYRO/VI/watcher-s-depot-xenothreat",
+      "i18nKey": null,
+      "source": {
+        "method": "generated",
+        "uexName": "Watcher's Depot",
+        "vgName": "Watcher's Depot (XenoThreat)",
+        "terminalIds": [
+          685
+        ]
+      }
+    },
+    {
+      "uex": {
         "type": "city",
         "id": 1
       },
@@ -1521,7 +2721,7 @@
       "i18nKey": null,
       "source": {
         "method": "generated",
-        "uexName": "Area18",
+        "uexName": "Area 18",
         "vgName": "Area 18",
         "terminalIds": [
           12,

@@ -15,6 +15,7 @@ async function writeJson(path, data) {
 test("UEX location map updater writes generated entries with nullable i18n keys", async () => {
   const root = await mkdtemp(join(tmpdir(), "uex-location-map-"));
   const output = join(root, "uex_location_vg_location_map.generated.json");
+  const unmatchedOutput = join(root, "uex_location_vg_location_map.unmatched.json");
   const manual = join(root, "manual.json");
   const terminals = join(root, "terminals.json");
   const locations = join(root, "locations.json");
@@ -51,7 +52,44 @@ test("UEX location map updater writes generated entries with nullable i18n keys"
     },
     {
       id: 12,
+      name: "Admin - ARC-L1",
+      id_space_station: 1,
+      id_outpost: 0,
+      id_city: 0,
+      id_poi: 0,
+      space_station_name: "ARC-L1 Wide Forest Station",
+      outpost_name: null,
+      city_name: null,
+      star_system_name: "Stanton",
+    },
+    {
+      id: 13,
+      name: "Gateway - Pyro",
+      id_space_station: 2,
+      id_outpost: 0,
+      id_city: 0,
+      id_poi: 0,
+      space_station_name: "Pyro Gateway (Stanton)",
+      outpost_name: null,
+      city_name: null,
+      star_system_name: "Stanton",
+    },
+    {
+      id: 14,
+      name: "Shop - Faction Outpost",
+      id_space_station: 0,
+      id_outpost: 3,
+      id_city: 0,
+      id_poi: 0,
+      space_station_name: null,
+      outpost_name: "Faction Outpost",
+      city_name: null,
+      star_system_name: "Pyro",
+    },
+    {
+      id: 15,
       name: "Admin - Missing",
+      type: "commodity",
       id_space_station: 0,
       id_outpost: 0,
       id_city: 0,
@@ -61,16 +99,46 @@ test("UEX location map updater writes generated entries with nullable i18n keys"
       city_name: null,
       star_system_name: "Stanton",
     },
+    {
+      id: 16,
+      name: "Admin - Manual",
+      type: "commodity",
+      id_space_station: 3,
+      id_outpost: 0,
+      id_city: 0,
+      id_poi: 0,
+      space_station_name: "Manual Only Station",
+      outpost_name: null,
+      city_name: null,
+      star_system_name: "Stanton",
+    },
   ]);
   await writeJson(locations, [
+    { code: "STANTON/III.1/arc-l1-wide-forest-station", name: "ARC-L1 Wide Forest Station", parentStarCode: "STANTON" },
+    { code: "STANTON/JP.PYRO/pyro-gateway", name: "Pyro Gateway", parentStarCode: "STANTON" },
+    { code: "STANTON/I/manual-station", name: "Manual Station", parentStarCode: "STANTON" },
     { code: "STANTON/III/area-18", name: "Area 18" },
-    { code: "STANTON/I/test-outpost", name: "Test Outpost" },
+    { code: "STANTON/I/test-outpost", name: "Test Outpost", parentStarCode: "STANTON" },
+    { code: "PYRO/II/faction-outpost", name: "Faction Outpost (Citizens for Prosperity)", parentStarCode: "PYRO" },
   ]);
-  await writeJson(alias, { Area18: "STANTON/III/area-18" });
+  await writeJson(alias, {
+    Area18: "STANTON/III/area-18",
+    "Stanton:Pyro Gateway": "STANTON/JP.PYRO/pyro-gateway",
+  });
   await writeJson(nameKeyMap, { "Test Outpost": "Test_Outpost" });
   await writeJson(locationsEn, { Test_Outpost: "Test Outpost" });
   await writeJson(locationsZh, { Test_Outpost: "测试前哨" });
-  await writeJson(manual, { schemaVersion: 1, entries: [] });
+  await writeJson(manual, {
+    schemaVersion: 1,
+    entries: [
+      {
+        uex: { type: "space_station", id: 3 },
+        vgCode: "STANTON/I/manual-station",
+        i18nKey: null,
+        source: { method: "manual" },
+      },
+    ],
+  });
 
   await execFileAsync("node", [
     "scripts/location/update_uex_location_vg_location_map.mjs",
@@ -78,6 +146,8 @@ test("UEX location map updater writes generated entries with nullable i18n keys"
     terminals,
     "--output",
     output,
+    "--unmatched-output",
+    unmatchedOutput,
     "--manual",
     manual,
     "--locations",
@@ -93,15 +163,37 @@ test("UEX location map updater writes generated entries with nullable i18n keys"
   ]);
 
   const generated = JSON.parse(await readFile(output, "utf8"));
+  const unmatched = JSON.parse(await readFile(unmatchedOutput, "utf8"));
 
   assert.equal(generated.schemaVersion, 1);
   assert.deepEqual(
     generated.entries.map((entry) => [entry.uex.type, entry.uex.id, entry.vgCode, entry.i18nKey]),
     [
+      ["space_station", 1, "STANTON/III.1/arc-l1-wide-forest-station", null],
+      ["space_station", 2, "STANTON/JP.PYRO/pyro-gateway", null],
       ["outpost", 2, "STANTON/I/test-outpost", "Test_Outpost"],
+      ["outpost", 3, "PYRO/II/faction-outpost", null],
       ["city", 1, "STANTON/III/area-18", null],
     ],
   );
+  assert.deepEqual(unmatched.summary, {
+    terminalCount: 7,
+    matchedTerminalCount: 6,
+    unmatchedTerminalCount: 1,
+    mappedUexLocationRefCount: 6,
+    unmatchedUexLocationRefCount: 1,
+  });
+  assert.deepEqual(unmatched.entries, [
+    {
+      uex: null,
+      uexRef: null,
+      uexName: null,
+      starSystemName: "Stanton",
+      terminalIds: [15],
+      terminalTypes: { commodity: 1 },
+      candidateVgLocations: [],
+    },
+  ]);
 });
 
 test("UEX location map updater rejects manual entries with invalid i18n keys", async () => {

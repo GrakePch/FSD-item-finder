@@ -1,4 +1,75 @@
 {
   "schemaVersion": 1,
-  "entries": []
+  "entries": [
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 25
+      },
+      "vgCode": "STANTON/JP.MAGNUS/nyx-gateway",
+      "i18nKey": null,
+      "source": {
+        "method": "manual",
+        "uexName": "Nyx Gateway (Stanton)",
+        "vgName": "Nyx Gateway",
+        "note": "UEX uses the target-system display name; Stanton context resolves to the Magnus jump point location."
+      }
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 31
+      },
+      "vgCode": "PYRO/II.4/checkmate",
+      "i18nKey": "RR_P2_L4",
+      "source": {
+        "method": "manual",
+        "uexName": "Checkmate Station",
+        "vgName": "Checkmate",
+        "note": "UEX includes the Station suffix; VG canonical name omits it."
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 72
+      },
+      "vgCode": "PYRO/II/yang-s-place-citizens-for-prosperity",
+      "i18nKey": null,
+      "source": {
+        "method": "manual",
+        "uexName": "Yang's Place",
+        "vgName": "Yang's Place  (Citizens for Prosperity)",
+        "note": "VG canonical name includes faction suffix and double spacing."
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 76
+      },
+      "vgCode": "PYRO/III/the-golden-riviera-headhunters",
+      "i18nKey": null,
+      "source": {
+        "method": "manual",
+        "uexName": "The Golden Riviera",
+        "vgName": " The Golden Riviera (Headhunters)",
+        "note": "VG canonical name includes faction suffix and a leading space."
+      }
+    },
+    {
+      "uex": {
+        "type": "outpost",
+        "id": 117
+      },
+      "vgCode": "PYRO/5D/feo-canyon-depot-xenothreat",
+      "i18nKey": null,
+      "source": {
+        "method": "manual",
+        "uexName": "Feo Canyon Depot",
+        "vgName": "FEO Canyon Depot (XenoThreat)",
+        "note": "VG canonical name uses uppercase FEO and includes faction suffix."
+      }
+    }
+  ]
 }

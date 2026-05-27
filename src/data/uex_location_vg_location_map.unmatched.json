@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "summary": {
+    "terminalCount": 823,
+    "matchedTerminalCount": 766,
+    "unmatchedTerminalCount": 57,
+    "mappedUexLocationRefCount": 148,
+    "unmatchedUexLocationRefCount": 11
+  },
+  "entries": [
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 2
+      },
+      "uexRef": "space_station:2",
+      "uexName": "ARC-L2 Lively Pathway Station",
+      "starSystemName": "Stanton",
+      "terminalIds": [
+        2,
+        93,
+        158,
+        185,
+        197,
+        218,
+        235,
+        247,
+        354,
+        644,
+        645,
+        646
+      ],
+      "terminalTypes": {
+        "commodity": 1,
+        "commodity_raw": 1,
+        "fuel": 1,
+        "item": 7,
+        "refinery": 1,
+        "vehicle_rent": 1
+      },
+      "candidateVgLocations": []
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 58
+      },
+      "uexRef": "space_station:58",
+      "uexName": "People's Service Station Delta",
+      "starSystemName": "Nyx",
+      "terminalIds": [
+        834,
+        835,
+        851,
+        852,
+        853,
+        854,
+        855,
+        856,
+        857
+      ],
+      "terminalTypes": {
+        "commodity": 1,
+        "commodity_raw": 1,
+        "fuel": 1,
+        "item": 6
+      },
+      "candidateVgLocations": []
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 59
+      },
+      "uexRef": "space_station:59",
+      "uexName": "People's Service Station Alpha",
+      "starSystemName": "Nyx",
+      "terminalIds": [
+        830,
+        831,
+        832,
+        833,
+        847,
+        848,
+        849,
+        850,
+        858
+      ],
+      "terminalTypes": {
+        "commodity": 1,
+        "commodity_raw": 1,
+        "fuel": 1,
+        "item": 6
+      },
+      "candidateVgLocations": []
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 60
+      },
+      "uexRef": "space_station:60",
+      "uexName": "People's Service Station Theta",
+      "starSystemName": "Nyx",
+      "terminalIds": [
+        836,
+        837,
+        838,
+        839,
+        840,
+        859,
+        860,
+        862,
+        864
+      ],
+      "terminalTypes": {
+        "commodity": 1,
+        "commodity_raw": 1,
+        "fuel": 1,
+        "item": 6
+      },
+      "candidateVgLocations": []
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 61
+      },
+      "uexRef": "space_station:61",
+      "uexName": "People's Service Station Lambda",
+      "starSystemName": "Nyx",
+      "terminalIds": [
+        841,
+        842,
+        843,
+        844,
+        845,
+        846,
+        861,
+        863,
+        865
+      ],
+      "terminalTypes": {
+        "commodity": 1,
+        "commodity_raw": 1,
+        "fuel": 1,
+        "item": 6
+      },
+      "candidateVgLocations": []
+    },
+    {
+      "uex": null,
+      "uexRef": null,
+      "uexName": null,
+      "starSystemName": "Stanton",
+      "terminalIds": [
+        422,
+        725,
+        792
+      ],
+      "terminalTypes": {
+        "commodity": 1,
+        "fuel": 1,
+        "item": 1
+      },
+      "candidateVgLocations": []
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 22
+      },
+      "uexRef": "space_station:22",
+      "uexName": "Port Olisar",
+      "starSystemName": "Stanton",
+      "terminalIds": [
+        65,
+        399
+      ],
+      "terminalTypes": {
+        "commodity": 1,
+        "fuel": 1
+      },
+      "candidateVgLocations": []
+    },
+    {
+      "uex": {
+        "type": "poi",
+        "id": 90
+      },
+      "uexRef": "poi:90",
+      "uexName": null,
+      "starSystemName": "Stanton",
+      "terminalIds": [
+        726
+      ],
+      "terminalTypes": {
+        "item": 1
+      },
+      "candidateVgLocations": []
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 51
+      },
+      "uexRef": "space_station:51",
+      "uexName": "Wikelo Emporium Kinga Station",
+      "starSystemName": "Stanton",
+      "terminalIds": [
+        710
+      ],
+      "terminalTypes": {
+        "fuel": 1
+      },
+      "candidateVgLocations": []
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 52
+      },
+      "uexRef": "space_station:52",
+      "uexName": "Wikelo Emporium Dasi Station",
+      "starSystemName": "Stanton",
+      "terminalIds": [
+        709
+      ],
+      "terminalTypes": {
+        "fuel": 1
+      },
+      "candidateVgLocations": []
+    },
+    {
+      "uex": {
+        "type": "space_station",
+        "id": 53
+      },
+      "uexRef": "space_station:53",
+      "uexName": "Wikelo Emporium Selo Station",
+      "starSystemName": "Stanton",
+      "terminalIds": [
+        711
+      ],
+      "terminalTypes": {
+        "fuel": 1
+      },
+      "candidateVgLocations": []
+    }
+  ]
+}

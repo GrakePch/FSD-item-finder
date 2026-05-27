@@ -82,5 +82,5 @@ STANTON/1A/caterpillar-16t
 - 前端运行时直接消费 `src/data/starmap/locations.json`，并使用 `location.code` 作为 `dictLocations` key。
 - location 路由为 code-only 的 `/l/*`，例如 `/l/STANTON/II/orison`；旧 name URL 不做兼容解析。
 - 运行时会额外挂 `parentBody`、`parentStar` 和 `terminals`，父级关联通过 `parentCode` / `parentStarCode` 匹配 VG body code。
-- UEX / legacy location 名称只通过内部 `src/data/location_alias_to_code.json` 和唯一 VG name 做 best-effort 匹配，不参与路由兼容。
+- UEX terminal 父地点运行时通过 `src/data/uex_location_vg_location_map.*.json` 的 typed UEX location ref 匹配到 VG location `code`；`src/data/location_alias_to_code.json` 和唯一 VG name matching 只在生成映射文件时使用，不参与浏览器运行时路由兼容。
 - `beaconMarker` 对应旧 UI 中的量子标记可用状态；`restrictions` 中包含 `private` 时对应旧 UI 的私有地点状态。

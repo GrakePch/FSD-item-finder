@@ -138,7 +138,7 @@ endlegend
 
 - Fancy-Star-Data vehicle JSON
   - 来源类型：其他仓库。
-  - 来源仓库：`GrakePch/Fancy-Star-Data/main/data/spviewer/live/json`。
+  - 来源仓库：`GrakePch/Fancy-Star-Data`。
   - 主要用途：vehicle 载具主列表、载具索引、hardpoint 数据，以及载具详情补充卡片需要的 quantum drive / radar item 数据。
   - 管理 workflow：`.github/workflows/update-vehicle-data.yml`。
   - 触发条件：手动 `workflow_dispatch`；或每周日 `18:30 UTC` 定时触发。
@@ -153,6 +153,7 @@ endlegend
 - `src/data/location_alias_to_code.json`：UEX/legacy location 名称到 VerseGuide location `code` 的内部匹配表，不用于 `/l/*` 路由兼容。
   - `src/data/uex_bodies_fix_manual.json`：运行时 terminal/location 匹配使用的 body/orbit 名称修正。
 - `src/data/uex_location_vg_location_map.generated.json`：UEX typed location id 到 VerseGuide location `code` 与 location i18n key 的预计算映射，由 `scripts/location/update_uex_location_vg_location_map.mjs` 生成。
+- `src/data/uex_location_vg_location_map.unmatched.json`：未匹配 UEX location ref 的人工检视报告；前端不消费。
 - `src/data/uex_location_vg_location_map.manual.json`：同结构的人工覆盖映射；按 `uex.type + uex.id` 覆盖 generated entry。
 
 ## 2. 最终产物
@@ -333,7 +334,7 @@ endlegend
 - `scripts/location/update_uex_location_vg_location_map.mjs`
   - 上游：UEX terminal 数据、`src/data/starmap/locations.json`、`src/data/location_alias_to_code.json`、`src/data/location_name_to_i18n_key.json`、`src/i18n/locations/{en,zh}.json`。
   - 匹配方式：离线复用旧 terminal name matching 逻辑，把 UEX typed location ref 解析到 VerseGuide location `code`，再按 VG location `name` 填充 nullable `i18nKey`。
-  - 输出：`src/data/uex_location_vg_location_map.generated.json`；`src/data/uex_location_vg_location_map.manual.json` 可人工覆盖同一 UEX ref。
+  - 输出：`src/data/uex_location_vg_location_map.generated.json` 和仅供人工检视的 `src/data/uex_location_vg_location_map.unmatched.json`；`src/data/uex_location_vg_location_map.manual.json` 可人工覆盖同一 UEX ref。
 
 - 运行时 terminal/location 匹配
   - 上游：UEX terminal 数据、生成的 body/location JSON、`uex_bodies_fix_manual.json`、`uex_location_vg_location_map.generated.json`、`uex_location_vg_location_map.manual.json`。

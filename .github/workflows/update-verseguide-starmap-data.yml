@@ -57,13 +57,13 @@ jobs:
 
       - name: Commit updated data
         run: |
-          if [ -z "$(git status --porcelain -- src/data/starmap/body.json src/data/starmap/locations.json src/data/uex_location_vg_location_map.generated.json)" ]; then
+          if [ -z "$(git status --porcelain -- src/data/starmap/body.json src/data/starmap/locations.json src/data/uex_location_vg_location_map.generated.json src/data/uex_location_vg_location_map.unmatched.json)" ]; then
             echo "No VerseGuide starmap data changes to download."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/starmap/body.json src/data/starmap/locations.json src/data/uex_location_vg_location_map.generated.json
+          git add src/data/starmap/body.json src/data/starmap/locations.json src/data/uex_location_vg_location_map.generated.json src/data/uex_location_vg_location_map.unmatched.json
           git commit -m "chore(data): download VerseGuide starmap data"
           git push

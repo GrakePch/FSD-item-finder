@@ -1,8 +1,6 @@
 import location_name_to_i18n_key from "./data/location_name_to_i18n_key.json";
 import bodies from "./data/starmap/body.json";
-import locations from "./data/starmap/locations.json";
 import bodyAliasToCode from "./data/body_alias_to_code.json";
-import locationAliasToCode from "./data/location_alias_to_code.json";
 import uexBodiesFixM from "./data/uex_bodies_fix_manual.json";
 import itemsNameI18nEn from "./i18n/items/en.json";
 
@@ -11,23 +9,11 @@ const locationNameToI18nKeyMap = location_name_to_i18n_key as Record<string, str
 const itemsNameI18nEnMap = itemsNameI18nEn as Record<string, string>;
 const uexBodiesFixMap = uexBodiesFixM as Record<string, string>;
 const bodyAliasToCodeMap = bodyAliasToCode as Record<string, string>;
-const locationAliasToCodeMap = locationAliasToCode as Record<string, string>;
 const bodiesByCode = new Map(
   bodies
     .filter((body) => body.type && !(body.type === "LP" && !body.subType))
     .map((body) => [body.code, body])
 );
-const locationsByCode = new Map(locations.map((location) => [location.code, location]));
-const uniqueLocationCodeByName = new Map<string, string>();
-
-for (const location of locations) {
-  const existing = uniqueLocationCodeByName.get(location.name);
-  if (existing === undefined) {
-    uniqueLocationCodeByName.set(location.name, location.code);
-  } else if (existing !== location.code) {
-    uniqueLocationCodeByName.set(location.name, "");
-  }
-}
 
 export function setUEXAttributes(attributes: UexCategoryAttribute[]) {
   uexAttributes = attributes;
@@ -48,25 +34,6 @@ export function resolveBodyCode(nameOrCode: string | null | undefined): string |
   if (bodiesByCode.has(nameOrCode)) return nameOrCode;
   const fixed = uexBodiesFixMap[nameOrCode] || bodyAliasToCodeMap[nameOrCode];
   return fixed && bodiesByCode.has(fixed) ? fixed : null;
-}
-
-export function resolveLocationCode(
-  nameOrCode: string | null | undefined,
-  context?: { starSystemName?: string | null }
-): string | null {
-  if (!nameOrCode) return null;
-  if (locationsByCode.has(nameOrCode)) return nameOrCode;
-
-  const contextKey = context?.starSystemName
-    ? `${context.starSystemName}:${nameOrCode}`
-    : null;
-  const alias =
-    (contextKey ? locationAliasToCodeMap[contextKey] : null) ||
-    locationAliasToCodeMap[nameOrCode];
-  if (alias && locationsByCode.has(alias)) return alias;
-
-  const uniqueCode = uniqueLocationCodeByName.get(nameOrCode);
-  return uniqueCode && locationsByCode.has(uniqueCode) ? uniqueCode : null;
 }
 
 export function isSurfaceBodyType(type: string | null | undefined): boolean {
