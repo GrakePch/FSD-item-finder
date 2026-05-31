@@ -18,6 +18,48 @@ import {
 } from "@mdi/js";
 import { useTranslation } from "react-i18next";
 
+const KEY_LAYERS_SETTING = "eosc.layersSetting";
+
+const DEFAULT_LAYERS_SETTING = {
+  showLocationLabels: true,
+  showOrbitLines: true,
+  showLongitudeLatitudeLines: false,
+  showOMs: false,
+  showSubsolarDirection: false,
+  showNoQTMarkers: false,
+  applyHDMaps: false,
+  applyRealisticAtmosphere: false,
+};
+
+type LayersSetting = typeof DEFAULT_LAYERS_SETTING;
+
+const LAYERS_SETTING_KEYS = Object.keys(DEFAULT_LAYERS_SETTING) as Array<
+  keyof LayersSetting
+>;
+
+function loadLayersSetting(): LayersSetting {
+  try {
+    const raw = localStorage.getItem(KEY_LAYERS_SETTING);
+    if (!raw) return DEFAULT_LAYERS_SETTING;
+
+    const stored = JSON.parse(raw);
+    if (!stored || typeof stored !== "object") return DEFAULT_LAYERS_SETTING;
+
+    return LAYERS_SETTING_KEYS.reduce<LayersSetting>(
+      (settings, key) => ({
+        ...settings,
+        [key]:
+          typeof stored[key] === "boolean"
+            ? stored[key]
+            : DEFAULT_LAYERS_SETTING[key],
+      }),
+      { ...DEFAULT_LAYERS_SETTING }
+    );
+  } catch {
+    return DEFAULT_LAYERS_SETTING;
+  }
+}
+
 const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
   const { t } = useTranslation();
   const { dictCelestialBodies, dictLocations, currentLocation } =
@@ -30,14 +72,15 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
   const [isLayersSettingOpen, setIsLayersSettingOpen] = useState(false);
 
   /* Layers setting states */
-  const [showLocationLabels, setShowLocationLabels] = useState(true);
-  const [showOrbitLines, setShowOrbitLines] = useState(true);
-  const [showLongitudeLatitudeLines, setShowLongitudeLatitudeLines] = useState(false);
-  const [showOMs, setShowOMs] = useState(false);
-  const [showSubsolarDirection, setShowSubsolarDirection] = useState(false);
-  const [showNoQTMarkers, setShowNoQTMarkers] = useState(false);
-  const [applyHDMaps, setApplyHDMaps] = useState(false);
-  const [applyRealisticAtmosphere, setApplyRealisticAtmosphere] = useState(false);
+  const [layersSetting, setLayersSetting] =
+    useState<LayersSetting>(loadLayersSetting);
+
+  const setLayerSetting = (key: keyof LayersSetting, value: boolean) => {
+    setLayersSetting((prev) => ({
+      ...prev,
+      [key]: value,
+    }));
+  };
 
   // DateTime Picker state stored in query params
   const [searchParams, setSearchParams] = useSearchParams();
@@ -58,6 +101,10 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
     nextParams.set("search", "l");
     setSearchParams(nextParams, { replace: true });
   };
+
+  useEffect(() => {
+    localStorage.setItem(KEY_LAYERS_SETTING, JSON.stringify(layersSetting));
+  }, [layersSetting]);
 
   useEffect(() => {
     let tempCB = null;
@@ -105,16 +152,7 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
         <CelestialBody3D
           celestialBody={seeCelestialBody}
           location={seeLocation}
-          layersSetting={{
-            showLocationLabels,
-            showLongitudeLatitudeLines,
-            showOrbitLines,
-            showOMs,
-            showSubsolarDirection,
-            showNoQTMarkers,
-            applyHDMaps,
-            applyRealisticAtmosphere,
-          }}
+          layersSetting={layersSetting}
         />
       </div>
 
@@ -181,64 +219,70 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
           <label>
             <input
               type="checkbox"
-              checked={showLocationLabels}
-              onChange={(e) => setShowLocationLabels(e.target.checked)}
+              checked={layersSetting.showLocationLabels}
+              onChange={(e) => setLayerSetting("showLocationLabels", e.target.checked)}
             />
             {t("EOSC.showLocationLabels")}
           </label>
           <label>
             <input
               type="checkbox"
-              checked={showOrbitLines}
-              onChange={(e) => setShowOrbitLines(e.target.checked)}
+              checked={layersSetting.showOrbitLines}
+              onChange={(e) => setLayerSetting("showOrbitLines", e.target.checked)}
             />
             {t("EOSC.showOrbitLines")}
           </label>
           <label>
             <input
               type="checkbox"
-              checked={showLongitudeLatitudeLines}
-              onChange={(e) => setShowLongitudeLatitudeLines(e.target.checked)}
+              checked={layersSetting.showLongitudeLatitudeLines}
+              onChange={(e) =>
+                setLayerSetting("showLongitudeLatitudeLines", e.target.checked)
+              }
             />
             {t("EOSC.showLongitudeLatitudeLines")}
           </label>
           <label>
             <input
               type="checkbox"
-              checked={showOMs}
-              onChange={(e) => setShowOMs(e.target.checked)}
+              checked={layersSetting.showOMs}
+              onChange={(e) => setLayerSetting("showOMs", e.target.checked)}
             />
             {t("EOSC.showOMs")}
           </label>
           <label>
             <input
               type="checkbox"
-              checked={showSubsolarDirection}
-              onChange={(e) => setShowSubsolarDirection(e.target.checked)}
+              checked={layersSetting.showSubsolarDirection}
+              onChange={(e) =>
+                setLayerSetting("showSubsolarDirection", e.target.checked)
+              }
             />
             {t("EOSC.showSubsolarDirection")}
           </label>
           <label>
             <input
               type="checkbox"
-              checked={showNoQTMarkers}
-              onChange={(e) => setShowNoQTMarkers(e.target.checked)}
+              checked={layersSetting.showNoQTMarkers}
+              onChange={(e) => setLayerSetting("showNoQTMarkers", e.target.checked)}
             />
             {t("EOSC.showNoQTMarkers")}
           </label>
           <label>
             <input
               type="checkbox"
-              checked={applyHDMaps}
-              onChange={(e) => setApplyHDMaps(e.target.checked)}
+              checked={layersSetting.applyHDMaps}
+              onChange={(e) => setLayerSetting("applyHDMaps", e.target.checked)}
             />
             {t("EOSC.applyHDMaps")}
           </label>
           <label>
             <input
               type="checkbox"
-              checked={applyRealisticAtmosphere}
-              onChange={(e) => setApplyRealisticAtmosphere(e.target.checked)}
+              checked={layersSetting.applyRealisticAtmosphere}
+              onChange={(e) =>
+                setLayerSetting("applyRealisticAtmosphere", e.target.checked)
+              }
             />
             {t("EOSC.applyRealisticAtmosphere")}
           </label>
