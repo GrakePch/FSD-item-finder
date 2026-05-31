@@ -14,6 +14,7 @@ import { useTranslation } from "react-i18next";
 import SearchResultList from "../../pages/SearchItems/SearchResultList/SearchResultList";
 import SearchVehicleResultList from "../../pages/SearchVehicles/SearchVehicleResultList/SearchVehicleResultList";
 import SearchLocationResultList from "../LocationSearch/SearchLocationResultList/SearchLocationResultList";
+import VehicleManufacturerIcon from "../VehicleManufacturerIcon";
 import useDebouncedValue from "../../hooks/useDebouncedValue";
 import {
   getNextSearchMode,
@@ -316,20 +317,29 @@ export default function UniversalSearch() {
           >
             {t("FilterType.all")}
           </button>
-          {vehicleSearch.manufacturers.map((manufacturer) => (
-            <button
-              key={manufacturer}
-              onClick={() => vehicleSearch.toggleManufacturerFilter(manufacturer)}
-              className={
-                vehicleSearch.selectedManufacturer === manufacturer
-                  ? styles.active
-                  : undefined
-              }
-              title={getVehicleManufacturerLabel(t, manufacturer, "full")}
-            >
-              {getVehicleManufacturerLabel(t, manufacturer, "short")}
-            </button>
-          ))}
+          {vehicleSearch.manufacturers.map((manufacturer) => {
+            const displayName = getVehicleManufacturerLabel(t, manufacturer, "short");
+            const fullName = getVehicleManufacturerLabel(t, manufacturer, "full");
+
+            return (
+              <button
+                key={manufacturer}
+                onClick={() => vehicleSearch.toggleManufacturerFilter(manufacturer)}
+                className={
+                  vehicleSearch.selectedManufacturer === manufacturer
+                    ? styles.active
+                    : undefined
+                }
+                title={fullName}
+              >
+                <VehicleManufacturerIcon
+                  className={styles.manufacturerIcon}
+                  manufacturer={manufacturer}
+                />
+                <span>{displayName}</span>
+              </button>
+            );
+          })}
         </div>
       </section>
     </>

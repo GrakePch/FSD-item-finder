@@ -1,5 +1,6 @@
 import styles from "./SearchVehicleResultList.module.css";
 import VehicleCard from "./VehicleCard/VehicleCard";
+import VehicleManufacturerIcon from "../../../components/VehicleManufacturerIcon";
 import { useTranslation } from "react-i18next";
 import {
   getVehicleCareerLabel,
@@ -44,13 +45,22 @@ const SearchVehicleResultList = ({
               key={manufacturer}
               onClick={() => vehicleSearch.toggleManufacturerFilter(manufacturer)}
               className={
-                vehicleSearch.selectedManufacturer === manufacturer
-                  ? styles.active
-                  : undefined
+                [
+                  styles.manufacturerFilterButton,
+                  vehicleSearch.selectedManufacturer === manufacturer
+                    ? styles.active
+                    : undefined,
+                ]
+                  .filter(Boolean)
+                  .join(" ")
               }
               title={fullName}
             >
-              {displayName}
+              <VehicleManufacturerIcon
+                className={styles.manufacturerIcon}
+                manufacturer={manufacturer}
+              />
+              <span>{displayName}</span>
             </button>
           );
         })}
