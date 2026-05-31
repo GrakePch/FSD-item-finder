@@ -745,7 +745,7 @@
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": null
+      "Buy": 775
     },
     "PU": {
       "Patch": "4.8.0",
@@ -1835,6 +1835,41 @@
     "PU": {
       "HasPerf": false,
       "IsPTUOnly": false,
+      "Buy": null
+    }
+  },
+  {
+    "ClassName": "ANVL_Odin",
+    "Name": "Anvil Odin",
+    "Manufacturer": "Anvil Aerospace",
+    "Career": "Combat",
+    "Role": "Battlecruiser",
+    "Size": 6,
+    "Cargo": 8000,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": true,
+      "Date": "2026-05-24",
+      "Url": "https://robertsspaceindustries.com/en/comm-link/transmission/21133-Anvil-Odin"
+    },
+    "ProgressTracker": {
+      "Status": "Concept",
+      "Patch": null,
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": true,
+      "Buy": 5900
+    },
+    "PU": {
+      "Patch": null,
+      "Date": null,
+      "HasPerf": false,
+      "IsPTUOnly": false,
+      "IsPTUBuyOnly": false,
       "Buy": null
     }
   },
@@ -4184,7 +4219,7 @@
       "Url": "https://robertsspaceindustries.com/comm-link/transmission/18188-Gatac-Railen"
     },
     "ProgressTracker": {
-      "Status": "Concept",
+      "Status": "InProd",
       "IsOnPT": false,
       "ID": null
     },
@@ -5594,7 +5629,7 @@
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": null
+      "Buy": 60
     },
     "PU": {
       "Patch": "4.8.0",
@@ -6335,7 +6370,7 @@
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": null
+      "Buy": 300
     },
     "PU": {
       "Patch": "4.8.0",
@@ -6873,7 +6908,7 @@
     "Store": {
       "Url": null,
       "IsPromotionOnly": false,
-      "IsLimitedSale": true,
+      "IsLimitedSale": false,
       "Buy": 350
     },
     "PU": {

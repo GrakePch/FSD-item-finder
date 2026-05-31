@@ -55,6 +55,7 @@ const vehicleClassNameToSeries: Record<string, string> = {
   ANVL_Hurricane: "",
   ANVL_Legionnaire: "",
   ANVL_Liberator: "",
+  ANVL_Odin: "",
   ANVL_Paladin: "",
   ANVL_Spartan: "ANVL_Atlas_Platform",
   ANVL_Terrapin: "ANVL_Terrapin",

@@ -4668,9 +4668,9 @@
     "Mass": 5158975,
     "ComponentsMass": 280303,
     "Dimensions": {
-      "Length": 0,
-      "Width": 0,
-      "Height": 0
+      "Length": 121,
+      "Width": 68,
+      "Height": 20
     },
     "IsSpaceship": true,
     "Armor": {
@@ -4766,12 +4766,13 @@
         "Maneuvering": 460354960
       },
       "AccelerationG": {
-        "IsValidated": false,
-        "Main": 5.28,
-        "Retro": 2.11,
-        "Strafe": 0,
-        "Up": 0,
-        "Down": 0
+        "IsValidated": true,
+        "Main": 4.9,
+        "Retro": 2,
+        "Strafe": 2,
+        "Up": 2,
+        "Down": 2,
+        "CheckDate": "2026-05-20"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -22249,9 +22250,9 @@
     "Mass": 720000,
     "ComponentsMass": 254281,
     "Dimensions": {
-      "Length": 111.5,
-      "Width": 39.5,
-      "Height": 13.4
+      "Length": 120,
+      "Width": 52,
+      "Height": 20
     },
     "IsSpaceship": true,
     "Armor": {
@@ -22407,12 +22408,13 @@
         "Maneuvering": 73268522
       },
       "AccelerationG": {
-        "IsValidated": false,
-        "Main": 5.26,
-        "Retro": 2.08,
-        "Strafe": 0,
-        "Up": 0,
-        "Down": 0
+        "IsValidated": true,
+        "Main": 3.8,
+        "Retro": 1.5,
+        "Strafe": 2,
+        "Up": 2,
+        "Down": 1.5,
+        "CheckDate": "2026-05-22"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -22528,9 +22530,9 @@
     "Mass": 720000,
     "ComponentsMass": 259173,
     "Dimensions": {
-      "Length": 111.5,
-      "Width": 39.5,
-      "Height": 13.4
+      "Length": 120,
+      "Width": 52,
+      "Height": 20
     },
     "IsSpaceship": true,
     "Armor": {
@@ -28557,8 +28559,8 @@
     "Mass": 107050,
     "ComponentsMass": 17974,
     "Dimensions": {
-      "Length": 17,
-      "Width": 4,
+      "Length": 22,
+      "Width": 8,
       "Height": 4
     },
     "IsSpaceship": true,
@@ -28801,8 +28803,8 @@
       "ExpeditedCost": 2700
     },
     "Dimensions2": {
-      "Length": 22,
-      "Width": 8,
+      "Length": 17,
+      "Width": 4,
       "Height": 4
     },
     "Buy": {
@@ -29174,9 +29176,9 @@
     "Mass": 726530,
     "ComponentsMass": 186625,
     "Dimensions": {
-      "Length": 90,
-      "Width": 35.5,
-      "Height": 25
+      "Length": 125,
+      "Width": 60,
+      "Height": 60
     },
     "IsSpaceship": true,
     "Armor": {
@@ -29420,9 +29422,9 @@
     },
     "New Ship": "MISC Hull C",
     "Dimensions2": {
-      "Length": 125,
-      "Width": 60,
-      "Height": 60
+      "Length": 90,
+      "Width": 35.5,
+      "Height": 25
     },
     "Buy": {
       "New Deal, Lorville": 16537500
@@ -32225,7 +32227,7 @@
     "Dimensions": {
       "Length": 32,
       "Width": 19.9,
-      "Height": 9.07
+      "Height": 8.41
     },
     "IsSpaceship": true,
     "Armor": {
@@ -32328,12 +32330,13 @@
         "Maneuvering": 46300000
       },
       "AccelerationG": {
-        "IsValidated": false,
-        "Main": 4.3,
-        "Retro": 3.22,
-        "Strafe": 0,
-        "Up": 0,
-        "Down": 0
+        "IsValidated": true,
+        "Main": 5.5,
+        "Retro": 3,
+        "Strafe": 3.2,
+        "Up": 3.2,
+        "Down": 3,
+        "CheckDate": "2026-05-18"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -32429,6 +32432,11 @@
       "StandardClaimTime": 5.82,
       "ExpeditedClaimTime": 1.45,
       "ExpeditedCost": 5530
+    },
+    "Dimensions2": {
+      "Length": 32,
+      "Width": 19.9,
+      "Height": 9.07
     }
   },
   {
@@ -39709,9 +39717,9 @@
     "Mass": 63500,
     "ComponentsMass": 5874,
     "Dimensions": {
-      "Length": 27.5,
-      "Width": 10.5,
-      "Height": 5.5
+      "Length": 24.5,
+      "Width": 28,
+      "Height": 7.5
     },
     "IsSpaceship": true,
     "Armor": {
@@ -39940,9 +39948,9 @@
       "ExpeditedCost": 5480
     },
     "Dimensions2": {
-      "Length": 24.5,
-      "Width": 28,
-      "Height": 7.5
+      "Length": 27.5,
+      "Width": 10.5,
+      "Height": 5.5
     }
   },
   {
