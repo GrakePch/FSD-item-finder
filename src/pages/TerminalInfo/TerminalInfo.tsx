@@ -9,7 +9,7 @@ import {
 import {
   classToColor,
   getAttributeValueByName,
-  locationNameToI18nKey,
+  getTerminalDisplayPath,
   signalToColor,
   sizeToColor,
   toI18nKey,
@@ -136,9 +136,8 @@ const TerminalInfo = () => {
           <div className="basic-info">
             <div className="name">
               <h1>
-                {terminalInfo.location_path
-                  .slice(3)
-                  .map((n) => t(locationNameToI18nKey(n), { ns: "locations" }))
+                {getTerminalDisplayPath(terminalInfo)
+                  .map((entry) => t(entry.i18nKey, { ns: "locations", defaultValue: entry.name }))
                   .join(" - ")}
               </h1>
               <h2>{terminalInfo.name}</h2>

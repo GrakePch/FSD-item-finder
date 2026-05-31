@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
 import styles from "./TerminalCard.module.css";
 import { useTranslation } from "react-i18next";
-import { locationNameToI18nKey } from "../../utils";
+import { getTerminalDisplayPath, locationNameToI18nKey } from "../../utils";
 import Icon from "@mdi/react";
 import locationIcon from "../../assets/locationIcon";
 
@@ -43,9 +43,8 @@ const TerminalCard = ({ terminal, onClick }: TerminalCardProps) => {
       </div>
       <div className={styles.info}>
         <p className={styles.name}>
-          {terminal.location_path
-            .slice(3)
-            .map((n) => t(locationNameToI18nKey(n), { ns: "locations", defaultValue: n }))
+          {getTerminalDisplayPath(terminal)
+            .map((entry) => t(entry.i18nKey, { ns: "locations", defaultValue: entry.name }))
             .join(" - ")}
         </p>
         <p className={styles.descrip}>{description}</p>

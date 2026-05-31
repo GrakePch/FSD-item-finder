@@ -140,6 +140,9 @@ interface Terminal {
   name: string;
   type: string;
   parentLocation: SCLocation | null;
+  parentLocationCode: string | null;
+  parentLocationI18nKey: string | null;
+  parentBodyCode: string | null;
   location_path: string[];
   location: {
     name_star_system: string | null;

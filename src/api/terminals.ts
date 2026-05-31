@@ -8,8 +8,8 @@ export async function fetchAndProcessTerminals(dictLocations: LocationDictionary
 
   const temp = res.data.map((t: TerminalApiResponse): {
     terminal: Terminal;
-    parentLocationCode: string | null;
   } => {
+    const mapEntry = getUexLocationMapEntryForTerminalApi(t);
     let orbitName = t.orbit_name;
     if (t.star_system_name === "Pyro" && t.orbit_name === "Pyro Jump Point")
       orbitName = "Stanton Jump Point";
@@ -36,6 +36,9 @@ export async function fetchAndProcessTerminals(dictLocations: LocationDictionary
         name: t.name,
         type: t.type,
         parentLocation: null,
+        parentLocationCode: mapEntry?.vgCode || null,
+        parentLocationI18nKey: mapEntry?.i18nKey || null,
+        parentBodyCode: resolveBodyCode(orbit_name_fix),
         location_path: locationPath,
         location: {
           name_star_system: t.star_system_name,
@@ -65,20 +68,20 @@ export async function fetchAndProcessTerminals(dictLocations: LocationDictionary
         has_docking_port: !!t.has_docking_port,
         has_freight_elevator: !!t.has_freight_elevator,
       },
-      parentLocationCode: getUexLocationMapEntryForTerminalApi(t)?.vgCode || null,
     };
   });
   const tempDict: TerminalDictionary = {};
-  for (const { terminal: t, parentLocationCode } of temp) {
+  for (const { terminal: t } of temp) {
     /* Insert Terminal into the dictionary */
     tempDict[t.id] = t;
 
     /* Set parentLocation and location_path. Push Terminal into the parent location */
-    const _parentLocation = parentLocationCode
-      ? dictLocations[parentLocationCode]
+    const _parentLocation = t.parentLocationCode
+      ? dictLocations[t.parentLocationCode]
       : null;
     if (_parentLocation) {
       t.parentLocation = _parentLocation;
+      t.parentBodyCode = _parentLocation.parentBody?.code || t.parentBodyCode;
       t.location_path = getPathToTerminal(t);
       _parentLocation.terminals.push(t);
     }

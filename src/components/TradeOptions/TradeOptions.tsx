@@ -2,7 +2,11 @@ import { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useSearchParams } from "react-router";
 import { ContextAllData } from "../../contexts";
-import { getLocPath, getTerminalDistance } from "../../utils";
+import {
+  getTerminalDistance,
+  getTerminalLocationPath,
+  getTerminalSortKey,
+} from "../../utils";
 import LocationTreeList from "./LocationTreeList";
 import PriceSortedOptionsList from "./PriceSortedOptionsList";
 import styles from "./TradeOptions.module.css";
@@ -28,9 +32,9 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }: TradeOptionsProps)
     const tempOptions = pricesData
       .filter((option: TradeOption) => option.id_terminal in dictTerminals)
       .toSorted((a: TradeOption, b: TradeOption) =>
-        (getLocPath(a, dictTerminals) || [])
-          .join("  ")
-          .localeCompare((getLocPath(b, dictTerminals) || []).join("  "))
+        getTerminalSortKey(dictTerminals[a.id_terminal]).localeCompare(
+          getTerminalSortKey(dictTerminals[b.id_terminal])
+        )
       );
 
     const fromBodyRef = getCurrentBodyRef(
@@ -73,7 +77,7 @@ const TradeOptions = ({ pricesData, priceMinMax, tradeType }: TradeOptionsProps)
     options
       .filter((option: TradeOption) => getOptionPrice(option, tradeType) > 0)
       .forEach((option: TradeOption) => {
-        const locPath = getLocPath(option, dictTerminals);
+        const locPath = getTerminalLocationPath(dictTerminals[option.id_terminal]);
         if (locPath) addToTree(tempLocationForest, locPath, option);
       });
 

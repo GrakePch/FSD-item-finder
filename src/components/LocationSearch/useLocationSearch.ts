@@ -1,7 +1,11 @@
 import { useContext, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { ContextAllData } from "../../contexts";
-import { isLocationDisplayHidden, locationNameToI18nKey } from "../../utils";
+import {
+  getTerminalSearchFields,
+  isLocationDisplayHidden,
+  locationNameToI18nKey,
+} from "../../utils";
 
 const isNameOrI18nMatch = (
   normalizedSearchName: string,
@@ -56,29 +60,39 @@ export function useLocationSearch(searchName: string, includeTerminal = false) {
     () =>
       includeTerminal && normalizedSearchName
         ? Object.values(dictTerminals).filter((terminal) => {
-            const terminalNameEn = Array.isArray(terminal.location_path)
-              ? terminal.location_path
-                  .slice(3)
-                  .map((name) =>
-                    t(locationNameToI18nKey(name), {
-                      ns: "locations",
-                      defaultValue: name,
-                      lng: "en",
-                    })
-                  )
-                  .join(" - ")
-              : "";
-            const terminalNameI18n = Array.isArray(terminal.location_path)
-              ? terminal.location_path
-                  .slice(3)
-                  .map((name) =>
-                    t(locationNameToI18nKey(name), {
-                      ns: "locations",
-                      defaultValue: name,
-                    })
-                  )
-                  .join(" - ")
-              : "";
+            const searchFields = getTerminalSearchFields(terminal);
+            const terminalNameEn = [
+              ...searchFields.names.map((name) =>
+                t(locationNameToI18nKey(name), {
+                  ns: "locations",
+                  defaultValue: name,
+                  lng: "en",
+                })
+              ),
+              ...searchFields.i18nKeys.map((key) =>
+                t(key, {
+                  ns: "locations",
+                  defaultValue: key,
+                  lng: "en",
+                })
+              ),
+              ...searchFields.codes,
+            ].join(" - ");
+            const terminalNameI18n = [
+              ...searchFields.names.map((name) =>
+                t(locationNameToI18nKey(name), {
+                  ns: "locations",
+                  defaultValue: name,
+                })
+              ),
+              ...searchFields.i18nKeys.map((key) =>
+                t(key, {
+                  ns: "locations",
+                  defaultValue: key,
+                })
+              ),
+              ...searchFields.codes,
+            ].join(" - ");
             return isNameOrI18nMatch(
               normalizedSearchName,
               terminalNameEn,

@@ -3,7 +3,7 @@ import { mdiAlertCircleOutline } from "@mdi/js";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useSearchParams } from "react-router";
 import LocationPathChips from "../LocationPathChips/LocationPathChips";
-import { colorPrice, date4_0, getLocPath } from "../../utils";
+import { colorPrice, date4_0, getTerminalLocationPath } from "../../utils";
 import type { TradeType } from "./types";
 
 type PriceSortedOptionsListProps = {
@@ -34,7 +34,7 @@ const PriceSortedOptionsList = ({
     .filter((option: TradeOption) => getOptionPrice(option, tradeType) > 0)
     .map((option: TradeOption) => {
       const date = new Date(option.date_modified * 1000);
-      const locPath = getLocPath(option, dictTerminals);
+      const locPath = getTerminalLocationPath(dictTerminals[option.id_terminal]);
       if (!locPath) return null;
       const isStale = option.date_modified < date4_0 && locPath[0] !== "Pyro";
 

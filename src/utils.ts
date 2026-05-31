@@ -45,7 +45,20 @@ export function isLocationDisplayHidden(location: SCLocation): boolean {
 }
 
 export function locationNameToI18nKey(name: string): string {
-  return locationNameToI18nKeyMap[name] || name;
+  const directKey = locationNameToI18nKeyMap[name];
+  if (directKey) return directKey;
+
+  const body = bodiesByCode.get(name);
+  if (body) {
+    const bodyName = body.name;
+    return (
+      locationNameToI18nKeyMap[bodyName] ||
+      locationNameToI18nKeyMap[bodyName.replace(/\s+(L[1-6])$/, "-$1")] ||
+      bodyName
+    );
+  }
+
+  return name;
 }
 
 export function getUEXAttribute(id: number | string) {
@@ -70,6 +83,38 @@ export function getAttributeValueByName(
 
 export function getLocPath(option: TradeOption, tdata: TerminalDictionary): string[] | undefined {
   return tdata?.[option.id_terminal]?.location_path;
+}
+
+export function getTerminalSearchFields(terminal: Terminal): {
+  names: string[];
+  i18nKeys: string[];
+  codes: string[];
+} {
+  const names = new Set<string>();
+  const i18nKeys = new Set<string>();
+  const codes = new Set<string>();
+
+  const add = (set: Set<string>, value: string | null | undefined) => {
+    if (value) set.add(value);
+  };
+
+  add(names, terminal.name);
+  add(names, terminal.parentLocation?.name);
+  add(i18nKeys, terminal.parentLocationI18nKey);
+  add(codes, terminal.parentLocationCode);
+  add(codes, terminal.parentBodyCode);
+
+  if (!terminal.parentLocationCode && Array.isArray(terminal.location_path)) {
+    for (const name of terminal.location_path.slice(3)) {
+      add(names, name);
+    }
+  }
+
+  return {
+    names: Array.from(names),
+    i18nKeys: Array.from(i18nKeys),
+    codes: Array.from(codes),
+  };
 }
 
 export function getVariants(key: string, itemsData: ItemDictionary) {
@@ -137,10 +182,94 @@ export function getPathTo(loc: SCLocation | CelestialBody): string[] {
   return path;
 }
 
+export type LocationPathEntry = {
+  name: string;
+  i18nKey: string;
+  code?: string;
+  type?: string;
+};
+
+export function getPathEntriesTo(loc: SCLocation | CelestialBody): LocationPathEntry[] {
+  const path = [
+    {
+      name: loc.name,
+      i18nKey: locationNameToI18nKey(loc.name),
+      code: loc.code,
+      type: loc.type,
+    },
+  ];
+  while (loc.parentBody) {
+    if (loc.type === "LP" && loc.parentBody.parentBody) loc = loc.parentBody.parentBody;
+    else loc = loc.parentBody;
+    if (loc)
+      path.unshift({
+        name: loc.name,
+        i18nKey: locationNameToI18nKey(loc.name),
+        code: loc.code,
+        type: loc.type,
+      });
+  }
+  return path;
+}
+
+export function getTerminalDisplayPath(terminal: Terminal): LocationPathEntry[] {
+  if (!terminal.parentLocationCode || !terminal.parentLocation) {
+    return Array.isArray(terminal.location_path)
+      ? terminal.location_path.slice(3).map((name) => ({
+          name,
+          i18nKey: locationNameToI18nKey(name),
+        }))
+      : [];
+  }
+
+  const parentPath = getPathEntriesTo(terminal.parentLocation)
+    .slice(3)
+    .map((entry) =>
+      entry.code === terminal.parentLocationCode && terminal.parentLocationI18nKey
+        ? { ...entry, i18nKey: terminal.parentLocationI18nKey }
+        : entry
+    );
+  return parentPath.concat(
+    getTerminalNamePath(terminal.name).map((name) => ({
+      name,
+      i18nKey: locationNameToI18nKey(name),
+    }))
+  );
+}
+
+export function getTerminalLocationPath(terminal: Terminal): string[] | undefined {
+  if (!terminal.parentLocationCode || !terminal.parentLocation) {
+    return terminal.location_path;
+  }
+
+  return getPathEntriesTo(terminal.parentLocation)
+    .map((entry) => entry.name)
+    .concat(getTerminalNamePath(terminal.name));
+}
+
+export function getTerminalSortKey(terminal: Terminal): string {
+  if (terminal.parentLocationCode || terminal.parentBodyCode) {
+    return [
+      terminal.parentBodyCode,
+      terminal.parentLocationCode,
+      terminal.name,
+    ]
+      .filter(Boolean)
+      .join("  ");
+  }
+
+  return (terminal.location_path || []).join("  ");
+}
+
 export function getPathToTerminal(t: Terminal): string[] {
-  const terminalSplit = t.name.split(" - ").reverse();
-  if (terminalSplit.length > 1) terminalSplit.shift();
+  const terminalSplit = getTerminalNamePath(t.name);
   return t.parentLocation ? getPathTo(t.parentLocation).concat(terminalSplit) : terminalSplit;
+}
+
+function getTerminalNamePath(name: string): string[] {
+  const terminalSplit = name.split(" - ").reverse();
+  if (terminalSplit.length > 1) terminalSplit.shift();
+  return terminalSplit;
 }
 
 export function getBodiesDistance(b1: string | null | undefined, b2: string | null | undefined): number {
@@ -157,7 +286,7 @@ export function getBodiesDistance(b1: string | null | undefined, b2: string | nu
 
 export function getTerminalDistance(op: TradeOption, body: string, tdata: TerminalDictionary): number {
   const terminal = tdata?.[op.id_terminal];
-  const terminalBodyCode = terminal?.parentLocation?.parentBody?.code;
+  const terminalBodyCode = terminal?.parentBodyCode || terminal?.parentLocation?.parentBody?.code;
   if (terminalBodyCode) return getBodiesDistance(terminalBodyCode, body);
 
   const locPath = getLocPath(op, tdata);

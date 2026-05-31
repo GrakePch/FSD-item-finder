@@ -1,7 +1,12 @@
 import Icon from "@mdi/react";
 import { mdiAlertCircleOutline } from "@mdi/js";
 import LocationPathChips from "../LocationPathChips/LocationPathChips";
-import { colorPrice, date4_0, getLocPath, readableDistance } from "../../utils";
+import {
+  colorPrice,
+  date4_0,
+  getTerminalLocationPath,
+  readableDistance,
+} from "../../utils";
 import type { LocationTreeRow, TradeType } from "./types";
 
 type LocationTreeListRowProps = {
@@ -31,7 +36,9 @@ const LocationTreeListRow = ({
   t,
 }: LocationTreeListRowProps) => {
   const rowOption = row.option;
-  const locPath = rowOption ? getLocPath(rowOption, dictTerminals) : null;
+  const locPath = rowOption
+    ? getTerminalLocationPath(dictTerminals[rowOption.id_terminal])
+    : null;
   const isStale =
     rowOption && rowOption.date_modified < date4_0 && locPath?.[0] !== "Pyro";
 
