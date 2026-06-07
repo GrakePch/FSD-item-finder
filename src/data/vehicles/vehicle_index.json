@@ -2134,6 +2134,9 @@
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
+      "IsShipOfTheMonth": true,
+      "ShipOfTheMonth": "June 2026",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/21052-June-2026-Subscriber-Promotions",
       "Buy": 240
     },
     "PU": {
@@ -3381,7 +3384,7 @@
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "IsShipOfTheMonth": true,
+      "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "May 2026",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/21023-May-2026-Subscriber-Promotions",
       "Buy": 110
@@ -3631,7 +3634,7 @@
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "IsShipOfTheMonth": true,
+      "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "May 2026",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/21023-May-2026-Subscriber-Promotions",
       "Buy": 40
@@ -4259,6 +4262,9 @@
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
+      "IsShipOfTheMonth": true,
+      "ShipOfTheMonth": "June 2026",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/21052-June-2026-Subscriber-Promotions",
       "Buy": 70
     },
     "PU": {
