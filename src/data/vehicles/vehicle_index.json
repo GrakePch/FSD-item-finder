@@ -4208,12 +4208,12 @@
     }
   },
   {
-    "ClassName": "GATAC_Railen",
+    "ClassName": "GAMA_Railen",
     "Name": "Gatac Railen",
     "Manufacturer": "Gatac Manufacture",
-    "Career": "Transport",
+    "Career": "Transporter",
     "Role": "Medium Freight",
-    "Size": 4,
+    "Size": 5,
     "Cargo": 640,
     "Type": "Ship",
     "CommLink": {
@@ -4222,7 +4222,7 @@
       "Url": "https://robertsspaceindustries.com/comm-link/transmission/18188-Gatac-Railen"
     },
     "ProgressTracker": {
-      "Status": "InProd",
+      "Status": "Released",
       "IsOnPT": false,
       "ID": null
     },
@@ -4230,11 +4230,48 @@
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": 225
+      "Buy": 400
     },
     "PU": {
-      "HasPerf": false,
+      "Patch": "4.8.2",
+      "Date": "2026-06-18",
+      "HasPerf": true,
       "IsPTUOnly": false,
+      "Buy": null
+    }
+  },
+  {
+    "ClassName": "GAMA_Tyilui",
+    "Name": "Gatac Tyilui",
+    "Manufacturer": "Gatac Manufacture",
+    "Career": "Combat",
+    "Role": "Carrier",
+    "Size": 5,
+    "Cargo": 96,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "Patch": null,
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 425
+    },
+    "PU": {
+      "Patch": "4.8.2",
+      "Date": "2026-06-18",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "IsPTUBuyOnly": false,
       "Buy": null
     }
   },
