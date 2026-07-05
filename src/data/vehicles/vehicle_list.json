@@ -5090,7 +5090,7 @@
     "BaseLoadout": {
       "TotalShieldHP": 21120,
       "PilotBurstDPS": 3527,
-      "TurretsBurstDPS": 900,
+      "TurretsBurstDPS": 1485,
       "TotalMissilesDmg": 24560
     },
     "Insurance": {
@@ -5543,8 +5543,8 @@
     },
     "BaseLoadout": {
       "TotalShieldHP": 21120,
-      "PilotBurstDPS": 3507,
-      "TurretsBurstDPS": 900,
+      "PilotBurstDPS": 4677,
+      "TurretsBurstDPS": 1485,
       "TotalMissilesDmg": 11760
     },
     "Insurance": {
@@ -14274,13 +14274,13 @@
       "ExpeditedClaimTime": 4.54,
       "ExpeditedCost": 6168
     },
-    "Buy": {
-      "Astro Armada, Area 18": 6237000
-    },
     "Dimensions2": {
       "Length": 25.5,
       "Width": 20,
       "Height": 8
+    },
+    "Buy": {
+      "Astro Armada, Area 18": 6237000
     }
   },
   {
@@ -22508,7 +22508,7 @@
     "BaseLoadout": {
       "TotalShieldHP": 288000,
       "PilotBurstDPS": 0,
-      "TurretsBurstDPS": 8522,
+      "TurretsBurstDPS": 10547,
       "TotalMissilesDmg": 155000
     },
     "Insurance": {
@@ -25459,7 +25459,7 @@
     "BaseLoadout": {
       "TotalShieldHP": 7200,
       "PilotBurstDPS": 1907,
-      "TurretsBurstDPS": 1975,
+      "TurretsBurstDPS": 2238,
       "TotalMissilesDmg": 39200
     },
     "Insurance": {
@@ -35024,7 +35024,7 @@
     },
     "BaseLoadout": {
       "TotalShieldHP": 4320,
-      "PilotBurstDPS": 2034,
+      "PilotBurstDPS": 2709,
       "TurretsBurstDPS": 0,
       "TotalMissilesDmg": 3200
     },
@@ -35246,7 +35246,7 @@
     },
     "BaseLoadout": {
       "TotalShieldHP": 4488,
-      "PilotBurstDPS": 1350,
+      "PilotBurstDPS": 2025,
       "TurretsBurstDPS": 0,
       "TotalMissilesDmg": 3400
     },
@@ -35467,7 +35467,7 @@
     },
     "BaseLoadout": {
       "TotalShieldHP": 6336,
-      "PilotBurstDPS": 2375,
+      "PilotBurstDPS": 3050,
       "TurretsBurstDPS": 0,
       "TotalMissilesDmg": 18800
     },
