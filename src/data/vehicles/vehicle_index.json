@@ -4320,6 +4320,41 @@
     }
   },
   {
+    "ClassName": "GLSN_Basher",
+    "Name": "Grey's Basher",
+    "Manufacturer": "Grey's",
+    "Career": "Combat",
+    "Role": "Light Fighter",
+    "Size": 2,
+    "Cargo": 0,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "Patch": "4.9.0",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 110
+    },
+    "PU": {
+      "Patch": "4.9.0",
+      "Date": "2026-07-16",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "IsPTUBuyOnly": false,
+      "Buy": null
+    }
+  },
+  {
     "ClassName": "GLSN_Shiv",
     "Name": "Grey's Shiv",
     "Manufacturer": "Grey's",

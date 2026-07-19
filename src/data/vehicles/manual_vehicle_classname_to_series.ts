@@ -128,6 +128,7 @@ const vehicleClassNameToSeries: Record<string, string> = {
   GAMA_Railen: "",
   GAMA_Tyilui: "",
   GAMA_Syulen: "",
+  GLSN_Basher: "",
   GLSN_Shiv: "",
   GRIN_MDC: "",
   GRIN_MTC: "",

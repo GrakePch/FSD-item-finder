@@ -2254,7 +2254,7 @@
       "CargoContainers": 0,
       "Storage": 0
     },
-    "Crew": 1,
+    "Crew": 28,
     "WeaponCrew": 11,
     "OperationsCrew": 0,
     "Mass": 37854373,
@@ -2366,9 +2366,9 @@
     "FlightCharacteristics": {
       "ScmSpeed": 110,
       "MaxSpeed": 850,
-      "Pitch": 7,
-      "Yaw": 7,
-      "Roll": 12,
+      "Pitch": 6,
+      "Yaw": 6,
+      "Roll": 11,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 754000000,
@@ -2380,10 +2380,10 @@
         "IsValidated": true,
         "Main": 2,
         "Retro": 1.5,
-        "Strafe": 0.8,
+        "Strafe": 1,
         "Up": 2,
-        "Down": 1.8,
-        "CheckDate": "2025-12-15"
+        "Down": 2,
+        "CheckDate": "2026-06-29"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -2499,7 +2499,7 @@
       "CargoContainers": 0,
       "Storage": 0
     },
-    "Crew": 1,
+    "Crew": 28,
     "WeaponCrew": 12,
     "OperationsCrew": 0,
     "Mass": 37854373,
@@ -2611,9 +2611,9 @@
     "FlightCharacteristics": {
       "ScmSpeed": 110,
       "MaxSpeed": 850,
-      "Pitch": 7,
-      "Yaw": 7,
-      "Roll": 12,
+      "Pitch": 6,
+      "Yaw": 6,
+      "Roll": 11,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
         "Main": 754000000,
@@ -2625,10 +2625,10 @@
         "IsValidated": true,
         "Main": 2,
         "Retro": 1.5,
-        "Strafe": 0.8,
+        "Strafe": 1,
         "Up": 2,
-        "Down": 1.8,
-        "CheckDate": "2025-12-15"
+        "Down": 2,
+        "CheckDate": "2026-06-29"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -2744,7 +2744,7 @@
       "CargoContainers": 0,
       "Storage": 6.9
     },
-    "Crew": 1,
+    "Crew": 5,
     "WeaponCrew": 7,
     "OperationsCrew": 2,
     "Mass": 9509853.5,
@@ -3244,7 +3244,7 @@
     },
     "BaseLoadout": {
       "TotalShieldHP": 63360,
-      "PilotBurstDPS": 542,
+      "PilotBurstDPS": 1817,
       "TurretsBurstDPS": 7798,
       "TotalMissilesDmg": 25600
     },
@@ -3269,7 +3269,7 @@
       "CargoContainers": 0,
       "Storage": 5.3
     },
-    "Crew": 1,
+    "Crew": 7,
     "WeaponCrew": 5,
     "OperationsCrew": 0,
     "Mass": 317870.29,
@@ -3643,12 +3643,12 @@
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 12.2,
-        "Retro": 4.3,
+        "Main": 12.1,
+        "Retro": 4.2,
         "Strafe": 8.6,
-        "Up": 9.1,
+        "Up": 8.6,
         "Down": 4.8,
-        "CheckDate": "2025-07-02"
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -3873,12 +3873,12 @@
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 12.2,
-        "Retro": 4.3,
+        "Main": 12.1,
+        "Retro": 4.2,
         "Strafe": 8.6,
-        "Up": 9.1,
+        "Up": 8.6,
         "Down": 4.8,
-        "CheckDate": "2025-07-02"
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -4887,7 +4887,7 @@
       "CargoContainers": 0,
       "Storage": 1.5
     },
-    "Crew": 1,
+    "Crew": 2,
     "WeaponCrew": 1,
     "OperationsCrew": 0,
     "Mass": 238070.26,
@@ -5089,8 +5089,8 @@
     },
     "BaseLoadout": {
       "TotalShieldHP": 21120,
-      "PilotBurstDPS": 3527,
-      "TurretsBurstDPS": 1485,
+      "PilotBurstDPS": 3403,
+      "TurretsBurstDPS": 660,
       "TotalMissilesDmg": 24560
     },
     "Insurance": {
@@ -5114,7 +5114,7 @@
       "CargoContainers": 0,
       "Storage": 1.5
     },
-    "Crew": 1,
+    "Crew": 2,
     "WeaponCrew": 1,
     "OperationsCrew": 0,
     "Mass": 230404,
@@ -5316,7 +5316,7 @@
     },
     "BaseLoadout": {
       "TotalShieldHP": 21120,
-      "PilotBurstDPS": 3327,
+      "PilotBurstDPS": 3203,
       "TurretsBurstDPS": 300,
       "TotalMissilesDmg": 78560
     },
@@ -5341,7 +5341,7 @@
       "CargoContainers": 0,
       "Storage": 0
     },
-    "Crew": 1,
+    "Crew": 2,
     "WeaponCrew": 1,
     "OperationsCrew": 0,
     "Mass": 217870,
@@ -5443,19 +5443,19 @@
       "Roll": 105,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 25689346,
+        "Main": 21590724,
         "Retro": 5960564,
         "Vtol": 0,
         "Maneuvering": 20340350
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 10.7,
+        "Main": 9,
         "Retro": 2.4,
         "Strafe": 4.1,
         "Up": 4.6,
         "Down": 5.2,
-        "CheckDate": "2026-01-16"
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -5513,12 +5513,12 @@
         "Maneuvering": 12.5
       },
       "FuelUsagePerSecond": {
-        "Main": 3211.168,
+        "Main": 2698.84,
         "Retro": 745.07,
         "Vtol": 0,
         "Maneuvering": 2542.544
       },
-      "IntakeToMainFuelRatio": 1.56,
+      "IntakeToMainFuelRatio": 1.85,
       "TimeForIntakesToFillTank": 780000
     },
     "Emissions": {
@@ -5543,8 +5543,8 @@
     },
     "BaseLoadout": {
       "TotalShieldHP": 21120,
-      "PilotBurstDPS": 4677,
-      "TurretsBurstDPS": 1485,
+      "PilotBurstDPS": 4553,
+      "TurretsBurstDPS": 660,
       "TotalMissilesDmg": 11760
     },
     "Insurance": {
@@ -5568,7 +5568,7 @@
       "CargoContainers": 0,
       "Storage": 1.5
     },
-    "Crew": 1,
+    "Crew": 2,
     "WeaponCrew": 1,
     "OperationsCrew": 0,
     "Mass": 225970,
@@ -5842,15 +5842,15 @@
       },
       "StructureHealthPoints": {
         "VitalParts": {
-          "nose": 1950,
-          "body": 1950
+          "body": 2050
         },
         "Parts": {
-          "canopy": 80,
           "wing_left": 1500,
           "wing_right": 1500,
           "stabilizer_left": 800,
-          "stabilizer_right": 800
+          "stabilizer_right": 800,
+          "nose": 400,
+          "canopy": 80
         }
       },
       "ThrustersHealthPoints": {
@@ -6006,7 +6006,7 @@
       "CargoContainers": 0,
       "Storage": 1.5
     },
-    "Crew": 1,
+    "Crew": 2,
     "WeaponCrew": 3,
     "OperationsCrew": 0,
     "Mass": 610246.06,
@@ -7159,7 +7159,7 @@
         "Strafe": 1.1,
         "Up": 2,
         "Down": 1.1,
-        "CheckDate": "2025-10-03"
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -7409,7 +7409,7 @@
       "CargoContainers": 0,
       "Storage": 1.35
     },
-    "Crew": 1,
+    "Crew": 2,
     "WeaponCrew": 1,
     "OperationsCrew": 0,
     "Mass": 86108,
@@ -7521,19 +7521,19 @@
       "Roll": 130,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 4220000,
-        "Retro": 730000,
+        "Main": 6375192,
+        "Retro": 6459798,
         "Vtol": 0,
-        "Maneuvering": 4600000
+        "Maneuvering": 12920986
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 9.5,
-        "Retro": 3.8,
-        "Strafe": 5.7,
-        "Up": 6.6,
-        "Down": 2.8,
-        "CheckDate": "2025-11-19"
+        "Main": 10,
+        "Retro": 4,
+        "Strafe": 6.9,
+        "Up": 6.9,
+        "Down": 3,
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -7591,10 +7591,10 @@
         "Maneuvering": 7.5
       },
       "FuelUsagePerSecond": {
-        "Main": 527.5,
-        "Retro": 91.25,
+        "Main": 796.899,
+        "Retro": 807.475,
         "Vtol": 0,
-        "Maneuvering": 575
+        "Maneuvering": 1615.123
       },
       "IntakeToMainFuelRatio": 0,
       "TimeForIntakesToFillTank": "Infinity"
@@ -8194,19 +8194,19 @@
       "Roll": 143,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 8646000,
-        "Retro": 3128000,
+        "Main": 9021124,
+        "Retro": 3248604,
         "Vtol": 0,
-        "Maneuvering": 11560000
+        "Maneuvering": 11555040
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 10.8,
+        "Main": 10.9,
         "Retro": 3.9,
-        "Strafe": 7.3,
+        "Strafe": 7.4,
         "Up": 7.7,
         "Down": 4.4,
-        "CheckDate": "2025-10-03"
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -8264,12 +8264,12 @@
         "Maneuvering": 10
       },
       "FuelUsagePerSecond": {
-        "Main": 1080.75,
-        "Retro": 391,
+        "Main": 1127.64,
+        "Retro": 406.076,
         "Vtol": 0,
-        "Maneuvering": 1445
+        "Maneuvering": 1444.38
       },
-      "IntakeToMainFuelRatio": 3.33,
+      "IntakeToMainFuelRatio": 3.19,
       "TimeForIntakesToFillTank": 444444.44
     },
     "Emissions": {
@@ -8542,7 +8542,7 @@
       "CargoContainers": 0,
       "Storage": 1.29
     },
-    "Crew": 1,
+    "Crew": 2,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 76786,
@@ -8636,19 +8636,19 @@
       "Roll": 145,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 8648000,
-        "Retro": 2216000,
+        "Main": 8246457,
+        "Retro": 2215048,
         "Vtol": 0,
-        "Maneuvering": 17752000
+        "Maneuvering": 17744376
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 10.9,
+        "Main": 10.8,
         "Retro": 3.9,
         "Strafe": 7.2,
         "Up": 7.9,
         "Down": 4.4,
-        "CheckDate": "2025-11-19"
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -8706,12 +8706,12 @@
         "Maneuvering": 7.5
       },
       "FuelUsagePerSecond": {
-        "Main": 1081,
-        "Retro": 277,
+        "Main": 1030.807,
+        "Retro": 276.881,
         "Vtol": 0,
-        "Maneuvering": 2219
+        "Maneuvering": 2218.047
       },
-      "IntakeToMainFuelRatio": 3.33,
+      "IntakeToMainFuelRatio": 3.49,
       "TimeForIntakesToFillTank": 375000
     },
     "Emissions": {
@@ -8761,11 +8761,11 @@
       "CargoContainers": 0,
       "Storage": 1.29
     },
-    "Crew": 1,
+    "Crew": 2,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 76786,
-    "ComponentsMass": 9216,
+    "ComponentsMass": 9341,
     "Dimensions": {
       "Length": 25.5,
       "Width": 24,
@@ -8855,19 +8855,19 @@
       "Roll": 145,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 8648000,
-        "Retro": 2216000,
+        "Main": 8246457,
+        "Retro": 2215048,
         "Vtol": 0,
-        "Maneuvering": 17752000
+        "Maneuvering": 17744376
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 10.9,
+        "Main": 10.8,
         "Retro": 3.9,
         "Strafe": 7.2,
         "Up": 7.9,
         "Down": 4.4,
-        "CheckDate": "2025-11-19"
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -8925,12 +8925,12 @@
         "Maneuvering": 7.5
       },
       "FuelUsagePerSecond": {
-        "Main": 1081,
-        "Retro": 277,
+        "Main": 1030.807,
+        "Retro": 276.881,
         "Vtol": 0,
-        "Maneuvering": 2219
+        "Maneuvering": 2218.047
       },
-      "IntakeToMainFuelRatio": 3.33,
+      "IntakeToMainFuelRatio": 3.49,
       "TimeForIntakesToFillTank": 375000
     },
     "Emissions": {
@@ -9980,12 +9980,12 @@
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 11.1,
-        "Retro": 4,
+        "Main": 11.2,
+        "Retro": 3.9,
         "Strafe": 7.8,
         "Up": 8.1,
         "Down": 4.8,
-        "CheckDate": "2025-11-19"
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -10431,19 +10431,19 @@
       "Roll": 148,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 8646000,
-        "Retro": 3128000,
+        "Main": 9021124,
+        "Retro": 3248604,
         "Vtol": 0,
-        "Maneuvering": 11560000
+        "Maneuvering": 11555040
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 11,
-        "Retro": 3.9,
-        "Strafe": 7.6,
-        "Up": 8,
+        "Main": 11.3,
+        "Retro": 4.1,
+        "Strafe": 7.5,
+        "Up": 7.9,
         "Down": 4.6,
-        "CheckDate": "2025-11-19"
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -10501,12 +10501,12 @@
         "Maneuvering": 10
       },
       "FuelUsagePerSecond": {
-        "Main": 1080.75,
-        "Retro": 391,
+        "Main": 1127.64,
+        "Retro": 406.076,
         "Vtol": 0,
-        "Maneuvering": 1445
+        "Maneuvering": 1444.38
       },
-      "IntakeToMainFuelRatio": 3.33,
+      "IntakeToMainFuelRatio": 3.19,
       "TimeForIntakesToFillTank": 444444.44
     },
     "Emissions": {
@@ -12114,7 +12114,7 @@
       "CargoContainers": 0,
       "Storage": 4.5
     },
-    "Crew": 1,
+    "Crew": 5,
     "WeaponCrew": 6,
     "OperationsCrew": 0,
     "Mass": 597246.06,
@@ -12486,7 +12486,7 @@
       "OrePod": 96,
       "Storage": 0
     },
-    "Crew": 5,
+    "Crew": 4,
     "WeaponCrew": 0,
     "OperationsCrew": 3,
     "Mass": 852686,
@@ -12596,10 +12596,10 @@
         "IsValidated": true,
         "Main": 4.9,
         "Retro": 3.4,
-        "Strafe": 2.7,
+        "Strafe": 3,
         "Up": 3,
         "Down": 2.9,
-        "CheckDate": "2025-10-03"
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -12712,7 +12712,7 @@
       "CargoContainers": 0,
       "Storage": 4.2
     },
-    "Crew": 3,
+    "Crew": 4,
     "WeaponCrew": 1,
     "OperationsCrew": 3,
     "Mass": 852686,
@@ -14072,7 +14072,7 @@
       "CargoContainers": 0,
       "Storage": 1.35
     },
-    "Crew": 1,
+    "Crew": 2,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 119930,
@@ -14286,7 +14286,7 @@
   {
     "ClassName": "CNOU_HoverQuad",
     "Name": "C.O. HoverQuad",
-    "Description": "Designed as a companion ground vehicle for the Nomad, the HoverQuad's sleek angular frame utilizes four gravlev pads for maximum maneuverability, making it the perfect transport across all kinds of surfaces.",
+    "Description": "Designed as a companion ground vehicle for the Nomad, the HoverQuad's sleek angular frame utilizes four grav-lev pads for maximum maneuverability, making it the perfect transport across all kinds of surfaces.",
     "Career": "Exploration",
     "Role": "Passenger",
     "Size": 1,
@@ -16772,7 +16772,7 @@
     },
     "BaseLoadout": {
       "TotalShieldHP": 21120,
-      "PilotBurstDPS": 4380,
+      "PilotBurstDPS": 4320,
       "TurretsBurstDPS": 0,
       "TotalMissilesDmg": 59600
     },
@@ -17742,7 +17742,7 @@
       "CargoContainers": 0,
       "Storage": 7.2
     },
-    "Crew": 1,
+    "Crew": 3,
     "WeaponCrew": 2,
     "OperationsCrew": 0,
     "Mass": 680575,
@@ -18013,8 +18013,7 @@
       },
       "StructureHealthPoints": {
         "VitalParts": {
-          "Body": 1950,
-          "Nose": 1950
+          "Body": 2000
         },
         "Parts": {
           "Rear_Landing_Gear_Door_Left": 300,
@@ -18030,6 +18029,7 @@
           "tailFlap_right": 40,
           "landing_gear_left_attach": 200,
           "landing_gear_right_attach": 200,
+          "Nose": 400,
           "Front_Landing_Gear_Door_Center": 100,
           "Front_Landing_Gear_Door_Left": 100,
           "Front_Landing_Gear_Door_Right": 100,
@@ -18207,7 +18207,7 @@
       "CargoContainers": 0,
       "Storage": 3
     },
-    "Crew": 1,
+    "Crew": 4,
     "WeaponCrew": 2,
     "OperationsCrew": 0,
     "Mass": 1508063,
@@ -18462,7 +18462,7 @@
       "CargoContainers": 0,
       "Storage": 3
     },
-    "Crew": 1,
+    "Crew": 4,
     "WeaponCrew": 2,
     "OperationsCrew": 0,
     "Mass": 1508063,
@@ -19333,12 +19333,12 @@
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 5.1,
-        "Retro": 2,
-        "Strafe": 2,
-        "Up": 2.6,
-        "Down": 2.1,
-        "CheckDate": "2025-07-02"
+        "Main": 4.9,
+        "Retro": 1.9,
+        "Strafe": 1.9,
+        "Up": 2.5,
+        "Down": 2,
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -19577,16 +19577,16 @@
         "Main": 18830926,
         "Retro": 2920000,
         "Vtol": 0,
-        "Maneuvering": 69970000
+        "Maneuvering": 69364795
       },
       "AccelerationG": {
         "IsValidated": true,
         "Main": 10.3,
         "Retro": 3.8,
         "Strafe": 8,
-        "Up": 8.2,
+        "Up": 8,
         "Down": 4.1,
-        "CheckDate": "2025-10-03"
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -19647,7 +19647,7 @@
         "Main": 2353.866,
         "Retro": 365,
         "Vtol": 0,
-        "Maneuvering": 8746.25
+        "Maneuvering": 8670.599
       },
       "IntakeToMainFuelRatio": 0.85,
       "TimeForIntakesToFillTank": 1800000
@@ -19822,16 +19822,16 @@
         "Main": 17000000,
         "Retro": 2220000,
         "Vtol": 0,
-        "Maneuvering": 64894000
+        "Maneuvering": 64289428
       },
       "AccelerationG": {
         "IsValidated": true,
         "Main": 10.3,
         "Retro": 3.8,
         "Strafe": 8,
-        "Up": 8.3,
+        "Up": 8,
         "Down": 4.1,
-        "CheckDate": "2025-10-03"
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -19892,7 +19892,7 @@
         "Main": 2125,
         "Retro": 277.5,
         "Vtol": 0,
-        "Maneuvering": 8111.75
+        "Maneuvering": 8036.179
       },
       "IntakeToMainFuelRatio": 0.94,
       "TimeForIntakesToFillTank": 1800000
@@ -20065,16 +20065,16 @@
         "Main": 16660000,
         "Retro": 2120000,
         "Vtol": 0,
-        "Maneuvering": 64433000
+        "Maneuvering": 63888518
       },
       "AccelerationG": {
         "IsValidated": true,
         "Main": 10.3,
         "Retro": 3.8,
         "Strafe": 8,
-        "Up": 8.3,
+        "Up": 8,
         "Down": 4.2,
-        "CheckDate": "2025-10-03"
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -20135,7 +20135,7 @@
         "Main": 2082.5,
         "Retro": 265,
         "Vtol": 0,
-        "Maneuvering": 8054.125
+        "Maneuvering": 7986.065
       },
       "IntakeToMainFuelRatio": 0.96,
       "TimeForIntakesToFillTank": 1800000
@@ -22508,7 +22508,7 @@
     "BaseLoadout": {
       "TotalShieldHP": 288000,
       "PilotBurstDPS": 0,
-      "TurretsBurstDPS": 10547,
+      "TurretsBurstDPS": 7127,
       "TotalMissilesDmg": 155000
     },
     "Insurance": {
@@ -22788,7 +22788,7 @@
     "BaseLoadout": {
       "TotalShieldHP": 288000,
       "PilotBurstDPS": 0,
-      "TurretsBurstDPS": 24467,
+      "TurretsBurstDPS": 15827,
       "TotalMissilesDmg": 155000
     },
     "Insurance": {
@@ -23398,7 +23398,7 @@
       "CargoContainers": 0,
       "Storage": 1.2
     },
-    "Crew": 1,
+    "Crew": 2,
     "WeaponCrew": 1,
     "OperationsCrew": 0,
     "Mass": 148900,
@@ -23620,7 +23620,7 @@
     },
     "BaseLoadout": {
       "TotalShieldHP": 29920,
-      "PilotBurstDPS": 3414,
+      "PilotBurstDPS": 3167,
       "TurretsBurstDPS": 923,
       "TotalMissilesDmg": 0
     },
@@ -23645,7 +23645,7 @@
       "CargoContainers": 0,
       "Storage": 1.05
     },
-    "Crew": 1,
+    "Crew": 2,
     "WeaponCrew": 1,
     "OperationsCrew": 1,
     "Mass": 171700,
@@ -23870,7 +23870,7 @@
     "BaseLoadout": {
       "TotalShieldHP": 29920,
       "PilotBurstDPS": 1385,
-      "TurretsBurstDPS": 1518,
+      "TurretsBurstDPS": 751,
       "TotalMissilesDmg": 0
     },
     "Insurance": {
@@ -24946,8 +24946,8 @@
     "ClassName": "GAMA_Tyilui",
     "Name": "Gatac Tyilui",
     "Description": "True to the nature of the Xi'an, the Tyilui takes innovation to the next level with Gatac's most ambitious ship yet. In addition to hosting several turrets, the mini-carrier's rear-facing hangar is capable of storing multiple snub ships, providing greater operational flexibility in combat scenarios and beyond.",
-    "Career": "Combat",
-    "Role": "Carrier",
+    "Career": "Transporter",
+    "Role": "Snub Carrier",
     "Size": 5,
     "Cargo": {
       "CargoGrid": 96,
@@ -25088,7 +25088,7 @@
         }
       },
       "DoorsHealthPoints": {
-        "door_front": 12600,
+        "door_front": 11400,
         "door_rear": 12600
       }
     },
@@ -25213,6 +25213,240 @@
       "Length": 69,
       "Width": 52,
       "Height": 37
+    }
+  },
+  {
+    "ClassName": "GLSN_Basher",
+    "Name": "Grey's Basher",
+    "Description": "A testament to making something out of nothing, the Basher comes together to form a beast to be reckoned with. The long development of this ship, due to Greycat's trial-and-error approach to mixing ship parts until they figured out the best combinations, goes to show the work put in to elevate this machine from the scraps it was built from.",
+    "Career": "Combat",
+    "Role": "Light Fighter",
+    "Size": 2,
+    "Cargo": {
+      "CargoGrid": 0,
+      "CargoContainers": 0,
+      "Storage": 0.65
+    },
+    "Crew": 1,
+    "WeaponCrew": 0,
+    "OperationsCrew": 0,
+    "Mass": 16527,
+    "ComponentsMass": 5898,
+    "Dimensions": {
+      "Length": 13.7,
+      "Width": 11.3,
+      "Height": 4.5
+    },
+    "IsSpaceship": true,
+    "Armor": {
+      "Durability": {
+        "Health": 1600,
+        "DamageMultipliers": {
+          "Physical": 0.72,
+          "Energy": 1.22,
+          "Distortion": 1,
+          "Thermal": 1,
+          "Biochemical": 1,
+          "Stun": 1
+        }
+      },
+      "DamageDeflection": {
+        "Physical": 8,
+        "Energy": 6,
+        "Distortion": 0
+      },
+      "DamageMultipliers": {
+        "Physical": 0.75,
+        "Energy": 0.6,
+        "Distortion": 1
+      },
+      "SignalMultipliers": {
+        "Electromagnetic": 1,
+        "Infrared": 1,
+        "CrossSection": 1
+      }
+    },
+    "Hull": {
+      "PenetrationDamageMultiplier": {
+        "Fuse": 0.7,
+        "Component": 0.4
+      },
+      "StructureHealthPoints": {
+        "VitalParts": {
+          "body": 1300
+        },
+        "Parts": {
+          "body_wing_left": 250,
+          "Wing_shield_left": 50,
+          "wing_left": 200,
+          "engine_left": 550,
+          "engine_left_spike_01": 50,
+          "engine_left_spike_02": 50,
+          "engine_left_spike_03": 50,
+          "body_wing_right": 250,
+          "Wing_shield_right": 50,
+          "wing_right": 200,
+          "engine_right": 550,
+          "engine_right_spike_01": 50,
+          "engine_right_spike_02": 50,
+          "engine_right_spike_03": 50,
+          "anim_inventory_door": 1,
+          "weapon_cover_right": 150,
+          "nose": 200,
+          "mohawk_front": 500,
+          "harpoon_01": 75,
+          "harpoon_02": 75,
+          "anim_nozzle": 1,
+          "anim_arm": 1,
+          "weapon_cover_left": 150,
+          "body_cablemount_left": 20,
+          "body_cablemount_right": 20,
+          "canopy_frame": 150,
+          "geo_cockpit_canopy": 150,
+          "canopy_screen": 1
+        }
+      },
+      "ThrustersHealthPoints": {
+        "Main": {
+          "thruster_main_left": 1000,
+          "thruster_main_right": 1000
+        },
+        "Retro": {
+          "thruster_retro_left": 500,
+          "thruster_retro_right": 500
+        },
+        "Maneuvering": {
+          "thruster_mav_engine_left_bottom": 300,
+          "thruster_mav_engine_left_side": 300,
+          "thruster_mav_engine_left_top": 300,
+          "thruster_mav_engine_right_bottom": 300,
+          "thruster_mav_engine_right_side": 300,
+          "thruster_mav_engine_right_top": 300,
+          "thruster_mav_front_left_top": 300,
+          "thruster_mav_front_left_side": 300,
+          "thruster_mav_front_left_bottom": 300,
+          "thruster_mav_front_right_bottom": 300,
+          "thruster_mav_front_right_top": 300,
+          "thruster_mav_front_right_side": 300
+        }
+      }
+    },
+    "FlightCharacteristics": {
+      "ScmSpeed": 220,
+      "MaxSpeed": 1180,
+      "Pitch": 67,
+      "Yaw": 50,
+      "Roll": 205,
+      "IsVtolAssisted": false,
+      "ThrustCapacity": {
+        "Main": 3216618,
+        "Retro": 1037554.2,
+        "Vtol": 0,
+        "Maneuvering": 8054458.8
+      },
+      "AccelerationG": {
+        "IsValidated": true,
+        "Main": 13.2,
+        "Retro": 4.2,
+        "Strafe": 9.5,
+        "Up": 9.5,
+        "Down": 4.5,
+        "CheckDate": "2026-07-16"
+      },
+      "MasterModes": {
+        "BaseSpoolTime": 1,
+        "QuantumDriveSpoolTime": 4,
+        "ScmMode": {
+          "BoostSpeedForward": 500,
+          "BoostSpeedBackward": 24
+        }
+      },
+      "Boost": {
+        "PreDelay": 0,
+        "RampUp": 0.6,
+        "RampDown": 0.3,
+        "AccelerationMultiplier": {
+          "PositiveAxis": {
+            "X": 1.3,
+            "Y": 1.55,
+            "Z": 1.3
+          },
+          "NegativeAxis": {
+            "X": 1.3,
+            "Y": 1.4,
+            "Z": 1.35
+          }
+        },
+        "AngularAccelerationMultiplier": {
+          "Pitch": 1.2,
+          "Yaw": 1.2,
+          "Roll": 1.2
+        },
+        "AngularVelocityMultiplier": {
+          "Pitch": 1.2,
+          "Yaw": 1.2,
+          "Roll": 1.2
+        }
+      },
+      "Capacitors": {
+        "ThrusterCapacitorSize": 20,
+        "CapacitorRegenPerSec": 0.75,
+        "CapacitorIdleCost": 1,
+        "CapacitorLinearCost": 0,
+        "CapacitorUsageModifier": 1,
+        "CapacitorRegenDelay": 0.2,
+        "RegenerationTime": 26.7
+      }
+    },
+    "FuelManagement": {
+      "FuelCapacity": 4000000,
+      "FuelIntakeRate": 0,
+      "QuantumFuelCapacity": 1300000,
+      "FuelBurnRatePer10KNewton": {
+        "Main": 2.5,
+        "Retro": 2.5,
+        "Vtol": 0,
+        "Maneuvering": 15
+      },
+      "FuelUsagePerSecond": {
+        "Main": 402.077,
+        "Retro": 129.694,
+        "Vtol": 0,
+        "Maneuvering": 1006.807
+      },
+      "IntakeToMainFuelRatio": 0,
+      "TimeForIntakesToFillTank": "Infinity"
+    },
+    "Emissions": {
+      "Electromagnetic": {
+        "SCMIdle": 0,
+        "SCMActive": 0,
+        "NAV": 0
+      },
+      "Infrared": {
+        "Start": 0
+      },
+      "CrossSection": {
+        "Front": 1900,
+        "Side": 5900,
+        "Top": 5900
+      }
+    },
+    "ResourceNetwork": {
+      "ItemPools": {
+        "WeaponPoolSize": 4
+      }
+    },
+    "BaseLoadout": {
+      "TotalShieldHP": 2160,
+      "PilotBurstDPS": 2147,
+      "TurretsBurstDPS": 0,
+      "TotalMissilesDmg": 2600
+    },
+    "Insurance": {
+      "StandardClaimTime": 5.5,
+      "ExpeditedClaimTime": 1.5,
+      "ExpeditedCost": 2500
     }
   },
   {
@@ -25876,7 +26110,7 @@
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 2420,
-    "ComponentsMass": 545,
+    "ComponentsMass": 544,
     "Dimensions": {
       "Length": 6,
       "Width": 3.9,
@@ -27529,7 +27763,7 @@
       "CargoContainers": 0,
       "Storage": 0
     },
-    "Crew": 1,
+    "Crew": 4,
     "WeaponCrew": 1,
     "OperationsCrew": 0,
     "Mass": 219396,
@@ -27750,7 +27984,7 @@
       "CargoContainers": 0,
       "Storage": 0
     },
-    "Crew": 1,
+    "Crew": 4,
     "WeaponCrew": 1,
     "OperationsCrew": 0,
     "Mass": 222418,
@@ -27796,9 +28030,9 @@
       },
       "StructureHealthPoints": {
         "VitalParts": {
-          "Nose": 6200,
-          "Body": 6200,
-          "Tail": 6200
+          "Nose": 9500,
+          "Body": 9500,
+          "Tail": 9500
         },
         "Parts": {
           "Roof_Scoop": 1200,
@@ -27975,7 +28209,7 @@
       "CargoContainers": 0,
       "Storage": 0
     },
-    "Crew": 1,
+    "Crew": 4,
     "WeaponCrew": 1,
     "OperationsCrew": 0,
     "Mass": 341408,
@@ -28021,9 +28255,9 @@
       },
       "StructureHealthPoints": {
         "VitalParts": {
-          "Nose": 6200,
-          "Body": 6200,
-          "Tail": 6200
+          "Nose": 9750,
+          "Body": 9750,
+          "Tail": 9750
         },
         "Parts": {
           "Wing_Right": 1960,
@@ -28199,7 +28433,7 @@
       "CargoContainers": 0,
       "Storage": 0
     },
-    "Crew": 1,
+    "Crew": 4,
     "WeaponCrew": 1,
     "OperationsCrew": 0,
     "Mass": 223553,
@@ -28245,9 +28479,9 @@
       },
       "StructureHealthPoints": {
         "VitalParts": {
-          "Nose": 6200,
-          "Body": 6200,
-          "Tail": 6200
+          "Nose": 10500,
+          "Body": 10500,
+          "Tail": 10500
         },
         "Parts": {
           "Roof_Scoop": 1200,
@@ -29246,12 +29480,12 @@
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 7.4,
-        "Retro": 4,
-        "Strafe": 4.4,
-        "Up": 4.4,
-        "Down": 4,
-        "CheckDate": "2026-03-06"
+        "Main": 7.2,
+        "Retro": 3.8,
+        "Strafe": 4.3,
+        "Up": 4.3,
+        "Down": 3.8,
+        "CheckDate": "2027-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -29716,7 +29950,7 @@
       "CargoContainers": 0,
       "Storage": 5.4
     },
-    "Crew": 1,
+    "Crew": 4,
     "WeaponCrew": 2,
     "OperationsCrew": 0,
     "Mass": 726530,
@@ -29993,7 +30227,7 @@
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 122096,
-    "ComponentsMass": 20226,
+    "ComponentsMass": 20275,
     "Dimensions": {
       "Length": 26,
       "Width": 16,
@@ -30884,7 +31118,7 @@
       "CargoContainers": 0,
       "Storage": 0
     },
-    "Crew": 1,
+    "Crew": 2,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 35153,
@@ -30994,7 +31228,7 @@
         "Strafe": 7.9,
         "Up": 7.9,
         "Down": 7.9,
-        "CheckDate": "2025-11-19"
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -31107,7 +31341,7 @@
       "CargoContainers": 0,
       "Storage": 0
     },
-    "Crew": 1,
+    "Crew": 2,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 35153,
@@ -31330,7 +31564,7 @@
       "CargoContainers": 0,
       "Storage": 0
     },
-    "Crew": 1,
+    "Crew": 2,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 35153,
@@ -31553,7 +31787,7 @@
       "CargoContainers": 0,
       "Storage": 0
     },
-    "Crew": 1,
+    "Crew": 2,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 34968,
@@ -31777,7 +32011,7 @@
       "FuelTank": 120,
       "Storage": 0
     },
-    "Crew": 1,
+    "Crew": 8,
     "WeaponCrew": 3,
     "OperationsCrew": 0,
     "Mass": 3466606,
@@ -32242,7 +32476,7 @@
       "CargoContainers": 0,
       "Storage": 6
     },
-    "Crew": 1,
+    "Crew": 4,
     "WeaponCrew": 2,
     "OperationsCrew": 0,
     "Mass": 498070.5,
@@ -32498,7 +32732,7 @@
       "CargoContainers": 0,
       "Storage": 11.7
     },
-    "Crew": 1,
+    "Crew": 8,
     "WeaponCrew": 6,
     "OperationsCrew": 0,
     "Mass": 738070.5,
@@ -33112,19 +33346,19 @@
       "Roll": 130,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 4710000,
-        "Retro": 4700000,
+        "Main": 5894934,
+        "Retro": 5155568,
         "Vtol": 0,
-        "Maneuvering": 31720000
+        "Maneuvering": 32731864
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 10.1,
-        "Retro": 3.8,
+        "Main": 10.2,
+        "Retro": 3.9,
         "Strafe": 8.2,
         "Up": 8.2,
         "Down": 8.2,
-        "CheckDate": "2025-10-03"
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -33182,12 +33416,12 @@
         "Maneuvering": 20
       },
       "FuelUsagePerSecond": {
-        "Main": 588.75,
-        "Retro": 587.5,
+        "Main": 736.867,
+        "Retro": 644.446,
         "Vtol": 0,
-        "Maneuvering": 3965
+        "Maneuvering": 4091.483
       },
-      "IntakeToMainFuelRatio": 5.1,
+      "IntakeToMainFuelRatio": 4.07,
       "TimeForIntakesToFillTank": 300000
     },
     "Emissions": {
@@ -33595,19 +33829,19 @@
       "Roll": 125,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 4710000,
-        "Retro": 4700000,
+        "Main": 5894934,
+        "Retro": 5155568,
         "Vtol": 0,
-        "Maneuvering": 31720000
+        "Maneuvering": 32731864
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 10.3,
-        "Retro": 3.8,
+        "Main": 10.2,
+        "Retro": 3.9,
         "Strafe": 8.2,
         "Up": 8.2,
         "Down": 8.2,
-        "CheckDate": "2025-06-21"
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -33665,12 +33899,12 @@
         "Maneuvering": 20
       },
       "FuelUsagePerSecond": {
-        "Main": 588.75,
-        "Retro": 587.5,
+        "Main": 736.867,
+        "Retro": 644.446,
         "Vtol": 0,
-        "Maneuvering": 3965
+        "Maneuvering": 4091.483
       },
-      "IntakeToMainFuelRatio": 5.1,
+      "IntakeToMainFuelRatio": 4.07,
       "TimeForIntakesToFillTank": 300000
     },
     "Emissions": {
@@ -35024,7 +35258,7 @@
     },
     "BaseLoadout": {
       "TotalShieldHP": 4320,
-      "PilotBurstDPS": 2709,
+      "PilotBurstDPS": 1809,
       "TurretsBurstDPS": 0,
       "TotalMissilesDmg": 3200
     },
@@ -35246,7 +35480,7 @@
     },
     "BaseLoadout": {
       "TotalShieldHP": 4488,
-      "PilotBurstDPS": 2025,
+      "PilotBurstDPS": 1125,
       "TurretsBurstDPS": 0,
       "TotalMissilesDmg": 3400
     },
@@ -35467,7 +35701,7 @@
     },
     "BaseLoadout": {
       "TotalShieldHP": 6336,
-      "PilotBurstDPS": 3050,
+      "PilotBurstDPS": 2150,
       "TurretsBurstDPS": 0,
       "TotalMissilesDmg": 18800
     },
@@ -35944,7 +36178,7 @@
       "CargoContainers": 0,
       "Storage": 0
     },
-    "Crew": 1,
+    "Crew": 5,
     "WeaponCrew": 2,
     "OperationsCrew": 0,
     "Mass": 1544667,
@@ -36171,7 +36405,7 @@
       "CargoContainers": 0,
       "Storage": 0
     },
-    "Crew": 1,
+    "Crew": 5,
     "WeaponCrew": 2,
     "OperationsCrew": 0,
     "Mass": 1544667,
@@ -36394,7 +36628,7 @@
       "CargoContainers": 0,
       "Storage": 1.47
     },
-    "Crew": 1,
+    "Crew": 2,
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 18993.5,
@@ -36605,7 +36839,7 @@
       "CargoContainers": 0,
       "Storage": 0
     },
-    "Crew": 1,
+    "Crew": 8,
     "WeaponCrew": 8,
     "OperationsCrew": 0,
     "Mass": 43896159,
@@ -40511,7 +40745,7 @@
       "CargoContainers": 0,
       "Storage": 5.25
     },
-    "Crew": 1,
+    "Crew": 4,
     "WeaponCrew": 2,
     "OperationsCrew": 0,
     "Mass": 386857,
@@ -40800,7 +41034,7 @@
       "CargoContainers": 0,
       "Storage": 6
     },
-    "Crew": 1,
+    "Crew": 4,
     "WeaponCrew": 2,
     "OperationsCrew": 0,
     "Mass": 406543,
@@ -41089,7 +41323,7 @@
       "CargoContainers": 0,
       "Storage": 5.25
     },
-    "Crew": 1,
+    "Crew": 4,
     "WeaponCrew": 2,
     "OperationsCrew": 0,
     "Mass": 383801,
@@ -41376,7 +41610,7 @@
       "CargoContainers": 0,
       "Storage": 5.25
     },
-    "Crew": 1,
+    "Crew": 4,
     "WeaponCrew": 1,
     "OperationsCrew": 1,
     "Mass": 383801,
@@ -41841,11 +42075,11 @@
       "AccelerationG": {
         "IsValidated": true,
         "Main": 3.9,
-        "Retro": 2.4,
-        "Strafe": 1.9,
-        "Up": 1.9,
-        "Down": 1.9,
-        "CheckDate": "2026-02-02"
+        "Retro": 2.5,
+        "Strafe": 2,
+        "Up": 2,
+        "Down": 2,
+        "CheckDate": "2026-06-29"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -46044,19 +46278,19 @@
       "Roll": 195,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 3721006,
-        "Retro": 1287090,
+        "Main": 3895671,
+        "Retro": 1340934,
         "Vtol": 0,
-        "Maneuvering": 10113819.2
+        "Maneuvering": 10597443.2
       },
       "AccelerationG": {
         "IsValidated": true,
         "Main": 13,
-        "Retro": 4.4,
+        "Retro": 4.5,
         "Strafe": 10,
         "Up": 10,
-        "Down": 4.9,
-        "CheckDate": "2025-08-03"
+        "Down": 5,
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -46114,10 +46348,10 @@
         "Maneuvering": 15
       },
       "FuelUsagePerSecond": {
-        "Main": 465.126,
-        "Retro": 160.886,
+        "Main": 486.959,
+        "Retro": 167.617,
         "Vtol": 0,
-        "Maneuvering": 1264.227
+        "Maneuvering": 1324.68
       },
       "IntakeToMainFuelRatio": 0,
       "TimeForIntakesToFillTank": "Infinity"
@@ -46310,19 +46544,19 @@
       "Roll": 155,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 5000000,
-        "Retro": 3237316,
+        "Main": 5525250,
+        "Retro": 3588774,
         "Vtol": 0,
-        "Maneuvering": 22467740
+        "Maneuvering": 25070360.6
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 10.5,
-        "Retro": 4,
-        "Strafe": 7.7,
-        "Up": 7.7,
-        "Down": 4.5,
-        "CheckDate": "2025-07-02"
+        "Main": 10.1,
+        "Retro": 3.8,
+        "Strafe": 7.5,
+        "Up": 7.5,
+        "Down": 4.3,
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -46380,10 +46614,10 @@
         "Maneuvering": 15
       },
       "FuelUsagePerSecond": {
-        "Main": 625,
-        "Retro": 404.665,
+        "Main": 690.656,
+        "Retro": 448.597,
         "Vtol": 0,
-        "Maneuvering": 2808.468
+        "Maneuvering": 3133.795
       },
       "IntakeToMainFuelRatio": 0,
       "TimeForIntakesToFillTank": "Infinity"
@@ -46415,7 +46649,7 @@
     },
     "BaseLoadout": {
       "TotalShieldHP": 6336,
-      "PilotBurstDPS": 2470,
+      "PilotBurstDPS": 2200,
       "TurretsBurstDPS": 0,
       "TotalMissilesDmg": 10400
     },
@@ -46550,10 +46784,10 @@
       "Roll": 147,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 3520000,
-        "Retro": 2904083,
+        "Main": 4248176,
+        "Retro": 3148750,
         "Vtol": 0,
-        "Maneuvering": 17980000
+        "Maneuvering": 19191754.4
       },
       "AccelerationG": {
         "IsValidated": true,
@@ -46562,7 +46796,7 @@
         "Strafe": 7,
         "Up": 7,
         "Down": 4,
-        "CheckDate": "2025-07-02"
+        "CheckDate": "2026-06-27"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -46620,10 +46854,10 @@
         "Maneuvering": 15
       },
       "FuelUsagePerSecond": {
-        "Main": 440,
-        "Retro": 363.01,
+        "Main": 531.022,
+        "Retro": 393.594,
         "Vtol": 0,
-        "Maneuvering": 2247.5
+        "Maneuvering": 2398.969
       },
       "IntakeToMainFuelRatio": 0,
       "TimeForIntakesToFillTank": "Infinity"
@@ -46655,7 +46889,7 @@
     },
     "BaseLoadout": {
       "TotalShieldHP": 6336,
-      "PilotBurstDPS": 2606,
+      "PilotBurstDPS": 2337,
       "TurretsBurstDPS": 0,
       "TotalMissilesDmg": 4800
     },
@@ -47569,7 +47803,7 @@
     },
     "BaseLoadout": {
       "TotalShieldHP": 10560,
-      "PilotBurstDPS": 1823,
+      "PilotBurstDPS": 2050,
       "TurretsBurstDPS": 0,
       "TotalMissilesDmg": 13600
     },
