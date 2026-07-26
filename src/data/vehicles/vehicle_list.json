@@ -1220,10 +1220,10 @@
         "IsValidated": true,
         "Main": 13.6,
         "Retro": 4.2,
-        "Strafe": 10,
-        "Up": 10,
-        "Down": 5,
-        "CheckDate": "2025-09-05"
+        "Strafe": 9.9,
+        "Up": 9.9,
+        "Down": 4.9,
+        "CheckDate": "2026-07-18"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -1450,10 +1450,10 @@
         "IsValidated": true,
         "Main": 13.6,
         "Retro": 4.2,
-        "Strafe": 10,
-        "Up": 10,
-        "Down": 5,
-        "CheckDate": "2025-09-05"
+        "Strafe": 9.9,
+        "Up": 9.9,
+        "Down": 4.9,
+        "CheckDate": "2026-07-18"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -1677,10 +1677,10 @@
         "IsValidated": true,
         "Main": 13.6,
         "Retro": 4.2,
-        "Strafe": 10,
-        "Up": 10,
-        "Down": 5,
-        "CheckDate": "2025-09-05"
+        "Strafe": 9.9,
+        "Up": 9.9,
+        "Down": 4.9,
+        "CheckDate": "2026-07-18"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -1904,10 +1904,10 @@
         "IsValidated": true,
         "Main": 13.6,
         "Retro": 4.2,
-        "Strafe": 10,
-        "Up": 10,
-        "Down": 5,
-        "CheckDate": "2025-09-05"
+        "Strafe": 9.9,
+        "Up": 9.9,
+        "Down": 4.9,
+        "CheckDate": "2026-07-18"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -3244,7 +3244,7 @@
     },
     "BaseLoadout": {
       "TotalShieldHP": 63360,
-      "PilotBurstDPS": 1817,
+      "PilotBurstDPS": 1453,
       "TurretsBurstDPS": 7798,
       "TotalMissilesDmg": 25600
     },
@@ -11126,12 +11126,12 @@
       },
       "AccelerationG": {
         "IsValidated": true,
-        "Main": 10,
-        "Retro": 3.5,
-        "Strafe": 6.5,
-        "Up": 6.5,
-        "Down": 3.5,
-        "CheckDate": "2025-11-06"
+        "Main": 9.9,
+        "Retro": 3.4,
+        "Strafe": 6.4,
+        "Up": 6.4,
+        "Down": 3.4,
+        "CheckDate": "2026-07-18"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
