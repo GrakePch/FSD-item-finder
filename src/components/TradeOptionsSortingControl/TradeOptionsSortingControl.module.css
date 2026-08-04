@@ -21,10 +21,11 @@
 }
 
 .sortButton {
+    --button-bg: transparent;
+    --button-bg-hover: var(--color-bg-2);
     border-radius: .5rem;
     padding: .5rem 1rem;
     padding-left: .75rem;
-    background-color: transparent;
     display: flex;
     align-items: center;
     gap: .25rem;
@@ -32,8 +33,9 @@
 }
 
 .sortButton.active {
-    color: #000;
-    background-color: var(--color-text);
+    --button-color: #000;
+    --button-bg: var(--color-text);
+    --button-bg-hover: color-mix(in srgb, var(--color-text) 90%, #000);
 }
 
 .selectors {
