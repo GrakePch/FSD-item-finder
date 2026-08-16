@@ -123,6 +123,7 @@
     "showLongitudeLatitudeLines": "经纬线",
     "showOMs": "轨道标记点",
     "showSubsolarDirection": "恒星直射方向",
+    "showRotationDirectionArrows": "自转方向箭头",
     "showNoQTMarkers": "隐藏的地点",
     "applyHDMaps": "高清地图",
     "applyRealisticAtmosphere": "大气层"

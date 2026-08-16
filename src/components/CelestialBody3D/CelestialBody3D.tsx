@@ -10,6 +10,7 @@ import texture from "../../assets/texture";
 import RotatingDirectionalLight from "./RotatingDirectionalLight";
 import CelestialBodyRing from "./CelestialBodyRing";
 import { OrbitalMarkers } from "./OrbitalMarkers";
+import RotationDirectionArrows from "./RotationDirectionArrows";
 import CameraUpdater from "./CameraUpdater";
 import { useOrbitInertia } from "./hooks/useOrbitInertia";
 import SubsolarDirectionLine from "./SubsolarDirectionLine";
@@ -37,6 +38,7 @@ export default function CelestialBody3D({
     showOrbitLines: true,
     showOMs: true,
     showSubsolarDirection: true,
+    showRotationDirectionArrows: true,
     showNoQTMarkers: false,
     applyHDMaps: false,
     applyRealisticAtmosphere: false,
@@ -52,6 +54,7 @@ export default function CelestialBody3D({
     showOrbitLines,
     showOMs,
     showSubsolarDirection,
+    showRotationDirectionArrows,
     showNoQTMarkers,
     applyHDMaps,
     applyRealisticAtmosphere,
@@ -223,6 +226,10 @@ export default function CelestialBody3D({
             omRadius={celestialBody.omRadiusInKm}
             color={themeColor}
           />
+        )}
+        {/* Render rotation direction arrows */}
+        {showRotationDirectionArrows && celestialBody.rotationPeriodInHours && (
+          <RotationDirectionArrows radius={radius} color={themeColor} />
         )}
       </group>
 

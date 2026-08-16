@@ -26,6 +26,7 @@ const DEFAULT_LAYERS_SETTING = {
   showLongitudeLatitudeLines: false,
   showOMs: false,
   showSubsolarDirection: false,
+  showRotationDirectionArrows: false,
   showNoQTMarkers: false,
   applyHDMaps: false,
   applyRealisticAtmosphere: false,
@@ -259,6 +260,16 @@ const EyesOnStarCitizen = ({ routing = "_" }: { routing: "_" | "b" | "l" }) => {
               }
             />
             {t("EOSC.showSubsolarDirection")}
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={layersSetting.showRotationDirectionArrows}
+              onChange={(e) =>
+                setLayerSetting("showRotationDirectionArrows", e.target.checked)
+              }
+            />
+            {t("EOSC.showRotationDirectionArrows")}
           </label>
           <label>
             <input

@@ -123,6 +123,7 @@
     "showLongitudeLatitudeLines": "Longitude/latitude lines",
     "showOMs": "Orbital markers",
     "showSubsolarDirection": "Subsolar direction line",
+    "showRotationDirectionArrows": "Rotation direction arrows",
     "showNoQTMarkers": "Hidden locations",
     "applyHDMaps": "HD Maps",
     "applyRealisticAtmosphere": "Atmosphere"
