@@ -43,6 +43,11 @@ export function buildDataBodiesAndLocations(): [
       rotationCorrection: body.rotationCorrection,
       orbitPeriod: body.orbitPeriod,
       atmosphereHeightInKm: body.atmosphereHeightInKm,
+      atmosphere_compounds: body.atmosphere_compounds as
+        | Record<string, string>
+        | undefined,
+      habitable: body.habitable,
+      affiliation: body.affiliation,
       renderData: bodyRenderDataByCode.get(body.code),
       locations: [],
       children: [],

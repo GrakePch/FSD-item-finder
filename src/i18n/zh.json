@@ -135,6 +135,19 @@
     "quantumNotAvailable": "无量子标记",
     "privateProperty": "私有财产",
     "titleBasicInfo": "基本信息",
+    "subType": "亚型",
+    "bodyRadius": "半径",
+    "rotationPeriod": "自转周期",
+    "tidallyLocked": "潮汐锁定",
+    "orbitPeriod": "公转周期",
+    "orbitPeriodDays_other": "{{count}} 天",
+    "orbitPeriodYears_other": "{{count}} 年",
+    "atmosphereHeight": "大气高度",
+    "atmosphereCompounds": "大气成分",
+    "habitable": "宜居",
+    "yes": "是",
+    "no": "否",
+    "affiliation": "归属",
     "latitude": "纬度",
     "longitude": "经度",
     "altitude": "海拔",
@@ -570,7 +583,7 @@
     "stash": "藏匿点",
     "station": "空间站",
     "ugf": "地下设施",
-    "underground": "地下地点",
+    "underground": "地下",
     "Ruins": "废墟",
     "Underground bunker": "地下掩体",
     "Outpost": "前哨站",
@@ -594,5 +607,14 @@
     "Planetary alignment facility": "平台校准设施",
     "Orbital laser platform": "轨道激光平台",
     "Depot": "仓库"
+  },
+  "SubType": {
+    "Gas Giant": "气态巨行星",
+    "Planetary Moon": "天然卫星",
+    "Terrestrial Rocky": "岩石行星",
+    "Super-Earth": "超级类地行星",
+    "Ice Giant": "冰巨行星",
+    "Smog Planet": "烟雾行星",
+    "Protoplanet": "原行星"
   }
 }

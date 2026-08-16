@@ -50,6 +50,9 @@ interface CelestialBody {
   rotationCorrection?: number;
   orbitPeriod?: number;
   atmosphereHeightInKm?: number;
+  atmosphere_compounds?: Record<string, string>;
+  habitable?: boolean | null;
+  affiliation?: { code?: string; name: string; color?: string };
   renderData?: CelestialBodyRenderData;
   locations: SCLocation[];
   children: CelestialBody[];

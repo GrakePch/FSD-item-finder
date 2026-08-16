@@ -148,11 +148,12 @@ export function formatLongitude(degree: number): string {
 export function formatTime(hours: number): string {
   if (hours === Infinity) return "∞";
   if (hours === -Infinity) return "∞";
-  const hourNumber = Math.floor(hours);
-  const remainMinutes = (hours - hourNumber) * 60;
-  const minuteNumber = Math.floor(remainMinutes);
-  const remainSeconds = (remainMinutes - minuteNumber) * 60;
-  const secondNumber = Math.round(remainSeconds);
+  // Round total seconds first to avoid floating-point carry (e.g. 5.0999999h
+  // previously rendered as 5:05:60).
+  const totalSeconds = Math.round(hours * 3600);
+  const hourNumber = Math.floor(totalSeconds / 3600);
+  const minuteNumber = Math.floor((totalSeconds % 3600) / 60);
+  const secondNumber = totalSeconds % 60;
   return `${hourNumber}:${minuteNumber.toString().padStart(2, "0")}:${secondNumber
     .toString()
     .padStart(2, "0")}`;

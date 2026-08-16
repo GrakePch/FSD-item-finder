@@ -135,6 +135,21 @@
     "quantumNotAvailable": "No Quantum Marker",
     "privateProperty": "Private Property",
     "titleBasicInfo": "Basic Info",
+    "subType": "Subtype",
+    "bodyRadius": "Radius",
+    "rotationPeriod": "Rotation period",
+    "tidallyLocked": "Tidally locked",
+    "orbitPeriod": "Orbit period",
+    "orbitPeriodDays_one": "{{count}} day",
+    "orbitPeriodDays_other": "{{count}} days",
+    "orbitPeriodYears_one": "{{count}} year",
+    "orbitPeriodYears_other": "{{count}} years",
+    "atmosphereHeight": "Atmosphere height",
+    "atmosphereCompounds": "Atmosphere",
+    "habitable": "Habitable",
+    "yes": "Yes",
+    "no": "No",
+    "affiliation": "Affiliation",
     "latitude": "Latitude",
     "longitude": "Longitude",
     "altitude": "Altitude",
@@ -594,5 +609,14 @@
     "Planetary alignment facility": "Planetary alignment facility",
     "Orbital laser platform": "Orbital laser platform",
     "Depot": "Depot"
+  },
+  "SubType": {
+    "Gas Giant": "Gas Giant",
+    "Planetary Moon": "Planetary Moon",
+    "Terrestrial Rocky": "Terrestrial Rocky",
+    "Super-Earth": "Super-Earth",
+    "Ice Giant": "Ice Giant",
+    "Smog Planet": "Smog Planet",
+    "Protoplanet": "Protoplanet"
   }
 }
