@@ -726,7 +726,12 @@
     "restrictions": [],
     "factions": null,
     "features": [],
-    "weather": null,
+    "weather": {
+      "low": 128,
+      "high": 128,
+      "average": 128,
+      "count": 1
+    },
     "beaconMarker": false,
     "beaconType": null,
     "parentCode": "STANTON/1A",
@@ -1412,8 +1417,23 @@
     "designation": "43H-AA46 / S",
     "restrictions": [],
     "factions": null,
-    "features": [],
-    "weather": null,
+    "features": [
+      {
+        "val": "approach",
+        "desc": "",
+        "types": [
+          "on foot",
+          "by vehicle",
+          "by ship"
+        ]
+      }
+    ],
+    "weather": {
+      "low": 91,
+      "high": 91,
+      "average": 91,
+      "count": 1
+    },
     "beaconMarker": false,
     "beaconType": null,
     "parentCode": "STANTON/1A",
@@ -4664,7 +4684,7 @@
     "type": "underground",
     "designation": "34M-VP33 / W",
     "restrictions": [],
-    "factions": null,
+    "factions": "ninetails",
     "features": [],
     "weather": null,
     "beaconMarker": false,
@@ -5716,8 +5736,8 @@
     }
   },
   {
-    "code": "STANTON/1C/stanton1c-sand01-occu-001-size03-002",
-    "name": "stanton1c sand01 occu 001 size03 002",
+    "code": "STANTON/1C/sand-cave-50k-rh",
+    "name": "Sand Cave 50K-RH",
     "type": "cave",
     "designation": "50K-RH43 / M",
     "restrictions": [],
@@ -5972,14 +5992,39 @@
     }
   },
   {
-    "code": "STANTON/1D/stanton1d-sand01-unoc-001-size02-002-003",
-    "name": "Stanton1d sand01 unoc 001 size02 002 003",
+    "code": "STANTON/1D/sand-cave-41t",
+    "name": "Sand Cave 41T",
     "type": "cave",
     "designation": "41T-FB35 / V",
     "restrictions": [],
     "factions": null,
-    "features": [],
-    "weather": null,
+    "features": [
+      {
+        "val": "approach",
+        "desc": "",
+        "types": [
+          "on foot"
+        ]
+      },
+      {
+        "val": "harvestables",
+        "desc": "- Amioshi Plague\n- Ranta Dung"
+      },
+      {
+        "val": "minerals",
+        "desc": "- Dolivine\n- Aphorite\n- Hadanite"
+      },
+      {
+        "val": "loot",
+        "desc": "Stonebug"
+      }
+    ],
+    "weather": {
+      "low": -6,
+      "high": -6,
+      "average": -6,
+      "count": 1
+    },
     "beaconMarker": false,
     "beaconType": null,
     "parentCode": "STANTON/1D",
@@ -7733,7 +7778,12 @@
     "designation": "58P-UJ41 / N",
     "restrictions": [],
     "factions": "asd",
-    "features": [],
+    "features": [
+      {
+        "val": "atc",
+        "desc": ""
+      }
+    ],
     "weather": {
       "low": -6,
       "high": -6,
@@ -10242,13 +10292,17 @@
       {
         "val": "loot",
         "desc": "White Box, Red Box(Armor)"
+      },
+      {
+        "val": "trade",
+        "desc": "Commodity terminal"
       }
     ],
     "weather": {
       "low": -30,
       "high": -4,
-      "average": -15.375,
-      "count": 8
+      "average": -16,
+      "count": 9
     },
     "beaconMarker": true,
     "beaconType": "Outpost",
@@ -10811,7 +10865,12 @@
         "desc": "1 small"
       }
     ],
-    "weather": null,
+    "weather": {
+      "low": -2,
+      "high": -2,
+      "average": -2,
+      "count": 1
+    },
     "beaconMarker": true,
     "beaconType": null,
     "parentCode": "STANTON/2B",
@@ -11026,14 +11085,19 @@
     }
   },
   {
-    "code": "STANTON/2B/stanton2b-sand01-occu-001-size03-001",
-    "name": "Stanton2b sand01 occu 001 size03 001",
+    "code": "STANTON/2B/small-sand-cave",
+    "name": "Small sand cave",
     "type": "cave",
     "designation": "22U-WB46 / U",
     "restrictions": [],
     "factions": null,
     "features": [],
-    "weather": null,
+    "weather": {
+      "low": 42,
+      "high": 42,
+      "average": 42,
+      "count": 1
+    },
     "beaconMarker": false,
     "beaconType": null,
     "parentCode": "STANTON/2B",
@@ -11782,14 +11846,21 @@
     }
   },
   {
-    "code": "STANTON/2B/lamina-bunker-cave",
-    "name": "Lamina Bunker/Cave(?)",
-    "type": "cave",
+    "code": "STANTON/2B/crashed-idris",
+    "name": "Crashed Idris",
+    "type": "crash",
     "designation": "13K-DC14 / D",
-    "restrictions": [],
+    "restrictions": [
+      "private"
+    ],
     "factions": null,
     "features": [],
-    "weather": null,
+    "weather": {
+      "low": 58,
+      "high": 58,
+      "average": 58,
+      "count": 1
+    },
     "beaconMarker": false,
     "beaconType": null,
     "parentCode": "STANTON/2B",
@@ -12665,7 +12736,12 @@
         "desc": "1 small"
       }
     ],
-    "weather": null,
+    "weather": {
+      "low": -2,
+      "high": -2,
+      "average": -2,
+      "count": 1
+    },
     "beaconMarker": true,
     "beaconType": null,
     "parentCode": "STANTON/2B",
@@ -13284,25 +13360,6 @@
     }
   },
   {
-    "code": "STANTON/2B/apexsandvalakkarevent",
-    "name": "apexsandvalakkarevent",
-    "type": "other",
-    "designation": "13K-DC14 / D",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/2B",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": -77.094188,
-      "y": -261.316344,
-      "z": -113.389781
-    }
-  },
-  {
     "code": "STANTON/2B/minlo-spire",
     "name": "Minlo Spire",
     "type": "fob",
@@ -13623,10 +13680,10 @@
       }
     ],
     "weather": {
-      "low": 21,
+      "low": -2,
       "high": 21,
-      "average": 21,
-      "count": 1
+      "average": 9.5,
+      "count": 2
     },
     "beaconMarker": true,
     "beaconType": null,
@@ -14062,7 +14119,12 @@
         "desc": "1 small"
       }
     ],
-    "weather": null,
+    "weather": {
+      "low": -2,
+      "high": -2,
+      "average": -2,
+      "count": 1
+    },
     "beaconMarker": true,
     "beaconType": null,
     "parentCode": "STANTON/2B",
@@ -16835,8 +16897,8 @@
     "weather": {
       "low": -29,
       "high": -5,
-      "average": -14.545454545454545,
-      "count": 11
+      "average": -14.75,
+      "count": 12
     },
     "beaconMarker": true,
     "beaconType": "Outpost",
@@ -19210,7 +19272,12 @@
         "desc": ""
       }
     ],
-    "weather": null,
+    "weather": {
+      "low": -10,
+      "high": -10,
+      "average": -10,
+      "count": 1
+    },
     "beaconMarker": true,
     "beaconType": null,
     "parentCode": "STANTON/3B",
@@ -19386,8 +19453,8 @@
     "weather": {
       "low": -28,
       "high": -3,
-      "average": -15.321428571428571,
-      "count": 28
+      "average": -15.413793103448276,
+      "count": 29
     },
     "beaconMarker": true,
     "beaconType": "Outpost",
@@ -20385,8 +20452,8 @@
     "weather": {
       "low": -31,
       "high": -4,
-      "average": -16.285714285714285,
-      "count": 7
+      "average": -16.375,
+      "count": 8
     },
     "beaconMarker": true,
     "beaconType": "Outpost",
@@ -21161,9 +21228,18 @@
         "types": [
           "Guards"
         ]
+      },
+      {
+        "val": "felevator",
+        "desc": ""
       }
     ],
-    "weather": null,
+    "weather": {
+      "low": -104,
+      "high": -104,
+      "average": -104,
+      "count": 1
+    },
     "beaconMarker": false,
     "beaconType": null,
     "parentCode": "STANTON/4A",
@@ -23036,8 +23112,8 @@
     "weather": {
       "low": -78,
       "high": -23,
-      "average": -52.214285714285715,
-      "count": 14
+      "average": -51.46666666666667,
+      "count": 15
     },
     "beaconMarker": true,
     "beaconType": "Outpost",
@@ -23794,8 +23870,8 @@
     "weather": {
       "low": -132,
       "high": -31,
-      "average": -57.578947368421055,
-      "count": 19
+      "average": -56.9,
+      "count": 20
     },
     "beaconMarker": true,
     "beaconType": "Outpost",
@@ -24835,10 +24911,10 @@
     "factions": null,
     "features": [],
     "weather": {
-      "low": -91,
+      "low": -93,
       "high": -91,
-      "average": -91,
-      "count": 1
+      "average": -92,
+      "count": 2
     },
     "beaconMarker": true,
     "beaconType": null,
@@ -25878,8 +25954,8 @@
     "weather": {
       "low": -17,
       "high": 16,
-      "average": 6.625,
-      "count": 8
+      "average": 6.777777777777778,
+      "count": 9
     },
     "beaconMarker": true,
     "beaconType": "Outpost",
@@ -26109,25 +26185,6 @@
       "x": 774.787932,
       "y": 8.140294,
       "z": 633.956308
-    }
-  },
-  {
-    "code": "STANTON/I/bg-base-pipe-064",
-    "name": "bg base pipe 064",
-    "type": "other",
-    "designation": "35Z-ED24 / T",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/I",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": 126.868811,
-      "y": 62.716988,
-      "z": 989.966287
     }
   },
   {
@@ -26407,10 +26464,10 @@
       }
     ],
     "weather": {
-      "low": 11,
+      "low": 10,
       "high": 22,
-      "average": 16.666666666666668,
-      "count": 6
+      "average": 15,
+      "count": 8
     },
     "beaconMarker": true,
     "beaconType": "LandingZone",
@@ -26866,7 +26923,9 @@
     "name": "HDMS-Edmond",
     "type": "outpost",
     "designation": "12S-TN16 / N",
-    "restrictions": [],
+    "restrictions": [
+      "armistice"
+    ],
     "factions": null,
     "features": [
       {
@@ -27865,25 +27924,6 @@
     }
   },
   {
-    "code": "STANTON/I/med-a-400m-005",
-    "name": "med a 400m 005",
-    "type": "other",
-    "designation": "31T-CE19 / R",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/I",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": 740.83564,
-      "y": 15.492655,
-      "z": 673.570584
-    }
-  },
-  {
     "code": "STANTON/I/caterpillar-04j",
     "name": "Caterpillar 04J",
     "type": "crash",
@@ -28214,25 +28254,6 @@
       "x": -555.934731,
       "y": -73.653413,
       "z": -828.116343
-    }
-  },
-  {
-    "code": "STANTON/I/bg-ind-cmpd-001-occu-008",
-    "name": "bg ind cmpd 001 occu 008",
-    "type": "other",
-    "designation": "54M-VR25 / H",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/I",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": -787.463263,
-      "y": 618.086379,
-      "z": -1.896995
     }
   },
   {
@@ -29355,7 +29376,12 @@
     "restrictions": [],
     "factions": null,
     "features": [],
-    "weather": null,
+    "weather": {
+      "low": 16,
+      "high": 16,
+      "average": 16,
+      "count": 1
+    },
     "beaconMarker": false,
     "beaconType": null,
     "parentCode": "STANTON/I",
@@ -29388,25 +29414,6 @@
       "x": 16.622661,
       "y": -3.800834,
       "z": 1000.353432
-    }
-  },
-  {
-    "code": "STANTON/I/sml-a-200m-012",
-    "name": "sml a 200m 012",
-    "type": "other",
-    "designation": "18N-SH17 / C",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/I",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": 242.352229,
-      "y": -969.260509,
-      "z": 66.89981
     }
   },
   {
@@ -29779,25 +29786,6 @@
       "x": 442.548046,
       "y": 891.798427,
       "z": 102.462415
-    }
-  },
-  {
-    "code": "STANTON/I/bg-base-cmpd-015",
-    "name": "bg base cmpd 015",
-    "type": "other",
-    "designation": "18N-RH42 / G",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/I",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": 239.237043,
-      "y": -970.12137,
-      "z": 65.036353
     }
   },
   {
@@ -30403,7 +30391,12 @@
     ],
     "factions": null,
     "features": [],
-    "weather": null,
+    "weather": {
+      "low": 11,
+      "high": 11,
+      "average": 11,
+      "count": 1
+    },
     "beaconMarker": true,
     "beaconType": null,
     "parentCode": "STANTON/I",
@@ -30553,25 +30546,6 @@
       "x": -419.852451,
       "y": 440.357942,
       "z": 794.890775
-    }
-  },
-  {
-    "code": "STANTON/I/patched-walls",
-    "name": "Patched Walls",
-    "type": "other",
-    "designation": "20Y-TC25 / Q",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/I",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": 67.634541,
-      "y": -133.684414,
-      "z": 986.682243
     }
   },
   {
@@ -31027,25 +31001,6 @@
       "x": -119.644924,
       "y": 293.534639,
       "z": -949.420488
-    }
-  },
-  {
-    "code": "STANTON/I/bg-ind-cmpd-001-occu-011",
-    "name": "bg ind cmpd 001 occu 011",
-    "type": "other",
-    "designation": "18N-RJ45 / F",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/I",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": 239.032658,
-      "y": -969.666008,
-      "z": 72.45833
     }
   },
   {
@@ -31537,25 +31492,6 @@
     }
   },
   {
-    "code": "STANTON/I/rastarlocationentity-002",
-    "name": "RastarLocationEntity 002",
-    "type": "other",
-    "designation": "57G-FK43 / G",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/I",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": -680.013994,
-      "y": 261.880898,
-      "z": -686.021518
-    }
-  },
-  {
     "code": "STANTON/I/cutlass-56f",
     "name": "Cutlass 56F",
     "type": "crash",
@@ -31770,25 +31706,6 @@
     }
   },
   {
-    "code": "STANTON/I/sml-a-200m-007",
-    "name": "sml a 200m 007",
-    "type": "other",
-    "designation": "31T-CE43 / F",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/I",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": 741.247053,
-      "y": 18.528415,
-      "z": 672.912576
-    }
-  },
-  {
     "code": "STANTON/I/derelict-outpost-48m",
     "name": "Derelict Outpost 48M",
     "type": "ruins",
@@ -31931,7 +31848,12 @@
         "desc": ""
       }
     ],
-    "weather": null,
+    "weather": {
+      "low": -17,
+      "high": 17,
+      "average": 0,
+      "count": 2
+    },
     "beaconMarker": true,
     "beaconType": null,
     "parentCode": "STANTON/I",
@@ -34857,8 +34779,8 @@
     "weather": {
       "low": -273,
       "high": 6,
-      "average": -22.545454545454547,
-      "count": 11
+      "average": -21.833333333333332,
+      "count": 12
     },
     "beaconMarker": true,
     "beaconType": null,
@@ -34958,25 +34880,6 @@
       "x": 63.35663,
       "y": 895.618165,
       "z": -443.726939
-    }
-  },
-  {
-    "code": "STANTON/IV/bg-ind-cmpd-001-occu-030",
-    "name": "bg ind cmpd 001 occu 030",
-    "type": "other",
-    "designation": "28R-ZN43 / 0",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/IV",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": 845.42479,
-      "y": -180.408911,
-      "z": 503.235279
     }
   },
   {
@@ -35313,44 +35216,6 @@
     }
   },
   {
-    "code": "STANTON/IV/bg-base-cmpd-017",
-    "name": "bg base cmpd 017",
-    "type": "other",
-    "designation": "49K-EQ18 / 0",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/IV",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": -329.660748,
-      "y": 899.91156,
-      "z": -287.790591
-    }
-  },
-  {
-    "code": "STANTON/IV/sml-a-200m-003",
-    "name": "sml a 200m 003",
-    "type": "other",
-    "designation": "49K-EQ38 / 0",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/IV",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": -329.164617,
-      "y": 898.558029,
-      "z": -291.844828
-    }
-  },
-  {
     "code": "STANTON/IV/shubin-mining-facility-sm0-13",
     "name": "Shubin Mining Facility SM0-13",
     "type": "mining",
@@ -35399,25 +35264,6 @@
     }
   },
   {
-    "code": "STANTON/IV/sml-a-200m-005",
-    "name": "sml a 200m 005",
-    "type": "other",
-    "designation": "49K-EQ25 / V",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/IV",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": -333.279939,
-      "y": 898.794644,
-      "z": -286.818669
-    }
-  },
-  {
     "code": "STANTON/IV/mt-datacenter-e2q-nsg-y",
     "name": "MT DataCenter E2Q-NSG-Y",
     "type": "underground",
@@ -35454,25 +35300,6 @@
       "x": 916.831795,
       "y": 187.159489,
       "z": -354.144107
-    }
-  },
-  {
-    "code": "STANTON/IV/bg-base-pipe-059",
-    "name": "bg base pipe 059",
-    "type": "other",
-    "designation": "29R-AP37 / R",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/IV",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": 842.668933,
-      "y": -178.786525,
-      "z": 507.993641
     }
   },
   {
@@ -35839,25 +35666,6 @@
     }
   },
   {
-    "code": "STANTON/IV/sml-a-200m-013",
-    "name": "sml a 200m 013",
-    "type": "other",
-    "designation": "30U-ZN35 / N",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/IV",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": 586.204143,
-      "y": -3.68518,
-      "z": 810.596197
-    }
-  },
-  {
     "code": "STANTON/IV/mtsecuritycenterudb-24w-2",
     "name": "MTSecurityCenterUDB 24W 2",
     "type": "underground",
@@ -36210,14 +36018,14 @@
       },
       {
         "val": "loot",
-        "desc": ""
+        "desc": "One Medium Size Loot Box, Food and Skinned Multi Tools"
       }
     ],
     "weather": {
       "low": -74,
-      "high": -53,
-      "average": -65.33333333333333,
-      "count": 3
+      "high": -29,
+      "average": -56.25,
+      "count": 4
     },
     "beaconMarker": false,
     "beaconType": null,
@@ -36227,25 +36035,6 @@
       "x": 559.16705,
       "y": 386.753813,
       "z": 733.407085
-    }
-  },
-  {
-    "code": "STANTON/IV/bg-base-cmpd-012",
-    "name": "bg base cmpd 012",
-    "type": "other",
-    "designation": "30U-ZN22 / K",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/IV",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": 581.422057,
-      "y": -0.987053,
-      "z": 814.431009
     }
   },
   {
@@ -37082,7 +36871,7 @@
     "features": [
       {
         "val": "loot",
-        "desc": ""
+        "desc": "1 Small Loot Box, lots of food and assorted items including medals (damaged)"
       },
       {
         "val": "approach",
@@ -37104,8 +36893,8 @@
     "weather": {
       "low": -210,
       "high": -36,
-      "average": -91,
-      "count": 4
+      "average": -80.4,
+      "count": 5
     },
     "beaconMarker": false,
     "beaconType": null,
@@ -37180,25 +36969,6 @@
       "x": 9.640794,
       "y": 894.308528,
       "z": 449.976613
-    }
-  },
-  {
-    "code": "STANTON/IV/bg-base-cmpd-011",
-    "name": "bg base cmpd 011",
-    "type": "other",
-    "designation": "31U-AN16 / H",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/IV",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": 582.811525,
-      "y": 2.169231,
-      "z": 813.575075
     }
   },
   {
@@ -37356,7 +37126,7 @@
   {
     "code": "STANTON/IV/mtsecuritycenteroee-5rg-5",
     "name": "MTSecurityCenterOEE 5RG 5",
-    "type": "other",
+    "type": "outpost",
     "designation": "44K-QE39 / G",
     "restrictions": [],
     "factions": null,
@@ -37418,25 +37188,6 @@
       "x": 63.642724,
       "y": -162.085237,
       "z": 985.651018
-    }
-  },
-  {
-    "code": "STANTON/IV/sml-a-200m-021",
-    "name": "sml a 200m 021",
-    "type": "other",
-    "designation": "29R-AN13 / D",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/IV",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": 843.855514,
-      "y": -176.003167,
-      "z": 507.542726
     }
   },
   {
@@ -37657,25 +37408,6 @@
     }
   },
   {
-    "code": "STANTON/IV/bg-base-cmpd-028",
-    "name": "bg base cmpd 028",
-    "type": "other",
-    "designation": "29R-AN19 / Q",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/IV",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": 845.596188,
-      "y": -177.063183,
-      "z": 504.34725
-    }
-  },
-  {
     "code": "STANTON/IV/caterpillar-34v",
     "name": "Caterpillar 34V",
     "type": "crash",
@@ -37871,8 +37603,8 @@
     "weather": {
       "low": -26,
       "high": -15,
-      "average": -21.25,
-      "count": 4
+      "average": -21,
+      "count": 5
     },
     "beaconMarker": false,
     "beaconType": null,
@@ -38045,9 +37777,9 @@
     ],
     "weather": {
       "low": -24,
-      "high": 0,
-      "average": -10.6,
-      "count": 5
+      "high": -15,
+      "average": -11.333333333333334,
+      "count": 6
     },
     "beaconMarker": false,
     "beaconType": null,
@@ -38118,25 +37850,6 @@
       "x": 231.94165,
       "y": -973.237739,
       "z": -1.731319
-    }
-  },
-  {
-    "code": "STANTON/IV/bg-ind-cmpd-001-occu-025",
-    "name": "bg ind cmpd 001 occu 025",
-    "type": "other",
-    "designation": "28R-ZP47 / S",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/IV",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": 841.936717,
-      "y": -182.243481,
-      "z": 507.93172
     }
   },
   {
@@ -38321,7 +38034,7 @@
     "features": [
       {
         "val": "loot",
-        "desc": ""
+        "desc": "No Loot Chests, One unanchored decorative chest"
       },
       {
         "val": "defense",
@@ -38334,8 +38047,8 @@
     "weather": {
       "low": -53,
       "high": -10,
-      "average": -28,
-      "count": 3
+      "average": -29.75,
+      "count": 4
     },
     "beaconMarker": false,
     "beaconType": null,
@@ -38565,25 +38278,6 @@
       "x": -627.440744,
       "y": -485.258151,
       "z": 611.733181
-    }
-  },
-  {
-    "code": "STANTON/IV/sml-a-200m-006",
-    "name": "sml a 200m 006",
-    "type": "other",
-    "designation": "49K-FQ31 / G",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "STANTON/IV",
-    "parentStarCode": "STANTON",
-    "cartesianInKm": {
-      "x": -335.716084,
-      "y": 897.082859,
-      "z": -288.850817
     }
   },
   {
@@ -39843,10 +39537,10 @@
       }
     ],
     "weather": {
-      "low": -20,
+      "low": -36,
       "high": -20,
-      "average": -20,
-      "count": 1
+      "average": -28,
+      "count": 2
     },
     "beaconMarker": true,
     "beaconType": null,
@@ -44404,25 +44098,6 @@
     }
   },
   {
-    "code": "PYRO/I/asd-transitpillar-gp-212",
-    "name": "asd transitpillar gp 212",
-    "type": "other",
-    "designation": "20K-YC27 / P",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/I",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": 186.017116,
-      "y": -331.125282,
-      "z": -158.927135
-    }
-  },
-  {
     "code": "PYRO/I/lazarus-transport-hub-phoenix-i",
     "name": "Lazarus Transport Hub Phoenix-I",
     "type": "outpost",
@@ -44993,7 +44668,12 @@
         "desc": ""
       }
     ],
-    "weather": null,
+    "weather": {
+      "low": 193,
+      "high": 193,
+      "average": 193,
+      "count": 1
+    },
     "beaconMarker": true,
     "beaconType": null,
     "parentCode": "PYRO/I",
@@ -45045,25 +44725,6 @@
       "x": -203.866151,
       "y": -312.483174,
       "z": 173.877992
-    }
-  },
-  {
-    "code": "PYRO/I/asd-transitpillar-gp-175",
-    "name": "asd transitpillar gp 175",
-    "type": "other",
-    "designation": "22J-TB15 / A",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/I",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": 220.457315,
-      "y": -276.314703,
-      "z": -213.100426
     }
   },
   {
@@ -45271,25 +44932,6 @@
       "x": -47.468557,
       "y": 9.564345,
       "z": -409.042495
-    }
-  },
-  {
-    "code": "PYRO/I/asd-transitpillar-gp-214",
-    "name": "asd transitpillar gp 214",
-    "type": "other",
-    "designation": "20K-YC39 / J",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/I",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": 185.109356,
-      "y": -330.848001,
-      "z": -160.436874
     }
   },
   {
@@ -46654,8 +46296,29 @@
     "designation": "25J-EE28 / P",
     "restrictions": [],
     "factions": null,
-    "features": [],
-    "weather": null,
+    "features": [
+      {
+        "val": "approach",
+        "desc": "",
+        "types": [
+          "on foot"
+        ]
+      },
+      {
+        "val": "minerals",
+        "desc": "Aphorite, Hadanite, Dollivine"
+      },
+      {
+        "val": "harvestables",
+        "desc": ""
+      }
+    ],
+    "weather": {
+      "low": 42,
+      "high": 42,
+      "average": 42,
+      "count": 1
+    },
     "beaconMarker": false,
     "beaconType": null,
     "parentCode": "PYRO/II",
@@ -47457,8 +47120,25 @@
     "designation": "25J-ED45 / T",
     "restrictions": [],
     "factions": null,
-    "features": [],
-    "weather": null,
+    "features": [
+      {
+        "val": "minerals",
+        "desc": "Hadanite; Aphorite; Dollivine"
+      },
+      {
+        "val": "approach",
+        "desc": "",
+        "types": [
+          "on foot"
+        ]
+      }
+    ],
+    "weather": {
+      "low": 41,
+      "high": 41,
+      "average": 41,
+      "count": 1
+    },
     "beaconMarker": false,
     "beaconType": null,
     "parentCode": "PYRO/II",
@@ -47835,7 +47515,12 @@
         "desc": ""
       }
     ],
-    "weather": null,
+    "weather": {
+      "low": 30,
+      "high": 41,
+      "average": 35.5,
+      "count": 2
+    },
     "beaconMarker": true,
     "beaconType": null,
     "parentCode": "PYRO/II",
@@ -48349,25 +48034,6 @@
     }
   },
   {
-    "code": "PYRO/III/rastarplacedelement-027",
-    "name": "RastarPlacedElement 027",
-    "type": "other",
-    "designation": "48L-NR21 / Z",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": -87.52928,
-      "y": 400.704998,
-      "z": -58.23776
-    }
-  },
-  {
     "code": "PYRO/III/ashen-hollow",
     "name": "Ashen Hollow",
     "type": "cave",
@@ -48541,30 +48207,6 @@
     }
   },
   {
-    "code": "PYRO/III/p3-col-xs-otpst-002",
-    "name": "p3 col xs otpst 002",
-    "type": "outpost",
-    "designation": "45J-DF44 / R",
-    "restrictions": [],
-    "factions": null,
-    "features": [
-      {
-        "val": "loot",
-        "desc": ""
-      }
-    ],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": 26.536055,
-      "y": 359.657133,
-      "z": -203.161834
-    }
-  },
-  {
     "code": "PYRO/III/p3-col-xs-otpst-014",
     "name": "p3 col xs otpst 014",
     "type": "cave",
@@ -48661,8 +48303,8 @@
     "weather": {
       "low": -3,
       "high": 7,
-      "average": 2,
-      "count": 4
+      "average": 2.8,
+      "count": 5
     },
     "beaconMarker": true,
     "beaconType": null,
@@ -48724,25 +48366,6 @@
       "x": -244.29973,
       "y": -281.777103,
       "z": 179.810713
-    }
-  },
-  {
-    "code": "PYRO/III/rastarplacedelement-029",
-    "name": "RastarPlacedElement 029",
-    "type": "other",
-    "designation": "48M-PB48 / B",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": -91.345646,
-      "y": 400.15041,
-      "z": -53.452926
     }
   },
   {
@@ -48827,13 +48450,38 @@
     }
   },
   {
-    "code": "PYRO/III/sand-cave-44j",
-    "name": "Sand Cave 44J",
+    "code": "PYRO/III/raider-s-den",
+    "name": "Raider's Den",
     "type": "cave",
     "designation": "44J-ZG31 / E",
     "restrictions": [],
     "factions": null,
-    "features": [],
+    "features": [
+      {
+        "val": "approach",
+        "desc": "",
+        "types": [
+          "on foot",
+          "by vehicle",
+          "by ship"
+        ]
+      },
+      {
+        "val": "defense",
+        "desc": "",
+        "types": [
+          "Guards"
+        ]
+      },
+      {
+        "val": "harvestables",
+        "desc": "Amioshi Plague 2, Stone Bug 5, Ranta Dug 1"
+      },
+      {
+        "val": "minerals",
+        "desc": "Aphorite, Hadanite"
+      }
+    ],
     "weather": null,
     "beaconMarker": false,
     "beaconType": null,
@@ -48843,25 +48491,6 @@
       "x": 40.61551,
       "y": 360.595757,
       "z": -199.11611
-    }
-  },
-  {
-    "code": "PYRO/III/p3-col-xs-otpst-001",
-    "name": "p3 col xs otpst 001",
-    "type": "outpost",
-    "designation": "45J-CE21 / H",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": 29.517475,
-      "y": 358.939605,
-      "z": -203.990444
     }
   },
   {
@@ -48946,44 +48575,6 @@
     }
   },
   {
-    "code": "PYRO/III/sa-elem-trrt-a-001",
-    "name": "sa elem trrt a 001",
-    "type": "other",
-    "designation": "48L-QR32 / R",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": -92.901917,
-      "y": 398.936316,
-      "z": -59.832099
-    }
-  },
-  {
-    "code": "PYRO/III/p3-col-xs-otpst-008",
-    "name": "p3 col xs otpst 008",
-    "type": "outpost",
-    "designation": "48M-PA18 / Z",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": -89.99775,
-      "y": 400.933485,
-      "z": -55.861347
-    }
-  },
-  {
     "code": "PYRO/III/p3-col-bnkr-001",
     "name": "p3 col bnkr 001",
     "type": "cave",
@@ -49008,13 +48599,31 @@
     }
   },
   {
-    "code": "PYRO/III/sand-cave-45j-cg",
-    "name": "Sand Cave 45J-CG",
+    "code": "PYRO/III/beetle-cave",
+    "name": "Beetle Cave",
     "type": "cave",
     "designation": "45J-CG37 / E",
     "restrictions": [],
     "factions": null,
-    "features": [],
+    "features": [
+      {
+        "val": "approach",
+        "desc": "",
+        "types": [
+          "on foot",
+          "by vehicle",
+          "by ship"
+        ]
+      },
+      {
+        "val": "harvestables",
+        "desc": "Amioshi Plague, Stone Bug "
+      },
+      {
+        "val": "minerals",
+        "desc": "Aphorite, Dolivine, Hadanite"
+      }
+    ],
     "weather": null,
     "beaconMarker": false,
     "beaconType": null,
@@ -49232,25 +48841,6 @@
     }
   },
   {
-    "code": "PYRO/III/p3-col-xs-otpst-010",
-    "name": "p3 col xs otpst 010",
-    "type": "outpost",
-    "designation": "48M-QB37 / E",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": -92.880205,
-      "y": 399.797278,
-      "z": -53.498762
-    }
-  },
-  {
     "code": "PYRO/III/outpost-57p",
     "name": "Outpost 57P",
     "type": "outpost",
@@ -49272,25 +48862,6 @@
       "x": -375.800583,
       "y": 131.047991,
       "z": 113.647845
-    }
-  },
-  {
-    "code": "PYRO/III/p3-col-xs-otpst-004",
-    "name": "p3 col xs otpst 004",
-    "type": "outpost",
-    "designation": "45J-CG25 / Y",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": 29.181459,
-      "y": 362.087403,
-      "z": -198.507759
     }
   },
   {
@@ -49405,25 +48976,6 @@
     }
   },
   {
-    "code": "PYRO/III/rastarplacedelement-026",
-    "name": "RastarPlacedElement 026",
-    "type": "other",
-    "designation": "48L-PR35 / J",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": -89.662838,
-      "y": 399.701342,
-      "z": -60.159116
-    }
-  },
-  {
     "code": "PYRO/III/the-golden-riviera-headhunters",
     "name": " The Golden Riviera (Headhunters)",
     "type": "outpost",
@@ -49501,25 +49053,6 @@
       "x": -384.468813,
       "y": 153.327889,
       "z": 5.799239
-    }
-  },
-  {
-    "code": "PYRO/III/rastarplacedelement-028",
-    "name": "RastarPlacedElement 028",
-    "type": "other",
-    "designation": "48M-PA31 / B",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": -89.13619,
-      "y": 401.073623,
-      "z": -56.032825
     }
   },
   {
@@ -49901,25 +49434,6 @@
     }
   },
   {
-    "code": "PYRO/III/rastarplacedelement-032",
-    "name": "RastarPlacedElement 032",
-    "type": "other",
-    "designation": "57N-EA25 / D",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": -385.451807,
-      "y": 152.653512,
-      "z": 2.966668
-    }
-  },
-  {
     "code": "PYRO/III/rock-cave-23n",
     "name": "Rock Cave 23N",
     "type": "cave",
@@ -49997,25 +49511,6 @@
       "x": -91.694708,
       "y": 399.584522,
       "z": -57.006208
-    }
-  },
-  {
-    "code": "PYRO/III/p3-col-xs-otpst-003",
-    "name": "p3 col xs otpst 003",
-    "type": "outpost",
-    "designation": "45J-DF46 / 0",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": 25.374531,
-      "y": 359.808295,
-      "z": -203.016794
     }
   },
   {
@@ -50305,44 +49800,6 @@
     }
   },
   {
-    "code": "PYRO/III/p3-col-xs-otpst-012",
-    "name": "p3 col xs otpst 012",
-    "type": "outpost",
-    "designation": "48M-QA36 / N",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": -93.843581,
-      "y": 399.129145,
-      "z": -56.721613
-    }
-  },
-  {
-    "code": "PYRO/III/p3-col-xs-otpst-009",
-    "name": "p3 col xs otpst 009",
-    "type": "outpost",
-    "designation": "48M-PA18 / L",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": -89.618915,
-      "y": 401.033064,
-      "z": -55.672504
-    }
-  },
-  {
     "code": "PYRO/III/wolf-s-dome-ldy",
     "name": "Wolf's Dome LDY",
     "type": "cave",
@@ -50425,25 +49882,6 @@
       "x": -381.886605,
       "y": 159.625963,
       "z": 5.362398
-    }
-  },
-  {
-    "code": "PYRO/III/p3-col-xs-otpst-006",
-    "name": "p3 col xs otpst 006",
-    "type": "outpost",
-    "designation": "45J-BF38 / H",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": 33.787285,
-      "y": 358.84829,
-      "z": -203.479624
     }
   },
   {
@@ -50647,25 +50085,6 @@
     }
   },
   {
-    "code": "PYRO/III/p3-col-xs-otpst-007",
-    "name": "p3 col xs otpst 007",
-    "type": "outpost",
-    "designation": "45J-BF39 / N",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": 33.167084,
-      "y": 358.834227,
-      "z": -203.604708
-    }
-  },
-  {
     "code": "PYRO/III/rock-cave-19n",
     "name": "Rock Cave 19N",
     "type": "cave",
@@ -50782,25 +50201,6 @@
     }
   },
   {
-    "code": "PYRO/III/rastarplacedelement-025",
-    "name": "RastarPlacedElement 025",
-    "type": "other",
-    "designation": "48L-QR21 / B",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": -94.10558,
-      "y": 398.923584,
-      "z": -57.663177
-    }
-  },
-  {
     "code": "PYRO/III/rock-cave-45j-fe",
     "name": "Rock Cave 45J-FE",
     "type": "cave",
@@ -50836,25 +50236,6 @@
       "x": 27.695555,
       "y": 357.27524,
       "z": -207.189213
-    }
-  },
-  {
-    "code": "PYRO/III/p3-col-xs-otpst-005",
-    "name": "p3 col xs otpst 005",
-    "type": "outpost",
-    "designation": "45J-CG26 / H",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": 28.812281,
-      "y": 362.261263,
-      "z": -198.171929
     }
   },
   {
@@ -50918,44 +50299,6 @@
       "x": 21.158016,
       "y": 362.40795,
       "z": -198.917752
-    }
-  },
-  {
-    "code": "PYRO/III/p3-col-xs-otpst-011",
-    "name": "p3 col xs otpst 011",
-    "type": "outpost",
-    "designation": "48M-QA21 / F",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": -94.118965,
-      "y": 399.411686,
-      "z": -54.233788
-    }
-  },
-  {
-    "code": "PYRO/III/p3-col-xs-otpst-013",
-    "name": "p3 col xs otpst 013",
-    "type": "outpost",
-    "designation": "48L-PR18 / V",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/III",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": -89.253313,
-      "y": 399.809475,
-      "z": -59.315245
     }
   },
   {
@@ -51083,8 +50426,8 @@
     "weather": {
       "low": -7,
       "high": 6,
-      "average": -0.3333333333333333,
-      "count": 9
+      "average": -0.2,
+      "count": 10
     },
     "beaconMarker": true,
     "beaconType": null,
@@ -52059,8 +51402,8 @@
     "weather": {
       "low": -85,
       "high": 23,
-      "average": -4.6,
-      "count": 5
+      "average": -1.1666666666666667,
+      "count": 6
     },
     "beaconMarker": true,
     "beaconType": null,
@@ -52217,25 +51560,6 @@
       "x": 68.328352,
       "y": -176.526306,
       "z": 262.249668
-    }
-  },
-  {
-    "code": "PYRO/IV/sa-elem-trrt-a-006",
-    "name": "sa elem trrt a 006",
-    "type": "other",
-    "designation": "19U-EM42 / E",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/IV",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": 66.619749,
-      "y": -179.076949,
-      "z": 260.472103
     }
   },
   {
@@ -53255,25 +52579,6 @@
       "x": -237.154367,
       "y": -95.138223,
       "z": 195.022124
-    }
-  },
-  {
-    "code": "PYRO/IV/sml-a-50m-011",
-    "name": "sml a 50m 011",
-    "type": "other",
-    "designation": "19U-FP18 / Y",
-    "restrictions": [],
-    "factions": null,
-    "features": [],
-    "weather": null,
-    "beaconMarker": false,
-    "beaconType": null,
-    "parentCode": "PYRO/IV",
-    "parentStarCode": "PYRO",
-    "cartesianInKm": {
-      "x": 65.742166,
-      "y": -174.581898,
-      "z": 264.101464
     }
   },
   {
@@ -54750,7 +54055,7 @@
       "low": -165,
       "high": -165,
       "average": -165,
-      "count": 1
+      "count": 2
     },
     "beaconMarker": false,
     "beaconType": null,
@@ -55448,9 +54753,9 @@
     ],
     "weather": {
       "low": -122,
-      "high": -122,
-      "average": -122,
-      "count": 1
+      "high": -121,
+      "average": -121.5,
+      "count": 2
     },
     "beaconMarker": true,
     "beaconType": null,

@@ -2714,6 +2714,22 @@
     },
     {
       "uex": {
+        "type": "outpost",
+        "id": 120
+      },
+      "vgCode": "STANTON/IV/sakura-sun-goldenrod-workcenter",
+      "i18nKey": "Stanton4_SASU_UGF_001,P",
+      "source": {
+        "method": "generated",
+        "uexName": "Sakura Sun Goldenrod Workcenter",
+        "vgName": "Sakura Sun Goldenrod Workcenter",
+        "terminalIds": [
+          868
+        ]
+      }
+    },
+    {
+      "uex": {
         "type": "city",
         "id": 1
       },
@@ -2868,7 +2884,9 @@
           347,
           348,
           350,
-          417
+          417,
+          866,
+          867
         ]
       }
     }

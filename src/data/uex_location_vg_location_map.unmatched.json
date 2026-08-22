@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "summary": {
-    "terminalCount": 823,
-    "matchedTerminalCount": 766,
+    "terminalCount": 826,
+    "matchedTerminalCount": 769,
     "unmatchedTerminalCount": 57,
-    "mappedUexLocationRefCount": 148,
+    "mappedUexLocationRefCount": 149,
     "unmatchedUexLocationRefCount": 11
   },
   "entries": [
