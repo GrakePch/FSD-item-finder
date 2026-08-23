@@ -141,6 +141,7 @@ const vehicleClassNameToSeries: Record<string, string> = {
   KRIG_L22_AlphaWolf: "KRIG_L",
   KRIG_P52_Merlin: "KRIG_P",
   KRIG_P72_Archimedes: "KRIG_P",
+  KRIG_S65_Stingray: "",
   MISC_Endeavor: "",
   MISC_Expanse: "",
   MISC_Fortune: "MISC_Prospector",

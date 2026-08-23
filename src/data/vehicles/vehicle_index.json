@@ -4756,6 +4756,41 @@
     }
   },
   {
+    "ClassName": "KRIG_S65_Stingray",
+    "Name": "Kruger S-65 Stingray",
+    "Manufacturer": "Kruger Intergalactic",
+    "Career": "Combat",
+    "Role": "Medium Fighter",
+    "Size": 2,
+    "Cargo": 0,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "NextPatch",
+      "Patch": "4.10.0",
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": null
+    },
+    "PU": {
+      "Patch": "4.10.0",
+      "Date": null,
+      "HasPerf": true,
+      "IsPTUOnly": true,
+      "IsPTUBuyOnly": false,
+      "Buy": null
+    }
+  },
+  {
     "ClassName": "MISC_Endeavor",
     "Name": "MISC Endeavor",
     "Manufacturer": "Musashi Industrial and Starflight Concern",
