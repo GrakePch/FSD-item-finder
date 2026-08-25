@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router";
 import { ContextAllData } from "../../contexts";
 import "./ItemInfo.css";
@@ -18,6 +18,8 @@ import TradeOptions from "../../components/TradeOptions/TradeOptions";
 import TagCurrent from "../../components/TagCurrent/TagCurrent";
 import TradeOptionsSortingControl from "../../components/TradeOptionsSortingControl/TradeOptionsSortingControl";
 import { useTranslation } from "react-i18next";
+import QuantumTravelItemCard from "./QuantumTravelItemCard/QuantumTravelItemCard";
+import { findQDItemByKey, isQuantumDriveSubType } from "./quantumTravelData";
 
 const uexLinkItem = "https://uexcorp.space/items/info?name=";
 const uexLinkVehicle = "https://uexcorp.space/vehicles/home/list/in_game_sell/";
@@ -52,6 +54,12 @@ const ItemInfo = () => {
     navigate(`/?${searchParams.toString()}`);
   };
 
+  // 若当前物品是量子驱动器，从 essential 数据中找出对应 QD 条目
+  const qdItem = useMemo(
+    () => (item && isQuantumDriveSubType(item.sub_type) ? findQDItemByKey(item.key) : undefined),
+    [item]
+  );
+
   return (
     item && (
       <div className="ItemInfo">
@@ -79,13 +87,39 @@ const ItemInfo = () => {
               </div>
             )}
             <div className="attributes">
-              {item.attributes &&
+              {qdItem ? (
+                <>
+                  <div className="attribute">
+                    <p>{t("UEXAttribute.17", { defaultValue: "Size" })}</p>
+                    <p>{qdItem.stdItem.Size !== undefined ? String(qdItem.stdItem.Size) : "-"}</p>
+                  </div>
+                  <div className="attribute">
+                    <p>{t("UEXAttribute.75", { defaultValue: "Class" })}</p>
+                    <p>
+                      {t(`UEXAttributeValue.${(qdItem.stdItem.Class || "").toLowerCase()}`, {
+                        defaultValue: qdItem.stdItem.Class || "?",
+                      })}
+                    </p>
+                  </div>
+                  <div className="attribute">
+                    <p>{t("UEXAttribute.74", { defaultValue: "Grade" })}</p>
+                    <p>
+                      {qdItem.stdItem.Grade !== undefined
+                        ? String.fromCharCode(64 + qdItem.stdItem.Grade)
+                        : "?"}
+                    </p>
+                  </div>
+                  <QuantumTravelItemCard vItem={qdItem} />
+                </>
+              ) : (
+                item.attributes &&
                 Object.entries(item.attributes).map(([aid, v]) => (
                   <div key={aid} className="attribute">
                     <p>{t("UEXAttribute." + aid)}</p>
                     <p>{t("UEXAttributeValue." + toI18nKey(v), { defaultValue: v })}</p>
                   </div>
-                ))}
+                ))
+              )}
             </div>
             {(item.sub_type === "Vehicle" || item.slug) && (
               <button

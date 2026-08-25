@@ -1,0 +1,256 @@
+.container {
+    background-color: var(--color-bg-1);
+    border-radius: .5rem;
+    padding: .5rem;
+    font-family: var(--font-slim);
+    font-variant-numeric: tabular-nums;
+    --color-nav-mode: hsla(200, 60%, 60%);
+    --color-red: #ee4444;
+    /* 作为 attributes 网格项时 span 全宽（3 列） */
+    grid-column: 1 / -1;
+}
+
+.container>*:not(:last-child) {
+    margin-bottom: .5rem;
+}
+
+.sectionCommonInfo {
+    padding: 0 .5rem;
+}
+
+.commonKeyValue {
+    display: flex;
+    font-variant-numeric: tabular-nums;
+}
+
+.commonKeyValue>div:first-of-type {
+    flex-grow: 1;
+}
+
+.commonKeyValue>div:last-of-type,
+.commonKeyValue b {
+    font-weight: 600;
+}
+
+.routeValue {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+    justify-content: flex-end;
+}
+
+.routeValueLeft {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+    justify-content: flex-start;
+}
+
+/* mdi 图标盒模型中心往往略高于文本基线，下压 1px 使视觉居中 */
+.routeValue>svg,
+.routeValueLeft>svg {
+    flex-shrink: 0;
+    transform: translateY(0.05em);
+}
+
+.fuelCapacityBar {
+    width: 100%;
+    height: 1.25rem;
+    margin: .5rem 0;
+    display: flex;
+    align-items: stretch;
+    padding: 1px;
+    border: 2px solid var(--color-text-2);
+    border-radius: 4px;
+}
+
+.fuelCapacityBar>div {
+    border: 2px solid var(--color-bg-1);
+}
+
+.fuelCapacityBar>div:not(.remainder) {
+    background-color: var(--color-nav-mode);
+}
+
+.remainder {
+    background-color: var(--color-red);
+}
+
+/* ---- 选船按钮（两行） ---- */
+.shipSelector {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    width: 100%;
+    padding: .35rem .5rem;
+    color: var(--color-text);
+    background-color: var(--color-bg-2);
+    border: 1px solid var(--color-text-2);
+    border-radius: .5rem;
+    cursor: pointer;
+    text-align: start;
+    transition: background .2s;
+}
+
+.shipSelector:hover {
+    background-color: var(--color-bg-3);
+}
+
+.shipSelectorRow {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: .5rem;
+}
+
+.shipSelectorName {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.shipSelectorChange {
+    flex-shrink: 0;
+    color: var(--color-text-2);
+    font-size: .85em;
+    white-space: nowrap;
+}
+
+.shipSelectorFuelValue {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.shipSelectorFuelValue>svg {
+    flex-shrink: 0;
+    transform: translateY(0.05em);
+}
+
+/* ---- Popup ---- */
+.popupOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+}
+
+.popupPanel {
+    width: min(28rem, 100%);
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg-1);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.popupHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    padding: .5rem .75rem;
+    border-bottom: 1px solid var(--color-text-2);
+}
+
+.popupTitle {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.popupControls {
+    display: flex;
+    gap: .4rem;
+    flex-wrap: wrap;
+}
+
+.popupSelect {
+    padding: .2rem .4rem;
+    color: var(--color-text);
+    background-color: var(--color-bg-2);
+    border: 1px solid var(--color-text-2);
+    border-radius: .4rem;
+    font-family: var(--font-slim);
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+.popupSelect:hover {
+    background-color: var(--color-bg-3);
+}
+
+.popupClose {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .25rem;
+    color: var(--color-text);
+    background: none;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+.popupClose:hover {
+    background-color: var(--color-bg-3);
+}
+
+.popupList {
+    overflow-y: auto;
+    padding: .25rem .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.popupRow {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    width: 100%;
+    padding: .35rem .5rem;
+    text-align: start;
+    color: var(--color-text);
+    background-color: var(--color-bg-2);
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: background .15s;
+}
+
+.popupRow:hover {
+    background-color: var(--color-bg-3);
+}
+
+.popupRowActive {
+    outline: 2px solid var(--color-text);
+}
+
+.popupRowLeft {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.popupShipName {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.popupFuel {
+    flex-shrink: 0;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}

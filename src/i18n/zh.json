@@ -32,7 +32,26 @@
     "visitUEX": "访问 UEX",
     "setTitle": "套装",
     "variantsTitle": "外观变体",
-    "ignoreAppearanceDiff": "忽略外观差异"
+    "ignoreAppearanceDiff": "忽略外观差异",
+    "QuantumTravel": {
+      "SelectShip": "选择舰船",
+      "ChangeShip": "更换飞船",
+      "SortBy": "排序方式",
+      "SortShipName": "船名",
+      "SortFuelCapacity": "燃料容量",
+      "SortDirection": "方向",
+      "Ascending": "升序",
+      "Descending": "降序"
+    }
+  },
+  "QuantumTravel": {
+    "Unknown": "量子驱动器",
+    "MaxSpeed": "最大速度",
+    "ConsumptionPerGm": "每 Gm 消耗",
+    "FuelCapacity": "燃料容量",
+    "CrusaderToHurston": "十字军 ↔ 赫斯顿",
+    "MicroTechToPyroGateway": "微科 ↔ 派罗跳点",
+    "TerminusToEndgame": "端点星 ↔ 死局空间站"
   },
   "ItemGroupInfo": {
     "sameKindItems": "等 {{count}} 个同类物品",
@@ -244,9 +263,9 @@
       "FuelCapacity": "燃料容量",
       "SpoolTime": "量子驱动校准时间",
       "NavModeSpoolTime": "导航模式校准时间",
-      "CrusaderToHurston": "十字军到赫斯顿",
-      "MicroTechToPyroGateway": "微科星到派罗跳跃点",
-      "TerminusToEndgame": "终点到终局"
+      "CrusaderToHurston": "十字军 ↔ 赫斯顿",
+      "MicroTechToPyroGateway": "微科 ↔ 派罗跳点",
+      "TerminusToEndgame": "端点星 ↔ 死局空间站"
     },
     "Insurance": {
       "StandardClaimTime": "标准理赔时间",

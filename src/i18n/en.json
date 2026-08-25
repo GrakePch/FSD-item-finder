@@ -32,7 +32,26 @@
     "visitUEX": "Visit UEX",
     "setTitle": "Set",
     "variantsTitle": "Appearance Variants",
-    "ignoreAppearanceDiff": "Ignore appearance differences"
+    "ignoreAppearanceDiff": "Ignore appearance differences",
+    "QuantumTravel": {
+      "SelectShip": "Select ship",
+      "ChangeShip": "Change ship",
+      "SortBy": "Sort by",
+      "SortShipName": "Ship name",
+      "SortFuelCapacity": "Fuel capacity",
+      "SortDirection": "Order",
+      "Ascending": "Ascending",
+      "Descending": "Descending"
+    }
+  },
+  "QuantumTravel": {
+    "Unknown": "Quantum Drive",
+    "MaxSpeed": "Max Speed",
+    "ConsumptionPerGm": "Consumption per Gm",
+    "FuelCapacity": "Fuel Capacity",
+    "CrusaderToHurston": "Crusader ↔ Hurston",
+    "MicroTechToPyroGateway": "MicroTech ↔ Pyro Gateway",
+    "TerminusToEndgame": "Terminus ↔ Endgame"
   },
   "ItemGroupInfo": {
     "sameKindItems": "and {{count}} similar items",
@@ -246,9 +265,9 @@
       "FuelCapacity": "Fuel Capacity",
       "SpoolTime": "Spool Time",
       "NavModeSpoolTime": "NAV Spool Time",
-      "CrusaderToHurston": "Crusader to Hurston",
-      "MicroTechToPyroGateway": "MicroTech to Pyro Gateway",
-      "TerminusToEndgame": "Terminus to Endgame"
+      "CrusaderToHurston": "Crusader ↔ Hurston",
+      "MicroTechToPyroGateway": "MicroTech ↔ Pyro Gateway",
+      "TerminusToEndgame": "Terminus ↔ Endgame"
     },
     "Insurance": {
       "StandardClaimTime": "Standard Claim Time",

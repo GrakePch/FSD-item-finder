@@ -17,6 +17,9 @@ dist-ssr
 output
 .ai/
 
+# Agent 探索文档 / todo list（见 AGENT.md）
+.agents/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
