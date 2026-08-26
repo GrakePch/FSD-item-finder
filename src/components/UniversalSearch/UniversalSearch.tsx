@@ -50,7 +50,7 @@ const modeI18nKeys: Record<SearchMode, string> = {
 const modePlaceholders: Record<SearchMode, string> = {
   items: "SearchItemBar.placeholder",
   vehicles: "SearchVehicleBar.placeholder",
-  locations: "SearchLocationBar.placeholder",
+  locations: "SearchBar.placeholder",
 };
 
 const modeIcons: Record<SearchMode, string> = {

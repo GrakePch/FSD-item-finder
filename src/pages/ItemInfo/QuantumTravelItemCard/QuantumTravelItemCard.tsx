@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import Icon from "@mdi/react";
 import { mdiClose, mdiArrowExpandHorizontal, mdiTimerOutline, mdiFuel } from "@mdi/js";
 import styles from "./QuantumTravelItemCard.module.css";
+import SearchBar from "../../../components/SearchBar/SearchBar";
 
 /**
  * QuantumTravelItemCard:
@@ -160,6 +161,8 @@ const QuantumTravelItemCard = ({ vItem }: QuantumTravelItemCardProps) => {
   // 排序控制
   const [sortMode, setSortMode] = useState<"name" | "fuelCap">("name");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
+  // 搜索
+  const [searchQuery, setSearchQuery] = useState("");
 
   // 本地化船名（vehicles 命名空间），fallback 英文名
   const shipDisplayName = useCallback(
@@ -186,6 +189,19 @@ const QuantumTravelItemCard = ({ vItem }: QuantumTravelItemCardProps) => {
     });
     return arr;
   }, [baseShips, sortMode, sortDir, shipDisplayName]);
+
+  // 依据搜索关键词过滤（已排序列表上过滤，保留排序顺序）。
+  // 匹配本地化船名、英文船名与 className，支持中/英文输入。
+  const filteredShips = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return sortedShips;
+    return sortedShips.filter(
+      (ship) =>
+        shipDisplayName(ship).toLowerCase().includes(q) ||
+        ship.name.toLowerCase().includes(q) ||
+        ship.className.toLowerCase().includes(q)
+    );
+  }, [sortedShips, searchQuery, shipDisplayName]);
 
   const selectedShip =
     sortedShips.find((s) => s.className === selectedClassName) || sortedShips[0];
@@ -384,28 +400,45 @@ const QuantumTravelItemCard = ({ vItem }: QuantumTravelItemCardProps) => {
                 <Icon path={mdiClose} size="1.25rem" />
               </button>
             </div>
+            <SearchBar
+              className={styles.popupSearchBar}
+              searchName={searchQuery}
+              setSearchName={setSearchQuery}
+              placeholder={t("ItemInfo.QuantumTravel.SearchShips", {
+                defaultValue: "搜索飞船",
+              })}
+              inputId="qd-ship-search"
+            />
             <div className={styles.popupList}>
-              {sortedShips.map((ship) => (
-                <button
-                  type="button"
-                  key={ship.className}
-                  className={[
-                    styles.popupRow,
-                    ship.className === selectedShip?.className ? styles.popupRowActive : undefined,
-                  ]
-                    .filter(Boolean)
-                    .join(" ")}
-                  onClick={() => {
-                    setSelectedClassName(ship.className);
-                    setShipPickerOpen(false);
-                  }}
-                >
-                  <span className={styles.popupRowLeft}>
-                    <span className={styles.popupShipName}>{shipDisplayName(ship)}</span>
-                  </span>
-                  <span className={styles.popupFuel}>{ship.fuelCapacity.toFixed(1)} SCU</span>
-                </button>
-              ))}
+              {filteredShips.length === 0 ? (
+                <div className={styles.popupEmpty}>
+                  {t("ItemInfo.QuantumTravel.NoShipsFound", {
+                    defaultValue: "没有找到匹配的飞船",
+                  })}
+                </div>
+              ) : (
+                filteredShips.map((ship) => (
+                  <button
+                    type="button"
+                    key={ship.className}
+                    className={[
+                      styles.popupRow,
+                      ship.className === selectedShip?.className ? styles.popupRowActive : undefined,
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                    onClick={() => {
+                      setSelectedClassName(ship.className);
+                      setShipPickerOpen(false);
+                    }}
+                  >
+                    <span className={styles.popupRowLeft}>
+                      <span className={styles.popupShipName}>{shipDisplayName(ship)}</span>
+                    </span>
+                    <span className={styles.popupFuel}>{ship.fuelCapacity.toFixed(1)} SCU</span>
+                  </button>
+                ))
+              )}
             </div>
           </div>
         </div>

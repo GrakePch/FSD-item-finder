@@ -1,19 +1,23 @@
 import { useTranslation } from "react-i18next";
-import styles from "./SearchLocationBar.module.css";
+import styles from "./SearchBar.module.css";
 import React from "react";
 import Icon from "@mdi/react";
 import { mdiMagnify, mdiClose } from "@mdi/js";
 
-const SearchLocationBar = ({
+const SearchBar = ({
   className,
   searchName,
   setSearchName,
   setIsSearchCardOpen,
+  placeholder,
+  inputId = "searchbar",
 }: {
   className?: string;
   searchName: string;
   setSearchName: React.Dispatch<React.SetStateAction<string>>;
   setIsSearchCardOpen?: React.Dispatch<React.SetStateAction<boolean>>;
+  placeholder?: string;
+  inputId?: string;
 }) => {
   const { t } = useTranslation();
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,7 +25,7 @@ const SearchLocationBar = ({
   };
 
   return (
-    <div className={[styles.SearchLocationBar, className].filter(Boolean).join(" ")}>
+    <div className={[styles.SearchBar, className].filter(Boolean).join(" ")}>
       <div className={styles.searchContainer}>
         <div className={styles.btnSearch}>
           <Icon path={mdiMagnify} size="1.5rem" />
@@ -29,8 +33,8 @@ const SearchLocationBar = ({
         <input
           className={styles.searchInput}
           type="text"
-          id="searchlocationbar"
-          placeholder={t("SearchLocationBar.placeholder")}
+          id={inputId}
+          placeholder={placeholder ?? t("SearchBar.placeholder")}
           value={searchName}
           onChange={handleSearchChange}
           onFocus={() => setIsSearchCardOpen && setIsSearchCardOpen(true)}
@@ -45,4 +49,4 @@ const SearchLocationBar = ({
   );
 };
 
-export default SearchLocationBar;
+export default SearchBar;

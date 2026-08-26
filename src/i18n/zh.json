@@ -41,7 +41,9 @@
       "SortFuelCapacity": "燃料容量",
       "SortDirection": "方向",
       "Ascending": "升序",
-      "Descending": "降序"
+      "Descending": "降序",
+      "SearchShips": "搜索飞船",
+      "NoShipsFound": "没有找到匹配的飞船"
     }
   },
   "QuantumTravel": {
@@ -110,7 +112,7 @@
       "VNCL": "剜度"
     }
   },
-  "SearchLocationBar": {
+  "SearchBar": {
     "placeholder": "搜索地点……"
   },
   "TradeOptions": {

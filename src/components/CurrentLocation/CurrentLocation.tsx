@@ -4,7 +4,7 @@ import Icon from "@mdi/react";
 import { mdiCrosshairsGps, mdiClose } from "@mdi/js";
 import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router";
-import SearchLocationBar from "../LocationSearch/SearchLocationBar/SearchLocationBar";
+import SearchBar from "../SearchBar/SearchBar";
 import SearchLocationResultList from "../LocationSearch/SearchLocationResultList/SearchLocationResultList";
 import { locationNameToI18nKey } from "../../utils";
 import { ContextAllData } from "../../contexts";
@@ -109,7 +109,7 @@ export const WindowSelectCurrentLocation = () => {
             <Icon path={mdiClose} />
           </button>
         </div>
-        <SearchLocationBar
+        <SearchBar
           className={styles.searchLocationBar}
           searchName={searchName}
           setSearchName={setSearchName}

@@ -41,7 +41,9 @@
       "SortFuelCapacity": "Fuel capacity",
       "SortDirection": "Order",
       "Ascending": "Ascending",
-      "Descending": "Descending"
+      "Descending": "Descending",
+      "SearchShips": "Search ships",
+      "NoShipsFound": "No ships found"
     }
   },
   "QuantumTravel": {
@@ -110,7 +112,7 @@
       "VNCL": "Vanduul"
     }
   },
-  "SearchLocationBar": {
+  "SearchBar": {
     "placeholder": "Search Locations..."
   },
   "TradeOptions": {
