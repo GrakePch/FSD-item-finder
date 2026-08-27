@@ -48,6 +48,7 @@ jobs:
           cp .tmp/fancy-star-data/data/starmap/locations.json src/data/starmap/locations.json
 
       - name: Generate UEX location map
+        continue-on-error: true
         run: node scripts/location/update_uex_location_vg_location_map.mjs
 
       - name: Validate generated data
