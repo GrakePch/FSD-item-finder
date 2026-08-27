@@ -328,6 +328,13 @@
         "en": "Argo MOLE",
         "zh_Hans": "南船座 鼹鼠"
     },
+    "vehicle_NameARGO_MOTH": {
+        "uex_ids": [
+            "v-276"
+        ],
+        "en": "Argo MOTH",
+        "zh_Hans": "南船座 飞蛾"
+    },
     "vehicle_NameARGO_MPUV": {
         "uex_ids": [
             "v-125"
@@ -642,6 +649,13 @@
         ],
         "en": "Grey's Shiv",
         "zh_Hans": "格雷 锈刃"
+    },
+    "vehicle_NameGrin_MDC": {
+        "uex_ids": [
+            "v-270"
+        ],
+        "en": "Greycat MDC",
+        "zh_Hans": "灰猫 MDC"
     },
     "vehicle_NameGRIN_MTC": {
         "uex_ids": [
