@@ -1324,5 +1324,14 @@
   "Vivere PAF-II": "Stanton1b_Outpost_col_m_drlct_PAF_2-2",
   "Vivere PAF-III": "Stanton1b_Outpost_col_m_drlct_PAF_2-3",
   "Watcher's Depot": "Pyro6_Outpost_col_xs_dpt_otlw_001",
-  "Xenotechnology Lab": "area_name_xenotechlab"
+  "Xenotechnology Lab": "area_name_xenotechlab",
+  "Arrival Center": "Stanton2_TransitPlatform",
+  "Cargo Deck A": "area_name_cargodeckA",
+  "Cargo Deck B": "area_name_cargodeckB",
+  "Cargo Deck C": "area_name_cargodeckC",
+  "Central Hub": "area_name_centralhub",
+  "Locker Room": "area_name_lockerroom",
+  "QV Logistics Station": "area_name_QVlogistics",
+  "Registration": "area_name_registration",
+  "Showers": "area_name_showers"
 }
