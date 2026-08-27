@@ -22,8 +22,9 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-# Only include keys that start with any of these
-initials = ["vehicle_Name"]
+# Only include keys that start with any of these.
+# 42kit mixes case for vehicle names: vehicle_Name / vehicle_name / Vehicle_Name.
+initials = ["vehicle_Name", "vehicle_name", "Vehicle_Name"]
 excluded_suffixes = ("_short",)
 
 def normalize_vehicle_name(value):
