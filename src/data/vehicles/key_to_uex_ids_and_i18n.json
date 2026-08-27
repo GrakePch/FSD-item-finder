@@ -178,8 +178,8 @@
         "uex_ids": [
             "v-39"
         ],
-        "en": "vehicle_nameANVL_Carrack",
-        "zh_Hans": "vehicle_nameANVL_Carrack"
+        "en": "Anvil Carrack",
+        "zh_Hans": "铁砧 克拉克"
     },
     "vehicle_NameANVL_Centurion": {
         "uex_ids": [
@@ -269,8 +269,8 @@
         "uex_ids": [
             "v-249"
         ],
-        "en": "vehicle_nameANVL_Paladin",
-        "zh_Hans": "vehicle_nameANVL_Paladin"
+        "en": "Anvil Paladin",
+        "zh_Hans": "铁砧 圣骑士"
     },
     "vehicle_NameANVL_Spartan": {
         "uex_ids": [
@@ -857,15 +857,15 @@
         "uex_ids": [
             "v-242"
         ],
-        "en": "vehicle_nameMISC_Starlancer_MAX",
-        "zh_Hans": "vehicle_nameMISC_Starlancer_MAX"
+        "en": "MISC Starlancer MAX",
+        "zh_Hans": "武藏 星际枪骑兵 MAX"
     },
     "vehicle_nameMISC_Starlancer_TAC": {
         "uex_ids": [
             "v-241"
         ],
-        "en": "vehicle_nameMISC_Starlancer_TAC",
-        "zh_Hans": "vehicle_nameMISC_Starlancer_TAC"
+        "en": "MISC Starlancer TAC",
+        "zh_Hans": "武藏 星际枪骑兵 TAC"
     },
     "vehicle_NameMRAI_Guardian": {
         "uex_ids": [
