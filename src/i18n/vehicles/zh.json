@@ -1,4 +1,5 @@
 {
+    "Vehicle_NameGRIN_UTV": "灰猫 UTV",
     "vehicle_NameAEGS_Avenger_Dead": "督导局 复仇者",
     "vehicle_NameAEGS_Avenger_Stalker": "圣盾 复仇者 追猎",
     "vehicle_NameAEGS_Avenger_Titan": "圣盾 复仇者 泰坦",
@@ -334,5 +335,10 @@
     "vehicle_NameXIAN_Railen": "盖塔克 锐伦",
     "vehicle_NameXIAN_Scout": "奥波亚 卡图",
     "vehicle_NameXNAA_SantokYai": "奥波亚 桑托起亚",
-    "vehicle_Nameprobe_comms_1_a": "CHCO 奥瑞斯 被动数据收集监测设备"
+    "vehicle_Nameprobe_comms_1_a": "CHCO 奥瑞斯 被动数据收集监测设备",
+    "vehicle_nameANVL_Carrack": "铁砧 克拉克",
+    "vehicle_nameANVL_Carrack_Expedition": "铁砧 克拉克 远征版",
+    "vehicle_nameANVL_Paladin": "铁砧 圣骑士",
+    "vehicle_nameMISC_Starlancer_MAX": "武藏 星际枪骑兵 MAX",
+    "vehicle_nameMISC_Starlancer_TAC": "武藏 星际枪骑兵 TAC"
 }

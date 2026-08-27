@@ -1,4 +1,5 @@
 {
+    "Vehicle_NameGRIN_UTV": "Greycat UTV",
     "vehicle_NameAEGS_Avenger_Dead": "Advocacy Avenger",
     "vehicle_NameAEGS_Avenger_Stalker": "Aegis Avenger Stalker",
     "vehicle_NameAEGS_Avenger_Titan": "Aegis Avenger Titan",
@@ -334,5 +335,10 @@
     "vehicle_NameXIAN_Railen": "Gatac Railen",
     "vehicle_NameXIAN_Scout": "Aopoa Khartu-al",
     "vehicle_NameXNAA_SantokYai": "Aopoa San'tok.yāi",
-    "vehicle_Nameprobe_comms_1_a": "CHCO Auris PDC Monitor"
+    "vehicle_Nameprobe_comms_1_a": "CHCO Auris PDC Monitor",
+    "vehicle_nameANVL_Carrack": "Anvil Carrack",
+    "vehicle_nameANVL_Carrack_Expedition": "Anvil Carrack Expedition",
+    "vehicle_nameANVL_Paladin": "Anvil Paladin",
+    "vehicle_nameMISC_Starlancer_MAX": "MISC Starlancer MAX",
+    "vehicle_nameMISC_Starlancer_TAC": "MISC Starlancer TAC"
 }
