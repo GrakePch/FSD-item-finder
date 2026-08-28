@@ -44,9 +44,24 @@ export function isLocationDisplayHidden(location: SCLocation): boolean {
   return ["cave", "other", "onyx", "crash", "river"].includes(location.type);
 }
 
+/**
+ * 剥掉位置名末尾的一个括号块及外围空白，用于处理 VerseGuide
+ * 给前哨站/仓库添加的阵营后缀，如 "Rustville (Headhunters)" -> "Rustville"。
+ * 仅当末尾确实存在括号块时才改写，否则返回原字符串。
+ */
+export function stripTrailingParenthetical(name: string): string {
+  return name.replace(/\s*\([^()]*\)\s*$/, "").trim();
+}
+
 export function locationNameToI18nKey(name: string): string {
   const directKey = locationNameToI18nKeyMap[name];
   if (directKey) return directKey;
+
+  const withoutParenthetical = stripTrailingParenthetical(name);
+  if (withoutParenthetical !== name) {
+    const strippedKey = locationNameToI18nKeyMap[withoutParenthetical];
+    if (strippedKey) return strippedKey;
+  }
 
   const body = bodiesByCode.get(name);
   if (body) {
