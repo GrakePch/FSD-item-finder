@@ -18026,9 +18026,9 @@
     ],
     "weather": {
       "low": -16,
-      "high": -5,
-      "average": -9.75,
-      "count": 12
+      "high": -1,
+      "average": -9.076923076923077,
+      "count": 13
     },
     "beaconMarker": true,
     "beaconType": "Outpost",
@@ -39537,10 +39537,10 @@
       }
     ],
     "weather": {
-      "low": -36,
+      "low": -46,
       "high": -20,
-      "average": -28,
-      "count": 2
+      "average": -34,
+      "count": 3
     },
     "beaconMarker": true,
     "beaconType": null,
@@ -41895,7 +41895,7 @@
       "average": -4.333333333333333,
       "count": 3
     },
-    "beaconMarker": false,
+    "beaconMarker": true,
     "beaconType": null,
     "parentCode": "PYRO/5D",
     "parentStarCode": "PYRO",
