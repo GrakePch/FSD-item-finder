@@ -4770,7 +4770,7 @@
       "Url": null
     },
     "ProgressTracker": {
-      "Status": "NextPatch",
+      "Status": "Released",
       "Patch": "4.10.0",
       "IsOnPT": false,
       "ID": null
@@ -4779,13 +4779,13 @@
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": null
+      "Buy": 175
     },
     "PU": {
       "Patch": "4.10.0",
-      "Date": null,
+      "Date": "2026-08-26",
       "HasPerf": true,
-      "IsPTUOnly": true,
+      "IsPTUOnly": false,
       "IsPTUBuyOnly": false,
       "Buy": null
     }
