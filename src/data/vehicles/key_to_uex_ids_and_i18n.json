@@ -202,13 +202,6 @@
         "en": "Anvil Hawk",
         "zh_Hans": "铁砧 猎鹰"
     },
-    "vehicle_NameANVL_Hornet_F7C": {
-        "uex_ids": [
-            "v-224"
-        ],
-        "en": "Anvil F7C Hornet Mk I",
-        "zh_Hans": "铁砧 F7C 大黄蜂 Mk I"
-    },
     "vehicle_NameANVL_Hornet_F7C_Mk2": {
         "uex_ids": [
             "v-73"
@@ -216,40 +209,12 @@
         "en": "Anvil F7C Hornet Mk II",
         "zh_Hans": "铁砧 F7C 大黄蜂 Mk II"
     },
-    "vehicle_NameANVL_Hornet_F7C_Wildfire": {
-        "uex_ids": [
-            "v-74"
-        ],
-        "en": "Anvil F7C Hornet Wildfire Mk I",
-        "zh_Hans": "铁砧 F7C 大黄蜂 野火 Mk I"
-    },
-    "vehicle_NameANVL_Hornet_F7CM": {
-        "uex_ids": [
-            "v-75"
-        ],
-        "en": "Anvil F7C-M Super Hornet Mk I",
-        "zh_Hans": "铁砧 F7C-M 超级大黄蜂 Mk I"
-    },
-    "vehicle_NameANVL_Hornet_F7CR": {
-        "uex_ids": [
-            "v-77"
-        ],
-        "en": "Anvil F7C-R Hornet Tracker Mk I",
-        "zh_Hans": "铁砧 F7C-R 大黄蜂 追踪者 Mk I"
-    },
     "vehicle_NameANVL_Hornet_F7CR_Mk2": {
         "uex_ids": [
             "v-246"
         ],
         "en": "Anvil F7C-R Hornet Tracker Mk II",
         "zh_Hans": "铁砧 F7C-R 大黄蜂 追踪者 Mk II"
-    },
-    "vehicle_NameANVL_Hornet_F7CS": {
-        "uex_ids": [
-            "v-78"
-        ],
-        "en": "Anvil F7C-S Hornet Ghost Mk I",
-        "zh_Hans": "铁砧 F7C-S 大黄蜂 幽灵 Mk I"
     },
     "vehicle_NameANVL_Hornet_F7CS_Mk2": {
         "uex_ids": [
@@ -692,12 +657,26 @@
         "en": "Greycat STV",
         "zh_Hans": "灰猫 STV"
     },
+    "Vehicle_NameGRIN_UTV": {
+        "uex_ids": [
+            "v-280"
+        ],
+        "en": "Greycat UTV",
+        "zh_Hans": "灰猫 UTV"
+    },
     "vehicle_NameKRIG_L21_Wolf": {
         "uex_ids": [
             "v-264"
         ],
         "en": "Kruger L-21 Wolf",
         "zh_Hans": "克鲁格 L-21 狼式"
+    },
+    "vehicle_NameKRIG_L22_Alpha_Wolf": {
+        "uex_ids": [
+            "v-267"
+        ],
+        "en": "Kruger L-22 Alpha Wolf",
+        "zh_Hans": "克鲁格 L-22 头狼"
     },
     "vehicle_NameKRIG_P52_Merlin": {
         "uex_ids": [
@@ -775,6 +754,13 @@
         ],
         "en": "MISC Hull A",
         "zh_Hans": "武藏 货轮 A"
+    },
+    "vehicle_NameMISC_Hull_B": {
+        "uex_ids": [
+            "v-103"
+        ],
+        "en": "MISC Hull B",
+        "zh_Hans": "武藏 货轮 B"
     },
     "vehicle_NameMISC_Hull_C": {
         "uex_ids": [
