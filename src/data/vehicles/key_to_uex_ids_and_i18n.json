@@ -538,6 +538,13 @@
         "en": "Drake Golem",
         "zh_Hans": "德雷克 魔像"
     },
+    "vehicle_NameDRAK_Golem_OX": {
+        "uex_ids": [
+            "v-269"
+        ],
+        "en": "Drake Golem OX",
+        "zh_Hans": "德雷克 魔像 OX"
+    },
     "vehicle_NameDRAK_Herald": {
         "uex_ids": [
             "v-100"
@@ -1007,40 +1014,12 @@
         "en": "RSI Apollo Triage",
         "zh_Hans": "RSI 阿波罗 分诊"
     },
-    "vehicle_NameRSI_Aurora_CL": {
+    "vehicle_NameRSI_Aurora_Mk2": {
         "uex_ids": [
-            "v-21"
+            "v-278"
         ],
-        "en": "RSI Aurora Mk I CL",
-        "zh_Hans": "RSI 极光 Mk I CL"
-    },
-    "vehicle_NameRSI_Aurora_ES": {
-        "uex_ids": [
-            "v-22"
-        ],
-        "en": "RSI Aurora Mk I ES",
-        "zh_Hans": "RSI 极光 Mk I ES"
-    },
-    "vehicle_NameRSI_Aurora_LN": {
-        "uex_ids": [
-            "v-23"
-        ],
-        "en": "RSI Aurora Mk I LN",
-        "zh_Hans": "RSI 极光 Mk I LN"
-    },
-    "vehicle_NameRSI_Aurora_LX": {
-        "uex_ids": [
-            "v-24"
-        ],
-        "en": "RSI Aurora Mk I  LX",
-        "zh_Hans": "RSI 极光 Mk I LX"
-    },
-    "vehicle_NameRSI_Aurora_MR": {
-        "uex_ids": [
-            "v-25"
-        ],
-        "en": "RSI Aurora Mk I MR",
-        "zh_Hans": "RSI 极光 Mk I MR"
+        "en": "RSI Aurora Mk II",
+        "zh_Hans": "RSI 极光 Mk II"
     },
     "vehicle_NameRSI_Constellation_Andromeda": {
         "uex_ids": [
