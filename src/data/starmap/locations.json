@@ -24911,10 +24911,10 @@
     "factions": null,
     "features": [],
     "weather": {
-      "low": -93,
+      "low": -114,
       "high": -91,
-      "average": -92,
-      "count": 2
+      "average": -99.33333333333333,
+      "count": 3
     },
     "beaconMarker": true,
     "beaconType": null,
@@ -45144,10 +45144,10 @@
       }
     ],
     "weather": {
-      "low": 224,
+      "low": 198,
       "high": 302,
-      "average": 243.75,
-      "count": 4
+      "average": 234.6,
+      "count": 5
     },
     "beaconMarker": true,
     "beaconType": null,
