@@ -21,6 +21,7 @@ const vehicleClassNameToSeries: Record<string, string> = {
   AEGS_Sabre_Firebird: "AEGS_Sabre",
   AEGS_Sabre_Peregrine: "AEGS_Sabre",
   AEGS_Sabre_Raven: "AEGS_Sabre",
+  AEGS_Sabre_Raven_EX: "",
   AEGS_Tiburon: "",
   AEGS_Vanguard: "AEGS_Vanguard",
   AEGS_Vanguard_Harbinger: "AEGS_Vanguard",

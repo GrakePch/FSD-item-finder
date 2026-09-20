@@ -722,6 +722,41 @@
     }
   },
   {
+    "ClassName": "AEGS_Sabre_Raven_EX",
+    "Name": "Aegis Sabre Raven EX",
+    "Manufacturer": "Aegis Dynamics",
+    "Career": "Combat",
+    "Role": "Medium Fighter",
+    "Size": 2,
+    "Cargo": 0,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "Patch": null,
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": 185
+    },
+    "PU": {
+      "Patch": "4.10.1",
+      "Date": "2026-09-16",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "IsPTUBuyOnly": false,
+      "Buy": null
+    }
+  },
+  {
     "ClassName": "AEGS_Tiburon",
     "Name": "Aegis Tiburon",
     "Manufacturer": "Aegis Dynamics",

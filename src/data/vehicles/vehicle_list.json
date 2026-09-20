@@ -4651,6 +4651,230 @@
     }
   },
   {
+    "ClassName": "AEGS_Sabre_Raven_EX",
+    "Name": "Aegis Sabre Raven EX",
+    "Description": "Aegis Dynamics have raised the bar yet again with their Raven variant. Nearing the speed and maneuverability of its Sabre forebearer but with a lower ship signature, the Raven is a fast, stealthy infiltrator. This special EX model reincorporates some of the offensive capabilities of the original Sabre while introducing a Quantum Dampener on the spine of the ship to help ensure enemies won't escape.",
+    "Career": "Combat",
+    "Role": "Medium Fighter",
+    "Size": 2,
+    "Cargo": {
+      "CargoGrid": 0,
+      "CargoContainers": 0,
+      "Storage": 0.65
+    },
+    "Crew": 1,
+    "WeaponCrew": 0,
+    "OperationsCrew": 0,
+    "Mass": 68711.32,
+    "ComponentsMass": 7102,
+    "Dimensions": {
+      "Length": 26,
+      "Width": 30,
+      "Height": 3.8
+    },
+    "IsSpaceship": true,
+    "Armor": {
+      "Durability": {
+        "Health": 3762,
+        "DamageMultipliers": {
+          "Physical": 0.9,
+          "Energy": 1.35,
+          "Distortion": 1,
+          "Thermal": 1,
+          "Biochemical": 1,
+          "Stun": 1
+        }
+      },
+      "DamageDeflection": {
+        "Physical": 20,
+        "Energy": 16,
+        "Distortion": 0
+      },
+      "DamageMultipliers": {
+        "Physical": 0.75,
+        "Energy": 0.6,
+        "Distortion": 1
+      },
+      "SignalMultipliers": {
+        "Electromagnetic": 0.72,
+        "Infrared": 0.72,
+        "CrossSection": 0.72
+      }
+    },
+    "Hull": {
+      "PenetrationDamageMultiplier": {
+        "Fuse": 0,
+        "Component": 0.4
+      },
+      "StructureHealthPoints": {
+        "VitalParts": {
+          "body": 3100
+        },
+        "Parts": {
+          "bombay_door_left": 1,
+          "bombay_door_left_inside": 1,
+          "bombay_door_right": 1,
+          "bombay_door_right_inside": 1,
+          "ground_fuel_port_door": 1,
+          "door_flap": 1,
+          "landinggear_door_front_right": 1,
+          "landinggear_door_front_left": 1,
+          "door_l1": 1,
+          "door_l2": 1,
+          "door_r1": 1,
+          "door_r2": 1,
+          "nose": 2500,
+          "ladder_door": 1,
+          "canopy": 1000,
+          "door_mesh": 1,
+          "tail": 2500,
+          "wing_left": 2000,
+          "landing_gear_doors_rear_left": 1,
+          "wing_right": 2000,
+          "landing_gear_doors_rear_right": 1
+        }
+      },
+      "ThrustersHealthPoints": {
+        "Main": {
+          "engine": 6000
+        },
+        "Retro": {
+          "thruster_retro_left": 4000,
+          "thruster_retro_right": 4000
+        },
+        "Maneuvering": {
+          "thruster_bottomFL": 2000,
+          "thruster_bottomFR": 2000,
+          "thruster_bottomRL": 2000,
+          "thruster_bottomRR": 2000,
+          "thruster_sideRL": 2000,
+          "thruster_sideRR": 2000,
+          "thruster_topFL": 2000,
+          "thruster_topFR": 2000,
+          "thruster_topRL": 2000,
+          "thruster_topRR": 2000
+        }
+      }
+    },
+    "FlightCharacteristics": {
+      "ScmSpeed": 233,
+      "MaxSpeed": 1320,
+      "Pitch": 56,
+      "Yaw": 45,
+      "Roll": 160,
+      "IsVtolAssisted": false,
+      "ThrustCapacity": {
+        "Main": 10255590,
+        "Retro": 3017408,
+        "Vtol": 0,
+        "Maneuvering": 13510712
+      },
+      "AccelerationG": {
+        "IsValidated": true,
+        "Main": 13.7,
+        "Retro": 4,
+        "Strafe": 6.5,
+        "Up": 6.5,
+        "Down": 4,
+        "CheckDate": "2026-09-16"
+      },
+      "MasterModes": {
+        "BaseSpoolTime": 1,
+        "QuantumDriveSpoolTime": 4.4,
+        "ScmMode": {
+          "BoostSpeedForward": 560,
+          "BoostSpeedBackward": 260
+        }
+      },
+      "Boost": {
+        "PreDelay": 0,
+        "RampUp": 0.6,
+        "RampDown": 0.2,
+        "AccelerationMultiplier": {
+          "PositiveAxis": {
+            "X": 1.35,
+            "Y": 1.65,
+            "Z": 1.3
+          },
+          "NegativeAxis": {
+            "X": 1.35,
+            "Y": 1.4,
+            "Z": 1.35
+          }
+        },
+        "AngularAccelerationMultiplier": {
+          "Pitch": 1.2,
+          "Yaw": 1.2,
+          "Roll": 1.2
+        },
+        "AngularVelocityMultiplier": {
+          "Pitch": 1.2,
+          "Yaw": 1.2,
+          "Roll": 1.2
+        }
+      },
+      "Capacitors": {
+        "ThrusterCapacitorSize": 20,
+        "CapacitorRegenPerSec": 0.75,
+        "CapacitorIdleCost": 1,
+        "CapacitorLinearCost": 0,
+        "CapacitorUsageModifier": 1,
+        "CapacitorRegenDelay": 0.5,
+        "RegenerationTime": 26.7
+      }
+    },
+    "FuelManagement": {
+      "FuelCapacity": 2600000,
+      "FuelIntakeRate": 0,
+      "QuantumFuelCapacity": 900000,
+      "FuelBurnRatePer10KNewton": {
+        "Main": 0.433,
+        "Retro": 0.866,
+        "Vtol": 0,
+        "Maneuvering": 4.33
+      },
+      "FuelUsagePerSecond": {
+        "Main": 444.067,
+        "Retro": 130.654,
+        "Vtol": 0,
+        "Maneuvering": 585.014
+      },
+      "IntakeToMainFuelRatio": 0,
+      "TimeForIntakesToFillTank": "Infinity"
+    },
+    "Emissions": {
+      "Electromagnetic": {
+        "SCMIdle": 0,
+        "SCMActive": 0,
+        "NAV": 0
+      },
+      "Infrared": {
+        "Start": 0
+      },
+      "CrossSection": {
+        "Front": 1355,
+        "Side": 3956,
+        "Top": 3980
+      }
+    },
+    "ResourceNetwork": {
+      "ItemPools": {
+        "WeaponPoolSize": 4
+      }
+    },
+    "BaseLoadout": {
+      "TotalShieldHP": 6336,
+      "PilotBurstDPS": 2185,
+      "TurretsBurstDPS": 0,
+      "TotalMissilesDmg": 12800
+    },
+    "Insurance": {
+      "StandardClaimTime": 7.56,
+      "ExpeditedClaimTime": 2.52,
+      "ExpeditedCost": 3934
+    }
+  },
+  {
     "ClassName": "AEGS_Tiburon",
     "Name": "Aegis Tiburon",
     "Description": "An evolution of a proven Aegis design, the Tiburon's anti-capital ship configuration comprises a spine mounted forward facing beam weapon, supplemented by side mounted turrets.",
@@ -18763,18 +18987,9 @@
           "body": 6000
         },
         "Parts": {
-          "dbr_cockpit_flap_l": 50,
-          "dbr_face_grill": 100,
-          "dbr_cockpit_flap_r": 50,
-          "dbr_rear_top_vent_detail": 100,
-          "dbr_top_details_01": 100,
-          "dbr_long_bar_01": 70,
-          "dbr_long_bar_02": 70,
-          "engine_clamp": 4500,
-          "wing_left_mesh": 3000,
-          "dbr_left_wing_tip_details_01": 300,
-          "dbr_left_wing_tip_details_03": 100,
-          "lg_headlight_lw": 50,
+          "door_right_outer_mesh": 2100,
+          "door_left_outer_mesh": 2100,
+          "door_left_flap_outer_mesh": 100,
           "nacelle_right_main_mesh": 5000,
           "wing_right_mesh": 3500,
           "dbr_antenna_02_geo": 70,
@@ -18783,45 +18998,63 @@
           "wing_right_tip_geo": 2500,
           "dbr_antenna_base_04": 170,
           "dbr_front_rail_door_geo": 200,
-          "dbr_tail_bottom_part": 300
+          "engine_clamp": 4500,
+          "wing_left_mesh": 3000,
+          "dbr_left_wing_tip_details_01": 300,
+          "dbr_left_wing_tip_details_03": 100,
+          "lg_headlight_lw": 50,
+          "nacelle_joint_right_mesh": 500,
+          "anim_lift_door_a": 1,
+          "door_upper_anim": 100,
+          "door_lower_anim": 100,
+          "door_lower_anim_left": 100,
+          "door_upper_anim_left": 100,
+          "dbr_top_details_01": 100,
+          "dbr_tail_bottom_part": 300,
+          "dbr_rear_top_vent_detail": 100,
+          "dbr_long_bar_02": 70,
+          "dbr_long_bar_01": 70,
+          "dbr_cockpit_flap_l": 50,
+          "dbr_face_grill": 100,
+          "dbr_cockpit_flap_r": 50
         }
       },
       "ThrustersHealthPoints": {
         "Main": {
           "thruster_main_aux_right": 9100,
-          "thruster_main_bottom": 9100,
-          "thruster_main_top": 9100,
           "thruster_main_aux_left_bottom": 9100,
-          "thruster_main_aux_left_top": 9100
+          "thruster_main_aux_left_top": 9100,
+          "thruster_main_top": 9100,
+          "thruster_main_bottom": 9100
         },
         "Retro": {
-          "thruster_retro_aux_left": 9100,
-          "thruster_retro_aux_right": 9100,
           "thruster_retro_right": 9100,
           "thruster_retro_left_bottom": 9100,
-          "thruster_retro_left_top": 9100
+          "thruster_retro_left_top": 9100,
+          "thruster_retro_aux_right": 9100,
+          "thruster_retro_aux_left": 9100
         },
         "Maneuvering": {
-          "thruster_FBL": 9100,
-          "thruster_FBR": 9100,
-          "thruster_FSLB": 9100,
-          "thruster_FSLT": 9100,
-          "thruster_FSRB": 9100,
-          "thruster_FSRT": 9100,
-          "thruster_FTL": 9100,
-          "thruster_FTR": 9100,
-          "thruster_RBL": 9100,
-          "thruster_RBR": 9100,
-          "thruster_RSLB": 9100,
-          "thruster_RSLT": 9100,
-          "thruster_RSRB": 9100,
-          "thruster_RSRT": 9100,
-          "thruster_RTL": 9100,
-          "thruster_RTR": 9100,
+          "thruster_mav_wing_BR": 9100,
+          "thruster_mav_wing_TR": 9100,
           "thruster_mav_wing_BL": 9100,
           "thruster_mav_wing_TL": 9100,
-          "thruster_mav_wing_BR": 9100,
-          "thruster_mav_wing_TR": 9100
+          "thruster_RTR": 9100,
+          "thruster_RTL": 9100,
+          "thruster_RSRT": 9100,
+          "thruster_RSRB": 9100,
+          "thruster_RSLT": 9100,
+          "thruster_RSLB": 9100,
+          "thruster_RBR": 9100,
+          "thruster_RBL": 9100,
+          "thruster_FTR": 9100,
+          "thruster_FTL": 9100,
+          "thruster_FSRT": 9100,
+          "thruster_FSRB": 9100,
+          "thruster_FSLT": 9100,
+          "thruster_FSLB": 9100,
+          "thruster_FBR": 9100,
+          "thruster_FBL": 9100
         }
       },
       "DoorsHealthPoints": {
