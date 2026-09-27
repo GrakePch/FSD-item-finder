@@ -27528,10 +27528,10 @@
       }
     ],
     "weather": {
-      "low": 0,
+      "low": -4,
       "high": 273,
-      "average": 136.5,
-      "count": 2
+      "average": 89.66666666666667,
+      "count": 3
     },
     "beaconMarker": true,
     "beaconType": null,
