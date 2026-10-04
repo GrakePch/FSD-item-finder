@@ -12237,8 +12237,8 @@
     "weather": {
       "low": -44,
       "high": 68,
-      "average": 19.818181818181817,
-      "count": 11
+      "average": 18.083333333333332,
+      "count": 12
     },
     "beaconMarker": true,
     "beaconType": "Outpost",
