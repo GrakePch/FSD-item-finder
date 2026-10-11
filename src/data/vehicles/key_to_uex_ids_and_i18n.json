@@ -1021,34 +1021,6 @@
         "en": "RSI Aurora Mk II",
         "zh_Hans": "RSI 极光 Mk II"
     },
-    "vehicle_NameRSI_Constellation_Andromeda": {
-        "uex_ids": [
-            "v-45"
-        ],
-        "en": "RSI Constellation Andromeda",
-        "zh_Hans": "RSI 星座 仙女座"
-    },
-    "vehicle_NameRSI_Constellation_Aquila": {
-        "uex_ids": [
-            "v-46"
-        ],
-        "en": "RSI Constellation Aquila",
-        "zh_Hans": "RSI 星座 天鹰座"
-    },
-    "vehicle_NameRSI_Constellation_Phoenix": {
-        "uex_ids": [
-            "v-47"
-        ],
-        "en": "RSI Constellation Phoenix",
-        "zh_Hans": "RSI 星座 凤凰座"
-    },
-    "vehicle_NameRSI_Constellation_Taurus": {
-        "uex_ids": [
-            "v-49"
-        ],
-        "en": "RSI Constellation Taurus",
-        "zh_Hans": "RSI 星座 金牛座"
-    },
     "vehicle_NameRSI_Hermes": {
         "uex_ids": [
             "v-275"
