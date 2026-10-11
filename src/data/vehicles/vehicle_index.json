@@ -3881,6 +3881,9 @@
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
+      "IsShipOfTheMonth": true,
+      "ShipOfTheMonth": "October 2026",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/21279-October-2026-Subscriber-Promotions",
       "Buy": 650
     },
     "PU": {
@@ -4010,6 +4013,9 @@
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
+      "IsShipOfTheMonth": true,
+      "ShipOfTheMonth": "October 2026",
+      "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/21279-October-2026-Subscriber-Promotions",
       "Buy": 55
     },
     "PU": {
@@ -5009,7 +5015,7 @@
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "IsShipOfTheMonth": true,
+      "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "September 2026",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/21193-September-2026-Subscriber-Promotions",
       "Buy": 150
@@ -5226,7 +5232,7 @@
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "IsShipOfTheMonth": true,
+      "IsShipOfTheMonth": false,
       "ShipOfTheMonth": "September 2026",
       "ShipOfTheMonthUrl": "https://robertsspaceindustries.com/en/comm-link/transmission/21193-September-2026-Subscriber-Promotions",
       "Buy": 280
@@ -6983,8 +6989,8 @@
     }
   },
   {
-    "ClassName": "RSI_Constellation_Andromeda",
-    "Name": "RSI Constellation Andromeda",
+    "ClassName": "RSI_Constellation_Andromeda_GS",
+    "Name": "RSI Constellation Mk IV Andromeda",
     "Manufacturer": "Roberts Space Industries",
     "Career": "Multi-Role",
     "Role": "Medium Freight / Gun Ship",
@@ -7018,8 +7024,8 @@
     }
   },
   {
-    "ClassName": "RSI_Constellation_Aquila",
-    "Name": "RSI Constellation Aquila",
+    "ClassName": "RSI_Constellation_Aquila_GS",
+    "Name": "RSI Constellation Mk IV Aquila",
     "Manufacturer": "Roberts Space Industries",
     "Career": "Exploration",
     "Role": "Expedition",
@@ -7053,8 +7059,43 @@
     }
   },
   {
-    "ClassName": "RSI_Constellation_Phoenix",
-    "Name": "RSI Constellation Phoenix",
+    "ClassName": "RSI_Constellation_Mk5_Centaurus",
+    "Name": "RSI Constellation Mk V Centaurus",
+    "Manufacturer": "Roberts Space Industries",
+    "Career": "Multi-Role",
+    "Role": "Medium Freight / Gun Ship",
+    "Size": 5,
+    "Cargo": 240,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "Patch": null,
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": null
+    },
+    "PU": {
+      "Patch": "4.10.2",
+      "Date": "2026-10-09",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "IsPTUBuyOnly": false,
+      "Buy": null
+    }
+  },
+  {
+    "ClassName": "RSI_Constellation_Phoenix_GS",
+    "Name": "RSI Constellation Mk IV Phoenix",
     "Manufacturer": "Roberts Space Industries",
     "Career": "Multi-Role",
     "Role": "Luxury",
@@ -7085,8 +7126,8 @@
     }
   },
   {
-    "ClassName": "RSI_Constellation_Taurus",
-    "Name": "RSI Constellation Taurus",
+    "ClassName": "RSI_Constellation_Taurus_GS",
+    "Name": "RSI Constellation Mk IV Taurus",
     "Manufacturer": "Roberts Space Industries",
     "Career": "Transporter",
     "Role": "Medium Freight",
@@ -7492,6 +7533,41 @@
       "HasPerf": true,
       "IsPTUOnly": false,
       "Buy": 5528517
+    }
+  },
+  {
+    "ClassName": "RSI_Skylark",
+    "Name": "RSI Skylark",
+    "Manufacturer": "Roberts Space Industries",
+    "Career": "Combat",
+    "Role": "Snub Fighter",
+    "Size": 1,
+    "Cargo": 0,
+    "Type": "Ship",
+    "CommLink": {
+      "HasCommLink": false,
+      "Date": null,
+      "Url": null
+    },
+    "ProgressTracker": {
+      "Status": "Released",
+      "Patch": null,
+      "IsOnPT": false,
+      "ID": null
+    },
+    "Store": {
+      "Url": null,
+      "IsPromotionOnly": false,
+      "IsLimitedSale": false,
+      "Buy": null
+    },
+    "PU": {
+      "Patch": "4.10.2",
+      "Date": "2026-10-09",
+      "HasPerf": true,
+      "IsPTUOnly": false,
+      "IsPTUBuyOnly": false,
+      "Buy": null
     }
   },
   {

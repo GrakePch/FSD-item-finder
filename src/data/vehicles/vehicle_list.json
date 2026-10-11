@@ -38032,7 +38032,7 @@
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 4730,
-    "ComponentsMass": 747,
+    "ComponentsMass": 797,
     "Dimensions": {
       "Length": 5.5,
       "Width": 1.25,
@@ -38280,7 +38280,7 @@
     "WeaponCrew": 0,
     "OperationsCrew": 0,
     "Mass": 4730,
-    "ComponentsMass": 662,
+    "ComponentsMass": 712,
     "Dimensions": {
       "Length": 5.5,
       "Width": 1.25,
@@ -41217,8 +41217,8 @@
     }
   },
   {
-    "ClassName": "RSI_Constellation_Andromeda",
-    "Name": "RSI Constellation Andromeda",
+    "ClassName": "RSI_Constellation_Andromeda_GS",
+    "Name": "RSI Constellation Mk IV Andromeda",
     "Description": "The Constellation Andromeda is a dependable multi-crew freighter that appeals to merchants across the empire thanks to its versatility. One of the most popular ships that RSI produces, the iconic Andromeda features a well-appointed cargo bay, a snub-fighter docking port, and a signature wrap-around bridge.",
     "Career": "Multi-Role",
     "Role": "Medium Freight / Gun Ship",
@@ -41226,17 +41226,17 @@
     "Cargo": {
       "CargoGrid": 96,
       "CargoContainers": 0,
-      "Storage": 5.25
+      "Storage": 0
     },
     "Crew": 4,
     "WeaponCrew": 2,
     "OperationsCrew": 0,
-    "Mass": 386857,
-    "ComponentsMass": 58793,
+    "Mass": 367247.34,
+    "ComponentsMass": 57443,
     "Dimensions": {
-      "Length": 61,
-      "Width": 26,
-      "Height": 14
+      "Length": 62,
+      "Width": 26.6,
+      "Height": 16.3
     },
     "IsSpaceship": true,
     "Armor": {
@@ -41274,109 +41274,107 @@
       },
       "StructureHealthPoints": {
         "VitalParts": {
-          "neck": 20000,
-          "nose": 20000,
-          "body": 20000,
-          "tail": 20000
+          "body": 25000
         },
         "Parts": {
-          "nose_TurretHousings": 500,
-          "wing_left": 15000,
-          "turbine_cover_wingl_bot_front_out": 20,
-          "turbine_cover_wingl_bot_rear_out": 20,
-          "turbine_cover_wingl_bot_front_in": 20,
-          "turbine_cover_wingl_bot_rear_in": 20,
-          "turbine_cover_wingl_top_front_out": 20,
-          "turbine_cover_wingl_top_rear_out": 20,
-          "turbine_cover_wingl_top_front_in": 20,
-          "turbine_cover_wingl_top_rear_in": 20,
-          "wing_right": 15000,
-          "turbine_cover_wingr_top_rear_in": 20,
-          "turbine_cover_wingr_top_front_in": 20,
-          "turbine_cover_wingr_bot_rear_in": 20,
-          "turbine_cover_wingr_bot_front_out": 20,
-          "turbine_cover_wingr_top_rear_out": 20,
-          "turbine_cover_wingr_top_front_out": 20,
-          "turbine_cover_wingr_bot_front_in": 20,
-          "turbine_cover_wingr_bot_rear_out": 20,
-          "nose_turret_door_bottom_left": 1,
-          "nose_turret_door_bottom_right": 1,
-          "nose_turret_door_top_left": 1,
-          "nose_turret_door_top_right": 1,
-          "hardpoint_lightgroup": 200,
-          "misslerack_arm_body_left_arm": 1750,
-          "misslerack_arm_body_right_arm": 1750,
-          "misslerack_arm_tail_left_arm": 1750,
-          "nacelle_tower_left": 1000,
-          "nacelle_left": 15000,
-          "nacelle_tower_right": 1000,
-          "nacelle_right": 15000,
-          "misslerack_arm_tail_right_arm": 1750,
-          "nacelle_bottom_right": 15000,
-          "turbine_cover_naceller_bot_front_in": 20,
-          "turbine_cover_naceller_bot_rear_in": 20,
-          "turbine_cover_naceller_bot_front_out": 20,
-          "turbine_cover_naceller_bot_rear_out": 20,
-          "turbine_cover_naceller_top_front_in": 20,
-          "turbine_cover_naceller_top_rear_in": 20,
-          "turbine_cover_naceller_top_front_out": 20,
-          "turbine_cover_naceller_top_rear_out": 20,
           "nacelle_bottom_left": 15000,
-          "turbine_cover_nacellel_bot_front_out": 20,
-          "turbine_cover_nacellel_bot_rear_out": 20,
-          "turbine_cover_nacellel_bot_front_in": 20,
-          "turbine_cover_nacellel_bot_rear_in": 20,
-          "turbine_cover_nacellel_top_front_out": 20,
-          "turbine_cover_nacellel_top_rear_out": 20,
-          "turbine_cover_nacellel_top_front_in": 20,
-          "turbine_cover_nacellel_top_rear_in": 20
+          "turbine_cover_nacellel_bot_front_out": 50,
+          "turbine_cover_nacellel_bot_rear_out": 50,
+          "turbine_cover_nacellel_bot_front_in": 50,
+          "turbine_cover_nacellel_bot_rear_in": 50,
+          "turbine_cover_nacellel_top_front_out": 50,
+          "turbine_cover_nacellel_top_rear_out": 50,
+          "turbine_cover_nacellel_top_rear_in": 50,
+          "turbine_cover_nacellel_top_front_in": 50,
+          "nacelle_bottom_right": 15000,
+          "turbine_cover_naceller_bot_front_in": 50,
+          "turbine_cover_naceller_bot_rear_in": 50,
+          "turbine_cover_naceller_bot_front_out": 50,
+          "turbine_cover_naceller_bot_rear_out": 50,
+          "turbine_cover_naceller_top_front_in": 50,
+          "turbine_cover_naceller_top_rear_in": 50,
+          "turbine_cover_naceller_top_front_out": 50,
+          "turbine_cover_naceller_top_rear_out": 50,
+          "neck": 5000,
+          "escapepod_cover_bot_left": 1,
+          "escapepod_cover_bot_right": 1,
+          "escapepod_cover_top_right": 1,
+          "escapepod_cover_top_left": 1,
+          "nose": 2000,
+          "nose_turret_door_bottom_left": 100,
+          "nose_turret_door_bottom_right": 100,
+          "nose_turret_door_top_left": 100,
+          "nose_turret_door_top_right": 100,
+          "wing_left": 3000,
+          "turbine_cover_wingl_bot_front_out": 50,
+          "turbine_cover_wingl_bot_rear_out": 50,
+          "turbine_cover_wingl_bot_front_in": 50,
+          "turbine_cover_wingl_bot_rear_in": 50,
+          "turbine_cover_wingl_top_front_out": 50,
+          "turbine_cover_wingl_top_rear_out": 50,
+          "turbine_cover_wingl_top_front_in": 50,
+          "turbine_cover_wingl_top_rear_in": 50,
+          "wing_right": 3000,
+          "turbine_cover_wingr_top_rear_in": 50,
+          "turbine_cover_wingr_top_front_in": 50,
+          "turbine_cover_wingr_bot_rear_in": 50,
+          "turbine_cover_wingr_bot_front_out": 50,
+          "turbine_cover_wingr_top_rear_out": 50,
+          "turbine_cover_wingr_top_front_out": 50,
+          "turbine_cover_wingr_bot_front_in": 50,
+          "turbine_cover_wingr_bot_rear_out": 50,
+          "tail": 3000,
+          "nacelle_tower_left": 15000,
+          "nacelle_tower_right": 15000
         }
       },
       "ThrustersHealthPoints": {
         "Main": {
-          "engine_top_left": 24000,
-          "engine_top_right": 24000,
-          "engine_bottom_right": 24000,
-          "engine_bottom_left": 24000
+          "engine_bottom_left": 15000,
+          "engine_bottom_right": 15000,
+          "engine_top_left": 15000,
+          "engine_top_right": 15000
         },
         "Retro": {
-          "retro_top_left": 50000,
-          "retro_top_right": 50000,
-          "retro_bottom_right": 50000,
-          "retro_bottom_left": 50000
+          "retro_bottom_left": 7000,
+          "retro_bottom_right": 7000,
+          "retro_top_left": 7000,
+          "retro_top_right": 7000
         },
         "Vtol": {
-          "thruster_vtol_front_left_01": 50000,
-          "thruster_vtol_front_left_02": 50000,
-          "thruster_vtol_front_right_01": 50000,
-          "thruster_vtol_front_right_02": 50000,
-          "thruster_vtol_rear_right_01": 50000,
-          "thruster_vtol_rear_right_02": 50000,
-          "thruster_vtol_rear_left_01": 50000,
-          "thruster_vtol_rear_left_02": 50000
+          "thruster_vtol_rear_left_01": 5000,
+          "thruster_vtol_rear_left_02": 5000,
+          "thruster_vtol_rear_right_01": 5000,
+          "thruster_vtol_rear_right_02": 5000,
+          "thruster_vtol_front_left_01": 5000,
+          "thruster_vtol_front_left_02": 5000,
+          "thruster_vtol_front_right_01": 5000,
+          "thruster_vtol_front_right_02": 5000
         },
         "Maneuvering": {
-          "thruster_bottom_front_right": 50000,
-          "thruster_top_front_right": 50000,
-          "thruster_top_front_left": 50000,
-          "thruster_bottom_front_left": 50000,
-          "thruster_center_front_left": 50000,
-          "thruster_center_front_right": 50000,
-          "thruster_center_back_right": 50000,
-          "thruster_center_back_left": 50000,
-          "thruster_top_back_left": 50000,
-          "thruster_top_back_right": 50000,
-          "thruster_bottom_back_right": 50000,
-          "thruster_bottom_back_left": 50000
+          "thruster_bottom_back_left": 5000,
+          "thruster_bottom_back_right": 5000,
+          "thruster_bottom_front_left": 5000,
+          "thruster_bottom_front_right": 5000,
+          "thruster_top_front_left": 5000,
+          "thruster_top_front_right": 5000,
+          "thruster_center_front_left": 5000,
+          "thruster_center_front_right": 5000,
+          "thruster_center_back_right": 5000,
+          "thruster_center_back_left": 5000,
+          "thruster_top_back_left": 5000,
+          "thruster_top_back_right": 5000
         }
       },
       "DoorsHealthPoints": {
-        "cargo_bay": 6000,
-        "door_airlock_body_left": 6000,
-        "door_airlock_body_right": 6000,
-        "door_airlock_neck_top": 6000,
-        "door_elevator": 4000,
-        "merlin_dock_door": 6000
+        "cargo_bay": 1000,
+        "door_airlock_body_left": 7500,
+        "door_airlock_body_right": 7500,
+        "door_elevator": 1000,
+        "ground_fuel_port": 100,
+        "inner_door_left": 7500,
+        "inner_door_right": 7500,
+        "merlin_dock_door": 1234
       }
     },
     "FlightCharacteristics": {
@@ -41387,10 +41385,10 @@
       "Roll": 45,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 22280000,
-        "Retro": 11160000,
-        "Vtol": 4880000,
-        "Maneuvering": 13260000
+        "Main": 21547680,
+        "Retro": 10794920,
+        "Vtol": 2400000,
+        "Maneuvering": 21551244
       },
       "AccelerationG": {
         "IsValidated": true,
@@ -41406,7 +41404,7 @@
         "QuantumDriveSpoolTime": 8,
         "ScmMode": {
           "BoostSpeedForward": 390,
-          "BoostSpeedBackward": 191
+          "BoostSpeedBackward": 200
         }
       },
       "Boost": {
@@ -41451,16 +41449,16 @@
       "FuelIntakeRate": 0,
       "QuantumFuelCapacity": 7000000,
       "FuelBurnRatePer10KNewton": {
-        "Main": 2.304,
-        "Retro": 2.304,
-        "Vtol": 4.608,
-        "Maneuvering": 6.912
+        "Main": 5,
+        "Retro": 5,
+        "Vtol": 10,
+        "Maneuvering": 15
       },
       "FuelUsagePerSecond": {
-        "Main": 1283.328,
-        "Retro": 642.816,
-        "Vtol": 281.088,
-        "Maneuvering": 763.776
+        "Main": 2693.46,
+        "Retro": 1349.365,
+        "Vtol": 300,
+        "Maneuvering": 2693.905
       },
       "IntakeToMainFuelRatio": 0,
       "TimeForIntakesToFillTank": "Infinity"
@@ -41476,18 +41474,13 @@
       },
       "CrossSection": {
         "Front": 3125,
-        "Side": 10505,
-        "Top": 23935
+        "Side": 10500,
+        "Top": 24000
       }
     },
     "ResourceNetwork": {
       "ItemPools": {
         "WeaponPoolSize": 8
-      },
-      "Modifiers": {
-        "PowerRatioMultiplier": 1,
-        "MaxAmmoLoadMultiplier": 1.75,
-        "MaxRegenPerSecMultiplier": 1
       }
     },
     "BaseLoadout": {
@@ -41496,18 +41489,22 @@
       "TurretsBurstDPS": 2182,
       "TotalMissilesDmg": 56600
     },
+    "Buffs": {
+      "Salvage": {
+        "SpeedMultiplier": 1,
+        "RadiusMultiplier": 1,
+        "ExtractionEfficiency": 1
+      }
+    },
     "Insurance": {
       "StandardClaimTime": 13.5,
       "ExpeditedClaimTime": 4.5,
       "ExpeditedCost": 6750
-    },
-    "Buy": {
-      "New Deal, Lorville": 10160640
     }
   },
   {
-    "ClassName": "RSI_Constellation_Aquila",
-    "Name": "RSI Constellation Aquila",
+    "ClassName": "RSI_Constellation_Aquila_GS",
+    "Name": "RSI Constellation Mk IV Aquila",
     "Description": "Designed by RSI to traverse distant frontiers, the Constellation Aquila features a redesigned cockpit for maximum visibility, advanced sensors, and a P-52 snub craft and Ursa rover for planetary exploration. Discover for yourself why explorers the ‘verse over choose to captain the Aquila.",
     "Career": "Exploration",
     "Role": "Expedition",
@@ -41515,17 +41512,17 @@
     "Cargo": {
       "CargoGrid": 96,
       "CargoContainers": 0,
-      "Storage": 6
+      "Storage": 0
     },
     "Crew": 4,
     "WeaponCrew": 2,
     "OperationsCrew": 0,
-    "Mass": 406543,
-    "ComponentsMass": 75363,
+    "Mass": 385699.47,
+    "ComponentsMass": 74013,
     "Dimensions": {
-      "Length": 61,
-      "Width": 26,
-      "Height": 14
+      "Length": 62,
+      "Width": 26.6,
+      "Height": 16.3
     },
     "IsSpaceship": true,
     "Armor": {
@@ -41563,109 +41560,107 @@
       },
       "StructureHealthPoints": {
         "VitalParts": {
-          "neck": 20000,
-          "nose": 20000,
-          "body": 20000,
-          "tail": 20000
+          "body": 25000
         },
         "Parts": {
-          "nose_turret_housings": 500,
-          "wing_left": 15000,
-          "turbine_cover_wingl_bot_front_out": 20,
-          "turbine_cover_wingl_bot_rear_out": 20,
-          "turbine_cover_wingl_bot_front_in": 20,
-          "turbine_cover_wingl_bot_rear_in": 20,
-          "turbine_cover_wingl_top_front_out": 20,
-          "turbine_cover_wingl_top_rear_out": 20,
-          "turbine_cover_wingl_top_front_in": 20,
-          "turbine_cover_wingl_top_rear_in": 20,
-          "wing_right": 15000,
-          "turbine_cover_wingr_top_rear_in": 20,
-          "turbine_cover_wingr_top_front_in": 20,
-          "turbine_cover_wingr_bot_rear_in": 20,
-          "turbine_cover_wingr_bot_front_out": 20,
-          "turbine_cover_wingr_top_rear_out": 20,
-          "turbine_cover_wingr_top_front_out": 20,
-          "turbine_cover_wingr_bot_front_in": 20,
-          "turbine_cover_wingr_bot_rear_out": 20,
-          "nose_turret_door_bottom_left": 1,
-          "nose_turret_door_bottom_right": 1,
-          "nose_turret_door_top_left": 1,
-          "nose_turret_door_top_right": 1,
-          "hardpoint_lightgroup": 200,
-          "misslerack_arm_body_left_arm": 1750,
-          "misslerack_arm_body_right_arm": 1750,
-          "misslerack_arm_tail_left_arm": 1750,
-          "nacelle_tower_left": 1000,
-          "nacelle_left": 15000,
-          "nacelle_tower_right": 1000,
-          "nacelle_right": 15000,
-          "misslerack_arm_tail_right_arm": 1750,
-          "nacelle_bottom_right": 15000,
-          "turbine_cover_naceller_bot_front_in": 20,
-          "turbine_cover_naceller_bot_rear_in": 20,
-          "turbine_cover_naceller_bot_front_out": 20,
-          "turbine_cover_naceller_bot_rear_out": 20,
-          "turbine_cover_naceller_top_front_in": 20,
-          "turbine_cover_naceller_top_rear_in": 20,
-          "turbine_cover_naceller_top_front_out": 20,
-          "turbine_cover_naceller_top_rear_out": 20,
           "nacelle_bottom_left": 15000,
-          "turbine_cover_nacellel_bot_front_out": 20,
-          "turbine_cover_nacellel_bot_rear_out": 20,
-          "turbine_cover_nacellel_bot_front_in": 20,
-          "turbine_cover_nacellel_bot_rear_in": 20,
-          "turbine_cover_nacellel_top_front_out": 20,
-          "turbine_cover_nacellel_top_rear_out": 20,
-          "turbine_cover_nacellel_top_front_in": 20,
-          "turbine_cover_nacellel_top_rear_in": 20
+          "turbine_cover_nacellel_bot_front_out": 50,
+          "turbine_cover_nacellel_bot_rear_out": 50,
+          "turbine_cover_nacellel_bot_front_in": 50,
+          "turbine_cover_nacellel_bot_rear_in": 50,
+          "turbine_cover_nacellel_top_front_out": 50,
+          "turbine_cover_nacellel_top_rear_out": 50,
+          "turbine_cover_nacellel_top_rear_in": 50,
+          "turbine_cover_nacellel_top_front_in": 50,
+          "nacelle_bottom_right": 15000,
+          "turbine_cover_naceller_bot_front_in": 50,
+          "turbine_cover_naceller_bot_rear_in": 50,
+          "turbine_cover_naceller_bot_front_out": 50,
+          "turbine_cover_naceller_bot_rear_out": 50,
+          "turbine_cover_naceller_top_front_in": 50,
+          "turbine_cover_naceller_top_rear_in": 50,
+          "turbine_cover_naceller_top_front_out": 50,
+          "turbine_cover_naceller_top_rear_out": 50,
+          "neck": 5000,
+          "escapepod_cover_bot_left": 1,
+          "escapepod_cover_bot_right": 1,
+          "escapepod_cover_top_right": 1,
+          "escapepod_cover_top_left": 1,
+          "nose": 2000,
+          "nose_turret_door_bottom_left": 100,
+          "nose_turret_door_bottom_right": 100,
+          "nose_turret_door_top_left": 100,
+          "nose_turret_door_top_right": 100,
+          "wing_left": 3000,
+          "turbine_cover_wingl_bot_front_out": 50,
+          "turbine_cover_wingl_bot_rear_out": 50,
+          "turbine_cover_wingl_bot_front_in": 50,
+          "turbine_cover_wingl_bot_rear_in": 50,
+          "turbine_cover_wingl_top_front_out": 50,
+          "turbine_cover_wingl_top_rear_out": 50,
+          "turbine_cover_wingl_top_front_in": 50,
+          "turbine_cover_wingl_top_rear_in": 50,
+          "wing_right": 3000,
+          "turbine_cover_wingr_top_rear_in": 50,
+          "turbine_cover_wingr_top_front_in": 50,
+          "turbine_cover_wingr_bot_rear_in": 50,
+          "turbine_cover_wingr_bot_front_out": 50,
+          "turbine_cover_wingr_top_rear_out": 50,
+          "turbine_cover_wingr_top_front_out": 50,
+          "turbine_cover_wingr_bot_front_in": 50,
+          "turbine_cover_wingr_bot_rear_out": 50,
+          "tail": 3000,
+          "nacelle_tower_left": 15000,
+          "nacelle_tower_right": 15000
         }
       },
       "ThrustersHealthPoints": {
         "Main": {
-          "engine_top_left": 24000,
-          "engine_top_right": 24000,
-          "engine_bottom_right": 24000,
-          "engine_bottom_left": 24000
+          "engine_bottom_left": 15000,
+          "engine_bottom_right": 15000,
+          "engine_top_left": 15000,
+          "engine_top_right": 15000
         },
         "Retro": {
-          "retro_top_left": 50000,
-          "retro_top_right": 50000,
-          "retro_bottom_right": 50000,
-          "retro_bottom_left": 50000
+          "retro_bottom_left": 7000,
+          "retro_bottom_right": 7000,
+          "retro_top_left": 7000,
+          "retro_top_right": 7000
         },
         "Vtol": {
-          "thruster_vtol_front_left_01": 50000,
-          "thruster_vtol_front_left_02": 50000,
-          "thruster_vtol_front_right_01": 50000,
-          "thruster_vtol_front_right_02": 50000,
-          "thruster_vtol_rear_right_01": 50000,
-          "thruster_vtol_rear_right_02": 50000,
-          "thruster_vtol_rear_left_01": 50000,
-          "thruster_vtol_rear_left_02": 50000
+          "thruster_vtol_rear_left_01": 5000,
+          "thruster_vtol_rear_left_02": 5000,
+          "thruster_vtol_rear_right_01": 5000,
+          "thruster_vtol_rear_right_02": 5000,
+          "thruster_vtol_front_left_01": 5000,
+          "thruster_vtol_front_left_02": 5000,
+          "thruster_vtol_front_right_01": 5000,
+          "thruster_vtol_front_right_02": 5000
         },
         "Maneuvering": {
-          "thruster_bottom_front_right": 50000,
-          "thruster_top_front_right": 50000,
-          "thruster_top_front_left": 50000,
-          "thruster_bottom_front_left": 50000,
-          "thruster_center_front_left": 50000,
-          "thruster_center_front_right": 50000,
-          "thruster_center_back_right": 50000,
-          "thruster_center_back_left": 50000,
-          "thruster_top_back_left": 50000,
-          "thruster_top_back_right": 50000,
-          "thruster_bottom_back_right": 50000,
-          "thruster_bottom_back_left": 50000
+          "thruster_bottom_back_left": 5000,
+          "thruster_bottom_back_right": 5000,
+          "thruster_bottom_front_left": 5000,
+          "thruster_bottom_front_right": 5000,
+          "thruster_top_front_left": 5000,
+          "thruster_top_front_right": 5000,
+          "thruster_center_front_left": 5000,
+          "thruster_center_front_right": 5000,
+          "thruster_center_back_right": 5000,
+          "thruster_center_back_left": 5000,
+          "thruster_top_back_left": 5000,
+          "thruster_top_back_right": 5000
         }
       },
       "DoorsHealthPoints": {
-        "cargo_bay": 6000,
-        "door_airlock_body_left": 6000,
-        "door_airlock_body_right": 6000,
-        "door_airlock_neck_top": 6000,
-        "door_elevator": 4000,
-        "merlin_dock_door": 6000
+        "cargo_bay": 1000,
+        "door_airlock_body_left": 7500,
+        "door_airlock_body_right": 7500,
+        "door_elevator": 1000,
+        "ground_fuel_port": 100,
+        "inner_door_left": 7500,
+        "inner_door_right": 7500,
+        "merlin_dock_door": 1234
       }
     },
     "FlightCharacteristics": {
@@ -41676,10 +41671,10 @@
       "Roll": 45,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 22280000,
-        "Retro": 11160000,
-        "Vtol": 4880000,
-        "Maneuvering": 13260000
+        "Main": 24589436,
+        "Retro": 12394676,
+        "Vtol": 2400000,
+        "Maneuvering": 25668972
       },
       "AccelerationG": {
         "IsValidated": true,
@@ -41695,7 +41690,7 @@
         "QuantumDriveSpoolTime": 8,
         "ScmMode": {
           "BoostSpeedForward": 380,
-          "BoostSpeedBackward": 191
+          "BoostSpeedBackward": 200
         }
       },
       "Boost": {
@@ -41740,18 +41735,18 @@
       "FuelIntakeRate": 100,
       "QuantumFuelCapacity": 8100000,
       "FuelBurnRatePer10KNewton": {
-        "Main": 1.732,
-        "Retro": 1.732,
-        "Vtol": 3.464,
-        "Maneuvering": 5.196
+        "Main": 5,
+        "Retro": 5,
+        "Vtol": 10,
+        "Maneuvering": 15
       },
       "FuelUsagePerSecond": {
-        "Main": 964.724,
-        "Retro": 483.228,
-        "Vtol": 211.304,
-        "Maneuvering": 574.158
+        "Main": 3073.68,
+        "Retro": 1549.334,
+        "Vtol": 300,
+        "Maneuvering": 3208.621
       },
-      "IntakeToMainFuelRatio": 10.37,
+      "IntakeToMainFuelRatio": 3.25,
       "TimeForIntakesToFillTank": 226000
     },
     "Emissions": {
@@ -41764,19 +41759,14 @@
         "Start": 0
       },
       "CrossSection": {
-        "Front": 2999,
-        "Side": 10083,
-        "Top": 22973
+        "Front": 3125,
+        "Side": 10500,
+        "Top": 24000
       }
     },
     "ResourceNetwork": {
       "ItemPools": {
         "WeaponPoolSize": 8
-      },
-      "Modifiers": {
-        "PowerRatioMultiplier": 1,
-        "MaxAmmoLoadMultiplier": 1.75,
-        "MaxRegenPerSecMultiplier": 1
       }
     },
     "BaseLoadout": {
@@ -41785,18 +41775,278 @@
       "TurretsBurstDPS": 1091,
       "TotalMissilesDmg": 38400
     },
+    "Buffs": {
+      "Salvage": {
+        "SpeedMultiplier": 1,
+        "RadiusMultiplier": 1,
+        "ExtractionEfficiency": 1
+      }
+    },
     "Insurance": {
       "StandardClaimTime": 16.2,
       "ExpeditedClaimTime": 5.4,
       "ExpeditedCost": 9171
-    },
-    "Buy": {
-      "New Deal, Lorville": 12186720
     }
   },
   {
-    "ClassName": "RSI_Constellation_Phoenix",
-    "Name": "RSI Constellation Phoenix",
+    "ClassName": "RSI_Constellation_Mk5_Centaurus",
+    "Name": "RSI Constellation Mk V Centaurus",
+    "Description": "The Constellation Mk V Centaurus reimages RSI's classic, versatile multi-crew ship for a new generation. Its bold new look honors the last-generation Constellation while updating the design to take advantage of the increased size to feature a larger crew mess and cargo bay. Bigger turrets and missiles racks provide additional defense, and an updated snub-fighter docking port is the perfect home for the RSI Skylark. Together these changes elevate the Mk V into a truly modern ship ready and raring to go on any adventure.",
+    "Career": "Multi-Role",
+    "Role": "Medium Freight / Gun Ship",
+    "Size": 5,
+    "Cargo": {
+      "CargoGrid": 240,
+      "CargoContainers": 0,
+      "Storage": 0
+    },
+    "Crew": 4,
+    "WeaponCrew": 2,
+    "OperationsCrew": 0,
+    "Mass": 1240000,
+    "ComponentsMass": 166212,
+    "Dimensions": {
+      "Length": 82.5,
+      "Width": 47.5,
+      "Height": 20.25
+    },
+    "IsSpaceship": true,
+    "Armor": {
+      "Durability": {
+        "Health": 25740,
+        "DamageMultipliers": {
+          "Physical": 0.81,
+          "Energy": 1.21,
+          "Distortion": 1,
+          "Thermal": 1,
+          "Biochemical": 1,
+          "Stun": 1
+        }
+      },
+      "DamageDeflection": {
+        "Physical": 531,
+        "Energy": 380,
+        "Distortion": 0
+      },
+      "DamageMultipliers": {
+        "Physical": 0.7,
+        "Energy": 0.5,
+        "Distortion": 1
+      },
+      "SignalMultipliers": {
+        "Electromagnetic": 1,
+        "Infrared": 1,
+        "CrossSection": 1
+      }
+    },
+    "Hull": {
+      "PenetrationDamageMultiplier": {
+        "Fuse": 0.7,
+        "Component": 1
+      },
+      "StructureHealthPoints": {
+        "VitalParts": {
+          "geo_body": 45000
+        },
+        "Parts": {
+          "geo_front": 4000,
+          "geo_vtol_panel_bottom_front_left": 100,
+          "geo_vtol_panel_bottom_front_right": 100,
+          "geo_landing_gear_housing_rear_left": 20000,
+          "geo_landing_gear_door_rear_left": 100,
+          "geo_landing_gear_door_front_left": 100,
+          "geo_landing_gear_door_02_rear_left": 100,
+          "geo_landing_gear_door_01_rear_left": 100,
+          "dbr_nacelle_bottom_left": 12000,
+          "geo_landing_gear_housing_rear_right": 20000,
+          "geo_landing_gear_door_01_rear_right": 100,
+          "geo_landing_gear_door_02_rear_right": 100,
+          "geo_landing_gear_door_front_right": 100,
+          "geo_landing_gear_door_rear_right": 100,
+          "dbr_nacelle_bottom_right": 12000,
+          "dbr_nacelle_main_housing_top_left": 20000,
+          "dbr_nacelle_winglet_01_top_left": 500,
+          "dbr_nacelle_main_housing_top_right": 20000,
+          "dbr_nacelle_winglet_01_top_right": 500,
+          "dbr_rear_winglet_right": 3500,
+          "dbr_rear_winglet_left": 3500,
+          "geo_fins_support_base": 100,
+          "geo_fins_support_end_left": 100,
+          "dbr_rear_fins_top_left": 2000,
+          "dbr_rear_fins_bottom_left": 2000,
+          "geo_fins_support_end_right": 100,
+          "dbr_rear_fins_top_right": 2000,
+          "dbr_rear_fins_bottom_right": 2000,
+          "geo_rear_vtol_panel_left": 100,
+          "geo_rear_vtol_panel_right": 100
+        }
+      },
+      "ThrustersHealthPoints": {
+        "Main": {
+          "thruster_main_bottom_left": 20000,
+          "thruster_main_bottom_right": 20000,
+          "thruster_main_top_left": 20000,
+          "thruster_main_top_right": 20000
+        },
+        "Retro": {
+          "thruster_retro_bottom_left": 7000,
+          "thruster_retro_bottom_right": 7000,
+          "thruster_retro_top_left": 7000,
+          "thruster_retro_top_right": 7000
+        },
+        "Vtol": {
+          "thruster_vtol_rear_left": 5000,
+          "thruster_vtol_rear_right": 5000,
+          "thruster_vtol_front_left": 5000,
+          "thruster_vtol_front_right": 5000
+        },
+        "Maneuvering": {
+          "thruster_mav_rear_side_left": 5000,
+          "thruster_mav_rear_side_right": 5000,
+          "thruster_mav_front_side_left": 5000,
+          "thruster_mav_front_top_left": 5000,
+          "thruster_mav_front_side_right": 5000,
+          "thruster_mav_front_top_right": 5000,
+          "thruster_mav_rear_bottom_left": 5000,
+          "thruster_mav_rear_bottom_right": 5000,
+          "thruster_mav_rear_top_left": 5000,
+          "thruster_mav_rear_top_right": 5000,
+          "thruster_mav_front_bottom_right": 5000,
+          "thruster_mav_front_bottom_left": 5000
+        }
+      },
+      "DoorsHealthPoints": {
+        "airlock_door": 13500,
+        "cargo_lift": 8000,
+        "docking_door": 13500,
+        "personnel_elevator": 8000
+      }
+    },
+    "FlightCharacteristics": {
+      "ScmSpeed": 170,
+      "MaxSpeed": 1075,
+      "Pitch": 22,
+      "Yaw": 18,
+      "Roll": 35,
+      "IsVtolAssisted": false,
+      "ThrustCapacity": {
+        "Main": 78999480,
+        "Retro": 31701256,
+        "Vtol": 7993128,
+        "Maneuvering": 155578700
+      },
+      "AccelerationG": {
+        "IsValidated": false,
+        "Main": 6.5,
+        "Retro": 2.61,
+        "Strafe": 0,
+        "Up": 0,
+        "Down": 0
+      },
+      "MasterModes": {
+        "BaseSpoolTime": 1,
+        "QuantumDriveSpoolTime": 7.6,
+        "ScmMode": {
+          "BoostSpeedForward": 365,
+          "BoostSpeedBackward": 191
+        }
+      },
+      "Boost": {
+        "PreDelay": 0,
+        "RampUp": 2,
+        "RampDown": 0.2,
+        "AccelerationMultiplier": {
+          "PositiveAxis": {
+            "X": 1.35,
+            "Y": 1.5,
+            "Z": 1.3
+          },
+          "NegativeAxis": {
+            "X": 1.35,
+            "Y": 1.2,
+            "Z": 1.2
+          }
+        },
+        "AngularAccelerationMultiplier": {
+          "Pitch": 1.5,
+          "Yaw": 1.5,
+          "Roll": 2
+        },
+        "AngularVelocityMultiplier": {
+          "Pitch": 1.5,
+          "Yaw": 1.5,
+          "Roll": 2
+        }
+      },
+      "Capacitors": {
+        "ThrusterCapacitorSize": 20,
+        "CapacitorRegenPerSec": 0.75,
+        "CapacitorIdleCost": 1,
+        "CapacitorLinearCost": 0,
+        "CapacitorUsageModifier": 1,
+        "CapacitorRegenDelay": 1.1,
+        "RegenerationTime": 26.7
+      }
+    },
+    "FuelManagement": {
+      "FuelCapacity": 46800000,
+      "FuelIntakeRate": 0,
+      "QuantumFuelCapacity": 8600000,
+      "FuelBurnRatePer10KNewton": {
+        "Main": 5,
+        "Retro": 5,
+        "Vtol": 5,
+        "Maneuvering": 15
+      },
+      "FuelUsagePerSecond": {
+        "Main": 9874.935,
+        "Retro": 3962.657,
+        "Vtol": 999.141,
+        "Maneuvering": 19447.338
+      },
+      "IntakeToMainFuelRatio": 0,
+      "TimeForIntakesToFillTank": "Infinity"
+    },
+    "Emissions": {
+      "Electromagnetic": {
+        "SCMIdle": 0,
+        "SCMActive": 0,
+        "NAV": 0
+      },
+      "Infrared": {
+        "Start": 0
+      },
+      "CrossSection": {
+        "Front": 11320,
+        "Side": 8350,
+        "Top": 25430
+      }
+    },
+    "ResourceNetwork": {
+      "ItemPools": {
+        "WeaponPoolSize": 4
+      },
+      "Modifiers": {
+        "PowerRatioMultiplier": 1,
+        "MaxAmmoLoadMultiplier": 9,
+        "MaxRegenPerSecMultiplier": 1
+      }
+    },
+    "BaseLoadout": {
+      "TotalShieldHP": 200000,
+      "PilotBurstDPS": 4910,
+      "TurretsBurstDPS": 4365,
+      "TotalMissilesDmg": 51200
+    },
+    "Insurance": {
+      "StandardClaimTime": 13.5,
+      "ExpeditedClaimTime": 4.5,
+      "ExpeditedCost": 6750
+    }
+  },
+  {
+    "ClassName": "RSI_Constellation_Phoenix_GS",
+    "Name": "RSI Constellation Mk IV Phoenix",
     "Description": "A dedicated luxury spacecraft for the discerning star captain. The Constellation Phoenix can be operated as an organization command ship and features a luxurious redesigned interior. Includes a hidden sensor-dampened area for your most precious cargo. The Phoenix comes with a Lynx rover and a Kruger P-72 Archimedes Fighter.",
     "Career": "Exploration",
     "Role": "Luxury Touring",
@@ -41804,25 +42054,25 @@
     "Cargo": {
       "CargoGrid": 80,
       "CargoContainers": 0,
-      "Storage": 5.25
+      "Storage": 0
     },
     "Crew": 4,
     "WeaponCrew": 2,
     "OperationsCrew": 0,
-    "Mass": 383801,
-    "ComponentsMass": 76789,
+    "Mass": 363884.47,
+    "ComponentsMass": 75439,
     "Dimensions": {
-      "Length": 61,
-      "Width": 26,
-      "Height": 14
+      "Length": 62,
+      "Width": 26.6,
+      "Height": 16.3
     },
     "IsSpaceship": true,
     "Armor": {
       "Durability": {
         "Health": 13440,
         "DamageMultipliers": {
-          "Physical": 0.86,
-          "Energy": 1.35,
+          "Physical": 0.81,
+          "Energy": 1.28,
           "Distortion": 1,
           "Thermal": 1,
           "Biochemical": 1,
@@ -41852,106 +42102,105 @@
       },
       "StructureHealthPoints": {
         "VitalParts": {
-          "neck": 20000,
-          "nose": 20000,
-          "body": 20000,
-          "tail": 20000
+          "body": 25000
         },
         "Parts": {
-          "wing_right": 15000,
-          "turbine_cover_wingr_top_rear_in": 20,
-          "turbine_cover_wingr_top_front_in": 20,
-          "turbine_cover_wingr_bot_rear_in": 20,
-          "turbine_cover_wingr_bot_front_out": 20,
-          "turbine_cover_wingr_top_rear_out": 20,
-          "turbine_cover_wingr_top_front_out": 20,
-          "turbine_cover_wingr_bot_front_in": 20,
-          "turbine_cover_wingr_bot_rear_out": 20,
-          "wing_left": 15000,
-          "turbine_cover_wingl_bot_front_out": 20,
-          "turbine_cover_wingl_bot_rear_out": 20,
-          "turbine_cover_wingl_bot_front_in": 20,
-          "turbine_cover_wingl_bot_rear_in": 20,
-          "turbine_cover_wingl_top_front_out": 20,
-          "turbine_cover_wingl_top_rear_out": 20,
-          "turbine_cover_wingl_top_front_in": 20,
-          "turbine_cover_wingl_top_rear_in": 20,
-          "nose_TurretHousings": 1,
-          "nose_turret_door_bottom_left": 1,
-          "nose_turret_door_bottom_right": 1,
-          "nose_turret_door_top_left": 1,
-          "nose_turret_door_top_right": 1,
-          "misslerack_arm_body_left_arm": 1750,
-          "misslerack_arm_body_right_arm": 1750,
+          "Body_Bottom": 1,
           "nacelle_bottom_right": 15000,
-          "turbine_cover_naceller_bot_front_in": 20,
-          "turbine_cover_naceller_bot_rear_in": 20,
-          "turbine_cover_naceller_bot_front_out": 20,
-          "turbine_cover_naceller_bot_rear_out": 20,
-          "turbine_cover_naceller_top_front_in": 20,
-          "turbine_cover_naceller_top_rear_in": 20,
-          "turbine_cover_naceller_top_front_out": 20,
-          "turbine_cover_naceller_top_rear_out": 20,
+          "turbine_cover_naceller_bot_front_in": 50,
+          "turbine_cover_naceller_bot_rear_in": 50,
+          "turbine_cover_naceller_bot_front_out": 50,
+          "turbine_cover_naceller_bot_rear_out": 50,
+          "turbine_cover_naceller_top_front_in": 50,
+          "turbine_cover_naceller_top_rear_in": 50,
+          "turbine_cover_naceller_top_front_out": 50,
+          "turbine_cover_naceller_top_rear_out": 50,
           "nacelle_bottom_left": 15000,
-          "turbine_cover_nacellel_bot_front_out": 20,
-          "turbine_cover_nacellel_bot_rear_out": 20,
-          "turbine_cover_nacellel_bot_front_in": 20,
-          "turbine_cover_nacellel_bot_rear_in": 20,
-          "turbine_cover_nacellel_top_front_out": 20,
-          "turbine_cover_nacellel_top_rear_out": 20,
-          "turbine_cover_nacellel_top_front_in": 20,
-          "turbine_cover_nacellel_top_rear_in": 20,
-          "misslerack_arm_tail_left_arm": 1750,
-          "misslerack_arm_tail_right_arm": 1750,
-          "nacelle_tower_left": 1000,
-          "nacelle_left": 5500,
-          "nacelle_tower_right": 1000,
-          "nacelle_right": 5500
+          "turbine_cover_nacellel_bot_front_out": 50,
+          "turbine_cover_nacellel_bot_rear_out": 50,
+          "turbine_cover_nacellel_bot_front_in": 50,
+          "turbine_cover_nacellel_bot_rear_in": 50,
+          "turbine_cover_nacellel_top_front_out": 50,
+          "turbine_cover_nacellel_top_rear_out": 50,
+          "turbine_cover_nacellel_top_front_in": 50,
+          "turbine_cover_nacellel_top_rear_in": 50,
+          "neck": 5000,
+          "escapepod_cover_bot_left": 1,
+          "escapepod_cover_bot_right": 1,
+          "escapepod_cover_top_right": 1,
+          "nose": 3000,
+          "nose_turret_door_bottom_left": 100,
+          "nose_turret_door_bottom_right": 100,
+          "nose_turret_door_top_left": 100,
+          "nose_turret_door_top_right": 100,
+          "wing_left": 3000,
+          "turbine_cover_wingl_bot_front_out": 50,
+          "turbine_cover_wingl_bot_rear_out": 50,
+          "turbine_cover_wingl_bot_front_in": 50,
+          "turbine_cover_wingl_bot_rear_in": 50,
+          "turbine_cover_wingl_top_front_out": 50,
+          "turbine_cover_wingl_top_rear_out": 50,
+          "turbine_cover_wingl_top_front_in": 50,
+          "turbine_cover_wingl_top_rear_in": 50,
+          "wing_right": 3000,
+          "turbine_cover_wingr_top_rear_in": 50,
+          "turbine_cover_wingr_top_front_in": 50,
+          "turbine_cover_wingr_bot_rear_in": 50,
+          "turbine_cover_wingr_bot_front_out": 50,
+          "turbine_cover_wingr_top_rear_out": 50,
+          "turbine_cover_wingr_top_front_out": 50,
+          "turbine_cover_wingr_bot_front_in": 50,
+          "turbine_cover_wingr_bot_rear_out": 50,
+          "escapepod_cover_top_left": 1,
+          "tail": 3000,
+          "nacelle_tower_left": 15000,
+          "nacelle_tower_right": 15000
         }
       },
       "ThrustersHealthPoints": {
         "Main": {
-          "engine_bottom_right": 24000,
-          "engine_bottom_left": 24000,
-          "engine_top_left": 24000,
-          "engine_top_right": 24000
+          "engine_bottom_right": 15000,
+          "engine_bottom_left": 15000,
+          "engine_top_left": 15000,
+          "engine_top_right": 15000
         },
         "Retro": {
-          "retro_bottom_right": 50000,
-          "retro_bottom_left": 50000,
-          "retro_top_left": 50000,
-          "retro_top_right": 50000
+          "retro_bottom_right": 7000,
+          "retro_bottom_left": 7000,
+          "retro_top_left": 7000,
+          "retro_top_right": 7000
         },
         "Vtol": {
-          "thruster_vtol_front_right_01": 50000,
-          "thruster_vtol_front_right_02": 50000,
-          "thruster_vtol_front_left_01": 50000,
-          "thruster_vtol_front_left_02": 50000,
-          "thruster_vtol_rear_right_01": 50000,
-          "thruster_vtol_rear_right_02": 50000,
-          "thruster_vtol_rear_left_01": 50000,
-          "thruster_vtol_rear_left_02": 50000
+          "thruster_vtol_rear_right_01": 5000,
+          "thruster_vtol_rear_right_02": 5000,
+          "thruster_vtol_rear_left_01": 5000,
+          "thruster_vtol_rear_left_02": 5000,
+          "thruster_vtol_front_left_01": 5000,
+          "thruster_vtol_front_left_02": 5000,
+          "thruster_vtol_front_right_01": 5000,
+          "thruster_vtol_front_right_02": 5000
         },
         "Maneuvering": {
-          "thruster_bottom_front_left": 50000,
-          "thruster_bottom_front_right": 50000,
-          "thruster_top_front_left": 50000,
-          "thruster_top_front_right": 50000,
-          "thruster_center_front_right": 50000,
-          "thruster_center_front_left": 50000,
-          "thruster_bottom_back_right": 50000,
-          "thruster_bottom_back_left": 50000,
-          "thruster_center_back_right": 50000,
-          "thruster_center_back_left": 50000,
-          "thruster_top_back_left": 50000,
-          "thruster_top_back_right": 50000
+          "thruster_bottom_back_right": 5000,
+          "thruster_bottom_back_left": 5000,
+          "thruster_bottom_front_left": 5000,
+          "thruster_bottom_front_right": 5000,
+          "thruster_top_front_left": 5000,
+          "thruster_top_front_right": 5000,
+          "thruster_center_front_left": 5000,
+          "thruster_center_front_right": 5000,
+          "thruster_center_back_right": 5000,
+          "thruster_center_back_left": 5000,
+          "thruster_top_back_left": 5000,
+          "thruster_top_back_right": 5000
         }
       },
       "DoorsHealthPoints": {
-        "cargo_bay": 6000,
-        "door_airlock_neck_top": 6000,
-        "door_elevator": 4000,
-        "merlin_dock_door": 6000
+        "cargo_bay": 1000,
+        "door_airlock_body_right": 7500,
+        "door_elevator": 1000,
+        "ground_fuel_port": 100,
+        "merlin_dock_door": 1234
       }
     },
     "FlightCharacteristics": {
@@ -41962,10 +42211,10 @@
       "Roll": 45,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 22280000,
-        "Retro": 11160000,
-        "Vtol": 4880000,
-        "Maneuvering": 13260000
+        "Main": 21452572,
+        "Retro": 10750288,
+        "Vtol": 2400000,
+        "Maneuvering": 21463680
       },
       "AccelerationG": {
         "IsValidated": true,
@@ -41974,14 +42223,14 @@
         "Strafe": 2.5,
         "Up": 3.1,
         "Down": 2.5,
-        "CheckDate": "2025-07-02"
+        "CheckDate": "2026-10-09"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
         "QuantumDriveSpoolTime": 8,
         "ScmMode": {
           "BoostSpeedForward": 385,
-          "BoostSpeedBackward": 191
+          "BoostSpeedBackward": 200
         }
       },
       "Boost": {
@@ -42026,16 +42275,16 @@
       "FuelIntakeRate": 0,
       "QuantumFuelCapacity": 7000000,
       "FuelBurnRatePer10KNewton": {
-        "Main": 2.304,
-        "Retro": 2.304,
-        "Vtol": 4.608,
-        "Maneuvering": 6.912
+        "Main": 5,
+        "Retro": 5,
+        "Vtol": 10,
+        "Maneuvering": 15
       },
       "FuelUsagePerSecond": {
-        "Main": 1283.328,
-        "Retro": 642.816,
-        "Vtol": 281.088,
-        "Maneuvering": 763.776
+        "Main": 2681.572,
+        "Retro": 1343.786,
+        "Vtol": 300,
+        "Maneuvering": 2682.96
       },
       "IntakeToMainFuelRatio": 0,
       "TimeForIntakesToFillTank": "Infinity"
@@ -42050,19 +42299,14 @@
         "Start": 0
       },
       "CrossSection": {
-        "Front": 3094,
-        "Side": 10400,
-        "Top": 23696
+        "Front": 3125,
+        "Side": 10500,
+        "Top": 24000
       }
     },
     "ResourceNetwork": {
       "ItemPools": {
         "WeaponPoolSize": 8
-      },
-      "Modifiers": {
-        "PowerRatioMultiplier": 1,
-        "MaxAmmoLoadMultiplier": 1.75,
-        "MaxRegenPerSecMultiplier": 1
       }
     },
     "BaseLoadout": {
@@ -42072,18 +42316,22 @@
       "PDCBurstDPS": 167,
       "TotalMissilesDmg": 18200
     },
+    "Buffs": {
+      "Salvage": {
+        "SpeedMultiplier": 1,
+        "RadiusMultiplier": 1,
+        "ExtractionEfficiency": 1
+      }
+    },
     "Insurance": {
       "StandardClaimTime": 24.3,
       "ExpeditedClaimTime": 8.1,
       "ExpeditedCost": 12079
-    },
-    "Buy": {
-      "New Deal, Lorville": 14817600
     }
   },
   {
-    "ClassName": "RSI_Constellation_Taurus",
-    "Name": "RSI Constellation Taurus",
+    "ClassName": "RSI_Constellation_Taurus_GS",
+    "Name": "RSI Constellation Mk IV Taurus",
     "Description": "Paired down to fully focus on hauling, the Taurus provides the most cargo space of any ship in RSI’s Constellation line-up. What it loses in versatility it more than makes up for in potential profits thanks to its tractor beams, a cargo release system for quick unloading, and a security hold reinforced with tech plating.",
     "Career": "Transporter",
     "Role": "Medium Freight",
@@ -42091,25 +42339,25 @@
     "Cargo": {
       "CargoGrid": 174,
       "CargoContainers": 0,
-      "Storage": 5.25
+      "Storage": 0
     },
     "Crew": 4,
     "WeaponCrew": 1,
     "OperationsCrew": 1,
-    "Mass": 383801,
-    "ComponentsMass": 58865,
+    "Mass": 361677,
+    "ComponentsMass": 57515,
     "Dimensions": {
       "Length": 69,
-      "Width": 26,
-      "Height": 14
+      "Width": 28.6,
+      "Height": 16.3
     },
     "IsSpaceship": true,
     "Armor": {
       "Durability": {
         "Health": 13440,
         "DamageMultipliers": {
-          "Physical": 0.86,
-          "Energy": 1.35,
+          "Physical": 0.81,
+          "Energy": 1.28,
           "Distortion": 1,
           "Thermal": 1,
           "Biochemical": 1,
@@ -42139,106 +42387,107 @@
       },
       "StructureHealthPoints": {
         "VitalParts": {
-          "neck": 20000,
-          "nose": 20000,
-          "body": 20000,
-          "tail": 20000
+          "body": 25000
         },
         "Parts": {
-          "nose_TurretHousings": 500,
+          "nacelle_bottom_right": 15000,
+          "turbine_cover_naceller_bot_front_in": 50,
+          "turbine_cover_naceller_bot_rear_in": 50,
+          "turbine_cover_naceller_bot_front_out": 50,
+          "turbine_cover_naceller_bot_rear_out": 50,
+          "turbine_cover_naceller_top_front_in": 50,
+          "turbine_cover_naceller_top_rear_in": 50,
+          "turbine_cover_naceller_top_front_out": 50,
+          "turbine_cover_naceller_top_rear_out": 50,
+          "nacelle_bottom_left": 15000,
+          "turbine_cover_nacellel_bot_front_out": 50,
+          "turbine_cover_nacellel_bot_rear_out": 50,
+          "turbine_cover_nacellel_bot_front_in": 50,
+          "turbine_cover_nacellel_bot_rear_in": 50,
+          "turbine_cover_nacellel_top_front_out": 50,
+          "turbine_cover_nacellel_top_rear_out": 50,
+          "turbine_cover_nacellel_top_front_in": 50,
+          "turbine_cover_nacellel_top_rear_in": 50,
+          "neck": 5000,
+          "escapepod_cover_bot_left": 1,
+          "escapepod_cover_bot_right": 1,
+          "escapepod_cover_top_right": 1,
+          "escapepod_cover_top_left": 1,
+          "nose": 3000,
           "nose_turret_door_bottom_left": 100,
           "nose_turret_door_bottom_right": 100,
           "nose_turret_door_top_left": 100,
           "nose_turret_door_top_right": 100,
-          "wing_left": 15000,
-          "turbine_cover_wingl_bot_front_out": 20,
-          "turbine_cover_wingl_bot_rear_out": 20,
-          "turbine_cover_wingl_bot_front_in": 20,
-          "turbine_cover_wingl_bot_rear_in": 20,
-          "turbine_cover_wingl_top_front_out": 20,
-          "turbine_cover_wingl_top_rear_out": 20,
-          "turbine_cover_wingl_top_front_in": 20,
-          "turbine_cover_wingl_top_rear_in": 20,
-          "wing_right": 15000,
-          "turbine_cover_wingr_top_rear_in": 20,
-          "turbine_cover_wingr_top_front_in": 20,
-          "turbine_cover_wingr_bot_rear_in": 20,
-          "turbine_cover_wingr_bot_front_out": 20,
-          "turbine_cover_wingr_top_rear_out": 20,
-          "turbine_cover_wingr_top_front_out": 20,
-          "turbine_cover_wingr_bot_front_in": 20,
-          "turbine_cover_wingr_bot_rear_out": 20,
-          "bottom_nacelle_rail": 1000,
-          "Hatch_Rear": 1000,
-          "nacelle_tower_right": 1000,
-          "nacelle_right": 5500,
-          "nacelle_tower_left": 1000,
-          "nacelle_left": 5500,
-          "nacelle_bottom_right": 6500,
-          "turbine_cover_naceller_bot_front_in": 20,
-          "turbine_cover_naceller_bot_rear_in": 20,
-          "turbine_cover_naceller_bot_front_out": 20,
-          "turbine_cover_naceller_bot_rear_out": 20,
-          "turbine_cover_naceller_top_front_in": 20,
-          "turbine_cover_naceller_top_rear_in": 20,
-          "turbine_cover_naceller_top_front_out": 20,
-          "turbine_cover_naceller_top_rear_out": 20,
-          "nacelle_bottom_left": 6500,
-          "turbine_cover_nacellel_bot_front_out": 20,
-          "turbine_cover_nacellel_bot_rear_out": 20,
-          "turbine_cover_nacellel_bot_front_in": 20,
-          "turbine_cover_nacellel_bot_rear_in": 20,
-          "turbine_cover_nacellel_top_front_out": 20,
-          "turbine_cover_nacellel_top_rear_out": 20,
-          "turbine_cover_nacellel_top_front_in": 20,
-          "turbine_cover_nacellel_top_rear_in": 20,
-          "hardpoint_lightgroup": 200
+          "wing_left": 3000,
+          "turbine_cover_wingl_bot_front_out": 50,
+          "turbine_cover_wingl_bot_rear_out": 50,
+          "turbine_cover_wingl_bot_front_in": 50,
+          "turbine_cover_wingl_bot_rear_in": 50,
+          "turbine_cover_wingl_top_front_out": 50,
+          "turbine_cover_wingl_top_rear_out": 50,
+          "turbine_cover_wingl_top_front_in": 50,
+          "turbine_cover_wingl_top_rear_in": 50,
+          "wing_right": 3000,
+          "turbine_cover_wingr_top_rear_in": 50,
+          "turbine_cover_wingr_top_front_in": 50,
+          "turbine_cover_wingr_bot_rear_in": 50,
+          "turbine_cover_wingr_bot_front_out": 50,
+          "turbine_cover_wingr_top_rear_out": 50,
+          "turbine_cover_wingr_top_front_out": 50,
+          "turbine_cover_wingr_bot_front_in": 50,
+          "turbine_cover_wingr_bot_rear_out": 50,
+          "tail": 3000,
+          "Hatch_Rear": 1,
+          "nacelle_tower_right": 15000,
+          "nacelle_tower_left": 15000
         }
       },
       "ThrustersHealthPoints": {
         "Main": {
-          "engine_top_right": 24000,
-          "engine_top_left": 24000,
-          "engine_bottom_right": 24000,
-          "engine_bottom_left": 24000
+          "engine_bottom_right": 15000,
+          "engine_bottom_left": 15000,
+          "engine_top_right": 15000,
+          "engine_top_left": 15000
         },
         "Retro": {
-          "retro_top_right": 50000,
-          "retro_top_left": 50000,
-          "retro_bottom_right": 50000,
-          "retro_bottom_left": 50000
+          "retro_bottom_right": 7000,
+          "retro_bottom_left": 7000,
+          "retro_top_right": 7000,
+          "retro_top_left": 7000
         },
         "Vtol": {
-          "thruster_vtol_front_left_01": 50000,
-          "thruster_vtol_front_left_02": 50000,
-          "thruster_vtol_front_right_01": 50000,
-          "thruster_vtol_front_right_02": 50000,
-          "thruster_vtol_rear_right_01": 50000,
-          "thruster_vtol_rear_right_02": 50000,
-          "thruster_vtol_rear_left_01": 50000,
-          "thruster_vtol_rear_left_02": 50000
+          "thruster_vtol_rear_right_01": 5000,
+          "thruster_vtol_rear_right_02": 5000,
+          "thruster_vtol_rear_left_01": 5000,
+          "thruster_vtol_rear_left_02": 5000,
+          "thruster_vtol_front_left_01": 5000,
+          "thruster_vtol_front_left_02": 5000,
+          "thruster_vtol_front_right_01": 5000,
+          "thruster_vtol_front_right_02": 5000
         },
         "Maneuvering": {
-          "thruster_bottom_front_right": 50000,
-          "thruster_top_front_right": 50000,
-          "thruster_top_front_left": 50000,
-          "thruster_bottom_front_left": 50000,
-          "thruster_center_front_left": 50000,
-          "thruster_center_front_right": 50000,
-          "thruster_center_back_right": 50000,
-          "thruster_center_back_left": 50000,
-          "thruster_top_back_right": 50000,
-          "thruster_top_back_left": 50000,
-          "thruster_bottom_back_right": 50000,
-          "thruster_bottom_back_left": 50000
+          "thruster_bottom_back_right": 5000,
+          "thruster_bottom_back_left": 5000,
+          "thruster_bottom_front_left": 5000,
+          "thruster_bottom_front_right": 5000,
+          "thruster_top_front_left": 5000,
+          "thruster_top_front_right": 5000,
+          "thruster_center_front_left": 5000,
+          "thruster_center_front_right": 5000,
+          "thruster_center_back_right": 5000,
+          "thruster_center_back_left": 5000,
+          "thruster_top_back_right": 5000,
+          "thruster_top_back_left": 5000
         }
       },
       "DoorsHealthPoints": {
-        "cargo_bay": 6000,
-        "door_airlock_body_left": 6000,
-        "door_airlock_body_right": 6000,
-        "door_airlock_neck_top": 6000,
-        "door_elevator": 4000
+        "cargo_bay": 1000,
+        "door_airlock_body_left": 7500,
+        "door_airlock_body_right": 7500,
+        "door_elevator": 1000,
+        "ground_fuel_port": 100,
+        "inner_door_left": 7500,
+        "inner_door_right": 7500
       }
     },
     "FlightCharacteristics": {
@@ -42249,10 +42498,10 @@
       "Roll": 45,
       "IsVtolAssisted": false,
       "ThrustCapacity": {
-        "Main": 21400244,
-        "Retro": 10589812,
-        "Vtol": 7393492.8,
-        "Maneuvering": 22062108
+        "Main": 20465904,
+        "Retro": 10255852,
+        "Vtol": 2400000,
+        "Maneuvering": 21291240
       },
       "AccelerationG": {
         "IsValidated": true,
@@ -42268,7 +42517,7 @@
         "QuantumDriveSpoolTime": 8,
         "ScmMode": {
           "BoostSpeedForward": 380,
-          "BoostSpeedBackward": 191
+          "BoostSpeedBackward": 200
         }
       },
       "Boost": {
@@ -42309,23 +42558,23 @@
       }
     },
     "FuelManagement": {
-      "FuelCapacity": 19000000,
+      "FuelCapacity": 33000000,
       "FuelIntakeRate": 100,
       "QuantumFuelCapacity": 7700000,
       "FuelBurnRatePer10KNewton": {
-        "Main": 2.304,
-        "Retro": 2.304,
-        "Vtol": 4.608,
-        "Maneuvering": 6.912
+        "Main": 5,
+        "Retro": 5,
+        "Vtol": 10,
+        "Maneuvering": 15
       },
       "FuelUsagePerSecond": {
-        "Main": 1232.654,
-        "Retro": 609.973,
-        "Vtol": 425.865,
-        "Maneuvering": 1270.777
+        "Main": 2558.238,
+        "Retro": 1281.982,
+        "Vtol": 300,
+        "Maneuvering": 2661.406
       },
-      "IntakeToMainFuelRatio": 8.11,
-      "TimeForIntakesToFillTank": 190000
+      "IntakeToMainFuelRatio": 3.91,
+      "TimeForIntakesToFillTank": 330000
     },
     "Emissions": {
       "Electromagnetic": {
@@ -42337,19 +42586,14 @@
         "Start": 0
       },
       "CrossSection": {
-        "Front": 4903,
-        "Side": 16484,
-        "Top": 37558
+        "Front": 3125,
+        "Side": 10500,
+        "Top": 24000
       }
     },
     "ResourceNetwork": {
       "ItemPools": {
         "WeaponPoolSize": 8
-      },
-      "Modifiers": {
-        "PowerRatioMultiplier": 1,
-        "MaxAmmoLoadMultiplier": 1.75,
-        "MaxRegenPerSecMultiplier": 1
       }
     },
     "BaseLoadout": {
@@ -42358,13 +42602,17 @@
       "TurretsBurstDPS": 1091,
       "TotalMissilesDmg": 38400
     },
+    "Buffs": {
+      "Salvage": {
+        "SpeedMultiplier": 1,
+        "RadiusMultiplier": 1,
+        "ExtractionEfficiency": 1
+      }
+    },
     "Insurance": {
       "StandardClaimTime": 17.1,
       "ExpeditedClaimTime": 5.7,
       "ExpeditedCost": 9531
-    },
-    "Buy": {
-      "New Deal, Lorville": 8043840
     }
   },
   {
@@ -44605,6 +44853,243 @@
     },
     "Buy": {
       "New Deal, Lorville": 5528517
+    }
+  },
+  {
+    "ClassName": "RSI_Skylark",
+    "Name": "RSI Skylark",
+    "Description": "The Skylark snub fighter was built to be the ultimate companion for the Constellation Mk V. With a complimentary style and shape, the Skylark can be docked and accessed directly from its parent ship. It also features highly maneuverable thrusters to keep it nimble and a spirited weapons package that includes a robust missile payload.",
+    "Career": "Combat",
+    "Role": "Snub Fighter",
+    "Size": 1,
+    "Cargo": {
+      "CargoGrid": 0,
+      "CargoContainers": 0,
+      "Storage": 0
+    },
+    "Crew": 1,
+    "WeaponCrew": 0,
+    "OperationsCrew": 0,
+    "Mass": 14868.5,
+    "ComponentsMass": 3336,
+    "Dimensions": {
+      "Length": 7,
+      "Width": 6.5,
+      "Height": 3.5
+    },
+    "IsSpaceship": true,
+    "Armor": {
+      "Durability": {
+        "Health": 1800,
+        "DamageMultipliers": {
+          "Physical": 0.81,
+          "Energy": 1.28,
+          "Distortion": 1,
+          "Thermal": 1,
+          "Biochemical": 1,
+          "Stun": 1
+        }
+      },
+      "DamageDeflection": {
+        "Physical": 6,
+        "Energy": 4,
+        "Distortion": 0
+      },
+      "DamageMultipliers": {
+        "Physical": 0.75,
+        "Energy": 0.95,
+        "Distortion": 0.95
+      },
+      "SignalMultipliers": {
+        "Electromagnetic": 1,
+        "Infrared": 1,
+        "CrossSection": 1
+      }
+    },
+    "Hull": {
+      "PenetrationDamageMultiplier": {
+        "Fuse": 0.7,
+        "Component": 0.4
+      },
+      "StructureHealthPoints": {
+        "VitalParts": {
+          "geo_body": 1200
+        },
+        "Parts": {
+          "dbr_light_fairing_right": 100,
+          "dbr_lower_fin_front_left": 200,
+          "dbr_rooftop_center_plate": 150,
+          "dbr_lower_fin_right": 200,
+          "dbr_missile_rack_mount_left": 30,
+          "dbr_weapon_mount_bottom_outer": 200,
+          "dbr_winglet_left": 300,
+          "dbr_weapon_mount_lower_left": 100,
+          "dbr_rootftop_intake_cover": 300,
+          "geo_cockpit_glass_upper_ext": 100,
+          "dbr_rear_wing_upper_element": 300,
+          "dbr_winglet_right": 300,
+          "dbr_weapon_mount_lower_right": 100,
+          "dbr_lower_fin_left": 200,
+          "dbr_light_fairing_left": 100,
+          "dbr_missile_rack_mount_right": 30,
+          "dbr_winglet_inner_left": 250,
+          "dbr_winglet_inner_right": 250,
+          "geo_cockpit_glass_lower_ext": 100,
+          "dbr_lower_fin_front_right": 200,
+          "dbr_wing_tip_upper_left": 300,
+          "dbr_wing_tip_lower_left": 250,
+          "dbr_wing_tip_lower_right": 250,
+          "dbr_lg_right_panel_left": 30,
+          "dbr_lg_left_panel_left": 30,
+          "dbr_lg_right_panel_right": 30,
+          "dbr_lg_left_panel_right": 30,
+          "dbr_wing_tip_upper_right": 300,
+          "anim_component_bay_door_top": 150,
+          "anim_component_bay_door_bottom": 150
+        }
+      },
+      "ThrustersHealthPoints": {
+        "Main": {
+          "thruster_main_right": 1600,
+          "thruster_main_left": 1600
+        },
+        "Retro": {
+          "thruster_retro_left": 700,
+          "thruster_retro_right": 700
+        },
+        "Maneuvering": {
+          "thruster_mav_top_front_left": 700,
+          "thruster_mav_side_front_left": 700,
+          "thruster_mav_top_rear_left": 700,
+          "thruster_mav_side_rear_left": 700,
+          "thruster_mav_bottom_front_left": 700,
+          "thruster_mav_side_front_right": 700,
+          "thruster_mav_top_front_right": 700,
+          "thruster_mav_bottom_front_right": 700,
+          "thruster_mav_top_rear_right": 700,
+          "thruster_mav_side_rear_right": 700,
+          "thruster_mav_bottom_rear_right": 700,
+          "thruster_mav_bottom_rear_left": 700
+        }
+      },
+      "DoorsHealthPoints": {
+        "docking_anims": 13500
+      }
+    },
+    "FlightCharacteristics": {
+      "ScmSpeed": 227,
+      "MaxSpeed": 1240,
+      "Pitch": 70,
+      "Yaw": 58,
+      "Roll": 212,
+      "IsVtolAssisted": false,
+      "ThrustCapacity": {
+        "Main": 2482000,
+        "Retro": 796000,
+        "Vtol": 0,
+        "Maneuvering": 6880000
+      },
+      "AccelerationG": {
+        "IsValidated": false,
+        "Main": 17.02,
+        "Retro": 5.46,
+        "Strafe": 0,
+        "Up": 0,
+        "Down": 0
+      },
+      "MasterModes": {
+        "BaseSpoolTime": 1,
+        "ScmMode": {
+          "BoostSpeedForward": 535,
+          "BoostSpeedBackward": 255
+        }
+      },
+      "Boost": {
+        "PreDelay": 0,
+        "RampUp": 0.6,
+        "RampDown": 0.2,
+        "AccelerationMultiplier": {
+          "PositiveAxis": {
+            "X": 1.3,
+            "Y": 1.55,
+            "Z": 1.3
+          },
+          "NegativeAxis": {
+            "X": 1.3,
+            "Y": 1.4,
+            "Z": 1.3
+          }
+        },
+        "AngularAccelerationMultiplier": {
+          "Pitch": 1.2,
+          "Yaw": 1.2,
+          "Roll": 1.2
+        },
+        "AngularVelocityMultiplier": {
+          "Pitch": 1.2,
+          "Yaw": 1.2,
+          "Roll": 1.2
+        }
+      },
+      "Capacitors": {
+        "ThrusterCapacitorSize": 20,
+        "CapacitorRegenPerSec": 0.75,
+        "CapacitorIdleCost": 1,
+        "CapacitorLinearCost": 0,
+        "CapacitorUsageModifier": 1,
+        "CapacitorRegenDelay": 0.2,
+        "RegenerationTime": 26.7
+      }
+    },
+    "FuelManagement": {
+      "FuelCapacity": 800000,
+      "FuelIntakeRate": 0,
+      "QuantumFuelCapacity": 0,
+      "FuelBurnRatePer10KNewton": {
+        "Main": 0.9,
+        "Retro": 0.9,
+        "Vtol": 0,
+        "Maneuvering": 5.4
+      },
+      "FuelUsagePerSecond": {
+        "Main": 111.69,
+        "Retro": 35.82,
+        "Vtol": 0,
+        "Maneuvering": 309.6
+      },
+      "IntakeToMainFuelRatio": 0,
+      "TimeForIntakesToFillTank": "Infinity"
+    },
+    "Emissions": {
+      "Electromagnetic": {
+        "SCMIdle": 0,
+        "SCMActive": 0,
+        "NAV": 0
+      },
+      "Infrared": {
+        "Start": 0
+      },
+      "CrossSection": {
+        "Front": 2416,
+        "Side": 4268,
+        "Top": 4863
+      }
+    },
+    "ResourceNetwork": {
+      "ItemPools": {
+        "WeaponPoolSize": 4
+      }
+    },
+    "BaseLoadout": {
+      "TotalShieldHP": 6000,
+      "PilotBurstDPS": 984,
+      "TurretsBurstDPS": 0,
+      "TotalMissilesDmg": 6500
+    },
+    "Insurance": {
+      "StandardClaimTime": 3.37,
+      "ExpeditedClaimTime": 1.12,
+      "ExpeditedCost": 2280
     }
   },
   {
