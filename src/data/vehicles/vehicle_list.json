@@ -41936,12 +41936,13 @@
         "Maneuvering": 155578700
       },
       "AccelerationG": {
-        "IsValidated": false,
-        "Main": 6.5,
-        "Retro": 2.61,
-        "Strafe": 0,
-        "Up": 0,
-        "Down": 0
+        "IsValidated": true,
+        "Main": 4.9,
+        "Retro": 2,
+        "Strafe": 2.5,
+        "Up": 2,
+        "Down": 2,
+        "CheckDate": "2026-10-09"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,
@@ -44990,12 +44991,13 @@
         "Maneuvering": 6880000
       },
       "AccelerationG": {
-        "IsValidated": false,
-        "Main": 17.02,
-        "Retro": 5.46,
-        "Strafe": 0,
-        "Up": 0,
-        "Down": 0
+        "IsValidated": true,
+        "Main": 13.5,
+        "Retro": 4.3,
+        "Strafe": 10,
+        "Up": 10,
+        "Down": 6.1,
+        "CheckDate": "2026-10-09"
       },
       "MasterModes": {
         "BaseSpoolTime": 1,

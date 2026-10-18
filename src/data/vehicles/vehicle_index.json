@@ -7082,7 +7082,7 @@
       "Url": null,
       "IsPromotionOnly": false,
       "IsLimitedSale": false,
-      "Buy": null
+      "Buy": 300
     },
     "PU": {
       "Patch": "4.10.2",
