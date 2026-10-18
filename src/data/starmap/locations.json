@@ -27828,10 +27828,6 @@
     "factions": null,
     "features": [
       {
-        "val": "loot",
-        "desc": ""
-      },
-      {
         "val": "approach",
         "desc": "",
         "types": [
@@ -31720,6 +31716,15 @@
       {
         "val": "loot",
         "desc": ""
+      },
+      {
+        "val": "approach",
+        "desc": "",
+        "types": [
+          "by ship",
+          "by vehicle",
+          "on foot"
+        ]
       }
     ],
     "weather": null,
