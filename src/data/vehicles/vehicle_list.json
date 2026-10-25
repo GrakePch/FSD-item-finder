@@ -8749,9 +8749,6 @@
       "StandardClaimTime": 6.75,
       "ExpeditedClaimTime": 2.25,
       "ExpeditedCost": 3375
-    },
-    "Buy": {
-      "Astro Armada, Area 18": 2910600
     }
   },
   {
@@ -8968,9 +8965,6 @@
       "StandardClaimTime": 9.72,
       "ExpeditedClaimTime": 3.24,
       "ExpeditedCost": 4789
-    },
-    "Buy": {
-      "Astro Armada, Area 18": 4762800
     }
   },
   {
@@ -9856,9 +9850,6 @@
       "StandardClaimTime": 8.1,
       "ExpeditedClaimTime": 2.7,
       "ExpeditedCost": 4367
-    },
-    "Buy": {
-      "Astro Armada, Area 18": 3210480
     }
   },
   {
@@ -10305,9 +10296,6 @@
       "StandardClaimTime": 9.72,
       "ExpeditedClaimTime": 3.24,
       "ExpeditedCost": 4905
-    },
-    "Buy": {
-      "Astro Armada, Area 18": 3307500
     }
   },
   {
@@ -10989,9 +10977,6 @@
       "StandardClaimTime": 6.75,
       "ExpeditedClaimTime": 2.25,
       "ExpeditedCost": 3375
-    },
-    "Buy": {
-      "Astro Armada, Area 18": 4630500
     }
   },
   {
@@ -41481,6 +41466,11 @@
     "ResourceNetwork": {
       "ItemPools": {
         "WeaponPoolSize": 8
+      },
+      "Modifiers": {
+        "PowerRatioMultiplier": 1,
+        "MaxAmmoLoadMultiplier": 3,
+        "MaxRegenPerSecMultiplier": 1
       }
     },
     "BaseLoadout": {
@@ -41767,6 +41757,11 @@
     "ResourceNetwork": {
       "ItemPools": {
         "WeaponPoolSize": 8
+      },
+      "Modifiers": {
+        "PowerRatioMultiplier": 1,
+        "MaxAmmoLoadMultiplier": 3,
+        "MaxRegenPerSecMultiplier": 1
       }
     },
     "BaseLoadout": {
@@ -42308,6 +42303,11 @@
     "ResourceNetwork": {
       "ItemPools": {
         "WeaponPoolSize": 8
+      },
+      "Modifiers": {
+        "PowerRatioMultiplier": 1,
+        "MaxAmmoLoadMultiplier": 3,
+        "MaxRegenPerSecMultiplier": 1
       }
     },
     "BaseLoadout": {
@@ -42595,6 +42595,11 @@
     "ResourceNetwork": {
       "ItemPools": {
         "WeaponPoolSize": 8
+      },
+      "Modifiers": {
+        "PowerRatioMultiplier": 1,
+        "MaxAmmoLoadMultiplier": 3,
+        "MaxRegenPerSecMultiplier": 1
       }
     },
     "BaseLoadout": {

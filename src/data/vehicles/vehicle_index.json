@@ -1411,7 +1411,7 @@
       "Patch": "0.8.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 2910600
+      "Buy": null
     }
   },
   {
@@ -1443,7 +1443,7 @@
       "Patch": "1.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 4762800
+      "Buy": null
     }
   },
   {
@@ -1580,7 +1580,7 @@
       "Patch": "1.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 3210480
+      "Buy": null
     }
   },
   {
@@ -1646,7 +1646,7 @@
       "Patch": "1.0.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 3307500
+      "Buy": null
     }
   },
   {
@@ -1749,7 +1749,7 @@
       "Patch": "2.6.0",
       "HasPerf": true,
       "IsPTUOnly": false,
-      "Buy": 4630500
+      "Buy": null
     }
   },
   {
