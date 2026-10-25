@@ -18022,6 +18022,10 @@
           "Repair",
           "Restock"
         ]
+      },
+      {
+        "val": "medical",
+        "desc": ""
       }
     ],
     "weather": {
