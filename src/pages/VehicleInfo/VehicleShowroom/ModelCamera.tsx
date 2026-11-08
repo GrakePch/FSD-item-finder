@@ -116,12 +116,53 @@ const ModelCamera = ({
     };
     canvas.addEventListener("pointerdown", cancelReset, true);
     canvas.addEventListener("wheel", onWheel, { capture: true, passive: true });
-    canvas.style.touchAction = narrow ? "pan-y" : "none";
     return () => {
       canvas.removeEventListener("wheel", onWheel, true);
       canvas.removeEventListener("pointerdown", cancelReset, true);
     };
   }, [gl, narrow, cancelReset]);
+
+  useEffect(() => {
+    const canvas = gl.domElement;
+    const previousTouchAction = canvas.style.touchAction;
+    let modelGesture = false;
+    let scrollGesture = false;
+
+    // Keep native single-finger scrolling. Two fingers belong to OrbitControls;
+    // cancel touch defaults before the browser takes over and cancels pointers.
+    const onTouch = (event: TouchEvent) => {
+      if (!scrollGesture && event.targetTouches.length >= 2) modelGesture = true;
+      if (modelGesture && event.cancelable) event.preventDefault();
+    };
+    const onTouchEnd = (event: TouchEvent) => {
+      // Keep the gesture claimed when only one of the two fingers lifts, so the
+      // remaining finger cannot unexpectedly start scrolling the page.
+      if (event.targetTouches.length === 0) {
+        modelGesture = false;
+        scrollGesture = false;
+      }
+    };
+    const onPointerCancel = (event: PointerEvent) => {
+      // Once native scrolling has claimed a finger, retain that ownership until
+      // all fingers lift; its canceled pointer stream cannot resume an orbit.
+      if (event.pointerType === "touch" && !modelGesture) scrollGesture = true;
+    };
+
+    canvas.style.touchAction = "pan-y";
+    canvas.addEventListener("touchstart", onTouch, { passive: false });
+    canvas.addEventListener("touchmove", onTouch, { passive: false });
+    canvas.addEventListener("touchend", onTouchEnd);
+    canvas.addEventListener("touchcancel", onTouchEnd);
+    canvas.addEventListener("pointercancel", onPointerCancel);
+    return () => {
+      canvas.style.touchAction = previousTouchAction;
+      canvas.removeEventListener("touchstart", onTouch);
+      canvas.removeEventListener("touchmove", onTouch);
+      canvas.removeEventListener("touchend", onTouchEnd);
+      canvas.removeEventListener("touchcancel", onTouchEnd);
+      canvas.removeEventListener("pointercancel", onPointerCancel);
+    };
+  }, [gl]);
 
   useFrame(() => {
     let moving = false;
@@ -156,6 +197,7 @@ const ModelCamera = ({
   return (
     <OrbitControls
       ref={controls}
+      domElement={gl.domElement}
       makeDefault
       enablePan={false}
       enableDamping
@@ -165,7 +207,7 @@ const ModelCamera = ({
       minPolarAngle={0.12}
       maxPolarAngle={Math.PI - 0.12}
       mouseButtons={{ LEFT: MOUSE.ROTATE, MIDDLE: MOUSE.DOLLY, RIGHT: undefined }}
-      touches={{ ONE: narrow ? undefined : TOUCH.ROTATE, TWO: TOUCH.DOLLY_ROTATE }}
+      touches={{ ONE: undefined, TWO: TOUCH.DOLLY_ROTATE }}
     />
   );
 };
