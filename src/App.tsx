@@ -1,6 +1,6 @@
 import { lazy, Suspense, type ReactNode, useEffect, useRef, useState } from "react";
 import styles from "./App.module.css";
-import { Navigate, Route, Routes, useLocation } from "react-router";
+import { Navigate, Route, Routes, useLocation, useMatch } from "react-router";
 import { ContextAllData, AllData } from "./contexts";
 import { buildDataBodiesAndLocations } from "./api/bodiesAndLocations";
 import { fetchAndProcessTerminals } from "./api/terminals";
@@ -79,6 +79,7 @@ function App() {
   const initializedRef = useRef(false);
 
   const location = useLocation();
+  const isVehiclePage = !!useMatch("/v/:vehicleClassName");
 
   useEffect(() => {
     if (initializedRef.current) return;
@@ -236,7 +237,7 @@ function App() {
           />
           <Route path="/t/:terminalId" element={route(<TerminalInfo />)} />
         </Routes>
-        <Footer />
+        {!isVehiclePage && <Footer />}
         <LanguageToggle />
         <WindowSelectCurrentLocation />
         <UniversalSearch />

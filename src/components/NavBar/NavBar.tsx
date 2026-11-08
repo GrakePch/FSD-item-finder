@@ -1,8 +1,9 @@
-import { Link, useLocation, useSearchParams } from "react-router";
+import { Link, useLocation, useMatch, useSearchParams } from "react-router";
 import Icon from "@mdi/react";
 import { mdiHomeVariantOutline, mdiMagnify } from "@mdi/js";
 import styles from "./NavBar.module.css";
 import { getSearchModeFromPath, type SearchMode } from "../../utils/searchMode";
+import ModelCredits from "./ModelCredits";
 
 const searchModeToQuery: Record<SearchMode, string> = {
   items: "i",
@@ -13,6 +14,7 @@ const searchModeToQuery: Record<SearchMode, string> = {
 const NavBar = () => {
   const location = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
+  const isVehiclePage = !!useMatch("/v/:vehicleClassName");
 
   const openSearch = () => {
     const mode = getSearchModeFromPath(location.pathname);
@@ -23,7 +25,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className={styles.NavBar}>
+      <div className={`${styles.NavBar} ${isVehiclePage ? styles.showroomNavBar : ""}`}>
         <div className={styles.navContainer}>
           <nav className={styles.linksContainer}>
             <Link to="/" aria-label="Home">
@@ -39,9 +41,12 @@ const NavBar = () => {
             <Icon path={mdiMagnify} size="1.25rem" />
             <span>Ctrl+K</span>
           </button>
+          {isVehiclePage && <ModelCredits />}
         </div>
       </div>
-      <div className={styles.TopFillerWhenNavbarPresent}></div>
+      <div
+        className={`${styles.TopFillerWhenNavbarPresent} ${isVehiclePage ? styles.showroomNavFiller : ""}`}
+      />
     </>
   );
 };

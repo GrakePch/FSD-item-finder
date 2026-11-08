@@ -637,5 +637,31 @@
     "Ice Giant": "冰巨行星",
     "Smog Planet": "烟雾行星",
     "Protoplanet": "原行星"
-  }
+  },
+    "Showroom": {
+        "modelLabel": "载具交互式三维模型",
+        "viewTools": "模型视角",
+        "reset": "重置视角",
+        "failed": "3D 模型暂时无法显示，已切换为图片",
+        "retry": "重试",
+        "loading": "正在加载模型 {{progress}}%",
+        "preparing": "正在准备三维视图…",
+        "shipControls": "载具控制",
+        "turnLightsOn": "开启外灯",
+        "turnLightsOff": "关闭外灯",
+        "closeDoors": "关闭舱门",
+        "openDoors": "开启舱门",
+        "retractGear": "收回起落架",
+        "deployGear": "展开起落架",
+        "enableVtol": "启用 VTOL",
+        "disableVtol": "关闭 VTOL",
+        "startEngines": "开启引擎",
+        "stopEngines": "关闭引擎",
+        "information": "载具详细信息",
+        "creditsTitle": "模型版权",
+        "closeCredits": "关闭模型版权弹窗",
+        "modelCopyright": "模型版权属于 Cloud Imperium Games。",
+        "modelSource": "模型数据来源",
+        "switchView": "切换到 {{mode}}"
+    }
 }

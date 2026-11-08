@@ -1,0 +1,142 @@
+.vehicle-showroom {
+  position: absolute;
+  inset: 0;
+  isolation: isolate;
+}
+.showroom-canvas {
+  position: absolute;
+  inset: 0;
+  cursor: grab;
+}
+.showroom-canvas:active {
+  cursor: grabbing;
+}
+.showroom-canvas[aria-hidden="true"] {
+  visibility: hidden;
+  pointer-events: none;
+}
+.showroom-image {
+  position: absolute;
+  inset: 0 var(--showroom-gutter);
+}
+.showroom-fallback {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 1.5rem 1rem #00000060);
+}
+.showroom-status {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  background: var(--color-bg-1);
+  border-radius: 0.5rem;
+  white-space: nowrap;
+  font-size: 0.875rem;
+}
+.showroom-status button {
+  color: #9cc2ff;
+  background: transparent;
+  cursor: pointer;
+}
+.showroom-bottom {
+  position: absolute;
+  z-index: 2;
+  bottom: 1.5rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+.showroom-view-tools {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+}
+.showroom-view-tools button {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem;
+  background: transparent;
+  color: var(--color-text-1);
+  cursor: pointer;
+  pointer-events: auto;
+}
+.vehicle-showroom .showroom-view-tools button:not(:disabled):hover {
+  background: transparent;
+  color: var(--color-text);
+}
+.showroom-view-tools button:disabled {
+  background: transparent;
+  outline: none;
+}
+.showroom-controls {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: #35353599;
+  backdrop-filter: blur(0.75rem);
+  -webkit-backdrop-filter: blur(0.75rem);
+  border-radius: 0.5rem;
+  pointer-events: auto;
+}
+.showroom-controls button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 3.25rem;
+  height: 3.25rem;
+  padding: 0.625rem;
+  border: 1px solid var(--color-text-2);
+  border-radius: 0.375rem;
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+.vehicle-showroom button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.vehicle-showroom button:not(:disabled):hover {
+  background: var(--color-bg-2);
+}
+.vehicle-showroom .showroom-controls button[aria-pressed="true"] {
+  background: #367ddd;
+  border-color: #367ddd;
+  color: white;
+}
+.vehicle-showroom button:focus-visible {
+  outline: 2px solid #82b4ff;
+  outline-offset: 3px;
+}
+@media (max-width: 1099px) {
+  .showroom-bottom {
+    bottom: 1rem;
+    left: 0.5rem;
+    right: 0.5rem;
+  }
+  .showroom-controls {
+    gap: 0.375rem;
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 719px) {
+  .showroom-bottom {
+    bottom: 5rem;
+  }
+}

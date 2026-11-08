@@ -10,7 +10,7 @@ import vehicleHardpointsRaw from "../../data/vehicles/vehicle_hardpoints.json";
 import vehicleClassNameToUexId from "../../data/vehicles/vehicle_classname_to_uex_id.json";
 import TradeOptionsSortingControl from "../../components/TradeOptionsSortingControl/TradeOptionsSortingControl";
 import TradeOptions from "../../components/TradeOptions/TradeOptions";
-import VehicleImage from "../../components/VehicleImage";
+import VehicleStage from "./VehicleShowroom/VehicleStage";
 import { vehicleRoleToKey } from "../../utils";
 import { useTranslation } from "react-i18next";
 import VehicleSupplementalInfo from "./VehicleSupplementalInfo/VehicleSupplementalInfo";
@@ -43,7 +43,9 @@ const VehicleInfo = () => {
   );
 
   const uexVehicle = useMemo(() => {
-    const uexId = vehicleClassName ? vehicleClassNameToUexIdMap[vehicleClassName] : undefined;
+    const uexId = vehicleClassName
+      ? vehicleClassNameToUexIdMap[vehicleClassName]
+      : undefined;
     return Object.values(dictVehicles).find((v) => v.id_vehicle === uexId);
   }, [dictVehicles, vehicleClassName]);
 
@@ -53,13 +55,7 @@ const VehicleInfo = () => {
     vehicle && (
       <div className="VehicleInfo">
         <div className="highlight-info">
-          <VehicleImage
-            className="vehicle-image"
-            vehicleClassName={vehicle.ClassName}
-            angle="iso"
-            size="l"
-            alt=""
-          />
+          <VehicleStage key={vehicle.ClassName} vehicleClassName={vehicle.ClassName} />
           <div className="vehicle-main-info">
             <h1>
               {t("vehicle_Name" + vehicle.ClassName, {
@@ -98,15 +94,6 @@ const VehicleInfo = () => {
                 </span>
               </button>
             </p>
-            {/* {vehicleMain &&
-            <p className="dimensions">{t("VehicleInfo.Dimensions", {
-              L: vehicleMain.Dimensions.Length, 
-              W: vehicleMain.Dimensions.Width, 
-              H: vehicleMain.Dimensions.Height
-              })}
-            </p>
-          } */}
-            <div style={{ flexGrow: 1, flexBasis: "1rem" }}></div>
             <p className="store-info">
               {vehicle.Store.Buy ? (
                 <span className="price-USD">$ {vehicle.Store.Buy}</span>
@@ -126,7 +113,12 @@ const VehicleInfo = () => {
             </p>
           </div>
         </div>
-        <div className="grid">
+        <div
+          className="grid"
+          tabIndex={0}
+          role="region"
+          aria-label={t("Showroom.information")}
+        >
           <div className="trading-info">
             <TradeOptionsSortingControl />
             {uexVehicle?.options &&

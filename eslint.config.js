@@ -6,7 +6,7 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
-  { ignores: ['dist'] },
+  { ignores: ['dist', '.agents'] },
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     extends: [
@@ -48,12 +48,15 @@ export default tseslint.config(
           'intensity',
           'linewidth',
           'map',
+          'material',
           'object',
           'onBeforeCompile',
           'position',
+          'quaternion',
           'rotation',
           'side',
           'transparent',
+          'visible',
         ],
       }],
       '@typescript-eslint/no-explicit-any': 'warn',

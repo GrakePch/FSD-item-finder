@@ -639,5 +639,31 @@
     "Ice Giant": "Ice Giant",
     "Smog Planet": "Smog Planet",
     "Protoplanet": "Protoplanet"
-  }
+  },
+    "Showroom": {
+        "modelLabel": "Interactive vehicle 3D model",
+        "viewTools": "Model view",
+        "reset": "Reset view",
+        "failed": "3D unavailable. Showing image instead.",
+        "retry": "Retry",
+        "loading": "Loading model {{progress}}%",
+        "preparing": "Preparing 3D view…",
+        "shipControls": "Vehicle controls",
+        "turnLightsOn": "Turn exterior lights on",
+        "turnLightsOff": "Turn exterior lights off",
+        "closeDoors": "Close doors",
+        "openDoors": "Open doors",
+        "retractGear": "Retract gear",
+        "deployGear": "Deploy gear",
+        "enableVtol": "Enable VTOL",
+        "disableVtol": "Disable VTOL",
+        "startEngines": "Start engines",
+        "stopEngines": "Stop engines",
+        "information": "Vehicle details",
+        "creditsTitle": "Model credits",
+        "closeCredits": "Close model credits",
+        "modelCopyright": "Model copyright belongs to Cloud Imperium Games.",
+        "modelSource": "Model data source",
+        "switchView": "Switch to {{mode}}"
+    }
 }

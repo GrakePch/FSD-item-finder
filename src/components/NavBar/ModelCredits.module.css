@@ -1,0 +1,62 @@
+.modelCreditsButton {
+  margin-left: auto;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-text-1);
+}
+.modelCreditsButton:focus-visible,
+.creditsClose:focus-visible {
+  outline: 2px solid #82b4ff;
+  outline-offset: 2px;
+}
+.modelCreditsDialog {
+  width: min(30rem, calc(100% - 2rem));
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: 1.5rem;
+  border: 1px solid var(--color-bg-3);
+  border-radius: 0.75rem;
+  background: var(--color-bg-1);
+  color: var(--color-text);
+  box-shadow: var(--shadow-3);
+}
+.modelCreditsDialog::backdrop {
+  background: #00000090;
+  backdrop-filter: blur(0.35rem);
+}
+.creditsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.creditsHeader h2 {
+  font-size: 1.25rem;
+}
+.creditsClose {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  flex-shrink: 0;
+  background: transparent;
+  border-radius: 0.375rem;
+}
+.creditsSource {
+  margin-top: 1rem;
+  color: var(--color-text-1);
+  font-size: 0.875rem;
+}
+.creditsSource a {
+  display: inline-block;
+  margin-top: 0.25rem;
+  color: #9cc2ff;
+}
